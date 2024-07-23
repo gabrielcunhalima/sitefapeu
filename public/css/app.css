@@ -1,0 +1,88 @@
+.header_topo {
+    width: 100vw;
+    height: 350px;
+    /*background: url('https://fapeu.com.br/site/topo-fapeu.png');*/
+    /* background: url('https://i.imgur.com/koeU9fp.png'); */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: top;
+    background-size: contain;
+}
+
+.margem {
+    margin-left:10%;
+}
+
+.escolher {
+    padding:10px;
+    width:25%;
+}
+
+
+.bolder {
+    font-weight: bolder;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.corCheckbox {
+    color:black !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto !important;
+}
+
+.arredondar-detalhes {
+    border: 10px !important;
+    border-style: solid !important;
+    border-color: #FFF !important;
+    border-radius: 40px !important;   
+}
+
+select {
+    border-bottom: 1px solid #9E9E9E !important;
+}
+
+.kitweb {
+    -moz-appearance: textfield;
+}
+
+.kitweb::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Coloca o objeto mais a direita possivel */
+.voltar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* MENUCOORD */
+.botaopequeno {
+    min-width:18em !important;
+}
+
+/* MENUADMIN */
+.botaomedio{ 
+    min-width:22em !important;
+}
+
+/* PAINELADMIN */
+.botaogrande{ 
+    min-width:26em !important;
+}
+
+.botaoembaixo {
+    margin-top:12em;
+}
