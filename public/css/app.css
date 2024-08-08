@@ -1,0 +1,92 @@
+.header_topo {
+    width: 100vw;
+    height: 350px;
+    /*background: url('https://fapeu.com.br/site/topo-fapeu.png');*/
+    /* background: url('https://i.imgur.com/koeU9fp.png'); */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: top;
+    background-size: contain;
+}
+
+.margem {
+    margin-left:10%;
+    font-size:100px;
+}
+
+.escolher {
+    padding:10px;
+    width:25%;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.corCheckbox {
+    color:black !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Coloca o objeto mais a direita possivel */
+.forceright {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Coloca o objeto mais a esquerda possivel */
+.forceleft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.azul {
+    background-color: rgb(81, 147, 235) !important;
+}
+
+.cinza {
+  background-color: #ccc;
+}
+
+.cinzaescuro {
+    background-color: #8d8d8d;
+}
+
+.preto {
+    background-color: #3E3E3F;
+}
+
+.verde {
+    background-color: rgb(90, 153, 27) !important;
+}
+
+.verdeescuro {
+    background-color:#009270 !important;
+}
+
+.laranja {
+    background-color: darkorange;
+}
+
+.sombra {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 8px 6px 6px;
+}
+
+.branco {
+    color:#ffffff;
+}
+
+.fundobranco {
+    background-color: white;
+}
