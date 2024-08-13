@@ -116,7 +116,7 @@
                 </li>
               </ul>
               <form class="d-flex">
-                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+                <input class="form-control pesquisa" type="search" placeholder="Pesquisar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
               </form>
             </div>
