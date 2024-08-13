@@ -10,9 +10,10 @@
     background-size: contain;
 }
 
-.margem {
-    margin-left:10%;
-    font-size:100px;
+.logo {
+    width:80px;
+    margin-right:10px;
+    /* margin: 2vh 2vw 2vh -5vw */
 }
 
 .escolher {
@@ -51,32 +52,45 @@ body {
     justify-content: flex-start;
 }
 
-.azul {
-    background-color: rgb(81, 147, 235) !important;
-}
-
-.cinza {
-  background-color: #ccc;
-}
-
-.cinzaescuro {
-    background-color: #8d8d8d;
-}
-
-.preto {
-    background-color: #3E3E3F;
-}
-
-.verde {
-    background-color: rgb(90, 153, 27) !important;
-}
-
-.verdeescuro {
+.verdefapeu {
     background-color:#009270 !important;
 }
 
-.laranja {
-    background-color: darkorange;
+.pretofapeu {
+    background-color: #3e3e3f;
+}
+
+.cinzafapeu {
+    background-color: #bcbdc0;
+}
+
+.verde1 {
+    background-color: #00a775;
+}
+
+.verde2 {
+    background-color: #00a76f;
+}
+
+.verde3 {
+    background-color: #00965c;
+}
+
+.verde4 {
+    background-color: #00895b;
+}
+
+.verde5 {
+    background-color: #006e4a;
+}
+
+.verde6 {
+    background-color: #005f3b;
+}
+
+
+.cinzaclaro {
+    background-color: rgb(129, 129, 129);
 }
 
 .sombra {
@@ -89,4 +103,65 @@ body {
 
 .fundobranco {
     background-color: white;
+}
+
+@media (min-width: 922px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+footer {
+    background-color: #009270;
+    margin-top: auto;
+}
+
+.cabecalho {
+    margin-right: 3vw
+}
+
+@media (min-width: 921px) {
+    header {
+        padding:5px;
+        background-color: #009270;
+        margin: 0 auto;
+        width: 100vw;
+        display:flex;
+        justify-content: flex-end;
+    }
+}
+
+/* CSS PARA MOBILE */
+
+@media (max-width: 920px) {
+    header {
+        font-size: 11px;
+        padding:5px;
+        background-color: #009270;
+        margin: 0 auto;
+        width: 100vw;
+        display:flex;
+        justify-content: flex-end;
+    }
+}
+
+body {
+    font-family: "Montserrat Medium", Verdana, Arial, Helvetica, sans-serif !important;
+}
+
+.homepage {
+    margin-bottom:4px;
+}
+
+.principal {
+    font-size: 24px;
+    border-radius: 12px;
+}
+
+.servicos {
+    border-radius:10px;
+}
+
+.sociais {
+    margin-right: 10px;
 }
