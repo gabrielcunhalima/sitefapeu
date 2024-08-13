@@ -23,7 +23,7 @@
         <a href="https://www.linkedin.com/company/fapeu/" class="sociais"><i class="bi bi-linkedin branco"></i></a>
       </div>
     </header>
-    <div class="menuprincipal">  
+    <div>  
       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
           <div class="container">
             <img src="..\public\images\logo2.png" alt="logofapeu" class="logo">
@@ -116,31 +116,27 @@
                 </li>
               </ul>
               <form class="d-flex">
-                <input class="form-control pesquisa" type="search" placeholder="Pesquisar" aria-label="Search">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
               </form>
             </div>
           </div>
       </nav>
     </div>
-    <div class="container">
+
+    <div>
+        @yield('inicio')
+    </div>
+    
+    <div class="fundo">
         @yield('conteudo')
     </div>
 
  <!-- Compiled and minified JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
- 
- <script> 
-    Date.prototype.toDateInputValue = (function() {
-        var local = new Date(this);
-        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-        return local.toJSON().slice(0,10);
-    });
-
-</script>
-</body>
 <footer>
     @include('layout.footer')
 </footer>
+</body>
 </html>
