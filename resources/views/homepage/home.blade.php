@@ -1,4 +1,4 @@
-@extends('layout.header')
+@extends('layout.headerhome')
 @section('title','FAPEU Novo')
 
 @section('conteudo')
@@ -39,6 +39,7 @@
             <div class="d-flex justify-content-center align-items-center embed-responsive embed-responsive-1by1 text-center sombra servicos">
             <div class="embed-responsive-item text-white verde1">
                 <br>RESERVA DE SALAS<br><br><i class="bi bi-calendar2-check"></i>
+                <a href="#" class="stretched-link"></a>
             </div>
             </div>
         </div>

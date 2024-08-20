@@ -17,11 +17,17 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
-    overflow-x: hidden !important;
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+}
+
+.container {
+    flex: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
 }
 
 /* Coloca o objeto mais a direita possivel */
@@ -72,7 +78,6 @@ body {
     background-color: #005232;
 }
 
-
 .cinzaclaro {
     background-color: rgb(129, 129, 129);
 }
@@ -96,8 +101,31 @@ body {
 }
 
 footer {
-    background-color: #009270;
+    background-color: #006448;
     margin-top: auto;
+}
+
+.containerheader {
+    display:flex;
+    justify-content: center;
+    width: 80vw;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+.containerinicio {
+    width: 80vw;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.titulo {
+    position:relative;
 }
 
 .cabecalho {
@@ -134,7 +162,7 @@ body {
 }
 
 .homepage {
-    margin-bottom:4px;
+    margin-bottom:3px;
 }
 
 .principal {
@@ -150,6 +178,11 @@ body {
     margin-right: 10px;
 }
 
+.sociaisfooter {
+    margin-right: 10px;
+    font-size:20px;
+}
+
 .prediofapeu {
     background-color: #68eb82;
 }
@@ -158,4 +191,12 @@ body {
     background-color: #ffffff;
 }
 
+.pesquisa {
+    margin:0 !important;
+}
+
+.jumbotronfapeu {
+    background-image: url("../images/prediofapeu.png");
+    background-size: cover;
+  }
 

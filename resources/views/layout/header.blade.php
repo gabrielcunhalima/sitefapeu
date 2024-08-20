@@ -16,22 +16,22 @@
 <body>
     <header>
       <div class="branco container forceright">
-        <span class="cabecalho"><i class="bi bi-telephone"></i> +55 48 3331-7400</span>
+        <span class="cabecalho"><i class="bi bi-telephone"></i> (48) 3331-7400</span>
         <span class="cabecalho"><i class="bi bi-envelope"></i> contato@fapeu.org.br</span>
-        <a href="https://instagram.com/@fapeu_" class="sociais"><i class="bi bi-instagram branco"></i></a>
-        <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="sociais"> <i class="bi bi-facebook branco"></i></a>
-        <a href="https://www.linkedin.com/company/fapeu/" class="sociais"><i class="bi bi-linkedin branco"></i></a>
+        <a href="https://instagram.com/@fapeu_" class="sociais" target="_blank"><i class="bi bi-instagram branco"></i></a>
+        <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="sociais" target="_blank"> <i class="bi bi-facebook branco"></i></a>
+        <a href="https://www.linkedin.com/company/fapeu/" class="sociais" target="_blank"><i class="bi bi-linkedin branco"></i></a>
       </div>
     </header>
-    <div class="menunav">  
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-          <div class="container">
+    <div class="mb-3"> 
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+          <div class="containerheader">
             <img src="..\public\images\logo2.png" alt="logofapeu" class="logo">
+            <div class="collapse navbar-collapse justify-content-flex-start" id="navbarSupportedContent">
             <a class="navbar-brand homepage" href="http://localhost:8080/sitefapeu/public/home">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
               <ul class="navbar-nav forceleft">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +55,7 @@
                     <a class="dropdown-item" href="#">Captação de Recursos e Oportunidade</a>
                     <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                     <a class="dropdown-item" href="#">Manual de Compras e Contratações</a>
-                    <a class="dropdown-item" href="{{route('projetos.formularios')}}">Formulários</a>
+                    <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -95,8 +95,8 @@
                     Legislação e Normas
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Legislação</a>
-                    <a class="dropdown-item" href="#">Normas Internas FAPEU e Instituições</a>
+                    <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
+                    <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -104,8 +104,10 @@
                     Fornecedor
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Legislação</a>
-                    <a class="dropdown-item" href="#">Normas Internas FAPEU e Instituições</a>
+                    <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                    <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
+                    <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
+                    <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -116,10 +118,10 @@
                     <a class="dropdown-item" href="#">DRHFlow</a>
                     <a class="dropdown-item" href="#">ADMFlow</a>
                     <a class="dropdown-item" href="#">WebMail</a>
-                    <a class="dropdown-item" href="#">Formulários</a>
-                    <a class="dropdown-item" href="#">Acordo Coletivo</a>
-                    <a class="dropdown-item" href="#">Informe de Rendimentos</a>
-                    <a class="dropdown-item" href="#">Programa FAPEU de Inclusão</a>
+                    <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                    <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                    <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                    <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
                     <a class="dropdown-item" href="#">Vagas Disponíveis</a>
                   </div>
                 </li>
@@ -133,28 +135,27 @@
                   </div>
                 </li>
               </ul>
-              <form class="d-flex mx-auto" style="width: auto; flex-grow: 0;">
-                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" style="max-width: 5vw">
+              <form class="d-flex mx-auto pesquisa">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
               </form>
             </div>
           </div>
       </nav>
     </div>
-
-    <div>
-        @yield('inicio')
-    </div>
     
-    <div>
+    <div class="titulo">
+      @yield('inicio')
+    </div>
+  
+    <div class="container">
         @yield('conteudo')
     </div>
 
- <!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div style="margin-top:5vh;">
+        @include('layout.footer')
+    </div>
+    
 
-<footer>
-    @include('layout.footer')
-</footer>
 </body>
 </html>

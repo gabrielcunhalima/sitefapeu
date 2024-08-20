@@ -30,7 +30,7 @@ Route::get('/revistafapeu',[MenuController::class,'revistafapeu'])->name('quemso
 //MENU Projetos
 
 Route::get('/espacocoordenador',[MenuController::class,'espacocoordenador'])->name('projetos.espacocoordenador');
-Route::get('/formularios',[MenuController::class,'formularios'])->name('projetos.formularios');
+Route::get('/formulariosprojetos',[MenuController::class,'formulariosprojetos'])->name('projetos.formulariosprojetos');
 
 //MENU Licitacoes e Prestadores de Serviço
 
@@ -61,3 +61,16 @@ Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name
 
 Route::get('/legislacao',[MenuController::class,'legislacao'])->name('legislacao.legislacao');
 Route::get('/normas',[MenuController::class,'normas'])->name('legislacao.normas');
+
+//MENU Fornecedor
+
+Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dispensa');
+Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
+Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
+
+//MENU Colaborador
+
+Route::get('/acordocoletivo',[MenuController::class,'acordocoletivo'])->name('colaborador.acordocoletivo');
+Route::get('/formularioscolaborador',[MenuController::class,'formularioscolaborador'])->name('colaborador.formularioscolaborador');
+Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->name('colaborador.informerendimentos');
+Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
