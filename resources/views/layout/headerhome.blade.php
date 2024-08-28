@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>@yield('title')</title>
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('/css/app.css')}}" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,16 +23,22 @@
         <a href="https://www.linkedin.com/company/fapeu/" class="sociais" target="_blank"><i class="bi bi-linkedin branco"></i></a>
       </div>
     </header>
+<<<<<<< HEAD
     <div class="menunav">  
        <div class="navbar-nav mx-0 mx-lg-auto">
       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
           <div class="container">
+=======
+    <div class="mb-3">
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+          <div class="containerheader">
+>>>>>>> af3cbe8fc291bb61f4aae0cc0f58b808c1c5fdb5
             <img src="..\public\images\logo2.png" alt="logofapeu" class="logo">
+            <div class="collapse navbar-collapse justify-content-flex-start" id="navbarSupportedContent">
             <a class="navbar-brand homepage" href="http://localhost:8080/sitefapeu/public/home">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
               <ul class="navbar-nav forceleft">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -131,13 +137,13 @@
                     Contato
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Contato</a>
+                    <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
                     <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
                   </div>
                 </li>
               </ul>
-              <form class="d-flex mx-auto" style="width: auto; flex-grow: 0;">
-                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" style="max-width: 5vw">
+              <form class="d-flex mx-auto pesquisa">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
               </form>
             </div>

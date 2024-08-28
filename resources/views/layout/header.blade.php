@@ -130,7 +130,7 @@
                     Contato
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Contato</a>
+                    <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
                     <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
                   </div>
                 </li>

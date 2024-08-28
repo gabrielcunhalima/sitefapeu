@@ -144,4 +144,10 @@ class MenuController extends Controller
     public function programainclusao() {
         return view('colaborador.programainclusao');
     }
+
+    //MENU Contato
+
+    public function contato() {
+        return view('faleconosco.contato');
+    }
 }

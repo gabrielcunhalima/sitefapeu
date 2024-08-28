@@ -9,7 +9,7 @@
             <i><h5 style="display:flex; justify-content:flex-end;">Transformando ideias em ações</h5></i>
         </div>
     </div>
-    <div class="flex-row container d-flex justify-content-center">
+    <!-- <div class="flex-row container d-flex justify-content-center">
         <div class="col-4 my-4">
             <div class="embed-responsive embed-responsive-1by1 text-center primeiro sombra align-middle principal">
                 <div class="embed-responsive-item cinzaclaro text-white"><br><br>PROJETOS<br><br><br><i class="bi bi-kanban" style="font-size:45px;"></i></div>
@@ -28,12 +28,12 @@
                 <a href="#" class="stretched-link"></a>
             </div>
         </div>
-    </div>
-    <div class="jumbotron jumbotron-fluid cinzafapeu">
+    </div> -->
+    <!-- <div class="jumbotron jumbotron-fluid cinzafapeu">
         <div class="container">
             <h2>Serviços</h2>
         </div>
-    </div>
+    </div> -->
     <div class="flex-row container d-flex justify-content-center">
         <div class="col-2">
             <div class="d-flex justify-content-center align-items-center embed-responsive embed-responsive-1by1 text-center sombra servicos">
