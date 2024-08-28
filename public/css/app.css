@@ -30,7 +30,7 @@ body {
     flex: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
 }
 
-/* Coloca o objeto mais a direita possivel */
+/* Coloca o objeto mais a direita possível */
 .forceright {
     display: flex;
     justify-content: flex-end;
