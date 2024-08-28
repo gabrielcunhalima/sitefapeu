@@ -24,6 +24,7 @@
       </div>
     </header>
     <div class="menunav">  
+       <div class="navbar-nav mx-0 mx-lg-auto">
       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
           <div class="container">
             <img src="..\public\images\logo2.png" alt="logofapeu" class="logo">
