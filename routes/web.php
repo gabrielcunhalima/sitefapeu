@@ -45,5 +45,8 @@ Route::get('/noticias', function () {
     return view(view:'site.noticias');
 }) ->name ('site.noticias');
 
+Route::get('/espaco_do_coordenador', function () {
+    return view(view:'site.espaco_do_coordenador');
+}) ->name ('site.espaco_do_coordenador');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

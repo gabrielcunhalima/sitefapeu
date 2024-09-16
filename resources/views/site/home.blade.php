@@ -24,7 +24,7 @@
                     <p> Boa noite!</p>
                 @endif
                 <p>FAPEU é uma organização dedicada ao desenvolvimento de projetos e à gestão de recursos para promover a educação e o bem-estar social.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais </a></p>
               </div>
             </div>
           </div>

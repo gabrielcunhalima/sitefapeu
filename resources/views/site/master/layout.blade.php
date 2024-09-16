@@ -7,12 +7,19 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="http://127.0.0.1:8000/style.css">
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
         
 
         <style>
+
+            
         /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
         #sidebarMenu {
             font-size: 0.9rem; /* Reduz o tamanho da fonte */
+            
         }
 
         #sidebarMenu .nav-link {
@@ -22,6 +29,7 @@
 
         .sidebar-heading {
             font-size: 5rem; /* Reduz o tamanho da fonte dos cabeçalhos */
+            font-family: 'Noticia Text';
             margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos cabeçalhos */
         }
 
@@ -56,21 +64,22 @@
 
         
         <style>
-    /* Menu lateral */
-    #sidebarMenu {
+        /* Menu lateral */
+        #sidebarMenu {
         position: sticky;
-        top: 80px; /* Ajuste a posição conforme necessário */
+        top: 100px; /* Ajuste a posição conforme necessário */
         width: auto; /* Largura automática para se ajustar ao conteúdo */
-        max-width: 220px; /* Limite máximo da largura */
-        padding: 15px; /* Espaçamento interno */
+        max-width: 300px; /* Aumenta a largura máxima */
+        padding: 12px; /* Espaçamento interno */
         background-color: #f8f9fa; /* Cor de fundo do menu */
         border-radius: 8px; /* Bordas arredondadas */
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito 3D */
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito 3D */
         z-index: 1000; /* Garante que o menu fique no topo de outros elementos */
         overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
         height: min-content;
-        white-space: nowrap; /* Evita quebra de linha e garante que o menu se ajuste ao conteúdo */
-    }
+        white-space: normal; /* Permite quebra de linha */
+        
+        }
 
     /* Ajustes nos links dentro do menu */
     #sidebarMenu .nav-link {
@@ -230,13 +239,16 @@
     <body>
 
     <header>
-
-
-
-            
     
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container">
+                    
+
+              <!-- Adiciona a logo no canto esquerdo -->
+        <a class="navbar-brand" href="{{ route('site.home') }}">
+            <img src="/sitefapeu/public/images/logo2.png" alt="Logo Fapeu" width="40" height="40">
+            
+        </a>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.home') }}">Home</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.quemsomos' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.quemsomos') }}">Quem somos</a></li>
@@ -245,7 +257,8 @@
                     <li class="nav-item {{ (Route::current()->getName() === 'site.colaborador' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.colaborador') }}">Espaço do Colaborador</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.noticias' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.noticias') }}">Notícias</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.contact' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.contact') }}">Fale Conosco</a></li>
-
+                    <li class="nav-item {{ (Route::current()->getName() === 'site.politica' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.politica') }}">Politica de Integridade</a></li>
+                    
                     
                     
                 
@@ -265,14 +278,14 @@
              
             <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
-                    <h6 class="sidebar-heading">Gestão de Projetos</h6>
+                    <h6 class="sidebar-heading">Links Úteis</h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Espaço do Coordenador</a>
-                        </li>
+                <a class="nav-link" href="{{ route('site.espaco_do_coordenador') }}">Espaço do Coordenador</a>
+            </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Manual de Compras e Contratações </a>
                         </li>
@@ -284,48 +297,7 @@
 
 
 
-
-                    <h6 class="sidebar-heading">Transparência</h6>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Relatório Técnico Semestral</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Relatório Anual de Gestão</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Avaliações de Desempenho</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Fiscalizações e Auditorias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Demonstrações Contábeis</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Compras, Contratos e Aquisições</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pagamentos Efetuados PF/PJ</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Seleções Públicas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Habilitação Jurídica e Regularidade Fiscal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ - Perguntas Frequentes</a>
-                        </li>
-                    </ul>
-
-                    <h6 class="sidebar-heading">Licitações e Prestadores de Serviços</h6>
+                
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Seleções Públicas</a>
@@ -340,6 +312,9 @@
                             <a class="nav-link" href="#">Espaço do Fornecedor</a>
                         </li>
                     </ul>
+
+
+                    
 
                 
                 </div>

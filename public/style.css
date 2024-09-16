@@ -173,3 +173,26 @@ body {
 }
 
 
+/* Impede que a logo seja redimensionada */
+.navbar-logo {
+    max-width: none;
+    height: 50px; /* Ajuste a altura conforme necessário */
+    width: auto;  /* Mantém a proporção da logo */
+}
+
+/* Move a logo mais para a esquerda */
+.logo-container {
+    margin-left: -20px; /* Ajuste esse valor para mover a logo mais para a esquerda */
+}
+
+/* Ajustes adicionais de espaçamento no menu */
+.navbar-nav {
+    margin-left: 20px; /* Aumenta o espaçamento do menu em relação à logo */
+}
+
+/* Certifica que o navbar e seus itens mantenham alinhamento */
+.navbar-custom {
+    padding-left: 0;
+    padding-right: 0;
+}
+

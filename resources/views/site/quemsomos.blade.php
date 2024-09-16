@@ -11,13 +11,13 @@
                 <div class="col-12 col-lg-9 offset-lg-1"> <!-- Ajuste a largura e o deslocamento da coluna principal -->
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <h2 class="mb-4">FAPEU</h2>
+                            <h2 class="mb-6">FAPEU</h2>
                             <p class="mb-5 text-justify"> <!-- Texto justificado -->
                                 A Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) é uma instituição privada, sem fins lucrativos, que apoia o desenvolvimento de projetos de ensino, pesquisa, extensão, desenvolvimento institucional, científico, tecnológico e inovação universitária.
                                 <!-- Conteúdo restante -->
                             </p>
-                            <div class="row gy-4">
-                                <div class="col-12 col-md-4"> <!-- Ajuste para 4 colunas em md -->
+                            <div class="row gy-4"> <!-- Ajuste para exibir os itens empilhados -->
+                                <div class="col-12"> <!-- Ajuste para 12 colunas -->
                                     <div class="d-flex align-items-start">
                                         <div class="me-4 text-primary">
                                             <!-- SVG Ícone -->
@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4"> <!-- Ajuste para 4 colunas em md -->
+                                <div class="col-12"> <!-- Ajuste para 12 colunas -->
                                     <div class="d-flex flex-column">
                                         <div class="mb-4">
                                             <h2 class="h4 mb-3">Visão</h2>
@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4"> <!-- Ajuste para 4 colunas em md -->
+                                <div class="col-12"> <!-- Ajuste para 12 colunas -->
                                     <div class="d-flex flex-column">
                                         <div>
                                             <h2 class="h4 mb-3">Valores</h2>
