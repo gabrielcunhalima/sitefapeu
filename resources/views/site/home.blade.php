@@ -60,92 +60,124 @@
       </div>
 
       <div class="container marketing">
-        <!-- Três colunas de texto, abaixo do carousel -->
-         
-        <div class="container-fluid feature bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <!-- Seção de Serviços -->
+    <div class="container-fluid feature bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h2 class="servicos-titulo">Serviços</h2>
-                    <h1 class="display-4 mb-4"></h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
-                </div>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.</p>
+            </div>
 
-                <!-- Primeira linha com 3 colunas -->
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="far fa-handshake fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">Reservas de Salas</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fa fa-dollar-sign fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">Cursos e Eventos</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fa fa-bullseye fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">Importação de Bens e Insumos</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
+            <!-- Primeira linha de cards -->
+            <div class="row g-4">
+                <!-- Exemplo de card -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+                   
+                        <div class="card-body">
+                            <h5 class="card-title">Reservas de Salas</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
                 </div>
+                <!-- Repita para os outros cards -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+                    
+                        <div class="card-body">
+                            <h5 class="card-title">Cursos e Eventos</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+       
+                        <div class="card-body">
+                        <h5 class="card-title">Importação de Bens e Insumos</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Segunda linha com 3 colunas, com menor espaçamento -->
-                <div class="row g-4 mt-2">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fa fa-headphones fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">NAGEFI</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
+            <!-- Segunda linha de cards -->
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+                  
+                        <div class="card-body">
+                            <h5 class="card-title">NAGEFI</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fa fa-graduation-cap fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">LATIC</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">LATIC</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
-                        <div class="feature-item d-flex flex-column p-4 pt-0 h-100">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fa fa-gavel fa-3x"></i>
-                            </div>
-                            <h4 class="mb-4">Concursos</h4>
-                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
-                            </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4 mt-auto" href="#">Ver mais</a>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Concursos</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<style>
+/* Estilo do card da seção Serviços */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+    background-color: #f0f2f2; /* Cor de fundo dos cards */
+    border: none; /* Remove borda do card */
+    padding: 10px; /* Ajusta o padding para um tamanho menor */
+    height: 270px; /* Define uma altura fixa para os cards */
+}
+
+.card-body {
+    font-size: 14px; /* Reduz o tamanho do texto */
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra mais intensa ao passar o mouse */
+}
+
+.card-title {
+    font-size: 16px; /* Reduz o tamanho do título */
+}
+
+/* Ajuste para os títulos */
+.card-header, .card-title {
+    font-size: 16px; /* Tamanho reduzido do título */
+}
+
+/* Ajustes gerais */
+.row.g-4 .col-md-6 .card {
+    min-height: 250px; /* Altura mínima para manter o layout consistente */
+}
+
+</style>
+
+  
 
         <!-- FEATUREZINHAS *-* -->
         <hr class="featurette-divider">
@@ -157,8 +189,7 @@
           
         </div>
 
-       
-        </div>
+
 
 
 <!-- Seção "Apoiadas" -->

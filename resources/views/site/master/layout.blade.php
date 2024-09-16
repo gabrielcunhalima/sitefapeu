@@ -10,6 +10,7 @@
 
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         </style>
         
 
@@ -222,11 +223,7 @@
                 text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
             }
 
-
-
         </style>
-
-
 
                     <style>
                 .btn-primary {
@@ -278,7 +275,7 @@
              
             <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
-                    <h6 class="sidebar-heading">Links Úteis</h6>
+                    <h6 class="sidebar-heading">Conteúdos</h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
