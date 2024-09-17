@@ -78,6 +78,8 @@
         
         }
 
+        
+
     /* Ajustes nos links dentro do menu */
     #sidebarMenu .nav-link {
         padding: 0.5rem 1rem; /* Reduz o espaçamento interno dos links */
@@ -300,7 +302,7 @@
                 <a class="nav-link" href="{{ route('site.espaco_do_coordenador') }}">Espaço do Coordenador</a>
             </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Manual de Compras e Contratações </a>
+                            <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Formulários</a>
