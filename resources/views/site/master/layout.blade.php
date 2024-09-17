@@ -10,11 +10,7 @@
 
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        </style>
-        
-
-        <style>
+    
 
             
         /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
@@ -114,7 +110,12 @@
         white-space: normal; /* Permite quebra de linha em subtítulos */
     }
 
+
+    
         /* Estilo para o menu header */
+
+ 
+
         .navbar-custom {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -248,13 +249,14 @@
         </a>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.home') }}">Home</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.quemsomos' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.quemsomos') }}">Quem somos</a></li>
+                    <li class="nav-item {{ (Route::current()->getName() === 'site.gestao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.gestao') }}">Gestão de Projetos</a></li>
+                    <li class="nav-item {{ (Route::current()->getName() === 'site.licitacao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.licitacao') }}">Licitações e Prestadores de Serviços</a></li>
+                    <li class="nav-item {{ (Route::current()->getName() === 'site.politica' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.politica') }}">Politica de Integridade</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.transparencia' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.transparencia') }}">Transparência</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.legislacao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.legislacao') }}">Legislação e Normas Internas</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.colaborador' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.colaborador') }}">Espaço do Colaborador</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.noticias' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.noticias') }}">Notícias</a></li>
                     <li class="nav-item {{ (Route::current()->getName() === 'site.contact' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.contact') }}">Fale Conosco</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.politica' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.politica') }}">Politica de Integridade</a></li>
+                
                     
                     
                     
@@ -277,6 +279,20 @@
                 <div class="sidebar-sticky">
                     <h6 class="sidebar-heading">Conteúdos</h6>
                     <ul class="nav flex-column">
+
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('site.quemsomos') }}">Quem Somos</a>
+                        </li>
+
+                        <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                        </li>
+
+                
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
                         </li>
@@ -293,6 +309,7 @@
 
 
 
+                    
 
                 
                     <ul class="nav flex-column">
