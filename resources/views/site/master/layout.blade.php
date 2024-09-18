@@ -1,9 +1,10 @@
     <!DOCTYPE html>
     <html lang="pt-br">
+
     <head>
 
 
-            <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- jQuery and Bootstrap JS -->
@@ -13,401 +14,185 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fapeu</title>
-
+        <title>FAPEU</title>
+        <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="http://127.0.0.1:8000/style.css">
-
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-        
-    /*Redimensiona a imagem do carousel */
-    
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        
-
-            
-        /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
-        #sidebarMenu {
-            font-size: 0.9rem; /* Reduz o tamanho da fonte */
-            
-        }
-
-        #sidebarMenu .nav-link {
-            padding: 0.8rem; /* Reduz o espaçamento interno dos links */
-            font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
-        }
-
-        .sidebar-heading {
-            font-size: 5rem; /* Reduz o tamanho da fonte dos cabeçalhos */
-            font-family: 'Noticia Text';
-            margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos cabeçalhos */
-        }
-
-        /* Ajustando o conteúdo principal */
-        main {
-            padding: 1rem; /* Reduz o padding interno do conteúdo principal */
-        }
-
-        /* Reduzindo o tamanho da fonte e o espaçamento do footer */
-        footer {
-            font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
-            padding: 1rem 0; /* Reduz o espaçamento do footer */
-            margin-top: 80px; 
-        }
-
-        footer .col-md-4 h5 {
-            font-size: 1rem; /* Reduz o tamanho da fonte dos títulos no footer */
-        }
-
-        footer p, footer a {
-            margin-bottom: 0.3rem; /* Reduz o espaçamento entre parágrafos e links */
-        }
-
-        footer ul {
-            padding-left: 0; /* Remove o padding da lista */
-            list-style: none; /* Remove os bullets da lista */
-        }
-
-        footer ul li {
-            margin-bottom: 0.3rem; /* Reduz o espaçamento entre os itens da lista */
-        }
-    </style>
-
-        
-        <style>
-        /* Menu lateral */
-        #sidebarMenu {
-        position: sticky;
-        top: 100px; /* Ajuste a posição conforme necessário */
-        width: auto; /* Largura automática para se ajustar ao conteúdo */
-        max-width: 300px; /* Aumenta a largura máxima */
-        padding: 12px; /* Espaçamento interno */
-        background-color: #f8f9fa; /* Cor de fundo do menu */
-        border-radius: 8px; /* Bordas arredondadas */
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito 3D */
-        z-index: 1000; /* Garante que o menu fique no topo de outros elementos */
-        overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
-        height: min-content;
-        white-space: normal; /* Permite quebra de linha */
-        
-        }
-
-        
-
-    /* Ajustes nos links dentro do menu */
-    #sidebarMenu .nav-link {
-        padding: 0.5rem 1rem; /* Reduz o espaçamento interno dos links */
-        font-size: 0.87rem; /* Tamanho da fonte dos links */
-        white-space: normal; /* Permite quebra de linha dentro do link */
-        overflow: visible; /* Exibe todo o conteúdo dos links */
-        text-overflow: clip; /* Não trunca o texto */
-        display: block; /* Exibe os links como blocos para ocupar toda a largura */
-    }
-
-
-    /* Estilo responsivo para telas menores */
-    @media (max-width: 768px) {
-        #sidebarMenu {
-            width: 100%; /* Largura total da tela em dispositivos menores */
-            margin-bottom: 15px; /* Margem inferior para dar espaço */
-            height: auto; /* Altura automática sem restrições */
-            overflow-y: visible; /* Remove barra de rolagem em telas pequenas */
-        }
-
-        main {
-            margin-left: 0; /* Remove margem esquerda em telas pequenas */
-        }
-    }
-
-    /* Ajuste da largura dos subtítulos */
-    #sidebarMenu h2, #sidebarMenu h3 {
-        font-size: 1rem; /* Tamanho de fonte para subtítulos */
-        margin-bottom: 0.5rem; /* Espaçamento inferior */
-        white-space: normal; /* Permite quebra de linha em subtítulos */
-    }
-
-
-    
-        /* Estilo para o menu header */
-
- 
-
-        .navbar-custom {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px 15px; /* Reduzido o padding */
-            }
-
-        .navbar-custom .navbar-nav .nav-link {
-            font-size: 0.9rem; /* Reduzido o tamanho da fonte */
-            padding: 5px 8px; /* Ajustado o padding */
-            white-space: nowrap; /* Impede quebra de linha */
-            color: #408c68; /* cor para os links */
-
-    
-            }
-
-            .navbar-custom .navbar-nav .nav-link:hover {
-                color: #28946c; /* Cor mais escura ao passar o mouse */
-            }
-
-            .navbar-custom .navbar-nav .nav-link.active {
-                background-color: #146551;
-                color: #ffffff;
-                border-radius: 4px; /* Reduzido o arredondamento das bordas */
-                padding: 6px 10px; /* Reduzido o padding do link ativo */
-            }
-
-            .navbar-custom .navbar-nav .nav-link:hover {
-                color: #146551;
-            }
-
-            .navbar-custom .search-bar {
-                background-color: #f0f0f5;
-                border-radius: 15px; /* Reduzido o arredondamento das bordas */
-                padding: 5px 10px; /* Reduzido o padding */
-                display: flex;
-                align-items: center;
-                width: 240px; /* Reduzido a largura da barra de busca */
-            }
-
-            .navbar-custom .search-bar input[type="text"] {
-                border: none;
-                background: transparent;
-                outline: none;
-                width: 100%;
-                padding: 5px;
-                color: #333333;
-            }
-
-            .navbar-custom .search-bar .fa-search {
-                color: #888888;
-            }
-
-
-            
-
-            /* Estilo para o footer */
-            footer {
-                background-color: #f8f9fa;
-                padding: 10px 0; /* Reduzido o padding */
-                border-top: 1px solid #dee2e6;
-                clear: both
-            }
-            footer h5 {
-                margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
-                font-size: 1.1em; /* Ajustado o tamanho da fonte */
-            }
-            footer p {
-                margin: 0;
-                font-size: 0.9em; /* Ajustado o tamanho da fonte */
-            }
-            footer ul {
-                padding: 0;
-                list-style: none;
-            }
-            footer ul li {
-                margin-bottom: 4px; /* Reduzido o espaçamento entre itens */
-            }
-            footer a {
-                text-decoration: none;
-                color: #146551;
-            }
-            footer a:hover {
-                text-decoration: underline;
-            }
-
-            /* Estilo para os cabeçalhos no menu lateral */
-            .sidebar-heading {
-                background-color: #146551; /* Cor de fundo desejada */
-                color: #ffffff; /* Cor do texto */
-                padding: 10px; /* Padding para o texto ficar bem posicionado */
-                border-radius: 4px; /* Arredondamento das bordas */
-                margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
-                font-weight: bold; /* Deixar o texto em negrito */
-                white-space: normal; /* Impede a quebra de linha */
-                overflow: hidden; /* Oculta o texto excedente */
-                font-size: 0.9em; /* Reduzido o tamanho da fonte */
-            }
-
-
-
-            /* Estilo para os links do menu lateral */
-            #sidebarMenu .nav-link {
-            color: #146551; /* Cor padrão dos links */
-            text-decoration: none; /* Remove o sublinhado padrão */
-            }
-
-            #sidebarMenu .nav-link:hover,
-            #sidebarMenu .nav-link:focus {
-                color: #0d3c2f; /* Cor ao passar o mouse ou focar no link */
-                text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-            }
-
-        </style>
-
-                    <style>
-                .btn-primary {
-                    background-color: #146551 !important;
-                    border-color: #146551 !important;
-                }
-                    </style>
-
     </head>
+
     <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ route('site.home') }}">
+                        <img src="..\images\logo2.png" alt="Logo Fapeu" height="60">
 
-    <header>
-    
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-            <div class="container">
-                    
-
-              <!-- Adiciona a logo no canto esquerdo -->
-        <a class="navbar-brand" href="{{ route('site.home') }}">
-            <img src="/sitefapeu/public/images/logo2.png" alt="Logo Fapeu"  height="60">
-            
-        </a>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.home') }}">Home</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.gestao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.gestao') }}">Gestão de Projetos</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.licitacao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.licitacao') }}">Licitações e Prestadores de Serviços</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.politica' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.politica') }}">Politica de Integridade</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.transparencia' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.transparencia') }}">Transparência</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.legislacao' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.legislacao') }}">Legislação e Normas Internas</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.colaborador' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.colaborador') }}">Espaço do Colaborador</a></li>
-                    <li class="nav-item {{ (Route::current()->getName() === 'site.contact' ? 'active' : '') }}"><a class="nav-link" href="{{ route('site.contact') }}">Fale Conosco</a></li>
-                
-                    
-                    
-                    
-                
-                </ul>
-                <div class="search-bar">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="Buscar...">
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="row">
-            
-            <!-- Menu Lateral Flutuante -->
-             
-            <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <h6 class="sidebar-heading">Conteúdos</h6>
-                    <ul class="nav flex-column">
-
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                        <a class="nav-link" href="{{ route('site.quemsomos') }}">Quem Somos</a>
+                    </a>
+                    <ul class="navbar-nav forceleft">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Quem somos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
+                                <a class="dropdown-item" href="#">Estatuto</a>
+                                <a class="dropdown-item" href="#">Regimento Interno</a>
+                                <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
+                                <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
+                                <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
+                                <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
+                            </div>
                         </li>
-
-                        <ul class="nav flex-column">
-                        <li class="nav-item">
-                        <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projetos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Captação de Recursos e Oportunidade</a>
+                                <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
+                                <a class="dropdown-item" href="#">Manual de Compras e Contratações</a>
+                                <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
+                            </div>
                         </li>
-
-                
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Transparência
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Projetos</a>
+                                <a class="dropdown-item" href="#">Relatório Técnico Semestral</a>
+                                <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
+                                <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
+                                <a class="dropdown-item" href="{{route('transparencia.fiscal_auditorias')}}">Fiscalização e Auditorias</a>
+                                <a class="dropdown-item" href="{{route('transparencia.demonstracoescontabeis')}}">Demonstrações Contábeis</a>
+                                <a class="dropdown-item" href="{{route('transparencia.compras')}}">Compras, Contratos e Aquisições</a>
+                                <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
+                                <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                                <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                <a class="nav-link" href="{{ route('site.espaco_do_coordenador') }}">Espaço do Coordenador</a>
-            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Políticas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
+                                <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
+                                <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
+                                <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê Gestão de Riscos</a>
+                                <a class="dropdown-item" href="#">LGPD</a>
+                                <a class="dropdown-item" href="#">Política de Privacidade</a>
+                                <a class="dropdown-item" href="#">Política de Cookies</a>
+                                <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Formulários</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Legislação e Normas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
+                                <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Fornecedor
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                                <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
+                                <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
+                                <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Colaborador
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">DRHFlow</a>
+                                <a class="dropdown-item" href="#">ADMFlow</a>
+                                <a class="dropdown-item" href="#">WebMail</a>
+                                <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                                <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                                <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                                <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
+                                <a class="dropdown-item" href="#">Vagas Disponíveis</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contato
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
+                                <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
+                            </div>
                         </li>
                     </ul>
-
-
-
-                    
-
-                
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Seleções Públicas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dispensa de Licitação</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inexigibilidade</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Espaço do Fornecedor</a>
-                        </li>
-                    </ul>
-
-
-                    
-
-                
+                    <div class="search-bar">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Buscar...">
+                    </div>
                 </div>
             </nav>
+        </header>
 
-            <!-- Conteúdo Principal -->
-            <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4">
-                @yield('content')
-            </main>
+        <div class="container">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <h6 class="sidebar-heading">Conteúdos</h6>
+                        <ul class="nav flex-column">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('site.quemsomos') }}">Quem Somos</a>
+                                </li>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('site.espaco_do_coordenador') }}">Espaço do Coordenador</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Formulários</a>
+                                    </li>
+                                </ul>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Seleções Públicas</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Dispensa de Licitação</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Inexigibilidade</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Espaço do Fornecedor</a>
+                                    </li>
+                                </ul>
+                    </div>
+                </nav>
+                <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4">
+                    @yield('content')
+                </main>
+            </div>
         </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class=" px-5">
-        <div class="row text-center">
-            <div class="col-md-4 mb-3">
-                <h5>Local</h5>
-                <p class= "text-justify">Rua Delfino Conti, Campus Universitário Reitor João David Ferreira Lima, Bairro Trindade Florianópolis/SC - CEP 88040-370 <br>
-                Horário de Funcionamento: Segunda a Sexta-feira das 8h às 12h e das 13h às 17h<br>
-
-                AC Cidade Universitária,
-                Caixa Postal 5078, Bairro Trindade, Florianópolis/SC, CEP 88035-972 <br>
-                CNPJ: 83.476.911/0001-17 <br>
-                Inscrição Estadual: ISENTO
-                Inscrição Municipal: 61.274-0</p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Links Úteis</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Transparência</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Contato</h5>
-                <p>Email: <a href="mailto:contato@fapeu.org">contato@fapeu.org</a></p>
-                <p>Telefone: (48)3331-7400</p>
-            </div>
-        </div>
-        <div class="row text-center mt-3">
-            <div class="col">
-                <p class="float-right"><a href="#">Voltar ao topo</a></p>
-                <p>&copy; <?= date('Y') ?> FAPEU &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+d10Axt6q1TM13K29L7Lxkl2YRIvX0CAqyI54S4rS3E6tctWj" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+d10Axt6q1TM13K29L7Lxkl2YRIvX0CAqyI54S4rS3E6tctWj" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </body>
+<div>
+    @include('layout.footer')
+</div>
     </html>

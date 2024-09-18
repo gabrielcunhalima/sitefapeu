@@ -1,55 +1,27 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::get('/', function () {
-    return view('site.home');
-}) ->name ('site.home');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/quemsomos', function () {
-    return view(view:'site.quemsomos');
-}) ->name ('site.quemsomos');
-
-
-Route::get('/gestao', function () {
-    return view(view:'site.gestao');
-}) ->name ('site.gestao');
-
-Route::get('/licitacao', function () {
-    return view(view:'site.licitacao');
-}) ->name ('site.licitacao');
-
-Route::get('/politica', function () {
-    return view(view:'site.politica');
-}) ->name ('site.politica');
-
-Route::get('/transparencia', function () {
-    return view(view:'site.transparencia');
-}) ->name ('site.transparencia');
-
-Route::get('/lesgislacao', function () {
-    return view(view:'site.legislacao');
-}) ->name ('site.legislacao');
-
-Route::get('/colaborador', function () {
-    return view(view:'site.colaborador');
-}) ->name ('site.colaborador');
-
-Route::get('/contact', function () {
-    return view(view:'site.contact');
-}) ->name ('site.contact');
-
-Route::get('/noticias', function () {
-    return view(view:'site.noticias');
-}) ->name ('site.noticias');
-
-Route::get('/espaco_do_coordenador', function () {
-    return view(view:'site.espaco_do_coordenador');
-}) ->name ('site.espaco_do_coordenador');
-
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+require __DIR__.'/auth.php';
