@@ -1,6 +1,16 @@
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
+
+
+            <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- jQuery and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fapeu</title>
@@ -10,7 +20,17 @@
 
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        
+    /*Redimensiona a imagem do carousel */
     
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
 
             
         /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
@@ -39,6 +59,7 @@
         footer {
             font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
             padding: 1rem 0; /* Reduz o espaçamento do footer */
+            margin-top: 80px; 
         }
 
         footer .col-md-4 h5 {
@@ -170,11 +191,15 @@
                 color: #888888;
             }
 
+
+            
+
             /* Estilo para o footer */
             footer {
                 background-color: #f8f9fa;
                 padding: 10px 0; /* Reduzido o padding */
                 border-top: 1px solid #dee2e6;
+                clear: both
             }
             footer h5 {
                 margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
@@ -246,7 +271,7 @@
 
               <!-- Adiciona a logo no canto esquerdo -->
         <a class="navbar-brand" href="{{ route('site.home') }}">
-            <img src="/sitefapeu/public/images/logo2.png" alt="Logo Fapeu" width="40" height="40">
+            <img src="/sitefapeu/public/images/logo2.png" alt="Logo Fapeu"  height="60">
             
         </a>
                 <ul class="navbar-nav mr-auto">
@@ -344,11 +369,18 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="container mt-4">
+    <footer class=" px-5">
         <div class="row text-center">
             <div class="col-md-4 mb-3">
-                <h5>Sobre Nós</h5>
-                <p>FAPEU é uma organização dedicada ao desenvolvimento de projetos e à gestão de recursos para promover a educação e o bem-estar social.</p>
+                <h5>Local</h5>
+                <p class= "text-justify">Rua Delfino Conti, Campus Universitário Reitor João David Ferreira Lima, Bairro Trindade Florianópolis/SC - CEP 88040-370 <br>
+                Horário de Funcionamento: Segunda a Sexta-feira das 8h às 12h e das 13h às 17h<br>
+
+                AC Cidade Universitária,
+                Caixa Postal 5078, Bairro Trindade, Florianópolis/SC, CEP 88035-972 <br>
+                CNPJ: 83.476.911/0001-17 <br>
+                Inscrição Estadual: ISENTO
+                Inscrição Municipal: 61.274-0</p>
             </div>
             <div class="col-md-4 mb-3">
                 <h5>Links Úteis</h5>
@@ -362,7 +394,7 @@
             <div class="col-md-4 mb-3">
                 <h5>Contato</h5>
                 <p>Email: <a href="mailto:contato@fapeu.org">contato@fapeu.org</a></p>
-                <p>Telefone: (11) 1234-5678</p>
+                <p>Telefone: (48)3331-7400</p>
             </div>
         </div>
         <div class="row text-center mt-3">

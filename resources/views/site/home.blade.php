@@ -12,9 +12,11 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide img-fluid" src="{{ asset('images/prediofapeu2.png') }}" alt="First slide">
+
             <div class="container">
               <div class="carousel-caption text-left">
+                
                 <h1>Fapeu</h1>
                 @if (date('H')>= 0 && date('H') <= 12)
                     <p> Bom dia!</p>
@@ -29,7 +31,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="/C:\wamp64\www\sitefapeu\public\images\prediofapeu.png" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Outra manchete</h1>
@@ -39,7 +41,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="/C:\wamp64\www\sitefapeu\public\images\prediofapeu.png" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <p> outra manchete </p>
@@ -76,7 +78,7 @@
                    
                         <div class="card-body">
                             <h5 class="card-title">Reservas de Salas</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
                             <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
@@ -87,7 +89,7 @@
                     
                         <div class="card-body">
                             <h5 class="card-title">Cursos e Eventos</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
                             <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
@@ -111,7 +113,7 @@
                   
                         <div class="card-body">
                             <h5 class="card-title">NAGEFI</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
                             <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
@@ -121,7 +123,7 @@
                       
                         <div class="card-body">
                             <h5 class="card-title">LATIC</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
                             <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
@@ -131,7 +133,7 @@
                       
                         <div class="card-body">
                             <h5 class="card-title">Concursos</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
                             <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
                         </div>
                     </div>
