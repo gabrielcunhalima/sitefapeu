@@ -137,8 +137,8 @@
         .navbar-custom .navbar-nav .nav-link.active {
             background-color: #146551;
             color: #ffffff;
-            border-radius: 4px; /* Reduzido o arredondamento das bordas */
-            padding: 6px 10px; /* Reduzido o padding do link ativo */
+            border-radius: 4px; 
+            padding: 6px 10px;
         }
 
         .navbar-custom .navbar-nav .nav-link:hover {
@@ -147,11 +147,12 @@
 
         .navbar-custom .search-bar {
             background-color: #f0f0f5;
-            border-radius: 15px; /* Reduzido o arredondamento das bordas */
-            padding: 5px 10px; /* Reduzido o padding */
+            border-radius: 15px; 
+            padding: 5px 10px; 
             display: flex;
             align-items: center;
-            width: 240px; /* Reduzido a largura da barra de busca */
+            width: 240px;
+            font-size: 0.9rem;
         }
 
         .navbar-custom .search-bar input[type="text"] {
@@ -161,21 +162,27 @@
             width: 100%;
             padding: 5px;
             color: #333333;
+            font-size: 0.9rem;
         }
 
         .navbar-custom .search-bar .fa-search {
             color: #888888;
+            margin-right: 5px;
         }
 
+        .navbar-custom .search-bar button {
+            background-color: transparent;
+            border: none;
+            color: #888888;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
 
-        
-
-        /* Estilo para o footer */
         footer {
-            background-color: #f8f9fa;
+            background-color: #00634c;
             padding: 10px 0; /* Reduzido o padding */
             border-top: 1px solid #dee2e6;
-            clear: both
+            clear: both;
         }
         footer h5 {
             margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */

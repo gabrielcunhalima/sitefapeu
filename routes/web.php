@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\PesquisaController;
 
 Route::get('/', function () {
     return view('homepage.home');
 }) ->name ('homepage.home');
 
+Route::get('/search', [PesquisaController::class, 'search'])->name('search');
 
 Route::get('/home', [MenuController::class, 'home'])->name('homepage.home');
 
