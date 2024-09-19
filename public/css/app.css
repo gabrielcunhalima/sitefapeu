@@ -1,201 +1,233 @@
-.logo {
-    width:80px;
-    margin-right:10px;
-    /* margin: 2vh 2vw 2vh -5vw */
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        
+/*Redimensiona a imagem do carousel */
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+
+        
+    /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
+    #sidebarMenu {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        
+    }
+
+    #sidebarMenu .nav-link {
+        padding: 0.8rem; /* Reduz o espaçamento interno dos links */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+    }
+
+    .sidebar-heading {
+        font-size: 5rem; /* Reduz o tamanho da fonte dos cabeçalhos */
+        font-family: 'Noticia Text';
+        margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos cabeçalhos */
+    }
+
+    /* Ajustando o conteúdo principal */
+    main {
+        padding: 1rem; /* Reduz o padding interno do conteúdo principal */
+    }
+
+    /* Reduzindo o tamanho da fonte e o espaçamento do footer */
+    footer {
+        font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
+        padding: 1rem 0; /* Reduz o espaçamento do footer */
+        margin-top: 80px; 
+    }
+
+    footer .col-md-4 h5 {
+        font-size: 1rem; /* Reduz o tamanho da fonte dos títulos no footer */
+    }
+
+    footer p, footer a {
+        margin-bottom: 0.3rem; /* Reduz o espaçamento entre parágrafos e links */
+    }
+
+    footer ul {
+        padding-left: 0; /* Remove o padding da lista */
+        list-style: none; /* Remove os bullets da lista */
+    }
+
+    footer ul li {
+        margin-bottom: 0.3rem; /* Reduz o espaçamento entre os itens da lista */
+    }
+
+ /* Menu lateral */
+ #sidebarMenu {
+    position: sticky;
+    top: 100px; /* Ajuste a posição conforme necessário */
+    width: auto; /* Largura automática para se ajustar ao conteúdo */
+    max-width: 300px; /* Aumenta a largura máxima */
+    padding: 12px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo do menu */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito 3D */
+    z-index: 1000; /* Garante que o menu fique no topo de outros elementos */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+    height: min-content;
+    white-space: normal; /* Permite quebra de linha */
+    
+    }
+
+    
+
+/* Ajustes nos links dentro do menu */
+#sidebarMenu .nav-link {
+    padding: 0.5rem 1rem; /* Reduz o espaçamento interno dos links */
+    font-size: 0.87rem; /* Tamanho da fonte dos links */
+    white-space: normal; /* Permite quebra de linha dentro do link */
+    overflow: visible; /* Exibe todo o conteúdo dos links */
+    text-overflow: clip; /* Não trunca o texto */
+    display: block; /* Exibe os links como blocos para ocupar toda a largura */
 }
 
-.escolher {
-    padding:10px;
-    width:25%;
-}
 
-.bolder {
-    font-weight: bolder;
-}
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    #sidebarMenu {
+        width: 100%; /* Largura total da tela em dispositivos menores */
+        margin-bottom: 15px; /* Margem inferior para dar espaço */
+        height: auto; /* Altura automática sem restrições */
+        overflow-y: visible; /* Remove barra de rolagem em telas pequenas */
+    }
 
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
-    flex: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
-}
-
-/* Coloca o objeto mais a direita possível */
-.forceright {
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Coloca o objeto mais a esquerda possivel */
-.forceleft {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.verdefapeu {
-    background-color:#009270 !important;
-}
-
-.pretofapeu {
-    background-color: #3e3e3f;
-}
-
-.cinzafapeu {
-    background-color: #bcbdc0;
-}
-
-.verde1 {
-    background-color: #00a775;
-}
-
-.verde2 {
-    background-color: #009268;
-}
-
-.verde3 {
-    background-color: #007e5a;
-}
-
-.verde4 {
-    background-color: #006b4d;
-}
-
-.verde5 {
-    background-color: #005940;
-}
-
-.verde6 {
-    background-color: #005232;
-}
-
-.cinzaclaro {
-    background-color: rgb(129, 129, 129);
-}
-
-.sombra {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 8px 6px 6px;
-}
-
-.branco {
-    color:#ffffff;
-}
-
-.fundobranco {
-    background-color: white;
-}
-
-@media (min-width: 922px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
+    main {
+        margin-left: 0; /* Remove margem esquerda em telas pequenas */
     }
 }
 
-footer {
-    background-color: #006448;
-    margin-top: auto;
-}
-
-.containerheader {
-    display:flex;
-    justify-content: center;
-    width: 80vw;
-    padding-right: var(--bs-gutter-x, 0.75rem);
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: auto;
-    margin-left: auto;
-}
- 
-.containerinicio {
-    width: 80vw;
-    padding-right: var(--bs-gutter-x, 0.75rem);
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: auto;
-    margin-left: auto;
+/* Ajuste da largura dos subtítulos */
+#sidebarMenu h2, #sidebarMenu h3 {
+    font-size: 1rem; /* Tamanho de fonte para subtítulos */
+    margin-bottom: 0.5rem; /* Espaçamento inferior */
+    white-space: normal; /* Permite quebra de linha em subtítulos */
 }
 
 
-.titulo {
-    position:relative;
-}
 
-.cabecalho {
-    margin-right: 3vw
-}
+    /* Estilo para o menu header */
 
-@media (min-width: 921px) {
-    header {
-        padding:5px;
-        background-color: #009270;
-        margin: 0 auto;
-        width: 100vw;
-        display:flex;
-        justify-content: flex-end;
-    }
-}
 
-/* CSS PARA MOBILE */
 
-@media (max-width: 920px) {
-    header {
-        font-size: 11px;
-        padding:5px;
-        background-color: #009270;
-        margin: 0 auto;
-        width: 100vw;
-        display:flex;
-        justify-content: flex-end;
-    }
-}
+    .navbar-custom {
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 15px; /* Reduzido o padding */
+        }
 
-body {
-    font-family: "Montserrat Medium", Verdana, Arial, Helvetica, sans-serif !important;
-}
+    .navbar-custom .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Reduzido o tamanho da fonte */
+        padding: 5px 8px; /* Ajustado o padding */
+        white-space: nowrap; /* Impede quebra de linha */
+        color: #408c68; /* cor para os links */
 
-.homepage {
-    margin-bottom:3px;
-}
 
-.principal {
-    font-size: 24px;
-    border-radius: 12px;
-}
+        }
 
-.servicos {
-    border-radius:10px;
-}
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #28946c; /* Cor mais escura ao passar o mouse */
+        }
 
-.sociais {
-    margin-right: 10px;
-}
+        .navbar-custom .navbar-nav .nav-link.active {
+            background-color: #146551;
+            color: #ffffff;
+            border-radius: 4px; /* Reduzido o arredondamento das bordas */
+            padding: 6px 10px; /* Reduzido o padding do link ativo */
+        }
 
-.sociaisfooter {
-    margin-right: 10px;
-    font-size:20px;
-}
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #146551;
+        }
 
-.prediofapeu {
-    background-color: #68eb82;
-}
+        .navbar-custom .search-bar {
+            background-color: #f0f0f5;
+            border-radius: 15px; /* Reduzido o arredondamento das bordas */
+            padding: 5px 10px; /* Reduzido o padding */
+            display: flex;
+            align-items: center;
+            width: 240px; /* Reduzido a largura da barra de busca */
+        }
 
-.containerhome {
-    background-color: #ffffff;
-}
+        .navbar-custom .search-bar input[type="text"] {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+            color: #333333;
+        }
 
-.pesquisa {
-    margin:0 !important;
-}
+        .navbar-custom .search-bar .fa-search {
+            color: #888888;
+        }
 
-.jumbotronfapeu {
-    background-image: url("../images/prediofapeu.png");
-    background-size: cover;
-  }
+
+        
+
+        /* Estilo para o footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0; /* Reduzido o padding */
+            border-top: 1px solid #dee2e6;
+            clear: both
+        }
+        footer h5 {
+            margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
+            font-size: 1.1em; /* Ajustado o tamanho da fonte */
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em; /* Ajustado o tamanho da fonte */
+        }
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+        footer ul li {
+            margin-bottom: 4px; /* Reduzido o espaçamento entre itens */
+        }
+        footer a {
+            text-decoration: none;
+            color: #146551;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para os cabeçalhos no menu lateral */
+        .sidebar-heading {
+            background-color: #146551; /* Cor de fundo desejada */
+            color: #ffffff; /* Cor do texto */
+            padding: 10px; /* Padding para o texto ficar bem posicionado */
+            border-radius: 4px; /* Arredondamento das bordas */
+            margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
+            font-weight: bold; /* Deixar o texto em negrito */
+            white-space: normal; /* Impede a quebra de linha */
+            overflow: hidden; /* Oculta o texto excedente */
+            font-size: 0.9em; /* Reduzido o tamanho da fonte */
+        }
+
+
+
+        /* Estilo para os links do menu lateral */
+        #sidebarMenu .nav-link {
+        color: #146551; /* Cor padrão dos links */
+        text-decoration: none; /* Remove o sublinhado padrão */
+        }
+
+        #sidebarMenu .nav-link:hover,
+        #sidebarMenu .nav-link:focus {
+            color: #0d3c2f; /* Cor ao passar o mouse ou focar no link */
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+
+        .btn-primary {
+            background-color: #146551 !important;
+            border-color: #146551 !important;
+        }

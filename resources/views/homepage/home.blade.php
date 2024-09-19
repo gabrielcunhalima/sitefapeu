@@ -10,12 +10,11 @@
                 <ul class="nav flex-column">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('site.quemsomos') }}">Quem Somos</a>
+                            <a class="nav-link" href="{{ route('quemsomos.sobre') }}">Quem Somos</a>
                         </li>
-
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('site.noticias') }}">Noticias</a>
+                                <a class="nav-link" href="#">Noticias</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Captação de Recursos & Oportunidades para novos Projetos</a>
@@ -46,6 +45,8 @@
                         </ul>
             </div>
         </nav>
+
+        <!-- Conteúdo Principal -->
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4">
             @yield('content')
         </main>
