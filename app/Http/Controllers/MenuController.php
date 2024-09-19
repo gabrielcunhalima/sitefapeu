@@ -27,7 +27,7 @@ class MenuController extends Controller
     public function revistafapeu() {
         return view('quemsomos.revistafapeu');
     }
-
+ww
     //MENU Projetos
 
     public function capacitacao() {
