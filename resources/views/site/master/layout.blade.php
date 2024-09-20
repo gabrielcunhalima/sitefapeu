@@ -144,9 +144,7 @@
 
     <div class="container">
         <div class="row">
-            
-            <!-- Menu Lateral Flutuante -->
-             
+
             <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
                     <h6 class="sidebar-heading">Conteúdos</h6>
