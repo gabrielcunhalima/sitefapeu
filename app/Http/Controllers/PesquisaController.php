@@ -29,8 +29,8 @@ class PesquisaController extends Controller
 
         return view('pesquisa.resultado', ['results' => $results, 'query' => $query]);
     }
-        public function create()
-        {
-            return view('admin.adicionarnoticia');
-        }
+    public function create()
+    {
+        return view('admin.adicionarnoticia');
+    }
 }

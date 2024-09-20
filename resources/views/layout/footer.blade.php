@@ -1,6 +1,6 @@
 @section('css','../css/app.css')
 
-<footer class="text-lg-start footer sticky text-white">
+<footer class="text-lg-start footer text-white">
   <!-- Grid container -->
   <div class="container pt-4 pb-1">
     <!--Grid row-->
