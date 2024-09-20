@@ -31,6 +31,9 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+<div class="wrapper">
+
+<main>
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
@@ -156,7 +159,7 @@
   <div class="container">
     @yield('conteudo')
   </div>
-
+</main>
   <div style="margin-top:5vh;">
     @include('layout.footer')
   </div>
