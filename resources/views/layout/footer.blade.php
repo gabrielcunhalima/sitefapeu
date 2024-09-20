@@ -1,6 +1,6 @@
 @section('css','../css/app.css')
 
-<footer class="text-white text-lg-start footer">
+<footer class="text-lg-start footer fixed-bottom text-white">
   <!-- Grid container -->
   <div class="container pt-4 pb-1">
     <!--Grid row-->
@@ -37,9 +37,11 @@
           contato@fapeu.org.br<br>
           <br>
           Redes Sociais<br>
-          <a href="https://instagram.com/@fapeu_" class="sociaisfooter"><i class="bi bi-instagram branco"></i></a>
-          <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="sociaisfooter"> <i class="bi bi-facebook branco"></i></a>
-          <a href="https://www.linkedin.com/company/fapeu/" class="sociaisfooter"><i class="bi bi-linkedin branco"></i></a>
+        </p>
+        <p style="font-size:24dpx;">
+          <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
         </p>
       </div>
       <!--Grid column-->
@@ -49,8 +51,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3 verde6">
-   
+  <div class="text-center p-3">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
   </div>
   <!-- Copyright -->

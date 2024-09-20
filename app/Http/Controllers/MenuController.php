@@ -27,7 +27,6 @@ class MenuController extends Controller
     public function revistafapeu() {
         return view('quemsomos.revistafapeu');
     }
-ww
     //MENU Projetos
 
     public function capacitacao() {
@@ -35,7 +34,7 @@ ww
     }
 
     public function formulariosprojetos() {
-        return view('projetos.formulariosprojetos');
+        return view('projetos.formularios');
     }
 
     public function espacocoordenador() {
@@ -149,5 +148,9 @@ ww
 
     public function contato() {
         return view('faleconosco.contato');
+    }
+
+    public function home() {
+        return view('homepage.home');
     }
 }

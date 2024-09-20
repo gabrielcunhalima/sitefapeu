@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://127.0.0.1:8000/style.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
+
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -29,10 +31,10 @@
 </head>
 
 <body>
-  <header>
+  <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="{{ route('site.home') }}">
+        <a class="navbar-brand" href="{{ route('homepage.home') }}">
           <img src="..\images\logo2.png" alt="Logo Fapeu" height="60">
 
         </a>
@@ -139,17 +141,18 @@
             </div>
           </li>
         </ul>
-        <div class="search-bar">
+        <!-- <form action="{{ route('search') }}" method="GET" class="search-bar">
           <i class="fa fa-search"></i>
-          <input type="text" placeholder="Buscar...">
-        </div>
+          <input type="text" name="q" placeholder="Buscar...">
+          <button type="submit"><i class="bi bi-search"></button>
+        </form> -->
+        <form action="{{ route('search') }}" method="GET" class="search-bar">
+            <input type="text" name="q" placeholder="Buscar..." required>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
     </nav>
   </header>
-
-  <div class="titulo">
-    @yield('inicio')
-  </div>
 
   <div class="container">
     @yield('conteudo')
@@ -158,6 +161,25 @@
   <div style="margin-top:5vh;">
     @include('layout.footer')
   </div>
+  <script>
+    document.getElementById('search-button').addEventListener('click', function() {
+      var query = document.getElementById('search-input').value;
+      if (query) {
+        // Aqui você pode definir a URL para a qual enviar a busca
+        var searchUrl = '127./search?q=' + encodeURIComponent(query);
+        window.location.href = searchUrl;
+      } else {
+        alert('Por favor, insira um termo de busca.');
+      }
+    });
+
+    // Opcional: Permitir a busca ao pressionar Enter
+    document.getElementById('search-input').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        document.getElementById('search-button').click();
+      }
+    });
+  </script>
 </body>
 
 </html>
