@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="http://127.0.0.1:8000/style.css">
   <!-- Bootstrap CSS -->
@@ -132,7 +131,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Contato
+              Fale Conosco
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
@@ -164,7 +163,7 @@
     document.getElementById('search-button').addEventListener('click', function() {
       var query = document.getElementById('search-input').value;
       if (query) {
-        // Aqui você pode definir a URL para a qual enviar a busca
+       
         var searchUrl = '127./search?q=' + encodeURIComponent(query);
         window.location.href = searchUrl;
       } else {
@@ -172,7 +171,6 @@
       }
     });
 
-    // Opcional: Permitir a busca ao pressionar Enter
     document.getElementById('search-input').addEventListener('keypress', function(event) {
       if (event.key === 'Enter') {
         document.getElementById('search-button').click();
@@ -180,5 +178,4 @@
     });
   </script>
 </body>
-
 </html>
