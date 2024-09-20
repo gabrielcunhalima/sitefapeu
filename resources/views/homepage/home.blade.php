@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('title','FAPEU Novo')
 
-<div class="">
+<!-- <div class="">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-2 d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
@@ -45,7 +45,7 @@
             </div>
         </nav>
     </div>
-</div>
+</div> -->
 @section('conteudo')
 
 @endsection

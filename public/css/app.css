@@ -39,6 +39,7 @@
         font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
         padding: 1rem 0; /* Reduz o espaçamento do footer */
         margin-top: 80px; 
+        position: sticky;
     }
 
     footer .col-md-4 h5 {
@@ -247,27 +248,21 @@ body {
     padding-top: 5rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
-  
-    
+    height: 100vh;
   }
   
   
   
-  /* CUSTOMIZA O CAROUSEL
-  -------------------------------------------------- */
-  
-  /* Classe base do carousel */
+
   .carousel {
     margin-bottom: 4rem;
   }
   
-  /* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
   }
   
-  /* Declaramos alturas, devido ao posicionamento do elemento img */
   .carousel-item {
     height: 32rem;
     background-color: #777;
@@ -409,7 +404,7 @@ body {
   /* Estilo ao passar o mouse sobre o link */
   .menu-lateral a:hover {
   color: #0e4a3c; /* Tom mais escuro de verde ao passar o mouse */
-  }
+}
   
   
   /* Impede que a logo seja redimensionada */
@@ -435,3 +430,4 @@ body {
     padding-right: 0;
   }
 
+  

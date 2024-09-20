@@ -30,17 +30,16 @@
   <title>FAPEU</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <header class="mb-5">
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
         <a class="navbar-brand" href="{{ route('homepage.home') }}">
           <img src="..\images\logo2.png" alt="Logo Fapeu" height="60">
-
         </a>
-        <ul class="navbar-nav forceleft">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <ul class="navbar-nav forceleft text-white">
+          <li class="nav-item dropdown text-white">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Quem somos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,7 +53,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Projetos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -65,7 +64,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Transparência
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -82,7 +81,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Políticas
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -97,7 +96,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legislação e Normas
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -106,7 +105,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Fornecedor
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -117,7 +116,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Colaborador
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -132,7 +131,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Contato
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -147,8 +146,8 @@
           <button type="submit"><i class="bi bi-search"></button>
         </form> -->
         <form action="{{ route('search') }}" method="GET" class="search-bar">
-            <input type="text" name="q" placeholder="Buscar..." required>
-            <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" name="q" placeholder="Buscar..." required>
+          <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
         </form>
       </div>
     </nav>
