@@ -76,3 +76,8 @@ Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name
 //FALECONOSCO
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
+
+//ADMIN
+
+Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('admin.adicionarnoticia');
+Route::post('/posts/store', [PesquisaController::class, 'store'])->name('posts.store');
