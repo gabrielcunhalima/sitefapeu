@@ -31,13 +31,15 @@
 
     /* Ajustando o conteúdo principal */
     main {
-        min-height: 70vh;
+      height: 10vh;
+      padding: 1rem;
     }
 
     /* Reduzindo o tamanho da fonte e o espaçamento do footer */
     footer {
         font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
         padding: 1rem 0; /* Reduz o espaçamento do footer */
+
     }
 
     footer .col-md-4 h5 {
@@ -184,7 +186,7 @@
             clear: both;
         }
         footer h5 {
-
+            margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
             font-size: 1.1em; /* Ajustado o tamanho da fonte */
         }
         footer p {
@@ -242,11 +244,6 @@
 -------------------------------------------------- */
 /* Padding abaixo do footer e texto mais suave no <body> */
 
-body {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
-  }
   /* CUSTOMIZA O CAROUSEL
   -------------------------------------------------- */
   

@@ -32,10 +32,7 @@
   <title>FAPEU</title>
 </head>
 
-<body class="d-flex flex-column">
-<div class="wrapper">
-
-<main></main>
+<body class="d-flex flex-column min-vh-100">
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
@@ -157,14 +154,13 @@
       </div>
     </nav>
   </header>
-
   <div class="container">
     @yield('conteudo')
   </div>
+
   <div>
     @include('layout.footer')
   </div>
-
 
   <script>
     document.getElementById('search-button').addEventListener('click', function() {
