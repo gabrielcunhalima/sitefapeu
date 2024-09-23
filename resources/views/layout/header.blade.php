@@ -32,6 +32,9 @@
   <title>FAPEU</title>
 </head>
 
+<main>
+<div class="wrapper">
+
 <body class="d-flex flex-column min-vh-100">
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
@@ -129,6 +132,7 @@
               <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
               <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
               <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
+              
               <a class="dropdown-item" href="#">Vagas Disponíveis</a>
             </div>
           </li>
@@ -157,7 +161,7 @@
   <div class="container">
     @yield('conteudo')
   </div>
-
+</main>
   <div>
     @include('layout.footer')
   </div>

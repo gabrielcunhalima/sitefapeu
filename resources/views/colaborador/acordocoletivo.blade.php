@@ -10,18 +10,18 @@
   .table {
     width: 80%; /* Ajuste a porcentagem conforme necessário */
     margin: 0 auto; /* Centraliza a tabela */
+    
   }
-  
 
 </style>
 
 <table class="table">
-
+  <thead class="thead-dark">
     <tr>
       <th scope="col">Formulário</th>
       
     </tr>
-
+  </thead>
   <tbody>
     <tr>
       <td><a href="/pdfs/pdfs_acordo_coletivo/TERMO ADITIVO A ACORDO COLETIVO DE TRABALHO 2024 2025.pdf" download>Acordo Coletivo 2023/2025  // ADITIVO</a></td>

@@ -19,6 +19,7 @@ Route::get('/formularioscolaborador',[MenuController::class,'formularioscolabora
 Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->name('colaborador.informerendimentos');
 Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
 
+
 //FORNECEDOR
 
 Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dispensa');
