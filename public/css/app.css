@@ -38,16 +38,14 @@
     
     /* Ajustando o conteúdo principal */
     main {
-      margin-bottom: 150px;
-      flex: 1;
-        /* Reduz o padding interno do conteúdo principal */
+        padding: 1rem; /* Reduz o padding interno do conteúdo principal */
     }
 
     /* Reduzindo o tamanho da fonte e o espaçamento do footer */
     footer {
         font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
         padding: 1rem 0; /* Reduz o espaçamento do footer */
-        margin-top: 80px; 
+
     }
 
     footer .col-md-4 h5 {
@@ -259,16 +257,6 @@
 -------------------------------------------------- */
 /* Padding abaixo do footer e texto mais suave no <body> */
 
-body {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
-  
-    
-  }
-  
-  
-  
   /* CUSTOMIZA O CAROUSEL
   -------------------------------------------------- */
   

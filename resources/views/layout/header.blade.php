@@ -2,6 +2,9 @@
 <html lang="pt-br">
 
 <head>
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,14 +33,11 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-<div class="wrapper">
-
-<main>
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
         <a class="navbar-brand" href="{{ route('homepage.home') }}">
-          <img src="..\images\logo2.png" alt="Logo Fapeu" height="60">
+          <img src="..\images\logo3.png" alt="Logo Fapeu" height="75">
         </a>
         <ul class="navbar-nav forceleft text-white">
           <li class="nav-item dropdown text-white">
@@ -154,14 +154,14 @@
       </div>
     </nav>
   </header>
-
   <div class="container">
     @yield('conteudo')
   </div>
-</main>
-  <div style="margin-top:5vh;">
+
+  <div>
     @include('layout.footer')
   </div>
+
   <script>
     document.getElementById('search-button').addEventListener('click', function() {
       var query = document.getElementById('search-input').value;

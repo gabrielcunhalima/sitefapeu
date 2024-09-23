@@ -1,9 +1,7 @@
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-
-
-            <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- jQuery and Bootstrap JS -->
