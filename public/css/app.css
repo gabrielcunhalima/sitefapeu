@@ -29,9 +29,18 @@
         margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos cabeçalhos */
     }
 
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Garante que a página ocupe a altura completa da tela */
+    }
+    
     /* Ajustando o conteúdo principal */
     main {
-        padding: 1rem; /* Reduz o padding interno do conteúdo principal */
+      margin-bottom: 150px;
+      flex: 1;
+        /* Reduz o padding interno do conteúdo principal */
     }
 
     /* Reduzindo o tamanho da fonte e o espaçamento do footer */
@@ -99,6 +108,7 @@
 
     main {
         margin-left: 0; /* Remove margem esquerda em telas pequenas */
+        margin-bottom: 100px; 
     }
 }
 
@@ -183,6 +193,12 @@
             padding: 10px 0; /* Reduzido o padding */
             border-top: 1px solid #dee2e6;
             clear: both;
+            bottom: 0;
+            position: relative;
+            width: 100%;
+            left: 0;
+            height:190px;
+          
         }
         footer h5 {
             margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
