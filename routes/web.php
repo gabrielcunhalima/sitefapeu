@@ -18,6 +18,7 @@ Route::get('/acordocoletivo',[MenuController::class,'acordocoletivo'])->name('co
 Route::get('/formularioscolaborador',[MenuController::class,'formularioscolaborador'])->name('colaborador.formularioscolaborador');
 Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->name('colaborador.informerendimentos');
 Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
+Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name('colaborador.vagasdisponiveis');
 
 
 //FORNECEDOR

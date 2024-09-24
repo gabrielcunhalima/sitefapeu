@@ -133,7 +133,7 @@
               <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
               <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
               
-              <a class="dropdown-item" href="#">Vagas Disponíveis</a>
+              <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
             </div>
           </li>
           <li class="nav-item dropdown">

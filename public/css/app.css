@@ -450,3 +450,59 @@
     padding-right: 0;
   }
 
+
+  /* Vagas Disponiveis */
+
+  .cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009771;
+    padding: 50px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+
+.cta-text h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-text p {
+    color: #c0f6e2;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #146551;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button i {
+    margin-left: 10px;
+    color: #00c49a;
+}
+
+
+

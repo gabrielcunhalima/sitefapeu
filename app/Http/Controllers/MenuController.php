@@ -144,6 +144,11 @@ class MenuController extends Controller
         return view('colaborador.programainclusao');
     }
 
+      public function vagasdisponiveis() {
+        return view('colaborador.vagasdisponiveis');
+    }
+
+
     //MENU Contato
 
     public function contato() {
@@ -153,4 +158,6 @@ class MenuController extends Controller
     public function home() {
         return view('homepage.home');
     }
+
+  
 }
