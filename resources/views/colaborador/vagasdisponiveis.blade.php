@@ -11,7 +11,7 @@
         </a>
     </div>
     <div class="cta-image" style="flex: 1; text-align: right;">
-        <img src="/images/vagas_disponiveis_foto.jpg" alt="Homework Services" style="max-width: 100%; border-radius: 10px;">
+        <img src="/images/vagasdisponiveis2.jpg" alt="Homework Services" style="max-width: 100%; border-radius: 10px;">
     </div>
 </div>
 @endsection
