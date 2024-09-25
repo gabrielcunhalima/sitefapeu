@@ -1,12 +1,11 @@
 @section('css','../css/app.css')
 
 <!-- Footer -->
-<footer class="text-lg-start footer text-white">
+<footer class="text-lg-start footer text-white mt-4">
   <!-- Grid container -->
   <div class="container pt-4 py-4">
     <!--Grid row-->
     <div class="row">
-
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase">Localização</h5>
         <p style="font-size:14px;">

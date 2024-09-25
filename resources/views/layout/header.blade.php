@@ -2,9 +2,9 @@
 <html lang="pt-br">
 
 <head>
-<!-- include summernote css/js -->
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <!-- include summernote css/js -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,156 +33,156 @@
 </head>
 
 <main>
-<div class="wrapper">
+  <div class="wrapper">
+    <body>
+      <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
+          <div class="container">
+            <a class="navbar-brand" href="{{ route('homepage.home') }}">
+              <img src="..\images\logo3.png" alt="Logo Fapeu" height="75">
+            </a>
+            <ul class="navbar-nav forceleft text-white">
+              <li class="nav-item dropdown text-white">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Quem somos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
+                  <a class="dropdown-item" href="#">Estatuto</a>
+                  <a class="dropdown-item" href="#">Regimento Interno</a>
+                  <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
+                  <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
+                  <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
+                  <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projetos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
+                  <a class="dropdown-item" href="#">Manual de Compras e Contratações</a>
+                  <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Transparência
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Projetos</a>
+                  <a class="dropdown-item" href="#">Relatório Técnico Semestral</a>
+                  <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
+                  <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
+                  <a class="dropdown-item" href="{{route('transparencia.fiscal_auditorias')}}">Fiscalização e Auditorias</a>
+                  <a class="dropdown-item" href="{{route('transparencia.demonstracoescontabeis')}}">Demonstrações Contábeis</a>
+                  <a class="dropdown-item" href="{{route('transparencia.compras')}}">Compras, Contratos e Aquisições</a>
+                  <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
+                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Políticas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
+                  <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
+                  <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
+                  <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê Gestão de Riscos</a>
+                  <a class="dropdown-item" href="#">LGPD</a>
+                  <a class="dropdown-item" href="#">Política de Privacidade</a>
+                  <a class="dropdown-item" href="#">Política de Cookies</a>
+                  <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Legislação e Normas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
+                  <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Fornecedor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
+                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
+                  <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Colaborador
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">DRHFlow</a>
+                  <a class="dropdown-item" href="#">ADMFlow</a>
+                  <a class="dropdown-item" href="#">WebMail</a>
+                  <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                  <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                  <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                  <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
 
-<body class="d-flex flex-column min-vh-100">
-  <header class="mb-5">
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
-      <div class="container">
-        <a class="navbar-brand" href="{{ route('homepage.home') }}">
-          <img src="..\images\logo3.png" alt="Logo Fapeu" height="75">
-        </a>
-        <ul class="navbar-nav forceleft text-white">
-          <li class="nav-item dropdown text-white">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Quem somos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
-              <a class="dropdown-item" href="#">Estatuto</a>
-              <a class="dropdown-item" href="#">Regimento Interno</a>
-              <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
-              <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
-              <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
-              <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Projetos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Captação de Recursos e Oportunidade</a>
-              <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
-              <a class="dropdown-item" href="#">Manual de Compras e Contratações</a>
-              <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Transparência
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Projetos</a>
-              <a class="dropdown-item" href="#">Relatório Técnico Semestral</a>
-              <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
-              <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
-              <a class="dropdown-item" href="{{route('transparencia.fiscal_auditorias')}}">Fiscalização e Auditorias</a>
-              <a class="dropdown-item" href="{{route('transparencia.demonstracoescontabeis')}}">Demonstrações Contábeis</a>
-              <a class="dropdown-item" href="{{route('transparencia.compras')}}">Compras, Contratos e Aquisições</a>
-              <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
-              <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
-              <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Políticas
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
-              <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
-              <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-              <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê Gestão de Riscos</a>
-              <a class="dropdown-item" href="#">LGPD</a>
-              <a class="dropdown-item" href="#">Política de Privacidade</a>
-              <a class="dropdown-item" href="#">Política de Cookies</a>
-              <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Legislação e Normas
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
-              <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Fornecedor
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
-              <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-              <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
-              <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Colaborador
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">DRHFlow</a>
-              <a class="dropdown-item" href="#">ADMFlow</a>
-              <a class="dropdown-item" href="#">WebMail</a>
-              <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
-              <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
-              <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
-              <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-              
-              <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Fale Conosco
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
-              <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
-            </div>
-          </li>
-        </ul>
-        <!-- <form action="{{ route('search') }}" method="GET" class="search-bar">
+                  <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Fale Conosco
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
+                  <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
+                </div>
+              </li>
+            </ul>
+            <!-- <form action="{{ route('search') }}" method="GET" class="search-bar">
           <i class="fa fa-search"></i>
           <input type="text" name="q" placeholder="Buscar...">
           <button type="submit"><i class="bi bi-search"></button>
         </form> -->
-        <form action="{{ route('search') }}" method="GET" class="search-bar">
-          <input type="text" name="q" placeholder="Buscar..." required>
-          <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
-        </form>
+            <form action="{{ route('search') }}" method="GET" class="search-bar">
+              <input type="text" name="q" placeholder="Buscar..." required>
+              <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <div class="container">
+        @yield('conteudo')
       </div>
-    </nav>
-  </header>
-  <div class="container">
-    @yield('conteudo')
-  </div>
 </main>
-  <div>
-    @include('layout.footer')
-  </div>
+<div>
+  @include('layout.footer')
+</div>
 
-  <script>
-    document.getElementById('search-button').addEventListener('click', function() {
-      var query = document.getElementById('search-input').value;
-      if (query) {
-       
-        var searchUrl = '127./search?q=' + encodeURIComponent(query);
-        window.location.href = searchUrl;
-      } else {
-        alert('Por favor, insira um termo de busca.');
-      }
-    });
+<script>
+  document.getElementById('search-button').addEventListener('click', function() {
+    var query = document.getElementById('search-input').value;
+    if (query) {
 
-    document.getElementById('search-input').addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') {
-        document.getElementById('search-button').click();
-      }
-    });
-  </script>
+      var searchUrl = '127./search?q=' + encodeURIComponent(query);
+      window.location.href = searchUrl;
+    } else {
+      alert('Por favor, insira um termo de busca.');
+    }
+  });
+
+  document.getElementById('search-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      document.getElementById('search-button').click();
+    }
+  });
+</script>
 </body>
+
 </html>
