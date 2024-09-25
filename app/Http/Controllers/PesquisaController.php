@@ -15,6 +15,7 @@ class PesquisaController extends Controller
             'titulo' => 'required_if:tipo,!=,conteudo|string|max:255',
             'corpo' => 'required',
             'tipo' => 'required|in:noticia,conteudo,evento',
+            'link' => 'required',
             'titulo_conteudo' => 'nullable|required_if:tipo,conteudo|string|max:255',
         ]);
 
@@ -34,6 +35,7 @@ class PesquisaController extends Controller
                 'titulo' => $validatedData['titulo'],
                 'corpo' => $validatedData['corpo'],
                 'tipo' => $validatedData['tipo'],
+                'link' => $validatedData['link'],
             ]);
             return back()->with('success', 'Post criado com sucesso!');
         }
@@ -77,13 +79,15 @@ class PesquisaController extends Controller
         $noticias = Post::where('tipo', 'noticia')
             ->where(function ($q) use ($query) {
                 $q->where('titulo', 'LIKE', "%{$query}%")
-                  ->orWhere('corpo', 'LIKE', "%{$query}%");
+                  ->orWhere('corpo', 'LIKE', "%{$query}%")
+                  ->orWhere('link', 'LIKE', "%{$query}%");
             })->get();
 
         $eventos = Post::where('tipo', 'evento')
             ->where(function ($q) use ($query) {
                 $q->where('titulo', 'LIKE', "%{$query}%")
-                  ->orWhere('corpo', 'LIKE', "%{$query}%");
+                  ->orWhere('corpo', 'LIKE', "%{$query}%")
+                  ->orWhere('link', 'LIKE', "%{$query}%");
             })->get();
 
         $conteudos = Conteudo::where('titulo', 'LIKE', "%{$query}%")

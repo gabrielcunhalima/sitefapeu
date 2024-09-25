@@ -9,9 +9,6 @@
   object-fit: cover;
 }
 
-
-
-
 /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
 #sidebarMenu {
   font-size: 0.9rem;
@@ -78,7 +75,6 @@ footer {
   white-space: normal;
   /* Permite quebra de linha */
 
-
 }
 
 /* Ajustes nos links dentro do menu */
@@ -118,7 +114,7 @@ footer {
 }
 /* Ajustando o conteúdo principal */
 main {
-  padding-top: 110px;
+  padding-top: 100px;
 }
 
 /* Ajuste da largura dos subtítulos */
@@ -153,18 +149,6 @@ main {
 }
 
 .navbar-custom .navbar-nav .nav-link:hover {
-  color: #28946c;
-  /* Cor mais escura ao passar o mouse */
-}
-
-.navbar-custom .navbar-nav .nav-link.active {
-  background-color: #146551;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 6px 10px;
-}
-
-.navbar-custom .navbar-nav .nav-link:hover {
   color: #146551;
 }
 
@@ -172,9 +156,8 @@ main {
   background-color: #f0f0f5;
   border-radius: 15px;
   padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  width: 240px;
+  width: 100%;
+  max-width: 210px; /* Define um tamanho máximo para telas maiores */
   font-size: 0.9rem;
 }
 
@@ -200,8 +183,6 @@ main {
   cursor: pointer;
   font-size: 0.9rem;
 }
-
-
 
 footer p {
   margin: 0;
@@ -268,6 +249,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .carousel {
@@ -425,14 +407,6 @@ footer a:hover {
   border-color: #146551 !important;
 }
 
-/* ESTILOS GLOBAIS
--------------------------------------------------- */
-/* Padding abaixo do footer e texto mais suave no <body> */
-
-/* CUSTOMIZA O CAROUSEL
-  -------------------------------------------------- */
-
-/* Alinha, centralmente, o texto dentro das três colunas abaixo do carousel */
 .marketing .col-lg-4 {
   margin-bottom: .5rem;
   text-align: center;
@@ -543,4 +517,38 @@ footer a:hover {
 .cta-button:hover {
   background-color: #BCBDC0;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.containerinicio {
+  max-width:74vw;
+  margin-left:13vw;
+  margin-right:13vw;
+}
+
+.jumbotron {
+  background-color: #bcbdc0c4;
+}
+
+.bg-verde {
+  background-color: #009270;
+}
+
+.bg-cinza {
+  background-color: #BCBDC0;
+}
+
+.bg-preto {
+  background-color: #3E3E3F;
+}
+
+.text-verde {
+  color:#009270
+}
+
+.text-cinza {
+  color: #BCBDC0;
+}
+
+.text-preto {
+  color:#3E3E3F
 }

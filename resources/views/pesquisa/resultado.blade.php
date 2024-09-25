@@ -10,13 +10,13 @@
 @if (!$conteudos->isEmpty())
 <h2 style="margin-top:3vh;">Menus</h2>
 <ul>
-    @foreach ($noticias as $post)
+    @foreach ($conteudos as $post)
     <li>
-        <h4><a style='color:#009371' href="{{ $post->link }}">{{ $post->titulo }}</a></h4>
+        <h4><a style='color:#009371' href="{{ $post->rota }}">{{ $post->titulo }}</a></h4>
         <p>
             {{ \Illuminate\Support\Str::limit($post->corpo, 240, '...') }}
             @if (strlen($post->corpo) > 240)
-            <a href="{{ $post->link }}">Ver mais</a>
+            <a href="{{ $post->rota }}">Ver mais</a>
             @endif
         </p>
     </li>
@@ -42,11 +42,11 @@
 <ul>
     @foreach ($noticias as $post)
     <li>
-        <h4><a style='color:#009371' href="{{ route('homepage.home', $post->id) }}">{{ $post->titulo }}</a></h4>
+        <h4><a style='color:#009371' href="{{ $post->link }}">{{ $post->titulo }}</a></h4>
         <p>
             {{ \Illuminate\Support\Str::limit($post->corpo, 240, '...') }}
             @if (strlen($post->corpo) > 240)
-            <a href="{{ route('homepage.home', $post->id) }}">Ver mais</a>
+            <a href="{{ $post->link }}">Ver mais</a>
             @endif
         </p>
     </li>
