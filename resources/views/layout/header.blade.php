@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="http://127.0.0.1:8000/style.css">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -32,7 +32,7 @@
   <title>FAPEU</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
@@ -154,7 +154,7 @@
       </div>
     </nav>
   </header>
-  <div class="container">
+  <div class="container" style="margin-top:100px !important;">
     @yield('conteudo')
   </div>
 
