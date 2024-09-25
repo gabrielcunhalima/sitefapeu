@@ -1,14 +1,9 @@
 @section('css','../css/app.css')
 
-<!-- Conteúdo principal -->
-<div class="container pt-4 pb-1">
-  <!-- Seu conteúdo aqui -->
-</div>
-
 <!-- Footer -->
 <footer class="text-lg-start footer text-white">
   <!-- Grid container -->
-  <div class="container pt-4 pb-1">
+  <div class="container pt-4 py-4">
     <!--Grid row-->
     <div class="row">
 
@@ -57,7 +52,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #009371;">
+  <div class="text-center p-3" style="background-color: #00634c;">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
   </div>
   <!-- Copyright -->

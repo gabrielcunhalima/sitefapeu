@@ -32,14 +32,10 @@
   <title>FAPEU</title>
 </head>
 
-<<<<<<< HEAD
-<body>
-=======
 <main>
 <div class="wrapper">
 
 <body class="d-flex flex-column min-vh-100">
->>>>>>> 2757fd7260a7fb7e81c7e5ca00a79e37e7c32f9b
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color:#009371">
       <div class="container">
@@ -162,7 +158,7 @@
       </div>
     </nav>
   </header>
-  <div class="container" style="margin-top:100px !important;">
+  <div class="container">
     @yield('conteudo')
   </div>
 </main>

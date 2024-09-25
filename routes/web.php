@@ -83,3 +83,11 @@ Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.cont
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('posts.create');
+Route::post('/admin/adicionarnoticia', [PesquisaController::class, 'store'])->name('posts.store');
+
+Route::get('/admin/editarconteudo', [PesquisaController::class, 'edit'])->name('conteudo.edit');
+Route::post('/admin/editarconteudo', [PesquisaController::class, 'update'])->name('conteudo.update');
+
+Route::get('/search', [PesquisaController::class, 'search'])->name('search');
+Route::post('/posts', [PesquisaController::class, 'store'])->name('posts.store');
