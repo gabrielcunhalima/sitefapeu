@@ -19,6 +19,8 @@ Route::get('/acordocoletivo',[MenuController::class,'acordocoletivo'])->name('co
 Route::get('/formularioscolaborador',[MenuController::class,'formularioscolaborador'])->name('colaborador.formularioscolaborador');
 Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->name('colaborador.informerendimentos');
 Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
+Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name('colaborador.vagasdisponiveis');
+
 
 //FORNECEDOR
 
@@ -78,21 +80,6 @@ Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
 
-//ADMIN
-
-Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('posts.create');
-Route::post('/admin/adicionarnoticia', [PesquisaController::class, 'store'])->name('posts.store');
-
-Route::get('/admin/editarconteudo', [PesquisaController::class, 'edit'])->name('conteudo.edit');
-Route::post('/admin/editarconteudo', [PesquisaController::class, 'update'])->name('conteudo.update');
-
-Route::get('/search', [PesquisaController::class, 'search'])->name('search');
-Route::post('/posts', [PesquisaController::class, 'store'])->name('posts.store');
-Route::get('/adicionarnoticia', [PesquisaController::class, 'create'])->name('posts.create');
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-
-Route::post('/migrate', [MigrationController::class, 'runMigrations'])->name('migrate.run');
 
