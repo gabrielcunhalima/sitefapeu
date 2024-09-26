@@ -521,12 +521,11 @@ footer a:hover {
 
 .containerinicio {
   max-width:74vw;
-  margin-left:13vw;
-  margin-right:13vw;
+  margin: 0 13vw 0 13vw;
 }
 
 .jumbotron {
-  background-color: #bcbdc0c4;
+  background-color: #bcbdc0b7 !important;
 }
 
 .bg-verde {
