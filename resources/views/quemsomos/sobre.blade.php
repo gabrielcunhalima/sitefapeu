@@ -2,9 +2,12 @@
 @section('title','FAPEU Novo')
 @section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" style="background:
+    linear-gradient(
+      rgba(0,146,112,.7),rgba(255,255,255,1)
+    )">
     <div class="containerinicio">
-        <h1 class="display-4">Sobre a FAPEU</h1>
+        <h1 class="display-4 text-preto">Sobre a FAPEU</h1>
     </div>
 </div>
 

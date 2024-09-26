@@ -41,7 +41,7 @@
           <div class="container-fluid row justify-content-md-center">
             <div class="col-1">
               <a class="navbar-brand d-flex justify-content-end" href="{{ route('homepage.home') }}">
-                <img src="..\images\logo3.png" alt="Logo Fapeu" height="75">
+                <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
               </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
