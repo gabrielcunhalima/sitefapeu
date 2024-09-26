@@ -99,7 +99,7 @@
                     <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
                     <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                     <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-                    <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê Gestão de Riscos</a>
+                    <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê de Gestão de Riscos</a>
                     <a class="dropdown-item" href="#">LGPD</a>
                     <a class="dropdown-item" href="#">Política de Privacidade</a>
                     <a class="dropdown-item" href="#">Política de Cookies</a>

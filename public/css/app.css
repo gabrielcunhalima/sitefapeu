@@ -527,8 +527,10 @@ footer a:hover {
 }
 
 .jumbotron {
+  /* background: rgb(0,146,112);
+  background: linear-gradient(45deg, rgba(0,146,112,1) 6%, rgba(0,92,70,1) 25%, rgba(0,111,85,1) 46%, rgba(0,146,112,1) 63%); */
   background: rgb(0,74,57);
-  background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 27%, rgba(0,97,74,1) 80%);
+  background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 25%, rgba(0,97,74,1) 90%);
 }
 
 .bg-verde {

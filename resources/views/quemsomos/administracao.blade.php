@@ -1,5 +1,4 @@
 @extends('layout.header')
-@section('title','FAPEU Novo')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">
