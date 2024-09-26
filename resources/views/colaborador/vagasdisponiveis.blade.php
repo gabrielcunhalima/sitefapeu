@@ -4,7 +4,7 @@
 @section('conteudo')
 <div class="cta-section" >
     <div class="cta-text" style="flex: 1; color: white; padding-right: 20px;">
-        <h2 style="font-size: 40px; font-weight: regular; margin-bottom: 30px;">Confira as Vagas Disponíveis</h2>
+        <h2 style="font-size: 40px; font-weight: regular; margin-bottom: 30px;">Vagas Disponíveis</h2>
         <p style="font-size: 18px; margin-bottom: 30px;">Aproveite as oportunidades acessando o link abaixo!</p>
         <a href="http://150.162.78.45:8080/Curriculo/" target="_blank" class="cta-button" >
             Acesse as vagas <i class="fa fa-arrow-right" style="margin-left: 10px;"></i>

@@ -1,508 +1,553 @@
 @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-        
+
 /*Redimensiona a imagem do carousel */
 
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    
+/* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
+#sidebarMenu {
+  font-size: 0.9rem;
+  /* Reduz o tamanho da fonte */
+}
 
-        
-    /* Reduzindo o tamanho da fonte e o espaçamento do menu lateral */
-    #sidebarMenu {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte */
-        
-    }
-
-    #sidebarMenu .nav-link {
-        padding: 0.8rem; /* Reduz o espaçamento interno dos links */
-        font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
-    }
-
-    .sidebar-heading {
-        font-size: 5rem; /* Reduz o tamanho da fonte dos cabeçalhos */
-        font-family: 'Noticia Text';
-        margin-bottom: 0.5rem; /* Reduz o espaçamento abaixo dos cabeçalhos */
-    }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+}
 
 
-    .wrapper {
-      display: flex;
-      flex-direction: column;
+#sidebarMenu .nav-link {
+  padding: 0.8rem;
+  /* Reduz o espaçamento interno dos links */
+  font-size: 0.9rem;
+  /* Reduz o tamanho da fonte dos links */
+}
 
-    }
-    
-    /* Ajustando o conteúdo principal */
-    main {
-      margin-bottom: 230px;/* Reduz o padding interno do conteúdo principal */
-      padding-top: 110px;
-    }
+.sidebar-heading {
+  font-size: 5rem;
+  /* Reduz o tamanho da fonte dos cabeçalhos */
+  font-family: 'Noticia Text';
+  margin-bottom: 0.5rem;
+  /* Reduz o espaçamento abaixo dos cabeçalhos */
+}
 
-    /* Reduzindo o tamanho da fonte e o espaçamento do footer */
-    footer {
-        font-size: 0.85rem; /* Reduz o tamanho da fonte do footer */
-        padding: 1rem 0; /* Reduz o espaçamento do footer */
+footer {
+  background-color: #009371;
+  clear: both;
+  color: white;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
 
-    }
+.container {
+  flex: 1;
+}
 
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; /* Garante que a página ocupe a altura completa da tela */
-    }
+#sidebarMenu {
+  position: sticky;
+  top: 100px;
+  /* Ajuste a posição conforme necessário */
+  width: auto;
+  /* Largura automática para se ajustar ao conteúdo */
+  max-width: 300px;
+  /* Aumenta a largura máxima */
+  padding: 12px;
+  /* Espaçamento interno */
+  background-color: #f8f9fa;
+  /* Cor de fundo do menu */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra para efeito 3D */
+  z-index: 1000;
+  /* Garante que o menu fique no topo de outros elementos */
+  overflow-y: auto;
+  /* Adiciona barra de rolagem vertical se necessário */
+  height: min-content;
+  white-space: normal;
+  /* Permite quebra de linha */
 
-    footer .col-md-4 h5 {
-        font-size: 1rem; /* Reduz o tamanho da fonte dos títulos no footer */
-    }
-
-    footer p, footer a {
-        margin-bottom: 0.3rem; /* Reduz o espaçamento entre parágrafos e links */
-    }
-
-    footer ul {
-        padding-left: 0; /* Remove o padding da lista */
-        list-style: none; /* Remove os bullets da lista */
-    }
-
-    footer ul li {
-        margin-bottom: 0.3rem; /* Reduz o espaçamento entre os itens da lista */
-    }
-
- /* Menu lateral */
- #sidebarMenu {
-    position: sticky;
-    top: 100px; /* Ajuste a posição conforme necessário */
-    width: auto; /* Largura automática para se ajustar ao conteúdo */
-    max-width: 300px; /* Aumenta a largura máxima */
-    padding: 12px; /* Espaçamento interno */
-    background-color: #f8f9fa; /* Cor de fundo do menu */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito 3D */
-    z-index: 1000; /* Garante que o menu fique no topo de outros elementos */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
-    height: min-content;
-    white-space: normal; /* Permite quebra de linha */
-
-    
-    }
-
-    
-    
-
-    
+}
 
 /* Ajustes nos links dentro do menu */
 #sidebarMenu .nav-link {
-    padding: 0.5rem 1rem; /* Reduz o espaçamento interno dos links */
-    font-size: 0.87rem; /* Tamanho da fonte dos links */
-    white-space: normal; /* Permite quebra de linha dentro do link */
-    overflow: visible; /* Exibe todo o conteúdo dos links */
-    text-overflow: clip; /* Não trunca o texto */
-    display: block; /* Exibe os links como blocos para ocupar toda a largura */
+  padding: 0.5rem 1rem;
+  /* Reduz o espaçamento interno dos links */
+  font-size: 0.87rem;
+  /* Tamanho da fonte dos links */
+  white-space: normal;
+  /* Permite quebra de linha dentro do link */
+  overflow: visible;
+  /* Exibe todo o conteúdo dos links */
+  text-overflow: clip;
+  /* Não trunca o texto */
+  display: block;
+  /* Exibe os links como blocos para ocupar toda a largura */
 }
 
 
 /* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
-    #sidebarMenu {
-        width: 100%; /* Largura total da tela em dispositivos menores */
-        margin-bottom: 15px; /* Margem inferior para dar espaço */
-        height: auto; /* Altura automática sem restrições */
-        overflow-y: visible; /* Remove barra de rolagem em telas pequenas */
-    }
+  #sidebarMenu {
+    width: 100%;
+    /* Largura total da tela em dispositivos menores */
+    margin-bottom: 15px;
+    /* Margem inferior para dar espaço */
+    height: auto;
+    /* Altura automática sem restrições */
+    overflow-y: visible;
+    /* Remove barra de rolagem em telas pequenas */
+  }
 
-    main {
-        margin-left: 0; /* Remove margem esquerda em telas pequenas */
-        margin-bottom: 100px; 
-    }
+  main {
+    margin-left: 0;
+    /* Remove margem esquerda em telas pequenas */
+  }
+}
+/* Ajustando o conteúdo principal */
+main {
+  padding-top: 100px;
 }
 
 /* Ajuste da largura dos subtítulos */
-#sidebarMenu h2, #sidebarMenu h3 {
-    font-size: 1rem; /* Tamanho de fonte para subtítulos */
-    margin-bottom: 0.5rem; /* Espaçamento inferior */
-    white-space: normal; /* Permite quebra de linha em subtítulos */
+#sidebarMenu h2,
+#sidebarMenu h3 {
+  font-size: 1rem;
+  /* Tamanho de fonte para subtítulos */
+  margin-bottom: 0.5rem;
+  /* Espaçamento inferior */
+  white-space: normal;
+  /* Permite quebra de linha em subtítulos */
+}
+
+.navbar-custom {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  /* Reduzido o padding */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  font-size: 0.9rem;
+  /* Reduzido o tamanho da fonte */
+  padding: 5px 8px;
+  /* Ajustado o padding */
+  white-space: nowrap;
+  /* Impede quebra de linha */
+  color: #408c68;
+  /* cor para os links */
+
+
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #146551;
+}
+
+.navbar-custom .search-bar {
+  background-color: #f0f0f5;
+  border-radius: 15px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 210px; /* Define um tamanho máximo para telas maiores */
+  font-size: 0.9rem;
+}
+
+.navbar-custom .search-bar input[type="text"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+.navbar-custom .search-bar .fa-search {
+  color: #888888;
+  margin-right: 5px;
+}
+
+.navbar-custom .search-bar button {
+  background-color: transparent;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  /* Ajustado o tamanho da fonte */
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 4px;
+  /* Reduzido o espaçamento entre itens */
+}
+
+/* Estilo para os cabeçalhos no menu lateral */
+.sidebar-heading {
+  background-color: #146551;
+  /* Cor de fundo desejada */
+  color: #ffffff;
+  /* Cor do texto */
+  padding: 10px;
+  /* Padding para o texto ficar bem posicionado */
+  border-radius: 4px;
+  /* Arredondamento das bordas */
+  margin-bottom: 10px;
+  /* Espaçamento abaixo do cabeçalho */
+  font-weight: bold;
+  /* Deixar o texto em negrito */
+  white-space: normal;
+  /* Impede a quebra de linha */
+  overflow: hidden;
+  /* Oculta o texto excedente */
+  font-size: 0.9em;
+  /* Reduzido o tamanho da fonte */
 }
 
 
 
-    /* Estilo para o menu header */
+/* Estilo para os links do menu lateral */
+#sidebarMenu .nav-link {
+  color: #146551;
+  /* Cor padrão dos links */
+  text-decoration: none;
+  /* Remove o sublinhado padrão */
+}
+
+#sidebarMenu .nav-link:hover,
+#sidebarMenu .nav-link:focus {
+  color: #0d3c2f;
+  /* Cor ao passar o mouse ou focar no link */
+  text-decoration: underline;
+  /* Adiciona sublinhado ao passar o mouse */
+}
+
+.btn-primary {
+  background-color: #146551 !important;
+  border-color: #146551 !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declaramos alturas, devido ao posicionamento do elemento img */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+
+.carousel-item>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.navbar-custom {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  /* Reduzido o padding */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  font-size: 0.9rem;
+  /* Reduzido o tamanho da fonte */
+  padding: 5px 8px;
+  /* Ajustado o padding */
+  white-space: nowrap;
+  /* Impede quebra de linha */
+  color: #408c68;
+  /* cor para os links */
+
+
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #28946c;
+  /* Cor mais escura ao passar o mouse */
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+  background-color: #146551;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #146551;
+}
+
+.navbar-custom .search-bar {
+  background-color: #f0f0f5;
+  border-radius: 15px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  width: 240px;
+  font-size: 0.9rem;
+}
+
+.navbar-custom .search-bar input[type="text"] {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+.navbar-custom .search-bar .fa-search {
+  color: #888888;
+  margin-right: 5px;
+}
+
+.navbar-custom .search-bar button {
+  background-color: transparent;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+footer h5 {
+  margin-bottom: 5px;
+  /* Reduzido o espaçamento abaixo do título */
+  font-size: 1.1em;
+  /* Ajustado o tamanho da fonte */
+}
+
+footer a {
+  text-decoration: none;
+  color: #146551;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para os cabeçalhos no menu lateral */
+.sidebar-heading {
+  background-color: #146551;
+  /* Cor de fundo desejada */
+  color: #ffffff;
+  /* Cor do texto */
+  padding: 10px;
+  /* Padding para o texto ficar bem posicionado */
+  border-radius: 4px;
+  /* Arredondamento das bordas */
+  margin-bottom: 10px;
+  /* Espaçamento abaixo do cabeçalho */
+  font-weight: bold;
+  /* Deixar o texto em negrito */
+  white-space: normal;
+  /* Impede a quebra de linha */
+  overflow: hidden;
+  /* Oculta o texto excedente */
+  font-size: 0.9em;
+  /* Reduzido o tamanho da fonte */
+}
 
 
 
-    .navbar-custom {
-        background-color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 10px 15px; /* Reduzido o padding */
-        }
+/* Estilo para os links do menu lateral */
+#sidebarMenu .nav-link {
+  color: #146551;
+  /* Cor padrão dos links */
+  text-decoration: none;
+  /* Remove o sublinhado padrão */
+}
 
-    .navbar-custom .navbar-nav .nav-link {
-        font-size: 0.9rem; /* Reduzido o tamanho da fonte */
-        padding: 5px 8px; /* Ajustado o padding */
-        white-space: nowrap; /* Impede quebra de linha */
-        color: #408c68; /* cor para os links */
+#sidebarMenu .nav-link:hover,
+#sidebarMenu .nav-link:focus {
+  color: #0d3c2f;
+  /* Cor ao passar o mouse ou focar no link */
+  text-decoration: underline;
+  /* Adiciona sublinhado ao passar o mouse */
+}
 
+.btn-primary {
+  background-color: #146551 !important;
+  border-color: #146551 !important;
+}
 
-        }
+.marketing .col-lg-4 {
+  margin-bottom: .5rem;
+  text-align: center;
+}
 
-        .navbar-custom .navbar-nav .nav-link:hover {
-            color: #28946c; /* Cor mais escura ao passar o mouse */
-        }
+.marketing h2 {
+  font-weight: 400;
+}
 
-        .navbar-custom .navbar-nav .nav-link.active {
-            background-color: #146551;
-            color: #ffffff;
-            border-radius: 4px; 
-            padding: 6px 10px;
-        }
-
-        .navbar-custom .navbar-nav .nav-link:hover {
-            color: #146551;
-        }
-
-        .navbar-custom .search-bar {
-            background-color: #f0f0f5;
-            border-radius: 15px; 
-            padding: 5px 10px; 
-            display: flex;
-            align-items: center;
-            width: 240px;
-            font-size: 0.9rem;
-        }
-
-        .navbar-custom .search-bar input[type="text"] {
-            border: none;
-            background: transparent;
-            outline: none;
-            width: 100%;
-            padding: 5px;
-            color: #333333;
-            font-size: 0.9rem;
-        }
-
-        .navbar-custom .search-bar .fa-search {
-            color: #888888;
-            margin-right: 5px;
-        }
-
-        .navbar-custom .search-bar button {
-            background-color: transparent;
-            border: none;
-            color: #888888;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            background-color: #00634c;
-            padding: 10px 0; /* Reduzido o padding */
-            border-top: 1px solid #dee2e6;
-            clear: both;
-            bottom: 0;
-            position: relative;
-            width: 100%;
-            left: 0;
-            height:190px;
-          
-        }
-        footer h5 {
-            margin-bottom: 5px; /* Reduzido o espaçamento abaixo do título */
-            font-size: 1.1em; /* Ajustado o tamanho da fonte */
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em; /* Ajustado o tamanho da fonte */
-        }
-        footer ul {
-            padding: 0;
-            list-style: none;
-        }
-        footer ul li {
-            margin-bottom: 4px; /* Reduzido o espaçamento entre itens */
-        }
-        footer a {
-            text-decoration: none;
-            color: #146551;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Estilo para os cabeçalhos no menu lateral */
-        .sidebar-heading {
-            background-color: #146551; /* Cor de fundo desejada */
-            color: #ffffff; /* Cor do texto */
-            padding: 10px; /* Padding para o texto ficar bem posicionado */
-            border-radius: 4px; /* Arredondamento das bordas */
-            margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
-            font-weight: bold; /* Deixar o texto em negrito */
-            white-space: normal; /* Impede a quebra de linha */
-            overflow: hidden; /* Oculta o texto excedente */
-            font-size: 0.9em; /* Reduzido o tamanho da fonte */
-        }
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
 
 
-
-        /* Estilo para os links do menu lateral */
-        #sidebarMenu .nav-link {
-        color: #146551; /* Cor padrão dos links */
-        text-decoration: none; /* Remove o sublinhado padrão */
-        }
-
-        #sidebarMenu .nav-link:hover,
-        #sidebarMenu .nav-link:focus {
-            color: #0d3c2f; /* Cor ao passar o mouse ou focar no link */
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-        }
-
-        .btn-primary {
-            background-color: #146551 !important;
-            border-color: #146551 !important;
-        }
-
-        /* ESTILOS GLOBAIS
--------------------------------------------------- */
-/* Padding abaixo do footer e texto mais suave no <body> */
-
-  /* CUSTOMIZA O CAROUSEL
-  -------------------------------------------------- */
-  
-  /* Classe base do carousel */
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  
-  /* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  /* Declaramos alturas, devido ao posicionamento do elemento img */
-  .carousel-item {
-    height: 32rem;
-    background-color: #777;
-  }
-  .carousel-item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 32rem;
-  }
-  
-  
-  /* CONTEÚDO DO MARKETING
-  -------------------------------------------------- */
-  
-  /* Alinha, centralmente, o texto dentro das três colunas abaixo do carousel */
-  .marketing .col-lg-4 {
-    margin-bottom: .5rem;
-    text-align: center;
-  }
-  .marketing h2 {
-    font-weight: 400;
-  }
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
-  
-  /* Featrurezinhas
+/* Featrurezinhas
   ------------------------- */
-  
-  .featurette-divider {
-    margin: 1.5rem 0; /* Espaça o elemento <hr> mais */
-  }
-  
-  /* Afina os cabeçalhos de marketing */
-  .featurette-heading {
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -.05rem;
-  }
-  
-  /* Estilo específico para a seção "Apoiadas" */
-  .apoiadas-section .col-md-7 {
-    margin-left: 20px; /* Ajuste o valor conforme necessário */
-  }
-  
-  
-  /* CSS RESPONSIVE
+
+.featurette-divider {
+  margin: 1.5rem 0;
+  /* Espaça o elemento <hr> mais */
+}
+
+/* Afina os cabeçalhos de marketing */
+.featurette-heading {
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+/* Estilo específico para a seção "Apoiadas" */
+.apoiadas-section .col-md-7 {
+  margin-left: 20px;
+  /* Ajuste o valor conforme necessário */
+}
+
+
+/* CSS RESPONSIVE
   -------------------------------------------------- */
-  
-  @media (min-width: 40em) {
-    /* Aumenta o tamanho do conteúdo do carousel */
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
+
+@media (min-width: 40em) {
+
+  /* Aumenta o tamanho do conteúdo do carousel */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
+
+  .featurette-heading {
+    font-size: 50px;
   }
-  /* Ajuste o tamanho do carousel */
-  .carousel-inner img {
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* Ajuste o tamanho do carousel */
+.carousel-inner img {
   width: 100%;
   height: auto;
-  }
-  
-  .carousel-caption {
-  font-size: 1rem; /* Ajuste o tamanho do texto na legenda do carousel */
-  }
-  
-  .carousel-caption h1 {
-  font-size: 2rem; /* Tamanho do título */
-  }
-  
-  .carousel-caption p {
-  font-size: 1rem; /* Tamanho do parágrafo */
-  }
-  
-  .btn-lg {
-  padding: 0.5rem 1rem; /* Ajuste o padding dos botões grandes */
-  font-size: 0.875rem; /* Ajuste o tamanho da fonte dos botões grandes */
-  }
-  
-  /* Ajuste o tamanho das colunas e ícones */
-  .feature-item {
-  padding: 1rem; /* Ajuste o padding interno dos itens */
-  }
-  
-  .feature-icon i {
-  font-size: 2rem; /* Tamanho dos ícones */
-  }
-  
-  .feature-item h4 {
-  font-size: 1.25rem; /* Tamanho do título dos itens */
-  }
-  
-  .feature-item p {
-  font-size: 0.875rem; /* Tamanho do texto dos itens */
-  }
-  
-  .btn-primary {
-  padding: 0.3rem 1rem; /* Ajuste o padding dos botões primários */
-  font-size: 0.875rem; /* Ajuste o tamanho da fonte dos botões primários */
-  }
-  
-  /* Ajuste o tamanho das featurettes */
-  .featurette-heading {
-  font-size: 1.5rem; /* Tamanho do título das featurettes */
-  }
-  
-  .featurette p {
-  font-size: 1rem; /* Tamanho do texto das featurettes */
-  }
-  
-  
-  /* Estilo para o título "Serviços" na seção principal */
-  .servicos-titulo {
-  color: #146551; /* Cor verde escuro */
-  }
-  
-  
-  /* Estilo para os links do menu lateral esquerdo */
-  .menu-lateral a {
-  color: #146551; /* Cor verde escuro */
-  text-decoration: none; /* Remover sublinhado dos links */
-  }
-  
-  /* Estilo ao passar o mouse sobre o link */
-  .menu-lateral a:hover {
-  color: #0e4a3c; /* Tom mais escuro de verde ao passar o mouse */
-  }
-  
-  
-  /* Impede que a logo seja redimensionada */
-  .navbar-logo {
-    max-width: none;
-    height: 50px; /* Ajuste a altura conforme necessário */
-    width: auto;  /* Mantém a proporção da logo */
-  }
-  
-  /* Move a logo mais para a esquerda */
-  .logo-container {
-    margin-left: -20px; /* Ajuste esse valor para mover a logo mais para a esquerda */
-  }
-  
-  /* Ajustes adicionais de espaçamento no menu */
-  .navbar-nav {
-    margin-left: 20px; /* Aumenta o espaçamento do menu em relação à logo */
-  }
-  
-  /* Certifica que o navbar e seus itens mantenham alinhamento */
-  .navbar-custom {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-
-  /* Vagas Disponiveis */
-
-  .cta-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #009771;
-    padding: 50px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 1000px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-    text-align: center;
 }
 
+.cta-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3E3E3F;
+  padding: 50px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  text-decoration: none;
+}
 
 .cta-text h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .cta-text p {
-    color: #c0f6e2;
-    font-size: 1rem;
-    margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: #146551;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #3E3E3F;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #BCBDC0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.cta-button i {
-    margin-left: 10px;
-    color: #00c49a;
+.containerinicio {
+  max-width:74vw;
+  margin: 0 13vw 0 13vw;
 }
 
+.jumbotron {
+  background-color: #bcbdc0b7 !important;
+}
 
+.bg-verde {
+  background-color: #009270;
+}
 
+.bg-cinza {
+  background-color: #BCBDC0;
+}
+
+.bg-preto {
+  background-color: #3E3E3F;
+}
+
+.text-verde {
+  color:#009270
+}
+
+.text-cinza {
+  color: #BCBDC0;
+}
+
+.text-preto {
+  color:#3E3E3F
+}

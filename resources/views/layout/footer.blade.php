@@ -1,11 +1,11 @@
 @section('css','../css/app.css')
 
-<footer class="text-lg-start footer sticky text-white">
+<!-- Footer -->
+<footer class="text-lg-start footer text-white mt-4">
   <!-- Grid container -->
-  <div class="container pt-4 pb-1">
+  <div class="container pt-4 py-4">
     <!--Grid row-->
     <div class="row">
-
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase">Localização</h5>
         <p style="font-size:14px;">
@@ -38,7 +38,7 @@
           <br>
           Redes Sociais<br>
         </p>
-        <p style="font-size:24px;">
+        <p style="font-size:2em;">
           <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
@@ -51,7 +51,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #009371;">
+  <div class="text-center p-3" style="background-color: #00634c;">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
   </div>
   <!-- Copyright -->

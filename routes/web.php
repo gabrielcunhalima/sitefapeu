@@ -3,12 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PesquisaController;
+use App\Http\Controllers\MigrationController;
 
 Route::get('/', function () {
     return view('homepage.home');
 }) ->name ('homepage.home');
 
-Route::get('/search', [PesquisaController::class, 'search'])->name('search');
+
 
 Route::get('/home', [MenuController::class, 'home'])->name('homepage.home');
 
@@ -79,7 +80,14 @@ Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
 
-//ADMIN
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('admin.adicionarnoticia');
-Route::post('/posts/store', [PesquisaController::class, 'store'])->name('posts.store');
+
+Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('posts.create');
+Route::post('/admin/adicionarnoticia', [PesquisaController::class, 'store'])->name('posts.store');
+
+Route::get('/admin/editarconteudo', [PesquisaController::class, 'edit'])->name('conteudo.edit');
+Route::post('/admin/editarconteudo', [PesquisaController::class, 'update'])->name('conteudo.update');
+
+Route::get('/search', [PesquisaController::class, 'search'])->name('search');
+Route::post('/posts', [PesquisaController::class, 'store'])->name('posts.store');
