@@ -55,8 +55,8 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
-                    <a class="dropdown-item" href="#">Estatuto</a>
-                    <a class="dropdown-item" href="#">Regimento Interno</a>
+                    <a class="dropdown-item" href="{{route('quemsomos.estatuto')}}">Estatuto</a>
+                    <a class="dropdown-item" href="{{route('quemsomos.regimentointerno')}}">Regimento Interno</a>
                     <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
                     <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                     <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>

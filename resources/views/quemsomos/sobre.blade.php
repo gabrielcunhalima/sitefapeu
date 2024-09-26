@@ -1,20 +1,16 @@
 @extends('layout.header')
-@section('title','FAPEU Novo')
 @section('inicio')
 
-<div class="jumbotron jumbotron-fluid" style="background:
-    linear-gradient(
-      rgba(0,146,112,.7),rgba(255,255,255,1)
-    )">
-    <div class="containerinicio">
-        <h1 class="display-4 text-preto">Sobre a FAPEU</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 text-white">Sobre a FAPEU</h1>
     </div>
 </div>
 
 @endsection
 
 @section('conteudo')
-<div class="col-8 offset-2 text-justify">
+<div class="container text-justify">
     <p>A Fundação de Amparo à Pesquisa e Extensão Universitária – FAPEU é uma instituição de direito privado, sem fins lucrativos, que tem como objetivo principal apoiar o desenvolvimento de projetos de ensino, pesquisa, extensão, desenvolvimento institucional, científico e tecnológico e estímulo à inovação universitária.</p>
 
     <p>A FAPEU foi instituída como fundação de apoio à Universidade Federal de Santa Catarina em 28 de setembro de 1977, com sede e foro na cidade de Florianópolis, Santa Catarina, Brasil.</p>
@@ -32,9 +28,6 @@
     <p>Nas instituições apoiadas, o foco está na promoção de ações voltadas a tornar os projetos mais eficientes e sustentáveis. Contando com uma equipe enxuta de empregados, a FAPEU atua de forma interativa e didática junto aos coordenadores e equipes de projetos, buscando oferecer o suporte necessário sobre os aspectos relacionados à gestão administrativa, incluindo as determinações legais e as exigências para a correta prestação de contas desses projetos.</p>
 
     <p>Dessa forma, o trabalho da FAPEU é reconhecido pela comunidade acadêmica e tem contribuído significativamente para o desenvolvimento científico e tecnológico do Brasil, em especial nos estados de Santa Catarina, Rio Grande do Sul e Paraná.</p><br>
-
-
-
     <b>Missão</b><br>
     Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br>
 

@@ -38,7 +38,7 @@
 }
 
 footer {
-  background-color: #009371;
+  background-color: #00614A;
   clear: both;
   color: white;
   bottom: 0;
@@ -112,6 +112,7 @@ footer {
     /* Remove margem esquerda em telas pequenas */
   }
 }
+
 /* Ajustando o conteúdo principal */
 main {
   padding-top: 100px;
@@ -157,7 +158,8 @@ main {
   border-radius: 15px;
   padding: 5px 10px;
   width: 100%;
-  max-width: 210px; /* Define um tamanho máximo para telas maiores */
+  max-width: 210px;
+  /* Define um tamanho máximo para telas maiores */
   font-size: 0.9rem;
 }
 
@@ -520,12 +522,13 @@ footer a:hover {
 }
 
 .containerinicio {
-  max-width:74vw;
+  max-width: 74vw;
   margin: 0 13vw 0 13vw;
 }
 
 .jumbotron {
-  background-color: #bcbdc0b7 !important;
+  background: rgb(0,74,57);
+  background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 27%, rgba(0,97,74,1) 80%);
 }
 
 .bg-verde {
@@ -541,7 +544,7 @@ footer a:hover {
 }
 
 .text-verde {
-  color:#009270
+  color: #009270
 }
 
 .text-cinza {
@@ -549,5 +552,10 @@ footer a:hover {
 }
 
 .text-preto {
-  color:#3E3E3F
+  color: #3E3E3F
+}
+
+.pdf {
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }

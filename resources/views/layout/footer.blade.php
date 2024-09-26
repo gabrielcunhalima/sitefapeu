@@ -51,7 +51,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #00634c;">
+  <div class="text-center p-3" style="background-color: #004635;">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
   </div>
   <!-- Copyright -->
