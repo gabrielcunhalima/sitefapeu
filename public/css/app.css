@@ -116,7 +116,7 @@ footer {
 
 /* Ajustando o conteúdo principal */
 main {
-  padding-top: 10vh;
+  padding-top: 100px;
 }
 
 /* Ajuste da largura dos subtítulos */
@@ -215,7 +215,7 @@ footer ul li {
   padding: 10px;
   /* Padding para o texto ficar bem posicionado */
   border-radius: 4px;
-  /* Arredondamento das bordas */
+
   margin-bottom: 10px;
   /* Espaçamento abaixo do cabeçalho */
   font-weight: bold;
@@ -566,47 +566,6 @@ footer a:hover {
 }
 
 .text-preto {
-<<<<<<< HEAD
-  color:#3E3E3F
-}
-
-
-    .img-sublink {
-    max-width: 60px;  /* ajuste o valor conforme necessário */
-    height: auto;
-    margin: auto;
-}
-
-.img-sublink {
-        max-width: 50px;
-        height: auto;
-        margin: auto;
-    }
-
-    /* Ajuste específico para a Unipampa */
-    .img-sublink[src="/images/redimensionada/unipampa.jpeg"] {
-        max-width: 120px; /* Ajuste o valor conforme necessário */
-    }
-
-    /* Ajuste específico para a Udesc */
-    .img-sublink[src="/images/redimensionada/udesc.png"] {
-        max-width: 90px; /* Ajuste o valor conforme necessário */
-    }
-
-    /* Ajuste específico para a ufjf */
-    .img-sublink[src="/images/redimensionada/ufjf.png"] {
-        max-width: 90px; /* Ajuste o valor conforme necessário */
-    }
-
-
-  /* Aplica a cor #146551 aos links */
-  .table a {
-    color: #049470;
-  }
-  .table a:hover {
-    color: #0f4b3e; /* Cor ligeiramente mais escura ao passar o mouse */
-  }
-=======
   color: #3E3E3F
 }
 
@@ -614,4 +573,3 @@ footer a:hover {
   width: 100%;
   aspect-ratio: 4 / 3;
 }
->>>>>>> 83a04788e298a9c25376434dc0c069126896399f

@@ -33,11 +33,9 @@
   <title>FAPEU</title>
 </head>
 
-<main>
-  <div class="d-flex flex-column min-vh-65">
-    <body>
+<body>
       <header>
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top bg-verde">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
           <div class="container-fluid row justify-content-md-center">
             <div class="col-1">
               <a class="navbar-brand d-flex justify-content-end" href="{{ route('homepage.home') }}">
@@ -162,16 +160,16 @@
           </div>
         </nav>
       </header>
-    <div>
-      @yield('inicio')
-    </div>
-    <div class="container-fluid">
-      @yield('conteudo')
-    </div>
-</main>
-<div>
-  @include('layout.footer')
-</div>
+      <div>
+        @yield('inicio')
+      </div>
+      <div class="container-fluid">
+        @yield('conteudo')
+      </div>
+  <div>
+    @include('layout.footer')
+  </div>
+</body>
 
 <script>
   document.getElementById('search-button').addEventListener('click', function() {
