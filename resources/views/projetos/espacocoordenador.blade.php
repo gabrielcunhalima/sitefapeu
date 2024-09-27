@@ -1,5 +1,13 @@
 @extends('layout.header')
-@section('title','FAPEU Novo')
+@section('inicio')
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 text-white">Espaço do Coordenador</h1>
+    </div>
+</div>
+
+@endsection
 
 @section('conteudo')
     <h2 class="titulo">Espaço do Coordenador</h2>

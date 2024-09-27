@@ -48,12 +48,16 @@ Route::get('/boaspraticas',[MenuController::class,'boaspraticas'])->name('politi
 Route::get('/codigoconduta',[MenuController::class,'codigoconduta'])->name('politica.codigoconduta');
 Route::get('/comiteetica',[MenuController::class,'comiteetica'])->name('politica.comiteetica');
 Route::get('/integridade',[MenuController::class,'integridade'])->name('politica.integridade');
+Route::get('/politicacookies',[MenuController::class,'politicacookies'])->name('politica.politicacookies');
+Route::get('/politicaprivacidade',[MenuController::class,'politicaprivacidade'])->name('politica.politicaprivacidade');
 
 //PROJETOS
 
 Route::get('/espacocoordenador',[MenuController::class,'espacocoordenador'])->name('projetos.espacocoordenador');
 Route::get('/formulariosprojetos',[MenuController::class,'formulariosprojetos'])->name('projetos.formulariosprojetos');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
+Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.captacao');
+Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 
 //QUEM SOMOS
 
@@ -62,6 +66,8 @@ Route::get('/identidadevisual',[MenuController::class,'identidadevisual'])->name
 Route::get('/organograma',[MenuController::class,'organograma'])->name('quemsomos.organograma');
 Route::get('/revistafapeu',[MenuController::class,'revistafapeu'])->name('quemsomos.revistafapeu');
 Route::get('/sobre',[MenuController::class,'sobre'])->name('quemsomos.sobre');
+Route::get('/estatuto',[MenuController::class,'estatuto'])->name('quemsomos.estatuto');
+Route::get('/regimentointerno',[MenuController::class,'regimentointerno'])->name('quemsomos.regimentointerno');
 
 //TRANSPARENCIA
 
@@ -75,6 +81,8 @@ Route::get('/menutransparencia',[MenuController::class,'menutransparencia'])->na
 Route::get('/pagamentos',[MenuController::class,'pagamentos'])->name('transparencia.pagamentos');
 Route::get('/relanualgestao',[MenuController::class,'relanualgestao'])->name('transparencia.relanualgestao');
 Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name('transparencia.selecoespublicas');
+Route::get('/projetostransparencia',[MenuController::class,'projetostransparencia'])->name('transparencia.projetostransparencia');
+Route::get('/reltecnicosemestral',[MenuController::class,'reltecnicosemestral'])->name('transparencia.reltecnicosemestral');
 
 //FALECONOSCO
 

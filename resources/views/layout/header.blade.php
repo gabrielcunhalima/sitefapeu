@@ -34,7 +34,7 @@
 </head>
 
 <main>
-  <div class="wrapper">
+  <div class="d-flex flex-column min-vh-65">
     <body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top bg-verde">
@@ -55,8 +55,8 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
-                    <a class="dropdown-item" href="#">Estatuto</a>
-                    <a class="dropdown-item" href="#">Regimento Interno</a>
+                    <a class="dropdown-item" href="{{route('quemsomos.estatuto')}}">Estatuto</a>
+                    <a class="dropdown-item" href="{{route('quemsomos.regimentointerno')}}">Regimento Interno</a>
                     <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
                     <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                     <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
@@ -99,7 +99,7 @@
                     <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
                     <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                     <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-                    <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê Gestão de Riscos</a>
+                    <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê de Gestão de Riscos</a>
                     <a class="dropdown-item" href="#">LGPD</a>
                     <a class="dropdown-item" href="#">Política de Privacidade</a>
                     <a class="dropdown-item" href="#">Política de Cookies</a>
@@ -153,12 +153,12 @@
                 </li>
               </ul>
             </div>
-            <div class="col-2">
+            <!-- <div class="col-2">
               <form action="{{ route('search') }}" method="GET" class="search-bar">
                 <input type="text" class='form-control' name="q" placeholder="Buscar..." required>
                 <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
               </form>
-            </div>
+            </div> -->
           </div>
         </nav>
       </header>

@@ -44,15 +44,17 @@
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
         </p>
       </div>
+
       <!--Grid column-->
     </div>
     <!--Grid row-->
   </div>
+  <div class="p-3 row justify-content-md-center">
+        <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
+      </div>
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #00634c;">
-    <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
-  </div>
+
   <!-- Copyright -->
 </footer>

@@ -1,105 +1,95 @@
 @extends('layout.header')
-@section('title','FAPEU Novo')
+@section('inicio')
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 text-white">Administração</h1>
+    </div>
+</div>
+
+@endsection
 
 @section('conteudo')
-<style>
-    td {
-        padding:8px;
-        justify-content: start;
-        vertical-align:top;
-    }
-    tr {
-        border-radius:10px;
-    }
 
-</style>
+<table class="table container">
+    <thead class="thead-dark bg-verde">
+        <tr>
+            <th scope="col" class="col-4"><h4>Conselho Curador</h4>Gestão 01/10/2020 - 30/09/2024<br>Mandato 4 anos</th>
+            <th scope="col" class="col-4"></th>
+            <th scope="col" class="col-4"></th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="col" class="col-4">Presidente</th>
+            <th scope="col" class="col-4">Titulares</th>
+            <th scope="col" class="col-4">Suplentes</th>
+            
+        </tr>
+        <tr>
+            <td>IIdemar Cassana Decker</td>
+            <td>Augusto Humberto Bruciaplaglia;<br>
+                Cesar Damian;<br>
+                Julio César Passos;<br>
+                Lúcia Nazareth Amante;<br>
+                Lúcio José Botelho;<br>
+                Mario Steindel;<br>
+                Paulo Roberto de Jesus</td>
+            <td>Henrique José Souza Coutinho;<br>
+                Marilei Kroetz;<br>
+                Sidneya Gaspar de Oliveira</td>
+        </tr>
+    </tbody>
+</table>
+e-
+<table class="table container">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="col-4"><h4>Conselho Fiscal</h4>Gestão: 02/08/2021 – 01/8/2025<br>Mandato 4 anos</th>
+            <th scope="col" class="col-4"></th>
+            <th scope="col" class="col-4"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="col" class="col-4">Presidente</th>
+            <th scope="col" class="col-4">Titulares</th>
+            <th scope="col" class="col-4">Suplentes</th>
+        </tr>
+        <tr>
+            <td>Sinesio Stefano Dubiela Ostroski</td>
+            <td>João Santana;<br>
+                Silvana de Gaspari</td>
+            <td>Celso Spada;<br>
+                Paulo Roberto Medeiros dos Santos</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table container">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="col-4"><h4>Diretoria Executiva</h4>Gestão 25/09/2021 – 24/09/2025<br>Mandato 4 anos</th>
+            <th scope="col" class="col-3"></th>
+            <th scope="col" class="col-3"></th>
+            <th scope="col" class="col-3"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="col" class="col-3">Diretor Presidente</th>
+            <th scope="col" class="col-3">Diretor de Projetos</th>
+            <th scope="col" class="col-3">Diretor Financeiro</th>
+            <th scope="col" class="col-3">Superintendência</th>
+        </tr>
+        <tr>
+            <td>Felício Wessling Margotti</td>
+            <td>Wilson Erbs</td>
+            <td>Julio Felipe Szeremeta</td>
+            <td>Fábio Silva de Souza</td>
+        </tr>
+    </tbody>
+</table>
 
-    <h2>Administração</h2><br>
-    <p><strong>Gestão 01/10/2020 - 30/09/2024</strong></p>
-<p>Mandato 4 anos</p>
-<table style="border-collapse:collapse;width:99.942%" border="1">
-    <tbody>
-        <tr>
-            <td style="width:31.5747%">
-                <p><strong>Presidente</strong></p>
-                <p>IIdemar Cassana Decker</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong>Titulares</strong></p>
-                <p>Augusto Humberto Bruciaplaglia</p>
-                <p>Cesar Damian</p>
-                <p>Julio César Passos</p>
-                <p>Lúcia Nazareth Amante</p>
-                <p>Lúcio José Botelho</p>
-                <p>Mario Steindel</p>
-                <p>Paulo Roberto de Jesus</p>
-            </td>
-            <td style="width:31.5747%"> 
-                <p><strong>Suplentes</strong></p>
-                <p>Henrique José Souza Coutinho</p>
-                <p>Marilei Kroetz</p>
-                <p>Sidneya Gaspar de Oliveira</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<br>
-<p><strong>Conselho Fiscal</strong></p>
-<p><strong>Gestão: 02/08/2021 – 01/8/2025 </strong></p>
-<p>Mandato 4 anos</p>
-<table style="border-collapse:collapse;width:99.942%" border="1">
-    <tbody>
-        <tr>
-            <td style="width:31.5747%">
-                <p><strong>Presidente</strong></p>
-                <p>Sinesio Stefano Dubiela Ostroski</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong>Titulares</strong></p>
-                <p>João Santana</p>
-                <p>Silvana de Gaspari</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong>Suplentes</strong></p>
-                <p>Celso Spada</p>
-                <p>Paulo Roberto Medeiros dos Santos</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<br>
-<p><strong>Diretoria Executiva</strong></p>
-<p><strong>Gestão 25/09/2021 – 24/09/2025 </strong></p>
-<p>Mandato 4 anos</p>
-<table style="border-collapse:collapse;width:99.942%" border="1">
-    <tbody>
-        <tr>
-            <td style="width:31.5747%">
-                <p><strong>Diretor Presidente</strong></p>
-                <p>Felício Wessling Margotti</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong>Diretor de Projetos</strong></p>
-                <p>Wilson Erbs</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong>Diretor Financeiro</strong></p>
-                <p>Julio Felipe Szeremeta</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:31.5747%">
-                <p><b>Superintendência</b></p>
-                <p>Fábio Silva de Souza</p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong> </strong></p>
-            </td>
-            <td style="width:31.5747%">
-                <p><strong> </strong></p>
-            </td>
-        </tr>
-    </tbody>
-</table>
 
 @endsection

@@ -27,6 +27,14 @@ class MenuController extends Controller
     public function revistafapeu() {
         return view('quemsomos.revistafapeu');
     }
+
+    public function estatuto() {
+        return view('quemsomos.estatuto');
+    }
+    public function regimentointerno() {
+        return view('quemsomos.regimentointerno');
+    }
+
     //MENU Projetos
 
     public function capacitacao() {
@@ -34,11 +42,19 @@ class MenuController extends Controller
     }
 
     public function formulariosprojetos() {
-        return view('projetos.formularios');
+        return view('projetos.formulariosprojetos');
     }
 
     public function espacocoordenador() {
         return view('projetos.espacocoordenador');
+    }
+
+    public function captacao() {
+        return view('projetos.captacao');
+    }
+
+    public function manualcompras() {
+        return view('projetos.manualcompras');
     }
 
     //MENU Transparência
@@ -79,6 +95,14 @@ class MenuController extends Controller
         return view('transparencia.selecoespublicas');
     }
 
+    public function projetostransparencia() {
+        return view('transparencia.projetostransparencia');
+    }
+
+    public function reltecnicosemestral() {
+        return view('transparencia.reltecnicosemestral');
+    }
+
 
     //MENU Politicas
 
@@ -102,6 +126,14 @@ class MenuController extends Controller
         return view('politica.integridade');
     }
 
+    public function politicacookies() {
+        return view('politica.politicacookies');
+    }
+
+    public function politicaprivacidade() {
+        return view('politica.politicaprivacidade');
+    }
+    
     //MENU Legislação e Normas
 
     public function legislacao() {
