@@ -15,11 +15,11 @@
   /* Reduz o tamanho da fonte */
 }
 
-.wrapper {
+/* .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 65vh;
-}
+} */
 
 
 #sidebarMenu .nav-link {
@@ -38,7 +38,8 @@
 }
 
 footer {
-  background-color: #00614A;
+  background: rgb(0,146,112);
+  background: radial-gradient(circle, rgba(0,146,112,1) 0%, rgba(0,146,112,1) 1%, rgba(62,62,63,1) 100%, rgba(42,117,106,1) 100%, rgba(10,94,77,1) 100%);
   clear: both;
   color: white;
   bottom: 0;
@@ -133,7 +134,10 @@ main {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
-  /* Reduzido o padding */
+  background: rgb(0,94,78);
+  background: linear-gradient(51deg, rgba(0,94,78,1) 0%, rgba(71,164,127,1) 24%, rgba(0,146,112,1) 36%, rgba(44,133,120,1) 52%, rgba(62,62,63,1) 96%);
+  /* background: rgb(0,92,70);
+  background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
 }
 
 .navbar-custom .navbar-nav .nav-link {
@@ -527,10 +531,14 @@ footer a:hover {
 }
 
 .jumbotron {
-  /* background: rgb(0,146,112);
-  background: linear-gradient(45deg, rgba(0,146,112,1) 6%, rgba(0,92,70,1) 25%, rgba(0,111,85,1) 46%, rgba(0,146,112,1) 63%); */
-  background: rgb(0,74,57);
-  background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 25%, rgba(0,97,74,1) 90%);
+  /* background: rgb(0,94,78);
+  background: linear-gradient(90deg, rgba(0,94,78,1) 0%, rgba(17,180,142,1) 30%, rgba(12,125,109,1) 62%, rgba(62,62,63,1) 96%); */
+  /* background: rgb(0,74,57);
+  background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 25%, rgba(0,97,74,1) 90%); */
+  /* background: rgb(0,92,70);
+  background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
+  padding-top: 4vh !important;
+  padding-bottom: 3vh !important;
 }
 
 .bg-verde {
@@ -538,7 +546,7 @@ footer a:hover {
 }
 
 .bg-cinza {
-  background-color: #BCBDC0;
+  background-color: #e6e6e6;
 }
 
 .bg-preto {

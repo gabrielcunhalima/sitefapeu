@@ -34,7 +34,7 @@
 </head>
 
 <main>
-  <div class="wrapper">
+  <div class="d-flex flex-column min-vh-65">
     <body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top bg-verde">
@@ -153,12 +153,12 @@
                 </li>
               </ul>
             </div>
-            <div class="col-2">
+            <!-- <div class="col-2">
               <form action="{{ route('search') }}" method="GET" class="search-bar">
                 <input type="text" class='form-control' name="q" placeholder="Buscar..." required>
                 <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
               </form>
-            </div>
+            </div> -->
           </div>
         </nav>
       </header>
