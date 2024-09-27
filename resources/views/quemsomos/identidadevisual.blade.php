@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-white">Identidade Visual</h1>
+        <h1 class="display-4 text-preto">Identidade Visual</h1>
     </div>
 </div>
 

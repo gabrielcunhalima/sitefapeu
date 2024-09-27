@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-white">Regimento Interno</h1>
+        <h1 class="display-4 text-preto">Regimento Interno</h1>
     </div>
 </div>
 
@@ -15,6 +15,5 @@
     <object class="pdf container shadow-lg" data="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf">
     </object>
 </div>
-
 
 @endsection

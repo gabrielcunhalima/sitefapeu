@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-white">Revista FAPEU</h1>
+        <h1 class="display-4 text-preto">Revista FAPEU</h1>
     </div>
 </div>
 
