@@ -4,34 +4,6 @@
 
 <!-- Faixa de sublinks -->
 
-<Style>
-    .img-sublink {
-    max-width: 60px;  /* ajuste o valor conforme necessário */
-    height: auto;
-    margin: auto;
-}
-
-.img-sublink {
-        max-width: 50px;
-        height: auto;
-        margin: auto;
-    }
-
-    /* Ajuste específico para a Unipampa */
-    .img-sublink[src="/images/redimensionada/unipampa.jpeg"] {
-        max-width: 120px; /* Ajuste o valor conforme necessário */
-    }
-
-    /* Ajuste específico para a Udesc */
-    .img-sublink[src="/images/redimensionada/udesc.png"] {
-        max-width: 90px; /* Ajuste o valor conforme necessário */
-    }
-
-    /* Ajuste específico para a ufjf */
-    .img-sublink[src="/images/redimensionada/ufjf.png"] {
-        max-width: 90px; /* Ajuste o valor conforme necessário */
-    }
-</style>
 
 <!-- Carrossel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

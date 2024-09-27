@@ -3,33 +3,56 @@
 
 @section('conteudo')
 
+<div class= "background">
 
+<div class="container my-5">
+  <div class="row justify-content-center">
 
+    <div class="col-md-10 text-center">
 
-<div class="jumbotron">
-<<<<<<< HEAD
-  <br><h1 class="display-4 text-center">Programa Fapeu de Inclusão</h1>
-  <br><p class="lead text-center">O mercado de trabalho está cada dia mais competitivo, exigindo experiências e qualificação de seus profissionais. A FAPEU, por meio do programa de inclusão, quer proporcionar essas experiências e qualificar essas pessoas para desenvolverem seu trabalho.
-=======
-  <h1 class="display-4 ml-5">Programa Fapeu de Inclusão</h1>
-  <br><p class="lead container">O mercado de trabalho está cada dia mais competitivo, exigindo experiências e qualificação de seus profissionais. A FAPEU, por meio do programa de inclusão, quer proporcionar essas experiências e qualificar essas pessoas para desenvolverem seu trabalho.
->>>>>>> 6d4218a8a231a4c1e32070a06b53c5fb95410adf
-A FAPEU acredita que a inclusão social é um dever de todos, e é por isso que está disponibilizando vagas para Pessoas com Deficiência. O acesso ao trabalho deverá estar acessível a todos.
+      <!-- Logo section -->
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="/images/logo2.png" alt="Nook Logo" style="height: 120px;">
+      </div>
 
-<br><br>Valorizamos as diferenças e acreditamos sempre no desenvolvimento humano. Por meio deste programa, conheceremos e aprenderemos mais, teremos contato com novas experiências de vida.
+      <!-- Title section with styled header similar to image -->
+      <h1 class="display-5 mt-4 " style="font-weight: bold; color: #146551;">Programa Fapeu de Inclusão</h1>
+      
+      <div class= "text-justify">
+      <!-- Content section styled like the image -->
+      <p class="lead mt-4" style="font-size: 1.1rem; color: #333;">
+      <br>O mercado de trabalho está cada dia mais competitivo, exigindo experiências e qualificação de seus profissionais. A FAPEU, por meio do programa de inclusão, quer proporcionar essas experiências e qualificar essas pessoas para desenvolverem seu trabalho.
 
-Venha juntar-se a família FAPEU e fazer a diferença na vida de nossos parceiros.</p> 
-  <hr class="my-4">
-<<<<<<< HEAD
-  <p>Para realizar seu cadastro, clique aqui.</p>
-   <a class="btn btn-lg" href="http://150.162.78.45:8080/Curriculo/" target="_blank" role="button" style="color: white; background-color: #146551;">Cadastro</a>
+      A FAPEU acredita que a inclusão social é um dever de todos, e é por isso que está disponibilizando vagas para Pessoas com Deficiência. O acesso ao trabalho deverá estar acessível a todos.
+      </p>
+      <p class="lead" style="font-size: 1.1rem; color: #333;">
+      Valorizamos as diferenças e acreditamos sempre no desenvolvimento humano. Por meio deste programa, conheceremos e aprenderemos mais, teremos contato com novas experiências de vida.
+
+      <br> <br>Venha juntar-se a família FAPEU e fazer a diferença na vida de nossos parceiros.
+      </p>
+
+      <p class="display-5 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
+      <a href="http://www.deficienteonline.com.br" target="_blank" style= "color: #099072;" > http://www.deficienteonline.com.br <br><br></a> 
+      
+
+</div>
+      <div class="d-flex justify-content-center">
+        <a class="btn-primary btn-outline-primary btn-lg mt-4" href="http://150.162.78.45:8080/Curriculo/" target="_blank" role="button" style= "border: 2px solid #099072; color: #099072; border-radius: 50px; padding: 10px 30px ;">ACESSE O CADASTRO AQUI</a>
+      </div>
     </div>
-=======
-  <div class="container">
-    <p class='container'>Para realizar seu cadastro, clique aqui.</p>
-    <a class="btn btn-primary btn-lg" href="http://150.162.78.45:8080/Curriculo/" target="_blank" role="button">Cadastro</a>
   </div>
->>>>>>> 6d4218a8a231a4c1e32070a06b53c5fb95410adf
 </div>
 
+
+<style>
+
+.btn-primary {
+  background-color: #ffff !important;
+  border-color: #146551 !important;
+  
+}
+
+
+
+</style>
 @endsection
