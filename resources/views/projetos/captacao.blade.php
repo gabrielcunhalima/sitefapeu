@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-preto">Captação de Recursos e Oportunidade</h1>
+        <h1 class="  text-preto">Captação de Recursos e Oportunidade</h1>
     </div>
 </div>
 

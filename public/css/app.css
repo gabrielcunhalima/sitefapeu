@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
 /*Redimensiona a imagem do carousel */
 
@@ -40,12 +44,9 @@
 footer {
   background: rgb(0,146,112);
   background: radial-gradient(circle, rgba(0,146,112,1) 0%, rgba(0,146,112,1) 1%, rgba(62,62,63,1) 100%, rgba(42,117,106,1) 100%, rgba(10,94,77,1) 100%);
-  clear: both;
   color: white;
-  bottom: 0;
-  position: relative;
   width: 100%;
-  left: 0;
+  position: relative;
 }
 
 .container {
@@ -114,9 +115,8 @@ footer {
   }
 }
 
-/* Ajustando o conteúdo principal */
 main {
-  padding-top: 100px;
+  flex: 1;
 }
 
 /* Ajuste da largura dos subtítulos */
@@ -252,13 +252,9 @@ footer ul li {
   
 }
 
-
-
-
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -541,7 +537,7 @@ footer a:hover {
   background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 25%, rgba(0,97,74,1) 90%); */
   /* background: rgb(0,92,70);
   background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
-  padding-top: 4vh !important;
+  padding-top: 3vh !important;
   padding-bottom: 3vh !important;
 }
 

@@ -5,7 +5,7 @@
     
     <div class="jumbotron ">
     <div class="container text-center">
-    <h1 class="display-4"> Fale Conosco </h1>
+    <h1 class=" "> Fale Conosco </h1>
     <hr class="my-4">
     <p class="lead text-center">Precisa de ajuda? Nos envie um email</p>
     

@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-preto">Programa de Integridade</h1>
+        <h1 class="  text-preto">Programa de Integridade</h1>
     </div>
 </div>
 

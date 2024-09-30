@@ -3,11 +3,13 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-preto">Organograma</h1>
+        <h1 class="  text-preto">Organograma</h1>
     </div>
 </div>
 
 @endsection
 @section('conteudo')
-
+<div class="container">
+    <img src="images/organograma.jpeg" class="img-fluid" alt="Responsive image">
+</div>
 @endsection

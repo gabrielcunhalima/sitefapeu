@@ -33,8 +33,120 @@
   </a>
 </div>
 
+<div class="container-fluid feature bg-light py-5">
+  <div class="container py-5">
+    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+      <h2>Serviços</h2>
+      <p class="mb-0 "></p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Reservas de Salas</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Cursos e Eventos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">NAGEFI</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">LATIC</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
+        <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Concursos</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
+            <a class="btn btn-success rounded-pill py-2 px-4 mt-auto" href="#" style="background-color: #146551;">Ver mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Seção de apoiadas -->
-<div class="card mt-4">
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/ifsc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/unipampa.jpeg" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="#">
+        <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+      </a>
+    </div>
+  </div>
+</div>
+<!-- <div class="card mt-4">
   <div class="card-body text-center ">
     <h2>Apoiadas</h2> <br>
     <div class="row">
@@ -65,6 +177,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 @endsection
