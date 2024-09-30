@@ -3,6 +3,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden; 
 }
 
 /*Redimensiona a imagem do carousel */
@@ -543,6 +544,10 @@ footer a:hover {
 
 .bg-verde {
   background-color: #009270;
+}
+
+.bg-verdeescuro {
+  background-color:#35605A;
 }
 
 .bg-cinza {
