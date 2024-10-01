@@ -10,7 +10,7 @@
 @endsection
 @section('conteudo')
 <div class="container">
-    <h4 class="font-weight-bold">Principais Normas e Procedimentos</h4><br>
+    <h4>Principais Normas e Procedimentos</h4><br>
     <div class="text-justify">
         <h3 class="font-weight-bold">FAPEU</h3>
         <p><i>Fundação de Amparo à Pesquisa e Extensão Universitária</i></p><br>

@@ -536,10 +536,11 @@ footer a:hover {
   background: linear-gradient(90deg, rgba(0,94,78,1) 0%, rgba(17,180,142,1) 30%, rgba(12,125,109,1) 62%, rgba(62,62,63,1) 96%); */
   /* background: rgb(0,74,57);
   background: linear-gradient(55deg, rgba(0,74,57,1) 0%, rgba(0,146,112,1) 25%, rgba(0,97,74,1) 90%); */
-  /* background: rgb(0,92,70);
-  background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
+  /* background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 53%, rgba(118,167,148,1) 100%); */
   padding-top: 3vh !important;
   padding-bottom: 3vh !important;
+  background-color: #64857d70;
 }
 
 .bg-verde {

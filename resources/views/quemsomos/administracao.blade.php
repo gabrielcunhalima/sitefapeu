@@ -12,7 +12,7 @@
 @section('conteudo')
 
 <table class="table container">
-    <thead class="text-white" style="background-color:#355E59;">
+    <thead class="text-white bg-verdeescuro">
         <tr>
             <th scope="col" class="col-4"><h4>Conselho Curador</h4>Gestão 01/10/2020 - 30/09/2024<br>Mandato 4 anos</th>
             <th scope="col" class="col-4"></th>
@@ -43,7 +43,7 @@
     </tbody>
 </table>
 <table class="table container">
-    <thead class="text-white" style="background-color:#355E59;">
+    <thead class="text-white bg-verdeescuro">
         <tr>
             <th scope="col" class="col-4"><h4>Conselho Fiscal</h4>Gestão: 02/08/2021 – 01/8/2025<br>Mandato 4 anos</th>
             <th scope="col" class="col-4"></th>
@@ -66,7 +66,7 @@
     </tbody>
 </table>
 <table class="table container">
-    <thead class="text-white" style="background-color:#355E59;">
+    <thead class="text-white bg-verdeescuro">
         <tr>
             <th scope="col" class="col-3"><h4>Diretoria Executiva</h4>Gestão 25/09/2021 – 24/09/2025<br>Mandato 4 anos</th>
             <th scope="col" class="col-3"></th>

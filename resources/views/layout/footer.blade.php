@@ -1,6 +1,3 @@
-@section('css','../css/app.css')
-
-<!-- Footer -->
 <footer class="text-lg-start footer text-white mt-4">
   <!-- Grid container -->
   <div class="container pt-4 py-4">

@@ -37,10 +37,6 @@ Route::get('/home',[MenuController::class,'home'])->name('homepage.home');
 Route::get('/legislacao',[MenuController::class,'legislacao'])->name('legislacao.legislacao');
 Route::get('/normas',[MenuController::class,'normas'])->name('legislacao.normas');
 
-//LICITACOES
-Route::get('/menulicitacoes',[MenuController::class,'menulicitacoes'])->name('licitacoes.menulicitacoes');
-Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name('licitacoes.selecoespublicas');
-
 //POLITICA
 
 Route::get('/anticorrupcao',[MenuController::class,'anticorrupcao'])->name('politica.anticorrupcao');

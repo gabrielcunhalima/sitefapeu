@@ -87,6 +87,7 @@
                 <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
                 <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                 <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
+                <a class="dropdown-item" href="{{route('transparencia.faq')}}">FAQ - Perguntas Frequentes</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -160,7 +161,7 @@
       </div>
     </nav>
   </header>
-  <div style="margin-top:110px;">
+  <div style="margin-top:105px;">
     @yield('inicio')
   </div>
   <main class="container-fluid">
