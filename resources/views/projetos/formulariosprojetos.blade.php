@@ -9,7 +9,7 @@
 
 @endsection
 @section('conteudo')
-<div class="container">
+<div class="container" style="font-size:16px;">
     <table class="table table-bordered">
         <thead class="bg-verdeescuro text-white">
             <tr>
@@ -115,7 +115,7 @@
         <thead class="bg-verdeescuro text-white">
             <tr>
                 <th scope="col">4- IMPORTAÇÃO</th>
-                <th scope="col">Publicado em</th>
+                <th scope="col" style="width:150px;">Publicado em</th>
             </tr>
         </thead>
         <tbody>

@@ -31,8 +31,10 @@
     <b>Missão</b><br>
     Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br>
 
-    <b>Visão</b><br>
-    Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br>
+    <div class="text-left">
+        <b>Visão</b><br>
+        Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br>
+    </div>
 
     <b>Valores</b><br>
     Honestidade, Transparência; Conformidade, Equidade, Responsabilidade e Respeito à Vida, às Pessoas e ao Meio Ambiente

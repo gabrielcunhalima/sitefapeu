@@ -139,6 +139,7 @@ main {
   background: linear-gradient(51deg, rgba(0,94,78,1) 0%, rgba(71,164,127,1) 24%, rgba(0,146,112,1) 36%, rgba(44,133,120,1) 52%, rgba(62,62,63,1) 96%);
   /* background: rgb(0,92,70);
   background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
+  z-index: 1;
 }
 
 .navbar-custom .navbar-nav .nav-link {
@@ -257,6 +258,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
+  font-size:1.1rem;
 }
 
 .carousel {
@@ -531,6 +533,11 @@ footer a:hover {
   margin: 0 13vw 0 13vw;
 }
 
+.container80 {
+  max-width: 80vw;
+  margin: 0 10vw 0 10vw;
+}
+
 .jumbotron {
   /* background: rgb(0,94,78);
   background: linear-gradient(90deg, rgba(0,94,78,1) 0%, rgba(17,180,142,1) 30%, rgba(12,125,109,1) 62%, rgba(62,62,63,1) 96%); */
@@ -540,7 +547,8 @@ footer a:hover {
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(218,218,218,1) 53%, rgba(118,167,148,1) 100%); */
   padding-top: 3vh !important;
   padding-bottom: 3vh !important;
-  background-color: #64857d70;
+  background-color: #64857d70
+  ;
 }
 
 .bg-verde {
