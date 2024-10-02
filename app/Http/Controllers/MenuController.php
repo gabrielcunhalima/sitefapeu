@@ -208,5 +208,13 @@ class MenuController extends Controller
         return view('homepage.home');
     }
 
+
+    //NOTICIAS
+
+    
+    public function noticias() {
+        return view('noticias.noticias');
+    }
+   
   
 }

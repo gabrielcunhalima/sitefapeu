@@ -6,15 +6,15 @@
 
 
 <!-- Carrossel -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner rounded-lg">
     <div class="carousel-item active">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+      <img class="d-block w-100" src="..\images\copeiras.jpeg" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
@@ -102,7 +102,7 @@
 </div>
 
 <!-- Seção de apoiadas -->
-<div class="jumbotron jumbotron-fluid rounded">
+<div class="jumbotron jumbotron-fluid">
   <div class="container80">
   <div class='mx-0'>
     <h3 class="text-center bg-white rounded-pill py-2 px-4 mt-auto shadow-sm">Instituições Apoiadas</h3>

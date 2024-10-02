@@ -82,13 +82,18 @@ Route::get('/relanualgestao',[MenuController::class,'relanualgestao'])->name('tr
 Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name('transparencia.selecoespublicas');
 Route::get('/projetostransparencia',[MenuController::class,'projetostransparencia'])->name('transparencia.projetostransparencia');
 Route::get('/reltecnicosemestral',[MenuController::class,'reltecnicosemestral'])->name('transparencia.reltecnicosemestral');
+Route::get('/noticias',[MenuController::class,'noticias'])->name('noticias.noticias');
 
 //FALECONOSCO
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
 
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+//PESQUISA
 
 Route::get('/admin/adicionarnoticia', [PesquisaController::class, 'create'])->name('posts.create');
 Route::post('/admin/adicionarnoticia', [PesquisaController::class, 'store'])->name('posts.store');
