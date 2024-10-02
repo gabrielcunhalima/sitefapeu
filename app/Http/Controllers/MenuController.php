@@ -164,6 +164,16 @@ class MenuController extends Controller
         return view('colaborador.DRHFlow');
     }
 
+
+    public function ADMFlow() {
+        return view('colaborador.ADMFlow');
+    }
+
+    public function WebMail() {
+        return view('colaborador.WebMail');
+    }
+
+
     public function acordocoletivo() {
         return view('colaborador.acordocoletivo');
     }

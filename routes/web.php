@@ -21,6 +21,8 @@ Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->
 Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
 Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name('colaborador.vagasdisponiveis');
 Route::get('/DRHFlow',[MenuController::class,'DRHFlow'])->name('colaborador.DRHFlow');
+Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMFlow');
+Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
 
 
 //FORNECEDOR
