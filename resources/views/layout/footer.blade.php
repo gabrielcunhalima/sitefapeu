@@ -1,4 +1,4 @@
-<footer class="text-lg-start footer text-white mt-4">
+<footer class="text-lg-start footer text-white">
   <!-- Grid container -->
   <div class="container pt-4 py-4">
     <!--Grid row-->

@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="  text-preto">Comitê de Ética e Comitê de Gestão de Riscos</h1>
+        <h1 class=" font-weight-bold text-preto">Comitê de Ética e Comitê de Gestão de Riscos</h1>
     </div>
 </div>
 

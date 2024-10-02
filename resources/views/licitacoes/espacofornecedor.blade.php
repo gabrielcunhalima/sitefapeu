@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
-        <h1 class="  text-preto">Espaço do Fornecedor</h1>
+        <h1 class=" font-weight-bold text-preto">Espaço do Fornecedor</h1>
     </div>
 </div>
 

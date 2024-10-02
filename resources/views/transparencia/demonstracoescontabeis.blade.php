@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="text-preto">Demonstrações Contábeis</h1>
+        <h1 class="font-weight-bold text-preto">Demonstrações Contábeis</h1>
     </div>
 </div>
 

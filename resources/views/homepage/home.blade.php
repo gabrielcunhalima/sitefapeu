@@ -102,7 +102,7 @@
 </div>
 
 <!-- Seção de apoiadas -->
-<div class="jumbotron jumbotron-fluid rounded shadow5">
+<div class="jumbotron jumbotron-fluid rounded">
   <div class="container80">
   <div class='mx-0'>
     <h3 class="text-center bg-white rounded-pill py-2 px-4 mt-auto shadow-sm">Instituições Apoiadas</h3>
@@ -113,9 +113,9 @@
           <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm text-center">
+      <div class="col-sm">
         <a href="#">
-          <img src="/images/ifsc.png" alt="Apoiada IFSC" class="img-fluid img-sublink" style="max-height:13vh !important;">
+          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink" ">
         </a>
       </div>
       <div class="col-sm">
@@ -130,17 +130,17 @@
       </div>
       <div class="col-sm">
         <a href="#">
+          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
           <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm">
         <a href="#">
           <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm">
-        <a href="#">
-          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm">

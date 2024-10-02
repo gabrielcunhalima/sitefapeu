@@ -3,7 +3,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="text-preto">Fiscalização e Auditorias</h1>
+        <h1 class="font-weight-bold text-preto">Fiscalização e Auditorias</h1>
     </div>
 </div>
 

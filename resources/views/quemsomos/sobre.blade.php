@@ -1,9 +1,9 @@
 @extends('layout.header')
 @section('inicio')
 
-<div class="jumbotron jumbotronfundo jumbotron-fluid imagemjumbotron">
+<div class="jumbotron jumbotronfundo jumbotron-fluid ">
     <div class="container">
-        <h1 class=" text-preto">Sobre a FAPEU</h1>
+        <h1 class="text-preto font-weight-bolder">Sobre a FAPEU</h1>
     </div>
 </div>
 

@@ -164,7 +164,7 @@
   <div>
     @yield('inicio')
   </div>
-  <main class="container-fluid">
+  <main class="bg-cinza pt-4">
     @yield('conteudo')
   </main>
   <div>
