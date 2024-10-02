@@ -1,4 +1,4 @@
-@extends('layout.header')
+@extends('layout.headerhome')
 @section('title','FAPEU Novo')
 @section('conteudo')
 
@@ -110,12 +110,12 @@
     <div class="row align-items-center mx-5">
       <div class="col-sm">
         <a href="#">
-          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" width="80%" height="80%">
         </a>
       </div>
       <div class="col-sm">
         <a href="#">
-          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink" ">
+          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm">
@@ -130,12 +130,12 @@
       </div>
       <div class="col-sm">
         <a href="#">
-          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+          <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm">
         <a href="#">
-          <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm">

@@ -96,4 +96,16 @@ class PesquisaController extends Controller
 
         return view('pesquisa.resultado', compact('noticias', 'conteudos', 'eventos', 'query'));
     }
+
+    public function noticiasRecentes()
+{
+    // Recupera as últimas 3 notíci
+    $noticiasCarousel = Post::where('tipo', 'noticia')
+                            ->orderBy('created_at', 'desc')
+                            ->take(3)
+                            ->get();
+
+    return view('noticias.noticias', compact('noticiasCarousel'));
+}
+
 }

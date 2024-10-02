@@ -101,3 +101,5 @@ Route::post('/admin/editarconteudo', [PesquisaController::class, 'update'])->nam
 
 Route::get('/search', [PesquisaController::class, 'search'])->name('search');
 Route::post('/posts', [PesquisaController::class, 'store'])->name('posts.store');
+
+Route::get('/noticias', [PesquisaController::class, 'noticiasRecentes'])->name('noticias.recentes');

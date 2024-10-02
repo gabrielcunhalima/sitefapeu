@@ -167,7 +167,7 @@
   <main class="bg-principal pt-4">
     @yield('conteudo')
   </main>
-  <div class="pt-5">
+  <div>
     @include('layout.footer')
   </div>
 </body>
