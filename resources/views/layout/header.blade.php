@@ -129,7 +129,7 @@
                 Colaborador
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">DRHFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.DRHFlow')}}">DRHFlow</a>
                 <a class="dropdown-item" href="#">ADMFlow</a>
                 <a class="dropdown-item" href="#">WebMail</a>
                 <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>

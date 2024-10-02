@@ -160,6 +160,10 @@ class MenuController extends Controller
 
     //MENU Colaborador
 
+    public function DRHFlow() {
+        return view('colaborador.DRHFlow');
+    }
+
     public function acordocoletivo() {
         return view('colaborador.acordocoletivo');
     }
@@ -179,6 +183,9 @@ class MenuController extends Controller
       public function vagasdisponiveis() {
         return view('colaborador.vagasdisponiveis');
     }
+    
+
+    
 
 
     //MENU Contato

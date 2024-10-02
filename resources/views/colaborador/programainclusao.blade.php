@@ -9,7 +9,7 @@
   <div class="row justify-content-center">
 
     <div class="col-md-10 text-center">
-
+      
       <!-- Logo section -->
       <div class="d-flex justify-content-center align-items-center">
         <img src="/images/logo2.png" alt="Nook Logo" style="height: 120px;">
@@ -52,7 +52,12 @@
   
 }
 
-
+.background {
+  background-image: url('/images/bgt3 (1).png'); 
+  padding: 20px 0;
+  background-size: cover;
+  background-position: 40% 30%;
+}
 
 </style>
 @endsection

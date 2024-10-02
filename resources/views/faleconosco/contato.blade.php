@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class=" mt-5 d-flex justify-content-center" style="padding-top: 70px;"> 
+<div class=" mt-5 d-flex justify-content-center" style="padding-top: 50px;"> 
     <div class="form" style="max-width: 800px; width: 100%; margin-bottom: 100px"> <!-- Limita a largura máxima do formulário -->
         <form>
             <div class="form-row justify-content-center ">
@@ -64,7 +64,7 @@
 
             <!-- Exemplo de textarea -->
             <div class="form-row justify-content-center">
-                <div class="form-group col-md-6 col-sm-12">
+                <div class="form-group col-md-6 col-sm-10">
                     <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>

@@ -9,7 +9,7 @@
       <table class="table table-hover table-bordered">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Formulário</th>
+            <th scope="col">Acordo Coletivo</th>
           </tr>
         </thead>
         <tbody>
