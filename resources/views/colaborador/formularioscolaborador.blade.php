@@ -1,46 +1,49 @@
 @extends('layout.header')
 @section('title', 'FAPEU Novo')
 
+@section('inicio')
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="font-weight-bold text-preto">Formulários de Colaborador</h1>
+    </div>
+</div>
+
+@endsection
+
 @section('conteudo')
 
-<!-- Carregar o CSS do Bootstrap no layout principal, se ainda não estiver incluído -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-
-<div class="container mt-5"> <!-- mt-5 adiciona uma margem superior -->
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <table class="table table-hover table-bordered">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Formulário</th>
-            <th scope="col">Última Atualização</th>
-          </tr>
+<div class="container" style="font-size:16px;">
+    <table class="table table-bordered">
+        <thead class="bg-verdeescuro text-white">
+            <tr>
+                <th scope="col">Formulário</th>
+                <th scope="col">Última Atualização</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><a href="/pdfs/atualizacao_cadastro_empregado (2).doc" download>Atualização Cadastral do Empregado</a></td>
-            <td><input type="date" class="form-control" name="ultima_atualizacao_1" value="2011-12-15" readonly></td>
-          </tr>
-          <tr>
-            <td><a href="/pdfs/formulario_motivo_falta.doc" download>Motivo Falta ao Trabalho</a></td>
-            <td><input type="date" class="form-control" name="ultima_atualizacao_2" value="2015-03-30" readonly></td>
-          </tr>
-          <tr>
-            <td><a href="/pdfs/solicitacao_cracha.doc" download>Solicitação de Crachá</a></td>
-            <td><input type="date" class="form-control" name="ultima_atualizacao_3" value="2010-07-22" readonly></td>
-          </tr>
-          <tr>
-            <td><a href="/pdfs/solicitacao_vale_transporte.doc" download>Solicitação de Vale Transporte</a></td>
-            <td><input type="date" class="form-control" name="ultima_atualizacao_4" value="2024-04-16" readonly></td>
-          </tr>
-          <tr>
-            <td><a href="/pdfs/formulario_alteracao_aux_alimentacao.doc" download>Alteração de Vale Alimentação</a></td>
-            <td><input type="date" class="form-control" name="ultima_atualizacao_5" value="2013-08-16" readonly></td>
-          </tr>
+            <tr>
+                <td><a href="/pdfs/Colaborador/Formularios/atualizacao_cadastro_empregado.doc" target="_blank" class="text-dark">Atualização Cadastral do Empregado</a></td>
+                <td>15/12/2011</td>
+            </tr>
+            <tr>
+                <td><a href="/pdfs/Colaborador/Formularios/formulario_motivo_falta.doc" target="_blank" class="text-dark">Motivo Falta ao Trabalho</a></td>
+                <td>30/03/2015</td>
+            </tr>
+            <tr>
+                <td><a href="/pdfs/Colaborador/Formularios/solicitacao_cracha.doc" target="_blank" class="text-dark">Solicitação de Crachá</a></td>
+                <td>22/07/2010</td>
+            </tr>
+            <tr>
+                <td><a href="/pdfs/Colaborador/Formularios/solicitacao_vale_transporte.doc" target="_blank" class="text-dark">Solicitação de Vale Transporte</a></td>
+                <td>16/04/2024</td>
+            </tr>
+            <tr>
+                <td><a href="/pdfs/Colaborador/Formularios/formulario_alteracao_aux_alimentacao (1).doc" target="_blank" class="text-dark">Alteração de Vale Alimentação</a></td>
+                <td>16/08/2013</td>
+            </tr>
         </tbody>
-      </table>
-    </div>
-  </div>
+    </table>
 </div>
 
 @endsection
