@@ -102,47 +102,62 @@
 </div>
 
 <!-- Seção de apoiadas -->
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/ifsc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/unipampa.jpeg" alt="Apoiada Unipampa" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="#">
-        <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
-      </a>
+<div class="jumbotron jumbotron-fluid rounded">
+  <div class="container80">
+  <div class='mx-0'>
+    <h3 class="text-center bg-white rounded-pill py-2 px-4 mt-auto shadow-sm">Instituições Apoiadas</h3>
+  </div>
+    <div class="row align-items-center mx-5">
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink" ">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm">
+        <a href="#">
+          <img src="/images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+        </a>
+      </div>
     </div>
   </div>
 </div>

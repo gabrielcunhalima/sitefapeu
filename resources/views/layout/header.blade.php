@@ -35,7 +35,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid row justify-content-md-center">
         <div class="col-1">
           <a class="navbar-brand d-flex justify-content-end" href="{{ route('homepage.home') }}">
@@ -66,9 +66,9 @@
                 Projetos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://fap6.fapeu.org.br/scripts/fapeusite.pl/swfwfap199">Captação de Recursos e Oportunidade</a>
+                <a class="dropdown-item" href="#">*Captação de Recursos e Oportunidade</a>
                 <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
-                <a class="dropdown-item" href="#">Manual de Compras e Contratações</a>
+                <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                 <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
               </div>
             </li>
@@ -77,8 +77,8 @@
                 Transparência
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Projetos</a>
-                <a class="dropdown-item" href="#">Relatório Técnico Semestral</a>
+                <a class="dropdown-item" href="#">*Projetos</a>
+                <a class="dropdown-item" href="#">*Relatório Técnico Semestral</a>
                 <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
                 <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
                 <a class="dropdown-item" href="{{route('transparencia.fiscal_auditorias')}}">Fiscalização e Auditorias</a>
@@ -87,6 +87,7 @@
                 <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
                 <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                 <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
+                <a class="dropdown-item" href="{{route('transparencia.faq')}}">FAQ - Perguntas Frequentes</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -98,9 +99,9 @@
                 <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                 <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                 <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê de Gestão de Riscos</a>
-                <a class="dropdown-item" href="#">LGPD</a>
-                <a class="dropdown-item" href="#">Política de Privacidade</a>
-                <a class="dropdown-item" href="#">Política de Cookies</a>
+                <a class="dropdown-item" href="#">*LGPD</a>
+                <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
+                <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                 <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
               </div>
             </li>
@@ -160,10 +161,10 @@
       </div>
     </nav>
   </header>
-  <div style="margin-top:110px;">
+  <div>
     @yield('inicio')
   </div>
-  <main class="container-fluid">
+  <main class="bg-cinza pt-4">
     @yield('conteudo')
   </main>
   <div>

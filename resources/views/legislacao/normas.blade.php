@@ -3,14 +3,14 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-preto">Normas Internas FAPEU e Instituições</h1>
+        <h1 class="font-weight-bold text-preto">Normas Internas FAPEU e Instituições</h1>
     </div>
 </div>
 
 @endsection
 @section('conteudo')
 <div class="container">
-    <h4 class="font-weight-bold">Principais Normas e Procedimentos</h4><br>
+    <h4>Principais Normas e Procedimentos</h4><br>
     <div class="text-justify">
         <h3 class="font-weight-bold">FAPEU</h3>
         <p><i>Fundação de Amparo à Pesquisa e Extensão Universitária</i></p><br>
