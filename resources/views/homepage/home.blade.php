@@ -105,7 +105,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class='mx-0'>
-      <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-sm">Instituições Apoiadas</h3>
+      <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg" style="border: 3px solid #e1e1e1;">Instituições Apoiadas</h3>
     </div>
     <div class="row align-items-center mx-5 container80">
       <div class="col-sm">
