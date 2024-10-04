@@ -69,7 +69,7 @@
             <!-- Card com Google Maps e as informações -->
             <div class="card" style="width: 100%;">
                 <div class="card-body">
-                    <h5 class="card-title">Localização e Contato</h5>
+                    <h5 class="card-title font-weight-bold">Localização e Contato</h5>
                     
                     <!-- Google Maps -->
                     <div class="mb-3">
@@ -79,9 +79,9 @@
                     <!-- Informações de contato -->
                     <p class="card-text-justify-content">
                         Rua Delfino Conti, s/n, Campus Universitário Reitor João David Ferreira Lima, Trindade – 
-                        Florianópolis – Santa Catarina, CEP 88040-370<br> <br>
+                        Florianópolis – Santa Catarina, CEP 88040-370<br><br>
                         Correspondências via correio – CEP 88035-972 – Caixa Postal 5078<br>
-                        Telefone/WhatsApp: (48) 33317400<br>
+                        Telefone/WhatsApp: (48) 33317400<br><br>
                         Horário de Funcionamento: <br>Segunda a Sexta-feira das 8h às 12h e das 13h às 17h
                     </p>
                 </div>
