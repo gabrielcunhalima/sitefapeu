@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Normas Internas FAPEU e Instituições')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

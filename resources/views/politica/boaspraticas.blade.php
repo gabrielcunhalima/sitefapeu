@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Boas Praticas')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

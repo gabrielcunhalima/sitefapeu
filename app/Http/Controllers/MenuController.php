@@ -53,6 +53,11 @@ class MenuController extends Controller
         return view('projetos.captacao');
     }
 
+    public function projetos() {
+        return view('projetos.projetos');
+    }
+
+
     public function manualcompras() {
         return view('projetos.manualcompras');
     }

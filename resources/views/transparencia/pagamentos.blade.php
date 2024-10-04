@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Pagamentos Efetuados PF/PJ')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

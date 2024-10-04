@@ -29,8 +29,8 @@
 
   <!-- Custom CSS -->
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
-
-  <title>FAPEU</title>
+  
+  <title>@yield('title')</title>
 </head>
 
 <body>

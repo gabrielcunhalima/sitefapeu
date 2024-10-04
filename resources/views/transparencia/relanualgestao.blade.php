@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Relatório Anual de Gestão')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Comitê de Ética e Comitê de Gestão de Riscos')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

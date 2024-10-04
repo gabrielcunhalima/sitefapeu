@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','ADMFlow')
 @section('title','FAPEU Novo')
 
 @section('conteudo')

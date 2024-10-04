@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Formulários')
 @section('title', 'FAPEU Novo')
 
 @section('inicio')

@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Notícias FAPEU')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">

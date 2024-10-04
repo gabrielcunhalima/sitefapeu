@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Contato')
 @section('inicio')
 
 @section('conteudo')

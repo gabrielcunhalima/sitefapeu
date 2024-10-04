@@ -58,6 +58,7 @@ Route::get('/formulariosprojetos',[MenuController::class,'formulariosprojetos'])
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.captacao');
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
+Route::get('/projetos',[MenuController::class,'projetos'])->name('projetos.projetos');
 
 //QUEM SOMOS
 

@@ -1,5 +1,5 @@
 @extends('layout.headerhome')
-@section('title','FAPEU Novo')
+@section('title','FAPEU')
 @section('conteudo')
 
 <!-- Faixa de sublinks -->
@@ -36,13 +36,12 @@
 <div class="container-fluid feature bg-light py-5">
   <div class="container py-5">
     <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-      <h2>Serviços</h2>
+      <h2 class="font-weight-bold">Serviços</h2>
       <p class="mb-0 "></p>
     </div>
     <div class="row g-4">
       <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
         <div class="card text-dark bg-light mb-3" style="background-color: #f0f2f2;">
-
           <div class="card-body">
             <h5 class="card-title font-weight-bold">Reservas de Salas</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
@@ -103,11 +102,11 @@
 
 <!-- Seção de apoiadas -->
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
+  <div class="container80">
     <div class='mx-0'>
-      <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg" style="border: 3px solid #e1e1e1;">Instituições Apoiadas</h3>
+      <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg">Instituições Apoiadas</h3>
     </div>
-    <div class="row align-items-center mx-5 container80">
+    <div class="row align-items-center mx-5">
       <div class="col-sm">
         <a href="#">
           <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" width="80%" height="80%">

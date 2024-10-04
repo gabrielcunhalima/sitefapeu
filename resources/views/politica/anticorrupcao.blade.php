@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Política Anticorrupção')
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid text-center">

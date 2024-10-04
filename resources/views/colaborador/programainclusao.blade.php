@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title','Programa de Inclusão')
 @section('title','FAPEU Novo')
 
 @section('conteudo')
