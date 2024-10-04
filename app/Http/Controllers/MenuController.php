@@ -158,6 +158,8 @@ class MenuController extends Controller
         return view('fornecedor.espacofornecedor');
     }
 
+  
+
     //MENU Colaborador
 
     public function DRHFlow() {

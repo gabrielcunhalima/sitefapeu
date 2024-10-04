@@ -31,6 +31,7 @@ Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dis
 Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
 Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
 
+
 //HOME
 
 Route::get('/home',[MenuController::class,'home'])->name('homepage.home');

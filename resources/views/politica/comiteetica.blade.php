@@ -2,7 +2,8 @@
 @section('inicio')
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+<div class="container text-justify">
+<div class=" text-center">
         <h1 class=" font-weight-bold">Comitê de Ética e Comitê de Gestão de Riscos</h1>
     </div>
 </div>
