@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Perguntas Frequentes')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Perguntas Frequentes</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container text-justify">
     <p><b>1 - Quem é o responsável por assegurar o cumprimento das normas relativas ao acesso à informação (item 9.4.17 do acórdão 1.178/2018- Plenário)?</b><br>O responsável é a Gerência de Tecnologia da Informação da FAPEU. Para contato envie um e-mail para ti_suporte@fapeu.org.br ou pelo telefone no número (48) 3331-7436.

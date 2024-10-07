@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Demonstrações Contábeis')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Demonstrações Contábeis</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
 <p>Nesta seção são disponibilizados as Demonstrações Contábeis (Balanço Patrimonial, DFC, DMPL, DRE e Parecer Auditores e Notas Explicativas). Caso necessite de mais informações, entre em contato conosco por intermédio do e-mail contato@fapeu.org.br.</p><br>

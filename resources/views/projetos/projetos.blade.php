@@ -1,18 +1,7 @@
 @extends('layout.header')
 @section('title','Projetos FAPEU')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Projetos</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
-
-
-
 <section>
     <div class="container">
     <div class='mx-0'>

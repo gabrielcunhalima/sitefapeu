@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Habilitação Jurídica e Regularidade Fiscal')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Habilitação Jurídica e Regularidade Fiscal</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
     <div class="container">
         <p><b>Instituições Apoiadas:</b></p>

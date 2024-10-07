@@ -1,6 +1,5 @@
 @extends('layout.header')
 @section('title','Dispensa Licitação')
-@section('title','FAPEU Novo')
 
 @section('conteudo')
 Seleções Públicas Anteriores(clique aqui)

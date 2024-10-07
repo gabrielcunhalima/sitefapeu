@@ -1,16 +1,5 @@
 @extends('layout.header')
 @section('title','Formulários')
-@section('title', 'FAPEU Novo')
-
-@section('inicio')
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold text-preto">Formulários de Colaborador</h1>
-    </div>
-</div>
-
-@endsection
 
 @section('conteudo')
 

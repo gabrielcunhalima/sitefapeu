@@ -154,7 +154,7 @@ class MenuController extends Controller
 
     public function integridade()
     {
-        return $this->renderView('politica.integridade', 'integridade.png', 'Integridade');
+        return $this->renderView('politica.integridade', 'integridade.png', 'Programa de Integridade');
     }
 
     public function politicacookies()

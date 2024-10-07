@@ -1,6 +1,5 @@
 @extends('layout.header')
 @section('title','Vagas Disponíveis')
-@section('title','FAPEU Novo')
 
 @section('conteudo')
 <div class="cta-section" >

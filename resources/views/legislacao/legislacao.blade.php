@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Legislação')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Legislação Feredal</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
     <div class="text-justify">
