@@ -12,84 +12,227 @@
 
 @section('conteudo')
 
-<table class="table container">
-    <thead class="text-white bg-verdeescuro">
-        <tr>
-            <th scope="col" class="col-4"><h4>Conselho Curador</h4>Gestão 01/10/2020 - 30/09/2024<br>Mandato 4 anos</th>
-            <th scope="col" class="col-4"></th>
-            <th scope="col" class="col-4"></th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="col" class="col-4">Presidente</th>
-            <th scope="col" class="col-4">Titulares</th>
-            <th scope="col" class="col-4">Suplentes</th>
-            
-        </tr>
-        <tr>
-            <td>IIdemar Cassana Decker</td>
-            <td>Augusto Humberto Bruciaplaglia;<br>
-                Cesar Damian;<br>
-                Julio César Passos;<br>
-                Lúcia Nazareth Amante;<br>
-                Lúcio José Botelho;<br>
-                Mario Steindel;<br>
-                Paulo Roberto de Jesus</td>
-            <td>Henrique José Souza Coutinho;<br>
-                Marilei Kroetz;<br>
-                Sidneya Gaspar de Oliveira</td>
-        </tr>
-    </tbody>
-</table>
-<table class="table container">
-    <thead class="text-white bg-verdeescuro">
-        <tr>
-            <th scope="col" class="col-4"><h4>Conselho Fiscal</h4>Gestão: 02/08/2021 – 01/8/2025<br>Mandato 4 anos</th>
-            <th scope="col" class="col-4"></th>
-            <th scope="col" class="col-4"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="col" class="col-4">Presidente</th>
-            <th scope="col" class="col-4">Titulares</th>
-            <th scope="col" class="col-4">Suplentes</th>
-        </tr>
-        <tr>
-            <td>Sinesio Stefano Dubiela Ostroski</td>
-            <td>João Santana;<br>
-                Silvana de Gaspari</td>
-            <td>Celso Spada;<br>
-                Paulo Roberto Medeiros dos Santos</td>
-        </tr>
-    </tbody>
-</table>
-<table class="table container">
-    <thead class="text-white bg-verdeescuro">
-        <tr>
-            <th scope="col" class="col-3"><h4>Diretoria Executiva</h4>Gestão 25/09/2021 – 24/09/2025<br>Mandato 4 anos</th>
-            <th scope="col" class="col-3"></th>
-            <th scope="col" class="col-3"></th>
-            <th scope="col" class="col-3"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="col" class="col-3">Diretor Presidente</th>
-            <th scope="col" class="col-3">Diretor de Projetos</th>
-            <th scope="col" class="col-3">Diretor Financeiro</th>
-            <th scope="col" class="col-3">Superintendência</th>
-        </tr>
-        <tr>
-            <td>Felício Wessling Margotti</td>
-            <td>Wilson Erbs</td>
-            <td>Julio Felipe Szeremeta</td>
-            <td>Fábio Silva de Souza</td>
-        </tr>
-    </tbody>
-</table>
-
+<section id="conselhocurador" class="py-3">
+    <div class="bg-administracao container pt-4 rounded shadow-lg">
+        <h2 class="title_spectial">Conselho Curador</h2>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid" alt="">
+                        <h3>Mario Steindel</h3>
+                        <p>Presidente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid" alt="">
+                            <h3>Alexandre Verzani Nogueira</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div><!--- END COL -->
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid" alt="">
+                            <h3>Fabrício Augusto Menegon</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div><!--- END COL -->
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-fluid" alt="">
+                            <h3>Janine da Silva Alves Bello</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div><!--- END COL -->
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="img-fluid" alt="">
+                            <h3>Jovelino Falqueto</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div><!--- END COL -->
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Lucio José Botelho</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Roberto Ferreira de Melo</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Valdir Rosa Correia</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Viviane Maria Heberle</h3>
+                            <p>Titular</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Alison Fiuza da Silva</h3>
+                            <p>Suplente</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Augusto Humberto Bruciapaglia</h3>
+                            <p>Suplente</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+                <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                    <div class="our-team">
+                        <div class="single-team">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid" alt="">
+                            <h3>Irineu Afonso Frey</h3>
+                            <p>Suplente</p>
+                        </div>
+                    </div><!--- END OUR TEAM -->
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END CONTAINER -->
+</section>
+<section id="conselhofiscal" class="py-3">
+    <div class="bg-administracao container pt-4 rounded shadow-lg">
+        <h2 class="title_spectial">Conselho Fiscal</h2>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid" alt="">
+                        <h3>Sinesio Stefano Dubiela Ostroski</h3>
+                        <p>Presidente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div>
+        </div><!--- END COL -->
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid" alt="">
+                        <h3>João Santana</h3>
+                        <p>Titular</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid" alt="">
+                        <h3>Silvana de Gaspari</h3>
+                        <p>Titular</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-fluid" alt="">
+                        <h3>Celso Spada</h3>
+                        <p>Suplente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="img-fluid" alt="">
+                        <h3>Paulo Roberto Medeiros dos Santos</h3>
+                        <p>Suplente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+        </div><!--- END COL -->
+    </div><!--- END CONTAINER -->
+</section>
+<section id="diretoriaexecutiva" class="py-3">
+    <div class="bg-administracao container pt-4 rounded shadow-lg">
+        <h2 class="title_spectial">Diretoria Executiva</h2>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid" alt="">
+                        <h3>Felício Wessling Margotti</h3>
+                        <p>Diretor Presidente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid" alt="">
+                        <h3>Wilson Erbs</h3>
+                        <p>Diretor de Projetos</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-fluid" alt="">
+                        <h3>Julio Felipe Szeremeta</h3>
+                        <p>Diretor Financeiro</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div>
+        </div><!--- END COL -->
+    </div><!--- END CONTAINER -->
+</section>
+<section id="superintendencia" class="py-3">
+    <div class="bg-administracao container pt-4 rounded shadow-lg">
+        <h2 class="title_spectial">Superintendência</h2>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+                <div class="our-team">
+                    <div class="single-team">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid" alt="">
+                        <h3>Fábio Silva de Souza</h3>
+                        <p>Superintendente</p>
+                    </div>
+                </div><!--- END OUR TEAM -->
+            </div><!--- END COL -->
+        </div><!--- END COL -->
+    </div><!--- END CONTAINER -->
+</section>
 
 @endsection

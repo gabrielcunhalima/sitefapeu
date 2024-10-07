@@ -6,222 +6,249 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-
-    //MENU Quem somos
-    public function sobre() {
-        return view('quemsomos.sobre');
+    // Função para retornar views com imagem e título
+    // Renderiza a view com imagem e título
+    private function renderView($view, $imagem, $titulo)
+    {
+        return view($view, compact('imagem', 'titulo'));
     }
 
-    public function administracao() {
-        return view('quemsomos.administracao');
+    // MENU Quem somos
+    public function sobre()
+    {
+        return $this->renderView('quemsomos.sobre', 'sobre.png', 'Sobre a FAPEU');
     }
 
-    public function organograma() {
-        return view('quemsomos.organograma');
+    public function administracao()
+    {
+        return $this->renderView('quemsomos.administracao', 'administracao.png', 'Administração');
     }
 
-    public function identidadevisual() {
-        return view('quemsomos.identidadevisual');
+    public function organograma()
+    {
+        return $this->renderView('quemsomos.organograma', 'organograma.png', 'Organograma');
     }
 
-    public function revistafapeu() {
-        return view('quemsomos.revistafapeu');
+    public function identidadevisual()
+    {
+        return $this->renderView('quemsomos.identidadevisual', 'identidadevisual.png', 'Identidade Visual');
     }
 
-    public function estatuto() {
-        return view('quemsomos.estatuto');
-    }
-    public function regimentointerno() {
-        return view('quemsomos.regimentointerno');
+    public function revistafapeu()
+    {
+        return $this->renderView('quemsomos.revistafapeu', 'revistafapeu.png', 'Revista FAPEU');
     }
 
-    //MENU Projetos
-
-    public function capacitacao() {
-        return view('projetos.capacitacao');
+    public function estatuto()
+    {
+        return $this->renderView('quemsomos.estatuto', 'estatuto.png', 'Estatuto');
     }
 
-    public function formulariosprojetos() {
-        return view('projetos.formulariosprojetos');
+    public function regimentointerno()
+    {
+        return $this->renderView('quemsomos.regimentointerno', 'regimentointerno.png', 'Regimento Interno');
     }
 
-    public function espacocoordenador() {
-        return view('projetos.espacocoordenador');
+    // MENU Projetos
+    public function formulariosprojetos()
+    {
+        return $this->renderView('projetos.formulariosprojetos', 'formulariosprojetos.png', 'Formulários');
     }
 
-    public function captacao() {
-        return view('projetos.captacao');
+    public function espacocoordenador()
+    {
+        return $this->renderView('projetos.espacocoordenador', 'espacocoordenador.png', 'Espaço do Coordenador');
     }
 
-    public function projetos() {
-        return view('projetos.projetos');
+    public function captacao()
+    {
+        return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidade');
     }
 
-
-    public function manualcompras() {
-        return view('projetos.manualcompras');
+    public function projetos()
+    {
+        return $this->renderView('projetos.projetos', 'projetos.png', 'Projetos');
     }
 
-    //MENU Transparência
-
-    public function avaliacaodesempenho() {
-        return view('transparencia.avaliacaodesempenho');
+    public function manualcompras()
+    {
+        return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
     }
 
-    public function compras() {
-        return view('transparencia.compras');
+    // MENU Transparência
+    public function avaliacaodesempenho()
+    {
+        return $this->renderView('transparencia.avaliacaodesempenho', 'avaliacaodesempenho.png', 'Avaliação de Desempenho');
     }
 
-    public function demonstracoescontabeis() {
-        return view('transparencia.demonstracoescontabeis');
+    public function compras()
+    {
+        return $this->renderView('transparencia.compras', 'compras.png', 'Compras');
     }
 
-    public function faq() {
-        return view('transparencia.faq');
+    public function demonstracoescontabeis()
+    {
+        return $this->renderView('transparencia.demonstracoescontabeis', 'demonstracoescontabeis.png', 'Demonstrações Contábeis');
     }
 
-    public function fiscal_auditorias() {
-        return view('transparencia.fiscal_auditorias');
+    public function faq()
+    {
+        return $this->renderView('transparencia.faq', 'faq.png', 'FAQ');
     }
 
-    public function habilitacaojuridica() {
-        return view('transparencia.habilitacaojuridica');
+    public function fiscal_auditorias()
+    {
+        return $this->renderView('transparencia.fiscal_auditorias', 'fiscal_auditorias.png', 'Fiscal e Auditorias');
     }
 
-    public function pagamentos() {
-        return view('transparencia.pagamentos');
+    public function habilitacaojuridica()
+    {
+        return $this->renderView('transparencia.habilitacaojuridica', 'habilitacaojuridica.png', 'Habilitação Jurídica');
     }
 
-    public function relanualgestao() {
-        return view('transparencia.relanualgestao');
+    public function pagamentos()
+    {
+        return $this->renderView('transparencia.pagamentos', 'pagamentos.png', 'Pagamentos');
     }
 
-    public function selecoespublicas() {
-        return view('transparencia.selecoespublicas');
+    public function relanualgestao()
+    {
+        return $this->renderView('transparencia.relanualgestao', 'relanualgestao.png', 'Relatório Anual de Gestão');
     }
 
-    public function projetostransparencia() {
-        return view('transparencia.projetostransparencia');
+    public function selecoespublicas()
+    {
+        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas');
     }
 
-    public function reltecnicosemestral() {
-        return view('transparencia.reltecnicosemestral');
+    public function projetostransparencia()
+    {
+        return $this->renderView('transparencia.projetostransparencia', 'projetostransparencia.png', 'Projetos de Transparência');
     }
 
-
-    //MENU Politicas
-
-    public function anticorrupcao() {
-        return view('politica.anticorrupcao');
+    public function reltecnicosemestral()
+    {
+        return $this->renderView('transparencia.reltecnicosemestral', 'reltecnicosemestral.png', 'Relatório Técnico Semestral');
     }
 
-    public function boaspraticas() {
-        return view('politica.boaspraticas');
+    // MENU Politicas
+    public function anticorrupcao()
+    {
+        return $this->renderView('politica.anticorrupcao', 'anticorrupcao.png', 'Política de Anticorrupção');
     }
 
-    public function codigoconduta() {
-        return view('politica.codigoconduta');
+    public function boaspraticas()
+    {
+        return $this->renderView('politica.boaspraticas', 'boaspraticas.png', 'Boas Práticas');
     }
 
-    public function comiteetica() {
-        return view('politica.comiteetica');
+    public function codigoconduta()
+    {
+        return $this->renderView('politica.codigoconduta', 'codigoconduta.png', 'Código de Conduta');
     }
 
-    public function integridade() {
-        return view('politica.integridade');
+    public function comiteetica()
+    {
+        return $this->renderView('politica.comiteetica', 'comiteetica.png', 'Comitê de Ética');
     }
 
-    public function politicacookies() {
-        return view('politica.politicacookies');
+    public function integridade()
+    {
+        return $this->renderView('politica.integridade', 'integridade.png', 'Integridade');
     }
 
-    public function politicaprivacidade() {
-        return view('politica.politicaprivacidade');
-    }
-    
-    //MENU Legislação e Normas
-
-    public function legislacao() {
-        return view('legislacao.legislacao');
+    public function politicacookies()
+    {
+        return $this->renderView('politica.politicacookies', 'politicacookies.png', 'Política de Cookies');
     }
 
-    public function normas() {
-        return view('legislacao.normas');
+    public function politicaprivacidade()
+    {
+        return $this->renderView('politica.politicaprivacidade', 'politicaprivacidade.png', 'Política de Privacidade');
     }
 
-    //MENU Fornecedor
-
-    public function dispensa() {
-        return view('fornecedor.dispensa');
+    // MENU Legislação e Normas
+    public function legislacao()
+    {
+        return $this->renderView('legislacao.legislacao', 'legislacao.png', 'Legislação');
     }
 
-    public function inexibilidade() {
-        return view('fornecedor.inexibilidade');
+    public function normas()
+    {
+        return $this->renderView('legislacao.normas', 'normas.png', 'Normas Internas FAPEU e Instituições');
     }
 
-    public function espacofornecedor() {
-        return view('fornecedor.espacofornecedor');
+    // MENU Fornecedor
+    public function dispensa()
+    {
+        return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa');
     }
 
-  
-
-    //MENU Colaborador
-
-    public function DRHFlow() {
-        return view('colaborador.DRHFlow');
+    public function inexibilidade()
+    {
+        return $this->renderView('fornecedor.inexibilidade', 'inexibilidade.png', 'Inexibilidade');
     }
 
-
-    public function ADMFlow() {
-        return view('colaborador.ADMFlow');
+    public function espacofornecedor()
+    {
+        return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
     }
 
-    public function WebMail() {
-        return view('colaborador.WebMail');
+    // MENU Colaborador
+    public function DRHFlow()
+    {
+        return $this->renderView('colaborador.DRHFlow', 'drhflow.png', 'DRHFlow');
     }
 
-
-    public function acordocoletivo() {
-        return view('colaborador.acordocoletivo');
+    public function ADMFlow()
+    {
+        return $this->renderView('colaborador.ADMFlow', 'admflow.png', 'ADMFlow');
     }
 
-    public function formularioscolaborador() {
-        return view('colaborador.formularioscolaborador');
+    public function WebMail()
+    {
+        return $this->renderView('colaborador.WebMail', 'webmail.png', 'Web Mail');
     }
 
-    public function informerendimentos() {
-        return view('colaborador.informerendimentos');
+    public function acordocoletivo()
+    {
+        return $this->renderView('colaborador.acordocoletivo', 'acordocoletivo.png', 'Acordo Coletivo');
     }
 
-    public function programainclusao() {
-        return view('colaborador.programainclusao');
+    public function formularioscolaborador()
+    {
+        return $this->renderView('colaborador.formularioscolaborador', 'formularioscolaborador.png', 'Formulários Colaborador');
     }
 
-      public function vagasdisponiveis() {
-        return view('colaborador.vagasdisponiveis');
-    }
-    
-
-    
-
-
-    //MENU Contato
-
-    public function contato() {
-        return view('faleconosco.contato');
+    public function informerendimentos()
+    {
+        return $this->renderView('colaborador.informerendimentos', 'informerendimentos.png', 'Informe de Rendimentos');
     }
 
-    public function home() {
-        return view('homepage.home');
+    public function programainclusao()
+    {
+        return $this->renderView('colaborador.programainclusao', 'programainclusao.png', 'Programa de Inclusão');
     }
 
-
-    //NOTICIAS
-
-    
-    public function noticias() {
-        return view('noticias.noticias');
+    public function vagasdisponiveis()
+    {
+        return $this->renderView('colaborador.vagasdisponiveis', 'vagasdisponiveis.png', 'Vagas Disponíveis');
     }
-   
-  
+
+    // MENU Contato
+    public function contato()
+    {
+        return $this->renderView('faleconosco.contato', 'contato.png', 'Contato');
+    }
+
+    public function home()
+    {
+        return $this->renderView('homepage.home', 'home.png', 'Home');
+    }
+
+    // NOTÍCIAS
+    public function noticias()
+    {
+        return $this->renderView('noticias.noticias', 'noticias.png', 'Notícias');
+    }
 }

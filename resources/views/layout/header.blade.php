@@ -16,6 +16,7 @@
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -29,7 +30,7 @@
 
   <!-- Custom CSS -->
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
-  
+
   <title>@yield('title')</title>
 </head>
 
@@ -161,8 +162,10 @@
       </div>
     </nav>
   </header>
-  <div>
-    @yield('inicio')
+  <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 50%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;">
+    <div class="container">
+      <h1 class="font-weight-bolder">{{$titulo}}</h1>
+    </div>
   </div>
   <main class="bg-principal pt-4">
     @yield('conteudo')

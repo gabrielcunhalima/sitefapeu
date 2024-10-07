@@ -2,7 +2,7 @@
 @section('title','Sobre a FAPEU')
 @section('inicio')
 
-<div class="jumbotron jumbotronfundo jumbotron-fluid ">
+<div class="jumbotron jumbotron-fluid" style="background: linear-gradient(75deg, rgba(182,201,193,1) 70%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;">
     <div class="container">
         <h1 class="font-weight-bolder">Sobre a FAPEU</h1>
     </div>
