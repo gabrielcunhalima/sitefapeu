@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SelecoesPublicas;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    // Função para retornar views com imagem e título
-    // Renderiza a view com imagem e título
-    private function renderView($view, $imagem, $titulo)
+    private function renderView($view, $imagem, $titulo, $dados = [])
     {
-        return view($view, compact('imagem', 'titulo'));
+        return view($view, compact('imagem', 'titulo', 'dados'));
     }
-
     // MENU Quem somos
     public function sobre()
     {
@@ -118,7 +116,9 @@ class MenuController extends Controller
 
     public function selecoespublicas()
     {
-        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas');
+        $selecoes = SelecoesPublicas::all();
+        // dd($selecoes);
+        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
     }
 
     public function projetostransparencia()
@@ -251,4 +251,17 @@ class MenuController extends Controller
     {
         return $this->renderView('noticias.noticias', 'noticias.png', 'Notícias');
     }
+
+    //ADMIN
+
+    public function login()
+    {
+        return $this->renderView('login.login', 'login.png', 'Login FAPEU');
+    }
+
+    public function menuadmin()
+    {
+        return $this->renderView('admin.menu', 'menu.png', 'Painel Administrativo');
+    }
+
 }

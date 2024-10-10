@@ -1,5 +1,5 @@
 @extends('layout.headeradmin')
-@section('title','Adicionar Notícias')
+@section('title','Adicionar Seleções Públicas')
 
 @section('conteudo')
 
@@ -35,6 +35,7 @@
 </form>
 @else
 <h1 class="font-weight-bold text-center pt-5">ACESSO NEGADO</h1>
+
 @endif
 
 @endsection
