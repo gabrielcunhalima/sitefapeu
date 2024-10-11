@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\SelecoesPublicas;
 use Illuminate\Http\Request;
 
@@ -116,7 +117,9 @@ class MenuController extends Controller
 
     public function selecoespublicas()
     {
-        $selecoes = SelecoesPublicas::all();
+        $selecoes = SelecoesPublicas::query()
+                ->orderBy('id', 'desc')
+                ->get();
         // dd($selecoes);
         return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
     }
@@ -254,7 +257,7 @@ class MenuController extends Controller
 
     //ADMIN
 
-    public function login()
+    public function verlogin()
     {
         return $this->renderView('login.login', 'login.png', 'Login FAPEU');
     }
@@ -264,4 +267,19 @@ class MenuController extends Controller
         return $this->renderView('admin.menu', 'menu.png', 'Painel Administrativo');
     }
 
+    public function login(Request $request)
+    {
+        $dados = $request->validate([
+            'name' => 'required|string',
+            'password' => 'required|string'
+        ]);
+
+        if (Auth::attempt($dados)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('admin.menu');
+        }
+
+        return redirect()->route('login.login')->withErrors(['login' => 'Credenciais inválidas.']);
+    }
 }

@@ -31,6 +31,33 @@
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 
   <title>FAPEU</title>
+  <style>
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+
+    .card-deck {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .card {
+      flex: 1 0 auto;
+    }
+  </style>
 </head>
 
 <body>

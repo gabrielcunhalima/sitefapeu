@@ -2,12 +2,7 @@
 @section('title','Adicionar Notícias')
 
 @section('conteudo')
-
-@if(session('success'))
-<div class="alert alert-success">
-    {{ session('success') }}
-</div>
-
+@if (($dados->perfil == 1) OR ($dados->perfil == 2))
 <form action="{{ route('posts.store') }}" method="POST">
     @csrf
     <div class="form-group" id="inputTitulo">
@@ -24,17 +19,17 @@
         <div>{{ $message }}</div>
         @enderror
     </div>
-    <div class="form-group" id="inputLink">
-        <label for="link">Link</label>
-        <input type="text" class="form-control" id="link" name="link" value="{{ old('link') }}">
-        @error('link')
-        <div>{{ $message }}</div>
-        @enderror
-    </div>
     <button class="btn btn-primary mb-5" type="submit">Salvar</button>
 </form>
-@else
-<h1 class="font-weight-bold text-center pt-5">ACESSO NEGADO</h1>
 @endif
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>
+<div class="row text-center">
+    <div class='col-12'>
+        <a href='javascript:history.go(-1)' class="btn btn-primary">VOLTAR</a>
+    </div>
+</div>
 
 @endsection

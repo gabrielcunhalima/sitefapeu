@@ -108,15 +108,21 @@ Route::get('/noticias', [NoticiasController::class, 'noticiasRecentes'])->name('
 
 //ADMIN
 
-Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
+Route::get('/login', [MenuController::class, 'verlogin'])->name('login.login');
+Route::post('/login', [MenuController::class, 'login'])->name('login.login');
 
-Route::get('admin/adicionarnoticia', [AdminController::class, 'createNoticia'])->name('admin.adicionarnoticia');
-Route::post('noticias/store', [AdminController::class, 'storeNoticia'])->name('noticias.store');
-Route::get('admin/adicionarselecaopublica', [AdminController::class, 'createSelecaoPublica'])->name('admin.adicionarselecaopublica');
-Route::post('selecoespublicas/store', [AdminController::class, 'storeSelecaoPublica'])->name('selecoespublicas.store');
+Route::middleware(['auth'])->group(function () {
 
-Route::get('/login',[MenuController::class,'login'])->name('login.login');
-Route::post('/login', [AdminController::class,'login'])->name('login.login');
-Route::get('/admin/menu',[MenuController::class,'menuadmin'])->name('admin.menu');
+    Route::get('/admin', [MenuController::class, 'menuadmin'])->name('admin.menu');
+    
+    Route::get('admin/adicionarnoticia', [AdminController::class, 'createNoticia'])->name('admin.adicionarnoticia');
+    Route::post('noticias/store', [AdminController::class, 'storeNoticia'])->name('noticias.store');
 
-Route::post('/admin/adicionarusuario', [AdminController::class, 'adicionarUsuario'])->name('admin.adicionarusuario');
+    Route::get('admin/adicionarselecaopublica', [AdminController::class, 'createSelecaoPublica'])->name('admin.adicionarselecaopublica');
+    Route::post('selecoespublicas/store', [AdminController::class, 'storeSelecaoPublica'])->name('selecoespublicas.store');
+
+    Route::get('/admin/adicionarusuario', [AdminController::class, 'createUsuario'])->name('admin.createusuario');
+    Route::post('/admin/adicionarusuario', [AdminController::class, 'adicionarUsuario'])->name('admin.adicionarusuario');
+    
+    Route::post('/', [AdminController::class, 'logout'])->name('logout');
+});
