@@ -262,10 +262,6 @@ body {
 
 }
 
-.carousel {
-  margin-bottom: 4rem;
-}
-
 /* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
 .carousel-caption {
   bottom: 3rem;
@@ -569,6 +565,22 @@ footer a:hover {
 
 .bg-preto {
   background-color: #3E3E3E;
+}
+
+.bg-cinza1 {
+  background-color: #6B7267;
+}
+
+.bg-cinza2 {
+  background-color: #EBEBEB;
+}
+
+.bg-cinza3 {
+  background-color: #BCD2E1;
+}
+
+.bg-cinza4 {
+  background-color: #dee1e4;
 }
 
 .text-verde {
