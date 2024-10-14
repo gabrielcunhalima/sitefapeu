@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Normas Internas FAPEU e Instituições')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Normas Internas FAPEU e Instituições</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
     <h4>Principais Normas e Procedimentos</h4><br>

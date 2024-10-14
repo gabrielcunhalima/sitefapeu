@@ -1,14 +1,5 @@
 @extends('layout.header')
 @section('title','Administração')
-@section('inicio')
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Administração</h1>
-    </div>
-</div>
-
-@endsection
 
 @section('conteudo')
 

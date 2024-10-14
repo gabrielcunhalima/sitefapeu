@@ -1,6 +1,5 @@
 @extends('layout.header')
 @section('title','Informe de Rendimentos')
-@section('title','FAPEU Novo')
 
 @section('conteudo')
 

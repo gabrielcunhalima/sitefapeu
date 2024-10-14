@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\SelecoesPublicas;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    // Função para retornar views com imagem e título
-    // Renderiza a view com imagem e título
-    private function renderView($view, $imagem, $titulo)
+    private function renderView($view, $imagem, $titulo, $dados = [])
     {
-        return view($view, compact('imagem', 'titulo'));
+        return view($view, compact('imagem', 'titulo', 'dados'));
     }
-
     // MENU Quem somos
     public function sobre()
     {
@@ -118,7 +117,11 @@ class MenuController extends Controller
 
     public function selecoespublicas()
     {
-        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas');
+        $selecoes = SelecoesPublicas::query()
+                ->orderBy('id', 'desc')
+                ->get();
+        // dd($selecoes);
+        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
     }
 
     public function projetostransparencia()
@@ -154,7 +157,7 @@ class MenuController extends Controller
 
     public function integridade()
     {
-        return $this->renderView('politica.integridade', 'integridade.png', 'Integridade');
+        return $this->renderView('politica.integridade', 'integridade.png', 'Programa de Integridade');
     }
 
     public function politicacookies()
@@ -250,5 +253,33 @@ class MenuController extends Controller
     public function noticias()
     {
         return $this->renderView('noticias.noticias', 'noticias.png', 'Notícias');
+    }
+
+    //ADMIN
+
+    public function verlogin()
+    {
+        return $this->renderView('login.login', 'login.png', 'Login FAPEU');
+    }
+
+    public function menuadmin()
+    {
+        return $this->renderView('admin.menu', 'menu.png', 'Painel Administrativo');
+    }
+
+    public function login(Request $request)
+    {
+        $dados = $request->validate([
+            'name' => 'required|string',
+            'password' => 'required|string'
+        ]);
+
+        if (Auth::attempt($dados)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('admin.menu');
+        }
+
+        return redirect()->route('login.login')->withErrors(['login' => 'Credenciais inválidas.']);
     }
 }

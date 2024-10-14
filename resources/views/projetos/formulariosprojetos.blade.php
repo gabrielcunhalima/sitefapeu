@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Formulários')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Formulários</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container" style="font-size:16px;">
     <table class="table table-bordered">

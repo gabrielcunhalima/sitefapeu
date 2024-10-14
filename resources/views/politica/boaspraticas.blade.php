@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Boas Praticas')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Boas Práticas</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container text-justify">
     <p><b>FAPEU Sustentável</b></p>

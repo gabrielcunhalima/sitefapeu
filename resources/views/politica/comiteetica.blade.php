@@ -1,15 +1,6 @@
 @extends('layout.header')
 @section('title','Comitê de Ética e Comitê de Gestão de Riscos')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-<div class="container text-justify">
-<div class=" text-center">
-        <h1 class=" font-weight-bold">Comitê de Ética e Comitê de Gestão de Riscos</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container text-justify">
     <p>A Diretoria Executiva da Fapeu é a instância responsável por desenvolver, aplicar e monitorar o Programa de Integridade da Fundação. Conta com o auxílio da Superintendência, das Gerências Técnicas e de dois comitês por ela designados: o Comitê de Ética – CE e o Comitê de Gestão de Riscos – CGR.</p>

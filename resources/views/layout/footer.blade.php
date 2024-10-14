@@ -1,10 +1,10 @@
 <footer class="text-lg-start footer text-white">
   <!-- Grid container -->
-  <div class="container pt-4 py-4">
+  <div class="container pt-4">
     <!--Grid row-->
     <div class="row">
       <div class="col-lg-4 col-md-12 mb-md-0">
-        <h5 class="text-uppercase">Localização</h5>
+        <h5 class="text-uppercase font-weight-bold">Localização</h5>
         <p style="font-size:14px;">
           Rua Delfino Conti, Campus Universitário Reitor João David Ferreira Lima, Bairro Trindade<br>
           Florianópolis/SC - CEP 88040-370<br>
@@ -15,7 +15,7 @@
 
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-md-0">
-        <h5 class="text-uppercase">Caixa Postal</h5>
+        <h5 class="text-uppercase font-weight-bold">Caixa Postal</h5>
         <p style="font-size:14px;">
           AC Cidade Universitária,<br>
           Caixa Postal 5078, Bairro Trindade, Florianópolis/SC, CEP 88035-972<br>
@@ -28,12 +28,12 @@
 
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-md-0 ">
-        <h5 class="text-uppercase ">Contato</h5>
+        <h5 class="text-uppercase font-weight-bold">Contato</h5>
         <p style="font-size:14px;">
           Tel: (48)3331-7400<br>
           contato@fapeu.org.br<br>
           <br>
-          Redes Sociais<br>
+          <div class="font-weight-bold">Redes Sociais</div>
         </p>
         <p style="font-size:2em;">
           <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
@@ -45,6 +45,7 @@
       <!--Grid column-->
     </div>
     <!--Grid row-->
+    <hr>
   </div>
   <div class="pb-3 row justify-content-md-center">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>

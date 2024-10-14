@@ -1,14 +1,5 @@
 @extends('layout.header')
 @section('title','Espaço do Coordenador')
-@section('inicio')
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Espaço do Coordenador</h1>
-    </div>
-</div>
-
-@endsection
 
 @section('conteudo')
     <div class="container">

@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Espaço do Fornecedor')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Espaço do Forncedor</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
         <div class="row">

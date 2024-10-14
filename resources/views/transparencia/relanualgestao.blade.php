@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Relatório Anual de Gestão')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Relatório Anual de Gestão</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
     <table class="table table-bordered align-items-center">

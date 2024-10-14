@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Avaliação de Desempenho')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Avaliação de Desempenho</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
     <p>Nesta seção são listados os relatórios de avaliação de desempenho realizados pelas ICTs apoiadas, nos termos do Art. 4º, inciso V do Decreto Nº 7.423/2010.<br>Caso necessite de mais informações, entre em contato conosco por intermédio do e-mail contato@fapeu.org.br.</p><br>

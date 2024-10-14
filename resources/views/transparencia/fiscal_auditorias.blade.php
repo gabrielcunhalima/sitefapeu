@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Fiscalização e Auditorias')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="font-weight-bold">Fiscalização e Auditorias</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 <div class="container">
     <p>Nesta seção são listados as Fiscalizações e Auditorias as quais a FAPEU foi submetida. Caso necessite de mais informações, entre em contato conosco por intermédio do e-mail contato@fapeu.org.br.</p><br>

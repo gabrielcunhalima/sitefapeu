@@ -543,6 +543,14 @@ footer a:hover {
   background-color: #009270;
 }
 
+.bg-verde2 {
+  background-color: #1E8975;
+}
+
+.bg-verde3 {
+  background-color: #336861;
+}
+
 .bg-verdeescuro {
   background-color: #35605A;
 }
@@ -556,11 +564,11 @@ footer a:hover {
 }
 
 .bg-cinza {
-  background-color: #e6e6e6;
+  background-color: #dadada;
 }
 
 .bg-preto {
-  background-color: #3E3E3F;
+  background-color: #3E3E3E;
 }
 
 .text-verde {
@@ -833,4 +841,16 @@ footer a:hover {
 .section-padding {
   padding: 80px 0;
   padding-top: 100px;
+}
+
+.botaoadmin {
+  width: 25vw;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+  transform: scale(1.1); 
 }

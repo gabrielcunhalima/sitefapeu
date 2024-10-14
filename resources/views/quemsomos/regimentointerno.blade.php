@@ -1,14 +1,6 @@
 @extends('layout.header')
 @section('title','Regimento Interno')
-@section('inicio')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class=" font-weight-bold">Regimento Interno</h1>
-    </div>
-</div>
-
-@endsection
 @section('conteudo')
 
 <div class="d-flex justify-content-center">

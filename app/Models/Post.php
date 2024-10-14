@@ -10,7 +10,7 @@ class Post extends Model
     protected $table = 'posts';
 
     // Define os campos que são preenchíveis em massa
-    protected $fillable = ['titulo', 'corpo','tipo', 'link'];
+    protected $fillable = ['titulo', 'corpo', 'link'];
 
     // Se você deseja proteger campos contra preenchimento em massa
     // protected $guarded = ['id'];
