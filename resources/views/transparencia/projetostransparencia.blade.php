@@ -2,6 +2,7 @@
 @section('title','Projetos')
 
 @section('conteudo')
+<<<<<<< HEAD
 <div style="background-color: #ffff; padding: 50px 0;">
     <div class="container">
         <div class="row">
@@ -43,3 +44,7 @@
     </div>
 </div>
 @endsection
+=======
+
+@endsection
+>>>>>>> 21dd6aec23362a7a22fcfb18f11b65baf2fcdc38

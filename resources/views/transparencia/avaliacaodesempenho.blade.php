@@ -5,14 +5,34 @@
 <div class="container">
     <p>Nesta seção são listados os relatórios de avaliação de desempenho realizados pelas ICTs apoiadas, nos termos do Art. 4º, inciso V do Decreto Nº 7.423/2010.<br>Caso necessite de mais informações, entre em contato conosco por intermédio do e-mail contato@fapeu.org.br.</p><br>
     <p><b>UFSC</b></p>
-    <p>2015 | 2019 | 2020 | 2021 | 2022 | 2023</p><hr>
+    <p><a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2015.pdf" target="_blank" class="text-dark">2015 </a> 
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2019.pdf" target="_blank" class="text-dark">| 2019 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2020.pdf" target="_blank" class="text-dark">| 2020  </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2021.pdf" target="_blank" class="text-dark">| 2021 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2022.pdf" target="_blank" class="text-dark">| 2022 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFSC/AD-UFSC-2023.pdf" target="_blank" class="text-dark"> | 2023 </a> </p><hr>
+
     <p><b>IFC</b></p>
-    <p>2017 | 2018 | 2019 | 2020 | 2021 | 2022</p><hr>
+    <p><a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2017.pdf" target="_blank" class="text-dark">2017 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2018.pdf" target="_blank" class="text-dark"> | 2018 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2019.pdf" target="_blank" class="text-dark">| 2019 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2020.pdf" target="_blank" class="text-dark">| 2020 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2021.pdf" target="_blank" class="text-dark">| 2021 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/IFC/AD-IFC-2022.pdf" target="_blank" class="text-dark">| 2022 </a> </p><hr>
+
     <p><b>UFFS</b></p>
-    <p>2014 | 2015 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022</p><hr>
+    <p><a href="public/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2014.pdf" target="_blank" class="text-dark">2014 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2015.pdf" target="_blank" class="text-dark">| 2015 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2017.pdf" target="_blank" class="text-dark">| 2017 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2018.pdf" target="_blank" class="text-dark">| 2018 </a>
+    <a href="#" target="_blank" class="text-dark">| 2019 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2020.pdf" target="_blank" class="text-dark">| 2020 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2021.pdf" target="_blank" class="text-dark">| 2021 </a>
+    <a href="/pdfs/Transparencia/AvaliacaoDesempenho/UFFS/AD-UFFS-2022.pdf" target="_blank" class="text-dark">| 2022 </a> </p><hr>
+   
     <p><b>UNIPAMPA</b></p>
-    <p>2023</p><hr>
+    <p><a href="/pdfs/Transparencia/AvaliacaoDesempenho/UNIPAMPA/AD-UNIPAMPA-2023.pdf" target="_blank" class="text-dark">2023 </a></p><hr>
     <p><b>EBESERH HU/UFSC</b></p>
-    <p>2023</p><hr>
+    <p><a href="/pdfs/Transparencia/AvaliacaoDesempenho/EBESERH_HU_UFSC/AD-EBESERH-HU-UFSC-2023.pdf" target="_blank" class="text-dark">2023 </a></p><hr>
 </div>
 @endsection
