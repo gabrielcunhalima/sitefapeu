@@ -77,7 +77,7 @@
                 Transparência
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">*Projetos</a>
+                <a class="dropdown-item" href="{{route('transparencia.projetostransparencia')}}">*Projetos</a>
                 <a class="dropdown-item" href="#">*Relatório Técnico Semestral</a>
                 <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
                 <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
