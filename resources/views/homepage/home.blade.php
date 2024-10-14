@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row align-items-center">
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card text-white bg-verde mb-3 card w-75 text-center grow" style="width: 18rem; min-height:">
+      <div class="card text-white bg-verde mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="">
           <div class="card-body">
             <p class="card-text text-white">Gestão de Projetos</p>
@@ -45,7 +45,7 @@
   </ol>
   <div class="carousel-inner rounded-lg">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="..\images\confies.png" alt="Primeiro Slide">
+      <img class="d-block w-100" src="#" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
