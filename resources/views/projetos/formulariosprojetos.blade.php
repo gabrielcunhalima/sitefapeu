@@ -3,7 +3,7 @@
 
 @section('conteudo')
 <div class="container" style="font-size:16px;">
-<h3 class="text-center text-white bg-verdeescuro rounded-pill py-2 mt-auto shadow-lg font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
+<h3 class="text-center text-white bg-verdeescuro rounded-lg py-2 mt-auto shadow-lg font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
     <table class="table table-bordered">
         <thead class="bg-verdeescuro text-white">
             <tr>

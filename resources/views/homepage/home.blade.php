@@ -2,25 +2,23 @@
 @section('title','FAPEU')
 @section('conteudo')
 
-<!-- Carrossel -->
 <div id="carouselExampleIndicators" class="carousel slide container mb-4" data-ride="carousel">
   <ol class="carousel-indicators">
     @foreach($carousel as $index => $post)
-      <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
     @endforeach
   </ol>
   <div class="carousel-inner rounded-lg">
     @foreach($carousel as $index => $post)
-      <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-        <img class="d-block w-100" src="../images/noticias/{{ $post->imagem }}" alt="{{ $post->titulo }}">
-        <div class="carousel-caption bg-transparente rounded-right" style="left:0;bottom:45px;">
-          <h4 class="text-justify text-white px-3 font-weight-bolder">{{ $post->titulo }}</h4>
-          <p class="text-justify text-white px-3">{{ Str::limit($post->corpo, 150) }}</p>
-        </div>
+    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+      <img class="d-block w-100" src="../images/noticias/{{ $post->imagem }}" alt="{{ $post->titulo }}">
+      <div class="carousel-caption bg-transparente rounded-right" style="left:0;bottom:45px;">
+        <h4 class="text-justify text-white px-3 font-weight-bolder">{{Str::upper( $post->titulo )}}</h4>
+        <p class="text-justify text-white px-3">{{ Str::limit($post->corpo, 150) }}</p>
       </div>
+    </div>
     @endforeach
   </div>
-  
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
@@ -61,16 +59,100 @@
     </div>
   </div>
 </div>
-<div class="container-fluid feature bg-verde">
+<div class="feature bg-verde">
   <div class="container pt-5">
     <div class="text-center mx-auto pb-5 wow fadeInUp">
       <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg font-weight-bold">Serviços</h3>
-      <p class="mb-0"></p>
-        <a href="{{ route('homepage.servicos') }}" class="btn btn-success rounded-pill py-2 px-4 mt-3">Conheça nossos serviços</a>
+      <div id="carouselExampleIndicator" class="carousel slide container" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicator" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicator" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicator" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicator" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicator" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner rounded-lg">
+          <div class="carousel-item active">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="card text-dark bg-light mb-3 shadow rounded">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p>
+                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicator" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicator" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
     </div>
     <div class="collapse d-md-block" id="servicosCollapse">
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-md-6 col-lg-4">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold">Reservas de Salas</h5>

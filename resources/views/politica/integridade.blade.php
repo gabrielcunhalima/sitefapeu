@@ -7,7 +7,7 @@
     <h5>
         <a href="https://heyzine.com/flip-book/b346b0a0ad.html" target="_blank">
             <button type="button" class="btn bg-verde btn-lg text-white">
-                Clique aqui para baixar o documento
+            <i class="bi bi-download"></i> &nbsp; Baixar o documento
             </button>
         </a>
     </h5>

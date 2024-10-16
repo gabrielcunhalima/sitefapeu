@@ -5,13 +5,13 @@
     <div class="container">
         <div class="row">
             <br>
-            <div class="col-6">
-                <button type="button" class="btn bg-verde btn-lg text-white">Portal do Coordenador</button>
-                <p class="mt-4">Aqui os coordenadores de projetos da FAPEU podem fazer <br>pedidos e consultar relatórios financeiros.</p>
+            <div class="col-md-6 col-sm-12">
+                <a class="btn btn-success rounded py-2 px-4 mt-auto mx-sm-5 bg-verde d-flex justify-content-center" href="#"><h3>Portal do Coordenador</h3></a>
+                <p class="mt-4 mx-5">Aqui os coordenadores de projetos da FAPEU podem fazer <br>pedidos e consultar relatórios financeiros.</p>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn bg-verde text-white btn-lg">Funcionário (DRHFlow)</button>
-                <p class="mt-4">Aqui os coordenadores de projetos da FAPEU podem administrar pessoal.</p>
+            <div class="col-md-6 col-sm-12">
+                <a class="btn btn-success rounded py-2 px-4 mt-auto mx-sm-5 bg-verde d-flex justify-content-center" href="#"><h3>DRHFlow (Funcionários)</h3></a>
+                <p class="mt-4 mx-5">Aqui os coordenadores de projetos da FAPEU podem administrar pessoal.</p>
             </div>
         </div>
     </div>

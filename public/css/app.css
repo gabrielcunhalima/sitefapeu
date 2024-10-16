@@ -10,7 +10,7 @@ body {
 /*Redimensiona a imagem do carousel */
 
 .carousel-inner .carousel-item {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s;
 }
 
 .carousel-item img {
@@ -99,26 +99,6 @@ footer {
   /* Não trunca o texto */
   display: block;
   /* Exibe os links como blocos para ocupar toda a largura */
-}
-
-
-/* Estilo responsivo para telas menores */
-@media (max-width: 768px) {
-  #sidebarMenu {
-    width: 100%;
-    /* Largura total da tela em dispositivos menores */
-    margin-bottom: 15px;
-    /* Margem inferior para dar espaço */
-    height: auto;
-    /* Altura automática sem restrições */
-    overflow-y: visible;
-    /* Remove barra de rolagem em telas pequenas */
-  }
-
-  main {
-
-    margin-left: 0;
-  }
 }
 
 main {
@@ -864,7 +844,17 @@ footer a:hover {
   transform: scale(1.1); 
 }
 
-@media (max-width: 576px) {
+.marginalizando {
+  margin-left:15px;
+}
+
+@media (min-width: 1401px) {
+  .logofapeu {
+    margin-left:50px;
+  }
+}
+
+@media (max-width: 876px) {
   .apoiadas {
     flex: 0 0 50%;
     max-width: 100%;
@@ -876,8 +866,5 @@ footer a:hover {
     background-color: #cac5c5;
   }
 
-  .navbarmobile{
-    left:20%;
-}
 }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\SelecoesPublicas;
 use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -26,7 +27,6 @@ class MenuController extends Controller
             'carousel' => $carousel
         ]);
     }
-    
 
     //SERVICOS
 

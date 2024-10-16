@@ -17,7 +17,6 @@
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -25,36 +24,42 @@
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-  <!-- Custom CSS -->
+ 
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
-
+</head>
   <title>@yield('title')</title>
 </head>
+<style>
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
 
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+</style>
 <body>
-  <header>
+<header>
     <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <div class="col-1 navbarmobile">
-          <a class="navbar-brand d-flex justify-content-end" href="{{ route('homepage.home') }}">
+      <div class="container">
+        <div class="logofapeu">
+          <a class="navbar-brand" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
           </a>
         </div>
-
-        <!-- Botão para colapsar a navbar em telas pequenas -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar que será colapsada -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-flex justify-content-end">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <!-- Itens da navbar -->
             <li class="nav-item dropdown text-white">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Quem somos
@@ -69,7 +74,6 @@
                 <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Projetos
@@ -81,7 +85,6 @@
                 <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Transparência
@@ -100,7 +103,6 @@
                 <a class="dropdown-item" href="{{route('transparencia.faq')}}">FAQ - Perguntas Frequentes</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Políticas
@@ -116,7 +118,6 @@
                 <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Legislação e Normas
@@ -126,7 +127,6 @@
                 <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fornecedor
@@ -138,7 +138,6 @@
                 <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Colaborador
@@ -154,7 +153,6 @@
                 <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
               </div>
             </li>
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fale Conosco
@@ -169,6 +167,7 @@
       </div>
     </nav>
   </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 50%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;">
     <div class="container">
       <h1 class="font-weight-bolder">{{$titulo}}</h1>
@@ -180,26 +179,6 @@
   <div class="pt-5">
     @include('layout.footer')
   </div>
-</body>
-
-<script>
-  document.getElementById('search-button').addEventListener('click', function() {
-    var query = document.getElementById('search-input').value;
-    if (query) {
-
-      var searchUrl = '127./search?q=' + encodeURIComponent(query);
-      window.location.href = searchUrl;
-    } else {
-      alert('Por favor, insira um termo de busca.');
-    }
-  });
-
-  document.getElementById('search-input').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      document.getElementById('search-button').click();
-    }
-  });
-</script>
 </body>
 
 </html>

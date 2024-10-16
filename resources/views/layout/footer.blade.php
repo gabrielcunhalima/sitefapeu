@@ -9,7 +9,7 @@
           Rua Delfino Conti, Campus Universitário Reitor João David Ferreira Lima, Bairro Trindade<br>
           Florianópolis/SC - CEP 88040-370<br>
           Horário de Funcionamento: Segunda a Sexta-feira das 8h às 12h e das 13h às 17h<br>
-        </p>
+        </p><br>
       </div>
       <!--Grid column-->
 
@@ -22,7 +22,7 @@
           CNPJ: 83.476.911/0001-17<br>
           Inscrição Estadual: ISENTO<br>
           Inscrição Municipal: 61.274-0<br>
-        </p>
+        </p><br>
       </div>
       <!--Grid column-->
 
@@ -39,16 +39,13 @@
           <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
-        </p>
+        </p><br>
       </div>
 
       <!--Grid column-->
     </div>
     <!--Grid row-->
     <hr>
+    <div class="pb-3 row"><a class="text-white text-center" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a></div>
   </div>
-  <div class="pb-3 row ml-2 justify-content-md-center">
-    <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
-  </div>
-
 </footer>
