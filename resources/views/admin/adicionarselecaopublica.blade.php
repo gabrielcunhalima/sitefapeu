@@ -56,6 +56,13 @@
             <div>{{ $message }}</div>
             @enderror
         </div>
+        <div class="form-group col-3" id="inputataabertura">
+            <label for="ataabertura">Ata de Abertura</label>
+            <input type="text" class="form-control" id="ataabertura" name="ataabertura" value="{{ old('ataabertura') }}">
+            @error('ataabertura')
+            <div>{{ $message }}</div>
+            @enderror
+        </div>
         <div class="form-group col-3" id="inputresultado">
             <label for="resultado">Resultado</label>
             <input type="text" class="form-control" id="resultado" name="resultado" value="{{ old('resultado') }}">

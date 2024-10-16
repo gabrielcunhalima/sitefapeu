@@ -9,13 +9,9 @@ use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\SelecoesPublicasController;
 
 
-Route::get('/', function () {
-    return view('homepage.home');
-}) ->name ('homepage.home');
 
-
-
-Route::get('/home', [MenuController::class, 'home'])->name('homepage.home');
+Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
+Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
 
 //COLABORADOR
 
@@ -34,6 +30,7 @@ Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebM
 Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dispensa');
 Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
 Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
+Route::get('/menulicitacao',[MenuController::class,'menulicitacao'])->name('fornecedor.menulicitacao');
 
 
 //HOME
@@ -63,6 +60,7 @@ Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projet
 Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.captacao');
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 Route::get('/projetos',[MenuController::class,'projetos'])->name('projetos.projetos');
+Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 
 //QUEM SOMOS
 
@@ -78,6 +76,7 @@ Route::get('/regimentointerno',[MenuController::class,'regimentointerno'])->name
 
 Route::get('/avaliacaodesempenho',[MenuController::class,'avaliacaodesempenho'])->name('transparencia.avaliacaodesempenho');
 Route::get('/compras',[MenuController::class,'compras'])->name('transparencia.compras');
+Route::get('/menutransparencia',[MenuController::class,'menutransparencia'])->name('transparencia.menutransparencia');
 Route::get('/demonstracoescontabeis',[MenuController::class,'demonstracoescontabeis'])->name('transparencia.demonstracoescontabeis');
 Route::get('/faq',[MenuController::class,'faq'])->name('transparencia.faq');
 Route::get('/fiscal_auditorias',[MenuController::class,'fiscal_auditorias'])->name('transparencia.fiscal_auditorias');

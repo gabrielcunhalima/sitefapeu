@@ -3,9 +3,11 @@
 
 @section('conteudo')
 <div class="container">
-    <p class=" text-justify mb-5">O <b>Código de Conduta da FAPEU</b> permite, além de oferecer a difusão da cultura de integridade, destacar os princípios pelos quais a Fundação conduz as suas relações com todas as partes interessadas, sejam elas pessoas físicas ou jurídicas. Tem por finalidade viabilizar um comportamento ético pautado em valores que devem ser incorporados por seus integrantes e fortalecer a imagem da fundação e daqueles que a compõem junto à sociedade. Deve ser cumprido por todos os profissionais internos e externos, quando estiverem representando os interesses da FAPEU.</p>
-    <h5 class="">
-        <a href="https://heyzine.com/flip-book/640cbdaada.html" target="_blank">
+    <p class="text-justify mb-5">
+        A <b>Política Anticorrupção da FAPEU</b> fixa as diretrizes institucionais a serem cumpridas pelos dirigentes, gestores, empregados, prestadores de serviços, clientes, parceiros, fornecedores e por todos aqueles que de alguma forma interajam com a Fundação, com o objetivo de definir as relações com a administração pública e seus agentes e estabelecer medidas e procedimentos anticorrupção.
+    </p>
+    <h5>
+        <a href="https://heyzine.com/flip-book/89e0b3e3d6.html" target="_blank">
             <button type="button" class="btn bg-verde btn-lg text-white">
                 Clique aqui para baixar o documento
             </button>

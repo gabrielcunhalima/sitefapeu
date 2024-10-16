@@ -47,12 +47,8 @@
     <!--Grid row-->
     <hr>
   </div>
-  <div class="pb-3 row justify-content-md-center">
+  <div class="pb-3 row ml-2 justify-content-md-center">
     <a class="text-white" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a>
   </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
-
-  <!-- Copyright -->
 </footer>

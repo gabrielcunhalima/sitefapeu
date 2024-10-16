@@ -9,6 +9,10 @@ body {
 
 /*Redimensiona a imagem do carousel */
 
+.carousel-inner .carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
 .carousel-item img {
   width: 100%;
   height: 100%;
@@ -262,16 +266,10 @@ body {
 
 }
 
-/* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
 /* Declaramos alturas, devido ao posicionamento do elemento img */
 .carousel-item {
   height: 32rem;
-  background-color: #777;
+  background-color: #cac5c5;
 }
 
 .carousel-item>img {
@@ -455,13 +453,6 @@ footer a:hover {
 
 @media (min-width: 40em) {
 
-  /* Aumenta o tamanho do conteúdo do carousel */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
   .featurette-heading {
     font-size: 50px;
   }
@@ -476,7 +467,7 @@ footer a:hover {
 /* Ajuste o tamanho do carousel */
 .carousel-inner img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .cta-section {
@@ -533,6 +524,10 @@ footer a:hover {
 .container80 {
   max-width: 80vw;
   margin: 0 10vw 0 10vw;
+}
+
+.bg-transparente {
+  background-color: #303030ee;
 }
 
 .bg-verde {
@@ -868,3 +863,21 @@ footer a:hover {
 .grow:hover { 
   transform: scale(1.1); 
 }
+
+@media (max-width: 576px) {
+  .apoiadas {
+    flex: 0 0 50%;
+    max-width: 100%;
+    margin-bottom:20px;
+  }
+
+  .carousel-item {
+    height: 12rem;
+    background-color: #cac5c5;
+  }
+
+  .navbarmobile{
+    left:20%;
+}
+}
+

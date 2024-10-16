@@ -13,6 +13,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -37,19 +38,25 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container-fluid row justify-content-md-center">
-        <div class="col-1">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <div class="col-1 navbarmobile">
           <a class="navbar-brand d-flex justify-content-end" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
           </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Botão para colapsar a navbar em telas pequenas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="col-md-auto">
-          <ul class="navbar-nav forceleft text-white">
+
+        <!-- Navbar que será colapsada -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!-- Itens da navbar -->
             <li class="nav-item dropdown text-white">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Quem somos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -62,8 +69,9 @@
                 <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Projetos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,12 +81,13 @@
                 <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Transparência
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">*Projetos</a>
+                <a class="dropdown-item" href="{{route('transparencia.projetostransparencia')}}">Projetos</a>
                 <a class="dropdown-item" href="#">*Relatório Técnico Semestral</a>
                 <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
                 <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
@@ -87,27 +96,29 @@
                 <a class="dropdown-item" href="{{route('transparencia.compras')}}">Compras, Contratos e Aquisições</a>
                 <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
                 <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
-                <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica e Regularidade Fiscal</a>
+                <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica<br> e Regularidade Fiscal</a>
                 <a class="dropdown-item" href="{{route('transparencia.faq')}}">FAQ - Perguntas Frequentes</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Políticas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
                 <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                 <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-                <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê de Gestão de Riscos</a>
+                <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
                 <a class="dropdown-item" href="#">*LGPD</a>
                 <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                 <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                 <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Legislação e Normas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -115,8 +126,9 @@
                 <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fornecedor
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -126,24 +138,25 @@
                 <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Colaborador
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{route('colaborador.DRHFlow')}}">DRHFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                <a class="dropdown-item" href="#">ADMFlow</a>
+                <a class="dropdown-item" href="#">WebMail</a>
                 <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                 <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                 <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
                 <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-
                 <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fale Conosco
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -153,12 +166,6 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="col-2">
-              <form action="{{ route('search') }}" method="GET" class="search-bar">
-                <input type="text" class='form-control' name="q" placeholder="Buscar..." required>
-                <button type="submit"><i class="fa fa-search" style="color:black"></i></button>
-              </form>
-            </div> -->
       </div>
     </nav>
   </header>
@@ -167,7 +174,7 @@
       <h1 class="font-weight-bolder">{{$titulo}}</h1>
     </div>
   </div>
-  <main class="bg-principal pt-4">
+  <main class="pt-4">
     @yield('conteudo')
   </main>
   <div class="pt-5">
