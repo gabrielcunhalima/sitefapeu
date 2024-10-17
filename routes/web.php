@@ -64,6 +64,7 @@ Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.capta
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 Route::get('/projetos',[MenuController::class,'projetos'])->name('projetos.projetos');
 
+
 //QUEM SOMOS
 
 Route::get('/administracao',[MenuController::class,'administracao'])->name('quemsomos.administracao');
