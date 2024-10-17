@@ -102,6 +102,8 @@ class MenuController extends Controller
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
     }
 
+    
+
     // MENU Transparência
 
     public function menutransparencia()

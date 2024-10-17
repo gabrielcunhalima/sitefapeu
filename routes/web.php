@@ -20,9 +20,9 @@ Route::get('/formularioscolaborador',[MenuController::class,'formularioscolabora
 Route::get('/informerendimentos',[MenuController::class,'informerendimentos'])->name('colaborador.informerendimentos');
 Route::get('/programainclusao',[MenuController::class,'programainclusao'])->name('colaborador.programainclusao');
 Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name('colaborador.vagasdisponiveis');
-Route::get('/DRHFlow',[MenuController::class,'DRHFlow'])->name('colaborador.DRHFlow');
-Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMFlow');
-Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
+Route::get('/DRHFlow',[MenuController::class,'DRHFlow'])->name('colaborador.drhflow');
+Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.admflow');
+Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.webmail');
 
 
 //FORNECEDOR
@@ -61,6 +61,7 @@ Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.capta
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 Route::get('/projetos',[MenuController::class,'projetos'])->name('projetos.projetos');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
+
 
 //QUEM SOMOS
 

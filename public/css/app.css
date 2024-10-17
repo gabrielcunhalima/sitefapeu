@@ -505,7 +505,11 @@ footer a:hover {
 }
 
 .bg-laranja {
-  background-color: #e68600;
+  background-color: #cf7a01;
+}
+
+.bg-hover {
+  background-color: #00000027;
 }
 
 .bg-transparente {

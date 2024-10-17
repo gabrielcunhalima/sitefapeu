@@ -95,6 +95,7 @@
                 <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                 <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                 <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
+                <a class="dropdown-item" href="{{route('projetos.projetos')}}">Projetos</a>
               </div>
             </li>
             <li class="nav-item dropdown">
