@@ -878,6 +878,11 @@ a {
   .margemtelapequena {
     margin-top:2em;
   }
+  
+  .margemtelapequenaesquerda {
+    margin-left:1em;
+    text-overflow: ellipsis;
+  }
 
   p {
     font-size: 1.2em;

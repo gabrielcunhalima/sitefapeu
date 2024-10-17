@@ -14,7 +14,7 @@
       <img class="d-block w-100" src="../images/noticias/{{ $post->imagem }}" alt="{{ $post->titulo }}">
       <div class="carousel-caption bg-transparente rounded-right" style="left:0;bottom:45px;">
         <h4 class="text-justify text-white px-3 font-weight-bolder">{{Str::upper( $post->titulo )}}</h4>
-        <p class="text-justify text-white px-3">{{ Str::limit($post->corpo, 150) }}</p>
+        <p class="text-justify text-white px-3 margemtelapequenaesquerda">{{ Str::limit($post->corpo, 150) }}</p>
       </div>
     </div>
     @endforeach
@@ -34,7 +34,7 @@
       <div class="card text-white bg-verde mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('projetos.menuprojetos')}}">
           <div class="card-body">
-            <p class="card-text text-white font-weight-bold">Gestão de Projetos</p>
+            <h5 class="card-text text-white font-weight-bold">Gestão de Projetos</h5>
           </div>
         </a>
       </div>
@@ -43,7 +43,7 @@
       <div class="card text-white bg-verde2 mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('fornecedor.menulicitacao')}}">
           <div class="card-body">
-            <p class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</p>
+            <h5 class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</h5>
           </div>
         </a>
       </div>
@@ -52,7 +52,7 @@
       <div class="card text-white bg-verde3 mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('transparencia.menutransparencia')}}">
           <div class="card-body">
-            <p class="card-text text-white font-weight-bold">Transparência</p>
+            <h5 class="card-text text-white font-weight-bold">Transparência</h5>
           </div>
         </a>
       </div>
