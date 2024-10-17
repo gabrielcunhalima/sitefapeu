@@ -1,6 +1,5 @@
 @extends('layout.header')
 @section('title','Acordo Coletivo')
-
 @section('conteudo')
 
 <div class="container" style="font-size:16px;">
