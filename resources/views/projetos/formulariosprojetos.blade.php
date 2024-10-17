@@ -3,6 +3,7 @@
 
 @section('conteudo')
 <div class="container" style="font-size:16px;">
+<h3 class="text-center text-white bg-verdeescuro rounded-lg py-2 mt-auto shadow-lg font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
     <table class="table table-bordered">
         <thead class="bg-verdeescuro text-white">
             <tr>
@@ -12,8 +13,8 @@
         </thead>
         <tbody>
             <tr>
-                <td> <a href="/pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.doc"  class="text-dark" target="_blank">
-                    1.2 Cancelamento de Bolsa ou Estágio</a></td>
+                <td class="border py-0 pr-0 align-middle"><a href="/pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.doc"  class="text-dark" target="_blank">
+                    <div>1.2 Cancelamento de Bolsa ou Estágio</div></a></td>
                 <td>18/04/2024</td>
             </tr>
             <tr>
@@ -28,7 +29,7 @@
             </tr>
             <tr>
             <td> <a href="/pdfs/Projetos/1.10_alteracao_contrato_trabalho.doc"  class="text-dark" target="_blank">
-                1.10 Rescisão / Alteração de Contrato de Trabalho</a> </td>
+                1.10 Rescisão / Alteração de Contrato de Trabalho</a></td>
                 <td>16/08/2013</td>
             </tr>
             <tr>

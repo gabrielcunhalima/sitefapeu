@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\SelecoesPublicas;
+use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -12,6 +14,27 @@ class MenuController extends Controller
     {
         return view($view, compact('imagem', 'titulo', 'dados'));
     }
+    //HOME
+
+    public function home()
+    {
+        $carousel = Post::query()
+            ->orderBy('id', 'desc')
+            ->take(5)
+            ->get();
+    
+        return view('homepage.home', [
+            'carousel' => $carousel
+        ]);
+    }
+
+    //SERVICOS
+
+    public function servicos()
+    {
+        return $this->renderView('homepage.servicos', 'servicos.png', 'Serviços');
+    }
+    
     // MENU Quem somos
     public function sobre()
     {
@@ -49,6 +72,11 @@ class MenuController extends Controller
     }
 
     // MENU Projetos
+
+    public function menuprojetos()
+    {
+        return $this->renderView('projetos.menuprojetos', 'menuprojetos.png', 'Projetos');
+    }
     public function formulariosprojetos()
     {
         return $this->renderView('projetos.formulariosprojetos', 'formulariosprojetos.png', 'Formulários');
@@ -77,6 +105,11 @@ class MenuController extends Controller
     
 
     // MENU Transparência
+
+    public function menutransparencia()
+    {
+        return $this->renderView('transparencia.menutransparencia', 'menutransparencia.png', 'Transparência');
+    }
     public function avaliacaodesempenho()
     {
         return $this->renderView('transparencia.avaliacaodesempenho', 'avaliacaodesempenho.png', 'Avaliação de Desempenho');
@@ -184,6 +217,10 @@ class MenuController extends Controller
     }
 
     // MENU Fornecedor
+    public function menulicitacao()
+    {
+        return $this->renderView('fornecedor.menulicitacao', 'menulicitacao.png', 'Licitação e Prestadores de Serviços');
+    }
     public function dispensa()
     {
         return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa');
@@ -244,11 +281,6 @@ class MenuController extends Controller
     public function contato()
     {
         return $this->renderView('faleconosco.contato', 'contato.png', 'Contato');
-    }
-
-    public function home()
-    {
-        return $this->renderView('homepage.home', 'home.png', 'Home');
     }
 
     // NOTÍCIAS

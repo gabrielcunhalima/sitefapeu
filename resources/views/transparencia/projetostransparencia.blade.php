@@ -2,9 +2,13 @@
 @section('title', 'Projetos')
 
 @section('conteudo')
+<<<<<<< HEAD
 
 <body>
 
+=======
+<div style="background-color: #ffff; padding: 50px 0;">
+>>>>>>> ea9f19747c6fe97647ea94d6e083cd21397d1688
     <div class="container">
     
 
@@ -49,6 +53,7 @@
 
 
     </div>
+<<<<<<< HEAD
 
 
 
@@ -154,6 +159,9 @@
 
 </style> 
 </body>
+=======
+</div>
+>>>>>>> ea9f19747c6fe97647ea94d6e083cd21397d1688
 
 
 @endsection

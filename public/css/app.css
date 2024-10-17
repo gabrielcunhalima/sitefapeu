@@ -9,6 +9,10 @@ body {
 
 /*Redimensiona a imagem do carousel */
 
+.carousel-inner .carousel-item {
+  transition: transform 0.4s;
+}
+
 .carousel-item img {
   width: 100%;
   height: 100%;
@@ -95,26 +99,6 @@ footer {
   /* Não trunca o texto */
   display: block;
   /* Exibe os links como blocos para ocupar toda a largura */
-}
-
-
-/* Estilo responsivo para telas menores */
-@media (max-width: 768px) {
-  #sidebarMenu {
-    width: 100%;
-    /* Largura total da tela em dispositivos menores */
-    margin-bottom: 15px;
-    /* Margem inferior para dar espaço */
-    height: auto;
-    /* Altura automática sem restrições */
-    overflow-y: visible;
-    /* Remove barra de rolagem em telas pequenas */
-  }
-
-  main {
-
-    margin-left: 0;
-  }
 }
 
 main {
@@ -262,20 +246,10 @@ body {
 
 }
 
-.carousel {
-  margin-bottom: 4rem;
-}
-
-/* Já que usamos posicionamento de imagens, precisaremos fazer alguns ajustes na legenda */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
 /* Declaramos alturas, devido ao posicionamento do elemento img */
 .carousel-item {
   height: 32rem;
-  background-color: #777;
+  background-color: #cac5c5;
 }
 
 .carousel-item>img {
@@ -459,13 +433,6 @@ footer a:hover {
 
 @media (min-width: 40em) {
 
-  /* Aumenta o tamanho do conteúdo do carousel */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
   .featurette-heading {
     font-size: 50px;
   }
@@ -480,7 +447,7 @@ footer a:hover {
 /* Ajuste o tamanho do carousel */
 .carousel-inner img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .cta-section {
@@ -539,6 +506,10 @@ footer a:hover {
   margin: 0 10vw 0 10vw;
 }
 
+.bg-transparente {
+  background-color: #303030ee;
+}
+
 .bg-verde {
   background-color: #009270;
 }
@@ -569,6 +540,22 @@ footer a:hover {
 
 .bg-preto {
   background-color: #3E3E3E;
+}
+
+.bg-cinza1 {
+  background-color: #6B7267;
+}
+
+.bg-cinza2 {
+  background-color: #EBEBEB;
+}
+
+.bg-cinza3 {
+  background-color: #BCD2E1;
+}
+
+.bg-cinza4 {
+  background-color: #dee1e4;
 }
 
 .text-verde {
@@ -856,3 +843,28 @@ footer a:hover {
 .grow:hover { 
   transform: scale(1.1); 
 }
+
+.marginalizando {
+  margin-left:15px;
+}
+
+@media (min-width: 1401px) {
+  .logofapeu {
+    margin-left:50px;
+  }
+}
+
+@media (max-width: 876px) {
+  .apoiadas {
+    flex: 0 0 50%;
+    max-width: 100%;
+    margin-bottom:20px;
+  }
+
+  .carousel-item {
+    height: 12rem;
+    background-color: #cac5c5;
+  }
+
+}
+
