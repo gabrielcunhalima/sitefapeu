@@ -125,12 +125,12 @@ class MenuController extends Controller
 
     public function faq()
     {
-        return $this->renderView('transparencia.faq', 'faq.png', 'FAQ');
+        return $this->renderView('transparencia.faq', 'faq.png', 'Perguntas Frequentes');
     }
 
     public function fiscal_auditorias()
     {
-        return $this->renderView('transparencia.fiscal_auditorias', 'fiscal_auditorias.png', 'Fiscal e Auditorias');
+        return $this->renderView('transparencia.fiscal_auditorias', 'fiscal_auditorias.png', 'Fiscalização e Auditorias');
     }
 
     public function habilitacaojuridica()
@@ -140,7 +140,7 @@ class MenuController extends Controller
 
     public function pagamentos()
     {
-        return $this->renderView('transparencia.pagamentos', 'pagamentos.png', 'Pagamentos');
+        return $this->renderView('transparencia.pagamentos', 'pagamentos.png', 'Pagamentos Efetuados PF/PJ');
     }
 
     public function relanualgestao()

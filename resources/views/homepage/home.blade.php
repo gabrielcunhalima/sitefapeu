@@ -20,11 +20,11 @@
     @endforeach
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon bg-preto rounded" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon bg-preto rounded" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
 </div>
@@ -59,11 +59,11 @@
     </div>
   </div>
 </div>
-<div class="feature bg-verde">
+<div class="feature bg-verde4">
   <div class="container pt-5">
     <div class="text-center mx-auto pb-5 wow fadeInUp">
       <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg font-weight-bold">Serviços</h3>
-      <div id="carouselExampleIndicator" class="carousel slide container" data-ride="carousel">
+      <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicator" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>

@@ -4,7 +4,7 @@
 @section('conteudo')
 <div class="container">
     <div class="row">
-    <p>
+    <p class="text-justify">
         A <b>Revista da Fapeu</b> é uma publicação que tem o objetivo de trazer à luz uma amostra dos trabalhos de <b>pesquisa</b>, <b>ensino</b> e <b>extensão</b> desenvolvidos em instituições públicas de ensino superior em parceria com a Fapeu.
         Com a revista, a Fapeu busca ir além dos círculos acadêmicos e reforça à sociedade o quanto é realizado em quantidade e qualidade nos laboratórios universitários.
     </p>

@@ -6,7 +6,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="card text-center shadow-lg border-0" style="width: 18rem; transition: transform 0.3s;">
+                <div class="card text-center shadow-lg border-0">
                  
 
                 
