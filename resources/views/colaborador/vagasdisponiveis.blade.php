@@ -2,7 +2,7 @@
 @section('title','Vagas Disponíveis')
 
 @section('conteudo')
-<div class="cta-section" >
+<div class="cta-section cta-image" >
     <div class="cta-text" style="flex: 1; color: white; padding-right: 20px;">
         <h2 style="font-size: 40px; font-weight: regular; margin-bottom: 30px;">Vagas Disponíveis</h2>
         <p style="font-size: 18px; margin-bottom: 30px;">Aproveite as oportunidades acessando o link abaixo!</p>
