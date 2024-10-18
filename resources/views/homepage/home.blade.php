@@ -20,11 +20,11 @@
     @endforeach
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon bg-preto rounded" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon bg-preto rounded p-4" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon bg-preto rounded" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon bg-preto rounded p-4" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
 </div>
@@ -34,7 +34,7 @@
       <div class="card text-white bg-verde mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('projetos.menuprojetos')}}">
           <div class="card-body">
-            <h5 class="card-text text-white font-weight-bold">Gestão de Projetos</h5>
+            <p class="card-text text-white font-weight-bold">Gestão de Projetos</p>
           </div>
         </a>
       </div>
@@ -43,7 +43,7 @@
       <div class="card text-white bg-verde2 mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('fornecedor.menulicitacao')}}">
           <div class="card-body">
-            <h5 class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</h5>
+            <p class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</p>
           </div>
         </a>
       </div>
@@ -52,7 +52,7 @@
       <div class="card text-white bg-verde3 mb-3 card w-75 text-center grow" style="width: 18rem;">
         <a href="{{route('transparencia.menutransparencia')}}">
           <div class="card-body">
-            <h5 class="card-text text-white font-weight-bold">Transparência</h5>
+            <p class="card-text text-white font-weight-bold">Transparência</p>
           </div>
         </a>
       </div>
@@ -63,7 +63,7 @@
   <div class="container pt-5">
     <div class="text-center mx-auto pb-5 wow fadeInUp">
       <h3 class="text-center bg-white rounded-pill py-2 mt-auto shadow-lg font-weight-bold">Serviços</h3>
-      <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
+      <!-- <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicator" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>
@@ -148,7 +148,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Próximo</span>
         </a>
-      </div>
+      </div> -->
     </div>
     <div class="collapse d-md-block" id="servicosCollapse">
       <div class="row g-4">

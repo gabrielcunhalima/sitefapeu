@@ -19,16 +19,12 @@
 
     <p>Nas instituições apoiadas, o foco está na promoção de ações voltadas a tornar os projetos mais eficientes e sustentáveis. Contando com uma equipe enxuta de empregados, a FAPEU atua de forma interativa e didática junto aos coordenadores e equipes de projetos, buscando oferecer o suporte necessário sobre os aspectos relacionados à gestão administrativa, incluindo as determinações legais e as exigências para a correta prestação de contas desses projetos.</p>
 
-    <p>Dessa forma, o trabalho da FAPEU é reconhecido pela comunidade acadêmica e tem contribuído significativamente para o desenvolvimento científico e tecnológico do Brasil, em especial nos estados de Santa Catarina, Rio Grande do Sul e Paraná.</p><br>
-    <b>Missão</b><br>
-    Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br>
+    <p>Dessa forma, o trabalho da FAPEU é reconhecido pela comunidade acadêmica e tem contribuído significativamente para o desenvolvimento científico e tecnológico do Brasil, em especial nos estados de Santa Catarina, Rio Grande do Sul e Paraná.</p><hr>
 
-    <div class="text-left">
-        <b>Visão</b><br>
-        Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br>
-    </div>
+    <p><b>Missão</b><br>Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br></p>
 
-    <b>Valores</b><br>
-    Honestidade, Transparência; Conformidade, Equidade, Responsabilidade e Respeito à Vida, às Pessoas e ao Meio Ambiente
+    <p><b>Visão</b><br>Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br></p>
+
+    <p class="text-left"><b>Valores</b><br>Honestidade, Transparência, Conformidade, Equidade, Responsabilidade e Respeito à Vida, às Pessoas e ao Meio Ambiente</p>
 </div>
 @endsection

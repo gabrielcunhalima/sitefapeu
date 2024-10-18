@@ -4,7 +4,7 @@
 @section('conteudo')
 <div class="container">
     <table class="table table-bordered align-items-center">
-        <thead class="thead-dark">
+        <thead class="text-white bg-verdeescuro">
             <tr>
                 <th scope="col">Ano</th>
                 <th scope="col">Ata Reunião Conselho Curador e Prestações de Contas MP</th>

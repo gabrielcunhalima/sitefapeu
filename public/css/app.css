@@ -677,10 +677,6 @@ footer a:hover {
   -webkit-transition: ease right 0.3s;
   transition: ease right 0.3s;
 }
-.btn:hover {
-  background-color: #336354 !important; /* Verde claro */
-  opacity: 1 !important; /* Impede a transparência */
-}
 
 .px-btn-arrow .arrow:after {
   width: 8px;
@@ -863,9 +859,7 @@ a {
 }
 
 @media (min-width: 1401px) {
-  .logofapeu {
-    margin-left:50px;
-  }
+
 }
 
 @media (max-width: 876px) {
