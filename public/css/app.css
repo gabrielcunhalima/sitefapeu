@@ -240,6 +240,11 @@ body {
 
 }
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+
 /* Declaramos alturas, devido ao posicionamento do elemento img */
 .carousel-item {
   height: 32rem;

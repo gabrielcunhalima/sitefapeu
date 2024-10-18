@@ -237,9 +237,9 @@ class MenuController extends Controller
     }
 
     // MENU Colaborador
-    public function DRHFlow()
+    public function drhflow()
     {
-        return $this->renderView('colaborador.DRHFlow', 'drhflow.png', 'DRHFlow');
+        return $this->renderView('colaborador.DRHFlow', 'drhflow.png', 'drhflow');
     }
 
     public function ADMFlow()
