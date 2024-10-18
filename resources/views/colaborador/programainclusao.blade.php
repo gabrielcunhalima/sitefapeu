@@ -31,7 +31,7 @@
       <br> <br>Venha juntar-se a família FAPEU e fazer a diferença na vida de nossos parceiros.
       </p>
 
-      <p class="display-5 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
+      <p class="display-8 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
       <a href="http://www.deficienteonline.com.br" target="_blank" style= "color: #099072;" > http://www.deficienteonline.com.br <br><br></a> 
       
 

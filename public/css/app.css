@@ -455,6 +455,7 @@ footer a:hover {
   align-items: center;
   justify-content: center;
   background-color: #8db6ac;
+  background: url('/images/bg_vagas_escuro.png') no-repeat center center;
   padding: 50px;
   border-radius: 8px;
   margin: 50px auto;
