@@ -20,6 +20,7 @@
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
 
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -43,13 +44,24 @@
     border: none;
     background-color: transparent;
   }
+
+  .jumbotron-custom {
+  background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+  }
+
+  @media (max-width: 876px) {
+    .jumbotron-custom {
+    background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+  }
+  }
+
 </style>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container">
         <div class="logofapeu">
-          <a class="navbar-brand" href="{{ route('homepage.home') }}">
+          <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
           </a>
         </div>
@@ -144,9 +156,15 @@
                 Colaborador
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{route('colaborador.DRHFlow')}}">DRHFlow</a>
                 <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                 <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+=======
+                <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.admflow')}}">ADMFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.webmail')}}">WebMail</a>
+>>>>>>> eec060703b21dc49d96e4c724fcf5c6036a20d9a
                 <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                 <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                 <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
@@ -169,7 +187,7 @@
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 50%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;">
+  <div class="jumbotron jumbotron-fluid jumbotron-custom">
     <div class="container">
       <h1 class="font-weight-bolder">{{$titulo}}</h1>
     </div>

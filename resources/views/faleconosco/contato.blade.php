@@ -3,8 +3,8 @@
 
 @section('conteudo')
 <div>
-    <div class="row">
-        <div class="col-6">
+    <div class="row container-fluid">
+        <div class="col-md-6 col-sm-12">
             <div class="form">
                 <form>
                     <div class="form-row justify-content-end">
@@ -65,7 +65,7 @@
         </div>
         
         <!-- Ajustando para uma coluna menor -->
-        <div class="col-4 mt-23">
+        <div class="col-md-4 col-sm-12 mt-23">
             <!-- Card com Google Maps e as informações -->
             <div class="card" style="width: 100%;">
                 <div class="card-body">
