@@ -67,8 +67,8 @@
     <div class="card mb-5 border-0">
       <div class="card-body border-0">
         <div class="d-flex justify-content-center container">
-          <h4 class="card-title font-weight-bold p-3 bg-light rounded text-center container" style="color: #099072;">Confira os projetos apoiados pela FAPEU
-          </h4>
+          <h3 class="card-title font-weight-bold p-5 bg-light rounded text-center container" style="color: #099072;">Confira os projetos apoiados pela FAPEU
+          </h3>
         </div>
         <!-- Projetos em destaque - Carousel -->
         <section class="section" id="blog">
@@ -164,10 +164,10 @@
 </div>
 
 <div class="feature">
-  <div class="container pt-3">
-    <div class="text-center mx-auto pb-5 wow fadeInUp">
-      <h3 class="text-center text-white py-2 mt-auto font-weight-bold mb-3">Serviços</h3>
-      <!-- <div class="accordion accordion-flush rounded d-none" id="accordionFlushExample">
+  <div class="container">
+    <div class="text-center mx-auto wow fadeInUp">
+      <h3 class="text-center text-white pb-5  pt-2 mt-auto font-weight-bold mb-3">Serviços</h3>
+      <div class="accordion accordion-flush d-none" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -228,7 +228,7 @@
             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
           </div>
         </div>
-      </div> -->
+      </div>
       <!-- <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner rounded-lg">
           <div class="carousel-item active bg-light pt-5">
@@ -369,7 +369,7 @@
 <div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
   <div class="container80">
     <div class='mx-0'>
-      <h3 class="text-center text-verde2 py-2 mt-auto font-weight-bold">Instituições Apoiadas</h3>
+      <h3 class="text-center text-verde2 pb-3 mt-auto font-weight-bold">Instituições Apoiadas</h3>
     </div>
     <div class="row align-items-center">
       <div class="col-sm apoiadas grow">

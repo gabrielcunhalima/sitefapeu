@@ -46,12 +46,12 @@
   }
 
   .jumbotron-custom {
-  background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
   }
 
   @media (max-width: 876px) {
     .jumbotron-custom {
-    background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
   }
   }
 
@@ -164,21 +164,21 @@
               </li>
             </p>
             <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Colaborador
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.admflow')}}">ADMFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.webmail')}}">WebMail</a>
-                  <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
-                  <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
-                  <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-                  <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
-                </div>
-              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Colaborador
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
+                <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
+              </div>
+            </li>
             </p>
             <p>
               <li class="nav-item dropdown">

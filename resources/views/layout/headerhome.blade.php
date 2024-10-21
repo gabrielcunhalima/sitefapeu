@@ -77,7 +77,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color:#285B50">
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
@@ -175,13 +175,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-<<<<<<< HEAD
-                <a class="dropdown-item" href="{{route('colaborador.admflow')}}">ADMFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.webmail')}}">WebMail</a>
-=======
                 <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                 <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
->>>>>>> 6c894ff05ab7f111b547bcd1352a9d94db2c0f0e
                 <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                 <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                 <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
