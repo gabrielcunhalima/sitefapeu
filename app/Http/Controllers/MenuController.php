@@ -117,7 +117,7 @@ class MenuController extends Controller
 
     public function compras()
     {
-        return $this->renderView('transparencia.compras', 'compras.png', 'Compras');
+        return $this->renderView('transparencia.compras', 'compras.png', 'Compras, Contratos e Aquisições');
     }
 
     public function demonstracoescontabeis()
