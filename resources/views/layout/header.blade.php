@@ -35,6 +35,8 @@
 </head>
   <title>@yield('title')</title>
 </head>
+
+
 <style>
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -53,10 +55,91 @@
     .jumbotron-custom {
     background: linear-gradient(55deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
   }
+  
+}
+
+    /* Ajuste na posição dos botões de acessibilidade */
+    .accessibility-buttons {
+    position: fixed;
+    top: 50px; /* Ajuste conforme necessário */
+    margin-left: 10px;
+    z-index: 1030; /* Abaixo do menu */
   }
 
+
+  .navbar-custom {
+    z-index: 1040; /* Acima dos botões */
+  }
+
+   /* Estilo de alto contraste */
+   .high-contrast {
+        background-color: #000; /* Fundo preto */
+        color: #099072; /* Texto branco */
+    }
+
+    .high-contrast a {
+        color: #00F; /* Links azuis */
+    }
+
+    .high-contrast .btn {
+        background-color: #408c68; /* Botões brancos */
+        color: #000; /* Texto preto nos botões */
+    }
+
+
 </style>
+
+
 <body>
+
+<div class="accessibility-buttons fixed-top p-3">
+  <button id="increase-font" class="btn btn-outline-dark me-2">A+</button>
+    <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
+    <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    const increaseFontButton = document.getElementById('increase-font');
+    const decreaseFontButton = document.getElementById('decrease-font');
+    const toggleContrastButton = document.getElementById('toggle-contrast');
+
+    // Obtem o tamanho atual da fonte a partir do body
+    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+
+    let highContrast = false;
+
+    increaseFontButton.addEventListener('click', () => {
+        fontSize += 2; // aumenta a fonte em 2px
+        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+    });
+
+    decreaseFontButton.addEventListener('click', () => {
+        if (fontSize > 10) { // evita que a fonte fique muito pequena
+            fontSize -= 2; // diminui a fonte em 2px
+            document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+        }
+    });
+
+
+    toggleContrastButton.addEventListener('click', () => {
+        if (highContrast) {
+            document.body.classList.remove('high-contrast');
+            toggleContrastButton.textContent = 'Alto Contraste'; // Restaura texto do botão
+        } else {
+            document.body.classList.add('high-contrast');
+            toggleContrastButton.textContent = 'Normal'; // Muda o texto do botão
+        }
+        highContrast = !highContrast;
+    });
+
+
+</script>
+  
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container">
@@ -192,6 +275,7 @@
   <div class="pt-5">
     @include('layout.footer')
   </div>
+  
 </body>
 
 </html>
