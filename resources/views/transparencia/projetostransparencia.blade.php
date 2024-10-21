@@ -3,21 +3,31 @@
 
 @section('conteudo')
 
+
+
+
 <body>
+
+
+
 
     <div class="container">
 
         <!-- Card Layout Section -->
         <div class="row mt-1">
             <div class="col-md-12">
-                <div class="card mb-3">
+                <div class="card mb-3 shadow-lg">
                     <img class="card-img-top shadow" src="/images/Paginas/F A P E U (2).png" alt="Imagem de capa do card">
 
                     <div class="card-body">
                         <br><br>
-                        <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072;">
+                        <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072; font-family: 'Raleway', sans-serif;">
                             Projetos de Transparência
                         </h4>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6c894ff05ab7f111b547bcd1352a9d94db2c0f0e
                         <br>
                         <div class="list-group">
                             <p class="lead text-dark text-justify">
@@ -44,17 +54,20 @@
         </div>
         <!-- End of Card Layout Section -->
 
-        <!-- Confira os cards em destaque -->
+
+
+        <!-- card confira nossos destaque -->
         <div class="row mt-1">
             <div class="col-md-12">
-                <div class="card">
+                <br><br>
+                <div class="card shadow-lg ">
                     <div class="card-body">
                         <div class="d-flex justify-content-center">
-                            <h4 class="card-title font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success text-center" style="color: #099072;">
-                                Confira nossos projetos em destaque!
-                            </h4>
-                        </div>
-                        <!-- Projetos em destaque - Carousel -->
+                    <h4 class="card-title font-weight-bold text-center rounded-top" style="color: #099072; font-family: 'Raleway', sans-serif;">
+                        <br><br>Confira Projetos em destaque!
+                    </h4>
+
+                        </div>  
                         <section class="my-4" id="blog">
                             <div class="container">
                                 <div id="projectCarousel" class="carousel slide" data-ride="carousel">
@@ -62,7 +75,7 @@
                                         <div class="carousel-item active">
                                             <div class="row">
                                                 <div class="col-lg-4">
-                                                    <div class="card">
+                                                    <div class="card ">
                                                         <img src="https://www.bootdey.com/image/350x280/FFB6C1/000000" class="card-img-top rounded-left" alt="">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><a href="#">Prevent 75% of visitors from google analytics</a></h5>
@@ -93,7 +106,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Adicione mais itens de carousel aqui -->
                                         <div class="carousel-item">
                                             <div class="row">
                                                 <div class="col-lg-4">
@@ -117,7 +129,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card">
+                                                    <div class="card ">
                                                         <img src="https://www.bootdey.com/image/350x280/4682B4/000000" class="card-img-top" alt="">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><a href="#">Another Cool Project</a></h5>
@@ -144,7 +156,7 @@
                 </div>
             </div>
         </div>
-    </div>
+ s
 
     <style>
         .carousel-item {

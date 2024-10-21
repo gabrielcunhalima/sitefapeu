@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
@@ -174,8 +175,13 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{route('colaborador.admflow')}}">ADMFlow</a>
                 <a class="dropdown-item" href="{{route('colaborador.webmail')}}">WebMail</a>
+=======
+                <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
+                <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+>>>>>>> 6c894ff05ab7f111b547bcd1352a9d94db2c0f0e
                 <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                 <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                 <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
