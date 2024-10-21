@@ -12,12 +12,12 @@
             <div class="col-md-12">
                 <div class="card mb-3">
                     <img class="card-img-top shadow" src="/images/Paginas/F A P E U (2).png" alt="Imagem de capa do card">
-                    
+
                     <div class="card-body">
                         <br><br>
                         <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072;">
                             Projetos de Transparência
-                        </h4> 
+                        </h4>
                         <br>
                         <div class="list-group">
                             <p class="lead text-dark text-justify">
@@ -47,14 +47,13 @@
         <!-- Confira os cards em destaque -->
         <div class="row mt-1">
             <div class="col-md-12">
-                <br><br>
                 <div class="card">
                     <div class="card-body">
-                    <div class="d-flex justify-content-center">
-    <h4 class="card-title font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success text-center" style="color: #099072;">
-        Confira nossos projetos em destaque!
-    </h4>
-</div>  
+                        <div class="d-flex justify-content-center">
+                            <h4 class="card-title font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success text-center" style="color: #099072;">
+                                Confira nossos projetos em destaque!
+                            </h4>
+                        </div>
                         <!-- Projetos em destaque - Carousel -->
                         <section class="my-4" id="blog">
                             <div class="container">
@@ -149,8 +148,10 @@
 
     <style>
         .carousel-item {
-            background-color: transparent; /* Remove o fundo cinza dos slides */
+            background-color: transparent;
+            /* Remove o fundo cinza dos slides */
         }
+
         .lead a:hover {
             color: #099072 !important;
         }
