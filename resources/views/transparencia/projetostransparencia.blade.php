@@ -24,10 +24,6 @@
                         <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072; font-family: 'Raleway', sans-serif;">
                             Projetos de Transparência
                         </h4>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c894ff05ab7f111b547bcd1352a9d94db2c0f0e
                         <br>
                         <div class="list-group">
                             <p class="lead text-dark text-justify">
@@ -156,8 +152,6 @@
                 </div>
             </div>
         </div>
- s
-
     <style>
         .carousel-item {
             background-color: transparent;

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
   }
 
   .jumbotron-custom {
-  background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.39) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
   }
 
   @media (max-width: 876px) {
@@ -58,8 +58,8 @@
 </style>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
+      <div class="container-fluid">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -193,13 +193,14 @@
             </p>
           </ul>
         </div>
+        <div class="rounded-pill p-3 bg-light" style="color: #099072;">Traga seu projeto para a FAPEU</div>
       </div>
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <div class="jumbotron jumbotron-fluid jumbotron-custom">
     <div class="container">
-      <h1 class="font-weight-bolder">{{$titulo}}</h1>
+      <h1>{{$titulo}}</h1>
     </div>
   </div>
   <main class="pt-4">

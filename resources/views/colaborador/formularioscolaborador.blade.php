@@ -3,7 +3,7 @@
 
 @section('conteudo')
 
-<div class="container" style="font-size:16px;">
+<div class="container">
     <table class="table table-bordered">
         <thead class="bg-verdeescuro text-white">
             <tr>

@@ -273,7 +273,7 @@
 </div>
 
 
-<section id="conselhocurador" class="py-3">
+<section id="conselhocurador" class="py-3 collapse d-md-block">
     <div class="bg-administracao container pt-4 rounded shadow-lg">
         <h2 class="title_spectial">Conselho Curador</h2>
         <div class="row justify-content-center text-center">
@@ -391,7 +391,7 @@
             </div><!--- END COL -->
         </div><!--- END CONTAINER -->
 </section>
-<section id="conselhofiscal" class="py-3">
+<section id="conselhofiscal" class="py-3 collapse d-md-block">
     <div class="bg-administracao container pt-4 rounded shadow-lg">
         <h2 class="title_spectial">Conselho Fiscal</h2>
         <div class="row justify-content-center text-center">
@@ -445,7 +445,7 @@
         </div><!--- END COL -->
     </div><!--- END CONTAINER -->
 </section>
-<section id="diretoriaexecutiva" class="py-3">
+<section id="diretoriaexecutiva" class="py-3 collapse d-md-block">
     <div class="bg-administracao container pt-4 rounded shadow-lg">
         <h2 class="title_spectial">Diretoria Executiva</h2>
         <div class="row justify-content-center text-center">
@@ -479,7 +479,7 @@
         </div><!--- END COL -->
     </div><!--- END CONTAINER -->
 </section>
-<section id="superintendencia" class="py-3">
+<section id="superintendencia" class="py-3 collapse d-md-block">
     <div class="bg-administracao container pt-4 rounded shadow-lg">
         <h2 class="title_spectial">Superintendência</h2>
         <div class="row justify-content-center text-center">
@@ -495,5 +495,19 @@
         </div><!--- END COL -->
     </div><!--- END CONTAINER -->
 </section>
+<script>
+  function toggleAccordion() {
+  const accordion = document.getElementById('accordionExample');
+  
+  if (window.innerWidth <= 768) {
+    accordion.classList.remove('d-none');  
+  } else {
+    accordion.classList.add('d-none');  
+  }
+}
+
+window.addEventListener('resize', toggleAccordion);
+window.addEventListener('load', toggleAccordion);
+</script>
 
 @endsection
