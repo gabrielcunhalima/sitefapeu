@@ -2,13 +2,13 @@
 @section('title','FAPEU')
 @section('conteudo')
 <div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 py-2 text-center">
-  <p class="container" style="font-family:'Satisfy'; font-size:4em;">Transformando ideias em ações</p>
+  <p class="container" style="font-family:'Satisfy'; font-size:4em;">Transformando ideias em ações!</p>
 </div>
 <!-- 3 menus principais -->
 <div class="container">
   <div class="row align-items-center mb-2">
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('projetos.menuprojetos')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Gestão de Projetos</p>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('fornecedor.menulicitacao')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Licitações e Prestadores de Serviço</p>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('transparencia.menutransparencia')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Transparência</p>
@@ -67,7 +67,7 @@
     <div class="card mb-5 border-0">
       <div class="card-body border-0">
         <div class="d-flex justify-content-center container">
-          <h3 class="card-title font-weight-bold p-5 bg-light rounded text-center container" style="color: #099072;">Confira os projetos apoiados pela FAPEU
+          <h3 class="card-title font-weight-bold p-5 bg-light rounded text-center container " style="color: #099072;">Confira os projetos apoiados pela FAPEU
           </h3>
         </div>
         <!-- Projetos em destaque - Carousel -->
@@ -166,11 +166,11 @@
 <div class="feature">
   <div class="container">
     <div class="text-center mx-auto wow fadeInUp">
-      <h3 class="text-center text-white pb-5  pt-2 mt-auto font-weight-bold mb-3">Serviços</h3>
-      <div class="accordion accordion-flush d-none" id="accordionFlushExample">
+      <h3 class="text-center text-white pb-5 pt-2 mt-auto font-weight-bold mb-3">Serviços</h3>
+      <div class="accordion accordion-flush d-none pb-4" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Reservas de Salas</b>
             </button>
           </h2>
@@ -180,7 +180,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               <b>Cursos e Eventos</b>
             </button>
           </h2>
@@ -190,7 +190,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
               <b>Importação de Bens e Insumos</b>
             </button>
           </h2>
@@ -200,7 +200,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
               <b>NAGEFI</b>
             </button>
           </h2>
@@ -210,7 +210,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
               <b>LATIC</b>
             </button>
           </h2>
@@ -220,7 +220,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
               <b>Concursos</b>
             </button>
           </h2>
@@ -307,7 +307,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">Reservas de Salas</h5>
+              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p><br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -316,7 +316,7 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">Cursos e Eventos</h5>
+              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -325,7 +325,7 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -336,7 +336,7 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">NAGEFI</h5>
+              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -345,7 +345,7 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">LATIC</h5>
+              <h5 class="card-title font-weight-bold ">LATIC</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -354,7 +354,7 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">Concursos</h5>
+              <h5 class="card-title font-weight-bold ">Concursos</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
               <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
             </div>
@@ -369,7 +369,7 @@
 <div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
   <div class="container80">
     <div class='mx-0'>
-      <h3 class="text-center text-verde2 pb-3 mt-auto font-weight-bold">Instituições Apoiadas</h3>
+      <h3 class="text-center text-verde2 pb-3 mt-auto font-weight-bold ">Instituições Apoiadas</h3>
     </div>
     <div class="row align-items-center">
       <div class="col-sm apoiadas grow">

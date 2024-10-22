@@ -119,8 +119,8 @@ main {
   background-color: #285B50;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
-  /* background: rgb(0,92,70);
-  background: linear-gradient(90deg, rgba(0,92,70,1) 6%, rgba(0,146,112,1) 30%, rgba(0,146,112,1) 70%, rgba(0,92,70,1) 94%); */
+  background: rgb(33,73,64);
+  background: linear-gradient(0deg, rgba(33,73,64,1) 0%, rgba(40,91,80,1) 46%, rgba(40,91,80,1) 100%);
   z-index: 1;
 }
 
@@ -233,12 +233,16 @@ footer ul li {
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: "DM Sans", sans-serif;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-montserratbold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
 }
 
 
@@ -876,6 +880,10 @@ a {
 @media (max-width: 876px) {
 
   p {
+    font-size: 1.3em;
+  }
+
+  .textofooter {
     font-size: 1.2em;
   }
 

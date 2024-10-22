@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase font-weight-bold">Localização</h5>
-        <p style="font-size:14px;">
+        <p class="textofooter">
           Rua Delfino Conti, Campus Universitário Reitor João David Ferreira Lima, Bairro Trindade<br>
           Florianópolis/SC - CEP 88040-370<br>
           Horário de Funcionamento: Segunda a Sexta-feira das 8h às 12h e das 13h às 17h<br>
@@ -16,7 +16,7 @@
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase font-weight-bold">Caixa Postal</h5>
-        <p style="font-size:14px;">
+        <p class="textofooter">
           AC Cidade Universitária,<br>
           Caixa Postal 5078, Bairro Trindade, Florianópolis/SC, CEP 88035-972<br>
           CNPJ: 83.476.911/0001-17<br>
@@ -29,13 +29,13 @@
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-md-0 ">
         <h5 class="text-uppercase font-weight-bold">Contato</h5>
-        <p style="font-size:14px;">
+        <p class="textofooter">
           Tel: (48)3331-7400<br>
           contato@fapeu.org.br<br>
           <br>
-          <div class="font-weight-bold">Redes Sociais</div>
+          <h5 class="font-weight-bold">Redes sociais</h5>
         </p>
-        <p style="font-size:2em;">
+        <p style="font-size:2.2em;">
           <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>

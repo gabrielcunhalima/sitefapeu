@@ -75,7 +75,7 @@ class MenuController extends Controller
 
     public function menuprojetos()
     {
-        return $this->renderView('projetos.menuprojetos', 'menuprojetos.png', 'Projetos');
+        return $this->renderView('projetos.menuprojetos', 'identidadevisual.png', 'Gestão de Projetos');
     }
     public function formulariosprojetos()
     {

@@ -152,8 +152,6 @@
                 </div>
             </div>
         </div>
- s
-
     <style>
         .carousel-item {
             background-color: transparent;
