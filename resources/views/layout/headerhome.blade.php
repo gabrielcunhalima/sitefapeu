@@ -4,9 +4,9 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
@@ -78,19 +78,19 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-custom shadow-lg" style="font-family: 'Montserrat', sans-serif;">
+      <div class="container-fluid justify-content-start">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
           </a>
         </div>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end" id="hamburguer">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-evenly d-flex align-items-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
@@ -211,14 +211,13 @@
                 </div>
               </li>
             </p>
+            <p>
+              <li class="nav-item rounded p-2 bg-light font-weight-bold text-center">
+                <a class="nav-link" href="#">Traga seu projeto para a FAPEU</a>
+              </li>
+            </p>
           </ul>
-          <a href="">
-            <div class="rounded-pill p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaprojetodentro">Traga seu projeto para a FAPEU</div>
-          </a>
         </div>
-        <a href="">
-          <div class="rounded-pill p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaprojetofora">Traga seu projeto para a FAPEU</div>
-        </a>
       </div>
     </nav>
   </header>
@@ -233,22 +232,6 @@
   <div>
     @include('layout.footer')
   </div>
-  <script>
-  function toggleElements() {
-    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
-    const tragaprojetofora = document.getElementById("tragaprojetofora");
-
-    if (window.matchMedia("(max-width: 993px)").matches) {
-      tragaprojetodentro.style.display = "block";
-      tragaprojetofora.style.display = "none";
-    } else {
-      tragaprojetodentro.style.display = "none";
-      tragaprojetofora.style.display = "block"; 
-    }
-  }
-  window.addEventListener("load", toggleElements);
-  window.addEventListener("resize", toggleElements);
-</script>
 
 </body>
 

@@ -2,7 +2,7 @@
 @section('title','FAPEU')
 @section('conteudo')
 <div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 py-2 text-center">
-  <p class="container" style="font-family:'Satisfy'; font-size:4em;">Transformando ideias em ações!</p>
+  <p class="container transformando" style="font-family:'Petit Formal Script';font-weight:bold; font-size:3.6em;">Transformando ideias em ações!</p>
 </div>
 <!-- 3 menus principais -->
 <div class="container">

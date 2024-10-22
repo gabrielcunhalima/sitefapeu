@@ -873,7 +873,7 @@ a {
   text-decoration: none;
 }
 
-@media (min-width: 1401px) {
+@media (max-width: 1680px) {
 
 }
 
@@ -905,6 +905,10 @@ a {
   .carousel-item {
     height: 12rem;
     background-color: #cac5c5;
+  }
+
+  .transformando {
+    font-size: 2em !important;
   }
 
 }

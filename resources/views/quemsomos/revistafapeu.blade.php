@@ -11,7 +11,7 @@
     </div>
     <div class="row text-center mt-5">
         <div class="col-6 d-flex justify-content-end marginalizado">
-            <a href="https://heyzine.com/flip-book/2147948874.html"><img src="https://api.fapeu.com.br/tiny/CapaFapeu2023-png.png" alt="" width="160" height="213" class="grow"/><br><br><b>N° 14. Ano XIV. Volume 14. 2023.<br>ISSN 1806-0110</b></a>
+            <a href="https://heyzine.com/flip-book/58bb689faa.html12"><img src="https://api.fapeu.com.br/tiny/CapaFapeu2023-png.png" alt="" width="160" height="213" class="grow"/><br><br><b>N° 14. Ano XIV. Volume 14. 2023.<br>ISSN 1806-0110</b></a>
         </div>
         <div class="col-6 d-flex justify-content-start">
             <a href="https://heyzine.com/flip-book/9e24ef8a97.html"><img src="https://api.fapeu.com.br/tiny/CapaFapeu2021.png" alt="" width="160" height="213" class="grow"/><br><br><b>N° 13. Ano XIII. Volume 13. 2022.<br>ISSN 1806-0110</b></a>
