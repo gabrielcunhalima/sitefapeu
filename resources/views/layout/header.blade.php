@@ -60,10 +60,10 @@
 
     /* Ajuste na posição dos botões de acessibilidade */
     .accessibility-buttons {
-    position: fixed;
-    top: 50px; /* Ajuste conforme necessário */
-    margin-left: 10px;
-    z-index: 1030; /* Abaixo do menu */
+      position: fixed;
+    top: 10px; /* Ajuste conforme necessário */
+    left: 10px;
+    z-index: 1050; /* Abaixo do menu */
   }
 
 
@@ -92,10 +92,10 @@
 
 <body>
 
-<div class="accessibility-buttons fixed-top p-3">
+<div class="accessibility-buttons">
   <button id="increase-font" class="btn btn-outline-dark me-2">A+</button>
-    <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
-    <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
+  <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
+  <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
 </div>
 
 
@@ -139,8 +139,13 @@
 </script>
   
 <header>
+<<<<<<< HEAD
+    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color:#285B50">
+      <div class="container">
+=======
     <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
       <div class="container-fluid">
+>>>>>>> 956fc0f7a537bebec782db8b54cd9bc512794063
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
