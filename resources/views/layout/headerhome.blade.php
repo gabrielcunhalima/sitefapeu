@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -79,10 +77,9 @@
 </head>
 
 <body>
-  
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
-      <div class="container-fluid">
+      <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -93,7 +90,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
@@ -215,8 +212,13 @@
               </li>
             </p>
           </ul>
-          <div class="rounded-pill p-3 bg-light font-weight-bold" style="color: #099072;">Traga seu projeto para a FAPEU</div>
+          <a href="">
+            <div class="rounded-pill p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaprojetodentro">Traga seu projeto para a FAPEU</div>
+          </a>
         </div>
+        <a href="">
+          <div class="rounded-pill p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaprojetofora">Traga seu projeto para a FAPEU</div>
+        </a>
       </div>
     </nav>
   </header>
@@ -231,27 +233,23 @@
   <div>
     @include('layout.footer')
   </div>
-</body>
+  <script>
+  function toggleElements() {
+    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
+    const tragaprojetofora = document.getElementById("tragaprojetofora");
 
-<script>
-  document.getElementById('search-button').addEventListener('click', function() {
-    var query = document.getElementById('search-input').value;
-    if (query) {
-
-      var searchUrl = '127./search?q=' + encodeURIComponent(query);
-      window.location.href = searchUrl;
+    if (window.matchMedia("(max-width: 993px)").matches) {
+      tragaprojetodentro.style.display = "block";
+      tragaprojetofora.style.display = "none";
     } else {
-      alert('Por favor, insira um termo de busca.');
+      tragaprojetodentro.style.display = "none";
+      tragaprojetofora.style.display = "block"; 
     }
-  });
-
-  document.getElementById('search-input').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      document.getElementById('search-button').click();
-    }
-  });
+  }
+  window.addEventListener("load", toggleElements);
+  window.addEventListener("resize", toggleElements);
 </script>
+
 </body>
 
 </html>
-

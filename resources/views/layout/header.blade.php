@@ -136,8 +136,6 @@
         }
         highContrast = !highContrast;
     });
-
-
 </script>
   
 <header>
@@ -275,8 +273,13 @@
               </li>
             </p>
           </ul>
+          <a href="">
+            <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetodentro">Traga seu projeto para a FAPEU</div>
+          </a>
         </div>
-        <div class="rounded-pill p-3 bg-light" style="color: #099072;">Traga seu projeto para a FAPEU</div>
+        <a href="">
+          <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetofora">Traga seu projeto para a FAPEU</div>
+        </a>
       </div>
     </nav>
   </header>
@@ -292,7 +295,31 @@
   <div class="pt-5">
     @include('layout.footer')
   </div>
-  
+  <script>
+  function toggleElements() {
+    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
+    const tragaprojetofora = document.getElementById("tragaprojetofora");
+
+    if (window.matchMedia("(max-width: 993px)").matches) {
+      tragaprojetodentro.classList.remove("d-none");  // Exibe o elemento
+      tragaprojetodentro.classList.add("d-block");
+
+      tragaprojetofora.classList.remove("d-block");   // Oculta o outro elemento
+      tragaprojetofora.classList.add("d-none");
+    } else {
+      tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
+      tragaprojetodentro.classList.add("d-none");
+
+      tragaprojetofora.classList.remove("d-none");    // Exibe o outro elemento
+      tragaprojetofora.classList.add("d-block");
+    }
+  }
+
+  // Chama a função ao carregar a página e quando a janela é redimensionada
+  window.addEventListener("load", toggleElements);
+  window.addEventListener("resize", toggleElements);
+</script>
+
 </body>
 
 </html>
