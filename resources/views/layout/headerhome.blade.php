@@ -1,5 +1,11 @@
 
 
+@extends('layout.header')
+
+@section('title', 'FAPEU')
+
+@section('inicio')
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

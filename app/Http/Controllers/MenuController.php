@@ -12,7 +12,7 @@ class MenuController extends Controller
 {
     private function renderView($view, $imagem, $titulo, $dados = [])
     {
-        return view($view, compact('imagem', 'titulo', 'dados'));
+        return view($view, compact('imagem', 'titulo', 'dados',));
     }
     //HOME
 

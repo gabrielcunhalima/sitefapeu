@@ -6,6 +6,9 @@
 <div class="container mt-5 ">
     
     <h2 class="text-center mb-4 ">Bem-vindo ao ADMFlow</h2>
+
+    
+
     <p class="text-center mb-5">Gerencie todos os processos administrativos com facilidade e eficiência. Clique abaixo para acessar a área administrativa.</p>
     
     <div class="row justify-content-center ">
