@@ -120,7 +120,7 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
   background: rgb(33,73,64);
-  background: linear-gradient(0deg, rgba(33,73,64,1) 0%, rgba(40,91,80,1) 46%, rgba(40,91,80,1) 100%);
+  background: linear-gradient(0deg,rgb(35, 80, 70) 0%,rgba(40,91,80,1) 7%, rgba(40,91,80,1) 100%);
   z-index: 1;
 }
 
@@ -873,8 +873,8 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 1680px) {
-
+.tragaseuprojeto {
+  margin-left:25px !important;
 }
 
 @media (max-width: 876px) {

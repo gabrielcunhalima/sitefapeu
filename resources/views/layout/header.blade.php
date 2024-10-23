@@ -20,7 +20,7 @@
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
 
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -30,10 +30,10 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
- 
+
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
-  <title>@yield('title')</title>
+<title>@yield('title')</title>
 </head>
 
 
@@ -48,62 +48,78 @@
   }
 
   .jumbotron-custom {
-  background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.39) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
+    url('{{ asset('../images/Paginas/' . $imagem) }}');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
   }
 
   @media (max-width: 876px) {
     .jumbotron-custom {
-    background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
-  }
-  
-}
+      background: linear-gradient(90deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
+      url('{{ asset('../images/Paginas/' . $imagem) }}');
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
 
-    /* Ajuste na posição dos botões de acessibilidade */
-    .accessibility-buttons {
-      position: fixed;
-    top: 10px; /* Ajuste conforme necessário */
+  }
+
+  /* Ajuste na posição dos botões de acessibilidade */
+  .accessibility-buttons {
+    position: fixed;
+    top: 300px;
     left: 10px;
-    z-index: 1050; /* Abaixo do menu */
+    z-index: 1050;
   }
 
 
   .navbar-custom {
-    z-index: 1040; /* Acima dos botões */
+    z-index: 1040;
+    /* Acima dos botões */
   }
 
-   /* Estilo de alto contraste */
-   .high-contrast {
-        background-color: #000; /* Fundo preto */
-        color: #099072; /* Texto branco */
-    }
+  /* Estilo de alto contraste */
+  .high-contrast {
+    background-color: #000;
+    /* Fundo preto */
+    color: #099072;
+    /* Texto branco */
+  }
 
-    .high-contrast a {
-        color: #00F; /* Links azuis */
-    }
+  .high-contrast a {
+    color: #00F;
+    /* Links azuis */
+  }
 
-    .high-contrast .btn {
-        background-color: #408c68; /* Botões brancos */
-        color: #000; /* Texto preto nos botões */
-    }
-
-
+  .high-contrast .btn {
+    background-color: #408c68;
+    /* Botões brancos */
+    color: #000;
+    /* Texto preto nos botões */
+  }
 </style>
 
 
 <body>
 
-<div class="accessibility-buttons">
-  <button id="increase-font" class="btn btn-outline-dark me-2">A+</button>
-  <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
-  <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-
 <script>
+function toggleElements() {
+      const tragaseuprojeto = document.getElementById("tragaseuprojeto");
+
+      if (window.matchMedia("(max-width: 780px)").matches) {
+        // tela pequena
+        tragaseuprojeto.classList.remove("tragaseuprojeto");
+      } else {
+        // tela maior q a pequena
+        tragaseuprojeto.classList.add("tragaseuprojeto");
+      }
+    }
+
+    window.addEventListener("load", toggleElements);
+    window.addEventListener("resize", toggleElements);
+
     const increaseFontButton = document.getElementById('increase-font');
     const decreaseFontButton = document.getElementById('decrease-font');
     const toggleContrastButton = document.getElementById('toggle-contrast');
@@ -114,38 +130,45 @@
     let highContrast = false;
 
     increaseFontButton.addEventListener('click', () => {
-        fontSize += 2; // aumenta a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+      fontSize += 2; // aumenta a fonte em 2px
+      document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
     });
 
     decreaseFontButton.addEventListener('click', () => {
-        if (fontSize > 10) { // evita que a fonte fique muito pequena
-            fontSize -= 2; // diminui a fonte em 2px
-            document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
-        }
+      if (fontSize > 10) { // evita que a fonte fique muito pequena
+        fontSize -= 2; // diminui a fonte em 2px
+        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+      }
     });
 
 
     toggleContrastButton.addEventListener('click', () => {
-        if (highContrast) {
-            document.body.classList.remove('high-contrast');
-            toggleContrastButton.textContent = 'Alto Contraste'; // Restaura texto do botão
-        } else {
-            document.body.classList.add('high-contrast');
-            toggleContrastButton.textContent = 'Normal'; // Muda o texto do botão
-        }
-        highContrast = !highContrast;
+      if (highContrast) {
+        document.body.classList.remove('high-contrast');
+        toggleContrastButton.textContent = 'Alto Contraste'; // Restaura texto do botão
+      } else {
+        document.body.classList.add('high-contrast');
+        toggleContrastButton.textContent = 'Normal'; // Muda o texto do botão
+      }
+      highContrast = !highContrast;
     });
-</script>
-  
-<header>
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color:#285B50">
-      <div class="container">
-=======
+  </script>
+
+  <div class="accessibility-buttons">
+    <button id="increase-font" class="btn btn-outline-dark me-2">A+</button>
+    <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
+    <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <header>
     <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
       <div class="container-fluid">
->>>>>>> 956fc0f7a537bebec782db8b54cd9bc512794063
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -157,7 +180,7 @@
           </button>
         </div>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+          <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -250,21 +273,21 @@
               </li>
             </p>
             <p>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Colaborador
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
-                <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
-                <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
-                <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
-                <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-                <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
-              </div>
-            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Colaborador
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
+                  <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
+                  <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                  <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                  <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                  <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                  <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
+                  <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
+                </div>
+              </li>
             </p>
             <p>
               <li class="nav-item dropdown">
@@ -278,13 +301,8 @@
               </li>
             </p>
           </ul>
-          <a href="">
-            <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetodentro">Traga seu projeto para a FAPEU</div>
-          </a>
+          <div class="rounded p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
         </div>
-        <a href="">
-          <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetofora">Traga seu projeto para a FAPEU</div>
-        </a>
       </div>
     </nav>
   </header>
@@ -300,31 +318,6 @@
   <div class="pt-5">
     @include('layout.footer')
   </div>
-  <script>
-  function toggleElements() {
-    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
-    const tragaprojetofora = document.getElementById("tragaprojetofora");
-
-    if (window.matchMedia("(max-width: 993px)").matches) {
-      tragaprojetodentro.classList.remove("d-none");  // Exibe o elemento
-      tragaprojetodentro.classList.add("d-block");
-
-      tragaprojetofora.classList.remove("d-block");   // Oculta o outro elemento
-      tragaprojetofora.classList.add("d-none");
-    } else {
-      tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
-      tragaprojetodentro.classList.add("d-none");
-
-      tragaprojetofora.classList.remove("d-none");    // Exibe o outro elemento
-      tragaprojetofora.classList.add("d-block");
-    }
-  }
-
-  // Chama a função ao carregar a página e quando a janela é redimensionada
-  window.addEventListener("load", toggleElements);
-  window.addEventListener("resize", toggleElements);
-</script>
-
 </body>
 
 </html>
