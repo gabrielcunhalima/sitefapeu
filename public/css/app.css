@@ -918,9 +918,11 @@ a {
     /* Ajuste na posição dos botões de acessibilidade */
     .accessibility-buttons {
     position: fixed;
-    top: 35px; /* Ajuste conforme necessário */
-    margin-left: 140px;
+    top: 650px; /* Ajuste conforme necessário */
+    right: 10px;
+    margin-right: 20px;
     z-index: 1050; /* Abaixo do menu */
+    
   }
 
 
@@ -954,8 +956,11 @@ a {
   color: #080808;
   font-weight: 300;
   background-size: cover;
-  max-height: 530px;
-  margin-bottom: 250px;
+  background-image: url('/images/captacao.png'); 
+  background-repeat: no-repeat;
+  max-height: NONE;
+  margin-bottom: 20px;
+
 }
 
 
@@ -1007,14 +1012,15 @@ a {
 }
 
 .pricing2 .btn-md {
-  padding: 15px 45px;
+  padding: 10px 30px; 
   font-size: 16px;
 }
 
 @media (max-width: 767px) {
-  .pricing2 {
-    max-height: 100%;
-    margin-bottom: 0px;
+  .pricing2 .btn-md {
+    width:   100%;
+    padding: 10px 0; /* Ajustar o padding para manter o botão com altura adequada */
+    text-align: center;
   }
   .pricing2 .pricing-box {
     margin-top: 20px;
@@ -1022,10 +1028,10 @@ a {
   .pricing2 .display-5 {
     font-size: 36px;
   }
-  .pricing2 .above-card {
-    margin: 0;
+  .pricing2 .card {
+    padding: 15px
   }
-  .pricing2 .above-card .card {
-    padding: 0px;
+  .pricing2 .above-card{
+    padding: 0 15px;
   }
 }

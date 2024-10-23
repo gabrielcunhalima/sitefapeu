@@ -68,11 +68,11 @@
 
 
 <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn btn-light me-2">Acessibilidade</button>
+    <button id="toggle-accessibility" class="btn btn-info me-2">Acessibilidade</button>
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
-      <button id="increase-font" class="btn btn-light me-2">A+</button>
-      <button id="decrease-font" class="btn btn-light me-2">A-</button>
-      <button id="toggle-contrast" class="btn btn-light">Alto Contraste</button>
+      <button id="increase-font" class="btn btn-info me-2">A+</button>
+      <button id="decrease-font" class="btn btn-info me-2">A-</button>
+      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
 </div>
 

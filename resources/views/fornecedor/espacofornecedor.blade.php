@@ -5,7 +5,7 @@
 
 <div class="container mt-5">
     <div class="d-flex justify-content-center">
-        <div class="card mb-3 shadow" style="max-width: 940px;  transition: all 0.3s ease;">
+        <div class="card mb-3  shadow" style="max-width: 940px;  transition: all 0.3s ease;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img

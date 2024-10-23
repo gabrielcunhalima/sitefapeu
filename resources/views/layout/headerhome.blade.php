@@ -117,7 +117,7 @@
                   Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">*Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">*Captação de Recursos e Oportunidade</a>
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
