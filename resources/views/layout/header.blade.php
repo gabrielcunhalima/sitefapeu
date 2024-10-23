@@ -58,33 +58,7 @@
   
 }
 
-    /* Ajuste na posição dos botões de acessibilidade */
-    .accessibility-buttons {
-      position: fixed;
-    top: 10px; /* Ajuste conforme necessário */
-    left: 10px;
-    z-index: 1050; /* Abaixo do menu */
-  }
 
-
-  .navbar-custom {
-    z-index: 1040; /* Acima dos botões */
-  }
-
-   /* Estilo de alto contraste */
-   .high-contrast {
-        background-color: #000; /* Fundo preto */
-        color: #099072; /* Texto branco */
-    }
-
-    .high-contrast a {
-        color: #00F; /* Links azuis */
-    }
-
-    .high-contrast .btn {
-        background-color: #408c68; /* Botões brancos */
-        color: #000; /* Texto preto nos botões */
-    }
 
 
 </style>
@@ -92,11 +66,16 @@
 
 <body>
 
-<div class="accessibility-buttons">
-  <button id="increase-font" class="btn btn-outline-dark me-2">A+</button>
-  <button id="decrease-font" class="btn btn-outline-dark me-2">A-</button>
-  <button id="toggle-contrast" class="btn btn-outline-dark">Alto Contraste</button>
+
+<div class="accessibility-buttons d-none d-lg-block">
+    <button id="toggle-accessibility" class="btn btn-light me-2">Acessibilidade</button>
+    <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
+      <button id="increase-font" class="btn btn-light me-2">A+</button>
+      <button id="decrease-font" class="btn btn-light me-2">A-</button>
+      <button id="toggle-contrast" class="btn btn-light">Alto Contraste</button>
+    </div>
 </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -104,6 +83,16 @@
 
 
 <script>
+
+const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
+    const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
+
+    toggleAccessibilityButton.addEventListener('click', () => {
+      accessibilityButtonsContainer.classList.toggle('d-none');
+    });
+
+
+
     const increaseFontButton = document.getElementById('increase-font');
     const decreaseFontButton = document.getElementById('decrease-font');
     const toggleContrastButton = document.getElementById('toggle-contrast');
@@ -139,13 +128,8 @@
 </script>
   
 <header>
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color:#285B50">
-      <div class="container">
-=======
     <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
       <div class="container-fluid">
->>>>>>> 956fc0f7a537bebec782db8b54cd9bc512794063
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -180,7 +164,7 @@
                   Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">*Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">*Captação de Recursos e Oportunidade</a>
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
