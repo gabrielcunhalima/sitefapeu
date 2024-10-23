@@ -6,10 +6,9 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
@@ -27,6 +26,7 @@
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -81,19 +81,19 @@
 <body>
   
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-custom shadow" style="font-family: 'Montserrat', sans-serif;">
+      <div class="container-fluid">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
           </a>
         </div>
-        <div class="d-flex justify-content-end" id="hamburguer">
+        <div class="d-flex justify-content-end">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
@@ -215,6 +215,7 @@
               </li>
             </p>
           </ul>
+          <div class="rounded p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
         </div>
       </div>
     </nav>
@@ -230,23 +231,24 @@
   <div>
     @include('layout.footer')
   </div>
-  <script>
-  function toggleElements() {
-    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
-    const tragaprojetofora = document.getElementById("tragaprojetofora");
+</body>
 
-    if (window.matchMedia("(max-width: 993px)").matches) {
-      tragaprojetodentro.style.display = "block";
-      tragaprojetofora.style.display = "none";
+<script>
+function toggleElements() {
+    const tragaseuprojeto = document.getElementById("tragaseuprojeto");
+
+    if (window.matchMedia("(max-width: 780px)").matches) {
+      // tela pequena
+      tragaseuprojeto.classList.remove("tragaseuprojeto");
     } else {
-      tragaprojetodentro.style.display = "none";
-      tragaprojetofora.style.display = "block"; 
+      // tela maior q a pequena
+      tragaseuprojeto.classList.add("tragaseuprojeto");
     }
   }
+
   window.addEventListener("load", toggleElements);
   window.addEventListener("resize", toggleElements);
 </script>
-
 </body>
 
 </html>

@@ -36,7 +36,7 @@
     </div>
   </div>
 </div>
-<!-- <div id="carouselExampleIndicators" class="carousel slide container mb-4" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide container mb-4" data-ride="carousel">
   <ol class="carousel-indicators">
     @foreach($carousel as $index => $post)
     <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
@@ -61,13 +61,13 @@
     <span class="carousel-control-next-icon bg-preto rounded p-4" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
-</div> -->
+</div>
 <div class="row">
   <div class="col-md-12 ">
     <div class="card mb-5 border-0">
       <div class="card-body border-0">
         <div class="d-flex justify-content-center container">
-          <h3 class="card-title font-weight-bold p-5 bg-light rounded text-center container " style="color: #099072;">Confira os projetos apoiados pela FAPEU
+          <h3 class="card-title font-weight-bold p-5 rounded text-center container " style="color: #099072;">Confira os projetos apoiados pela FAPEU
           </h3>
         </div>
         <!-- Projetos em destaque - Carousel -->
@@ -459,16 +459,16 @@
 </div> -->
 <script>
   function toggleAccordion() {
-  const accordion = document.getElementById('accordionFlushExample');
-  
-  if (window.innerWidth <= 768) {
-    accordion.classList.remove('d-none');  
-  } else {
-    accordion.classList.add('d-none');  
-  }
-}
+    const accordion = document.getElementById('accordionFlushExample');
 
-window.addEventListener('resize', toggleAccordion);
-window.addEventListener('load', toggleAccordion);
+    if (window.innerWidth <= 768) {
+      accordion.classList.remove('d-none');
+    } else {
+      accordion.classList.add('d-none');
+    }
+  }
+
+  window.addEventListener('resize', toggleAccordion);
+  window.addEventListener('load', toggleAccordion);
 </script>
 @endsection
