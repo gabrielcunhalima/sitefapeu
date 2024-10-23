@@ -913,3 +913,119 @@ a {
 
 }
 
+/* Acessibilidade */
+
+    /* Ajuste na posição dos botões de acessibilidade */
+    .accessibility-buttons {
+    position: fixed;
+    top: 35px; /* Ajuste conforme necessário */
+    margin-left: 140px;
+    z-index: 1050; /* Abaixo do menu */
+  }
+
+
+  .navbar-custom {
+    z-index: 1040; /* Acima dos botões */
+  }
+
+   /* Estilo de alto contraste */
+   .high-contrast {
+        background-color: #000; /* Fundo preto */
+        color: #099072; /* Texto branco */
+    }
+
+    .high-contrast a {
+        color: #00F; /* Links azuis */
+    }
+
+    .high-contrast .btn {
+        background-color: #408c68; /* Botões brancos */
+        color: #000; /* Texto preto nos botões */
+    }
+
+
+
+    /*Captação */
+
+
+    @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.pricing2 {
+  font-family: "Montserrat", sans-serif;
+  color: #080808;
+  font-weight: 300;
+  background-size: cover;
+  max-height: 530px;
+  margin-bottom: 250px;
+}
+
+
+.pricing2 .pricing-box {
+  margin-top: 200px;
+}
+
+
+.pricing2 .pricing-text span {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  color: #263238;
+}
+
+.pricing2 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.pricing2 .btn-success-gradiant {
+  background: #238561;
+  background: -webkit-linear-gradient(legacy-direction(to right), #03d4b1 0%, #1dc8cc 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+  background: -webkit-linear-gradient(left, #2cdd9b 0%, #119e63 100%);
+  background: -o-linear-gradient(left, #2cdd9b 0%, #12744b 100%);
+  background: linear-gradient(to right, #2cdd9b 0%, #12744b 100%);
+}
+
+.pricing2 .btn-success-gradiant:hover {
+  background: #10705b;
+  background: -webkit-linear-gradient(legacy-direction(to right), #12744b 0%, #2cdd9b 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#12744b), to(#2cdd9b));
+  background: -webkit-linear-gradient(left, #12744b 0%, #2cdd9b 100%);
+  background: -o-linear-gradient(left, #12744b 0%, #2cdd9b 100%);
+  background: linear-gradient(to right, #12744b 0%, #2cdd9b 100%);
+}
+
+.pricing2 .btn-outline-success {
+  color: #12704e;
+  background-color: transparent;
+  border-color: #2cdd9b;
+}
+
+.pricing2 .btn-outline-success:hover {
+  background: #2cdd9b;
+  border-color: #2cdd9b;
+  color: #ffffff;
+}
+
+.pricing2 .btn-md {
+  padding: 15px 45px;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .pricing2 {
+    max-height: 100%;
+    margin-bottom: 0px;
+  }
+  .pricing2 .pricing-box {
+    margin-top: 20px;
+  }
+  .pricing2 .display-5 {
+    font-size: 36px;
+  }
+  .pricing2 .above-card {
+    margin: 0;
+  }
+  .pricing2 .above-card .card {
+    padding: 0px;
+  }
+}
