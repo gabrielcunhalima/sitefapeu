@@ -1,0 +1,12 @@
+@media (max-width: 576px) {
+    .apoiadas {
+      flex: 0 0 50%;
+      max-width: 100%;
+      margin-bottom:20px;
+    }
+  
+    .carousel-item {
+      height: 12rem;
+      background-color: #cac5c5;
+    }
+  }
