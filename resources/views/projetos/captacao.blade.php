@@ -4,11 +4,11 @@
 @section('conteudo')
 <div class="pricing2 py-5">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
         <br> 
-        <h4 class="text-dark font-weight-normal text-center p-3 mb-1  bg-light " >
-         Elabore seu projeto com o apoio da equipe FAPEU!
+        <h4 class="text-white    font-weight-normal text-center ">
+         Elabore seu projeto com o apoio da FAPEU!
         </h4> <br><br>
       </div>
     </div>
@@ -24,18 +24,24 @@
                 <h6 class="subtitle text-justify">NOVAS OPORTUNIDADES!</h6>
               </div>
             </div>
+
+            <div style="width: 210px; height: 4px; background-color: #009270; margin-right: 20px; margin-bottom: 10px;"></div>
+
             <ul class="list-inline mb-3">
               <li class="list-inline-item py-2 text-justify">
                 A área de Captação e Implantação de Projetos da Fundação de Amparo à Pesquisa e Extensão Universitária (Fapeu) 
                 espera, você, pesquisador, para elaborar e apresentar propostas e orçamentos de projetos que poderão ser 
                 apresentados a diferentes financiadores.
               </li>
-              <li class="list-inline-item py-2">Clique abaixo para acessar!</li>
+              <div class="text-center">
+              <li class="list-inline-item py-2 text-justify"> Clique abaixo para acessar!</li> <br>
             </ul>
-            <a class="btn btn-success btn-md rounded-pill text-white" href="#f1">
-              <span>Oportunidade para novos projetos</span>
-            </a>
-          </div>
+            <div class="text-center ">
+              <a class="btn btn-success btn-md rounded-pill text-white" href="#f1">
+                Oportunidade para projetos
+              </a>
+              <br>
+            </div>
         </div>
       </div>
     </div>
