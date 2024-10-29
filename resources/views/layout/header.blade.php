@@ -68,13 +68,16 @@
 
 
 <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn btn-info me-2">Acessibilidade</button>
+    <button id="toggle-accessibility" class="btn btn-info me-2">
+        <i class="fa-solid fa-universal-access"></i> Acessibilidade
+    </button>
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
-      <button id="increase-font" class="btn btn-info me-2">A+</button>
-      <button id="decrease-font" class="btn btn-info me-2">A-</button>
-      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+        <button id="increase-font" class="btn btn-info me-2">A+</button>
+        <button id="decrease-font" class="btn btn-info me-2">A-</button>
+        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
 </div>
+
 
  <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -211,7 +214,7 @@ const toggleAccessibilityButton = document.getElementById('toggle-accessibility'
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="#">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu" target="_blank">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>

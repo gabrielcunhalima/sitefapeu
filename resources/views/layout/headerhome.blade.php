@@ -80,6 +80,26 @@
 
 <body>
 
+
+
+
+<!-- Acessibilidade -->
+
+
+<div class="accessibility-buttons d-none d-lg-block">
+    <button id="toggle-accessibility" class="btn btn-info me-2">
+        <i class="fa-solid fa-universal-access"></i> Acessibilidade
+    </button>
+    <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
+        <button id="increase-font" class="btn btn-info me-2">A+</button>
+        <button id="decrease-font" class="btn btn-info me-2">A-</button>
+        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+    </div>
+</div>
+
+
+
+
 <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -166,7 +186,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="#">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu" target="_blank">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
@@ -260,6 +280,55 @@ function toggleElements() {
   window.addEventListener("load", toggleElements);
   window.addEventListener("resize", toggleElements);
 </script>
+
+<!-- Acessibilidade Script -->
+
+
+<script>
+
+const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
+    const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
+
+    toggleAccessibilityButton.addEventListener('click', () => {
+      accessibilityButtonsContainer.classList.toggle('d-none');
+    });
+
+
+
+    const increaseFontButton = document.getElementById('increase-font');
+    const decreaseFontButton = document.getElementById('decrease-font');
+    const toggleContrastButton = document.getElementById('toggle-contrast');
+
+    // Obtem o tamanho atual da fonte a partir do body
+    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+
+    let highContrast = false;
+
+    increaseFontButton.addEventListener('click', () => {
+        fontSize += 2; // aumenta a fonte em 2px
+        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+    });
+
+    decreaseFontButton.addEventListener('click', () => {
+        if (fontSize > 10) { // evita que a fonte fique muito pequena
+            fontSize -= 2; // diminui a fonte em 2px
+            document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+        }
+    });
+
+
+    toggleContrastButton.addEventListener('click', () => {
+        if (highContrast) {
+            document.body.classList.remove('high-contrast');
+            toggleContrastButton.textContent = 'Alto Contraste'; // Restaura texto do botão
+        } else {
+            document.body.classList.add('high-contrast');
+            toggleContrastButton.textContent = 'Normal'; // Muda o texto do botão
+        }
+        highContrast = !highContrast;
+    });
+</script>
+
 </body>
 
 </html>

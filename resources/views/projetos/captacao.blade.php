@@ -16,7 +16,7 @@
     <!-- Wrapper para centralização do card -->
     <div class="row justify-content-center" style="min-height: 50vh;">
       <div class="col-lg-6 col-md-7 d-flex justify-content-center align-items-center">
-        <div class="card card-shadow border-0 mb-4">
+        <div class="card card-shadow border-0 mb-4 shadow p-3 mb-5 bg-white rounded">
           <div class="p-4">
             <div class="d-flex align-items-center">
               <div class="plan-text">
