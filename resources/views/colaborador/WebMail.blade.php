@@ -30,11 +30,11 @@
     </div>
 
     <style>
-      body {
-        background-image: url('/images/bgt3 (5).png');
-        background-position: center;
-        background-attachment: fixed; 
-    
+     body {
+            background-image: url('/images/bg (5).png');
+        
+            background-position: center;
+            background-attachment: fixed; /* The background stays fixed while scrolling */
         }
 
         .card:hover {
