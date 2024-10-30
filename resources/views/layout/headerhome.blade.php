@@ -1,14 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
@@ -16,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +20,7 @@
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
 
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -35,85 +29,69 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
   <title>FAPEU</title>
-  <style>
-    a:link {
-      text-decoration: none;
-    }
-
-    a:visited {
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-
-    a:active {
-      text-decoration: none;
-    }
-
-    .card-deck {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: stretch;
-    }
-
-    .card {
-      flex: 1 0 auto;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-
-    .navbar-toggler {
-      border: none;
-      background-color: transparent;
-    }
-  </style>
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+
+    @media (max-width: 768px) {
+      .accessibility-buttons {
+        right: 5px;
+      }
+    }
+
+    .prev{
+      display: block;
+      height: 20px;
+      width: 20px;
+      background: url('../img/back.png') no-repeat;
+    }
+
+    .next{
+      display: block;
+      height: 20px;
+      width: 20px;
+      background: url('../img/next.png') no-repeat;
+    }
+  </style>
+
 <body>
-
-
-
-
-<!-- Acessibilidade -->
-
-
-<div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn btn-info me-2">
-        <i class="fa-solid fa-universal-access"></i> Acessibilidade
-    </button>
+  <div class="accessibility-buttons d-lg-block">
+    <button id="toggle-accessibility" class="btn btn-info me-2">Acessibilidade</button>
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
-        <button id="increase-font" class="btn btn-info me-2">A+</button>
-        <button id="decrease-font" class="btn btn-info me-2">A-</button>
-        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+      <button id="increase-font" class="btn btn-info me-2">A+</button>
+      <button id="decrease-font" class="btn btn-info me-2">A-</button>
+      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
-</div>
-
-
-
-
-<div vw class="enabled">
+  </div>
+  <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-  
+
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom shadow" style="font-family: 'Montserrat', sans-serif;">
-      <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -129,7 +107,7 @@
             <p>
               <li class="nav-item dropdown text-white">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Quem somos
+                  Institucional
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
@@ -148,7 +126,7 @@
                   Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">*Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação de Recursos e Oportunidade</a>
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
@@ -186,7 +164,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu" target="_blank">*LGPD</a>
+                  <a class="dropdown-item" href="#">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
@@ -246,26 +224,25 @@
               </li>
             </p>
           </ul>
-          <div class="rounded p-3 bg-light font-weight-bold" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
+          <a href="">
+            <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
+          </a>
         </div>
       </div>
     </nav>
   </header>
-  <!-- Bootstrap JS (inclui Popper.js) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <div>
-    @yield('inicio')
-  </div>
-  <main class="bg-principal pt-4">
+
+  
+  <main class="bg-principal">
     @yield('conteudo')
   </main>
+
   <div>
     @include('layout.footer')
   </div>
-</body>
 
 <script>
-function toggleElements() {
+  function toggleElements() {
     const tragaseuprojeto = document.getElementById("tragaseuprojeto");
 
     if (window.matchMedia("(max-width: 780px)").matches) {
@@ -280,55 +257,6 @@ function toggleElements() {
   window.addEventListener("load", toggleElements);
   window.addEventListener("resize", toggleElements);
 </script>
-
-<!-- Acessibilidade Script -->
-
-
-<script>
-
-const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
-    const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
-
-    toggleAccessibilityButton.addEventListener('click', () => {
-      accessibilityButtonsContainer.classList.toggle('d-none');
-    });
-
-
-
-    const increaseFontButton = document.getElementById('increase-font');
-    const decreaseFontButton = document.getElementById('decrease-font');
-    const toggleContrastButton = document.getElementById('toggle-contrast');
-
-    // Obtem o tamanho atual da fonte a partir do body
-    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
-
-    let highContrast = false;
-
-    increaseFontButton.addEventListener('click', () => {
-        fontSize += 2; // aumenta a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
-    });
-
-    decreaseFontButton.addEventListener('click', () => {
-        if (fontSize > 10) { // evita que a fonte fique muito pequena
-            fontSize -= 2; // diminui a fonte em 2px
-            document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
-        }
-    });
-
-
-    toggleContrastButton.addEventListener('click', () => {
-        if (highContrast) {
-            document.body.classList.remove('high-contrast');
-            toggleContrastButton.textContent = 'Alto Contraste'; // Restaura texto do botão
-        } else {
-            document.body.classList.add('high-contrast');
-            toggleContrastButton.textContent = 'Normal'; // Muda o texto do botão
-        }
-        highContrast = !highContrast;
-    });
-</script>
-
 </body>
 
 </html>

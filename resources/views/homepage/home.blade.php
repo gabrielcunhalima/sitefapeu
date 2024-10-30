@@ -1,14 +1,183 @@
 @extends('layout.headerhome')
 @section('title','FAPEU')
 @section('conteudo')
-<div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 py-2 text-center">
+<style>
+  .blog-post {
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  }
+
+  .blog-post .blog-img .overlay,
+  .blog-post .blog-img .post-meta {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .blog-post .blog-img .overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .blog-post .blog-img .post-meta {
+    bottom: 5%;
+    right: 5%;
+    z-index: 1;
+  }
+
+  .blog-post .blog-img .post-meta .read-more:hover {
+    color: #6dc77a !important;
+  }
+
+  .blog-post .content h1,
+  .blog-post .content h2,
+  .blog-post .content h3,
+  .blog-post .content h4,
+  .blog-post .content h5,
+  .blog-post .content h6 {
+    line-height: 1.2;
+  }
+
+  .blog-post .content .title {
+    font-size: 18px;
+  }
+
+  .blog-post .content .title:hover {
+    color: #6dc77a !important;
+  }
+
+  .blog-post .content .author .name:hover {
+    color: #6dc77a !important;
+  }
+
+  .blog-post:hover {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .blog-post:hover .blog-img .overlay {
+    opacity: 0.65;
+  }
+
+  .blog-post:hover .blog-img .post-meta {
+    opacity: 1;
+  }
+
+  .blog-post .post-meta .like i,
+  .profile-post .like i {
+    -webkit-text-stroke: 2px #dd2427;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .blog-post .post-meta .like:active i,
+  .blog-post .post-meta .like:focus i,
+  .profile-post .like:active i,
+  .profile-post .like:focus i {
+    -webkit-text-stroke: 0px #dd2427;
+    -webkit-text-fill-color: #dd2427;
+  }
+
+  .avatar.avatar-ex-sm {
+    height: 36px;
+  }
+
+  .text-muted {
+    color: #8492a6 !important;
+  }
+
+  .para-desc {
+    max-width: 600px;
+  }
+
+  .section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 10%;
+    height: 25%;
+    z-index: 100;
+  }
+
+  .slick-prev {
+    left: -100px;
+  }
+
+  .slick-next {
+    right: -100px;
+  }
+
+
+  .responsive img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    $('.responsive').slick({
+      prevArrow: '<button type="button" class="slick-prev custom-arrow">Anterior</button>',
+      nextArrow: '<button type="button" class="slick-next custom-arrow">Próximo</button>',
+      dots: true,
+      infinite: true,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            speed: 400
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 400
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 400
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+<div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 py-5 text-center">
   <p class="container transformando" style="font-family:'Petit Formal Script';font-weight:bold; font-size:3.6em;">Transformando ideias em ações!</p>
 </div>
 <!-- 3 menus principais -->
 <div class="container">
   <div class="row align-items-center mb-2">
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('projetos.menuprojetos')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Gestão de Projetos</p>
@@ -17,7 +186,7 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('fornecedor.menulicitacao')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Licitações e Prestadores de Serviço</p>
@@ -26,7 +195,7 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-75 text-center grow shadow" style="width: 18rem;">
+      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
         <a href="{{route('transparencia.menutransparencia')}}">
           <div class="card-body">
             <p class="card-text text-verde font-weight-bold">Transparência</p>
@@ -36,137 +205,100 @@
     </div>
   </div>
 </div>
-<div id="carouselExampleIndicators" class="carousel slide container mb-4" data-ride="carousel">
-  <ol class="carousel-indicators">
-    @foreach($carousel as $index => $post)
-    <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
-    @endforeach
-  </ol>
-  <div class="carousel-inner rounded-lg">
-    @foreach($carousel as $index => $post)
-    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-      <img class="d-block w-100" src="../images/noticias/{{ $post->imagem }}" alt="{{ $post->titulo }}">
-      <div class="carousel-caption bg-transparente rounded-right" style="left:0;bottom:45px;">
-        <h4 class="text-justify text-white px-3 font-weight-bolder">{{Str::upper( $post->titulo )}}</h4>
-        <p class="text-justify text-white px-3 margemtelapequenaesquerda">{{ Str::limit($post->corpo, 150) }}</p>
-      </div>
-    </div>
-    @endforeach
+
+<!-- Projetos -->
+<div class="text-center bg-light p-4 m-0">
+  <div class="section-title mb-4 pb-2">
+    <h4 class="title mb-4 mt-3">Conheça os projetos que nós apoiamos</h4>
+    <p class="text-muted para-desc mx-auto mb-0">A FAPEU conta com +250 projetos gerenciados com excelência.</p>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon bg-preto rounded p-4" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon bg-preto rounded p-4" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
-</div>
-<div class="row">
-  <div class="col-md-12 ">
-    <div class="card mb-5 border-0">
-      <div class="card-body border-0">
-        <div class="d-flex justify-content-center container">
-          <h3 class="card-title font-weight-bold p-5 rounded text-center container " style="color: #099072;">Confira os projetos apoiados pela FAPEU
-          </h3>
-        </div>
-        <!-- Projetos em destaque - Carousel -->
-        <section class="section" id="blog">
-          <div class="container">
-            <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row justify-content-center">
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/FFB6C1/000000" class="card-img-top rounded-left" alt="">
-                        <div class="card-body bg-cinza pb-5 bg-cinza pb-4">
-                          <h5 class="card-title" style="word-wrap: break-word; white-space: normal;">
-                            <a href="#">Prevent 75% of visitors from google analytics</a>
-                          </h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/87CEFA/000000" class="card-img-top" alt="">
-                        <div class="card-body bg-cinza pb-5">
-                          <h5 class="card-title"><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/FF7F50/000000" class="card-img-top" alt="">
-                        <div class="card-body bg-cinza pb-5">
-                          <h5 class="card-title"><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Adicione mais itens de carousel aqui -->
-                <div class="carousel-item">
-                  <div class="row justify-content-center">
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/32CD32/000000" class="card-img-top" alt="">
-                        <div class="card-body bg-cinza pb-5">
-                          <h5 class="card-title"><a href="#">Another Project Example</a></h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/FF6347/000000" class="card-img-top" alt="">
-                        <div class="card-body bg-cinza pb-5">
-                          <h5 class="card-title"><a href="#">Another Project Example</a></h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12">
-                      <div class="card">
-                        <img src="https://www.bootdey.com/image/350x280/4682B4/000000" class="card-img-top" alt="">
-                        <div class="card-body bg-cinza pb-5">
-                          <h5 class="card-title"><a href="#">Another Cool Project</a></h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                          <a href="#" class="btn btn-primary">Conheça o projeto</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" style="width:12.5%" href="#projectCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon bg-transparente rounded" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" style="width:12.5%" href="#projectCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon bg-transparente rounded" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+  <div class="responsive container">
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <a href="">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta justify-content-center">
+              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
-        </section>
-      </div>
+        </a>
+        <div class="content p-3">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
+          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <div class="pt-3 mt-3 border-top d-flex">
+          </div>
+        </div>
+      </div><!--end blog post-->
     </div>
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <a href="">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta justify-content-center">
+              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+        </a>
+        <div class="content p-3">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
+          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <div class="pt-3 mt-3 border-top d-flex">
+          </div>
+        </div>
+      </div><!--end blog post-->
+    </div><!--end col-->
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <a href="">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img src="https://www.bootdey.com/image/350x280/6495ED/000000" class="img-fluid rounded-top" alt="">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta">
+              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+        </a>
+        <div class="content p-3">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Become more money-minded</a></h4>
+          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <div class="pt-3 mt-3 border-top d-flex">
+          </div>
+        </div>
+      </div><!--end blog post-->
+    </div><!--end col-->
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <a href="">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img src="../images/Paginas/anticorrupcao.png" class="img-fluid rounded-top" alt="">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta">
+              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+        </a>
+        <div class="content p-3">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
+          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <div class="pt-3 mt-3 border-top d-flex">
+          </div>
+        </div>
+      </div><!--end blog post-->
+    </div><!--end col-->
   </div>
 </div>
 
+<!-- Servicos -->
 <div class="feature">
   <div class="container">
     <div class="text-center mx-auto wow fadeInUp">
-      <h3 class="text-center text-white pb-5 pt-2 mt-auto font-weight-bold mb-3">Serviços</h3>
+      <div class="section-title mb-4 pb-2 pt-4">
+        <h4 class="title mb-4 mt-3 text-white">Serviços</h4>
+      </div>
       <div class="accordion accordion-flush d-none pb-4" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
@@ -229,78 +361,6 @@
           </div>
         </div>
       </div>
-      <!-- <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner rounded-lg">
-          <div class="carousel-item active bg-light pt-5">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">Reservas de Salas</h3><br>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item bg-light pt-5">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">Cursos e Eventos</h3><br>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item bg-light pt-5">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">NAGEFI</h3><br>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item bg-light pt-5">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">LATIC</h3><br>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item bg-light pt-5">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">Concursos</h3><br>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item bg-light pt-4">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card text-dark bg-light mb-3 rounded border-0">
-                <div class="card-body">
-                  <h3 class="card-title font-weight-bold">Importação de Bens e Insumos</h3>
-                  <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicator" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicator" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div> -->
     </div>
     <div class="collapse d-md-block" id="servicosCollapse">
       <div class="row g-4">
@@ -365,11 +425,11 @@
   </div>
 </div>
 
-<!-- Seção de apoiadas -->
+<!-- Apoiadas -->
 <div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
   <div class="container80">
-    <div class='mx-0'>
-      <h3 class="text-center text-verde2 pb-3 mt-auto font-weight-bold ">Instituições Apoiadas</h3>
+    <div class="section-title mb-4 pb-2">
+      <h4 class="title text-center">Instituições Apoiadas</h4>
     </div>
     <div class="row align-items-center">
       <div class="col-sm apoiadas grow">
@@ -425,38 +485,6 @@
     </div>
   </div>
 </div>
-<!-- <div class="card mt-4">
-  <div class="card-body text-center ">
-    <h2>Apoiadas</h2> <br>
-    <div class="row">
-      <div class="col-md-3">
-        <a href="#">
-          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="#">
-          <img src="/images/redimensionada/ifsc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="#">
-          <img src="/images/redimensionada/unipampa.jpeg" alt="Apoiada Unipampa" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="#">
-          <img src="/images/redimensionada/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="#">
-          <img src="/images/redimensionada/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
-        </a>
-      </div>
-    </div>
-  </div>
-</div> -->
 <script>
   function toggleAccordion() {
     const accordion = document.getElementById('accordionFlushExample');
