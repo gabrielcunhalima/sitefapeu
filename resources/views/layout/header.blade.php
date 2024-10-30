@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -35,6 +36,7 @@
 </head>
   <title>@yield('title')</title>
 </head>
+
 
 
 <style>

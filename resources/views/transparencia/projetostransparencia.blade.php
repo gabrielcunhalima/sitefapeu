@@ -16,7 +16,7 @@
         <div class="row mt-1">
             <div class="col-md-12">
                 <div class="card mb-3 shadow-lg">
-                    <img class="card-img-top shadow" src="/images/Fundação de (1).png" alt="Imagem de capa do card">
+                    <img class="card-img-top shadow" src="/images/Fapeu_bg.png" alt="Imagem de capa do card">
 
                     <div class="card-body">
                         <br>
