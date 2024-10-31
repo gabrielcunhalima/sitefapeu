@@ -82,12 +82,8 @@
       <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
   </div>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
+
+
 
   <header>
   <nav class="navbar navbar-expand-lg navbar-custom">

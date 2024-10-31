@@ -944,9 +944,23 @@ a {
         background-color: #408c68; /* Botões brancos */
         color: #000; /* Texto preto nos botões */
     }
+    .high-contrast h1,
+    .high-contrast h2,
+    .high-contrast h3,
+    .high-contrast h4 {
+        color: #099072; /* Cor do texto conforme necessário */
+    }
+    
+    .high-contrast h1 a,
+    .high-contrast h2 a,
+    .high-contrast h3 a,
+    .high-contrast h4 a {
+        color: #00F; /* Links dentro de cabeçalhos em modo contraste */
+    }
 
 
 
+    
     /*Captação */
 
 
