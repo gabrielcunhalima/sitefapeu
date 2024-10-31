@@ -42,7 +42,7 @@
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
+<style>
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
@@ -52,26 +52,26 @@
     background-color: transparent;
   }
 
-    @media (max-width: 768px) {
-      .accessibility-buttons {
-        right: 5px;
-      }
+  @media (max-width: 768px) {
+    .accessibility-buttons {
+      right: 5px;
     }
+  }
 
-    .prev{
-      display: block;
-      height: 20px;
-      width: 20px;
-      background: url('../img/back.png') no-repeat;
-    }
+  .prev {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: url('../img/back.png') no-repeat;
+  }
 
-    .next{
-      display: block;
-      height: 20px;
-      width: 20px;
-      background: url('../img/next.png') no-repeat;
-    }
-  </style>
+  .next {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: url('../img/next.png') no-repeat;
+  }
+</style>
 
 <body>
   <div class="accessibility-buttons d-lg-block">
@@ -86,7 +86,7 @@
 
 
   <header>
-  <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
@@ -98,7 +98,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse menu-centralizado" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
@@ -220,15 +220,17 @@
               </li>
             </p>
           </ul>
-          <a href="">
-            <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
-          </a>
         </div>
-      </div>
+        <!-- <div class="botao-direita">
+            <a href="">
+              <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
+            </a>
+          </div>
+      </div> -->
     </nav>
   </header>
 
-  
+
   <main class="bg-principal">
     @yield('conteudo')
   </main>
@@ -237,22 +239,20 @@
     @include('layout.footer')
   </div>
 
-<script>
-  function toggleElements() {
-    const tragaseuprojeto = document.getElementById("tragaseuprojeto");
-
-    if (window.matchMedia("(max-width: 780px)").matches) {
-      // tela pequena
-      tragaseuprojeto.classList.remove("tragaseuprojeto");
+  <!-- <script>
+ function toggleButtonVisibility() {
+    const button = document.getElementById("tragaseuprojeto");
+    if (window.innerWidth < 1550) {
+      button.style.display = "none";
     } else {
-      // tela maior q a pequena
-      tragaseuprojeto.classList.add("tragaseuprojeto");
+      button.style.display = "block";
     }
   }
 
-  window.addEventListener("load", toggleElements);
-  window.addEventListener("resize", toggleElements);
-</script>
+  // Executa a função ao carregar a página e ao redimensionar a janela
+  window.addEventListener("load", toggleButtonVisibility);
+  window.addEventListener("resize", toggleButtonVisibility);
+</script> -->
 </body>
 
 </html>

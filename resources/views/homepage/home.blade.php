@@ -207,8 +207,8 @@
 </div>
 
 <!-- Projetos -->
-<div class="text-center bg-light p-4 m-0">
-  <div class="section-title mb-4 pb-2">
+<div class="bg-light p-4 m-0">
+  <div class="section-title mb-4 pb-2 text-center">
     <h4 class="title mb-4 mt-3">Conheça os projetos que nós apoiamos</h4>
     <p class="text-muted para-desc mx-auto mb-0">A FAPEU conta com +250 projetos gerenciados com excelência.</p>
   </div>
@@ -220,7 +220,7 @@
             <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
@@ -239,7 +239,7 @@
             <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
@@ -258,7 +258,7 @@
             <img src="https://www.bootdey.com/image/350x280/6495ED/000000" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
@@ -277,7 +277,7 @@
             <img src="../images/Paginas/anticorrupcao.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Leia mais <i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
@@ -290,6 +290,15 @@
       </div><!--end blog post-->
     </div><!--end col-->
   </div>
+  <div class="container col-12 d-flex justify-content-center">
+      <div class="card bg-verde mb-3 mt-2 card grow text-center shadow">
+        <a href="{{route('projetos.projetos')}}">
+          <div class="card-body">
+            <h5 class="card-text text-white">Conheça mais projetos</h5>
+          </div>
+        </a>
+      </div>
+    </div>
 </div>
 
 <!-- Servicos -->

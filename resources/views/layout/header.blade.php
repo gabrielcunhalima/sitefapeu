@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
 
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
 
   <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -31,10 +31,10 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
- 
+
   <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
 </head>
-  <title>@yield('title')</title>
+<title>@yield('title')</title>
 </head>
 
 
@@ -50,38 +50,42 @@
   }
 
   .jumbotron-custom {
-  background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 33%, rgba(200, 200, 200,1) 55%, rgba(210,210,210,1) 75%, rgba(211,211,211,0.39) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
+    url('{{ asset('../images/Paginas/' . $imagem) }}');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
   }
 
   @media (max-width: 876px) {
     .jumbotron-custom {
-    background: linear-gradient(90deg, rgba(183,182,182,1) 0%, rgba(190,190,190,1) 17%, rgba(220,228,225,1) 40%, rgba(200, 200, 200,1) 60%, rgba(211,211,211,0.3897934173669467) 100%), url('{{ asset('../images/Paginas/' . $imagem) }}'); background-size:contain; background-position:right; background-repeat: no-repeat;
+      background: linear-gradient(90deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
+      url('{{ asset('../images/Paginas/' . $imagem) }}');
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+
   }
-  
-}
-
-
-
-
 </style>
 
 
 <body>
 
 
-<div class="accessibility-buttons d-none d-lg-block">
+  <div class="accessibility-buttons d-none d-lg-block">
     <button id="toggle-accessibility" class="btn btn-info me-2">
-        <i class="fa-solid fa-universal-access"></i> Acessibilidade
+      <i class="fa-solid fa-universal-access"></i> Acessibilidade
     </button>
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
-        <button id="increase-font" class="btn btn-info me-2">A+</button>
-        <button id="decrease-font" class="btn btn-info me-2">A-</button>
-        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+      <button id="increase-font" class="btn btn-info me-2">A+</button>
+      <button id="decrease-font" class="btn btn-info me-2">A-</button>
+      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
-</div>
+  </div>
 
 
- <div vw class="enabled">
+  <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
@@ -92,13 +96,12 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 
-<script>
-
-const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
+  <script>
+    const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
     const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
 
     toggleAccessibilityButton.addEventListener('click', () => {
@@ -112,38 +115,38 @@ const toggleAccessibilityButton = document.getElementById('toggle-accessibility'
     const toggleContrastButton = document.getElementById('toggle-contrast');
 
     // Tamanho inicial da fonte do body
-let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
-// Função para aumentar a fonte
-increaseFontButton.addEventListener('click', () => {
-    fontSize += 2; // aumenta a fonte em 2px
-    document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+    // Função para aumentar a fonte
+    increaseFontButton.addEventListener('click', () => {
+      fontSize += 2; // aumenta a fonte em 2px
+      document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
 
-    // Seleciona e ajusta o tamanho de todos os cabeçalhos
-    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
+      // Seleciona e ajusta o tamanho de todos os cabeçalhos
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
         let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
         header.style.fontSize = (headerFontSize + 2) + 'px';
+      });
     });
-});
 
-// Função para diminuir a fonte
-decreaseFontButton.addEventListener('click', () => {
-    if (fontSize > 10) { // evita que a fonte fique muito pequena
+    // Função para diminuir a fonte
+    decreaseFontButton.addEventListener('click', () => {
+      if (fontSize > 10) { // evita que a fonte fique muito pequena
         fontSize -= 2; // diminui a fonte em 2px
         document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
 
         // Seleciona e ajusta o tamanho de todos os cabeçalhos
         document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
-            let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
-            header.style.fontSize = (headerFontSize - 2) + 'px';
+          let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
+          header.style.fontSize = (headerFontSize - 2) + 'px';
         });
-    }
-});
-</script>
-  
-<header>
-    <nav class="navbar navbar-expand-lg navbar-custom" style="font-family: 'Montserrat', sans-serif;">
-      <div class="container-fluid">
+      }
+    });
+  </script>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
             <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
@@ -154,12 +157,12 @@ decreaseFontButton.addEventListener('click', () => {
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <div class="collapse navbar-collapse menu-centralizado" id="navbarNavDropdown">
+          <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Quem somos
+                  Institucional
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
@@ -178,7 +181,7 @@ decreaseFontButton.addEventListener('click', () => {
                   Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">*Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação de Recursos e Oportunidade</a>
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
@@ -216,7 +219,7 @@ decreaseFontButton.addEventListener('click', () => {
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu" target="_blank">*LGPD</a>
+                  <a class="dropdown-item" href="#">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
@@ -248,21 +251,21 @@ decreaseFontButton.addEventListener('click', () => {
               </li>
             </p>
             <p>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Colaborador
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
-                <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
-                <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
-                <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
-                <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
-                <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-                <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
-              </div>
-            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Colaborador
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
+                  <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
+                  <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                  <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
+                  <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
+                  <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
+                  <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
+                  <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
+                </div>
+              </li>
             </p>
             <p>
               <li class="nav-item dropdown">
@@ -276,14 +279,13 @@ decreaseFontButton.addEventListener('click', () => {
               </li>
             </p>
           </ul>
-          <a href="">
-            <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetodentro">Traga seu projeto para a FAPEU</div>
-          </a>
         </div>
-        <a href="">
-          <div class="rounded-pill p-3 bg-light font-weight-bold text-center d-none" style="color: #099072;" id="tragaprojetofora">Traga seu projeto para a FAPEU</div>
-        </a>
-      </div>
+        <!-- <div class="botao-direita">
+            <a href="">
+              <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
+            </a>
+          </div>
+      </div> -->
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -299,31 +301,31 @@ decreaseFontButton.addEventListener('click', () => {
     @include('layout.footer')
   </div>
 
-  
+
   <script>
-  function toggleElements() {
-    const tragaprojetodentro = document.getElementById("tragaprojetodentro");
-    const tragaprojetofora = document.getElementById("tragaprojetofora");
+    function toggleElements() {
+      const tragaprojetodentro = document.getElementById("tragaprojetodentro");
+      const tragaprojetofora = document.getElementById("tragaprojetofora");
 
-    if (window.matchMedia("(max-width: 993px)").matches) {
-      tragaprojetodentro.classList.remove("d-none");  // Exibe o elemento
-      tragaprojetodentro.classList.add("d-block");
+      if (window.matchMedia("(max-width: 993px)").matches) {
+        tragaprojetodentro.classList.remove("d-none"); // Exibe o elemento
+        tragaprojetodentro.classList.add("d-block");
 
-      tragaprojetofora.classList.remove("d-block");   // Oculta o outro elemento
-      tragaprojetofora.classList.add("d-none");
-    } else {
-      tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
-      tragaprojetodentro.classList.add("d-none");
+        tragaprojetofora.classList.remove("d-block"); // Oculta o outro elemento
+        tragaprojetofora.classList.add("d-none");
+      } else {
+        tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
+        tragaprojetodentro.classList.add("d-none");
 
-      tragaprojetofora.classList.remove("d-none");    // Exibe o outro elemento
-      tragaprojetofora.classList.add("d-block");
+        tragaprojetofora.classList.remove("d-none"); // Exibe o outro elemento
+        tragaprojetofora.classList.add("d-block");
+      }
     }
-  }
 
-  // Chama a função ao carregar a página e quando a janela é redimensionada
-  window.addEventListener("load", toggleElements);
-  window.addEventListener("resize", toggleElements);
-</script>
+    // Chama a função ao carregar a página e quando a janela é redimensionada
+    window.addEventListener("load", toggleElements);
+    window.addEventListener("resize", toggleElements);
+  </script>
 
 </body>
 
