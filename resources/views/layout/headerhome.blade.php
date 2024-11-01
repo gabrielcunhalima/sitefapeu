@@ -253,6 +253,53 @@
   window.addEventListener("load", toggleButtonVisibility);
   window.addEventListener("resize", toggleButtonVisibility);
 </script> -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+    const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
+    const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
+
+    toggleAccessibilityButton.addEventListener('click', () => {
+      accessibilityButtonsContainer.classList.toggle('d-none');
+    });
+
+
+
+    const increaseFontButton = document.getElementById('increase-font');
+    const decreaseFontButton = document.getElementById('decrease-font');
+    const toggleContrastButton = document.getElementById('toggle-contrast');
+
+    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+
+    // Função para aumentar a fonte
+    increaseFontButton.addEventListener('click', () => {
+      fontSize += 2; // aumenta a fonte em 2px
+      document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+
+      // Seleciona e ajusta o tamanho de todos os cabeçalhos
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
+        let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
+        header.style.fontSize = (headerFontSize + 2) + 'px';
+      });
+    });
+
+    // Função para diminuir a fonte
+    decreaseFontButton.addEventListener('click', () => {
+      if (fontSize > 10) { // evita que a fonte fique muito pequena
+        fontSize -= 2; // diminui a fonte em 2px
+        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+
+        // Seleciona e ajusta o tamanho de todos os cabeçalhos
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
+          let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
+          header.style.fontSize = (headerFontSize - 2) + 'px';
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

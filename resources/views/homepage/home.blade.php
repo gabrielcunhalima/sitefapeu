@@ -170,8 +170,8 @@
   });
 </script>
 
-<div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 py-5 text-center">
-  <p class="container transformando" style="font-family:'Petit Formal Script';font-weight:bold; font-size:3.6em;">Transformando ideias em ações!</p>
+<div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 pb-2 pt-4 text-center">
+  <h1 class="container transformando font-weight-bold" style="font-family:'Petit Formal Script';font-size:3.6em;">Transformando ideias em ações!</h1>
 </div>
 <!-- 3 menus principais -->
 <div class="container">

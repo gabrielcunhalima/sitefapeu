@@ -528,6 +528,9 @@ footer a:hover {
 .bg-transparente {
   background-color: #303030ee;
 }
+.bg-roxo {
+  background-color: #9f87aa;
+}
 
 .bg-transparentehome {
   background-color: #ffffff00;
@@ -555,6 +558,15 @@ footer a:hover {
 
 .bg-principal {
   background-color: #368669;
+}
+
+.bg-acessibilidade2 {
+  background-color: #007bff;
+  color: white;
+}
+
+.grayscale {
+  filter: grayscale(100%);
 }
 
 .bg-administracao {
@@ -633,7 +645,7 @@ footer a:hover {
 }
 
 .btn:hover {
-  background: #7a7a7a;
+  background: #0f4b2f;
 }
 
 /* NOTICIAS */

@@ -71,8 +71,6 @@
 
 
 <body>
-
-
   <div class="accessibility-buttons d-none d-lg-block">
     <button id="toggle-accessibility" class="btn btn-info me-2">
       <i class="fa-solid fa-universal-access"></i> Acessibilidade
@@ -83,8 +81,7 @@
       <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
     </div>
   </div>
-
-
+  
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -98,7 +95,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
 
   <script>
     const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
