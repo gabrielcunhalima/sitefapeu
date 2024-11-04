@@ -125,4 +125,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/adicionarusuario', [AdminController::class, 'adicionarUsuario'])->name('admin.adicionarusuario');
     
     Route::post('/', [AdminController::class, 'logout'])->name('logout');
+
+
+    
 });
+

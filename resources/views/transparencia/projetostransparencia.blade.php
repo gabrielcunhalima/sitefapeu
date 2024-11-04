@@ -25,7 +25,7 @@
                         </h4>
                         <br>
                         <div class="list-group">
-                            <p class="lead text-dark text-justify">
+                            <p class="lead text-justify">
                                 Os ressarcimentos relativos ao uso dos recursos não financeiros da UFSC (recursos humanos e materiais tais como: laboratórios, salas de aula, materiais de apoio e de escritório...) seguem os seguintes regramentos:
                             </p>
                             <p class="lead text-dark">

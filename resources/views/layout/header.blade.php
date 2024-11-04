@@ -77,6 +77,7 @@
         <button id="increase-font" class="btn btn-info me-2">A+</button>
         <button id="decrease-font" class="btn btn-info me-2">A-</button>
         <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+        <button id="toggle-grayscale" class="btn btn-info">Escala de Cinza</button>
     </div>
 </div>
 
@@ -110,27 +111,29 @@ const toggleAccessibilityButton = document.getElementById('toggle-accessibility'
     const increaseFontButton = document.getElementById('increase-font');
     const decreaseFontButton = document.getElementById('decrease-font');
     const toggleContrastButton = document.getElementById('toggle-contrast');
+    const toggleGrayScaleButton = document.getElementById('toggle-grayscale');
 
-    // Tamanho inicial da fonte do body
-let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
-// Função para aumentar a fonte
-increaseFontButton.addEventListener('click', () => {
-    fontSize += 2; // aumenta a fonte em 2px
-    document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+            // Tamanho inicial da fonte do body
+        let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
-    // Seleciona e ajusta o tamanho de todos os cabeçalhos
-    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
+
+        increaseFontButton.addEventListener('click', () => {
+        fontSize += 2; // aumenta a fonte em 2px
+        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+
+   
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
         let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
         header.style.fontSize = (headerFontSize + 2) + 'px';
     });
 });
 
-// Função para diminuir a fonte
-decreaseFontButton.addEventListener('click', () => {
-    if (fontSize > 10) { // evita que a fonte fique muito pequena
-        fontSize -= 2; // diminui a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+        // Função para diminuir a fonte
+        decreaseFontButton.addEventListener('click', () => {
+        if (fontSize > 10) { 
+        fontSize -= 2; 
+        document.body.style.fontSize = fontSize + 'px'; 
 
         // Seleciona e ajusta o tamanho de todos os cabeçalhos
         document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
@@ -296,10 +299,33 @@ decreaseFontButton.addEventListener('click', () => {
     @yield('conteudo')
   </main>
   <div class="pt-5">
-    @include('layout.footer')
+    @include('layout.footer')   
   </div>
 
   
+
+  <!-- Contraste -->
+
+  <script>
+    toggleContrastButton.addEventListener('click', () => {
+    document.body.classList.toggle('high-contrast');
+});
+
+</script>
+
+
+<!-- Escala cinza -->
+
+<script>
+  toggleGrayScaleButton.addEventListener('click', () => {
+    const isActive = document.body.classList.toggle('grayscale');
+    toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive); 
+  });
+</script>
+
+
+  <!-- Botão Toggle para os recursos de Acessibilidade -->
+
   <script>
   function toggleElements() {
     const tragaprojetodentro = document.getElementById("tragaprojetodentro");
