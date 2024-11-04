@@ -12,7 +12,7 @@
         <p><a href="/pdfs/Transparencia/HabilitacaoJuridica/HJ_HU_UFSC.pdf" target="_blank" class="">EBSERH HU UFSC  (até 04/06/2025)</a></p>
         <p><a href="/pdfs/Transparencia/HabilitacaoJuridica/HJ_HU_UFJF.pdf" target="_blank" class="">EBSERH HU UFJF (até 04/06/2025)</a></p><br><hr>
         
-        <p><b>Regularidade Fiscal</b><br>Para consultar, inserir o <b>CNPJ 83.476.911/0001-17</b></p>
+        <p><b>Regularidade Fiscal</b><br>Para consultar, inserir o CNPJ: <b>83.476.911/0001-17</b></p>
         <p><a href="https://contasirregulares.tcu.gov.br/ordsext/f?p=105:2::::::" target="_blank" class="">Certidão Negativa TCU </a></p>
         <p><a href="https://solucoes.receita.fazenda.gov.br/Servicos/certidaointernet/PJ/Emitir" target="_blank" class="">Certidão Federal e INSS </a></p>
         <p><a href="https://sat.sef.sc.gov.br/tax.NET/Sat.CtaCte.Web/SolicitacaoCnd.aspx" target="_blank" class="">Certidão Estadual</a></p>

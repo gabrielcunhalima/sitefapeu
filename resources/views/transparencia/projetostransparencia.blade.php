@@ -34,7 +34,7 @@
                                 <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resoluao_normativa_15_cun_2011_curso_especializacao.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 15/2011/CUn - Projetos de Ensino Pós-graduação, latusensu - 15%</a>
                                 <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolução_13_cun_2011.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 13/2011/CUn - Projetos de Ensino Graduação e Pós-Graduação stricto sensu - 1%</a>
                             </p>
-                        </div>
+                        </div> 
                         <br><br>
                         <div class="row mt-4">
                             <div class="col-md-12 text-center">
