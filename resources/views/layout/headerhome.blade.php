@@ -79,7 +79,9 @@
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
       <button id="increase-font" class="btn btn-info me-2">A+</button>
       <button id="decrease-font" class="btn btn-info me-2">A-</button>
-      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+      <button id="reset-accessibility" class="btn btn-info"> Retornar</button>
+        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
+        <button id="toggle-grayscale" class="btn btn-info">Escala de Cinza</button>
     </div>
   </div>
 
@@ -271,6 +273,8 @@
     const increaseFontButton = document.getElementById('increase-font');
     const decreaseFontButton = document.getElementById('decrease-font');
     const toggleContrastButton = document.getElementById('toggle-contrast');
+    const toggleGrayScaleButton = document.getElementById('toggle-grayscale');
+    const resetAccessibilityButton = document.getElementById('reset-accessibility');
 
     let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
@@ -299,7 +303,50 @@
         });
       }
     });
+
+
+    resetAccessibilityButton.addEventListener('click', () => {
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, div:not(#accessibility-buttons-container):not(#naoalterar), span, a').forEach(el => {
+            el.style.fontSize = ''; // Remove a personalização, volta ao padrão do CSS
+            el.style.fontFamily = ''; // Remove a personalização da fonte
+            document.body.style.fontSize = '';
+        });
+
+        // Remove classes de acessibilidade
+        document.body.classList.remove('high-contrast', 'grayscale');
+        // Remove a classe de fundo dos botões
+        toggleContrastButton.classList.remove('bg-acessibilidade2');
+        toggleGrayScaleButton.classList.remove('bg-acessibilidade2');
+        toggleUnderlineLinksButton.classList.remove('bg-acessibilidade2');
+        setReadableFontButton.classList.remove('bg-acessibilidade2');
+        
+    });
+
   </script>
+
+
+<!-- Contraste -->
+
+<script>
+    toggleContrastButton.addEventListener('click', () => {
+    document.body.classList.toggle('high-contrast');
+});
+
+</script>
+
+
+<!-- Escala cinza -->
+
+<script>
+  toggleGrayScaleButton.addEventListener('click', () => {
+    const isActive = document.body.classList.toggle('grayscale');
+    toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive); 
+  });
+
+  
+</script>
+
+
 </body>
 
 </html>

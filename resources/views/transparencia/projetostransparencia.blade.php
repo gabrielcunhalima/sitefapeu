@@ -29,10 +29,10 @@
                                 Os ressarcimentos relativos ao uso dos recursos não financeiros da UFSC (recursos humanos e materiais tais como: laboratórios, salas de aula, materiais de apoio e de escritório...) seguem os seguintes regramentos:
                             </p>
                             <p class="lead text-dark">
-                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolucao_normativa_47_2014_pesquisa.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 47/2014/CUn - Projetos de Pesquisa - 10%</a>
-                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolucao_normativa_88_2016_extensao.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 88/2016/CUn - Projetos de Extensão - 7%</a>
-                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resoluao_normativa_15_cun_2011_curso_especializacao.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 15/2011/CUn - Projetos de Ensino Pós-graduação, latusensu - 15%</a>
-                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolução_13_cun_2011.pdf" target="_blank" class="text-dark list-group-item list-group-item-action list-group-item-light">Resolução Normativa 13/2011/CUn - Projetos de Ensino Graduação e Pós-Graduação stricto sensu - 1%</a>
+                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolucao_normativa_47_2014_pesquisa.pdf" target="_blank" class="text-primary list-group-item list-group-item-action list-group-item-light ">Resolução Normativa 47/2014/CUn - Projetos de Pesquisa - 10%</a>
+                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolucao_normativa_88_2016_extensao.pdf" target="_blank" class="text-primary list-group-item list-group-item-action list-group-item-light">Resolução Normativa 88/2016/CUn - Projetos de Extensão - 7%</a>
+                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resoluao_normativa_15_cun_2011_curso_especializacao.pdf" target="_blank" class="text-primary list-group-item list-group-item-action list-group-item-light">Resolução Normativa 15/2011/CUn - Projetos de Ensino Pós-graduação, latusensu - 15%</a>
+                                <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolução_13_cun_2011.pdf" target="_blank" class="text-primary list-group-item list-group-item-action list-group-item-light">Resolução Normativa 13/2011/CUn - Projetos de Ensino Graduação e Pós-Graduação stricto sensu - 1%</a>
                             </p>
                         </div> 
                         <br><br>

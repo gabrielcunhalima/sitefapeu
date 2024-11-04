@@ -40,6 +40,10 @@
 
 
 <style>
+
+
+
+
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
@@ -76,16 +80,12 @@
       <i class="fa-solid fa-universal-access"></i> Acessibilidade
     </button>
     <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
-<<<<<<< HEAD
         <button id="increase-font" class="btn btn-info me-2">A+</button>
         <button id="decrease-font" class="btn btn-info me-2">A-</button>
+        <button id="reset-accessibility" class="btn btn-info"> Retornar</button>
         <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
         <button id="toggle-grayscale" class="btn btn-info">Escala de Cinza</button>
-=======
-      <button id="increase-font" class="btn btn-info me-2">A+</button>
-      <button id="decrease-font" class="btn btn-info me-2">A-</button>
-      <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
->>>>>>> 369c42c117cb6c2e948e26dfea00f987d018622e
+       
     </div>
   </div>
   
@@ -117,58 +117,65 @@
     const decreaseFontButton = document.getElementById('decrease-font');
     const toggleContrastButton = document.getElementById('toggle-contrast');
     const toggleGrayScaleButton = document.getElementById('toggle-grayscale');
-
-<<<<<<< HEAD
-
-            // Tamanho inicial da fonte do body
-        let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+    const resetAccessibilityButton = document.getElementById('reset-accessibility');
+    
 
 
-        increaseFontButton.addEventListener('click', () => {
-        fontSize += 2; // aumenta a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
-
-   
-        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
-=======
     // Tamanho inicial da fonte do body
+    const originalFontSize = window.getComputedStyle(document.body).fontSize;
     let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+
+
 
     // Função para aumentar a fonte
     increaseFontButton.addEventListener('click', () => {
-      fontSize += 2; // aumenta a fonte em 2px
+      fontSize += 2; 
       document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
 
       // Seleciona e ajusta o tamanho de todos os cabeçalhos
       document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
->>>>>>> 369c42c117cb6c2e948e26dfea00f987d018622e
         let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
         header.style.fontSize = (headerFontSize + 2) + 'px';
       });
     });
 
-<<<<<<< HEAD
         // Função para diminuir a fonte
         decreaseFontButton.addEventListener('click', () => {
         if (fontSize > 10) { 
         fontSize -= 2; 
         document.body.style.fontSize = fontSize + 'px'; 
-=======
-    // Função para diminuir a fonte
-    decreaseFontButton.addEventListener('click', () => {
-      if (fontSize > 10) { // evita que a fonte fique muito pequena
-        fontSize -= 2; // diminui a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
->>>>>>> 369c42c117cb6c2e948e26dfea00f987d018622e
 
-        // Seleciona e ajusta o tamanho de todos os cabeçalhos
+        
         document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
           let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
           header.style.fontSize = (headerFontSize - 2) + 'px';
         });
       }
     });
+
+    
+resetAccessibilityButton.addEventListener('click', () => {
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, div:not(#accessibility-buttons-container):not(#naoalterar), span, a').forEach(el => {
+            el.style.fontSize = ''; // Remove a personalização, volta ao padrão do CSS
+            el.style.fontFamily = ''; // Remove a personalização da fonte
+            document.body.style.fontSize = '';
+        });
+
+        // Remove classes de acessibilidade
+        document.body.classList.remove('high-contrast', 'grayscale');
+        // Remove a classe de fundo dos botões
+        toggleContrastButton.classList.remove('bg-acessibilidade2');
+        toggleGrayScaleButton.classList.remove('bg-acessibilidade2');
+        toggleUnderlineLinksButton.classList.remove('bg-acessibilidade2');
+        setReadableFontButton.classList.remove('bg-acessibilidade2');
+        
+    });
+
+
   </script>
+
+
+
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -327,7 +334,6 @@
     @include('layout.footer')   
   </div>
 
-<<<<<<< HEAD
   
 
   <!-- Contraste -->
@@ -346,13 +352,20 @@
   toggleGrayScaleButton.addEventListener('click', () => {
     const isActive = document.body.classList.toggle('grayscale');
     toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive); 
+    
+    
+
+    
   });
+
+  
 </script>
 
 
+
+
+
   <!-- Botão Toggle para os recursos de Acessibilidade -->
-=======
->>>>>>> 369c42c117cb6c2e948e26dfea00f987d018622e
 
   <script>
     function toggleElements() {
