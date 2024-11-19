@@ -14,7 +14,7 @@
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="card text-center shadow-lg border-0">
                     <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center" style="margin-top: -20px;">
-                        <img src="/images/Drhflow (2) (1) (1).png" alt="Ícone" style=" height: 50px;">
+                        <img src="/images/IconsAreaADM/social-engineering_2742103.png" alt="Ícone" style=" height: 50px;">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">DRHFlow</h5>

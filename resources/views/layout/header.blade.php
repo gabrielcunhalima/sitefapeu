@@ -77,9 +77,9 @@
 <body>
   <div class="accessibility-buttons d-none d-lg-block">
     <button id="toggle-accessibility" class="btn btn-info me-2">
-      <i class="fa-solid fa-universal-access"></i> Acessibilidade
+    <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34" >
     </button>
-    <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
+    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
         <button id="increase-font" class="btn btn-info me-2">A+</button>
         <button id="decrease-font" class="btn btn-info me-2">A-</button>
         <button id="reset-accessibility" class="btn btn-info"> Retornar</button>
@@ -289,6 +289,7 @@ resetAccessibilityButton.addEventListener('click', () => {
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -297,6 +298,7 @@ resetAccessibilityButton.addEventListener('click', () => {
                   <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
                   <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
                   <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
+
                 </div>
               </li>
             </p>

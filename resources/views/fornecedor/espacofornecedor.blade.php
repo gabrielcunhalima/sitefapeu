@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <br> <h5 class="card-title" style="margin-left: 25px;">Espaço do Fornecedor</h5>
 
-                        <div style="width: 200px; height: 4px; background-color: #009270; margin-left: 30px; margin-bottom: 10px;"></div>
+                        <div style="width: 230px; height: 4px; background-color: #009270; margin-left: 30px; margin-bottom: 10px;"></div>
 
                         <p class="card-text" style="margin-left: 25px;">
                             <br> O Setor Administrativo é responsável pelo cadastramento das empresas. 

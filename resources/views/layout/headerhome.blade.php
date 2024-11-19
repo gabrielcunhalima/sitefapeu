@@ -74,9 +74,11 @@
 </style>
 
 <body>
-  <div class="accessibility-buttons d-lg-block">
-    <button id="toggle-accessibility" class="btn btn-info me-2">Acessibilidade</button>
-    <div id="accessibility-buttons-container" class="accessibilityButtons d-none">
+<div class="accessibility-buttons d-none d-lg-block">
+    <button id="toggle-accessibility" class="btn btn-info me-2">
+    <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34" >
+    </button>
+    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
       <button id="increase-font" class="btn btn-info me-2">A+</button>
       <button id="decrease-font" class="btn btn-info me-2">A-</button>
       <button id="reset-accessibility" class="btn btn-info"> Retornar</button>
@@ -85,6 +87,17 @@
     </div>
   </div>
 
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 
   <header>
@@ -199,6 +212,7 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -255,10 +269,6 @@
   window.addEventListener("load", toggleButtonVisibility);
   window.addEventListener("resize", toggleButtonVisibility);
 </script> -->
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
 
   <script>
     const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
@@ -323,6 +333,8 @@
     });
 
   </script>
+
+
 
 
 <!-- Contraste -->

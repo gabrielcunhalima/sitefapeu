@@ -97,6 +97,8 @@ class MenuController extends Controller
         return $this->renderView('projetos.projetos', 'projetos.png', 'Projetos');
     }
 
+    
+
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
@@ -237,9 +239,16 @@ class MenuController extends Controller
     }
 
     // MENU Colaborador
+
+    public function areadministrativa()
+    {
+        return $this->renderView('colaborador.areadministrativa', 'areadministrativa.png', 'Área Administrativa');
+    }
+
+
     public function drhFlow()
     {
-        return $this->renderView('colaborador.drhflow', 'drhflow.png', 'drhflow');
+        return $this->renderView('colaborador.drhflow', 'drhflow.png', 'DRHFlow');
     }
 
     public function ADMFlow()
@@ -316,4 +325,8 @@ class MenuController extends Controller
 
         return redirect()->route('login.login')->withErrors(['login' => 'Credenciais inválidas.']);
     }
+
+
+    
 }
+

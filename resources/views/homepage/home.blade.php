@@ -378,7 +378,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p><br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Ver mais</a>
             </div>
           </div>
         </div>

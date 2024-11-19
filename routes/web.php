@@ -23,6 +23,7 @@ Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name
 Route::get('/drhflow',[MenuController::class,'drhflow'])->name('colaborador.drhflow');
 Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMFlow');
 Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
+Route::get('/areadministrativa',[MenuController::class,'areadministrativa'])->name('colaborador.areadministrativa');
 
 
 //FORNECEDOR
