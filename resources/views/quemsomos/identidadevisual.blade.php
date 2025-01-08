@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Identidade Visual')
+@section('title','FAPEU - Identidade Visual')
 
 @section('conteudo')
     

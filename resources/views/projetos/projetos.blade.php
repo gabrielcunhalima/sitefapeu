@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Projetos FAPEU')
+@section('title','FAPEU - Projetos')
 
 @section('conteudo')
 <style>
@@ -59,6 +59,11 @@
         transform: translateY(-7px);
         -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:hover {
+        background-color:black;
+        color: black;
     }
 
     .blog-post:hover .blog-img .overlay {

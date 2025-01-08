@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Política de Privacidade')
+@section('title','FAPEU - Política de Privacidade')
 
 @section('conteudo')
 <a href="../pdfs/Politicas/politica_de_privacidade_fapeu.pdf" download>

@@ -71,49 +71,60 @@
     width: 20px;
     background: url('../img/next.png') no-repeat;
   }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .link-hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+
+  .link-hover:hover {
+    transform: translateY(-10px);
+    background-color: #0F4B2F;
+  }
 </style>
 
 <body>
-<div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn btn-info me-2">
-    <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34" >
+  <!-- <div class="text-center py-1 bg-cinza">
+    Boas festas!
+  </div> -->
+
+  <div class="accessibility-buttons d-none d-lg-block">
+    <button id="toggle-accessibility" class="btn bg-azul btn-info">
+      <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
-    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
-      <button id="increase-font" class="btn btn-info me-2">A+</button>
-      <button id="decrease-font" class="btn btn-info me-2">A-</button>
-      <button id="reset-accessibility" class="btn btn-info"> Retornar</button>
-        <button id="toggle-contrast" class="btn btn-info">Alto Contraste</button>
-        <button id="toggle-grayscale" class="btn btn-info">Escala de Cinza</button>
+    <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
+      <button id="increase-font" class="btn bg-azul btn-info">A+</button>
+      <button id="decrease-font" class="btn bg-azul btn-info">A-</button>
+      <button id="reset-accessibility" class="btn bg-azul btn-info"> Retornar</button>
+      <button id="toggle-contrast" class="btn bg-azul btn-info">Alto Contraste</button>
+      <button id="toggle-grayscale" class="btn bg-azul btn-info">Escala de Cinza</button>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
     </div>
   </div>
 
-
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom font-montserrat">
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="75">
+            <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
-        <div class="d-flex justify-content-end">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse menu-centralizado" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
               <li class="nav-item dropdown text-white">
@@ -146,23 +157,10 @@
               </li>
             </p>
             <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Transparência
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('transparencia.projetostransparencia')}}" id="navbarDropdown" role="button">
+                  Portal da Transparência
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('transparencia.projetostransparencia')}}">Projetos</a>
-                  <a class="dropdown-item" href="#">*Relatório Técnico Semestral</a>
-                  <a class="dropdown-item" href="{{route('transparencia.relanualgestao')}}">Relatório Anual de Gestão</a>
-                  <a class="dropdown-item" href="{{route('transparencia.avaliacaodesempenho')}}">Avaliação de Desempenho</a>
-                  <a class="dropdown-item" href="{{route('transparencia.fiscal_auditorias')}}">Fiscalização e Auditorias</a>
-                  <a class="dropdown-item" href="{{route('transparencia.demonstracoescontabeis')}}">Demonstrações Contábeis</a>
-                  <a class="dropdown-item" href="{{route('transparencia.compras')}}">Compras, Contratos e Aquisições</a>
-                  <a class="dropdown-item" href="{{route('transparencia.pagamentos')}}">Pagamentos Efetuados PF/PJ</a>
-                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
-                  <a class="dropdown-item" href="{{route('transparencia.habilitacaojuridica')}}">Habilitação Jurídica<br> e Regularidade Fiscal</a>
-                  <a class="dropdown-item" href="{{route('transparencia.faq')}}">FAQ - Perguntas Frequentes</a>
-                </div>
               </li>
             </p>
             <p>
@@ -189,7 +187,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
-                  <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições</a>
+                  <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições Apoiadas</a>
                 </div>
               </li>
             </p>
@@ -212,7 +210,7 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
+                  <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -236,6 +234,11 @@
               </li>
             </p>
           </ul>
+        </div>
+        <div class="d-flex">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
         <!-- <div class="botao-direita">
             <a href="">
@@ -316,49 +319,39 @@
 
 
     resetAccessibilityButton.addEventListener('click', () => {
-        document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, div:not(#accessibility-buttons-container):not(#naoalterar), span, a').forEach(el => {
-            el.style.fontSize = ''; // Remove a personalização, volta ao padrão do CSS
-            el.style.fontFamily = ''; // Remove a personalização da fonte
-            document.body.style.fontSize = '';
-        });
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, div:not(#accessibility-buttons-container):not(#naoalterar), span, a').forEach(el => {
+        el.style.fontSize = ''; // Remove a personalização, volta ao padrão do CSS
+        el.style.fontFamily = ''; // Remove a personalização da fonte
+        document.body.style.fontSize = '';
+      });
 
-        // Remove classes de acessibilidade
-        document.body.classList.remove('high-contrast', 'grayscale');
-        // Remove a classe de fundo dos botões
-        toggleContrastButton.classList.remove('bg-acessibilidade2');
-        toggleGrayScaleButton.classList.remove('bg-acessibilidade2');
-        toggleUnderlineLinksButton.classList.remove('bg-acessibilidade2');
-        setReadableFontButton.classList.remove('bg-acessibilidade2');
-        
+      // Remove classes de acessibilidade
+      document.body.classList.remove('high-contrast', 'grayscale');
+      // Remove a classe de fundo dos botões
+      toggleContrastButton.classList.remove('bg-acessibilidade2');
+      toggleGrayScaleButton.classList.remove('bg-acessibilidade2');
+      toggleUnderlineLinksButton.classList.remove('bg-acessibilidade2');
+      setReadableFontButton.classList.remove('bg-acessibilidade2');
+
     });
 
-  </script>
+    //sublinhado
+    const toggleTextDecorationButton = document.getElementById('toggle-text-decoration');
+    toggleTextDecorationButton.addEventListener('click', () => {
+      const isActive = document.body.classList.toggle('text-decoration');
+      toggleTextDecorationButton.classList.toggle('bg-acessibilidade2', isActive);
+    });
 
-
-
-
-<!-- Contraste -->
-
-<script>
+    // Contraste
     toggleContrastButton.addEventListener('click', () => {
-    document.body.classList.toggle('high-contrast');
-});
-
-</script>
-
-
-<!-- Escala cinza -->
-
-<script>
-  toggleGrayScaleButton.addEventListener('click', () => {
-    const isActive = document.body.classList.toggle('grayscale');
-    toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive); 
-  });
-
-  
-</script>
-
-
+      document.body.classList.toggle('high-contrast');
+    });
+    //Escala de cinza
+    toggleGrayScaleButton.addEventListener('click', () => {
+      const isActive = document.body.classList.toggle('grayscale');
+      toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive);
+    });
+  </script>
 </body>
 
 </html>

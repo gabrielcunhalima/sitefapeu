@@ -14,26 +14,11 @@ class MenuController extends Controller
     {
         return view($view, compact('imagem', 'titulo', 'dados',));
     }
-    //HOME
 
-    public function home()
-    {
-        $carousel = Post::query()
-            ->orderBy('id', 'desc')
-            ->take(5)
-            ->get();
-    
-        return view('homepage.home', [
-            'carousel' => $carousel
-        ]);
-    }
 
     //SERVICOS
 
-    public function servicos()
-    {
-        return $this->renderView('homepage.servicos', 'servicos.png', 'Serviços');
-    }
+
     
     // MENU Quem somos
     public function sobre()
@@ -163,7 +148,7 @@ class MenuController extends Controller
 
     public function projetostransparencia()
     {
-        return $this->renderView('transparencia.projetostransparencia', 'projetostransparencia.png', 'Projetos de Transparência');
+        return $this->renderView('transparencia.projetostransparencia', 'projetostransparencia.png', 'Portal de Transparência');
     }
 
     public function reltecnicosemestral()
@@ -215,7 +200,7 @@ class MenuController extends Controller
 
     public function normas()
     {
-        return $this->renderView('legislacao.normas', 'normas.png', 'Normas Internas FAPEU e Instituições');
+        return $this->renderView('legislacao.normas', 'normas.png', 'Normas Internas FAPEU e Instituições Apoiadas');
     }
 
     // MENU Fornecedor
@@ -298,35 +283,45 @@ class MenuController extends Controller
         return $this->renderView('noticias.noticias', 'noticias.png', 'Notícias');
     }
 
-    //ADMIN
+    //HOME
 
-    public function verlogin()
+    public function home()
     {
-        return $this->renderView('login.login', 'login.png', 'Login FAPEU');
-    }
-
-    public function menuadmin()
-    {
-        return $this->renderView('admin.menu', 'menu.png', 'Painel Administrativo');
-    }
-
-    public function login(Request $request)
-    {
-        $dados = $request->validate([
-            'name' => 'required|string',
-            'password' => 'required|string'
-        ]);
-
-        if (Auth::attempt($dados)) {
-            $request->session()->regenerate();
-
-            return redirect()->route('admin.menu');
-        }
-
-        return redirect()->route('login.login')->withErrors(['login' => 'Credenciais inválidas.']);
-    }
-
-
+        $carousel = Post::query()
+            ->orderBy('id', 'desc')
+            ->take(5)
+            ->get();
     
+        return view('homepage.home', [
+            'carousel' => $carousel
+        ]);
+    }
+
+    public function servicos()
+    {
+        return $this->renderView('homepage.servicos', 'servicos.png', 'Serviços');
+    }
+    
+    public function importacao()
+    {
+        return $this->renderView('homepage.importacao', 'importacao.png', 'Importação de Bens e Insumos para Pesquisa com Isenção de Impostos');
+    }
+
+    public function latic()
+    {
+        return $this->renderView('homepage.latic', 'latic.png', 'LATIC');
+    }
+
+    public function nagefi()
+    {
+        return $this->renderView('homepage.nagefi', 'nagefi.png', 'NAGEFI');
+    }
+
+    public function concursos()
+    {
+        return $this->renderView('homepage.concursos', 'concursos.png', 'Concursos');
+    }
+
+
 }
 

@@ -1,5 +1,5 @@
 @extends('layout.headeradmin')
-@section('title','Adicionar Seleções Públicas')
+@section('title','FAPEU - Adicionar Seleções Públicas')
 
 @section('conteudo')
 

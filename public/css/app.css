@@ -7,7 +7,7 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: "DM Sans", sans-serif;
   }
 
   .carousel-inner .carousel-item {
@@ -34,7 +34,8 @@
     overflow-y: auto;
     height: min-content;
     white-space: normal;
-    font-size: 0.9rem; /* tamanho da fonte reduzido */
+    font-size: 1rem;
+    /* tamanho da fonte reduzido */
   }
 
   #sidebarMenu .nav-link {
@@ -44,13 +45,15 @@
     overflow: visible;
     text-overflow: clip;
     display: block;
-    color: #146551; /* Cor padrão dos links */
+    color: #146551;
+    /* Cor padrão dos links */
     text-decoration: none;
   }
 
   #sidebarMenu .nav-link:hover,
   #sidebarMenu .nav-link:focus {
-    color: #0d3c2f; /* Cor ao passar o mouse ou focar no link */
+    color: #0d3c2f;
+    /* Cor ao passar o mouse ou focar no link */
     text-decoration: underline;
   }
 
@@ -58,8 +61,10 @@
     font-size: 5rem;
     font-family: 'Noticia Text';
     margin-bottom: 0.5rem;
-    background-color: #146551; /* Cor de fundo desejada */
-    color: #ffffff; /* Cor do texto */
+    background-color: #146551;
+    /* Cor de fundo desejada */
+    color: #ffffff;
+    /* Cor do texto */
     padding: 10px;
     border-radius: 4px;
     font-weight: bold;
@@ -69,38 +74,49 @@
   }
 
   footer {
-    background: rgb(0, 146, 112);
-    background: radial-gradient(circle, rgba(0, 146, 112, 1) 0%, rgba(0, 146, 112, 1) 1%, rgba(62, 62, 63, 1) 100%, rgba(42, 117, 106, 1) 100%, rgba(10, 94, 77, 1) 100%);
-    color: white;
-    width: 100%;
-    position: relative;
+    background-color: #054e18;
   }
 
   .container {
     flex: 1;
   }
 
+  .container80 {
+    max-width: 80vw;
+    margin: 0 10vw 0 10vw;
+  }
+
+
   main {
     flex: 1;
   }
 
+  .grow {
+    transition: all .2s ease-in-out;
+  }
+
+  .grow:hover {
+    transform: scale(1.04);
+  }
+
+
   /* Estilo da navbar */
   .navbar-custom {
-    background-color: #285B50;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #06551A;
     padding: 10px 15px;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position:relative;
+    position: relative;
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 5px 8px;
     white-space: nowrap;
-    color: #408c68; /* cor para os links */
+    color: #408c68;
+    /* cor para os links */
   }
 
   .navbar-custom .navbar-nav .nav-link:hover {
@@ -113,7 +129,7 @@
     padding: 5px 10px;
     width: 100%;
     max-width: 210px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .navbar-custom .search-bar input[type="text"] {
@@ -123,7 +139,7 @@
     width: 100%;
     padding: 5px;
     color: #333333;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .navbar-custom .search-bar .fa-search {
@@ -136,7 +152,7 @@
     border: none;
     color: #888888;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   footer p {
@@ -150,7 +166,8 @@
   }
 
   footer ul li {
-    margin-bottom: 4px; /* Reduzido o espaçamento entre itens */
+    margin-bottom: 4px;
+    /* Reduzido o espaçamento entre itens */
   }
 
   .btn-primary {
@@ -174,7 +191,8 @@
 
   /* Featurettes */
   .featurette-divider {
-    margin: 1.5rem 0; /* Espaça o elemento <hr> mais */
+    margin: 1.5rem 0;
+    /* Espaça o elemento <hr> mais */
   }
 
   .featurette-heading {
@@ -185,7 +203,44 @@
 
   /* Seção "Apoiadas" */
   .apoiadas-section .col-md-7 {
-    margin-left: 20px; /* Ajuste o valor conforme necessário */
+    margin-left: 20px;
+    /* Ajuste o valor conforme necessário */
+  }
+
+  @media (max-width: 876px) {
+
+    p {
+      font-size: 1.3em;
+    }
+
+    .textofooter {
+      font-size: 1.2em;
+    }
+
+    .apoiadas {
+      flex: 0 0 50%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .margemtelapequena {
+      margin-top: 2em;
+    }
+
+    .margemtelapequenaesquerda {
+      margin-left: 1em;
+      text-overflow: ellipsis;
+    }
+
+    .carousel-item {
+      height: 12rem;
+      background-color: #cac5c5;
+    }
+
+    .transformando {
+      font-size: 2em !important;
+    }
+
   }
 
   /* CSS RESPONSIVE */
@@ -220,37 +275,120 @@
 
   .list-group-item.active,
   .list-group-item:hover {
-      background-color: #e8f4ff !important; /* Ajuste para a cor de fundo desejada */
-      color: #08775f !important; /* Cor do texto */
-      border: none !important; /* Remove as bordas pretas */
+    background-color: #e8f4ff !important;
+    /* Ajuste para a cor de fundo desejada */
+    color: #08775f !important;
+    /* Cor do texto */
+    border: none !important;
+    /* Remove as bordas pretas */
 
   }
-  
 
-  .bg-gestaoprojetos { background-color: #3D9A78; }
-  .bg-licitacao { background-color: #368669; }
-  .bg-transparenciahome { background-color: #30755c; }
-  .bg-hover { background-color: #00000027; }
-  .bg-transparente { background-color: #303030ee; }
-  .bg-transparentehome { background-color: #ffffff00; }
-  .bg-verde { background-color: #009270; }
-  .bg-verde2 { background-color: #1E8975; }
-  .bg-verde3 { background-color: #336861; }
-  .bg-verde4 { background-color: #1F945F; }
-  .bg-verdeescuro { background-color: #35605A; }
-  .bg-principal { background-color: #368669; }
-  .bg-administracao { background-color: #a0beb7; }
-  .bg-cinza { background-color: #dadada; }
-  .bg-preto { background-color: #3E3E3E; }
-  .bg-cinza1 { background-color: #6B7267; }
-  .bg-cinza2 { background-color: #EBEBEB; }
-  .bg-cinza3 { background-color: #BCD2E1; }
-  .bg-cinza4 { background-color: #dee1e4; }
-  .text-verde { color: #3D9A78; }
-  .text-verde2 { color: #368669; }
-  .text-verde3 { color: #30755C; }
-  .text-cinza { color: #BCBDC0; }
-  .text-preto { color: #3E3E3F; }
+
+  .bg-gestaoprojetos {
+    background-color: #3D9A78;
+  }
+
+  .bg-azul {
+    background-color: #69bbff;
+  }
+
+  .bg-licitacao {
+    background-color: #368669;
+  }
+
+  .bg-transparenciahome {
+    background-color: #30755c;
+  }
+
+  .bg-hover {
+    background-color: #00000027;
+  }
+
+  .bg-transparente {
+    background-color: #303030ee;
+  }
+
+  .bg-transparentehome {
+    background-color: #f83737;
+  }
+
+  .bg-verde {
+    background-color: #009270;
+  }
+
+  .bg-verde2 {
+    background-color: #1E8975;
+  }
+
+  .bg-verde3 {
+    background-color: #336861;
+  }
+
+  .bg-verde4 {
+    background-color: #06551a;
+  }
+
+  .bg-secundario {
+    background-color:#333333;
+  }
+
+  .bg-verdeescuro {
+    background-color: #2C4A44;
+  }
+
+  .bg-principal {
+    background-color: #06551a;
+  }
+
+  .bg-administracao {
+    background-color: #a0beb7;
+  }
+
+  .bg-cinza {
+    background-color: #c4c4c4;
+  }
+
+  .bg-preto {
+    background-color: #000000;
+  }
+
+  .bg-cinza1 {
+    background-color: #6B7267;
+  }
+
+  .bg-cinza2 {
+    background-color: #EBEBEB;
+  }
+
+  .bg-cinza3 {
+    background-color: #BCD2E1;
+  }
+
+  .bg-cinza4 {
+    background-color: #dee1e4;
+  }
+
+  .text-principal {
+    color: #054615;
+  }
+
+  .text-verde {
+    color: #075A1B;
+  }
+
+  .text-verde3 {
+    color: #30755C;
+  }
+
+  .text-cinza {
+    color: #BCBDC0;
+  }
+
+  .text-preto {
+    color: #3E3E3F;
+  }
+
   .pdf {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -262,24 +400,20 @@
     flex: 0 1 auto;
   }
 
-  .menu-centralizado {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  .menu-centralizado {}
 
   .botao-direita {
     flex: 0 1 auto;
   }
 
-  .custom-btn {
-    background-color: #009170;   
-    border-color: #009170;       
-    color: white;                
+  .btn:hover {
+    background-color:#808080;
   }
 
-  .btn:hover {
-    background: #0f4b2f;
+  .custom-btn {
+    background-color: #009170;
+    border-color: #009170;
+    color: white;
   }
 
   /* NOTÍCIAS */
@@ -366,175 +500,187 @@
     }
   }
 
+  /* Acessibilidade */
 
+  .grayscale {
+    filter: grayscale(100%);
+  }
 
-    /* Acessibilidade */
+  /* Opcional: Estilo para o botão ativo */
+  .bg-acessibilidade2 {
+    background-color: #d3d3d3;
+    /* ou qualquer cor que destaque o botão */
+  }
 
+  /* Ajuste na posição dos botões de acessibilidade */
+  .accessibility-buttons {
+    position: fixed;
+    top: 34%;
+    right: 4px;
+    z-index: 1050;
+  }
 
-    .grayscale {
-      filter: grayscale(100%);
-    }
+  .navbar-custom {
+    z-index: 1040;
+    /* Acima dos botões */
+  }
 
-    /* Opcional: Estilo para o botão ativo */
-    .bg-acessibilidade2 {
-      background-color: #d3d3d3; /* ou qualquer cor que destaque o botão */
-    }
-    
+  /* Estilo de alto contraste */
+  .high-contrast {
+    background-color: #000 !important;
+    /* Fundo preto */
+    color: #ffffff !important;
+    /* Texto branco */
+  }
 
-      
-  
-        /* Ajuste na posição dos botões de acessibilidade */
-        .accessibility-buttons {
-        position: fixed;
-        top: 650px; /* Ajuste conforme necessário */
-        right: 4px;
-        margin-left: 10px;
-        z-index: 1050; /* Abaixo do menu */
-        
-        
-        
-      }
-
-
-      
-
-
-      .navbar-custom {
-        z-index: 1040; /* Acima dos botões */
-      }
-
-      /* Estilo de alto contraste */
-      .high-contrast {
-        background-color: #000 !important; /* Fundo preto */
-        color: #099072 !important; /* Texto branco */
-    }
-    
-    /* Aplicando alto contraste a todos os filhos diretos */
-    .high-contrast * {
-      background-color: inherit !important; /* Herda a cor de fundo do pai */
-      color: inherit !important; /* Herda a cor do texto do pai */
+  /* Aplicando alto contraste a todos os filhos diretos */
+  .high-contrast * {
+    background-color: inherit !important;
+    /* Herda a cor de fundo do pai */
+    color: inherit !important;
+    /* Herda a cor do texto do pai */
   }
 
 
-        .high-contrast a {
-            color: rgb(119, 172, 252); /* Links azuis */
-        }
+  .high-contrast a {
+    color: rgb(119, 172, 252);
+    /* Links azuis */
+  }
 
-        .high-contrast .btn {
-            background-color: #408c68; /* Botões brancos */
-            color: #000; /* Texto preto nos botões */
-        }
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast h4 {
-            color: #099072; /* Cor do texto conforme necessário */
-        }
-        
-        .high-contrast h1 a,
-        .high-contrast h2 a,
-        .high-contrast h3 a,
-        .high-contrast h4 a {
-            color: rgb(0, 71, 54); /* Links dentro de cabeçalhos em modo contraste */
-        }
+  .high-contrast .btn {
+    background-color: #ffffff;
+    /* Botões brancos */
+    color: #000;
+    /* Texto preto nos botões */
+    border: white;
+  }
 
-        .high-contrast .card {
-          background-color: #000000; /* Fundo do card */
-          color: #008366; /* Texto branco */
-          border: 1px solid #ffffff; /* Borda cinza */
-      }
-      
-      /* Botões dentro de cards em modo de contraste */
-      .high-contrast .card .btn {
-          background-color: #408c68; /* Fundo do botão verde escuro dentro dos cards */
-          color: #000; /* Texto preto nos botões dentro dos cards */
-      }
+  .high-contrast h1,
+  .high-contrast h2,
+  .high-contrast h3,
+  .high-contrast h4 {
+    color: #ffffff;
+    /* Cor do texto conforme necessário */
+  }
 
+  .high-contrast h1 a,
+  .high-contrast h2 a,
+  .high-contrast h3 a,
+  .high-contrast h4 a {
+    color: rgb(0, 71, 54);
+    /* Links dentro de cabeçalhos em modo contraste */
+  }
 
-      
+  .high-contrast .card {
+    background-color: #000000;
+    /* Fundo do card */
+    color: #ffffff;
+    /* Texto branco */
+    border: 1px solid #ffffff;
+    /* Borda cinza */
+  }
 
-        
-        /*Captação */
+  /* Botões dentro de cards em modo de contraste */
+  .high-contrast .card .btn {
+    background-color: #00ff88;
+    /* Fundo do botão verde escuro dentro dos cards */
+    color: #000;
+    /* Texto preto nos botões dentro dos cards */
+  }
 
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .font-montserratbold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+  }
+  
+  /*Captação */
 
-          @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
-      .pricing2 {
-        color: #080808;
-        font-weight: 300;
-        background-size: cover;
-        background-image: url('/images/Fundação_de_(2).png'); 
-        background-repeat: no-repeat;
-        max-height: NONE;
-        margin-bottom: 20px;
-        flex-direction: column;
+  .pricing2 {
+    color: #080808;
+    font-weight: 300;
+    background-size: cover;
+    background-image: url('/images/Fundação_de_(2).png');
+    background-repeat: no-repeat;
+    max-height: NONE;
+    margin-bottom: 20px;
+    flex-direction: column;
 
-      }
-
-
-        .pricing2 .pricing-box {
-          margin-top: 200px;
-        }
-
-
-        .pricing2 .pricing-text span {
-          font-size: 100px;
-          font-weight: 400;
-          line-height: 100px;
-          color: #263238;
-        }
-
-        .pricing2 .card.card-shadow {
-          -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-          box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-        }
-
-      
-        .pricing2 .btn-outline-success {
-          color: #12704e;
-          background-color: transparent;
-          border-color: #2cdd9b;
-        }
-
-        .pricing2 .btn-outline-success:hover {
-          background: #2cdd9b;
-          border-color: #2cdd9b;
-          color: #ffffff;
-        }
-
-        .pricing2 .btn-md {
-          padding: 10px 30px; 
-          font-size: 16px;
-        }
-
-        @media (max-width: 767px) {
-          .pricing2 .btn-md {
-            width:   100%;
-            padding: 10px 0; /* Ajustar o padding para manter o botão com altura adequada */
-            text-align: center;
-          }
-          .pricing2 .pricing-box {
-            margin-top: 20px;
-          }
-          .pricing2 .display-5 {
-            font-size: 36px;
-          }
-          .pricing2 .card {
-            padding: 15px
-          }
-          .pricing2 .above-card{
-            padding: 0 15px;
-          }
-        }
+  }
 
 
+  .pricing2 .pricing-box {
+    margin-top: 200px;
+  }
 
-        /* Link sublinhado */
-        .link-underline-primary {
-          text-decoration: underline;
-          color: #007bff; /* cor para o azul padrão */
-      }
-      
-      .link-underline-primary:hover {
-          color: #099072;
-      }
-      
+
+  .pricing2 .pricing-text span {
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    color: #263238;
+  }
+
+  .pricing2 .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  }
+
+
+  .pricing2 .btn-outline-success {
+    color: #12704e;
+    background-color: transparent;
+    border-color: #2cdd9b;
+  }
+
+  .pricing2 .btn-outline-success:hover {
+    background: #2cdd9b;
+    border-color: #2cdd9b;
+    color: #ffffff;
+  }
+
+  .pricing2 .btn-md {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 767px) {
+    .pricing2 .btn-md {
+      width: 100%;
+      padding: 10px 0;
+      /* Ajustar o padding para manter o botão com altura adequada */
+      text-align: center;
+    }
+
+    .pricing2 .pricing-box {
+      margin-top: 20px;
+    }
+
+    .pricing2 .display-5 {
+      font-size: 36px;
+    }
+
+    .pricing2 .card {
+      padding: 15px
+    }
+
+    .pricing2 .above-card {
+      padding: 0 15px;
+    }
+  }
+
+
+
+  /* Link sublinhado */
+  .link-underline-primary {
+    text-decoration: underline;
+    color: #007bff;
+    /* cor para o azul padrão */
+  }
+
+  .link-underline-primary:hover {
+    color: #099072;
+  }

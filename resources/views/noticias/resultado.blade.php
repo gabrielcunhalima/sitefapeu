@@ -1,5 +1,5 @@
 @extends('layout.headernoticias')
-@section('title','FAPEU')
+@section('title','FAPEU - FAPEU')
 
 @section('conteudo')
 <h1>Resultados da Pesquisa para "{{ $query }}"</h1>

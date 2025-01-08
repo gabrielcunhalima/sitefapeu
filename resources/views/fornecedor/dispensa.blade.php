@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Dispensa Licitação')
+@section('title','FAPEU - Dispensa Licitação')
 
 @section('conteudo')
 Seleções Públicas Anteriores(clique aqui)

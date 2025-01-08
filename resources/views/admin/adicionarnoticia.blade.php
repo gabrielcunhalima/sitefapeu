@@ -1,5 +1,5 @@
 @extends('layout.headeradmin')
-@section('title','Adicionar Notícias')
+@section('title','FAPEU - Adicionar Notícias')
 
 @section('conteudo')
 @if (($dados->perfil == 1) OR ($dados->perfil == 2))

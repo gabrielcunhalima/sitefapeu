@@ -9,9 +9,15 @@ use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\SelecoesPublicasController;
 
 
-
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
 Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
+
+//HOME
+
+Route::get('/concursos',[MenuController::class,'concursos'])->name('homepage.concursos');
+Route::get('/importacao',[MenuController::class,'importacao'])->name('homepage.importacao');
+Route::get('/latic',[MenuController::class,'latic'])->name('homepage.latic');
+Route::get('/nagefi',[MenuController::class,'nagefi'])->name('homepage.nagefi');
 
 //COLABORADOR
 
@@ -32,11 +38,6 @@ Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dis
 Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
 Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
 Route::get('/menulicitacao',[MenuController::class,'menulicitacao'])->name('fornecedor.menulicitacao');
-
-
-//HOME
-
-Route::get('/home',[MenuController::class,'home'])->name('homepage.home');
 
 //LEGISLACAO
 
@@ -97,15 +98,7 @@ Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.cont
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-//PESQUISA
-
-Route::get('/search', [NoticiasController::class, 'search'])->name('search');
-Route::post('/posts', [NoticiasController::class, 'store'])->name('posts.store');
-
-Route::get('/noticias', [NoticiasController::class, 'noticiasRecentes'])->name('noticias.recentes');
 
 //ADMIN
 

@@ -3,16 +3,13 @@
 
 @section('conteudo')
 
-
-
-
 <body>
-
-
-
-
+    <style>
+        .botaotransparencia {
+            min-width:20vw;
+        }
+    </style>
     <div class="container">
-
         <div class="row mt-1">
             <div class="col-md-12">
                 <div class="card mb-3 shadow-lg">
@@ -20,8 +17,8 @@
 
                     <div class="card-body">
                         <br>
-                        <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072; font-family: 'Raleway', sans-serif;">
-                            Projetos de Transparência
+                        <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072;">
+                            Portal da Transparência
                         </h4>
                         <br>
                         <div class="list-group">
@@ -34,12 +31,22 @@
                                 <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resoluao_normativa_15_cun_2011_curso_especializacao.pdf" target="_blank" class="link-underline-primary list-group-item list-group-item-action list-group-item-light">Resolução Normativa 15/2011/CUn - Projetos de Ensino Pós-graduação, latusensu - 15%</a>
                                 <a href="/pdfs/Transparencia/Projetos/ResolucaoNormativa/resolução_13_cun_2011.pdf" target="_blank" class="link-underline-primary list-group-item list-group-item-action list-group-item-light">Resolução Normativa 13/2011/CUn - Projetos de Ensino Graduação e Pós-Graduação stricto sensu - 1%</a>
                             </p>
-                        </div> 
+                        </div>
                         <br><br>
                         <div class="row mt-4">
-                            <div class="col-md-12 text-center">
-                                <a href="https://fap6.fapeu.org.br/scripts/fapeusite.pl/swfwfap151" class="btn btn-primary shadow p-3 mb-5 bg-white rounded" target="_blank style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
-                                    Transparência Projetos
+                            <div class="col-md-4 col-sm-12 text-center">
+                                <a href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
+                                    Institucional
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-center">
+                                <a href="http://150.162.78.4:8080/transparencia/transparencia" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="font-size: 18px; padding: 10px 20px;">
+                                    Projetos
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-center">
+                                <a href="{{route('transparencia.faq')}}" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
+                                    Perguntas Frequentes
                                 </a>
                             </div>
                         </div>
@@ -53,18 +60,18 @@
 
         <!-- card confira nossos destaque -->
 
-        
-        <div class="row mt-1">
+
+        <!-- <div class="row mt-1">
             <div class="col-md-12">
                 <br><br>
                 <div class="card shadow-lg ">
                     <div class="card-body">
                         <div class="d-flex justify-content-center">
-                    <h4 class="card-title font-weight-bold text-center rounded-top" style="color: #099072; font-family: 'Raleway', sans-serif;">
-                        <br><br>Confira Projetos em destaque!
-                    </h4>
+                            <h4 class="card-title font-weight-bold text-center rounded-top" style="color: #099072; font-family: 'Raleway', sans-serif;">
+                                <br><br>Confira Projetos em destaque!
+                            </h4>
 
-                        </div>  
+                        </div>
                         <section class="my-4" id="blog">
                             <div class="container">
                                 <div id="projectCarousel" class="carousel slide" data-ride="carousel">
@@ -152,17 +159,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <style>
-        .carousel-item {
-            background-color: transparent;
-            /* Remove o fundo cinza dos slides */
-        }
-
-        .lead a:hover {
-            color: #099072 !important;
-        }
-    </style>
+        </div> -->
 </body>
 
 @endsection

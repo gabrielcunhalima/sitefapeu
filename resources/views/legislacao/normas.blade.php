@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Normas Internas FAPEU e Instituições')
+@section('title','FAPEU - Normas Internas FAPEU e Instituições Apoiadas')
 
 @section('conteudo')
 <div class="container">

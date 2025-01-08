@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Boas Praticas')
+@section('title','FAPEU - Boas Praticas')
 
 @section('conteudo')
 <div class="container text-justify">

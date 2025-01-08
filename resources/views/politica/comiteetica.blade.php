@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Comitê de Ética e Comitê de Gestão de Riscos')
+@section('title','FAPEU - Comitê de Ética e Comitê de Gestão de Riscos')
 
 @section('conteudo')
 <div class="container text-justify">

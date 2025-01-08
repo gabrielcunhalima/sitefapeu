@@ -10,7 +10,7 @@
 
 
 @extends('layout.header')
-@section('title','ADMFlow')
+@section('title','FAPEU - ADMFlow')
 
 @section('conteudo')
 

@@ -119,13 +119,17 @@
     right: -100px;
   }
 
-
   .responsive img {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+
+  .slick-dots {
+    left:0;
+    right:0;
   }
 </style>
 
@@ -146,7 +150,7 @@
             slidesToScroll: 1,
             infinite: true,
             dots: true,
-            speed: 400
+            speed: 400,
           }
         },
         {
@@ -170,54 +174,56 @@
   });
 </script>
 
-<div class="jumbotron jumbotron-fluid bg-transparentehome text-white my-0 pb-2 pt-4 text-center">
-  <h1 class="container transformando font-weight-bold" style="font-family:'Petit Formal Script';font-size:3.6em;">Transformando ideias em ações!</h1>
+<div class="jumbotron jumbotron-fluid bg-light py-4 mb-0">
+  <h1 class="container transformando text-center font-montserrat" style="font-size: 2.8em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 <!-- 3 menus principais -->
-<div class="container">
-  <div class="row align-items-center mb-2">
-    <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-        <a href="{{route('projetos.menuprojetos')}}">
-          <div class="card-body">
-            <p class="card-text text-verde font-weight-bold">Gestão de Projetos</p>
-          </div>
-        </a>
+<div class="bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
+          <a href="{{route('projetos.menuprojetos')}}">
+            <div class="card-body">
+              <p class="card-text text-white font-weight-bold">Gestão de Projetos</p>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-        <a href="{{route('fornecedor.menulicitacao')}}">
-          <div class="card-body">
-            <p class="card-text text-verde font-weight-bold">Licitações e Prestadores de Serviço</p>
-          </div>
-        </a>
+      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
+          <a href="{{route('fornecedor.menulicitacao')}}">
+            <div class="card-body">
+              <p class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</p>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-      <div class="card bg-light mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-        <a href="{{route('transparencia.menutransparencia')}}">
-          <div class="card-body">
-            <p class="card-text text-verde font-weight-bold">Transparência</p>
-          </div>
-        </a>
+      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
+          <a href="{{route('transparencia.menutransparencia')}}">
+            <div class="card-body">
+              <p class="card-text text-white font-weight-bold">Transparência</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Projetos -->
-<div class="bg-light p-4 m-0">
-  <div class="section-title mb-4 pb-2 text-center">
-    <h4 class="title mb-4 mt-3">Conheça os projetos que nós apoiamos</h4>
-    <p class="text-muted para-desc mx-auto mb-0">A FAPEU conta com +250 projetos gerenciados com excelência.</p>
+<div class="bg-light m-0">
+  <div class="section-title text-center jumbotron py-4 mx-0">
+    <h1 class="mb-4 mt-2">Conheça os projetos que nós apoiamos</h1>
+    <p class="text-muted para-desc mx-auto mb-0">+250 projetos gerenciados com excelência.</p>
   </div>
   <div class="responsive container">
     <div class="col-lg-4 col-md-6 mt-4 pt-2">
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
+            <img src="../images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
@@ -236,7 +242,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/teste.png" class="img-fluid rounded-top" alt="">
+            <img src="../images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
@@ -255,7 +261,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="https://www.bootdey.com/image/350x280/6495ED/000000" class="img-fluid rounded-top" alt="">
+            <img src="../images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
@@ -274,7 +280,26 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/Paginas/anticorrupcao.png" class="img-fluid rounded-top" alt="">
+            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta">
+              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+            </div>
+          </div>
+        </a>
+        <div class="content p-3">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
+          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <div class="pt-3 mt-3 border-top d-flex">
+          </div>
+        </div>
+      </div><!--end blog post-->
+    </div><!--end col-->
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <a href="">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
@@ -291,22 +316,22 @@
     </div><!--end col-->
   </div>
   <div class="container col-12 d-flex justify-content-center">
-      <div class="card bg-verde mb-3 mt-2 card grow text-center shadow">
-        <a href="{{route('projetos.projetos')}}">
-          <div class="card-body">
-            <h5 class="card-text text-white">Conheça mais projetos</h5>
-          </div>
-        </a>
-      </div>
+    <div class="card bg-principal my-3 card grow text-center shadow">
+      <a href="{{route('projetos.projetos')}}">
+        <div class="card-body">
+          <h5 class="card-text text-white">Conheça mais projetos</h5>
+        </div>
+      </a>
     </div>
+  </div>
 </div>
 
 <!-- Servicos -->
 <div class="feature">
   <div class="container">
     <div class="text-center mx-auto wow fadeInUp">
-      <div class="section-title mb-4 pb-2 pt-4">
-        <h4 class="title mb-4 mt-3 text-white">Serviços</h4>
+      <div class="section-title my-4 py-4" style="margin-right: 23vw;margin-left:23vw">
+        <h2 class="card-text title font-montserratbold text-white">Serviços</h2>
       </div>
       <div class="accordion accordion-flush d-none pb-4" id="accordionFlushExample">
         <div class="accordion-item">
@@ -316,7 +341,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -326,7 +351,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -336,7 +361,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -346,7 +371,7 @@
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -356,7 +381,7 @@
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -366,7 +391,7 @@
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.<br><a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
           </div>
         </div>
       </div>
@@ -377,8 +402,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p><br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Ver mais</a>
+              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -386,8 +411,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -395,8 +420,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario text-decoration-none" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -406,8 +431,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">NAGEFI</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -415,8 +440,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">LATIC</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -424,8 +449,8 @@
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Concursos</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...</p> <br>
-              <a class="btn btn-success rounded-pill py-2 px-4 mt-auto bg-verdeescuro" href="#">Ver mais</a>
+              <p class="card-text">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -438,67 +463,68 @@
 <div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
   <div class="container80">
     <div class="section-title mb-4 pb-2">
-      <h4 class="title text-center">Instituições Apoiadas</h4>
+      <h4 class="title text-center font-montserratbold">Instituições Apoiadas</h4>
     </div>
     <div class="row align-items-center">
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://ufsc.br/">
           <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://ifc.edu.br/">
           <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www.udesc.br/">
           <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www.uffs.edu.br/">
           <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://unipampa.edu.br/">
           <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www2.ufjf.br/ufjf/">
           <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://confies.org.br/">
           <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www.gov.br/ebserh/pt-br">
           <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hu-ufjf">
           <img src="/images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
-        <a href="#">
+        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
           <img src="/images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
     </div>
   </div>
 </div>
+
 <script>
   function toggleAccordion() {
     const accordion = document.getElementById('accordionFlushExample');
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 992) {
       accordion.classList.remove('d-none');
     } else {
       accordion.classList.add('d-none');

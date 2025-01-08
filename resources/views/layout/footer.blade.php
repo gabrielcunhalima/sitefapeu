@@ -30,7 +30,7 @@
       <div class="col-lg-4 col-md-12 mb-md-0 ">
         <h5 class="text-uppercase font-weight-bold">Contato</h5>
         <p class="textofooter">
-          Tel: (48)3331-7400<br>
+          Tel: (48) 3331-7400<br>
           contato@fapeu.org.br<br>
           <br>
           <h5 class="font-weight-bold">Redes sociais</h5>

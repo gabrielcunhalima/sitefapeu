@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Perguntas Frequentes')
+@section('title','FAPEU - Perguntas Frequentes')
 
 @section('conteudo')
 <div class="container text-justify">

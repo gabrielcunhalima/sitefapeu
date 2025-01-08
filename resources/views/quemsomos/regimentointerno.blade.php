@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Regimento Interno')
+@section('title','FAPEU - Regimento Interno')
 
 @section('conteudo')
 <p class="container mb-4 text-center"><button type="button" class="btn bg-verde btn-lg text-white"><i class="bi bi-download"></i> &nbsp; Baixar o documento</button></p>

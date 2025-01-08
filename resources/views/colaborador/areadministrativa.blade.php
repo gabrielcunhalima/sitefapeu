@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','Área Administrativa')
+@section('title','FAPEU - Área Administrativa')
 
 @section('conteudo')
 
@@ -71,10 +71,6 @@
 </div>
 
 <style>
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    }
 
     .btn-success {
         background-color: #28a745;
