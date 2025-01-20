@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title', 'Projetos')
+@section('title', 'Portal da Transparência')
 
 @section('conteudo')
 

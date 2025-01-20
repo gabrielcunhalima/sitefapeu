@@ -120,7 +120,7 @@
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
                     <h4 class="title mb-4">Conheça nossos projetos</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
+                    <p class="text-muted para-desc mx-auto mb-0">São mais de 250 projetos gerenciados pela fundação. </p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->

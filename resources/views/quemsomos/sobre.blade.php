@@ -1,8 +1,9 @@
 @extends('layout.header')
-@section('title','FAPEU - Sobre a FAPEU')
+@section('title','FAPEU - Sobre nós')
 
 @section('conteudo')
 <div class="container text-justify">
+<h2 class="text-center mb-5">FAPEU - Há 47 anos transformando ideias em ações!</h2>
     <p>A Fundação de Amparo à Pesquisa e Extensão Universitária – FAPEU é uma instituição de direito privado, sem fins lucrativos, que tem como objetivo principal apoiar o desenvolvimento de projetos de ensino, pesquisa, extensão, desenvolvimento institucional, científico e tecnológico e estímulo à inovação universitária.</p>
 
     <p>A FAPEU foi instituída como fundação de apoio à Universidade Federal de Santa Catarina em 28 de setembro de 1977, com sede e foro na cidade de Florianópolis, Santa Catarina, Brasil.</p>
