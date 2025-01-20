@@ -12,7 +12,7 @@
       
       <!-- Logo section -->
       <div class="d-flex justify-content-center align-items-center">
-        <img src="/images/logo2.png" alt="Nook Logo" style="height: 120px;">
+        <img src="/images/logo3.png" alt="Logo" style="height: 120px;">
       </div>
 
       <!-- Title section with styled header similar to image -->

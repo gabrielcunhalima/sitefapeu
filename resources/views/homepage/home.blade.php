@@ -2,6 +2,11 @@
 @section('title','FAPEU')
 @section('conteudo')
 <style>
+
+
+
+
+
   .blog-post {
     -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
@@ -341,7 +346,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -351,7 +356,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -520,7 +525,10 @@
   </div>
 </div>
 
+
 <script>
+
+  
   function toggleAccordion() {
     const accordion = document.getElementById('accordionFlushExample');
 
