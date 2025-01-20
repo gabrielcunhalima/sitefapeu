@@ -351,6 +351,10 @@
       const isActive = document.body.classList.toggle('grayscale');
       toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive);
     });
+
+
+
+    
   </script>
 </body>
 

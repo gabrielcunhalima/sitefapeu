@@ -366,7 +366,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -376,7 +376,7 @@
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -386,7 +386,7 @@
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -396,7 +396,7 @@
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="#">Saiba mais</a></div>
+            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
           </div>
         </div>
       </div>
