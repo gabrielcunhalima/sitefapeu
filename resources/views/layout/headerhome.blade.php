@@ -97,11 +97,11 @@
       <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
     <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-      <button id="increase-font" class="btn bg-azul btn-info">A+</button>
-      <button id="decrease-font" class="btn bg-azul btn-info">A-</button>
-      <button id="reset-accessibility" class="btn bg-azul btn-info"> Retornar</button>
-      <button id="toggle-contrast" class="btn bg-azul btn-info">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-azul btn-info">Escala de Cinza</button>
+    <button id="increase-font" class="btn bg-azul">A+</button>
+      <button id="decrease-font" class="btn bg-azul">A-</button>
+      <button id="toggle-contrast" class="btn bg-azul">Alto Contraste</button>
+      <button id="toggle-grayscale" class="btn bg-azul">Escala de Cinza</button>
+      <button id="reset-accessibility" class="btn bg-azul">Restaurar</button>
       <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -289,33 +289,33 @@
     const toggleGrayScaleButton = document.getElementById('toggle-grayscale');
     const resetAccessibilityButton = document.getElementById('reset-accessibility');
 
+
+  //tamanho da fonte
+    const originalFontSize = window.getComputedStyle(document.body).fontSize;
     let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
-    // Função para aumentar a fonte
     increaseFontButton.addEventListener('click', () => {
-      fontSize += 2; // aumenta a fonte em 2px
-      document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+      fontSize += 2;
+      document.body.style.fontSize = fontSize + 'px'; 
 
-      // Seleciona e ajusta o tamanho de todos os cabeçalhos
       document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
         let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
         header.style.fontSize = (headerFontSize + 2) + 'px';
       });
     });
 
-    // Função para diminuir a fonte
     decreaseFontButton.addEventListener('click', () => {
-      if (fontSize > 10) { // evita que a fonte fique muito pequena
-        fontSize -= 2; // diminui a fonte em 2px
-        document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
+      if (fontSize > 10) {
+        fontSize -= 2;
+        document.body.style.fontSize = fontSize + 'px';
 
-        // Seleciona e ajusta o tamanho de todos os cabeçalhos
         document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
           let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
           header.style.fontSize = (headerFontSize - 2) + 'px';
         });
       }
     });
+
 
 
     resetAccessibilityButton.addEventListener('click', () => {
@@ -334,27 +334,41 @@
       setReadableFontButton.classList.remove('bg-acessibilidade2');
 
     });
-
-    //sublinhado
-    const toggleTextDecorationButton = document.getElementById('toggle-text-decoration');
-    toggleTextDecorationButton.addEventListener('click', () => {
-      const isActive = document.body.classList.toggle('text-decoration');
-      toggleTextDecorationButton.classList.toggle('bg-acessibilidade2', isActive);
-    });
-
-    // Contraste
+</script>
+<script>
     toggleContrastButton.addEventListener('click', () => {
       document.body.classList.toggle('high-contrast');
     });
-    //Escala de cinza
+  </script>
+    <script>
     toggleGrayScaleButton.addEventListener('click', () => {
       const isActive = document.body.classList.toggle('grayscale');
       toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive);
     });
+  </script>
+  <script>
+    function toggleElements() {
+      const tragaprojetodentro = document.getElementById("tragaprojetodentro");
+      const tragaprojetofora = document.getElementById("tragaprojetofora");
 
+      if (window.matchMedia("(max-width: 993px)").matches) {
+        tragaprojetodentro.classList.remove("d-none"); // Exibe o elemento
+        tragaprojetodentro.classList.add("d-block");
 
+        tragaprojetofora.classList.remove("d-block"); // Oculta o outro elemento
+        tragaprojetofora.classList.add("d-none");
+      } else {
+        tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
+        tragaprojetodentro.classList.add("d-none");
 
-    
+        tragaprojetofora.classList.remove("d-none"); // Exibe o outro elemento
+        tragaprojetofora.classList.add("d-block");
+      }
+    }
+
+    // Chama a função ao carregar a página e quando a janela é redimensionada
+    window.addEventListener("load", toggleElements);
+    window.addEventListener("resize", toggleElements);
   </script>
 </body>
 

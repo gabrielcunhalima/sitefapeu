@@ -2,11 +2,6 @@
 @section('title','FAPEU')
 @section('conteudo')
 <style>
-
-
-
-
-
   .blog-post {
     -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
@@ -180,7 +175,7 @@
 </script>
 
 <div class="jumbotron jumbotron-fluid bg-light py-4 mb-0">
-  <h1 class="container transformando text-center font-montserrat" style="font-size: 2.8em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+  <h1 class="container transformando text-center font-montserrat font-weight-bold" style="font-size: 2.5em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 <!-- 3 menus principais -->
 <div class="bg-light">
@@ -219,10 +214,10 @@
 
 <!-- Projetos -->
 <div class="bg-light m-0">
-  <div class="section-title text-center jumbotron py-4 mx-0">
+  <!-- <div class="section-title text-center jumbotron py-4 mx-0">
     <h1 class="mb-4 mt-2">Conheça os projetos que nós apoiamos</h1>
     <p class="text-muted para-desc mx-auto mb-0">+250 projetos gerenciados com excelência.</p>
-  </div>
+  </div> -->
   <div class="responsive container">
     <div class="col-lg-4 col-md-6 mt-4 pt-2">
       <div class="blog-post rounded border">
@@ -231,13 +226,13 @@
             <img src="../images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">UFSC faz parceria com batalhão do exército no Amazonas</a></h4>
+          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
         </div>
@@ -250,13 +245,13 @@
             <img src="../images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hach the UFSC 2024</a></h4>
+          <p class="text-muted mt-2">Saiba mais sobre como participar e quem estará presente nos dias de competição.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
         </div>
@@ -269,13 +264,13 @@
             <img src="../images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Become more money-minded</a></h4>
-          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">21 SEPEX</a></h4>
+          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
         </div>
@@ -288,13 +283,13 @@
             <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Comunicado oficial</a></h4>
+          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
         </div>
@@ -307,13 +302,13 @@
             <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Conheça o projeto<i class="mdi mdi-chevron-right"></i></a>
+              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-          <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Título da notícia</a></h4>
+          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
         </div>
@@ -324,7 +319,7 @@
     <div class="card bg-principal my-3 card grow text-center shadow">
       <a href="{{route('projetos.projetos')}}">
         <div class="card-body">
-          <h5 class="card-text text-white">Conheça mais projetos</h5>
+          <h5 class="card-text text-white">Notícias mais recentes</h5>
         </div>
       </a>
     </div>
@@ -346,7 +341,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
+            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -356,7 +351,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
+            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -366,7 +361,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
+            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -376,7 +371,7 @@
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
+            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -386,7 +381,7 @@
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.latic')}}">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -396,7 +391,7 @@
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-secundario" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
+            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
           </div>
         </div>
       </div>
@@ -408,7 +403,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
               <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -417,7 +412,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
               <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -426,7 +421,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
               <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario text-decoration-none" href="#">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark text-decoration-none" href="{{route('homepage.importacao')}}">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -437,7 +432,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">NAGEFI</h5>
               <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -446,7 +441,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">LATIC</h5>
               <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -455,7 +450,7 @@
             <div class="card-body">
               <h5 class="card-title font-weight-bold ">Concursos</h5>
               <p class="card-text">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-secundario" href="#">Saiba mais</a>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -466,7 +461,7 @@
 
 <!-- Apoiadas -->
 <div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
-  <div class="container80">
+  <div class="containerapoiadas mx-auto">
     <div class="section-title mb-4 pb-2">
       <h4 class="title text-center font-montserratbold">Instituições Apoiadas</h4>
     </div>

@@ -2,52 +2,80 @@
 @section('title','FAPEU - Administração')
 
 @section('conteudo')
+
 <style>
     .slick-prev:before,
     .slick-next:before {
-        color: black;
+        color:black !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 10%;
+        height: 25%;
+        z-index: 100;
+    }
+
+    .slick-prev {
+        left: -100px;
+    }
+
+    .slick-next {
+        right: -100px;
+    }
+
+    .responsive img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .slick-dots {
+        left: 0;
+        right: 0;
     }
 </style>
 
 <script>
     $(document).ready(function() {
-        if ($('.responsive').length > 0) {
-            $('.responsive').slick({
-                prevArrow: '<button type="button" class="slick-prev custom-arrow">Previous</button>',
-                nextArrow: '<button type="button" class="slick-next custom-arrow">Next</button>',
-                dots: true,
-                infinite: true,
-                speed: 800,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            dots: true,
-                            speed: 400,
-                        },
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                            speed: 400,
-                        },
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            speed: 400,
-                        },
-                    },
-                ],
-            });
-        }
+        $('.responsive').slick({
+            prevArrow: '<button type="button" class="slick-prev custom-arrow">Anterior</button>',
+            nextArrow: '<button type="button" class="slick-next custom-arrow">Próximo</button>',
+            dots: true,
+            infinite: true,
+            speed: 700,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        speed: 400,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 400
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 400
+                    }
+                }
+            ]
+        });
     });
 </script>
 
@@ -119,6 +147,11 @@
     <h1>Conselho Fiscal</h1>
     <h4>Mandato 4 anos<br>Gestão: 02/08/2021 – 01/8/2025</h4>
     <section class="responsive container tirarpontos">
+    <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
+            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="img-fluid" alt="">
+            <h3>Sinesio Stefano Dubiela Ostroski</h3>
+            <p>Presidente</p>
+        </div>
         <div class="col-lg-3 col-sm-4 wow fadeInUp px-5">
             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid" alt="">
             <h3>João Santana</h3>
@@ -176,5 +209,9 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
 @endsection

@@ -23,7 +23,7 @@ class MenuController extends Controller
     // MENU Quem somos
     public function sobre()
     {
-        return $this->renderView('quemsomos.sobre', 'sobre.png', 'Fundação de Amparo à Pesquisa e Extensão Universitária');
+        return $this->renderView('quemsomos.sobre', 'sobre.png', 'O que é a FAPEU?');
     }
 
     public function administracao()
