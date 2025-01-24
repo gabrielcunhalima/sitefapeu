@@ -8,7 +8,7 @@
         <div class="card mb-3  shadow" style="max-width: 940px;  transition: all 0.3s ease;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="/images/fornecer.jpg"alt="Espaço do Fornecedor"class="img-fluid rounded-start"style="height: 260px; object-fit: cover;"/>
+                    <img src="images/fornecer.jpg"alt="Espaço do Fornecedor"class="img-fluid rounded-start"style="height: 260px; object-fit: cover;"/>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

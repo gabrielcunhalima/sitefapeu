@@ -223,7 +223,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -242,7 +242,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -250,7 +250,7 @@
           </div>
         </a>
         <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hach the UFSC 2024</a></h4>
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hack the UFSC 2024</a></h4>
           <p class="text-muted mt-2">Saiba mais sobre como participar e quem estará presente nos dias de competição.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
@@ -261,7 +261,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -280,7 +280,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -299,7 +299,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -468,52 +468,52 @@
     <div class="row align-items-center">
       <div class="col-sm apoiadas grow">
         <a href="https://ufsc.br/">
-          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+          <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://ifc.edu.br/">
-          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
+          <img src="images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www.udesc.br/">
-          <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+          <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www.uffs.edu.br/">
-          <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+          <img src="images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://unipampa.edu.br/">
-          <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+          <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www2.ufjf.br/ufjf/">
-          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+          <img src="images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://confies.org.br/">
-          <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
+          <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www.gov.br/ebserh/pt-br">
-          <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
+          <img src="images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hu-ufjf">
-          <img src="/images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
+          <img src="images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas grow">
         <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
-          <img src="/images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+          <img src="images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
     </div>

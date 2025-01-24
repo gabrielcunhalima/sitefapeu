@@ -21,7 +21,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <!-- Custom CSS -->
-  <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
   <title>@yield('title')</title>
 </head>
@@ -40,7 +41,7 @@
   /* Custom Jumbotron */
   .jumbotron-custom {
     background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
-    url('{{ asset('../images/Paginas/' . $imagem) }}');
+    url('{{ asset('images/Paginas/' . $imagem) }}');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -50,7 +51,7 @@
   @media (max-width: 876px) {
     .jumbotron-custom {
       background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
-      url('{{ asset('../images/Paginas/' . $imagem) }}');
+      url('{{ asset('images/Paginas/' . $imagem) }}');
       background-size: contain;
       background-position: right;
       background-repeat: no-repeat;
@@ -75,7 +76,7 @@
 <body>
   <div class="accessibility-buttons d-none d-lg-block">
     <button id="toggle-accessibility" class="btn bg-azul">
-      <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
+      <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
     <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
       <button id="increase-font" class="btn bg-azul">A+</button>
@@ -97,7 +98,7 @@
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="110">
+            <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

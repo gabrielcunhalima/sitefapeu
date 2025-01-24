@@ -3,7 +3,6 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- include summernote css/js -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
   <meta charset="UTF-8">
@@ -11,25 +10,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-
-  <!-- jQuery and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -37,6 +33,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
   <title>FAPEU</title>
 </head>
@@ -94,10 +92,10 @@
 
   <div class="accessibility-buttons d-none d-lg-block">
     <button id="toggle-accessibility" class="btn bg-azul btn-info">
-      <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
+      <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
     <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-    <button id="increase-font" class="btn bg-azul">A+</button>
+      <button id="increase-font" class="btn bg-azul">A+</button>
       <button id="decrease-font" class="btn bg-azul">A-</button>
       <button id="toggle-contrast" class="btn bg-azul">Alto Contraste</button>
       <button id="toggle-grayscale" class="btn bg-azul">Escala de Cinza</button>
@@ -121,7 +119,7 @@
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="110">
+            <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -290,13 +288,13 @@
     const resetAccessibilityButton = document.getElementById('reset-accessibility');
 
 
-  //tamanho da fonte
+    //tamanho da fonte
     const originalFontSize = window.getComputedStyle(document.body).fontSize;
     let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
 
     increaseFontButton.addEventListener('click', () => {
       fontSize += 2;
-      document.body.style.fontSize = fontSize + 'px'; 
+      document.body.style.fontSize = fontSize + 'px';
 
       document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
         let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
@@ -334,13 +332,13 @@
       setReadableFontButton.classList.remove('bg-acessibilidade2');
 
     });
-</script>
-<script>
+  </script>
+  <script>
     toggleContrastButton.addEventListener('click', () => {
       document.body.classList.toggle('high-contrast');
     });
   </script>
-    <script>
+  <script>
     toggleGrayScaleButton.addEventListener('click', () => {
       const isActive = document.body.classList.toggle('grayscale');
       toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive);

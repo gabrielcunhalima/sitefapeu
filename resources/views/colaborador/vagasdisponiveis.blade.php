@@ -9,7 +9,7 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <img
-                        src="/images/vagasdispo.jpg"
+                        src="images/vagasdispo.jpg"
                         alt="Vagas Disponíveis"
                         class="img-fluid rounded-start"
                         style="height: 260px; object-fit: cover;"

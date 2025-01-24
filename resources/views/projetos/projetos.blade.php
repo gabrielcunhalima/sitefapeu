@@ -129,7 +129,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -152,7 +152,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto2.jpg" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto2.jpg" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -175,7 +175,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -199,7 +199,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto4.jpg" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto4.jpg" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -222,7 +222,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -245,7 +245,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -269,7 +269,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto7.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto7.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -292,7 +292,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto8.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto8.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
@@ -315,7 +315,7 @@
                 <div class="blog-post rounded border">
                     <a href="{{route("projetos.projetos")}}">
                         <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="../images/projetos/projeto9.png" class="img-fluid rounded-top" alt="">
+                            <img src="images/projetos/projeto9.png" class="img-fluid rounded-top" alt="">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="text-white">Clique para conhecer</p>
