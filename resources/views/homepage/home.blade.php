@@ -185,7 +185,7 @@
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
           <a href="{{route('projetos.menuprojetos')}}">
             <div class="card-body">
-              <p class="card-text text-white font-weight-bold">Gestão de Projetos</p>
+              <p class="card-text text-white font-weight-bold">Espaço do Coordenador</p>
             </div>
           </a>
         </div>
@@ -201,7 +201,7 @@
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('transparencia.menutransparencia')}}">
+          <a href="{{route('transparencia.projetostransparencia')}}">
             <div class="card-body">
               <p class="card-text text-white font-weight-bold">Transparência</p>
             </div>
@@ -337,61 +337,61 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <b>Reservas de Salas</b>
+              <b>Gestão de Projetos</b>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
+            <div class="accordion-body">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('projetos.menuprojetos')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <b>Cursos e Eventos</b>
+              <b>Reservas de Salas</b>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
+            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <b>Importação de Bens e Insumos</b>
+              <b>Cursos e Eventos</b>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
+            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFour">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              <b>NAGEFI</b>
+              <b>Importação de Bens e Insumos</b>
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
+            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFive">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              <b>LATIC</b>
+              <b>NAGEFI</b>
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
+            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingSix">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-              <b>Concursos</b>
+              <b>LATIC</b>
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
           </div>
         </div>
       </div>
@@ -401,17 +401,17 @@
         <div class="col-md-6 col-lg-4">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
-              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Saiba mais</a>
+              <h5 class="card-title font-weight-bold ">Gestão de Projetos</h5>
+              <p class="card-text">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.</p><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('projetos.menuprojetos')}}" target="_blank">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
-              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
+              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
+              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a>
             </div>
           </div>
@@ -419,8 +419,8 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
-              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
+              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
+              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark text-decoration-none" href="{{route('homepage.importacao')}}">Saiba mais</a>
             </div>
           </div>
@@ -430,8 +430,8 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
-              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
+              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
@@ -439,18 +439,18 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">LATIC</h5>
-              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
+              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Concursos</h5>
-              <p class="card-text">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold ">LATIC</h5>
+              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@
 </tr>
 <tr>
 <td align="center">&nbsp;<img src="https://api.fapeu.com.br/tiny/CapaFapeu2019.jpg" alt="" width="156" height="212" /></td>
-<td align="center">&nbsp;<img title="Revista FAPEU vOL 12" src="https://api.fapeu.com.br/tiny/Revista_fapeu_vol12.jpg" alt="Capa Revista FAPEU - Vol 12" width="156" height="198" /></td>
+<td align="center">&nbsp;<img title="Revista FAPEU vOL 12" src="https://api.fapeu.com.br/tiny/Revista_fapeu_vol12.jpg" alt="Capa Revista FAPEU | Vol 12" width="156" height="198" /></td>
 <td align="center">&nbsp;</td>
 </tr>
 <tr>

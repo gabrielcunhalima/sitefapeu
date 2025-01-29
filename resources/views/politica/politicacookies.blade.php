@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Política de Cookies')
+@section('title','FAPEU | Política de Cookies')
 
 @section('conteudo')
 <a href="../pdfs/Politicas/politica_de_cookies_fapeu.pdf" download>

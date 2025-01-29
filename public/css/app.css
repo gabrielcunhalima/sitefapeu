@@ -293,8 +293,12 @@
     background-color: #3D9A78;
   }
 
+  .bg-creme {
+    background-color: #fff2cf;
+  }
+
   .bg-azul {
-    background-color: #69bbff;
+    background-color:rgb(61, 161, 255);
   }
 
   .bg-licitacao {
@@ -318,7 +322,7 @@
   }
 
   .bg-verde {
-    background-color: #009270;
+    background-color: #0d8f2d;
   }
 
   .bg-verde2 {
@@ -410,9 +414,7 @@
     flex: 0 1 auto;
   }
 
-  .btn:hover {
-    background-color:#808080;
-  }
+
 
   .custom-btn {
     background-color: #009170;

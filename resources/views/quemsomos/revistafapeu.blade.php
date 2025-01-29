@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Revista FAPEU')
+@section('title','FAPEU | Revista FAPEU')
 
 @section('conteudo')
 <div class="container">
@@ -17,7 +17,7 @@
             <a href="https://heyzine.com/flip-book/9e24ef8a97.html"><img src="https://api.fapeu.com.br/tiny/CapaFapeu2021.png" alt="" width="160" height="213" class="grow"/><br><br><b>N° 13. Ano XIII. Volume 13. 2022.<br>ISSN 1806-0110</b></a>
         </div>
         <div class=" mt-4 col-4-md col-lg-3 col-sm-12 d-flex">
-            <a href="https://heyzine.com/flip-book/272df63562.html"><img title="Revista FAPEU vOL 12" src="https://api.fapeu.com.br/tiny/Revista_fapeu_vol12.jpg" alt="Capa Revista FAPEU - Vol 12" width="160" height="213" class="grow"/><b><br><br>N° 12. Ano XII. Volume 12. 2020.<br>ISSN: 1806-0110</b></a>
+            <a href="https://heyzine.com/flip-book/272df63562.html"><img title="Revista FAPEU vOL 12" src="https://api.fapeu.com.br/tiny/Revista_fapeu_vol12.jpg" alt="Capa Revista FAPEU | Vol 12" width="160" height="213" class="grow"/><b><br><br>N° 12. Ano XII. Volume 12. 2020.<br>ISSN: 1806-0110</b></a>
         </div>
         <div class=" mt-4 col-4-md col-lg-3 col-sm-12 d-flex">
             <a href=""><img src="https://api.fapeu.com.br/tiny/CapaFapeu2019.jpg" alt="" width="160" height="213" class="grow"/><br><br><b>N° 11. Ano XI. Volume 11. 2019.<br>ISSN: 1806-0110 ESTÁ SEM LINK</b></a>

@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Política Anticorrupção')
+@section('title','FAPEU | Política Anticorrupção')
 
 @section('conteudo')
 <div class="container">

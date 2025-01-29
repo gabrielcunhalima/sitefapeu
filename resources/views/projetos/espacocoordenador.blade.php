@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Espaço do Coordenador')
+@section('title','FAPEU | Espaço do Coordenador')
 
 @section('conteudo')
 <div class="container">

@@ -41,7 +41,7 @@
   /* Custom Jumbotron */
   .jumbotron-custom {
     background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
-    url('{{ asset('images/Paginas/' . $imagem) }}');
+    url('{{ asset(' images/Paginas/' . $imagem) }}');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
   @media (max-width: 876px) {
     .jumbotron-custom {
       background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
-      url('{{ asset('images/Paginas/' . $imagem) }}');
+      url('{{ asset(' images/Paginas/' . $imagem) }}');
       background-size: contain;
       background-position: right;
       background-repeat: no-repeat;
@@ -75,15 +75,15 @@
 
 <body>
   <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn bg-azul">
+    <button id="toggle-accessibility" class="btn bg-info">
       <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
-    <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-      <button id="increase-font" class="btn bg-azul">A+</button>
-      <button id="decrease-font" class="btn bg-azul">A-</button>
-      <button id="toggle-contrast" class="btn bg-azul">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-azul">Escala de Cinza</button>
-      <button id="reset-accessibility" class="btn bg-azul">Restaurar</button>
+    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
+      <button id="increase-font" class="btn bg-info">A+</button>
+      <button id="decrease-font" class="btn bg-info">A-</button>
+      <button id="toggle-contrast" class="btn bg-info">Alto Contraste</button>
+      <button id="toggle-grayscale" class="btn bg-info">Escala de Cinza</button>
+      <button id="reset-accessibility" class="btn bg-info">Restaurar</button>
       <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -212,7 +212,7 @@
             </p>
           </ul>
         </div>
-        <div class="d-flex">
+        <div style="position:fixed;top:45px;right:45px;">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -260,6 +260,12 @@
 
     toggleAccessibilityButton.addEventListener('click', () => {
       accessibilityButtonsContainer.classList.toggle('d-none');
+
+      if (accessibilityButtonsContainer.style.top === '40vh') {
+        accessibilityButtonsContainer.style.top = '';
+      } else {
+        accessibilityButtonsContainer.style.top = '40vh';
+      }
     });
 
     const increaseFontButton = document.getElementById('increase-font');

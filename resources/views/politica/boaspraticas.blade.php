@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Boas Praticas')
+@section('title','FAPEU | Boas Praticas')
 
 @section('conteudo')
 <div class="container text-justify">
@@ -73,7 +73,7 @@
     <div class="row my-4">
         <div class="col-md-4 col-sm-12"><img src="images/sustentavellivro.png" alt="Ecobag" width="330" height="330" class="shadow-lg"></div>
         <div class="col-md-8 col-sm-12 margemtelapequena">
-            <p><b>Estante FAPEU - Estante itinerante de livros e revista</b></p>
+            <p><b>Estante FAPEU | Estante itinerante de livros e revista</b></p>
             <p>Desde outubro de 2018, a FAPEU disponibiliza, gratuitamente, livros e revistas para os colaboradores e visitantes. O projeto tem o objetivo de facilitar o acesso a livros e revistas, incentivar o hábito da leitura, criar novos leitores e divulgar os mais diversos escritores, além de contribuir com o reuso dessas publicações.</p>
             <p>As doações para a Estante FAPEU podem ser feitas na Recepção da sede da Fundação. São aceitos livros científicos, de romance, conto, poesia, ficção, autoajuda, crônica, aventura, biografia, entre outros. As revistas podem ser as mais diversas, como as de cultura, ciência, música e variedade. Os livros e as revistas podem ser levados e não precisam, necessariamente, ser devolvidos.</p>
         </div>
