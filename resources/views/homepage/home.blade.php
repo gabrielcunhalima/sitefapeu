@@ -192,7 +192,7 @@
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('fornecedor.menulicitacao')}}">
+          <a href="{{route('transparencia.selecoespublicas')}}">
             <div class="card-body">
               <p class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</p>
             </div>

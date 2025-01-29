@@ -41,7 +41,7 @@
   /* Custom Jumbotron */
   .jumbotron-custom {
     background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
-    url('{{ asset(' images/Paginas/' . $imagem) }}');
+    url('{{ asset("images/Paginas/" . $imagem) }}');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
   @media (max-width: 876px) {
     .jumbotron-custom {
       background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
-      url('{{ asset(' images/Paginas/' . $imagem) }}');
+      url('{{ asset("images/Paginas/" . $imagem) }}');
       background-size: contain;
       background-position: right;
       background-repeat: no-repeat;
@@ -212,7 +212,7 @@
             </p>
           </ul>
         </div>
-        <div style="position:fixed;top:45px;right:45px;">
+        <div style="position:absolute;top:45px;right:45px;">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
