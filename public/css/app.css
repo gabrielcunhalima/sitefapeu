@@ -103,6 +103,14 @@
     transform: scale(1.04);
   }
 
+  .grow2 {
+    transition: all .2s ease-in-out;
+  }
+
+  .grow2:hover {
+    transform: scale(1.019);
+  }
+
 
   /* Estilo da navbar */
   .navbar-custom {
@@ -293,6 +301,10 @@
     background-color: #3D9A78;
   }
 
+  .bg-homebotoes {
+    background-color: #E9ECEF !important;
+  }
+
   .bg-creme {
     background-color: #fff2cf;
   }
@@ -334,7 +346,7 @@
   }
 
   .bg-verde4 {
-    background-color: #06551a;
+    background-color: #155c27;
   }
 
   .bg-secundario {
@@ -375,6 +387,10 @@
 
   .bg-cinza4 {
     background-color: #dee1e4;
+  }
+
+  .bg-roxo {
+    background-color: #76027f;
   }
 
   .text-principal {
@@ -517,7 +533,7 @@
   /* Ajuste na posição dos botões de acessibilidade */
   .accessibility-buttons {
     position: fixed;
-    top: 34%;
+    top: 38.5%;
     right: 4px;
     z-index: 1050;
   }

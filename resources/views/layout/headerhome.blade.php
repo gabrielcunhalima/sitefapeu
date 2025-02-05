@@ -60,7 +60,7 @@
     display: block;
     height: 20px;
     width: 20px;
-    background: url('../img/back.png') no-repeat;
+    background: url('img/back.png') no-repeat;
   }
 
   .next {
@@ -81,8 +81,8 @@
 
   .link-hover:hover {
     transform: translateY(-10px);
-    background-color: #0F4B2F;
   }
+  
 </style>
 
 <body>
@@ -91,15 +91,15 @@
   </div> -->
 
   <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn bg-azul btn-info">
+    <button id="toggle-accessibility" class="btn bg-info btn-info">
       <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
     <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-      <button id="increase-font" class="btn bg-azul">A+</button>
-      <button id="decrease-font" class="btn bg-azul">A-</button>
-      <button id="toggle-contrast" class="btn bg-azul">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-azul">Escala de Cinza</button>
-      <button id="reset-accessibility" class="btn bg-azul">Restaurar</button>
+      <button id="increase-font" class="btn bg-info">A+</button>
+      <button id="decrease-font" class="btn bg-info">A-</button>
+      <button id="toggle-contrast" class="btn bg-info">Alto Contraste</button>
+      <button id="toggle-grayscale" class="btn bg-info">Escala de Cinza</button>
+      <button id="reset-accessibility" class="btn bg-info">Restaurar</button>
       <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -208,7 +208,7 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
+                  <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -227,7 +227,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
-                  <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
+                  <a class="dropdown-item" href="{{route('faleconosco.canaldenuncia')}}">Canal de Comunicações e Denúncias</a>
                 </div>
               </li>
             </p>

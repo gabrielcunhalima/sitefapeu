@@ -1,5 +1,18 @@
 @extends('layout.header')
-@section('title','FAPEU | Projetos')
+@section('title','FAPEU - Projetos')
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Meu Site')</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Outros estilos CSS personalizados -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+
 
 @section('conteudo')
 <style>
@@ -62,7 +75,7 @@
     }
 
     .btn:hover {
-        background-color:black;
+        background-color: black;
         color: black;
     }
 
@@ -113,227 +126,105 @@
         letter-spacing: 0.5px;
         font-size: 30px;
     }
+    .card-img-container {
+    width: 100%;
+    aspect-ratio: 16/9; 
+    overflow: hidden;
+}
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+  height: 250px; 
+  overflow: hidden;
+}
+
+.card-text { 
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
 </style>
 <div class="container">
     <div class="container mt-100 mt-60">
         <div class="row">
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
-                    <h4 class="title mb-4">Conheça nossos projetos</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">São mais de 250 projetos gerenciados pela fundação. </p>
+                    <h4 class="title mb-4">Nóticias Recentes</h4>
+                    <p class="text-muted para-desc mx-auto mb-0">Confira o que aconteceu nesses últimos dias na FAPEU.</p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Lisa Marvel</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
 
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto2.jpg" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Become more money-minded</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Joya Aafri</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
 
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Martin Sobhe</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto4.jpg" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Lisa Marvel</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
+        <!--Inicio da lógica para post -->
 
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
+        <body>
+            <div class="row">
+                @foreach ($news as $item)
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="blog-post rounded border">
+                        <a href="{{ $item['link'] }}">
+                            <div class="blog-img d-block overflow-hidden position-relative card-img-container">
+                                <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
+                                <div class="overlay rounded-top bg-dark"></div>
+                                <div class="post-meta">
+                                    <p class="text-white">Clique para conhecer</p>
+                                </div>  
+                            </div>
+                        </a>
+                        <div class="content p-3">
+                            <h4 class="mt-2"><a href="{{ $item['link'] }}" class="text-dark title">{{ $item['titulo'] }}</a></h4>
+                            <p class="text-muted mt-2 card-text">{!! $item['corpo'] !!}</p>
+                            <div class="pt-3 mt-3 border-top d-flex">
+                                <div class="author mt-2">
+                                    <h6 class="mb-0"><a href="{{ $item['link'] }}" class="text-dark name">Leia mais</a></h6>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Become more money-minded</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Joya Aafri</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Martin Sobhe</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto7.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Lisa Marvel</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto8.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Become more money-minded</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Joya Aafri</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                <div class="blog-post rounded border">
-                    <a href="{{route("projetos.projetos")}}">
-                        <div class="blog-img d-block overflow-hidden position-relative">
-                            <img src="images/projetos/projeto9.png" class="img-fluid rounded-top" alt="">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="text-white">Clique para conhecer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content p-3">
-                        <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with friends.</a></h4>
-                        <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. Vou adicionar mais palavras</p>
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Martin Sobhe</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end blog post-->
-            </div><!--end col-->
-        </div><!--end row-->
+                    </div><!--end blog post-->
+                </div><!--end coluna-->
+                @endforeach
+            </div>
     </div>
 </div>
 @endsection
+
+@if(session('success'))
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Sucesso!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{ session('success') }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+        setTimeout(() => {
+            successModal.hide();
+        }, 3000); // Fecha após 5 segundos
+    };
+</script>
+
+</body>
+
+</html>
+@endif

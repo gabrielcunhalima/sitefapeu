@@ -24,7 +24,7 @@
         <p><b>Eduarda Silva Farias</b> (Coordenadora de Prestação de Contas) - Coordenadora</p>
         <p><b>Pedro Marques Abdo</b> (Técnico de Projetos) - Membro</p>
         <p><b>Georgia Maia Ventura</b> (Coordenadora do Setor de Projetos) - Membro</p><br>
-        <p><b><a href="https://www.fapeu.com.br/downloads/portaria_n._015_2021_de_-_designa_comit_de_gest_o_de_riscos.pdf" target="_blank"> PORTARIA N. 015/DE/2021, DE 9 de novembro de 2021 -– Designação dos membros do Comitê de Gestão de Riscos</b></p> </a>
+        <p><b><a href="https://www.fapeu.com.br/downloads/portaria_n._015_2021_de_-_designa_comit_de_gest_o_de_riscos.pdf" target="_blank"> PORTARIA N. 015/DE/2021, DE 9 de novembro de 2021 – Designação dos membros do Comitê de Gestão de Riscos</b></p> </a>
         <p><b><a href="#" target="_blank">PORTARIA N. 006/DE/2019, DE 28 DE MARÇO DE 2019 – Regimento Interno Comitê de Gestão de Riscos</b></p><br> </a>
         <p><b>E-mail: risco@fapeu.org.br<br>Telefone: (48) 3331-4368</b></p>
     </div>

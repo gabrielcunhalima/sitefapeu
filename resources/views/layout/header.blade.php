@@ -116,6 +116,7 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
+                  <a class="dropdown-item" href="{{route('projetos.noticiaspost')}}">Notícias</a>
                 </div>
               </li>
             </p>
@@ -187,7 +188,7 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
+                  <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -206,7 +207,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
-                  <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
+                  <a class="dropdown-item" href="{{route('faleconosco.canaldenuncia')}}">Canal de Comunicações e Denúncias</a>
                 </div>
               </li>
             </p>
@@ -221,8 +222,8 @@
             <a href="">
               <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
             </a>
-          </div>
-      </div> -->
+          </div> -->
+      </div>
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

@@ -29,7 +29,7 @@ Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name
 Route::get('/drhflow',[MenuController::class,'drhflow'])->name('colaborador.drhflow');
 Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMFlow');
 Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
-Route::get('/areadministrativa',[MenuController::class,'areadministrativa'])->name('colaborador.areadministrativa');
+Route::get('/areaadministrativa',[MenuController::class,'areaadministrativa'])->name('colaborador.areaadministrativa');
 
 
 //FORNECEDOR
@@ -94,6 +94,11 @@ Route::get('/reltecnicosemestral',[MenuController::class,'reltecnicosemestral'])
 //FALECONOSCO
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
+Route::get('/canaldenuncia',[MenuController::class,'canaldenuncia'])->name('faleconosco.canaldenuncia');
+
+//NOTICIAS
+
+Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('projetos.noticiaspost');
 
 
 
