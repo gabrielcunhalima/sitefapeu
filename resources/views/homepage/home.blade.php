@@ -174,13 +174,22 @@
   });
 </script>
 
-<div class="jumbotron jumbotron-fluid bg-light py-4 mb-0">
-  <h1 class="container transformando text-center font-montserrat font-weight-bold" style="font-size: 2.5em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+<div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
+  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 <!-- 3 menus principais -->
-<div class="bg-light">
+<div class="bg-homebotoes pb-4">
   <div class="container">
     <div class="row align-items-center">
+      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
+          <a href="{{route('projetos.menuprojetos')}}">
+            <div class="card-body">
+              <p class="card-text text-white font-weight-bold">Espaço do Coordenador</p>
+            </div>
+          </a>
+        </div>
+      </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
           <a href="{{route('projetos.menuprojetos')}}">
@@ -192,16 +201,7 @@
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('fornecedor.menulicitacao')}}">
-            <div class="card-body">
-              <p class="card-text text-white font-weight-bold">Licitações e Prestadores de Serviço</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('transparencia.menutransparencia')}}">
+          <a href="{{route('transparencia.projetostransparencia')}}">
             <div class="card-body">
               <p class="card-text text-white font-weight-bold">Transparência</p>
             </div>
@@ -212,18 +212,18 @@
   </div>
 </div>
 
-<!-- Projetos -->
-<div class="bg-light m-0">
-  <!-- <div class="section-title text-center jumbotron py-4 mx-0">
-    <h1 class="mb-4 mt-2">Conheça os projetos que nós apoiamos</h1>
-    <p class="text-muted para-desc mx-auto mb-0">+250 projetos gerenciados com excelência.</p>
-  </div> -->
-  <div class="responsive container">
+<!-- Noticias -->
+<div class="bg-light">
+  <div class="section-title jumbotron py-2 mb-0 bg-light">
+    <h2 class="container my-2 text-center">Notícias recentes</h2>
+    <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
+  </div>
+  <div class="responsive container mt-0">
     <div class="col-lg-4 col-md-6 mt-4 pt-2">
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -242,15 +242,15 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta justify-content-center">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
             </div>
           </div>
         </a>
-        <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hach the UFSC 2024</a></h4>
+        <div class="content p-3 bg-light">
+          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hack the UFSC 2024</a></h4>
           <p class="text-muted mt-2">Saiba mais sobre como participar e quem estará presente nos dias de competição.</p>
           <div class="pt-3 mt-3 border-top d-flex">
           </div>
@@ -261,7 +261,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -280,7 +280,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -299,7 +299,7 @@
       <div class="blog-post rounded border">
         <a href="">
           <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="../images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
+            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
             <div class="overlay rounded-top bg-dark"></div>
             <div class="post-meta">
               <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
@@ -316,10 +316,10 @@
     </div><!--end col-->
   </div>
   <div class="container col-12 d-flex justify-content-center">
-    <div class="card bg-principal my-3 card grow text-center shadow">
+    <div class="card bg-principal my-3 card text-center shadow grow2">
       <a href="{{route('projetos.projetos')}}">
-        <div class="card-body">
-          <h5 class="card-text text-white">Notícias mais recentes</h5>
+        <div class="card-body" style="min-width:15vw;">
+          <h5 class="card-text text-white">Mais notícias</h5>
         </div>
       </a>
     </div>
@@ -337,61 +337,61 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <b>Reservas de Salas</b>
+              <b>Licitações</b>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
+            <div class="accordion-body">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('projetos.menuprojetos')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <b>Cursos e Eventos</b>
+              <b>Reservas de Salas</b>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
+            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <b>Importação de Bens e Insumos</b>
+              <b>Cursos e Eventos</b>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
+            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFour">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              <b>NAGEFI</b>
+              <b>Importação de Bens e Insumos</b>
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
+            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingFive">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              <b>LATIC</b>
+              <b>NAGEFI</b>
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
+            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingSix">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-              <b>Concursos</b>
+              <b>LATIC</b>
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
           </div>
         </div>
       </div>
@@ -401,17 +401,17 @@
         <div class="col-md-6 col-lg-4">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
-              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala" target="_blank">Saiba mais</a>
+              <h5 class="card-title font-weight-bold">Licitações</h5>
+              <p class="card-text">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.</p><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('projetos.menuprojetos')}}" target="_blank">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
-              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
+              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
+              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a>
             </div>
           </div>
@@ -419,8 +419,8 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
-              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
+              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
+              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark text-decoration-none" href="{{route('homepage.importacao')}}">Saiba mais</a>
             </div>
           </div>
@@ -430,8 +430,8 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
-              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
+              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
@@ -439,18 +439,18 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">LATIC</h5>
-              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
+              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Concursos</h5>
-              <p class="card-text">Organização completa de concursos e processos seletivos, com foco em eficiência, segurança e transparência.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold ">LATIC</h5>
+              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -466,54 +466,54 @@
       <h4 class="title text-center font-montserratbold">Instituições Apoiadas</h4>
     </div>
     <div class="row align-items-center">
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://ufsc.br/">
-          <img src="/images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+          <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://ifc.edu.br/">
-          <img src="/images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
+          <img src="images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www.udesc.br/">
-          <img src="/images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+          <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www.uffs.edu.br/">
-          <img src="/images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+          <img src="images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://unipampa.edu.br/">
-          <img src="/images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+          <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www2.ufjf.br/ufjf/">
-          <img src="/images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
+          <img src="images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://confies.org.br/">
-          <img src="/images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
+          <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www.gov.br/ebserh/pt-br">
-          <img src="/images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
+          <img src="images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hu-ufjf">
-          <img src="/images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
+          <img src="images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
         </a>
       </div>
-      <div class="col-sm apoiadas grow">
+      <div class="col-sm apoiadas link-hover">
         <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
-          <img src="/images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+          <img src="images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
         </a>
       </div>
     </div>

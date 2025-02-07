@@ -29,7 +29,7 @@ Route::get('/vagasdisponiveis',[MenuController::class,'vagasdisponiveis'])->name
 Route::get('/drhflow',[MenuController::class,'drhflow'])->name('colaborador.drhflow');
 Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMFlow');
 Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
-Route::get('/areadministrativa',[MenuController::class,'areadministrativa'])->name('colaborador.areadministrativa');
+Route::get('/areaadministrativa',[MenuController::class,'areaadministrativa'])->name('colaborador.areaadministrativa');
 
 
 //FORNECEDOR
@@ -90,37 +90,15 @@ Route::get('/relanualgestao',[MenuController::class,'relanualgestao'])->name('tr
 Route::get('/selecoespublicas',[MenuController::class,'selecoespublicas'])->name('transparencia.selecoespublicas');
 Route::get('/projetostransparencia',[MenuController::class,'projetostransparencia'])->name('transparencia.projetostransparencia');
 Route::get('/reltecnicosemestral',[MenuController::class,'reltecnicosemestral'])->name('transparencia.reltecnicosemestral');
-Route::get('/noticias',[MenuController::class,'noticias'])->name('noticias.noticias');
 
 //FALECONOSCO
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
+Route::get('/canaldenuncia',[MenuController::class,'canaldenuncia'])->name('faleconosco.canaldenuncia');
+
+//NOTICIAS
+
+Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('projetos.noticiaspost');
 
 
-
-
-
-//ADMIN
-
-Route::get('/login', [MenuController::class, 'verlogin'])->name('login.login');
-Route::post('/login', [MenuController::class, 'login'])->name('login.login');
-
-Route::middleware(['auth'])->group(function () {
-
-    Route::get('/admin', [MenuController::class, 'menuadmin'])->name('admin.menu');
-    
-    Route::get('admin/adicionarnoticia', [AdminController::class, 'createNoticia'])->name('admin.adicionarnoticia');
-    Route::post('noticias/store', [AdminController::class, 'storeNoticia'])->name('noticias.store');
-
-    Route::get('admin/adicionarselecaopublica', [AdminController::class, 'createSelecaoPublica'])->name('admin.adicionarselecaopublica');
-    Route::post('selecoespublicas/store', [AdminController::class, 'storeSelecaoPublica'])->name('selecoespublicas.store');
-
-    Route::get('/admin/adicionarusuario', [AdminController::class, 'createUsuario'])->name('admin.createusuario');
-    Route::post('/admin/adicionarusuario', [AdminController::class, 'adicionarUsuario'])->name('admin.adicionarusuario');
-    
-    Route::post('/', [AdminController::class, 'logout'])->name('logout');
-
-
-    
-});
 

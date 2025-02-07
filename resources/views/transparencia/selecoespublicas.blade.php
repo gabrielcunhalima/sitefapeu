@@ -8,7 +8,6 @@
         <thead class="bg-verdeescuro text-white">
             <tr>
                 <th scope="col">Ordem</th>
-                <th scope="col">Processo</th>
                 <th scope="col">Orgão</th>
                 <th scope="col">Projeto</th>
                 <th scope="col">Contrato/Convênio</th>
@@ -23,7 +22,6 @@
             @foreach ($dados as $selecao)
                 <tr>
                     <td class="align-middle">{!! $selecao->ordem!!}</td>
-                    <td class="align-middle">{!! $selecao->processo!!}</td>
                     <td class="align-middle">{!! $selecao->orgao!!}</td>
                     <td class="align-middle"><a href="">{!! $selecao->projeto!!}</a></td>
                     <td class="align-middle"><a href="">{!! $selecao->contratoconvenio!!}</a></td>

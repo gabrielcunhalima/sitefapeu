@@ -13,7 +13,7 @@
         <div class="row mt-1">
             <div class="col-md-12">
                 <div class="card mb-3 shadow-lg">
-                    <img class="card-img-top shadow" src="/images/Fapeu_bg.png" alt="Imagem de capa do card">
+                    <img class="card-img-top shadow" src="images/Fapeu_bg.png" alt="Imagem de capa do card">
 
                     <div class="card-body">
                         <br>
@@ -45,7 +45,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4 col-sm-12 text-center">
-                                <a href="{{route('transparencia.faq')}}" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
+                                <a href="{{route('transparencia.faq')}}" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
                                     Perguntas Frequentes
                                 </a>
                             </div>

@@ -1,9 +1,9 @@
 @extends('layout.header')
-@section('title','FAPEU - Formulários')
+@section('title','FAPEU | Formulários')
 
 @section('conteudo')
 <div class="container" style="font-size:16px;">
-    <h3 class="text-center text-white bg-roxo rounded-lg py-2 mt-auto font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
+    <h3 class="text-center text-white bg-roxo rounded py-2 mt-auto font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
     <table class="table table-bordered shadow">
         <thead class="bg-verdeescuro text-white">
             <tr>
@@ -143,7 +143,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr onclick="window.location.href='https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap174.p'" style="cursor: pointer;">
+            <!-- 9.1 https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap174.p' -->
+            <tr onclick="window.location.href='https://eventos.fapeu.com.br/calculo/public'" style="cursor: pointer;">
                 <td>9.1 Calculo Encargos Sobre Prestação Serviços Autonomos</td>
                 <td>08/04/2024</td>
             </tr>
@@ -151,11 +152,13 @@
                 <td>9.2 Simulador para Custos Salariais CLT</td>
                 <td>08/04/2024</td>
             </tr>
-            <tr onclick="window.location.href='https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap178.p'" style="cursor: pointer;">
+            <!-- 9.3 'https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap178.p' -->
+            <tr onclick="window.location.href='https://eventos.fapeu.com.br/calculo/public'" style="cursor: pointer;">
                 <td>9.3 Cálculo para Prestação de Serviços/Autônomo informando o Líquido</td>
                 <td>08/04/2024</td>
             </tr>
-            <tr onclick="window.location.href='https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap181.p'" style="cursor: pointer;">
+            <!-- 9.4 'https://fap6.fapeu.org.br/scripts/fapeufap.pl/swfwfap181.p' -->
+            <tr onclick="window.location.href='https://eventos.fapeu.com.br/calculo/public'" style="cursor: pointer;">
                 <td>9.4 Cálculo para Prestação de Serviços informando o custo para o Projeto</td>
                 <td>08/04/2024</td>
             </tr>

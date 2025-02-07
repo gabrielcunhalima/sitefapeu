@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - FAPEU - Organograma')
+@section('title','FAPEU | Organograma')
 
 @section('conteudo')
 <div class="container">

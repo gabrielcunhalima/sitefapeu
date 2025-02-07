@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Webmail FAPEU')
+@section('title','FAPEU | Webmail FAPEU')
 
 @section('conteudo')
 
@@ -17,7 +17,7 @@
 
                 
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center" style="margin-top: -20px;">
-                        <img src="/images/IconsAreaADM/vote_4474105.png" alt="Ícone" style=" height: 50px;">
+                        <img src="images/IconsAreaADM/vote_4474105.png" alt="Ícone" style=" height: 50px;">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">WebMail</h5>

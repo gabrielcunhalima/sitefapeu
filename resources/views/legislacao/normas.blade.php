@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Normas Internas FAPEU e Instituições Apoiadas')
+@section('title','FAPEU | Normas Internas FAPEU e Instituições Apoiadas')
 
 @section('conteudo')
 <div class="container">
@@ -139,7 +139,7 @@
         Regulamenta as relações entre as Fundações de Apoio e a Universidade Estadual de Maringá para os efeitos da Lei Estadual No 20.537/2021, de 20 de abril de 2021.</p><hr><br>
     </div>
     <div class="text-justify">
-        <h3 class="font-weight-bold">EBSERH HU UFJF / EBSERH HU UFJF </h3>
+        <h3 class="font-weight-bold">EBSERH HU UFJF / EBSERH HU UFSC </h3>
         <p><i>Hospital Universitário da Universidade de Juiz de Fora / Hospital Universitário da Universidade Federal de Santa Catarina </i></p><br>
         <p><strong><a href="https://www.gov.br/ebserh/pt-br/acesso-a-informacao/boletim-de-servico/sede/2022/anexos/norma_de_relacionamento_entre_a_ebserh_e_as_fundacoes_de_apoio_vf.pdf" target="_blank">NORMA DE RELACIONAMENTO ENTRE A EBSERH E AS FUNDAÇÕES DE APOIO</strong></a>
         <br></p><br>

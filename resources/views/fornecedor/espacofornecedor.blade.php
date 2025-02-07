@@ -8,7 +8,7 @@
         <div class="card mb-3  shadow" style="max-width: 940px;  transition: all 0.3s ease;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="/images/fornecer.jpg"alt="Espaço do Fornecedor"class="img-fluid rounded-start"style="height: 260px; object-fit: cover;"/>
+                    <img src="images/fornecer.jpg"alt="Espaço do Fornecedor"class="img-fluid rounded-start"style="height: 260px; object-fit: cover;"/>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -24,7 +24,7 @@
 
                         <div class="d-flex justify-content-center">
 
-                            <a href="http://150.162.78.45:8080/Curriculo/" target="_blank" class="btn btn-success mt-4"
+                            <a href="http://150.162.78.4/#/login/fornecedor" target="_blank" class="btn btn-success mt-4"
                                 style="border-radius: 50px; padding: 10px 30px; font-size: 16px;">
                                 Acesse o Portal do Fornecedor <i class="fa fa-arrow-right"></i>
                             </a>

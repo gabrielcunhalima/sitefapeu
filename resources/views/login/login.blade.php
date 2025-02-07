@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Login FAPEU')
+@section('title','FAPEU | Login FAPEU')
 
 @section('conteudo')
 

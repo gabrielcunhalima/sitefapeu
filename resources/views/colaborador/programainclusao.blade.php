@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Programa de Inclusão')
+@section('title','FAPEU | Programa de Inclusão')
 
 @section('conteudo')
 
@@ -12,11 +12,11 @@
       
       <!-- Logo section -->
       <div class="d-flex justify-content-center align-items-center">
-        <img src="/images/logo3.png" alt="Logo" style="height: 120px;">
+        <img src="images/logo3.png" alt="Logo" style="height: 120px;">
       </div>
 
       <!-- Title section with styled header similar to image -->
-      <h1 class="display-5 mt-4 " style="font-weight: bold; color: #146551;">Programa Fapeu de Inclusão</h1>
+      <h1 class="display-5 mt-4 " style="font-weight: bold; color: #146551;">Programa FAPEU de Inclusão</h1>
       
       <div class= "text-justify">
       <!-- Content section styled like the image -->

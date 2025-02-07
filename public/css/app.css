@@ -103,6 +103,14 @@
     transform: scale(1.04);
   }
 
+  .grow2 {
+    transition: all .2s ease-in-out;
+  }
+
+  .grow2:hover {
+    transform: scale(1.019);
+  }
+
 
   /* Estilo da navbar */
   .navbar-custom {
@@ -293,8 +301,16 @@
     background-color: #3D9A78;
   }
 
+  .bg-homebotoes {
+    background-color: #E9ECEF !important;
+  }
+
+  .bg-creme {
+    background-color: #fff2cf;
+  }
+
   .bg-azul {
-    background-color: #69bbff;
+    background-color:rgb(61, 161, 255);
   }
 
   .bg-licitacao {
@@ -318,7 +334,7 @@
   }
 
   .bg-verde {
-    background-color: #009270;
+    background-color: #0d8f2d;
   }
 
   .bg-verde2 {
@@ -330,7 +346,7 @@
   }
 
   .bg-verde4 {
-    background-color: #06551a;
+    background-color: #155c27;
   }
 
   .bg-secundario {
@@ -373,6 +389,10 @@
     background-color: #dee1e4;
   }
 
+  .bg-roxo {
+    background-color: #76027f;
+  }
+
   .text-principal {
     color: #054615;
   }
@@ -404,14 +424,8 @@
     flex: 0 1 auto;
   }
 
-  .menu-centralizado {}
-
   .botao-direita {
     flex: 0 1 auto;
-  }
-
-  .btn:hover {
-    background-color:#808080;
   }
 
   .custom-btn {
@@ -519,7 +533,7 @@
   /* Ajuste na posição dos botões de acessibilidade */
   .accessibility-buttons {
     position: fixed;
-    top: 34%;
+    top: 38.5%;
     right: 4px;
     z-index: 1050;
   }
@@ -607,7 +621,7 @@
     color: #080808;
     font-weight: 300;
     background-size: cover;
-    background-image: url('/images/Fundação_de_(2).png');
+    background-image: url('images/Fundação_de_(2).png');
     background-repeat: no-repeat;
     max-height: NONE;
     margin-bottom: 20px;

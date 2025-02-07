@@ -21,7 +21,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <!-- Custom CSS -->
-  <link href="{{ asset('../css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
   <title>@yield('title')</title>
 </head>
@@ -40,7 +41,7 @@
   /* Custom Jumbotron */
   .jumbotron-custom {
     background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
-    url('{{ asset('../images/Paginas/' . $imagem) }}');
+    url('{{ asset("images/Paginas/" . $imagem) }}');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -50,7 +51,7 @@
   @media (max-width: 876px) {
     .jumbotron-custom {
       background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
-      url('{{ asset('../images/Paginas/' . $imagem) }}');
+      url('{{ asset("images/Paginas/" . $imagem) }}');
       background-size: contain;
       background-position: right;
       background-repeat: no-repeat;
@@ -74,15 +75,15 @@
 
 <body>
   <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn bg-azul">
-      <img src="/images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
+    <button id="toggle-accessibility" class="btn bg-info">
+      <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
     </button>
-    <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-      <button id="increase-font" class="btn bg-azul">A+</button>
-      <button id="decrease-font" class="btn bg-azul">A-</button>
-      <button id="toggle-contrast" class="btn bg-azul">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-azul">Escala de Cinza</button>
-      <button id="reset-accessibility" class="btn bg-azul">Restaurar</button>
+    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
+      <button id="increase-font" class="btn bg-info">A+</button>
+      <button id="decrease-font" class="btn bg-info">A-</button>
+      <button id="toggle-contrast" class="btn bg-info">Alto Contraste</button>
+      <button id="toggle-grayscale" class="btn bg-info">Escala de Cinza</button>
+      <button id="reset-accessibility" class="btn bg-info">Restaurar</button>
       <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -97,7 +98,7 @@
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="..\images\logo2branca.png" alt="Logo Fapeu" height="110">
+            <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -115,6 +116,7 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
+                  <a class="dropdown-item" href="{{route('projetos.noticiaspost')}}">Notícias</a>
                 </div>
               </li>
             </p>
@@ -186,7 +188,7 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.areadministrativa')}}">Área Administrativa</a>
+                  <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a>
                   <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
                   <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
@@ -205,13 +207,13 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
-                  <a class="dropdown-item" href="#">Canal de Comunicações e Denúncias</a>
+                  <a class="dropdown-item" href="{{route('faleconosco.canaldenuncia')}}">Canal de Comunicações e Denúncias</a>
                 </div>
               </li>
             </p>
           </ul>
         </div>
-        <div class="d-flex">
+        <div style="position:absolute;top:45px;right:45px;">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -220,8 +222,8 @@
             <a href="">
               <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
             </a>
-          </div>
-      </div> -->
+          </div> -->
+      </div>
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -259,6 +261,12 @@
 
     toggleAccessibilityButton.addEventListener('click', () => {
       accessibilityButtonsContainer.classList.toggle('d-none');
+
+      if (accessibilityButtonsContainer.style.top === '40vh') {
+        accessibilityButtonsContainer.style.top = '';
+      } else {
+        accessibilityButtonsContainer.style.top = '40vh';
+      }
     });
 
     const increaseFontButton = document.getElementById('increase-font');

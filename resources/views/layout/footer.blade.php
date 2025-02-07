@@ -46,6 +46,6 @@
     </div>
     <!--Grid row-->
     <hr>
-    <div class="pb-3 row"><a class="text-white text-center" href="https://fapeu.com.br/"> © 2024 Fundação de Amparo à Pesquisa Universitária</a></div>
+    <div class="pb-3 row"><a class="text-white text-center" href="https://fapeu.com.br/"> © 2025 Fundação de Amparo à Pesquisa e Extensão Universitária</a></div>
   </div>
 </footer>

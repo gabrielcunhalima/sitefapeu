@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Acordo Coletivo')
+@section('title','FAPEU | Acordo Coletivo')
 @section('conteudo')
 
 <div class="container">

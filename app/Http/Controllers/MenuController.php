@@ -77,9 +77,43 @@ class MenuController extends Controller
         return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidade');
     }
 
-    public function projetos()
+ public function projetos()
     {
-        return $this->renderView('projetos.projetos', 'projetos.png', 'Projetos');
+        $news = Post::all();
+        $imagem = 'projetos.png';
+        $titulo = 'Projetos';
+
+
+        return view('projetos.projetos', compact('news','imagem','titulo'));
+        // return $this->renderView('projetos.projetos', 'projetos.png', 'Projetos');
+    }
+
+
+    public function noticiaspost(Request $request)
+    {
+        if ($request->isMethod('POST')) {
+
+            $validated = $request->validate([
+                'titulo' => 'required|string|max:255',
+                'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'corpo' => 'required|string',
+            ]);
+
+            $imagePath = $request->file('imagem')->store('public/posts');
+            $imagePath = str_replace('public/', '', $imagePath);
+
+
+            $post = new Post();
+            $post->titulo = $request->input('titulo');
+            $post->imagem = $imagePath;
+            $post->corpo = $request->input('corpo');
+            $post->save();
+
+            return redirect()->route('projetos.projetos')->with('success', 'Post criado com sucesso!');
+        }
+
+        // view quando for GET
+        return $this->renderView('projetos.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
     }
 
     
@@ -225,9 +259,9 @@ class MenuController extends Controller
 
     // MENU Colaborador
 
-    public function areadministrativa()
+    public function areaadministrativa()
     {
-        return $this->renderView('colaborador.areadministrativa', 'areadministrativa.png', 'Área Administrativa');
+        return $this->renderView('colaborador.areaadministrativa', 'areaadministrativa.png', 'Área Administrativa');
     }
 
 
@@ -276,6 +310,12 @@ class MenuController extends Controller
     {
         return $this->renderView('faleconosco.contato', 'contato.png', 'Contato');
     }
+
+    public function canaldenuncia()
+    {
+        return $this->renderView('faleconosco.canaldenuncia', 'canaldenuncia.png', 'Canal de Denúncia');
+    }
+
 
     // NOTÍCIAS
     public function noticias()

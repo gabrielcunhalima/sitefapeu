@@ -1,22 +1,20 @@
 @extends('layout.header')
-@section('title','FAPEU - Captação de Recursos e Oportunidades')
+@section('title','FAPEU | Captação de Recursos e Oportunidades')
 
 @section('conteudo')
 <div class="pricing2 py-5">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
         <br> 
-        <h4 class="text-white    font-weight-normal text-center ">
+        <h4 class="font-weight-normal text-center">
          Elabore seu projeto com o apoio da FAPEU!
         </h4> <br><br>
-      </div>
     </div>
     
     <!-- Wrapper para centralização do card -->
     <div class="row justify-content-center" style="min-height: 50vh;">
       <div class="col-lg-6 col-md-7 d-flex justify-content-center align-items-center">
-        <div class="card card-shadow border-0 mb-4 shadow p-3 mb-5 bg-white rounded">
+        <div class="card card-shadow border-0 mb-4 shadow p-3 mb-5 bg-creme rounded">
           <div class="p-4">
             <div class="d-flex align-items-center">
               <div class="plan-text">
@@ -29,7 +27,7 @@
 
             <ul class="list-inline mb-3">
               <li class="list-inline-item py-2 text-justify">
-                A área de Captação e Implantação de Projetos da Fundação de Amparo à Pesquisa e Extensão Universitária (Fapeu) 
+                A área de Captação e Implantação de Projetos da Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) 
                 espera, você, pesquisador, para elaborar e apresentar propostas e orçamentos de projetos que poderão ser 
                 apresentados a diferentes financiadores.
               </li>

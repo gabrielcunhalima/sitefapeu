@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Área Administrativa')
+@section('title','FAPEU | Área Administrativa')
 
 @section('conteudo')
 
@@ -13,7 +13,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
-                    <img src="/images/IconsAreaADM/fulfillment_12982135.png" alt="Ícone" style="height: 50px;">
+                    <img src="images/IconsAreaADM/fulfillment_12982135.png" alt="Ícone" style="height: 50px;">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">ADMFlow</h5>
@@ -27,7 +27,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
-                    <img src="/images/IconsAreaADM/social-engineering_2742103.png" alt="Ícone" style="height: 50px;">
+                    <img src="images/IconsAreaADM/social-engineering_2742103.png" alt="Ícone" style="height: 50px;">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">DRHFlow</h5>
@@ -41,7 +41,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
-                    <img src="/images/IconsAreaADM/calculator_2471180.png" alt="Ícone" style="height: 50px;">
+                    <img src="images/IconsAreaADM/calculator_2471180.png" alt="Ícone" style="height: 50px;">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Informe de Rendimentos</h5>
@@ -57,7 +57,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
-                    <img src="/images/IconsAreaADM/vote_4474105.png" alt="Ícone" style="height: 50px;">
+                    <img src="images/IconsAreaADM/vote_4474105.png" alt="Ícone" style="height: 50px;">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">WebMail</h5>
