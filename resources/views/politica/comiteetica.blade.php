@@ -13,7 +13,7 @@
         <p><b>Denise Medeiros Juliatto</b> (Gerente de Recursos Humanos e Encarregada de Proteção de Dados) – Coordenadora</p>
         <p><b>Iris Letícia de Siqueira Napoleão</b> (Assessora Jurídica) – Membro</p>
         <p><b>Amilton da Rosa Matos Sobrinho </b> (Coordenador de Licitação) – Membro</p><br>
-        <p><b><a href="/pdfs/Politicas/Comites/portaria-14-2021.pdf" target="_blank">PORTARIA N. 014/DE/2021, DE 9 DE NOVEMBRO DE 2021 – Designação dos membros do Comitê de Ética.</b></p> </a>
+        <p><b><a href="/pdfs/Politicas/Comites/PORTARIA N. 011 2023 DE .pdf" target="_blank">PORTARIA N. 011/DE/2023, DE 14 DE DEZEMBRO DE 2023 – Designação dos membros do Comitê de Ética.</b></p> </a>
         <p><b><a href="/pdfs/Politicas/Comites/portaria-13-2021.pdf" target="_blank"> PORTARIA N. 013/DE/2021, DE 25 DE OUTUBRO DE 2021 – Regimento Interno do Comitê de Ética.</b></p></a><br>
         <p>E-mail: comiteetica@fapeu.org.br<br>Telefone: (48) 3331-7479</p><hr><br>
     </div>
@@ -24,7 +24,7 @@
         <p><b>Eduarda Silva Farias</b> (Coordenadora de Prestação de Contas) - Coordenadora</p>
         <p><b>Pedro Marques Abdo</b> (Técnico de Projetos) - Membro</p>
         <p><b>Georgia Maia Ventura</b> (Coordenadora do Setor de Projetos) - Membro</p><br>
-        <p><b><a href="https://www.fapeu.com.br/downloads/portaria_n._015_2021_de_-_designa_comit_de_gest_o_de_riscos.pdf" target="_blank"> PORTARIA N. 015/DE/2021, DE 9 de novembro de 2021 – Designação dos membros do Comitê de Gestão de Riscos</b></p> </a>
+        <p><b><a href="/pdfs/Politicas/Comites/PORTARIA N. 012 2023 DE .pdf" target="_blank"> PORTARIA N. 012/DE/2023, DE 14 de DEZEMBRO de 2023 – Designação dos membros do Comitê de Gestão de Riscos</b></p> </a>
         <p><b><a href="#" target="_blank">PORTARIA N. 006/DE/2019, DE 28 DE MARÇO DE 2019 – Regimento Interno Comitê de Gestão de Riscos</b></p><br> </a>
         <p><b>E-mail: risco@fapeu.org.br<br>Telefone: (48) 3331-4368</b></p>
     </div>

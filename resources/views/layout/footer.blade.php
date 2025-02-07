@@ -36,7 +36,7 @@
           <h5 class="font-weight-bold">Redes sociais</h5>
         </p>
         <p style="font-size:2.2em;">
-          <a href="https://instagram.com/@fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
+          <a href="https://instagram.com/fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
         </p><br>

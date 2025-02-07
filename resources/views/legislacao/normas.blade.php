@@ -59,7 +59,7 @@
         Delimitações para a contratação de Pessoa Jurídica com Recursos Públicos</p>
         <p><strong><a href="/pdfs/Legislacao/FAPEU/portaria_normativa_n._006de2017.pdf" target="_blank">Portaria Normativa n. 006/DE/2017, de 17 de Outubro de 2017.</strong><br></a>
         Informa sobre não contratação de cônjuge, companheiro ou parentes na execução de contratos, convênios e acordos</p>
-        <p><strong><a href="/pdfs/Legislacao/FAPEU/portaria_normativa_004_de_2019_-_disciplina_os_procedimentos_para_selec_o_e_contratac_o_de_pessoal.pdf" target="_blank">Portaria Normativa n. 004/DE/2019, DE 15 DE FEVEREIRO DE 2016.</strong><br></a>
+        <p><strong><a href="/pdfs/Legislacao/FAPEU/portaria_007_de_2016_diarias_1_.pdf" target="_blank">Portaria Normativa n. 004/DE/2019, DE 15 DE FEVEREIRO DE 2016.</strong><br></a>
         Atualiza os valores das diárias nacionais e internacionais, previstas no Anexo II da Portaria nº 002.</p>
         <p><strong><a href="/pdfs/Legislacao/FAPEU/portaria_normativa_001_de_2016_-reembolso.pdf" target="_blank">Portaria Normativa n.01/DE/2016, de 21 de junho de 2016.</strong><br></a>
         Dispõe sobre a concessão de reembolso de despesas pela Fundação de Amparo à Pesquisa e Extensão Universitária - FAPEU</p>
@@ -103,7 +103,10 @@
         <p><strong><a href="/pdfs/Legislacao/UFFS/resolucao_15_2017___aprova_o_regulamento_de_pesquisa_da_uffs.pdf" target="_blank">RESOLUÇÃO Nº 15/CONSUNI CPPGEC/UFFS/2017.</strong><br></a>
         Aprova o Regulamento da Pesquisa da Universidade Federal da Fronteira Sul.</p>
         <p><strong><a href="/pdfs/Legislacao/UFFS/resoluc_o_n_004_2013_-_regulamenta_a_relac_o_da_uffs_com_as_fundac_es_de_apoio_-_alterada.pdf" target="_blank">RESOLUÇÃO Nº 4/CONSUNI/UFFS/2013 (ALTERADA).</strong><br></a>
-        Dispõe sobre as normas que regulamentam as relações entre a Universidade Federal da Fronteira Sul e as fundações de apoio.</p><hr><br>
+        Dispõe sobre as normas que regulamentam as relações entre a Universidade Federal da Fronteira Sul e as fundações de apoio.</p>
+        <p><strong><a href="/pdfs/Legislacao/IFC/resoluc_o_22-2015-consuni_-_aprova_a_renovac_o_da_autorizac_o.pdf" target="_blank">RESOLUÇÃO Nº 022 CONSUPER/2017.</strong><br></a>
+            Aprova a Prorrogação da autorização da Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) para atuar como a fundação de apoio à UFFS.</p><hr><br>
+        
     </div>
     <div class="text-justify">
         <h3 class="font-weight-bold">IFC</h3>
@@ -114,8 +117,7 @@
         Aprova Regulamento Curso de Extensão</p>
         <p><strong><a href="/pdfs/Legislacao/IFC/resoluc_o-011-2015-aprova-regulamento-de-atividades-docentes1_1_.pdf" target="_blank">RESOLUÇÃO Nº 11/2015.</strong><br></a>
         Aprova Regulamento de Atividades Docentes</p>
-        <p><strong><a href="/pdfs/Legislacao/IFC/resoluc_o_22-2015-consuni_-_aprova_a_renovac_o_da_autorizac_o.pdf" target="_blank">RESOLUÇÃO Nº 022 CONSUPER/2017.</strong><br></a>
-        Aprova Normas regulamentadoras das relações do IFC e as fundações de apoio</p><hr><br>
+        
     </div>
     <div class="text-justify">
         <h3 class="font-weight-bold">UDESC</h3>

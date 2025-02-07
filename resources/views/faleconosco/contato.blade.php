@@ -10,25 +10,25 @@
                     <div class="form-row justify-content-end">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="inputNome">Nome</label>
-                            <input type="text" class="form-control" id="inputNome">
+                            <input type="text" class="form-control" id="inputNome" required>
                         </div>
                     </div>
                     <div class="form-row justify-content-end">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="inputEmail4">Seu email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="email" class="form-control" id="inputEmail4" required>
                         </div>
                     </div>
                     <div class="form-row justify-content-end">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="inputCity">Assunto</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="inputCity" required>
                         </div>
                     </div>
                     <div class="form-row justify-content-end">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="inputEstado">Destinatário</label>
-                            <select id="inputEstado" class="form-control">
+                            <select id="inputEstado" class="form-control" required>
                                 <option selected>Escolha um setor...</option>
                                 <option>Almoxarifado</option>
                                 <option>Administrativo</option>
@@ -56,7 +56,7 @@
                     <div class="form-row justify-content-end">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="exampleFormControlTextarea1">Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea><br>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea><br>
                             <button type="submit" class="btn btn-primary" style="color: #fff;">Enviar</button>
                         </div>
                     </div>
