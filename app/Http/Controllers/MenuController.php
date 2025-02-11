@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\SelecoesPublicas;
 use App\Models\Post;
+use App\Models\Contato;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -308,7 +309,9 @@ class MenuController extends Controller
     // MENU Contato
     public function contato()
     {
-        return $this->renderView('faleconosco.contato', 'contato.png', 'Contato');
+        $dados = Contato::all();
+
+        return $this->renderView('faleconosco.contato', 'contato.png', 'Contato', $dados);
     }
 
     public function canaldenuncia()

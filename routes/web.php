@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\PesquisaController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\AdminController;
@@ -95,6 +96,7 @@ Route::get('/reltecnicosemestral',[MenuController::class,'reltecnicosemestral'])
 
 Route::get('/contato',[MenuController::class,'contato'])->name('faleconosco.contato');
 Route::get('/canaldenuncia',[MenuController::class,'canaldenuncia'])->name('faleconosco.canaldenuncia');
+Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('contato.salvar');
 
 //NOTICIAS
 
