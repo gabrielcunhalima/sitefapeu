@@ -168,29 +168,29 @@
         <body>
             <div class="row">
                 @foreach ($news as $item)
-                <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                    <div class="blog-post rounded border">
-                        <a href="{{ $item['link'] }}">
-                            <div class="blog-img d-block overflow-hidden position-relative card-img-container">
-                                <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
-                                <div class="overlay rounded-top bg-dark"></div>
-                                <div class="post-meta">
-                                    <p class="text-white">Clique para conhecer</p>
-                                </div>  
-                            </div>
-                        </a>
-                        <div class="content p-3">
-                            <h4 class="mt-2"><a href="{{ $item['link'] }}" class="text-dark title">{{ $item['titulo'] }}</a></h4>
-                            <p class="text-muted mt-2 card-text">{!! $item['corpo'] !!}</p>
-                            <div class="pt-3 mt-3 border-top d-flex">
-                                <div class="author mt-2">
-                                    <h6 class="mb-0"><a href="{{ $item['link'] }}" class="text-dark name">Leia mais</a></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end blog post-->
-                </div><!--end coluna-->
-                @endforeach
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+        <div class="blog-post rounded border">
+            <a href="{{ route('projetos.noticiasleitura', ['id' => $item->id]) }}">
+                <div class="blog-img d-block overflow-hidden position-relative card-img-container">
+                    <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
+                    <div class="overlay rounded-top bg-dark"></div>
+                    <div class="post-meta">
+                        <p class="text-white">Clique para conhecer</p>
+                    </div>  
+                </div>
+            </a>
+            <div class="content p-3">
+                <h4 class="mt-2"><a href="{{ route('projetos.noticiasleitura', ['id' => $item->id]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
+                <p class="text-muted mt-2 card-text">{!! $item->corpo !!}</p>
+                <div class="pt-3 mt-3 border-top d-flex">
+                    <div class="author mt-2">
+                        <h6 class="mb-0"><a href="{{ route('projetos.noticiasleitura', ['id' => $item->id]) }}" class="text-dark name">Leia mais</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div><!--end blog post-->
+    </div><!--end coluna-->
+    @endforeach
             </div>
     </div>
 </div>

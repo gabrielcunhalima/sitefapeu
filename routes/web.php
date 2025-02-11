@@ -101,6 +101,8 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 //NOTICIAS
 
 Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('projetos.noticiaspost');
+Route::get('/noticia/{id}', [MenuController::class, 'noticiasleitura'])->name('projetos.noticiasleitura');
+
 
 
 

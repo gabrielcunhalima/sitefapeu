@@ -86,10 +86,71 @@
                         Correspondências via correio – CEP 88035-972 – Caixa Postal 5078<br>
                         Telefone/WhatsApp: (48) 33317400<br><br>
                         Horário de Funcionamento: <br>Segunda a Sexta-feira das 8h às 12h e das 13h às 17h
-                    </p>
+                    </p><br>
+
+                    <h5> Relação de Contatos </h5>
+                    <div class="row">
+                        <!-- Primeira Coluna -->
+                        <div class="col-md-6">
+                            <p class="font-weight-bold">Diretoria Executiva</p>
+                            Telefone/WhatsApp: <br>
+                            (48) 3331-7479 <br><br>
+                            
+                            <p class="font-weight-bold">Superintendência </p>
+                            Telefone/WhatsApp: <br>
+                            (48) 3331-7479<br><br>
+                            
+                            <p class="font-weight-bold">Secretaria Executiva</p>
+                            Telefone/WhatsApp: <br>
+                            (48) 3331-7479<br><br>
+                            
+                            <p class="font-weight-bold">Assessoria Jurídica</p>
+                            Telefone/WhatsApp: <br>
+                            (48) 3331-7414 | (48) 3331-7499<br>
+                        </div>
+
+                        <!-- Segunda Coluna -->
+                        <div class="col-md-6">
+                            <p class="font-weight-bold">Gerência de Captação e Gestão de Projetos</p>
+                            <p class="font-weight-bold">Captação de Projetos</p>
+                            Telefone/WhatsApp: (48) 3331-7408 <br><br>
+                            
+                            <p class="font-weight-bold">Gestão de Projetos</p>
+                            Telefone/WhatsApp: (48) 3331-7411 <br><br>
+
+                            <p class="font-weight-bold">Gerência de Recursos Humanos</p>
+                            Telefone/WhatsApp: (48) 3331-7442 <br><br>
+
+                            <p class="font-weight-bold">Gerência Administrativa e Financeira</p>
+                            Telefone/WhatsApp: (48) 3331-7417 <br><br>
+
+                            <p class="font-weight-bold">Financeiro</p>
+                            Telefone/WhatsApp: (48) 3331-7434 <br><br>
+
+                            <p class="font-weight-bold">Administrativo</p>
+                            Telefone/WhatsApp: (48) 3331-7429 <br><br>
+
+                            <p class="font-weight-bold">Gerência de Contabilidade e Patrimônio</p>
+                            Telefone/WhatsApp: (48) 3331-7423 <br><br>
+
+                            <p class="font-weight-bold">Gerência de Informática</p>
+                            Telefone/WhatsApp: (48) 3331-7436 <br><br>
+
+                            <p class="font-weight-bold">Recepção</p>
+                            Telefone/WhatsApp: (48) 3331-7401 <br><br>
+
+                            <p class="font-weight-bold">LGPD</p>
+                            Telefone/WhatsApp: (48) 3331-7442
+                        </div>
+                    </div>
+
                 </div>
+                
             </div>
+            
         </div>
+
+        
     </div>
 </div>
 

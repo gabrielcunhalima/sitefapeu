@@ -86,7 +86,7 @@ class MenuController extends Controller
 
 
         return view('projetos.projetos', compact('news','imagem','titulo'));
-        // return $this->renderView('projetos.projetos', 'projetos.png', 'Projetos');
+       
     }
 
 
@@ -117,7 +117,21 @@ class MenuController extends Controller
         return $this->renderView('projetos.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
     }
 
+    public function noticiasleitura($id)
+    {
+        // Obter o post pelo ID
+        $post = Post::findOrFail($id);
     
+      
+        $imagem = $post->imagem;
+        $titulo = $post->titulo;
+        
+    
+      
+        return view('projetos.noticiasleitura', compact('post', 'imagem','titulo'));
+    }
+    
+
 
     public function manualcompras()
     {

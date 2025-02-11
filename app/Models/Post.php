@@ -10,6 +10,6 @@ class Post extends Model
 
     protected $fillable = ['titulo', 'corpo', 'link','imagem'];
 
-    public $timestamps = false;
+    public $timestamps = true;
 
 }
