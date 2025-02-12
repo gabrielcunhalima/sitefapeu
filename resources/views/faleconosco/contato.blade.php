@@ -95,15 +95,15 @@
                             <p class="font-weight-bold">Diretoria Executiva</p>
                             Telefone/WhatsApp: <br>
                             (48) 3331-7479 <br><br>
-                            
+
                             <p class="font-weight-bold">Superintendência </p>
                             Telefone/WhatsApp: <br>
                             (48) 3331-7479<br><br>
-                            
+
                             <p class="font-weight-bold">Secretaria Executiva</p>
                             Telefone/WhatsApp: <br>
                             (48) 3331-7479<br><br>
-                            
+
                             <p class="font-weight-bold">Assessoria Jurídica</p>
                             Telefone/WhatsApp: <br>
                             (48) 3331-7414 | (48) 3331-7499<br>
@@ -114,7 +114,7 @@
                             <p class="font-weight-bold">Gerência de Captação e Gestão de Projetos</p>
                             <p class="font-weight-bold">Captação de Projetos</p>
                             Telefone/WhatsApp: (48) 3331-7408 <br><br>
-                            
+
                             <p class="font-weight-bold">Gestão de Projetos</p>
                             Telefone/WhatsApp: (48) 3331-7411 <br><br>
 
@@ -145,12 +145,12 @@
                     </div>
 
                 </div>
-                
+
             </div>
-            
+
         </div>
 
-        
+
     </div>
 </div>
 

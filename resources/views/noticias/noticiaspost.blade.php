@@ -28,7 +28,7 @@
 
 <div class="container mt-5">
     <h2>Adicionar Novo Post</h2>
-    <form action="{{ route('projetos.noticiaspost') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('noticias.noticiaspost') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
@@ -69,7 +69,7 @@
         successModal.show();
         setTimeout(() => {
             successModal.hide();
-        }, 3000); // Fecha após 5 segundos
+        }, 3000);
     };
 </script>
 @endif

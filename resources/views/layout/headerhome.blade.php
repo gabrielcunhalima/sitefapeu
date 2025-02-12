@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -82,7 +82,6 @@
   .link-hover:hover {
     transform: translateY(-10px);
   }
-  
 </style>
 
 <body>
@@ -137,6 +136,8 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias</a>
                 </div>
               </li>
             </p>
@@ -150,7 +151,7 @@
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('projetos.projetos')}}">Projetos</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Projetos</a>
                 </div>
               </li>
             </p>

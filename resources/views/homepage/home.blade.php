@@ -317,7 +317,7 @@
   </div>
   <div class="container col-12 d-flex justify-content-center">
     <div class="card bg-principal my-3 card text-center shadow grow2">
-      <a href="{{route('projetos.projetos')}}">
+      <a href="{{route('noticias.noticiasrecentes')}}">
         <div class="card-body" style="min-width:15vw;">
           <h5 class="card-text text-white">Mais notícias</h5>
         </div>

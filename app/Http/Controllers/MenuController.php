@@ -78,14 +78,14 @@ class MenuController extends Controller
         return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidade');
     }
 
- public function projetos()
+ public function noticiasrecentes()
     {
         $news = Post::all();
-        $imagem = 'projetos.png';
-        $titulo = 'Projetos';
+        $imagem = 'noticiasrecentes.png';
+        $titulo = 'Notícias Recentes';
 
 
-        return view('projetos.projetos', compact('news','imagem','titulo'));
+        return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));
        
     }
 
@@ -96,7 +96,7 @@ class MenuController extends Controller
 
             $validated = $request->validate([
                 'titulo' => 'required|string|max:255',
-                'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
                 'corpo' => 'required|string',
             ]);
 
@@ -110,11 +110,11 @@ class MenuController extends Controller
             $post->corpo = $request->input('corpo');
             $post->save();
 
-            return redirect()->route('projetos.projetos')->with('success', 'Post criado com sucesso!');
+            return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post criado com sucesso!');
         }
 
         // view quando for GET
-        return $this->renderView('projetos.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
+        return $this->renderView('noticias.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
     }
 
     public function noticiasleitura($id)
@@ -128,7 +128,7 @@ class MenuController extends Controller
         
     
       
-        return view('projetos.noticiasleitura', compact('post', 'imagem','titulo'));
+        return view('noticias.noticiasleitura', compact('post', 'imagem','titulo'));
     }
     
 

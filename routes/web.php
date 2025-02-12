@@ -62,7 +62,6 @@ Route::get('/formulariosprojetos',[MenuController::class,'formulariosprojetos'])
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.captacao');
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
-Route::get('/projetos',[MenuController::class,'projetos'])->name('projetos.projetos');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 
 
@@ -75,6 +74,7 @@ Route::get('/revistafapeu',[MenuController::class,'revistafapeu'])->name('quemso
 Route::get('/sobre',[MenuController::class,'sobre'])->name('quemsomos.sobre');
 Route::get('/estatuto',[MenuController::class,'estatuto'])->name('quemsomos.estatuto');
 Route::get('/regimentointerno',[MenuController::class,'regimentointerno'])->name('quemsomos.regimentointerno');
+Route::get('/noticiasrecentes',[MenuController::class,'noticiasrecentes'])->name('noticias.noticiasrecentes');
 
 //TRANSPARENCIA
 
@@ -100,9 +100,10 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 
 //NOTICIAS
 
-Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('projetos.noticiaspost');
-Route::get('/noticia/{id}', [MenuController::class, 'noticiasleitura'])->name('projetos.noticiasleitura');
+Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
+Route::get('/{id}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
+Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
 
 
 

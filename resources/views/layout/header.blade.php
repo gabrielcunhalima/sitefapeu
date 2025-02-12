@@ -116,7 +116,8 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
-                  <a class="dropdown-item" href="{{route('projetos.noticiaspost')}}">Notícias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias</a>
                 </div>
               </li>
             </p>
@@ -130,7 +131,6 @@
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('projetos.projetos')}}">Projetos</a>
                 </div>
               </li>
             </p>

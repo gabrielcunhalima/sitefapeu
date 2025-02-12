@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContatoEmail;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Contato;
+use App\Models\Setor;
+
 
 class ContatoController extends Controller
 {
@@ -17,13 +21,19 @@ class ContatoController extends Controller
             'mensagem' => 'required|string',
         ]);
 
-        Contato::create([
+        $contato = Contato::create([
             'nome' => $request->input('nome'),
             'email' => $request->input('email'),
             'assunto' => $request->input('assunto'),
             'id_setor' => $request->input('id_setor'),
             'mensagem' => $request->input('mensagem'),
         ]);
+
+        $setor = Setor::find($request->input('id_setor'));
+        $setorEmail = $setor->email;
+
+        Mail::to($setorEmail)->send(new ContatoEmail($contato->nome, $contato->assunto, $contato->mensagem, $contato->email));
+        
         return redirect()->back()->with('success', 'Mensagem enviada com sucesso!');
     }
 }

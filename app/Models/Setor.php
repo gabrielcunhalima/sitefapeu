@@ -9,5 +9,6 @@ class Setor extends Model
 {
     use HasFactory;
 
+    protected $table = 'setor';
     protected $fillable = ['nome', 'email'];
 }
