@@ -175,7 +175,7 @@
                   Fornecedor
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <!-- <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a> -->
                   <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
                   <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
                   <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
@@ -188,10 +188,10 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a>
-                  <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                  <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
+                  <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow">DRHFlow</a>
+                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">ADMFlow</a>
+                  <a class="dropdown-item" href="https://webmail.fapeu.org.br">WebMail</a>
                   <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                   <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                   <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
@@ -347,21 +347,20 @@
       const tragaprojetofora = document.getElementById("tragaprojetofora");
 
       if (window.matchMedia("(max-width: 993px)").matches) {
-        tragaprojetodentro.classList.remove("d-none"); // Exibe o elemento
+        tragaprojetodentro.classList.remove("d-none");
         tragaprojetodentro.classList.add("d-block");
 
-        tragaprojetofora.classList.remove("d-block"); // Oculta o outro elemento
+        tragaprojetofora.classList.remove("d-block");
         tragaprojetofora.classList.add("d-none");
       } else {
-        tragaprojetodentro.classList.remove("d-block"); // Oculta o elemento
+        tragaprojetodentro.classList.remove("d-block");
         tragaprojetodentro.classList.add("d-none");
 
-        tragaprojetofora.classList.remove("d-none"); // Exibe o outro elemento
+        tragaprojetofora.classList.remove("d-none");
         tragaprojetofora.classList.add("d-block");
       }
     }
 
-    // Chama a função ao carregar a página e quando a janela é redimensionada
     window.addEventListener("load", toggleElements);
     window.addEventListener("resize", toggleElements);
   </script>

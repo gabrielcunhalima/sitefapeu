@@ -520,21 +520,26 @@
   </div>
 </div>
 
-
 <script>
-
   
-  function toggleAccordion() {
-    const accordion = document.getElementById('accordionFlushExample');
+  document.addEventListener('DOMContentLoaded', function () {
+  function toggleContent() {
+    const servicosCollapse = document.getElementById('servicosCollapse');
+    const accordionFlushExample = document.getElementById('accordionFlushExample');
+    const telaPequena = window.innerWidth < 992;
 
-    if (window.innerWidth <= 992) {
-      accordion.classList.remove('d-none');
+    if (telaPequena) {
+      servicosCollapse.classList.add('d-none');
+      accordionFlushExample.classList.remove('d-none');
     } else {
-      accordion.classList.add('d-none');
+      servicosCollapse.classList.remove('d-none');
+      accordionFlushExample.classList.add('d-none');
     }
   }
 
-  window.addEventListener('resize', toggleAccordion);
-  window.addEventListener('load', toggleAccordion);
+toggleContent();
+
+  window.addEventListener('resize', toggleContent);
+});
 </script>
 @endsection

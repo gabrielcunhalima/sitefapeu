@@ -151,7 +151,7 @@
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Projetos</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
                 </div>
               </li>
             </p>
@@ -209,10 +209,10 @@
                   Colaborador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a>
-                  <a class="dropdown-item" href="{{route('colaborador.drhflow')}}">DRHFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.ADMFlow')}}">ADMFlow</a>
-                  <a class="dropdown-item" href="{{route('colaborador.WebMail')}}">WebMail</a>
+                  <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
+                  <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow">DRHFlow</a>
+                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">ADMFlow</a>
+                  <a class="dropdown-item" href="https://webmail.fapeu.org.br">WebMail</a>
                   <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                   <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                   <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
