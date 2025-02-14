@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title', 'Portal da Transparência')
+@section('title', 'FAPEU | Portal da Transparência')
 
 @section('conteudo')
 
@@ -7,6 +7,12 @@
     <style>
         .botaotransparencia {
             min-width:20vw;
+        }
+
+        @media (max-width: 992px) {
+            .botaotransparencia {
+                width:70vw;
+            }
         }
     </style>
     <div class="container">

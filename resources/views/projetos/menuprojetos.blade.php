@@ -1,7 +1,8 @@
 @extends('layout.header')
+@section('title', 'FAPEU | Gestão de Projetos')
 @section('conteudo')
 <div class="container text-justify">
-<p><b><div class="rounded-pill text-white bg-dark text-center py-1">Telefone: 3331-7411 | E-mail: projetos@fapeu.org.br</div></b></p>
+<p><b><div class="rounded-pill text-white bg-dark text-center py-1">Telefone: (48) 3331-7411 | E-mail: projetos@fapeu.org.br</div></b></p>
     <p>O processo de gestão de projetos pela FAPEU compreende o gerenciamento administrativo e financeiro em todas as etapas, com soluções adequadas às especificidades e permanente diálogo com os coordenadores.</p>
     <p>Uma equipe técnica capacitada, constantemente incentivada à atualização, comprometida com a missão da Fundação e qualificada em gestão financeira e de pessoal, em compras, licitações, importações, contabilidade e prestação de contas, oferece segurança, transparência e agilidade para execução de projetos.</p>
     <p>No processo de gestão de projetos, constituem-se em diferencial os serviços de apoio e assessoria oferecidos pela FAPEU:</p>
@@ -15,7 +16,6 @@
     <p>Fundacionais: contratos onde as Instituições Apoiadas contratam a FAPEU para a gestão de projetos de ensino, pesquisa, extensão, inovação, desenvolvimento institucional, cultural, científico e tecnológico, com financiamento por Ministérios, emendas parlamentares ou de empresas privadas.</p>
     <p>Tripartites: convênios realizados entre Fundação, Instituição Apoiada e empresa privada, para execução de projetos, usualmente, de pesquisa, financiados pela empresa.</p><hr>
     <p><b>Para iniciar as tratativas de seu projeto, ou para mais informações, entre em contato com o Setor de Captação e Implantação de Projetos da FAPEU.</b></p>
-    
 </div>
 
 @endsection

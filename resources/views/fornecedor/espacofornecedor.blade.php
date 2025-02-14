@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title', 'Espaço do Fornecedor')
+@section('title', 'FAPEU | Espaço do Fornecedor')
 
 @section('conteudo')
 
