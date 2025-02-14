@@ -104,6 +104,8 @@ Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticias
 Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
+Route::match(['get', 'post'], '/loginadm', [MenuController::class, 'loginadm'])->name('admin.loginadm');
+Route::get('/logoutadm', [MenuController::class, 'logoutadm'])->name('admin.logoutadm');
 
 
 

@@ -8,7 +8,9 @@ use App\Models\Post;
 use App\Models\Contato;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 class MenuController extends Controller
 {
     private function renderView($view, $imagem, $titulo, $dados = [])
@@ -90,6 +92,11 @@ class MenuController extends Controller
 
     public function noticiaspost(Request $request)
     {
+        // autenticação finalmenteeeeee funcionou
+    if (!Session::has('admin_logged_in') || (time() - Session::get('admin_logged_in_time') > 43200)) { // timerzinho pra logout
+        return redirect()->route('admin.loginadm');
+    }
+    
         if ($request->isMethod('POST')) {
 
             $validated = $request->validate([
@@ -125,6 +132,39 @@ class MenuController extends Controller
         return view('noticias.noticiasleitura', compact('post', 'imagem','titulo','link'));
     }
     
+
+
+    public function loginadm(Request $request)
+    {
+        if ($request->isMethod('POST')) {
+
+            $request->validate([
+                'usuario' => 'required|string',
+                'senha' => 'required|string',
+            ]);
+    
+        
+            $admin = DB::table('admins')->where('usuario', $request->usuario)->first();
+    
+            if ($admin && hash('sha256', $request->senha) === $admin->senha) {
+            
+                // sessão com informações do login
+                Session::put('admin_logged_in', true);
+                Session::put('admin_logged_in_time', time());  // o tempo do login
+    
+              
+                return redirect()->route('noticias.noticiaspost');
+            } else {
+                
+                return back()->withErrors(['usuario' => 'Credenciais inválidas']);
+            }
+        }
+    
+        return $this->renderView('admin.loginadm', 'loginadm.png', 'Painel Administrativo');
+    }
+    
+
+
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
