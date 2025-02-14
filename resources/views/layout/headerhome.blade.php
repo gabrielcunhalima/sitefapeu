@@ -137,7 +137,7 @@
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
                   <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias (testes)</a>
                 </div>
               </li>
             </p>

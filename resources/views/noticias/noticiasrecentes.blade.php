@@ -1,19 +1,6 @@
 @extends('layout.header')
 @section('title','FAPEU - Notícias')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Meu Site')</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Outros estilos CSS personalizados -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
-
-
 @section('conteudo')
 <style>
     .blog-post {
@@ -154,33 +141,32 @@
 </style>
 <div class="container">
     <div class="container mt-100 mt-60">
-        <body>
-            <div class="row">
-                @foreach ($news as $item)
-                <div class="col-lg-4 col-md-6 mt-4 pt-2">
-                    <div class="blog-post rounded border">
-                        <a href="{{ route('noticias.noticiasleitura', ['id' => $item->id]) }}">
-                            <div class="blog-img d-block overflow-hidden position-relative card-img-container">
-                                <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
-                                <div class="overlay rounded-top bg-dark"></div>
-                                <div class="post-meta">
-                                    <p class="text-white">Clique para conhecer</p>
-                                </div>
+        <div class="row">
+            @foreach ($news as $item)
+            <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                <div class="blog-post rounded border">
+                    <div class="blog-img d-block overflow-hidden position-relative card-img-container">
+                        <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
+                            <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
+                            <div class="overlay rounded-top bg-dark"></div>
+                            <div class="post-meta">
+                                <p class="border rounded-pill px-2">Clique para conhecer</p>
                             </div>
                         </a>
-                        <div class="content p-3">
-                            <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['id' => $item->id]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
-                            <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 150) !!}</p>
-                            <div class="pt-3 mt-3 border-top d-flex">
-                                <div class="author mt-2">
-                                    <h6 class="mb-0"><a href="{{ route('noticias.noticiasleitura', ['id' => $item->id]) }}" class="text-dark name">Leia mais</a></h6>
-                                </div>
+                    </div>
+                    <div class="content p-3">
+                        <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
+                        <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 150) !!}</p>
+                        <div class="pt-3 mt-3 border-top d-flex">
+                            <div class="author mt-2">
+                                <h6 class="mb-0"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>
                             </div>
                         </div>
-                    </div><!--end blog post-->
-                </div><!--end coluna-->
-                @endforeach
+                    </div>
+                </div>
             </div>
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection
@@ -212,8 +198,4 @@
         }, 3000);
     };
 </script>
-
-</body>
-
-</html>
 @endif

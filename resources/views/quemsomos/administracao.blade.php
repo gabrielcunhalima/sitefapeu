@@ -80,7 +80,7 @@
 </script>
 
 <!-- carousel conselho curador -->
-<div class="text-center jumbotron bg-light p-4 m-0">
+<div class="text-center jumbotron bg-white p-4 m-0">
     <h1>Conselho Curador</h1>
     <h4>Mandato 4 anos<br>Gestão 01/10/2024 - 30/09/2028</h4>
     <section class="responsive container">

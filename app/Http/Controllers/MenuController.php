@@ -84,11 +84,9 @@ class MenuController extends Controller
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
 
-
         return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));
        
     }
-
 
     public function noticiaspost(Request $request)
     {
@@ -98,41 +96,35 @@ class MenuController extends Controller
                 'titulo' => 'required|string|max:255',
                 'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
                 'corpo' => 'required|string',
+                'link' => 'required|string',
             ]);
 
             $imagePath = $request->file('imagem')->store('public/posts');
             $imagePath = str_replace('public/', '', $imagePath);
 
-
             $post = new Post();
             $post->titulo = $request->input('titulo');
             $post->imagem = $imagePath;
             $post->corpo = $request->input('corpo');
+            $post->link = Str::slug($request->input('titulo'));
             $post->save();
 
             return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post criado com sucesso!');
         }
 
-        // view quando for GET
         return $this->renderView('noticias.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
     }
 
-    public function noticiasleitura($id)
+    public function noticiasleitura($link)
     {
-        // Obter o post pelo ID
-        $post = Post::findOrFail($id);
-    
-      
+        $post = Post::where('link', $link)->firstOrFail();
         $imagem = $post->imagem;
         $titulo = $post->titulo;
-        
-    
-      
-        return view('noticias.noticiasleitura', compact('post', 'imagem','titulo'));
+        $link = Str::slug($post->titulo);
+
+        return view('noticias.noticiasleitura', compact('post', 'imagem','titulo','link'));
     }
     
-
-
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
