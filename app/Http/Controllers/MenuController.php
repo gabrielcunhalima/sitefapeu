@@ -103,7 +103,7 @@ class MenuController extends Controller
                 'titulo' => 'required|string|max:255',
                 'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
                 'corpo' => 'required|string',
-                'link' => 'required|string',
+               
             ]);
 
             $imagePath = $request->file('imagem')->store('public/posts');
@@ -376,15 +376,10 @@ class MenuController extends Controller
 
     public function home()
     {
-        $carousel = Post::query()
-            ->orderBy('id', 'desc')
-            ->take(5)
-            ->get();
-    
-        return view('homepage.home', [
-            'carousel' => $carousel
-        ]);
+        $news = Post::latest()->take(5)->get(); // Pegando as 5 últimas notícias
+        return view('homepage.home', compact('news'));
     }
+    
 
     public function servicos()
     {

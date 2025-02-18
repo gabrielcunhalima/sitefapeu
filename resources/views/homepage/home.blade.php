@@ -215,116 +215,49 @@
 <!-- Noticias -->
 <div class="bg-light">
   <div class="section-title jumbotron py-2 mb-0 bg-light">
-    <h2 class="container my-2 text-center">Notícias recentes</h2>
-    <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
+      <h2 class="container my-2 text-center">Notícias recentes</h2>
+      <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
   </div>
+
   <div class="responsive container mt-0">
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <a href="">
-          <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="images/projetos/projeto1.png" class="img-fluid rounded-top" alt="">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-        </a>
-        <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">UFSC faz parceria com batalhão do exército no Amazonas</a></h4>
-          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
-          <div class="pt-3 mt-3 border-top d-flex">
-          </div>
-        </div>
-      </div><!--end blog post-->
-    </div>
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <a href="">
-          <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="images/projetos/projeto3.png" class="img-fluid rounded-top" alt="">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta justify-content-center">
-              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-        </a>
-        <div class="content p-3 bg-light">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Hack the UFSC 2024</a></h4>
-          <p class="text-muted mt-2">Saiba mais sobre como participar e quem estará presente nos dias de competição.</p>
-          <div class="pt-3 mt-3 border-top d-flex">
-          </div>
-        </div>
-      </div><!--end blog post-->
-    </div><!--end col-->
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <a href="">
-          <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="images/projetos/projeto5.png" class="img-fluid rounded-top" alt="">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-        </a>
-        <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">21 SEPEX</a></h4>
-          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
-          <div class="pt-3 mt-3 border-top d-flex">
-          </div>
-        </div>
-      </div><!--end blog post-->
-    </div><!--end col-->
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <a href="">
-          <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-        </a>
-        <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Comunicado oficial</a></h4>
-          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
-          <div class="pt-3 mt-3 border-top d-flex">
-          </div>
-        </div>
-      </div><!--end blog post-->
-    </div><!--end col-->
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <a href="">
-          <div class="blog-img d-block overflow-hidden position-relative">
-            <img src="images/projetos/projeto6.jpg" class="img-fluid rounded-top" alt="">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta">
-              <a href="javascript:void(0)" class="text-light read-more">Ler tudo<i class="mdi mdi-chevron-right"></i></a>
-            </div>
-          </div>
-        </a>
-        <div class="content p-3">
-          <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Título da notícia</a></h4>
-          <p class="text-muted mt-2">Aqui será uma prévia da notícia, convidando o usuário a clicar na imagem e saber mais sobre a noticia em si.</p>
-          <div class="pt-3 mt-3 border-top d-flex">
-          </div>
-        </div>
-      </div><!--end blog post-->
-    </div><!--end col-->
+      @foreach($news as $post)
+          <div class="col-lg-4 col-md-6 mt-4 pt-2">
+              <div class="blog-post rounded border">
+                  <a href="{{ route('noticias.noticiasleitura', $post->link) }}">
+                      <div class="blog-img d-block overflow-hidden position-relative">
+                          <img src="{{ asset('storage/' . $post->imagem) }}" class="img-fluid rounded-top" alt="{{ $post->titulo }}">
+                          <div class="overlay rounded-top bg-dark"></div>
+                          <div class="post-meta justify-content-center">
+                              <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-light read-more">
+                                  Ler tudo <i class="mdi mdi-chevron-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </a>
+                  <div class="content p-3">
+                      <h4 class="mt-2">
+                          <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-dark title">
+                              {{ $post->titulo }}
+                          </a>
+                      </h4>
+                      <p class="text-muted mt-2">{{ Str::limit(strip_tags($post->corpo), 100) }}</p>
+                  </div>
+              </div>
+          </div><!--end col-->
+      @endforeach
   </div>
+
   <div class="container col-12 d-flex justify-content-center">
-    <div class="card bg-principal my-3 card text-center shadow grow2">
-      <a href="{{route('noticias.noticiasrecentes')}}">
-        <div class="card-body" style="min-width:15vw;">
-          <h5 class="card-text text-white">Mais notícias</h5>
-        </div>
-      </a>
-    </div>
+      <div class="card bg-principal my-3 card text-center shadow grow2">
+          <a href="{{ route('noticias.noticiasrecentes') }}">
+              <div class="card-body" style="min-width:15vw;">
+                  <h5 class="card-text text-white">Mais notícias</h5>
+              </div>
+          </a>
+      </div>
   </div>
 </div>
+
 
 <!-- Servicos -->
 <div class="feature">
