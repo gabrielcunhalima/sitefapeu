@@ -101,7 +101,7 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 //NOTICIAS
 
 Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
-Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
+Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
 Route::match(['get', 'post'], '/loginadm', [MenuController::class, 'loginadm'])->name('admin.loginadm');

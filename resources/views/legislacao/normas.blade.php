@@ -7,9 +7,9 @@
     <div class="text-justify">
         <h3 class="font-weight-bold">FAPEU</h3>
         <p><i>Fundação de Amparo à Pesquisa e Extensão Universitária</i></p><br>
-        <p><strong><a href="https://api.fapeu.com.br/arquivos/663a78ea1e9de272ced5d6b8/file" target="_blank"> 2019 PORTARIA N. 004 DE 2024, de 25 de abril de 2024</strong><br> </a>
+        <p><strong><a href="/pdfs/Legislacao/FAPEU/PORTARIA N. 004 DE 2024 - Altera PN n. 002 DE 2022 Composição dos membros do CI-LGPD.pdf" target="_blank"> 2019 PORTARIA N. 004 DE 2024, de 25 de abril de 2024</strong><br> </a>
         Altera a Portaria Normativa N. 002/DE/2022, no que tange à composição dos membros do Comitê de Implementação da Lei Geral de Proteção de Dados (CI-LGPD) no âmbito da Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) e revoga a Portaria nº 001/DE/2024 de 27 de fevereiro de 2024.</p>
-        <p><strong><a href="https://api.fapeu.com.br/arquivos/663a78df1e9de269ddd5d6ad/file" target="_blank"> 2019 PORTARIA N. 002 DE 2024, de 11 de abril de 2024</strong><br></a>
+        <p><strong><a href="/pdfs/Legislacao/FAPEU/PORTARIA N. 002 DE 2024 - locação de auditório e sala de eventos revoga PORTARIA N. 003 DE 2013.pdf" target="_blank"> 2019 PORTARIA N. 002 DE 2024, de 11 de abril de 2024</strong><br></a>
         Dispõe sobre os valores para locação de auditório e salas de eventos e de limpeza e conservação, de que trata o art. 3º da Portaria nº. 003/DE/2013, de 11 de abril de 2013 e revoga a Portaria nº 008/DE/2019, de 10 de setembro de 2019.</p>
         <p><strong><a href="pdfs/Legislacao/FAPEU/PORTARIA_NORMATIVA____DE____ (3).pdf" target="_blank">PORTARIA NORMATIVA N. 010/DE/2023, DE 31 de agosto de 2023</strong><br> </a>
         Dispõe sobre a concessão de diárias para pessoas sem vínculo empregatício por conta de projetos sob a gestão administrativa e financeira da Fundação de Amparo à Pesquisa e Extensão Universitária - FAPEU, e dá outras providências.</p>
