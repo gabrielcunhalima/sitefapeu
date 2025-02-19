@@ -90,7 +90,6 @@
                 </div>
             </div>
         </div>
-        <h3 class="border rounded-pill p-2 my-3 text-center container">Relação de contatos</h3>
         <div class="col-md-8 col-sm-12 mt-23 mx-auto mt-5 offset-md-2">
             <div class="card" style="width: 100%;">
                 <div class="card-body">
