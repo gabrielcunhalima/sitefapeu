@@ -36,6 +36,9 @@
 
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
+    <!--Acessibilidade -->
+  <script src="https://cdn.userway.org/widget.js" data-account="YinJfS8smr"></script>
+
   <title>FAPEU</title>
 </head>
 
@@ -89,22 +92,10 @@
     Boas festas!
   </div> -->
 
-  <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn bg-info btn-info">
-      <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
-    </button>
-    <div id="accessibility-buttons-container" class="accessibility-buttons d-none mt-5">
-      <button id="increase-font" class="btn bg-info">A+</button>
-      <button id="decrease-font" class="btn bg-info">A-</button>
-      <button id="toggle-contrast" class="btn bg-info">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-info">Escala de Cinza</button>
-      <button id="reset-accessibility" class="btn bg-info">Restaurar</button>
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
 

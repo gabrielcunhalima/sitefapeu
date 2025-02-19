@@ -24,6 +24,10 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
+  <!--Acessibilidade -->
+  <script src="https://cdn.userway.org/widget.js" data-account="YinJfS8smr"></script>
+
+  
   <title>@yield('title')</title>
 </head>
 
@@ -74,22 +78,11 @@
 </style>
 
 <body>
-  <div class="accessibility-buttons d-none d-lg-block">
-    <button id="toggle-accessibility" class="btn bg-info">
-      <img src="images/IconsAreaADM/man_8022646.png" alt="Acessibilidade" height="34">
-    </button>
-    <div id="accessibility-buttons-container" class="accessibility-buttons d-none">
-      <button id="increase-font" class="btn bg-info">A+</button>
-      <button id="decrease-font" class="btn bg-info">A-</button>
-      <button id="toggle-contrast" class="btn bg-info">Alto Contraste</button>
-      <button id="toggle-grayscale" class="btn bg-info">Escala de Cinza</button>
-      <button id="reset-accessibility" class="btn bg-info">Restaurar</button>
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
 
@@ -101,6 +94,7 @@
             <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
+          
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
@@ -256,113 +250,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    const toggleAccessibilityButton = document.getElementById('toggle-accessibility');
-    const accessibilityButtonsContainer = document.getElementById('accessibility-buttons-container');
-
-    toggleAccessibilityButton.addEventListener('click', () => {
-      accessibilityButtonsContainer.classList.toggle('d-none');
-
-      if (accessibilityButtonsContainer.style.top === '40vh') {
-        accessibilityButtonsContainer.style.top = '';
-      } else {
-        accessibilityButtonsContainer.style.top = '40vh';
-      }
-    });
-
-    const increaseFontButton = document.getElementById('increase-font');
-    const decreaseFontButton = document.getElementById('decrease-font');
-    const toggleContrastButton = document.getElementById('toggle-contrast');
-    const toggleGrayScaleButton = document.getElementById('toggle-grayscale');
-    const resetAccessibilityButton = document.getElementById('reset-accessibility');
-
-    // Tamanho inicial da fonte do body
-    const originalFontSize = window.getComputedStyle(document.body).fontSize;
-    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
-
-    // Função para aumentar a fonte
-    increaseFontButton.addEventListener('click', () => {
-      fontSize += 2;
-      document.body.style.fontSize = fontSize + 'px'; // aplica o novo tamanho ao body
-
-      // Seleciona e ajusta o tamanho de todos os cabeçalhos
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
-        let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
-        header.style.fontSize = (headerFontSize + 2) + 'px';
-      });
-    });
-
-    // Função para diminuir a fonte
-    decreaseFontButton.addEventListener('click', () => {
-      if (fontSize > 10) {
-        fontSize -= 2;
-        document.body.style.fontSize = fontSize + 'px';
-
-        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(header => {
-          let headerFontSize = parseInt(window.getComputedStyle(header).fontSize);
-          header.style.fontSize = (headerFontSize - 2) + 'px';
-        });
-      }
-    });
-
-    resetAccessibilityButton.addEventListener('click', () => {
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, div:not(#accessibility-buttons-container):not(#naoalterar), span, a').forEach(el => {
-        el.style.fontSize = ''; // Remove a personalização, volta ao padrão do CSS
-        el.style.fontFamily = ''; // Remove a personalização da fonte
-        document.body.style.fontSize = '';
-      });
-
-      // Remove classes de acessibilidade
-      document.body.classList.remove('high-contrast', 'grayscale');
-      // Remove a classe de fundo dos botões
-      toggleContrastButton.classList.remove('bg-acessibilidade2');
-      toggleGrayScaleButton.classList.remove('bg-acessibilidade2');
-      toggleUnderlineLinksButton.classList.remove('bg-acessibilidade2');
-      setReadableFontButton.classList.remove('bg-acessibilidade2');
-
-    });
-  </script>
-
-  <!-- Contraste -->
-
-  <script>
-    toggleContrastButton.addEventListener('click', () => {
-      document.body.classList.toggle('high-contrast');
-    });
-  </script>
-
-  <!-- Escala cinza -->
-
-  <script>
-    toggleGrayScaleButton.addEventListener('click', () => {
-      const isActive = document.body.classList.toggle('grayscale');
-      toggleGrayScaleButton.classList.toggle('bg-acessibilidade2', isActive);
-    });
-  </script>
-
-  <!-- Botão Toggle para os recursos de Acessibilidade -->
-
-  <script>
-    function toggleElements() {
-      const tragaprojetodentro = document.getElementById("tragaprojetodentro");
-      const tragaprojetofora = document.getElementById("tragaprojetofora");
-
-      if (window.matchMedia("(max-width: 993px)").matches) {
-        tragaprojetodentro.classList.remove("d-none");
-        tragaprojetodentro.classList.add("d-block");
-
-        tragaprojetofora.classList.remove("d-block");
-        tragaprojetofora.classList.add("d-none");
-      } else {
-        tragaprojetodentro.classList.remove("d-block");
-        tragaprojetodentro.classList.add("d-none");
-
-        tragaprojetofora.classList.remove("d-none");
-        tragaprojetofora.classList.add("d-block");
-      }
-    }
-
-    window.addEventListener("load", toggleElements);
-    window.addEventListener("resize", toggleElements);
+   
   </script>
 
 </body>
