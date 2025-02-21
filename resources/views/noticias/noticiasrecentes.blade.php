@@ -123,7 +123,7 @@
     .card-img-container img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .card {
@@ -133,14 +133,15 @@
 
     .card-text {
         display: -webkit-box;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        max-height: 4.5em;
     }
 </style>
 <div class="container">
-    <div class="container mt-100 mt-60">
+    <div class="container">
         <div class="row">
             @foreach ($news as $item)
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
@@ -150,13 +151,13 @@
                             <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
-                                <p class="border rounded-pill px-2">Clique para conhecer</p>
+                                <p class="border rounded-pill px-2">Clique para ler tudo</p>
                             </div>
                         </a>
                     </div>
                     <div class="content p-3">
                         <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
-                        <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 150) !!}</p>
+                        <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p> -->
                         <div class="pt-3 mt-3 border-top d-flex">
                             <div class="author mt-2">
                                 <h6 class="mb-0"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>

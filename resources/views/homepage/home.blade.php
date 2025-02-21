@@ -183,7 +183,7 @@
     <div class="row align-items-center">
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('projetos.menuprojetos')}}">
+          <a href="{{route('projetos.espacocoordenador')}}">
             <div class="card-body">
               <p class="card-text text-white font-weight-bold">Espaço do Coordenador</p>
             </div>
@@ -221,11 +221,11 @@
 
   <div class="responsive container mt-0">
       @foreach($news as $post)
-          <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-4 pt-2">
               <div class="blog-post rounded border">
                   <a href="{{ route('noticias.noticiasleitura', $post->link) }}">
                       <div class="blog-img d-block overflow-hidden position-relative">
-                          <img src="{{ asset('storage/' . $post->imagem) }}" class="img-fluid rounded-top" alt="{{ $post->titulo }}">
+                          <img src="{{ asset('storage/' . $post->imagem) }}" class="mx-auto img-fluid" alt="{{ $post->titulo }}" style="max-height: 20vh; min-height:20vh;object-fit: cover;">
                           <div class="overlay rounded-top bg-dark"></div>
                           <div class="post-meta justify-content-center">
                               <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-light read-more">

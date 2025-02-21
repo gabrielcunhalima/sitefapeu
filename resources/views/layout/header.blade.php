@@ -27,7 +27,7 @@
   <!--Acessibilidade -->
   <script src="https://cdn.userway.org/widget.js" data-account="YinJfS8smr"></script>
 
-  
+
   <title>@yield('title')</title>
 </head>
 
@@ -94,7 +94,7 @@
             <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
-          
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>
@@ -221,11 +221,13 @@
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  @if (Request::route()->getName() !== 'noticias.noticiasleitura' && Request::route()->getName() !== 'noticias.noticiasrecentes' && Request::route()->getName() !== 'homepage.home')
   <div class="jumbotron jumbotron-fluid jumbotron-custom">
     <div class="container">
       <h1 class="font-weight-bold">{{$titulo}}</h1>
     </div>
   </div>
+  @endif
   <main class="pt-4">
     @yield('conteudo')
   </main>
@@ -235,23 +237,12 @@
 
 
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <!-- <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-
+  </script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-   
-  </script>
 
 </body>
 
