@@ -8,7 +8,7 @@ use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\SelecoesPublicasController;
-
+use App\Http\Controllers\LoginController;
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
 Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
@@ -103,8 +103,24 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
-Route::match(['get', 'post'], '/loginadm', [MenuController::class, 'loginadm'])->name('admin.loginadm');
-Route::get('/logoutadm', [MenuController::class, 'logoutadm'])->name('admin.logoutadm');
+Route::match(['get', 'post'], '/loginadm', [loginController::class, 'loginPost'])->name('admin.loginadm');
+Route::get('/logoutadm', [LoginController::class, 'logout'])->name('admin.logoutadm');
+Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
+
+
+
+//EDITAR NOTICIA:
+
+Route::get('/editar', [MenuController::class, 'editarNoticias'])->name('noticias.editar');
+Route::post('/noticias/editar/{id}', [MenuController::class, 'atualizarNoticia']);
+Route::post('/noticias/visibilidade/{id}', [MenuController::class, 'alterarVisibilidade']);
+Route::post('/noticias/excluir/{id}', [MenuController::class, 'excluirNoticia']);
+Route::post('/noticias/update-imagem/{id}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
+
+//CRIAR USUARIO
+Route::get('/createusuario', [LoginController::class, 'createUsuario'])->name('admin.createusuario');
+Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('admin.storeusuario');
+
+
+
 Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
-
-

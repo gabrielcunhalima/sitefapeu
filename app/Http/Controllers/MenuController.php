@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 class MenuController extends Controller
+
 {
     private function renderView($view, $imagem, $titulo, $dados = [])
     {
@@ -80,9 +81,17 @@ class MenuController extends Controller
         return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidade');
     }
 
- public function noticiasrecentes()
+    public function paineladministrativo()
     {
-        $news = Post::all();
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
+        }
+        return $this->renderView('admin.menu', 'captacao.png', 'Painel Administrativo');
+    }
+
+    public function noticiasrecentes()
+    {
+        $news =   $news = Post::where('visivel', true)->get();
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
 
@@ -90,19 +99,22 @@ class MenuController extends Controller
        
     }
 
+    
     public function noticiaspost(Request $request)
     {
-        // autenticação finalmenteeeeee funcionou
-    if (!Session::has('admin_logged_in') || (time() - Session::get('admin_logged_in_time') > 43200)) { // timerzinho pra logout
-        return redirect()->route('admin.loginadm');
-    }
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
+        }
+
+        Session::put('admin_logged_in_time', time());
     
         if ($request->isMethod('POST')) {
 
             $validated = $request->validate([
-                'titulo' => 'required|string|max:255',
+                'titulo' => 'required|string|max:2555',
                 'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
                 'corpo' => 'required|string',
+               
             ]);
 
             $imagePath = $request->file('imagem')->store('public/posts');
@@ -131,37 +143,66 @@ class MenuController extends Controller
         return view('noticias.noticiasleitura', compact('post', 'imagem','titulo','link'));
     }
     
-
-
-    public function loginadm(Request $request)
-    {
-        if ($request->isMethod('POST')) {
-
-            $request->validate([
-                'usuario' => 'required|string',
-                'senha' => 'required|string',
-            ]);
     
-        
-            $admin = DB::table('admins')->where('usuario', $request->usuario)->first();
+
+    //EDITAR NOTICIAS
     
-            if ($admin && hash('sha256', $request->senha) === $admin->senha) {
+            public function editarNoticias()
             
-                // sessão com informações do login
-                Session::put('admin_logged_in', true);
-                Session::put('admin_logged_in_time', time());  // o tempo do login
-    
-              
-                return redirect()->route('noticias.noticiaspost');
-            } else {
-                
-                return back()->withErrors(['usuario' => 'Credenciais inválidas']);
+        {
+            if (!Auth::check()) {
+                return redirect()->route('admin.login');
             }
+
+            $news = Post::all();
+            $imagem = 'noticiasedit.png';
+            $titulo = 'Edição de Notícias';
+
+
+            return view('noticias.editarnoticias', compact('news', 'imagem', 'titulo'));
         }
-    
-        return $this->renderView('admin.loginadm', 'loginadm.png', 'Painel Administrativo');
-    }
-    
+
+        public function atualizarNoticia(Request $request, $id)
+        {
+            
+            $post = Post::findOrFail($id);
+            $campo = $request->campo;
+            $valor = $request->valor;
+
+            $post->$campo = $valor;
+            $post->save();
+
+            return response()->json(['success' => true]);
+        }
+
+        public function alterarVisibilidade(Request $request, $id)
+        {
+            $post = Post::findOrFail($id);
+            $post->visivel = $request->visivel;
+            $post->save();
+
+            return response()->json(['success' => true]);
+        }
+
+        public function excluirNoticia($id)
+        {
+            $post = Post::findOrFail($id);
+            $post->delete();
+
+            return response()->json(['success' => true]);
+        }
+
+        public function atualizarImagem(Request $request, $id)
+        {
+            $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+            
+            $post = Post::findOrFail($id);
+            $imagePath = $request->file('imagem')->store('public/posts');
+            $post->imagem = str_replace('public/', '', $imagePath);
+            $post->save();
+
+            return back()->with('success', 'Imagem atualizada com sucesso!');
+        }
 
 
     public function manualcompras()
@@ -375,9 +416,10 @@ class MenuController extends Controller
 
     public function home()
     {
-        $news = Post::latest()->take(5)->get();
+        $news = Post::latest()->take(5)->get(); // Pegando as 5 últimas notícias
         return view('homepage.home', compact('news'));
     }
+    
 
     public function servicos()
     {

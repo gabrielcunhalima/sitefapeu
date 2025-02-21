@@ -28,6 +28,7 @@
 
 <div class="container mt-5">
     <h2>Adicionar Novo Post</h2>
+    
     <form action="{{ route('noticias.noticiaspost') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -45,19 +46,21 @@
         <button type="submit" class="btn btn-primary">Publicar</button>
     </form>
 </div>
+
+
 @if(session('success'))
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="successModalLabel">Sucesso!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 {{ session('success') }}
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>
