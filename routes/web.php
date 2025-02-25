@@ -100,13 +100,13 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 
 //NOTICIAS
 
+
 Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
 Route::match(['get', 'post'], '/loginadm', [loginController::class, 'loginPost'])->name('admin.loginadm');
 Route::get('/logoutadm', [LoginController::class, 'logout'])->name('admin.logoutadm');
 Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
-
 
 
 //EDITAR NOTICIA:

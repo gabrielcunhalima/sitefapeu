@@ -11,6 +11,7 @@
         </div>
     @endif
 
+    
     <form action="{{ route('admin.storeusuario') }}" method="POST">
         @csrf
 

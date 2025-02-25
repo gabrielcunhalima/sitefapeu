@@ -183,7 +183,7 @@
             <div class="modal-body">
                 {{ session('success') }}
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer"> 
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
             </div>
         </div>
@@ -198,5 +198,7 @@
             successModal.hide();
         }, 3000);
     };
+
+    
 </script>
 @endif

@@ -205,6 +205,7 @@ class MenuController extends Controller
         }
 
 
+        
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');

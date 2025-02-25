@@ -21,11 +21,12 @@ class LoginController extends Controller
             return redirect('/admin');
         }
         
+        
         return redirect()->route('login')->with('error','');
     }
 
     public function logout() {
         Auth::logout();
-        return redirect()->route('index');
+        return redirect()->route('admin.login');
     }
 }

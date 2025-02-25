@@ -11,6 +11,8 @@ class LoginController extends Controller
 
 
 
+
+
 {
 
     private function renderView($view, $imagem, $titulo, $dados = [])
