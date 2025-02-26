@@ -1,6 +1,5 @@
 @extends('layout.header')
-
-@section('title', 'Editar Notícias')
+@section('title', 'ADMIN | Editar Notícias')
 
 @section('conteudo')
 

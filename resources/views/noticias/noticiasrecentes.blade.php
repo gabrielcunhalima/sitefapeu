@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU - Notícias')
+@section('title','FAPEU | Notícias')
 
 @section('conteudo')
 <style>
@@ -123,7 +123,6 @@
     .card-img-container img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
     }
 
     .card {
@@ -140,7 +139,11 @@
         max-height: 4.5em;
     }
 </style>
-<div class="container">
+<div class="noticiasrecentes">
+<div class="section-title py-3 mb-0">
+            <h2 class="container my-2 text-center">Notícias recentes</h2>
+            <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
+        </div>
     <div class="container">
         <div class="row">
             @foreach ($news as $item)
@@ -156,11 +159,11 @@
                         </a>
                     </div>
                     <div class="content p-3">
-                        <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
+                        <h4 class="mt-2 font-weight-bold"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
                         <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p> -->
                         <div class="pt-3 mt-3 border-top d-flex">
                             <div class="author mt-2">
-                                <h6 class="mb-0"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>
+                                <h6 class="mb-0 text-muted"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>
                             </div>
                         </div>
                     </div>
@@ -170,7 +173,6 @@
         </div>
     </div>
 </div>
-@endsection
 
 @if(session('success'))
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
@@ -183,7 +185,7 @@
             <div class="modal-body">
                 {{ session('success') }}
             </div>
-            <div class="modal-footer"> 
+            <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
             </div>
         </div>
@@ -198,7 +200,6 @@
             successModal.hide();
         }, 3000);
     };
-
-    
 </script>
 @endif
+@endsection

@@ -1,4 +1,5 @@
 @extends('layout.header')
+@section('title', 'ADMIN | Adicionar Notícia')
 @section('conteudo')
 
 @if(session('success'))

@@ -19,13 +19,22 @@
 
     <p>Nas instituições apoiadas, o foco está na promoção de ações voltadas a tornar os projetos mais eficientes e sustentáveis. Contando com uma equipe enxuta de empregados, a FAPEU atua de forma interativa e didática junto aos coordenadores e equipes de projetos, buscando oferecer o suporte necessário sobre os aspectos relacionados à gestão administrativa, incluindo as determinações legais e as exigências para a correta prestação de contas desses projetos.</p>
 
-    <p>Dessa forma, o trabalho da FAPEU é reconhecido pela comunidade acadêmica e tem contribuído significativamente para o desenvolvimento científico e tecnológico do Brasil, em especial nos estados de Santa Catarina, Rio Grande do Sul e Paraná.</p><hr>
+    <p>Dessa forma, o trabalho da FAPEU é reconhecido pela comunidade acadêmica e tem contribuído significativamente para o desenvolvimento científico e tecnológico do Brasil, em especial nos estados de Santa Catarina, Rio Grande do Sul e Paraná.</p>
+    <hr>
 
-    <p><b>Missão</b><br>Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br></p>
+    <div class="row">
+        <div class="col-7">
+            <p><b>Missão</b><br>Contribuir para o desenvolvimento científico, tecnológico e social por meio de apoio a projetos de pesquisa e extensão.<br><br></p>
+            <p><b>Visão</b><br>Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br></p>
+            <p class="text-left"><b>Valores</b><br>Honestidade, Transparência, Conformidade, Equidade, Responsabilidade e Respeito à Vida, às Pessoas e ao Meio Ambiente</p>
+        </div>
+        <div class="col-5">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="1097" height="703" src="https://www.youtube.com/embed/igI4tjoS-u0" title="Fapeu 40 anos - vídeo institucional  (com libras e legendas) - 2017" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
-    <p><b>Visão</b><br>Ser reconhecida como instituição socialmente responsável e referência na gestão de projetos culturais, científicos, tecnológicos e de inovação.<br><br></p>
-
-    <p class="text-left"><b>Valores</b><br>Honestidade, Transparência, Conformidade, Equidade, Responsabilidade e Respeito à Vida, às Pessoas e ao Meio Ambiente</p>
     <h1 class="text-center mt-5"><i>Há 47 anos transformando ideias em ações!</i></h1>
 </div>
 @endsection

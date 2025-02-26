@@ -17,7 +17,7 @@
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase font-weight-bold">Caixa Postal</h5>
         <p class="textofooter">
-          AC Cidade Universitária,<br>
+          Correspondências via correio.<br>
           Caixa Postal 5078, Bairro Trindade, Florianópolis/SC, CEP 88035-972<br>
           CNPJ: 83.476.911/0001-17<br>
           Inscrição Estadual: ISENTO<br>
@@ -33,15 +33,15 @@
           Tel: (48) 3331-7400<br>
           contato@fapeu.org.br<br>
           <br>
-          <h5 class="font-weight-bold">Redes sociais</h5>
+        <h5 class="font-weight-bold">Redes sociais</h5>
         </p>
         <p style="font-size:2.2em;">
           <a href="https://instagram.com/fapeu_" class="text-white"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/fapeu/?locale=pt_BR" class="text-white"> <i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/fapeu/" class="text-white"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/@youtubedafapeu" class="text-white"><i class="bi bi-youtube"></i></a>
         </p><br>
       </div>
-
       <!--Grid column-->
     </div>
     <!--Grid row-->

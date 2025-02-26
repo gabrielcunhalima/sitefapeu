@@ -5,7 +5,7 @@
 <div class="container text-justify">
 
     <h3><b>Núcleo de Análise Gerencial e Fiscal</b></h3><br>
-    <p>Visamos proporcionar o desenvolvimento institucional de empresas públicas e privadas, por meio do alcance de melhorias e do fortalecimento de suas capacidades e estruturas, propiciando que atinjam seus objetivos de maneira mais eficaz e eficiente.<br><br>
+    <p>O Núcleo de Análise Gerencial e Fiscal (NAGEFI) visa proporcionar o desenvolvimento institucional de empresas públicas e privadas quanto ao compliance financeiro, contábil, fiscal, tributário, de gestão e à segurança e saúde do trabalho, por meio do alcance de melhorias e do fortalecimento de suas capacidades e estruturas, propiciando que atinjam seus objetivos de maneira mais eficaz e eficiente.<br><br>
         O nosso trabalho envolve o aperfeiçoamento de processos internos e a adoção de tecnologias e práticas modernas de gestão, capacitação e treinamento de seus colaboradores e, para isso, é constituído por uma equipe técnica própria, composta por consultores associados com comprovada experiência profissional.<br><br>
         Dessa forma, o serviço prestado pelo NAGEFI fortalecerá as capacidades das organizações, garantindo sua sustentabilidade e sucesso quanto ao compliance financeiro, contábil, fiscal, tributário, de gestão e em segurança e saúde do trabalho.</p><br>
     <hr><br>

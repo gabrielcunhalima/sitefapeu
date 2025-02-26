@@ -3,37 +3,46 @@
 
 @section('conteudo')
 
-<div class="rounded">
-    <div class="jumbotron text-center text-white bg-verdeescuro">
-        <h2>Painel Administrativo</h2>
-    </div>
-</div>
+<style>
+    .botaoadmin {
+        min-width: 20vw;
+    }
+</style>
 
 @if(session('success'))
 <div class="alert alert-success">
     {{ session('success') }}
-    
 </div>
 @endif
 
-    <div class="row d-flex justify-content-center mb-4">
-        <a class="btn bg-verde text-white botaoadmin" href='{{url('noticiaspost')}}'>Adicionar Notícia</a>
+<div class="row">
+    <div class="col-6 justify-content-end">
+        <div class="col-12">
+            <div class="text-center mt-4">
+                <a href='{{url('noticiaspost')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
+                <i class="bi bi-newspaper"></i> &nbsp;&nbsp; Adicionar Notícia
+                </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="text-center mt-4">
+                <a href='{{url('editar')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
+                <i class="bi bi-brush"></i> &nbsp;&nbsp; Editar Notícia
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="row d-flex justify-content-center mb-4">
-        <a class="btn bg-verde text-white botaoadmin" href='{{url('editar')}}'>Editar Notícias</a>
+    <div class="col-6">
+        <div class="text-center mt-4">
+            <a href='{{url('createusuario')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
+            <i class="bi bi-person-plus-fill"></i> &nbsp;&nbsp; Adicionar Usuário
+            </a>
+        </div>
     </div>
-    <div class="row d-flex justify-content-center mb-4">
-        <a class="btn bg-verde text-white botaoadmin" href='{{url('admin/adicionarselecaopublica')}}'>Adicionar Seleção Pública</a>
-    </div>
-    <div class="row d-flex justify-content-center mb-4">
-        <a class="btn bg-verde text-white botaoadmin" href='{{url('createusuario')}}'>Adicionar Usuário</a>
-    </div>
-
-    
-    </div>
-    <div class="row d-flex justify-content-center mt-3">
-        <a href='{{route('admin.logoutadm')}}' class="btn bg-verde text-white botaoadmin">LOGOUT</a>
-    </div>
-
-    
+</div>
+<div class="text-center mt-4">
+    <a href='{{route('admin.logoutadm')}}' class="botaoadmin btn btn-danger mt-5 btn-lg px-4 py-2">
+        Logout
+    </a>
+</div>
 @endsection

@@ -3,7 +3,7 @@
 
 @section('conteudo')
 <div class="container">
-    <p>Possuímos uma infraestrutura física e profissional especializada em comunicação e ensino-aprendizagem resultante da longa experiência da FAPEU na concepção, planejamento e execução de cursos em diversas áreas do conhecimento.</p><br>
+    <p>O LATIC possui uma infraestrutura física e profissional especializada em comunicação e ensino-aprendizagem resultante da longa experiência da FAPEU na concepção, planejamento e execução de cursos em diversas áreas do conhecimento.</p><br>
     <h3>Recursos educacionais e mídias utilizadas</h3><br>
 
     <ul>

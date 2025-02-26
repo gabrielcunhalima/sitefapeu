@@ -95,11 +95,9 @@ class MenuController extends Controller
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
 
-        return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));
-       
+        return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));       
     }
 
-    
     public function noticiaspost(Request $request)
     {
         if (!Auth::check()) {

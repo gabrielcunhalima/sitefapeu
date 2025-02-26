@@ -175,7 +175,7 @@
 </script>
 
 <div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
-  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">FUNDAÇÃO DE AMPARO À PESQUISA E EXTENSÃO UNIVERSITÁRIA</h1>
 </div>
 <!-- 3 menus principais -->
 <div class="bg-homebotoes pb-4">
@@ -185,16 +185,16 @@
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
           <a href="{{route('projetos.espacocoordenador')}}">
             <div class="card-body">
-              <p class="card-text text-white font-weight-bold">Espaço do Coordenador</p>
+              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Espaço do Coordenador</p>
             </div>
           </a>
         </div>
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('projetos.menuprojetos')}}">
+          <a href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional">
             <div class="card-body">
-              <p class="card-text text-white font-weight-bold">Gestão de Projetos</p>
+              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Licitações</p>
             </div>
           </a>
         </div>
@@ -203,7 +203,7 @@
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
           <a href="{{route('transparencia.projetostransparencia')}}">
             <div class="card-body">
-              <p class="card-text text-white font-weight-bold">Transparência</p>
+              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Transparência</p>
             </div>
           </a>
         </div>
@@ -274,7 +274,7 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('projetos.menuprojetos')}}">Saiba mais</a></div>
+            <div class="accordion-body">Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo, além de organização, conformidade e otimização de recursos para o sucesso do projeto.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -284,7 +284,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a></div>
+            <div class="accordion-body">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -294,7 +294,7 @@
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Uma plataforma completa para criação e gestão de eventos, onde os participantes podem se cadastrar, adquirir ingressos e acompanhar sua inscrição de forma prática.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
+            <div class="accordion-body">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -304,7 +304,7 @@
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
+            <div class="accordion-body">Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990. Instituições credenciadas no CNPq podem aproveitar esse benefício para otimizar seus projetos científicos e tecnológicos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -314,7 +314,7 @@
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
+            <div class="accordion-body">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -324,37 +324,38 @@
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.concursos')}}">Saiba mais</a></div>
+            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="collapse d-md-block" id="servicosCollapse">
+    <!-- TELA GRANDE -->
+    <div class="collapse d-block" id="servicosCollapse">
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold">Licitações</h5>
-              <p class="card-text">Gerenciamento administrativo e financeiro para o seu projeto, com o melhor que uma fundação de apoio pode oferecer.</p><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('projetos.menuprojetos')}}" target="_blank">Saiba mais</a>
+              <h5 class="card-title font-weight-bold">Gestão de Projetos</h5>
+              <p class="card-text">Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo, além de organização, conformidade e otimização de recursos para o sucesso do projeto.</p><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{ route('projetos.menuprojetos') }}">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Reservas de Salas</h5>
-              <p class="card-text">Facilitamos o agendamento de espaços da fundação, garantindo praticidade e organização para suas reuniões e eventos.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="https://eventos.fapeu.com.br/eventos/public/eventos/lista">Saiba mais</a>
+              <h5 class="card-title font-weight-bold">Reservas de Salas</h5>
+              <p class="card-text">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p><br><br><br><br><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Cursos e Eventos</h5>
-              <p class="card-text">Conheça nossa plataforma para criar eventos, cadastrar participantes e vender ingressos de forma prática.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark text-decoration-none" href="{{route('homepage.importacao')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold">Cursos e Eventos</h5>
+              <p class="card-text">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p><br><br><br><br><br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark mx-auto text-decoration-none" href="https://eventos.fapeu.com.br/eventos/public">Saiba mais</a>
             </div>
           </div>
         </div>
@@ -363,17 +364,17 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">Importação de Bens e Insumos</h5>
-              <p class="card-text">Importação de bens e insumos com isenção fiscal, destinada a apoiar projetos de pesquisa científica e tecnológica.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
+              <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
+              <p class="card-text">Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990. Instituições credenciadas no CNPq podem aproveitar esse benefício para otimizar seus projetos científicos e tecnológicos.</p> <br>
+              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">NAGEFI</h5>
-              <p class="card-text">Soluções completas para fortalecer a gestão, eficiência e compliance em organizações públicas e privadas.</p> <br>
+              <h5 class="card-title font-weight-bold">NAGEFI</h5>
+              <p class="card-text">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.<br><br><br><br></p> <br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
             </div>
           </div>
@@ -381,8 +382,8 @@
         <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold ">LATIC</h5>
-              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p> <br>
+              <h5 class="card-title font-weight-bold">LATIC</h5>
+              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p><br><br><br><br>
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
             </div>
           </div>
@@ -405,8 +406,8 @@
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
-        <a href="https://ifc.edu.br/">
-          <img src="images/ifc.png" alt="Apoiada IFSC" class="img-fluid img-sublink">
+        <a href="https://www.uffs.edu.br/">
+          <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
@@ -415,23 +416,13 @@
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
-        <a href="https://www.uffs.edu.br/">
-          <img src="images/uffs.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+        <a href="https://ifc.edu.br/">
+          <img src="images/ifc.png" alt="Apoiada IFC" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
         <a href="https://unipampa.edu.br/">
           <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www2.ufjf.br/ufjf/">
-          <img src="images/ufjf.png" alt="Apoiada ufjf" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://confies.org.br/">
-          <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
@@ -446,7 +437,12 @@
       </div>
       <div class="col-sm apoiadas link-hover">
         <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
-          <img src="images/huufsc.png" alt="Apoiada uffs" class="img-fluid img-sublink">
+          <img src="images/huufsc.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
+        </a>
+      </div>
+      <div class="col-sm apoiadas link-hover">
+        <a href="https://confies.org.br/">
+          <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
         </a>
       </div>
     </div>
