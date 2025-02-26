@@ -98,8 +98,6 @@ class MenuController extends Controller
         return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));
        
     }
-
-    
     public function noticiaspost(Request $request)
     {
         if (!Auth::check()) {
@@ -107,9 +105,22 @@ class MenuController extends Controller
         }
 
         Session::put('admin_logged_in_time', time());
-    
-        if ($request->isMethod('POST')) {
 
+        if ($request->isMethod('GET')) {
+
+         if($request->id>0) {
+            
+            
+            $dados=Post::findOrFail($request->id);
+            $imagem= 'noticiaspost.png';
+            $titulo='Editar Noticia';
+            
+                return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'));
+            }
+        }
+       if ($request->isMethod('POST')) {
+
+        
             $validated = $request->validate([
                 'titulo' => 'required|string|max:2555',
                 'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
@@ -120,7 +131,7 @@ class MenuController extends Controller
             $imagePath = $request->file('imagem')->store('public/posts');
             $imagePath = str_replace('public/', '', $imagePath);
 
-            $post = new Post();
+            $post = post::findOrCreate($request->id);
             $post->titulo = $request->input('titulo');
             $post->imagem = $imagePath;
             $post->corpo = $request->input('corpo');
@@ -129,9 +140,13 @@ class MenuController extends Controller
 
             return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post criado com sucesso!');
         }
-
-        return $this->renderView('noticias.noticiaspost', 'noticiaspost.png', 'Postagem de Notícias');
+        $dados=['titulo' => '', 'corpo' => '', 'imagem' => '','id'=>''];
+        $imagem= 'noticiaspost.png';
+        $titulo='Nova Noticia';
+        return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'));
     }
+
+    
 
     public function noticiasleitura($link)
     {
@@ -296,7 +311,7 @@ class MenuController extends Controller
 
     public function comiteetica()
     {
-        return $this->renderView('politica.comiteetica', 'comiteetica.png', 'Comitê de Ética');
+        return $this->renderView('politica.comiteetica', 'comiteetica.png', 'Comitê');
     }
 
     public function integridade()

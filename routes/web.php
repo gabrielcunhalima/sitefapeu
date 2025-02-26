@@ -101,7 +101,8 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 //NOTICIAS
 
 
-Route::match(['get', 'post'], '/noticiaspost', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
+
+
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
 Route::match(['get', 'post'], '/loginadm', [loginController::class, 'loginPost'])->name('admin.loginadm');
@@ -111,11 +112,13 @@ Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
 
 //EDITAR NOTICIA:
 
-Route::get('/editar', [MenuController::class, 'editarNoticias'])->name('noticias.editar');
-Route::post('/noticias/editar/{id}', [MenuController::class, 'atualizarNoticia']);
-Route::post('/noticias/visibilidade/{id}', [MenuController::class, 'alterarVisibilidade']);
-Route::post('/noticias/excluir/{id}', [MenuController::class, 'excluirNoticia']);
-Route::post('/noticias/update-imagem/{id}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
+Route::get('/editar', [MenuController::class, 'editarNoticias'])->name('noticias.editarnoticias');
+Route::post('/editar/{id}', [MenuController::class, 'atualizarNoticia']);
+Route::post('/visibilidade/{id}', [MenuController::class, 'alterarVisibilidade']);
+Route::post('/excluir/{id}', [MenuController::class, 'excluirNoticia']);
+Route::post('/update-imagem/{id}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
+Route::get('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
+Route::post('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
 
 //CRIAR USUARIO
 Route::get('/createusuario', [LoginController::class, 'createUsuario'])->name('admin.createusuario');

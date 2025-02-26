@@ -29,16 +29,20 @@
       Valorizamos as diferenças e acreditamos sempre no desenvolvimento humano. Por meio deste programa, conheceremos e aprenderemos mais, teremos contato com novas experiências de vida.
 
       <br> <br>Venha juntar-se a família FAPEU e fazer a diferença na vida de nossos parceiros.
+      <p class="" style="font-weight: bold ; color: #099072;">Acesse  o nosso Portal de Oportunidades:</p>
       </p>
 
-      <p class="display-8 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
-      <a href="http://www.deficienteonline.com.br" target="_blank" style= "color: #099072;" > http://www.deficienteonline.com.br <br><br></a> 
+     
       
 
 </div>
       <div class="d-flex justify-content-center">
         <a class="btn-primary btn-outline-primary btn-lg mt-4" href="http://150.162.78.45:8080/Curriculo/" target="_blank" role="button" style= "border: 2px solid #099072; color: #099072; border-radius: 50px; padding: 10px 30px ;">ACESSE O CADASTRO AQUI</a>
       </div>
+<br>
+      <p class="display-8 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
+      <a href="http://www.deficienteonline.com.br" target="_blank" style= "color: #099072;" > http://www.deficienteonline.com.br <br><br></a> 
+
     </div>
   </div>
 </div>

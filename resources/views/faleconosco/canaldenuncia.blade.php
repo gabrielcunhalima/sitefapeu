@@ -6,7 +6,7 @@
     <div class="row">
         <br>
         <div class="col-md-6 col-sm-12">
-            <a class="btn btn-success bg-verde4 rounded mt-auto d-flex justify-content-center link-hover" href="http://150.162.78.4:8080/manager/login/coordenador/" target="_blank">
+            <a class="btn btn-success bg-verde4 rounded mt-auto d-flex justify-content-center link-hover" href="https://www.contatoseguro.com.br/fapeu" target="_blank">
                 <h3><img src="images/fapeu_ico.ico" alt="Icone da FAPEU" height="28">Canal de Denúncias&nbsp;&nbsp;</h3>
             </a>
             <p class="mt-4 mx-5">Clique no botão para ser redirecionado ao Canal de Denúncias da FAPEU.</p>

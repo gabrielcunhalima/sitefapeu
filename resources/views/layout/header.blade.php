@@ -91,7 +91,7 @@
       <div class="container">
         <div class="logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
+            <img src="{{ asset('images/logo2branca.png') }}" alt="Logo Fapeu" height="110">
           </a>
         </div>
 
@@ -145,7 +145,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="#">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
@@ -184,7 +184,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
                   <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow">DRHFlow</a>
-                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">ADMFlow</a>
+                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">Sistema ADMFlow</a>
                   <a class="dropdown-item" href="https://webmail.fapeu.org.br">WebMail</a>
                   <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                   <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>

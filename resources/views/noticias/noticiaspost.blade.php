@@ -25,23 +25,22 @@
     }
 });
 </script>
-
 <div class="container mt-5">
     <h2>Adicionar Novo Post</h2>
-    
     <form action="{{ route('noticias.noticiaspost') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
-            <input type="text" class="form-control" id="titulo" name="titulo" required>
+            <input type="text" class="form-control" id="titulo" name="titulo" value='{{$dados['titulo']}} 'required>
+            <input type="hidden" class="form-control" id="id" name="id" value='{{$dados['id']}} 'required>
         </div>
         <div class="mb-3">
             <label for="imagem" class="form-label">Imagem</label>
-            <input type="file" class="form-control" id="imagem" name="imagem" required>
+            <input type="file" class="form-control" id="imagem" name="imagem" value='{{$dados['imagem']}}' required>
         </div>
         <div class="mb-3">
             <label for="corpo" class="form-label">Conteúdo</label>
-            <textarea class="form-control" id="corpo" name="corpo" rows="4" required></textarea>
+            <textarea class="form-control" id="corpo" name="corpo" rows="4"  required> {{$dados['corpo']}}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Publicar</button>
     </form>
