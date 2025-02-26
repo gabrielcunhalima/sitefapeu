@@ -21,7 +21,7 @@
     <div class="text-justify">
         <h4 class="font-weight-bold">Portarias</h4><br>
         <p><strong>MCT/FNDCT/FINEP</strong></p>
-        <p><strong><a href="http://www.mct.gov.br/index.php/content/view/321382.html" target="_blank" class="">INSTRUÇÃO NORMATIVA CDFNDCT /MCT nº 1, de 25 de JUNHO de 2010 (IN CDFNDCT 01/10)</strong><br></a>
+        <p><strong><a href="https://antigo.mctic.gov.br/mctic/opencms/legislacao/outros_atos/instrucoes_normativas/Instrucao_Normativa_CDFNDCT_n_1_de_25062010.html#:~:text=Estabelece%20normas%20e%20diretrizes%20para,ou%20outra%20Ag%C3%AAncia%20de%20Fomento." target="_blank" class="">INSTRUÇÃO NORMATIVA CDFNDCT /MCT nº 1, de 25 de JUNHO de 2010 (IN CDFNDCT 01/10)</strong><br></a>
         Estabelece normas e diretrizes para transferência, utilização e prestação de contas dos recursos do FNDCT na modalidade não reembolsável, por meio de convênios, termos de cooperação e acordos de cooperação celebrados pela FINEP ou outra Agência de Fomento.</p>
     </div>
 </div>

@@ -163,7 +163,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="#">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>

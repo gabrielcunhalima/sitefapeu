@@ -96,43 +96,56 @@
                     <!-- Primeira Coluna -->
                     <div class="row">
                         <div class="col-md-4">
-                            <p><b>Diretoria Executiva</b><br>
-                            Telefone/WhatsApp:<br>
-                            (48) 3331-7479 </p>
-                            <p><b>Superintendência</b><br>
-                            Telefone/WhatsApp:<br>
-                            (48) 3331-7479</p>
-                            <p><b>Secretaria Executiva</b><br>
-                            Telefone/WhatsApp:<br>
-                            (48) 3331-7479</p>
-                            <p><b>Assessoria Jurídica</b><br>
-                            Telefone/WhatsApp:<br>
-                            (48) 3331-7414 | (48) 3331-7499<br></p>
+                            <p><b>Recepção</b><br>
+                                Telefone/WhatsApp: <br>(48) 3331-7401 </p>
+
+                            <p><b>Captação de Projetos</b><br>
+                                Telefone/WhatsApp:<br> (48) 3331-7408 </p>
+
+                            <p><b>Gestão de Projetos</b><br>
+                                Telefone/WhatsApp:<br> (48) 3331-7411 </p>
+
+                            <p><b>Gerência de Recursos Humanos</b><br>
+                                Telefone/WhatsApp:<br> (48) 3331-7442 </p>
+
+                       
                         </div>
                         <!-- Segunda Coluna -->
                         <div class="col-md-4">
-                            <p><b>Captação de Projetos</b><br>
-                            Telefone/WhatsApp:<br> (48) 3331-7408 </p>
-                            <p><b>Gestão de Projetos</b><br>
-                            Telefone/WhatsApp:<br> (48) 3331-7411 </p>
-                            <p><b>Gerência de Recursos Humanos</b><br>
-                            Telefone/WhatsApp:<br> (48) 3331-7442 </p>
+
                             <p><b>Gerência Administrativa e Financeira</b><br>
-                            Telefone/WhatsApp:<br> (48) 3331-7417 </p>
+                                Telefone/WhatsApp:<br> (48) 3331-7417 </p>
+
+                            <p><b>Financeiro</b><br>
+                                Telefone/WhatsApp:<br> (48) 3331-7434 </p>
+
+                            <p><b>Administrativo</b><br>
+                                Telefone/WhatsApp:<br> (48) 3331-7429 </p>
+
+                            <p><b>Gerência de Contabilidade e Patrimônio</b><br>
+                                Telefone/WhatsApp: <br> (48) 3331-7423 </p>
+
+
+                         
                         </div>
                         <div class="col-md-4">
-                            <p><b>Financeiro</b><br>
-                            Telefone/WhatsApp: (48) 3331-7434 </p>
-                            <p><b>Administrativo</b><br>
-                            Telefone/WhatsApp: (48) 3331-7429 </p>
-                            <p><b>Gerência de Contabilidade e Patrimônio</b><br>
-                            Telefone/WhatsApp: (48) 3331-7423 </p>
+                          
                             <p><b>Gerência de Informática</b><br>
                             Telefone/WhatsApp: (48) 3331-7436 </p>
-                            <p><b>Recepção</b><br>
-                            Telefone/WhatsApp: (48) 3331-7401 </p>
                             <p><b>LGPD</b><br>
                             Telefone/WhatsApp: (48) 3331-7442</p>
+                            <p><b>Diretoria Executiva</b><br>
+                                Telefone/WhatsApp:
+                                (48) 3331-7479 </p>
+                                <p><b>Superintendência</b><br>
+                                Telefone/WhatsApp:
+                                (48) 3331-7479</p>
+                                <p><b>Secretaria Executiva</b><br>
+                                Telefone/WhatsApp:
+                                (48) 3331-7479</p>
+                                <p><b>Assessoria Jurídica</b><br>
+                                Telefone/WhatsApp:
+                                (48) 3331-7414 | (48) 3331-7499<br></p>
                         </div>
                     </div>
                 </div>

@@ -49,10 +49,10 @@
                     </button>
                 </td>
                 <td>
-                
-                    <button class="btn btn-sm btn-primary" onclick="openModal({{ $item->id }}, '{{ $item->corpo }}')">
+                    
+                    <a href="{{ route('noticias.noticiaspost', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">
                         <i class="fa fa-edit"></i> Editar
-                    </button>
+                    </a>
                 </td>
                 <td>
                     <button class="btn btn-sm btn-danger" onclick="deletePost({{ $item->id }})">Excluir</button>
@@ -66,28 +66,6 @@
 
 
 
-<!-- Modal de Edição -->
-<div class="modal fade" id="editContentModal" tabindex="-1" aria-labelledby="editContentModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editContentModalLabel">Editar Conteúdo da Notícia</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
-                <form id="editContentForm" action="" method="POST">
-                    @csrf
-                    <input type="hidden" id="editPostId" name="postId">
-                    <div class="mb-3">
-                        <label for="corpo" class="form-label">Conteúdo</label>
-                        <textarea class="form-control" id="modalCorpo" name="corpo" rows="8" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <script>
@@ -146,42 +124,7 @@
         }
     }
 
-            function openModal(id, corpo) {
-      
-            document.getElementById('editPostId').value = id;
-            document.getElementById('modalCorpo').value = corpo;
-            
-   
-            var editModal = new bootstrap.Modal(document.getElementById('editContentModal'));
-            editModal.show();
-        }
-
-       
-            document.getElementById('editContentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var id = document.getElementById('editPostId').value;
-            var corpo = document.getElementById('modalCorpo').value;
-
-            // envia a alteração para o servidor
-            fetch(`/noticias/editar/${id}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                },
-                body: JSON.stringify({ campo: 'corpo', valor: corpo })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Conteúdo atualizado com sucesso!');
-                    location.reload();
-                } else {
-                    alert('Erro ao atualizar o conteúdo.');
-                }
-            });
-        });
+        
 
 </script>
 
