@@ -5,12 +5,12 @@
 <div class="pricing2 py-5">
   <div class="container">
     <div class="row justify-content-center">
-        <br> 
-        <h4 class="font-weight-normal text-center">
-         Elabore seu projeto com o apoio da FAPEU!
-        </h4> <br><br>
+      <br>
+      <h4 class="font-weight-normal text-center">
+        Elabore seu projeto com o apoio da FAPEU!
+      </h4> <br><br>
     </div>
-    
+
     <!-- Wrapper para centralização do card -->
     <div class="row justify-content-center" style="min-height: 50vh;">
       <div class="col-lg-6 col-md-7 d-flex justify-content-center align-items-center">
@@ -27,12 +27,17 @@
 
             <ul class="list-inline mb-3">
               <li class="list-inline-item py-2 text-justify">
-                A área de Captação e Implantação de Projetos da Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) 
-                espera, você, pesquisador, para elaborar e apresentar propostas e orçamentos de projetos que poderão ser 
-                apresentados a diferentes financiadores.
+                A FAPEU convida você, pesquisador, a transformar suas ideias em realidade!
+                Nossa área de Captação e Implantação de Projetos está pronta para orientar e apoiar a elaboração de propostas e orçamentos para projetos, que podem ser submetidos a diversas fontes de financiamento.
+                Por que solicitar o apoio da FAPEU?
+                - Suporte especializado na construção do seu projeto;
+                - Acesso a oportunidades de financiamento;
+                - Parceria estratégica para o sucesso da sua pesquisa;
+                Clique abaixo e saiba mais!
+
               </li>
               <div class="text-center">
-              <li class="list-inline-item py-2 text-justify"> Clique abaixo para acessar!</li> <br>
+                <li class="list-inline-item py-2 text-justify"> Clique abaixo para acessar!</li> <br>
             </ul>
             <div class="text-center ">
               <a class="btn btn-success btn-md rounded-pill text-white" href="https://fap6.fapeu.org.br/scripts/fapeusite.pl/swfwfap199" target="_blank">
@@ -40,9 +45,9 @@
               </a>
               <br>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-@endsection
+  @endsection
