@@ -1,5 +1,12 @@
-@extends('layout.header')
-@section('title', 'ADMIN | Editar Notícias')
+@extends('layout.header')@
+@section('title', 'Editar Notícias')
+
+
+
+
+
+
+
 
 @section('conteudo')
 
@@ -67,7 +74,6 @@
 
 
 
-
 <script>
     function updateField(id, campo, valor) {
         fetch(`/noticias/editar/${id}`, {
@@ -122,7 +128,7 @@
                   }
               });
         }
-    }
+    } 
 
         
 

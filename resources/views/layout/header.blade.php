@@ -184,7 +184,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
                   <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow">DRHFlow</a>
-                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">Sistema ADMFlow</a>
+                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">ADMFlow</a>
                   <a class="dropdown-item" href="https://webmail.fapeu.org.br">WebMail</a>
                   <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                   <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
