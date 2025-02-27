@@ -27,7 +27,7 @@
 });
 </script>
 <div class="container mt-5">
-    <h2>Adicionar Novo Post</h2>
+    <h2>{{ $alteratitulo ? 'Editar Notícia' : 'Adicionar Notícia' }}</h2>
     <form action="{{ route('noticias.noticiaspost') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -37,8 +37,15 @@
         </div>
         <div class="mb-3">
             <label for="imagem" class="form-label">Imagem</label>
-            <input type="file" class="form-control" id="imagem" name="imagem" value='{{$dados['imagem']}}' required>
+            @if(!empty($dados['imagem']))
+                <div class="mb-2">
+                    <img src="{{ asset('storage/' . $dados['imagem']) }}" alt="Imagem Atual" width="150">
+                </div>
+            @endif
+            <input type="file" class="form-control" id="imagem" name="imagem">
+            <input type="hidden" name="imagem_atual" value="{{ $dados['imagem'] }}"> <!-- mantem a imagem -->
         </div>
+        
         <div class="mb-3">
             <label for="corpo" class="form-label">Conteúdo</label>
             <textarea class="form-control" id="corpo" name="corpo" rows="4"  required> {{$dados['corpo']}}</textarea>

@@ -108,42 +108,46 @@ class MenuController extends Controller
 
         if ($request->isMethod('GET')) {
 
-         if($request->id>0) {
+            if($request->id>0) {
             
             
             $dados=Post::findOrFail($request->id);
             $imagem= 'noticiaspost.png';
-            $titulo='Editar Noticia';
+            $titulo='Editor de Notícias';
             
-                return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'));
+                return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'))->with('alteratitulo', true);
             }
         }
-       if ($request->isMethod('POST')) {
 
-        
+
+        if ($request->isMethod('POST')) {
             $validated = $request->validate([
                 'titulo' => 'required|string|max:2555',
-                'imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
                 'corpo' => 'required|string',
-               
+                'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             ]);
-
-            $imagePath = $request->file('imagem')->store('public/posts');
-            $imagePath = str_replace('public/', '', $imagePath);
-
-            $post = post::findOrCreate($request->id);
+    
+            $post = Post::findOrCreate($request->id);
             $post->titulo = $request->input('titulo');
-            $post->imagem = $imagePath;
             $post->corpo = $request->input('corpo');
             $post->link = Str::slug($request->input('titulo'));
+    
+            // Se uma nova imagem for enviada, faz o upload e substitui a antiga
+            if ($request->hasFile('imagem')) {
+                $imagePath = $request->file('imagem')->store('public/posts');
+                $post->imagem = str_replace('public/', '', $imagePath);
+            }
+    
             $post->save();
-
-            return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post criado com sucesso!');
+    
+            return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post atualizado com sucesso!');
         }
+
+
         $dados=['titulo' => '', 'corpo' => '', 'imagem' => '','id'=>''];
         $imagem= 'noticiaspost.png';
         $titulo='Nova Noticia';
-        return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'));
+        return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'))->with('alteratitulo', false);
     }
 
     

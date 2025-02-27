@@ -1,12 +1,5 @@
-@extends('layout.header')@
+@extends('layout.header')
 @section('title', 'Editar Notícias')
-
-
-
-
-
-
-
 
 @section('conteudo')
 
@@ -33,10 +26,11 @@
             @foreach($news as $item)
             <tr>
                
-                <td contenteditable="true" 
-                    onBlur="updateField({{ $item->id }}, 'titulo', this.innerText)">
+                <td >
                     {{ $item->titulo }}
                 </td>
+
+                
                 <td>
                     <img src="{{ asset('storage/' . $item->imagem) }}" alt="Imagem" width="100">
                     <form action="{{ route('noticias.updateImagem', $item->id) }}" method="POST" enctype="multipart/form-data">
@@ -45,6 +39,7 @@
                         <button type="submit" class="btn btn-sm btn-primary mt-1">Alterar</button>
                     </form>
                 </td>
+
                 <td>
                     <input type="date" class="form-control" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
                         onchange="updateField({{ $item->id }}, 'created_at', this.value)">
