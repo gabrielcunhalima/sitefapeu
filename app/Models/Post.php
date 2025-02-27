@@ -8,9 +8,9 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    protected $fillable = ['titulo', 'corpo', 'link','imagem'];
+    protected $fillable = ['titulo', 'corpo', 'link','imagem', 'created_at'];
 
-    public $timestamps = true;
+    public $timestamps = false;
     public static function findOrCreate($id)
     {
         $obj = static::find($id);

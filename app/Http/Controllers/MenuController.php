@@ -132,7 +132,7 @@ class MenuController extends Controller
             $post->corpo = $request->input('corpo');
             $post->link = Str::slug($request->input('titulo'));
     
-            // Se uma nova imagem for enviada, faz o upload e substitui a antiga
+            //se mandar uma nova imagem, substitui
             if ($request->hasFile('imagem')) {
                 $imagePath = $request->file('imagem')->store('public/posts');
                 $post->imagem = str_replace('public/', '', $imagePath);

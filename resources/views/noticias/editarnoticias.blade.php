@@ -13,61 +13,53 @@
     <table class="table table-bordered mt-4">
         <thead class="table-dark">
             <tr>
-          
-                <th>Título</th>
-                <th>Imagem</th>
-                <th>Data</th>
-                <th>Visível</th>
-                <th>Conteúdo</th> 
-                <th>Ações</th>
+                <th class="text-center">Título</th>
+                <th class="text-center">Imagem</th>
+                <th class="text-center">Data</th>
+                <th class="text-center">Visível</th>
+                <th class="text-center">Conteúdo</th>
+                <th class="text-center">Ações</th>
             </tr>
         </thead>
         <tbody>
             @foreach($news as $item)
             <tr>
-               
-                <td >
+                <td class="text-center">
                     {{ $item->titulo }}
                 </td>
 
-                
-                <td>
+                <td class="text-center">
                     <img src="{{ asset('storage/' . $item->imagem) }}" alt="Imagem" width="100">
-                    <form action="{{ route('noticias.updateImagem', $item->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('noticias.updateImagem', $item->id) }}" method="POST" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
                         @csrf
-                        <input type="file" name="imagem" class="form-control mt-2" required>
-                        <button type="submit" class="btn btn-sm btn-primary mt-1">Alterar</button>
+                        <input type="file" name="imagem" class="form-control form-control-sm me-2" required>
+                        <button type="submit" class="btn btn-sm btn-primary">Alterar</button>
                     </form>
                 </td>
 
-                <td>
+                <td class="text-center">
                     <input type="date" class="form-control" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
                         onchange="updateField({{ $item->id }}, 'created_at', this.value)">
                 </td>
-                <td>
+                <td class="text-center">
                     <button class="btn btn-sm {{ $item->visivel ? 'btn-success' : 'btn-danger' }}" 
                         onclick="toggleVisibility({{ $item->id }}, {{ $item->visivel ? 0 : 1 }})">
                         {{ $item->visivel ? 'Visível' : 'Oculto' }}
                     </button>
                 </td>
-                <td>
-                    
+                <td class="text-center">
                     <a href="{{ route('noticias.noticiaspost', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">
                         <i class="fa fa-edit"></i> Editar
                     </a>
                 </td>
-                <td>
+                <td class="text-center">
                     <button class="btn btn-sm btn-danger" onclick="deletePost({{ $item->id }})">Excluir</button>
                 </td>
             </tr>
             @endforeach
         </tbody>
-        
     </table>
 </div>
-
-
-
 
 <script>
     function updateField(id, campo, valor) {
@@ -123,10 +115,7 @@
                   }
               });
         }
-    } 
-
-        
-
+    }
 </script>
 
 @endsection
