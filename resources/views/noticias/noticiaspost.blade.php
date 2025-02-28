@@ -39,7 +39,7 @@
             <label for="imagem" class="form-label">Imagem</label>
             @if(!empty($dados['imagem']))
                 <div class="mb-2">
-                    <img src="{{ asset('storage/' . $dados['imagem']) }}" alt="Imagem Atual" width="150">
+                    <img src="{{ asset('storage/' . $dados['imagem']) }}" alt="Imagem Atual" width="150" required>
                 </div>
             @endif
             <input type="file" class="form-control" id="imagem" name="imagem">

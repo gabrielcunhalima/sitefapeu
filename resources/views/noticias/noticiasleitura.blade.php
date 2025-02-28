@@ -10,7 +10,7 @@
                 <div class="mb-3">
                     <img src="{{ asset('storage/' . $post->imagem) }}" class="card-img-top" alt="{{ $titulo }}" style="border-radius: 4px; max-height: 50vh; object-fit: contain;">
                 </div>
-                <p class="text-muted text-end mb-4 mr-2" style="font-size: 0.9rem; letter-spacing: 1px;">
+                <p class="text-muted text-end mb-4 mr-2 text-center" style="font-size: 0.9rem; letter-spacing: 1px;">
                     @if($post->created_at)
                     {{ \Carbon\Carbon::parse($post->created_at)->locale('pt_BR')->isoFormat('D [de] MMMM [de] YYYY') }}
                     @else
@@ -18,7 +18,7 @@
                     @endif
                 </p>
                 <div class="card-body">
-                    <div class="card-text" style="line-height: 1.8; font-size: 1.1rem; color: #555;">
+                    <div class="card-text justify" style="line-height: 1.8; font-size: 1.1rem; color: #555;">
                         {!! $post->corpo !!}
                     </div>
                 </div>

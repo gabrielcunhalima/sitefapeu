@@ -10,7 +10,7 @@ class Post extends Model
 
     protected $fillable = ['titulo', 'corpo', 'link','imagem', 'created_at'];
 
-    public $timestamps = false;
+    public $timestamps = true;
     public static function findOrCreate($id)
     {
         $obj = static::find($id);

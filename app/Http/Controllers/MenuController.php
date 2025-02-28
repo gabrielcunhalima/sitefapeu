@@ -91,7 +91,10 @@ class MenuController extends Controller
 
     public function noticiasrecentes()
     {
-        $news =   $news = Post::where('visivel', true)->get();
+        $news =   $news = Post::where('visivel', true)
+                    ->orderBy('created_at', 'asc')
+                    ->get();
+
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
 
