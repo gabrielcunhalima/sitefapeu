@@ -316,9 +316,9 @@ class MenuController extends Controller
         return $this->renderView('politica.codigoconduta', 'codigoconduta.png', 'Código de Conduta');
     }
 
-    public function comiteetica()
+    public function comites()
     {
-        return $this->renderView('politica.comiteetica', 'comiteetica.png', 'Comitê');
+        return $this->renderView('politica.comites', 'comiteetica.png', 'Comitê de Ética e Comitê de Gestão de Riscos');
     }
 
     public function integridade()

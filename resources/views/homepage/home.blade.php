@@ -175,7 +175,7 @@
 </script>
 
 <div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
-  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">FUNDAÇÃO DE AMPARO À PESQUISA E EXTENSÃO UNIVERSITÁRIA</h1>
+  <h1 class="container transformando text-center font-weight-bold text-uppercase" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 <!-- 3 menus principais -->
 <div class="bg-homebotoes pb-4">
@@ -192,15 +192,6 @@
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional">
-            <div class="card-body">
-              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Licitações</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
           <a href="{{route('transparencia.projetostransparencia')}}">
             <div class="card-body">
               <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Transparência</p>
@@ -208,8 +199,17 @@
           </a>
         </div>
       </div>
+      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
+          <a href="{{ route('transparencia.selecoespublicas') }}">
+            <div class="card-body">
+              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Licitações</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </div>php artisan 
 </div>
 
 <!-- Noticias -->

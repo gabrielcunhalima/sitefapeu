@@ -50,7 +50,7 @@ Route::get('/normas',[MenuController::class,'normas'])->name('legislacao.normas'
 Route::get('/anticorrupcao',[MenuController::class,'anticorrupcao'])->name('politica.anticorrupcao');
 Route::get('/boaspraticas',[MenuController::class,'boaspraticas'])->name('politica.boaspraticas');
 Route::get('/codigoconduta',[MenuController::class,'codigoconduta'])->name('politica.codigoconduta');
-Route::get('/comiteetica',[MenuController::class,'comiteetica'])->name('politica.comiteetica');
+Route::get('/comites',[MenuController::class,'comites'])->name('politica.comites');
 Route::get('/integridade',[MenuController::class,'integridade'])->name('politica.integridade');
 Route::get('/politicacookies',[MenuController::class,'politicacookies'])->name('politica.politicacookies');
 Route::get('/politicaprivacidade',[MenuController::class,'politicaprivacidade'])->name('politica.politicaprivacidade');
