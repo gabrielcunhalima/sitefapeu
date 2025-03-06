@@ -101,9 +101,6 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 //NOTICIAS
 
 
-
-
-
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
 Route::match(['get', 'post'], '/loginadm', [loginController::class, 'loginPost'])->name('admin.loginadm');
 Route::get('/logoutadm', [LoginController::class, 'logout'])->name('admin.logoutadm');

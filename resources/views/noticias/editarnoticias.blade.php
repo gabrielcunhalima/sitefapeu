@@ -41,6 +41,7 @@
                     <input type="date" class="form-control" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
                         onchange="updateField({{ $item->id }}, 'created_at', this.value)">
                 </td>
+                
                 <td class="text-center">
                     <button class="btn btn-sm {{ $item->visivel ? 'btn-success' : 'btn-danger' }}" 
                         onclick="toggleVisibility({{ $item->id }}, {{ $item->visivel ? 0 : 1 }})">
@@ -62,60 +63,63 @@
 </div>
 
 <script>
-    function updateField(id, campo, valor) {
-        fetch(`/noticias/editar/${id}`, {
+  function updateField(id, campo, valor) {
+    fetch("{{ url('/noticias/editar') }}/" + id, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": "{{ csrf_token() }}"
+        },
+        body: JSON.stringify({ campo, valor })
+    }).then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('Alteração salva com sucesso!');
+          } else {
+              alert('Erro ao salvar alterações.');
+          }
+      });
+}
+
+
+function toggleVisibility(id, visivel) {
+    fetch("{{ url('/noticias/visibilidade') }}/" + id, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": "{{ csrf_token() }}"
+        },
+        body: JSON.stringify({ visivel })
+    }).then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              location.reload();  
+          } else {
+              alert('Erro ao alterar visibilidade.');
+          }
+      });
+}
+
+
+function deletePost(id) {
+    if (confirm("Tem certeza que deseja excluir esta notícia?")) {
+        fetch("{{ url('/noticias/excluir') }}/" + id, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "X-CSRF-TOKEN": "{{ csrf_token() }}"
-            },
-            body: JSON.stringify({ campo, valor })
+            }
         }).then(response => response.json())
           .then(data => {
               if (data.success) {
-                  alert('Alteração salva com sucesso!');
+                  location.reload(); 
               } else {
-                  alert('Erro ao salvar alterações.');
+                  alert('Erro ao excluir a notícia.');
               }
           });
     }
+}
 
-    function toggleVisibility(id, visivel) {
-        fetch(`/noticias/visibilidade/${id}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": "{{ csrf_token() }}"
-            },
-            body: JSON.stringify({ visivel })
-        }).then(response => response.json())
-          .then(data => {
-              if (data.success) {
-                  location.reload();
-              } else {
-                  alert('Erro ao alterar visibilidade.');
-              }
-          });
-    }
-
-    function deletePost(id) {
-        if (confirm("Tem certeza que deseja excluir esta notícia?")) {
-            fetch(`/noticias/excluir/${id}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": "{{ csrf_token() }}"
-                }
-            }).then(response => response.json())
-              .then(data => {
-                  if (data.success) {
-                      location.reload();
-                  } else {
-                      alert('Erro ao excluir a notícia.');
-                  }
-              });
-        }
-    }
 </script>
 
 @endsection
