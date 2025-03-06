@@ -162,7 +162,7 @@
                   <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-                  <a class="dropdown-item" href="{{route('politica.comiteetica')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
+                  <a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
                   <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu">*LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
@@ -187,9 +187,9 @@
                   Fornecedor
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <!-- <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                   <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
+                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a> -->
                   <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
                 </div>
               </li>

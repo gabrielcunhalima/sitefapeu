@@ -120,6 +120,7 @@ function deletePost(id) {
     }
 }
 
+
 </script>
 
 @endsection

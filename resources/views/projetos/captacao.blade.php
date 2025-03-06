@@ -37,7 +37,7 @@
 
               </li>
               <div class="text-center">
-                <li class="list-inline-item py-2 text-justify"> Clique abaixo e saiba mais!</li> <br>
+                <li class="list-inline-item pt-4 text-justify"> Clique abaixo e saiba mais!</li> <br>
             </ul>
             <div class="text-center ">
               <a class="btn btn-success btn-md rounded-pill text-white" href="https://fap6.fapeu.org.br/scripts/fapeusite.pl/swfwfap199" target="_blank">

@@ -160,7 +160,7 @@
                     </div>
                     <div class="content p-3">
                         <h4 class="mt-2 font-weight-bold"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
-                        <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p>
+                        <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p> -->
                         <div class="pt-3 mt-3 border-top d-flex">
                             <div class="author mt-2">
                                 <h6 class="mb-0 text-muted"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>
