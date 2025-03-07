@@ -29,7 +29,7 @@
                 </td>
 
                 <td class="text-center">
-                    <img src="{{ asset('storage/' . $item->imagem) }}" alt="Imagem" width="100">
+                    <img src="{{ asset($item->imagem) }}" alt="Imagem" width="100">
                     <form action="{{ route('noticias.updateImagem', $item->id) }}" method="POST" enctype="multipart/form-data" class="d-flex align-items-center mt-2">
                         @csrf
                         <input type="file" name="imagem" class="form-control form-control-sm me-2" required>

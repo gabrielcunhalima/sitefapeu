@@ -151,7 +151,7 @@
                 <div class="blog-post rounded border">
                     <div class="blog-img d-block overflow-hidden position-relative card-img-container">
                         <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
-                            <img src="{{ asset('storage/' . $item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
+                            <img src="{{ asset($item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="border rounded-pill px-2">Clique para ler tudo</p>

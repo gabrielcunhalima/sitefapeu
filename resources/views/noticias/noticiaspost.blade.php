@@ -34,12 +34,13 @@
             <label for="titulo" class="form-label">Título</label>
             <input type="text" class="form-control" id="titulo" name="titulo" value='{{$dados['titulo']}} 'required>
             <input type="hidden" class="form-control" id="id" name="id" value='{{$dados['id']}} 'required>
+            <input type="hidden" class="form-control" id="visivel" name="visivel" value='1' required>
         </div>
         <div class="mb-3">
             <label for="imagem" class="form-label">Imagem</label>
             @if(!empty($dados['imagem']))
                 <div class="mb-2">
-                    <img src="{{ asset('storage/' . $dados['imagem']) }}" alt="Imagem Atual" width="150" required>
+                    <img src="{{ asset($dados['imagem']) }}" alt="Imagem Atual" width="150" required>
                 </div>
             @endif
             <input type="file" class="form-control" id="imagem" name="imagem">

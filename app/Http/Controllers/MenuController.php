@@ -92,7 +92,7 @@ class MenuController extends Controller
     public function noticiasrecentes()
     {
         $news =   $news = Post::where('visivel', true)
-                    ->orderBy('created_at', 'asc')
+                    ->orderBy('created_at', 'desc')
                     ->get();
 
         $imagem = 'noticiasrecentes.png';
@@ -128,17 +128,24 @@ class MenuController extends Controller
                 'titulo' => 'required|string|max:2555',
                 'corpo' => 'required|string',
                 'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'visivel' => 'nullable|boolean',
             ]);
     
             $post = Post::findOrCreate($request->id);
             $post->titulo = $request->input('titulo');
             $post->corpo = $request->input('corpo');
             $post->link = Str::slug($request->input('titulo'));
+            $post->visivel = 1;
     
             //se mandar uma nova imagem, substitui
             if ($request->hasFile('imagem')) {
-                $imagePath = $request->file('imagem')->store('public/posts');
-                $post->imagem = str_replace('public/', '', $imagePath);
+                $img = $request->file('imagem');
+                $destPath = public_path('storage/posts');
+
+                $imgName = 'POST_'.time(). '.' . $img->getClientOriginalExtension();
+                $img->move($destPath,$imgName);
+
+                $post->imagem = 'storage/posts/'.$imgName;
             }
     
             $post->save();
@@ -147,14 +154,13 @@ class MenuController extends Controller
         }
 
 
-        $dados=['titulo' => '', 'corpo' => '', 'imagem' => '','id'=>''];
+        $dados=['titulo' => '', 'corpo' => '', 'imagem' => '', 'id'=>'' ,'visivel' => '',];
         $imagem= 'noticiaspost.png';
         $titulo='Nova Noticia';
         return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'))->with('alteratitulo', false);
     }
 
     
-
     public function noticiasleitura($link)
     {
         $post = Post::where('link', $link)->firstOrFail();

@@ -8,7 +8,7 @@
             <h2 class="mb-3 text-center text-dark font-weight-bold" style="font-size: 2.5rem; line-height: 1.2;">{{ $titulo }}</h2>
             <div class="card border-0 shadow rounded-3">
                 <div class="mb-3">
-                    <img src="{{ asset('storage/' . $post->imagem) }}" class="card-img-top" alt="{{ $titulo }}" style="border-radius: 4px; max-height: 50vh; object-fit: contain;">
+                    <img src="{{ asset($post->imagem) }}" class="card-img-top" alt="{{ $titulo }}" style="border-radius: 4px; max-height: 50vh; object-fit: contain;">
                 </div>
                 <p class="text-muted text-end mb-4 mr-2 text-center" style="font-size: 0.9rem; letter-spacing: 1px;">
                     @if($post->created_at)

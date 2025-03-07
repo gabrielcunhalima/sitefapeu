@@ -209,7 +209,7 @@
         </div>
       </div>
     </div>
-  </div>php artisan 
+  </div>
 </div>
 
 <!-- Noticias -->
@@ -225,7 +225,7 @@
               <div class="blog-post rounded border">
                   <a href="{{ route('noticias.noticiasleitura', $post->link) }}">
                       <div class="blog-img d-block overflow-hidden position-relative">
-                          <img src="{{ asset('storage/' . $post->imagem) }}" class="mx-auto img-fluid" alt="{{ $post->titulo }}" style="max-height: 20vh; min-height:20vh;object-fit: cover;">
+                          <img src="{{ asset($post->imagem) }}" class="mx-auto img-fluid" alt="{{ $post->titulo }}" style="max-height: 20vh; min-height:20vh;object-fit: cover;">
                           <div class="overlay rounded-top bg-dark"></div>
                           <div class="post-meta justify-content-center">
                               <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-light read-more">
