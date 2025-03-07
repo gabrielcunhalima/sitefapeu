@@ -222,16 +222,21 @@ class MenuController extends Controller
 
         public function atualizarImagem(Request $request, $id)
         {
+          
             $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-            
+        
             $post = Post::findOrFail($id);
-            $imagePath = $request->file('imagem')->store('public/posts');
-            $post->imagem = str_replace('public/', '', $imagePath);
-            $post->save();
-
+        
+            if ($request->hasFile('imagem')) {
+                $imagePath = $request->file('imagem')->store('public/posts');
+        
+                $post->imagem = str_replace('public/', 'storage/', $imagePath);
+                $post->save();
+            }
+        
             return back()->with('success', 'Imagem atualizada com sucesso!');
         }
-
+        
 
         
     public function manualcompras()
