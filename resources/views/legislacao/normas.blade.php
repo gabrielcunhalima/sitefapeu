@@ -7,9 +7,9 @@
     <div class="text-justify">
         <h3 class="font-weight-bold">FAPEU</h3>
         <p><i>Fundação de Amparo à Pesquisa e Extensão Universitária</i></p><br>
-        <p><strong><a href="/pdfs/Legislacao/FAPEU/PORTARIA N. 004 DE 2024 - Altera PN n. 002 DE 2022 Composição dos membros do CI-LGPD.pdf" target="_blank"> PORTARIA N. 004 DE 2024, de 25 de abril de 2024</strong><br> </a>
+        <p><strong><a href="pdfs/Legislacao/FAPEU/PORTARIA N. 004 DE 2024 - Altera PN n. 002 DE 2022 Composição dos membros do CI-LGPD.pdf" target="_blank"> PORTARIA N. 004 DE 2024, de 25 de abril de 2024</strong><br> </a>
         Altera a Portaria Normativa N. 002/DE/2022, no que tange à composição dos membros do Comitê de Implementação da Lei Geral de Proteção de Dados (CI-LGPD) no âmbito da Fundação de Amparo à Pesquisa e Extensão Universitária (FAPEU) e revoga a Portaria nº 001/DE/2024 de 27 de fevereiro de 2024.</p>
-        <p><strong><a href="/pdfs/Legislacao/FAPEU/PORTARIA N. 002 DE 2024 - locação de auditório e sala de eventos revoga PORTARIA N. 003 DE 2013.pdf" target="_blank"> PORTARIA N. 002 DE 2024, de 11 de abril de 2024</strong><br></a>
+        <p><strong><a href="pdfs/Legislacao/FAPEU/PORTARIA N. 002 DE 2024 - locação de auditório e sala de eventos revoga PORTARIA N. 003 DE 2013.pdf" target="_blank"> PORTARIA N. 002 DE 2024, de 11 de abril de 2024</strong><br></a>
         Dispõe sobre os valores para locação de auditório e salas de eventos e de limpeza e conservação, de que trata o art. 3º da Portaria nº. 003/DE/2013, de 11 de abril de 2013 e revoga a Portaria nº 008/DE/2019, de 10 de setembro de 2019.</p>
         <p><strong><a href="pdfs/Legislacao/FAPEU/PORTARIA_NORMATIVA____DE____ (3).pdf" target="_blank">PORTARIA NORMATIVA N. 010/DE/2023, DE 31 de agosto de 2023</strong><br> </a>
         Dispõe sobre a concessão de diárias para pessoas sem vínculo empregatício por conta de projetos sob a gestão administrativa e financeira da Fundação de Amparo à Pesquisa e Extensão Universitária - FAPEU, e dá outras providências.</p>
@@ -59,8 +59,8 @@
         Delimitações para a contratação de Pessoa Jurídica com Recursos Públicos</p>
         <p><strong><a href="pdfs/Legislacao/FAPEU/portaria_normativa_n._006de2017.pdf" target="_blank">Portaria Normativa n. 006/DE/2017, de 17 de Outubro de 2017.</strong><br></a>
         Informa sobre não contratação de cônjuge, companheiro ou parentes na execução de contratos, convênios e acordos</p>
-        <p><strong><a href="pdfs/Legislacao/FAPEU/portaria_007_de_2016_diarias_1_.pdf" target="_blank">Portaria Normativa n. 004/DE/2019, DE 15 DE FEVEREIRO DE 2016.</strong><br></a>
-        Atualiza os valores das diárias nacionais e internacionais, previstas no Anexo II da Portaria nº 002.</p>
+        <p><strong><a href="pdfs/Legislacao/FAPEU/portaria_007_de_2016_diarias_1_.pdf" target="_blank">PORTARIA N°. 007/DE/2016, DE 15 DE FEVEREIRO DE 2016</strong><br></a>
+        Altera a Tabela de Diárias constante da Portaria nº. 002/DE/2012 da Diretoria Executiva da FAPEU, de 26 de abril de 2012, e reajusta os valores das diárias de viagem para o território nacional e para o exterior.</p>
         <p><strong><a href="pdfs/Legislacao/FAPEU/portaria_normativa_001_de_2016_-reembolso.pdf" target="_blank">Portaria Normativa n.01/DE/2016, de 21 de junho de 2016.</strong><br></a>
         Dispõe sobre a concessão de reembolso de despesas pela Fundação de Amparo à Pesquisa e Extensão Universitária - FAPEU</p>
         <p><strong><a href="pdfs/Legislacao/FAPEU/portaria_013_de_2013.pdf" target="_blank">Portaria n. 013/DE/2013, de 05 de setembro de 2013.</strong><br></a>
@@ -98,7 +98,7 @@
         <p><strong><a href="#" target="_blank">RESOLUÇÃO Nº 34/CONSUNI/UFFS/2020.</strong><br></a>
         Aprova alterações na Resolução Nº 04/CONSUNI/2013 de 28/02/2013
         </p>
-        <p><strong><a href="    pdfs/Legislacao/UFFS/in_conjunta_3_-_prograd_propepg_proec_-_horas_volunt_rios.pdf" target="_blank">INSTRUÇÃO NORMATIVA CONJUNTA Nº 3/PROEC-PROGRAD-PROPEPG/UFFS/2018.</strong><br></a>
+        <p><strong><a href="pdfs/Legislacao/UFFS/in_conjunta_3_-_prograd_propepg_proec_-_horas_volunt_rios.pdf" target="_blank">INSTRUÇÃO NORMATIVA CONJUNTA Nº 3/PROEC-PROGRAD-PROPEPG/UFFS/2018.</strong><br></a>
         Estabelece a carga horária semanal máxima para atividades em programas e projetos institucionalizados de Ensino, Pesquisa, Extensão e Cultura.</p>
         <p><strong><a href="pdfs/Legislacao/UFFS/resolucao_15_2017___aprova_o_regulamento_de_pesquisa_da_uffs.pdf" target="_blank">RESOLUÇÃO Nº 15/CONSUNI CPPGEC/UFFS/2017.</strong><br></a>
         Aprova o Regulamento da Pesquisa da Universidade Federal da Fronteira Sul.</p>
