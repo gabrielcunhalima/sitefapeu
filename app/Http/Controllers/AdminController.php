@@ -28,10 +28,10 @@ class AdminController extends Controller
         return view('admin.adicionarnoticia', compact('dados'));
     }
 
-    public function createSelecaoPublica()
+    public function createlicitacao()
     {
         $dados = Auth::user();
-        return view('admin.adicionarselecaopublica', compact('dados'));
+        return view('admin.adicionarlicitacao', compact('dados'));
     }
 
     public function storeNoticia(Request $request)
@@ -65,7 +65,7 @@ class AdminController extends Controller
         return redirect()->route('noticias', $data['link'])->with('success', 'Notícia criada com sucesso!');
     }
 
-    public function storeSelecaoPublica(Request $request)
+    public function storelicitacao(Request $request)
     {
         $data = $request->validate([
             'id' => 'required',
@@ -77,15 +77,15 @@ class AdminController extends Controller
             'contratoconvenio' => 'required',
             'dataabertura' => 'required',
             'datapublicacao' => 'required',
-            'selecaopublica' => 'required|file|mimes:pdf,doc,docx|max:10240',
+            'licitacao' => 'required|file|mimes:pdf,doc,docx|max:10240',
             'resultado' => 'required|file|mimes:pdf,doc,docx|max:10240',
         ]);
 
-        if ($request->hasFile('selecaopublica')) {
-            $documento = $request->file('selecaopublica');
+        if ($request->hasFile('licitacao')) {
+            $documento = $request->file('licitacao');
             $docName = time() . '.' . $documento->getClientOriginalExtension();
             $documento->move(public_path('docs/selecoespublicas'), $docName);
-            $data['selecaopublica'] = 'docs/selecoespublicas/' . $docName;
+            $data['licitacao'] = 'docs/selecoespublicas/' . $docName;
         }
 
         SelecoesPublicas::create($data);

@@ -127,7 +127,7 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Notícias</a>
                   <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias (testes)</a>
                 </div>
               </li>
@@ -142,7 +142,6 @@
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
                 </div>
               </li>
             </p>
@@ -163,7 +162,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu"><i class="bi bi-box-arrow-up-right"></i> LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>

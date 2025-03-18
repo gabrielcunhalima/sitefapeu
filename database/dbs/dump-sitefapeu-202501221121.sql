@@ -198,7 +198,7 @@ CREATE TABLE `selecoespublicas` (
   `orgao` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `projeto` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `contratoconvenio` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `selecaopublica` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `licitacao` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
   `dataabertura` timestamp NULL DEFAULT NULL,
   `objeto` varchar(555) COLLATE utf8_unicode_ci DEFAULT NULL,
   `resultado` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,

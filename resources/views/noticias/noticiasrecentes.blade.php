@@ -140,18 +140,18 @@
     }
 </style>
 <div class="noticiasrecentes">
-<div class="section-title py-3 mb-0">
-            <h2 class="container my-2 text-center">Notícias recentes</h2>
-            <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
-        </div>
+    <div class="section-title py-3 mb-0">
+        <h2 class="container my-2 text-center">Notícias recentes</h2>
+        <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU em nosso portal de notícias.</p>
+    </div>
     <div class="container">
         <div class="row">
             @foreach ($news as $item)
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="blog-post rounded border">
-                    <div class="blog-img d-block overflow-hidden position-relative card-img-container">
+                    <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm">
                         <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
-                            <img src="{{ asset($item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia">
+                            <img src="{{ asset($item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia" style="object-fit: contain;">
                             <div class="overlay rounded-top bg-dark"></div>
                             <div class="post-meta">
                                 <p class="border rounded-pill px-2">Clique para ler tudo</p>
@@ -159,13 +159,9 @@
                         </a>
                     </div>
                     <div class="content p-3">
-                        <h4 class="mt-2 font-weight-bold"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
+                    <small class="text-muted">{{ $item->created_at->format('d/m/Y') }}</small>
+                        <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
                         <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p> -->
-                        <div class="pt-3 mt-3 border-top d-flex">
-                            <div class="author mt-2">
-                                <h6 class="mb-0 text-muted"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark name">Leia mais</a></h6>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -185,7 +181,7 @@
             <div class="modal-body">
                 {{ session('success') }}
             </div>
-            <div class="modal-footer"> 
+            <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
             </div>
         </div>

@@ -3,7 +3,7 @@
 
 @section('conteudo')
 <div class="container" style="font-size:16px;">
-    <h3 class="text-center text-white bg-roxo rounded py-2 mt-auto font-weight-bold mb-5">Clique no título do documento para iniciar o download.</h3>
+    <h4 class="rounded bg-success-subtle text-center text-verde3 mb-5 p-2"><b>Clique no título para iniciar o download do arquivo.</b></h4>
     <table class="table table-bordered shadow">
         <thead class="bg-verdeescuro text-white">
             <tr>
@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <tr onclick="window.location.href='pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.doc'" style="cursor: pointer;">
-                <td class="border py-0 pr-0 align-middle">1.2 Cancelamento de Bolsa ou Estágio</td>
+                <td class="border py-0 pr-0 align-middle">1.2 Cancelamento de Bolsa ou Estágio </td>
                 <td>18/04/2024</td>
             </tr>
             <tr onclick="window.location.href='pdfs/Projetos/1.3_formulario_dados_empregado_20_04_2018.doc'" style="cursor: pointer;">
@@ -167,7 +167,18 @@
                 <td>08/04/2024</td>
             </tr>
         </tbody>
-
     </table>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("tr[onclick]").forEach(tr => {
+        tr.addEventListener("mouseover", function () {
+            this.classList.add("bg-success-subtle");
+        });
+        tr.addEventListener("mouseout", function () {
+            this.classList.remove("bg-success-subtle");
+        });
+    });
+});
+</script>
 @endsection

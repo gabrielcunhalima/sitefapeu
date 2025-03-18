@@ -116,7 +116,7 @@
         <p><strong><a href="pdfs/Legislacao/IFC/resoluc_o-009-2015-aprova-regulamento-curso-de-extens_o.pdf" target="_blank">RESOLUÇÃO Nº 09/2015.</strong><br></a>
         Aprova Regulamento Curso de Extensão</p>
         <p><strong><a href="pdfs/Legislacao/IFC/resoluc_o-011-2015-aprova-regulamento-de-atividades-docentes1_1_.pdf" target="_blank">RESOLUÇÃO Nº 11/2015.</strong><br></a>
-        Aprova Regulamento de Atividades Docentes</p>
+        Aprova Regulamento de Atividades Docentes</p><hr><br>
         
     </div>
     <div class="text-justify">

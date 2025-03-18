@@ -14,8 +14,9 @@
 
   <!-- Bootstrap and Icons -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -110,7 +111,7 @@
                   <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
                   <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
                   <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Noticias</a>
+                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Notícias</a>
                   <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias (testes)</a>
                 </div>
               </li>
@@ -145,7 +146,7 @@
                   <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
                   <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
                   <a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu">*LGPD</a>
+                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu"><i class="bi bi-box-arrow-up-right"></i> LGPD</a>
                   <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
                   <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
                   <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
@@ -169,9 +170,9 @@
                   Fornecedor
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <!-- <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                   <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a> -->
+                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
                   <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
                 </div>
               </li>
@@ -183,9 +184,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
-                  <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow">DRHFlow</a>
-                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow">ADMFlow</a>
-                  <a class="dropdown-item" href="https://webmail.fapeu.org.br">WebMail</a>
+                  <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow" target="_blank"><i class="bi bi-box-arrow-up-right"></i> DRHFlow</a>
+                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right"></i> ADMFlow</a>
+                  <a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right"></i> WebMail</a>
                   <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
                   <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
                   <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
@@ -220,8 +221,9 @@
       </div>
     </nav>
   </header>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  @if (Request::route()->getName() !== 'noticias.noticiasleitura' && Request::route()->getName() !== 'noticias.noticiasrecentes' && Request::route()->getName() !== 'homepage.home')
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  @if (Request::route()->getName() !== 'noticias.noticiasleitura' && Request::route()->getName() !== 'noticias.noticiasrecentes' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'transparencia.projetostransparencia' && Request::route()->getName() !== 'colaborador.programainclusao' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'fornecedor.adicionarlicitacao' && Request::route()->getName() !== 'colaborador.informerendimentos')
   <div class="jumbotron jumbotron-fluid jumbotron-custom">
     <div class="container">
       <h1 class="font-weight-bold">{{$titulo}}</h1>

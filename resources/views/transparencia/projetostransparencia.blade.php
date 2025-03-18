@@ -19,13 +19,9 @@
         <div class="row mt-1">
             <div class="col-md-12">
                 <div class="card mb-3 shadow-lg">
-                    <img class="card-img-top shadow" src="images/Fapeu_bg.png" alt="Imagem de capa do card">
-
+                    <!-- <img class="card-img-top shadow" src="images/Fapeu_bg.png" alt="Imagem de capa do card"> -->
+                    <h1 class="card-title text-center text-white rounded-top font-weight-bold shadow border border-success p-4" style="background-color: #26781F;">Portal da Transparência</h1>
                     <div class="card-body">
-                        <br>
-                        <h4 class="card-title text-center font-weight-bold shadow p-3 mb-5 bg-white rounded border border-success" style="color: #099072;">
-                            Portal da Transparência
-                        </h4>
                         <br>
                         <div class="list-group">
                             <p class="lead text-justify">
@@ -41,17 +37,17 @@
                         <br><br>
                         <div class="row mt-4">
                             <div class="col-md-4 col-sm-12 text-center">
-                                <a href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
+                                <a href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional" class="btn btn-secondary shadow p-3 mb-5 rounded botaotransparencia" target="_blank" style="font-size: 18px; padding: 10px 20px;">
                                     Institucional
                                 </a>
                             </div>
                             <div class="col-md-4 col-sm-12 text-center">
-                                <a href="http://150.162.78.4:8080/transparencia/transparencia" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" target="_blank" style="font-size: 18px; padding: 10px 20px;">
+                                <a href="http://150.162.78.4:8080/transparencia/transparencia" class="btn btn-secondary shadow p-3 mb-5 rounded botaotransparencia" target="_blank" style="font-size: 18px; padding: 10px 20px;">
                                     Projetos
                                 </a>
                             </div>
                             <div class="col-md-4 col-sm-12 text-center">
-                                <a href="{{route('transparencia.faq')}}" class="btn btn-primary shadow p-3 mb-5 bg-white rounded botaotransparencia" style="background-color: #a044b4; font-size: 18px; padding: 10px 20px;">
+                                <a href="{{route('transparencia.faq')}}" class="btn btn-secondary shadow p-3 mb-5 rounded botaotransparencia" style="font-size: 18px; padding: 10px 20px;">
                                     Perguntas Frequentes
                                 </a>
                             </div>

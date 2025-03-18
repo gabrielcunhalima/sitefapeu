@@ -19,7 +19,7 @@
         }
 
         h1 {
-            color:rgb(0, 124, 41);
+            color:rgb(0, 66, 22);
         }
 
         .details {
@@ -42,8 +42,6 @@
     <div class="email-container">
         <h1>Nova Mensagem de Contato - Site FAPEU</h1>
         <p><strong>Assunto:</strong> {{ $assunto }}</p>
-
-
 
         <div class="details">
             <p><strong>Mensagem:</strong></p>

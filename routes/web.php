@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContatoController;
-use App\Http\Controllers\PesquisaController;
+use App\Http\Controllers\CaptacaoController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NoticiasController;
@@ -32,13 +32,13 @@ Route::get('/ADMFlow',[MenuController::class,'ADMFlow'])->name('colaborador.ADMF
 Route::get('/WebMail',[MenuController::class,'WebMail'])->name('colaborador.WebMail');
 Route::get('/areaadministrativa',[MenuController::class,'areaadministrativa'])->name('colaborador.areaadministrativa');
 
-
 //FORNECEDOR
 
 Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dispensa');
 Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
 Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
 Route::get('/menulicitacao',[MenuController::class,'menulicitacao'])->name('fornecedor.menulicitacao');
+Route::match(['get', 'post'], '/adicionarlicitacao', [MenuController::class, 'adicionarlicitacao'])->name('fornecedor.adicionarlicitacao');
 
 //LEGISLACAO
 
@@ -61,6 +61,7 @@ Route::get('/espacocoordenador',[MenuController::class,'espacocoordenador'])->na
 Route::get('/formulariosprojetos',[MenuController::class,'formulariosprojetos'])->name('projetos.formulariosprojetos');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.captacao');
+Route::post('/captacao', [CaptacaoController::class, 'salvarCaptacao'])->name('captacao.salvar');
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
 

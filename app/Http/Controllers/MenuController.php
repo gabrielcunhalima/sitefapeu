@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use App\Models\SelecoesPublicas;
+use App\Models\Licitacoes;
 use App\Models\Post;
 use App\Models\Contato;
 use Illuminate\Support\Str;
@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+
 class MenuController extends Controller
 
 {
@@ -20,10 +21,6 @@ class MenuController extends Controller
     }
 
 
-    //SERVICOS
-
-
-    
     // MENU Quem somos
     public function sobre()
     {
@@ -78,7 +75,7 @@ class MenuController extends Controller
 
     public function captacao()
     {
-        return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidade');
+        return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidades para Novos Projetos');
     }
 
     public function paineladministrativo()
@@ -92,13 +89,13 @@ class MenuController extends Controller
     public function noticiasrecentes()
     {
         $news =   $news = Post::where('visivel', true)
-                    ->orderBy('created_at', 'desc')
-                    ->get();
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
 
-        return view('noticias.noticiasrecentes', compact('news','imagem','titulo'));       
+        return view('noticias.noticiasrecentes', compact('news', 'imagem', 'titulo'));
     }
 
     public function noticiaspost(Request $request)
@@ -111,17 +108,15 @@ class MenuController extends Controller
 
         if ($request->isMethod('GET')) {
 
-            if($request->id>0) {
-            
-            
-            $dados=Post::findOrFail($request->id);
-            $imagem= 'noticiaspost.png';
-            $titulo='Editor de Notícias';
-            
-                return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'))->with('alteratitulo', true);
+            if ($request->id > 0) {
+
+                $dados = Post::findOrFail($request->id);
+                $imagem = 'noticiaspost.png';
+                $titulo = 'Editor de Notícias';
+
+                return view('noticias.noticiaspost', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', true);
             }
         }
-
 
         if ($request->isMethod('POST')) {
             $validated = $request->validate([
@@ -130,37 +125,36 @@ class MenuController extends Controller
                 'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
                 'visivel' => 'nullable|boolean',
             ]);
-    
+
             $post = Post::findOrCreate($request->id);
             $post->titulo = $request->input('titulo');
             $post->corpo = $request->input('corpo');
             $post->link = Str::slug($request->input('titulo'));
             $post->visivel = 1;
-    
+
             //se mandar uma nova imagem, substitui
             if ($request->hasFile('imagem')) {
                 $img = $request->file('imagem');
                 $destPath = public_path('storage/posts');
 
-                $imgName = 'POST_'.time(). '.' . $img->getClientOriginalExtension();
-                $img->move($destPath,$imgName);
+                $imgName = 'POST_' . time() . '.' . $img->getClientOriginalExtension();
+                $img->move($destPath, $imgName);
 
-                $post->imagem = 'storage/posts/'.$imgName;
+                $post->imagem = 'storage/posts/' . $imgName;
             }
-    
+
             $post->save();
-    
+
             return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post atualizado com sucesso!');
         }
 
-
-        $dados=['titulo' => '', 'corpo' => '', 'imagem' => '', 'id'=>'' ,'visivel' => '',];
-        $imagem= 'noticiaspost.png';
-        $titulo='Nova Noticia';
-        return view ('noticias.noticiaspost', compact ('dados','imagem','titulo'))->with('alteratitulo', false);
+        $dados = ['titulo' => '', 'corpo' => '', 'imagem' => '', 'id' => '', 'visivel' => '',];
+        $imagem = 'noticiaspost.png';
+        $titulo = 'Nova Noticia';
+        return view('noticias.noticiaspost', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', false);
     }
 
-    
+
     public function noticiasleitura($link)
     {
         $post = Post::where('link', $link)->firstOrFail();
@@ -168,83 +162,83 @@ class MenuController extends Controller
         $titulo = $post->titulo;
         $link = Str::slug($post->titulo);
 
-        return view('noticias.noticiasleitura', compact('post', 'imagem','titulo','link'));
+        return view('noticias.noticiasleitura', compact('post', 'imagem', 'titulo', 'link'));
     }
-    
-    
+
+
 
     //EDITAR NOTICIAS
-    
-            public function editarNoticias()
-            
-        {
-            if (!Auth::check()) {
-                return redirect()->route('admin.login');
-            }
 
-            $news = Post::all();
-            $imagem = 'noticiasedit.png';
-            $titulo = 'Edição de Notícias';
+    public function editarNoticias()
 
-
-            return view('noticias.editarnoticias', compact('news', 'imagem', 'titulo'));
+    {
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
         }
 
-        public function atualizarNoticia(Request $request, $id)
-        {
-            
-            $post = Post::findOrFail($id);
-            $campo = $request->campo;
-            $valor = $request->valor;
+        $news = Post::all();
+        $imagem = 'noticiasedit.png';
+        $titulo = 'Edição de Notícias';
 
-            $post->$campo = $valor;
+
+        return view('noticias.editarnoticias', compact('news', 'imagem', 'titulo'));
+    }
+
+    public function atualizarNoticia(Request $request, $id)
+    {
+
+        $post = Post::findOrFail($id);
+        $campo = $request->campo;
+        $valor = $request->valor;
+
+        $post->$campo = $valor;
+        $post->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function alterarVisibilidade(Request $request, $id)
+    {
+        $post = Post::findOrFail($id);
+        $post->visivel = $request->visivel;
+        $post->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function excluirNoticia($id)
+    {
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function atualizarImagem(Request $request, $id)
+    {
+
+        $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+
+        $post = Post::findOrFail($id);
+
+        if ($request->hasFile('imagem')) {
+            $imagePath = $request->file('imagem')->store('public/posts');
+
+            $post->imagem = str_replace('public/', 'storage/', $imagePath);
             $post->save();
-
-            return response()->json(['success' => true]);
         }
 
-        public function alterarVisibilidade(Request $request, $id)
-        {
-            $post = Post::findOrFail($id);
-            $post->visivel = $request->visivel;
-            $post->save();
+        return back()->with('success', 'Imagem atualizada com sucesso!');
+    }
 
-            return response()->json(['success' => true]);
-        }
 
-        public function excluirNoticia($id)
-        {
-            $post = Post::findOrFail($id);
-            $post->delete();
 
-            return response()->json(['success' => true]);
-        }
-
-        public function atualizarImagem(Request $request, $id)
-        {
-          
-            $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-        
-            $post = Post::findOrFail($id);
-        
-            if ($request->hasFile('imagem')) {
-                $imagePath = $request->file('imagem')->store('public/posts');
-        
-                $post->imagem = str_replace('public/', 'storage/', $imagePath);
-                $post->save();
-            }
-        
-            return back()->with('success', 'Imagem atualizada com sucesso!');
-        }
-        
-
-        
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
     }
 
-    
+
 
     // MENU Transparência
 
@@ -294,9 +288,9 @@ class MenuController extends Controller
 
     public function selecoespublicas()
     {
-        $selecoes = SelecoesPublicas::query()
-                ->orderBy('id', 'desc')
-                ->get();
+        $selecoes = Licitacoes::query()
+            ->orderBy('id', 'desc')
+            ->get();
         // dd($selecoes);
         return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
     }
@@ -378,6 +372,118 @@ class MenuController extends Controller
         return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
     }
 
+    public function adicionarlicitacao (Request $request)
+    {
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
+        }
+
+        Session::put('admin_logged_in_time', time());
+
+        if ($request->isMethod('GET')) {
+
+            if ($request->id > 0) {
+
+                $dados = Licitacoes::findOrFail($request->id);
+                $imagem = 'adicionarlicitacao.png';
+                $titulo = 'Editor de Licitação';
+
+                return view('transparencia.selecoespublicas', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', true);
+            }
+        }
+
+        if ($request->isMethod('POST')) {
+            $validated = $request->validate([
+                'ordem' => 'required|integer',
+                'processo' => 'required|string|max:255',
+                'orgao' => 'required|string|max:255',
+                'projeto' => 'required|string|max:20',
+                'licitacao' => 'required|string|max:250',
+                'dataabertura' => 'required|date',
+                'objeto' => 'required|string|max:555',
+                'resultado' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+                'datapublicacao' => 'nullable|date',
+                'ataabertura' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+                'tipo' => 'required|string|',
+                'contratoconvenio' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+            ]);
+
+            $licitacao = Licitacoes::findOrCreate($request->id);
+            $licitacao->ordem = $request->input('ordem');
+            $licitacao->processo = $request->input('processo');
+            $licitacao->orgao = $request->input('orgao');
+            $licitacao->projeto = $request->input('projeto');
+            $licitacao->dataabertura = $request->input('dataabertura');
+            $licitacao->objeto = $request->input('objeto');
+            $licitacao->datapublicacao = $request->input('datapublicacao');
+            $licitacao->tipo = $request->input('tipo');
+
+            if ($request->hasFile('ataabertura')) {
+                $lic = $request->file('ataabertura');
+                $destPath = public_path('storage/posts');
+
+                $licName = 'ATA_ABERTURA_' . $lic->getClientOriginalExtension();
+                $lic->move($destPath, $licName);
+
+                $licitacao->ataabertura = 'storage/selecoes/' . $licName;
+            } 
+
+            if ($request->hasFile('contratoconvenio')) {
+                $lic = $request->file('contratoconvenio');
+                $destPath = public_path('storage/posts');
+
+                $licName = 'CONTRATO-CONVENIO_' . $lic->getClientOriginalExtension();
+                $lic->move($destPath, $licName);
+
+                $licitacao->contratoconvenio = 'storage/selecoes/' . $licName;
+            } 
+
+            if ($request->hasFile('resultado')) {
+                $lic = $request->file('resultado');
+                $destPath = public_path('storage/posts');
+
+                $licName = 'RESULTADO_' . $lic->getClientOriginalExtension();
+                $lic->move($destPath, $licName);
+
+                $licitacao->resultado = 'storage/selecoes/' . $licName;
+            }  
+
+            if ($request->hasFile('licitacao')) {
+                $lic = $request->file('licitacao');
+                $destPath = public_path('storage/posts');
+
+                $licName = 'LICITACAO_' . $lic->getClientOriginalExtension();
+                $lic->move($destPath, $licName);
+
+                $licitacao->licitacao = 'storage/selecoes/' . $licName;
+            }   
+
+            $licitacao->save();
+            
+
+            return redirect()->route('transparencia.selecoespublicas')->with('success', 'Licitação salva com sucesso!');
+        }
+
+        $dados = [
+            'ordem' => '',
+            'processo' => '',
+            'orgao' => '',
+            'projeto' => '',
+            'contratoconvenio' => '',
+            'licitacao' => '',
+            'dataabertura' => '',
+            'objeto' => '',
+            'resultado' => '',
+            'datapublicacao' => '',
+            'ataabertura' => '',
+            'id' => ''
+        ];
+        $imagem = 'adicionarlicitacao.png';
+        $titulo = 'Nova Licitação';
+        
+        return view('fornecedor.adicionarlicitacao', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', false);
+    }
+
     // MENU Colaborador
 
     public function areaadministrativa()
@@ -453,13 +559,13 @@ class MenuController extends Controller
         $news = Post::latest()->take(5)->get(); // Pegando as 5 últimas notícias
         return view('homepage.home', compact('news'));
     }
-    
+
 
     public function servicos()
     {
         return $this->renderView('homepage.servicos', 'servicos.png', 'Serviços');
     }
-    
+
     public function importacao()
     {
         return $this->renderView('homepage.importacao', 'importacao.png', 'Importação de Bens e Insumos para Pesquisa com Isenção de Impostos');
@@ -479,7 +585,4 @@ class MenuController extends Controller
     {
         return $this->renderView('homepage.concursos', 'concursos.png', 'Concursos');
     }
-
-
 }
-

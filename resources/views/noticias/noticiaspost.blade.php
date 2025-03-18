@@ -44,7 +44,7 @@
                 </div>
             @endif
             <input type="file" class="form-control" id="imagem" name="imagem">
-            <input type="hidden" name="imagem_atual" value="{{ $dados['imagem'] }}"> <!-- mantem a imagem -->
+            <input type="hidden" name="imagem_atual" value="{{ $dados['imagem'] }}">
         </div>
         
         <div class="mb-3">

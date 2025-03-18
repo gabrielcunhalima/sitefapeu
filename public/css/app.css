@@ -308,6 +308,10 @@
     background-color: #fff2cf;
   }
 
+  .bg-claro {
+    background-color:rgb(241, 241, 241);
+  }
+
   .bg-azul {
     background-color:rgb(61, 161, 255);
   }

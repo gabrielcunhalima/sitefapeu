@@ -131,6 +131,7 @@
     left:0;
     right:0;
   }
+
 </style>
 
 <script>
@@ -174,8 +175,12 @@
   });
 </script>
 
+<div class="alert alert-danger mb-0 text-center" role="alert">
+  <h2><a href="{{ route('colaborador.informerendimentos') }}">Clique aqui para conferir os Informes de Rendimento!</a></h2>
+</div>
+
 <div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
-  <h1 class="container transformando text-center font-weight-bold text-uppercase" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 <!-- 3 menus principais -->
 <div class="bg-homebotoes pb-4">
@@ -201,9 +206,9 @@
       </div>
       <div class="col-md-4 col-sm-12 d-flex justify-content-center">
         <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{ route('transparencia.selecoespublicas') }}">
+          <a href="{{ route('fornecedor.espacofornecedor') }}">
             <div class="card-body">
-              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Licitações</p>
+              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Espaço do Fornecedor</p>
             </div>
           </a>
         </div>
@@ -211,6 +216,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- Noticias -->
 <div class="bg-light">
@@ -224,23 +230,24 @@
           <div class="col-lg-4 col-md-6 col-sm-12 mt-4 pt-2">
               <div class="blog-post rounded border">
                   <a href="{{ route('noticias.noticiasleitura', $post->link) }}">
-                      <div class="blog-img d-block overflow-hidden position-relative">
+                      <div class="blog-img d-block overflow-hidden position-relative bg-claro">
                           <img src="{{ asset($post->imagem) }}" class="mx-auto img-fluid" alt="{{ $post->titulo }}" style="max-height: 20vh; min-height:20vh;object-fit: cover;">
                           <div class="overlay rounded-top bg-dark"></div>
                           <div class="post-meta justify-content-center">
                               <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-light read-more">
-                                  Ler tudo <i class="mdi mdi-chevron-right"></i>
+                                  Clique para ler tudo
                               </a>
                           </div>
                       </div>
                   </a>
                   <div class="content p-3">
+                  <small class="text-muted">{{ $post->created_at->format('d/m/Y') }}</small>
                       <h4 class="mt-2">
                           <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-dark title">
                               {{ $post->titulo }}
                           </a>
                       </h4>
-                      <p class="text-muted mt-2">{{ Str::limit(strip_tags($post->corpo), 100) }}</p>
+                      <!-- <p class="text-muted mt-2">{{ Str::limit(strip_tags($post->corpo), 100) }}</p> -->
                   </div>
               </div>
           </div><!--end col-->

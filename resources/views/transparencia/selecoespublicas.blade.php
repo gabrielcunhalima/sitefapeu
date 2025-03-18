@@ -15,6 +15,7 @@
                 <th scope="col">Data Abertura*</th>
                 <th scope="col">Objeto</th>
                 <th scope="col">Resultado</th>
+                <th scope="col">Ata de Abertura</th>
                 <th scope="col">Data Publicação</th>
             </tr>
         </thead>
@@ -25,10 +26,11 @@
                     <td class="align-middle">{!! $selecao->orgao!!}</td>
                     <td class="align-middle"><a href="">{!! $selecao->projeto!!}</a></td>
                     <td class="align-middle"><a href="">{!! $selecao->contratoconvenio!!}</a></td>
-                    <td class="align-middle"><a href="">{!! $selecao->selecaopublica!!}</a></td>
+                    <td class="align-middle"><a href="">{!! $selecao->licitacao!!}</a></td>
                     <td class="align-middle">{!! $selecao->dataabertura!!}</td>
                     <td class="align-middle">{!! $selecao->objeto !!}</td>
-                    <td class="align-middle">{!! $selecao->ataabertura !!}<br>{!! $selecao->resultado !!}</td>
+                    <td class="align-middle">{!! $selecao->ataabertura !!}</td>
+                    <td class="align-middle">{!! $selecao->resultado !!}</td>
                     <td class="align-middle">{!! $selecao->datapublicacao!!}</td>
                 </tr>
             @endforeach

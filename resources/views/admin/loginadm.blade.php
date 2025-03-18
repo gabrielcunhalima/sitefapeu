@@ -28,7 +28,7 @@
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <small>© {{ date('Y') }} - Sistema de Administração</small>
+                        <small>© {{ date('Y') }} - Fundação de Amparo à Pesquisa e Extensão Universitária</small>
                     </div>
                 </div>
             </div>
