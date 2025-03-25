@@ -81,7 +81,6 @@
       });
 }
 
-
 function toggleVisibility(id, visivel) {
     fetch("{{ url('/noticias/visibilidade') }}/" + id, {
         method: "POST",
@@ -99,7 +98,6 @@ function toggleVisibility(id, visivel) {
           }
       });
 }
-
 
 function deletePost(id) {
     if (confirm("Tem certeza que deseja excluir esta notícia?")) {
@@ -119,7 +117,6 @@ function deletePost(id) {
           });
     }
 }
-
 
 </script>
 

@@ -17,10 +17,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
+  <!-- Slack -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
   <!-- Custom CSS -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
@@ -33,7 +34,6 @@
 </head>
 
 <style>
-  /* Navbar Toggler */
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
@@ -43,9 +43,8 @@
     background-color: transparent;
   }
 
-  /* Custom Jumbotron */
   .jumbotron-custom {
-    background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 75%, rgba(211, 211, 211, 0.39) 100%),
+    background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 81%, rgba(211, 211, 211, 0.39) 100%),
     url('{{ asset("images/Paginas/" . $imagem) }}');
     background-size: contain;
     background-position: right;
@@ -67,7 +66,6 @@
     text-decoration: none !important;
   }
 
-  /* Link Hover */
   .link-hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
@@ -172,7 +170,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                   <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a>
+                  <a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade</a>
                   <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
                 </div>
               </li>
@@ -224,7 +222,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   @if (Request::route()->getName() !== 'noticias.noticiasleitura' && Request::route()->getName() !== 'noticias.noticiasrecentes' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'transparencia.projetostransparencia' && Request::route()->getName() !== 'colaborador.programainclusao' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'fornecedor.adicionarlicitacao' && Request::route()->getName() !== 'colaborador.informerendimentos')
-  <div class="jumbotron jumbotron-fluid jumbotron-custom">
+  <div class="py-5 jumbotron-custom">
     <div class="container">
       <h1 class="font-weight-bold">{{$titulo}}</h1>
     </div>
@@ -237,14 +235,12 @@
     @include('layout.footer')
   </div>
 
-
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
   <!-- <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

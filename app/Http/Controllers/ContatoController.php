@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Contato;
 use App\Models\Setor;
 
-
 class ContatoController extends Controller
 {
     public function salvarContato(Request $request)
@@ -30,9 +29,8 @@ class ContatoController extends Controller
         ]);
 
         $setor = Setor::find($request->input('id_setor'));
-        $setorEmail = $setor->email;
 
-        Mail::to($setorEmail)->send(new ContatoEmail($contato->nome, $contato->assunto, $contato->mensagem, $contato->email));
+        Mail::to($setor->email)->send(new ContatoEmail($contato->nome, $contato->assunto, $contato->mensagem, $contato->email,  $setor->setor));  
         
         return redirect()->back()->with('success', 'Mensagem enviada com sucesso!');
     }

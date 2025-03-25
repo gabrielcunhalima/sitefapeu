@@ -186,9 +186,9 @@
                   Fornecedor
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <!-- <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
+                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
                   <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.inexibilidade')}}">Inexibilidade</a> -->
+                  <a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade</a>
                   <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
                 </div>
               </li>

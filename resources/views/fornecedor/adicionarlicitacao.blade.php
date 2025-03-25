@@ -10,17 +10,26 @@
 </script>
 @endif
 
+@if(session('error'))
+<script>
+    window.onload = function() {
+        alert("{{ session('error') }}");
+    };
+</script>
+@endif
+
 <div class="container mt-5">
     <h2 class="mb-4">Nova Licitação</h2>
     <form action="{{ route('fornecedor.adicionarlicitacao') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="mb-3 col-3">
-                <label for="tipo" class="form-label font-weight-bold">Tipo de Licitação</label>
-                <select class="form-control" id="tipo" name="tipo" required>
-                    <option value="1" {{ isset($dados['tipo']) && $dados['tipo'] == 1 ? 'selected' : '' }}>Seleção Pública</option>
-                    <option value="2" {{ isset($dados['tipo']) && $dados['tipo'] == 2 ? 'selected' : '' }}>Dispensa de Licitação</option>
-                    <option value="3" {{ isset($dados['tipo']) && $dados['tipo'] == 3 ? 'selected' : '' }}>Inexigibilidade</option>
+                <label for="tipo_licitacao" class="form-label font-weight-bold">Tipo de Licitação</label>
+                <select class="form-control" id="tipo_licitacao" name="tipo_licitacao" required>
+                    <option selected disabled>Selecione...</option>
+                    <option value="1">Seleção Pública</option>
+                    <option value="2">Dispensa de Licitação</option>
+                    <option value="3">Inexigibilidade</option>
                 </select>
             </div>
         </div>
@@ -28,7 +37,6 @@
             <div class="mb-3 col-3">
                 <label for="processo" class="form-label font-weight-bold">Processo</label>
                 <input type="text" class="form-control" id="processo" name="processo" value="{{$dados['processo']}} " required>
-                <input type="hidden" class="form-control" id="id" name="id" value='{{$dados['id']}} ' required>
             </div>
             <div class="mb-3 col-3">
                 <label for="ordem" class="form-label font-weight-bold">Ordem</label>

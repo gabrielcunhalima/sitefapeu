@@ -119,19 +119,22 @@
     right: -100px;
   }
 
-  .responsive img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  .card-img-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+
+  .card-img-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
   }
 
   .slick-dots {
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
   }
-
 </style>
 
 <script>
@@ -175,10 +178,6 @@
   });
 </script>
 
-<div class="alert alert-danger mb-0 text-center" role="alert">
-  <h2><a href="{{ route('colaborador.informerendimentos') }}">Clique aqui para conferir os Informes de Rendimento!</a></h2>
-</div>
-
 <div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
   <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
@@ -213,6 +212,15 @@
           </a>
         </div>
       </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div class="card mb-3 card w-100 text-center grow shadow bg-danger" style="width: 18rem;">
+          <a href="{{ route('colaborador.informerendimentos') }}">
+            <div class="card-body">
+              <h3 class="card-text font-weight-bold text-white">INFORME DE RENDIMENTOS<br>Clique Aqui</h2>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -221,47 +229,42 @@
 <!-- Noticias -->
 <div class="bg-light">
   <div class="section-title jumbotron py-2 mb-0 bg-light">
-      <h2 class="container my-2 text-center">Notícias recentes</h2>
-      <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
+    <h2 class="container my-2 text-center">Notícias recentes</h2>
+    <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
   </div>
 
   <div class="responsive container mt-0">
-      @foreach($news as $post)
-          <div class="col-lg-4 col-md-6 col-sm-12 mt-4 pt-2">
-              <div class="blog-post rounded border">
-                  <a href="{{ route('noticias.noticiasleitura', $post->link) }}">
-                      <div class="blog-img d-block overflow-hidden position-relative bg-claro">
-                          <img src="{{ asset($post->imagem) }}" class="mx-auto img-fluid" alt="{{ $post->titulo }}" style="max-height: 20vh; min-height:20vh;object-fit: cover;">
-                          <div class="overlay rounded-top bg-dark"></div>
-                          <div class="post-meta justify-content-center">
-                              <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-light read-more">
-                                  Clique para ler tudo
-                              </a>
-                          </div>
-                      </div>
-                  </a>
-                  <div class="content p-3">
-                  <small class="text-muted">{{ $post->created_at->format('d/m/Y') }}</small>
-                      <h4 class="mt-2">
-                          <a href="{{ route('noticias.noticiasleitura', $post->link) }}" class="text-dark title">
-                              {{ $post->titulo }}
-                          </a>
-                      </h4>
-                      <!-- <p class="text-muted mt-2">{{ Str::limit(strip_tags($post->corpo), 100) }}</p> -->
-                  </div>
-              </div>
-          </div><!--end col-->
-      @endforeach
+    @foreach ($news as $post)
+    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+      <div class="blog-post rounded border">
+        <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm" style="width: 100%; height: auto;">
+          <a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-white">
+            <img src="{{ asset($post->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia" style="object-fit: contain;">
+            <div class="overlay rounded-top bg-dark"></div>
+            <div class="post-meta">
+              <p class="border rounded-pill px-2">Clique para ler tudo</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="content p-3">
+          <small class="text-muted">{{ $post->created_at->format('d/m/Y') }}</small>
+          <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-dark title">{{ $post->titulo }}</a></h4>
+          <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($post->corpo, 104) !!}</p> -->
+        </div>
+      </div>
+    </div>
+    @endforeach
   </div>
 
   <div class="container col-12 d-flex justify-content-center">
-      <div class="card bg-principal my-3 card text-center shadow grow2">
-          <a href="{{ route('noticias.noticiasrecentes') }}">
-              <div class="card-body" style="min-width:15vw;">
-                  <h5 class="card-text text-white">Mais notícias</h5>
-              </div>
-          </a>
-      </div>
+    <div class="card bg-principal my-3 card text-center shadow grow2">
+      <a href="{{ route('noticias.noticiasrecentes') }}">
+        <div class="card-body" style="min-width:15vw;">
+          <h5 class="card-text text-white">Mais notícias</h5>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -409,7 +412,7 @@
     <div class="row align-items-center">
       <div class="col-sm apoiadas link-hover">
         <a href="https://ufsc.br/">
-          <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
+          <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" style="width: 80%; height: auto;">
         </a>
       </div>
       <div class="col-sm apoiadas link-hover">
@@ -457,25 +460,24 @@
 </div>
 
 <script>
-  
-  document.addEventListener('DOMContentLoaded', function () {
-  function toggleContent() {
-    const servicosCollapse = document.getElementById('servicosCollapse');
-    const accordionFlushExample = document.getElementById('accordionFlushExample');
-    const telaPequena = window.innerWidth < 992;
+  document.addEventListener('DOMContentLoaded', function() {
+    function toggleContent() {
+      const servicosCollapse = document.getElementById('servicosCollapse');
+      const accordionFlushExample = document.getElementById('accordionFlushExample');
+      const telaPequena = window.innerWidth < 992;
 
-    if (telaPequena) {
-      servicosCollapse.classList.add('d-none');
-      accordionFlushExample.classList.remove('d-none');
-    } else {
-      servicosCollapse.classList.remove('d-none');
-      accordionFlushExample.classList.add('d-none');
+      if (telaPequena) {
+        servicosCollapse.classList.add('d-none');
+        accordionFlushExample.classList.remove('d-none');
+      } else {
+        servicosCollapse.classList.remove('d-none');
+        accordionFlushExample.classList.add('d-none');
+      }
     }
-  }
 
-toggleContent();
+    toggleContent();
 
-  window.addEventListener('resize', toggleContent);
-});
+    window.addEventListener('resize', toggleContent);
+  });
 </script>
 @endsection

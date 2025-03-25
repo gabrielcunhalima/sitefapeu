@@ -4,8 +4,8 @@
 @section('conteudo')
 <div class="container" style="font-size:16px;">
     <h4 class="rounded bg-success-subtle text-center text-verde3 mb-5 p-2"><b>Clique no título para iniciar o download do arquivo.</b></h4>
-    <table class="table table-bordered shadow">
-        <thead class="bg-verdeescuro text-white">
+    <table class="shadow table-striped table">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">1- RH</th>
                 <th scope="col">Publicado em</th>
@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <tr onclick="window.location.href='pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.doc'" style="cursor: pointer;">
-                <td class="border py-0 pr-0 align-middle">1.2 Cancelamento de Bolsa ou Estágio </td>
+                <td>1.2 Cancelamento de Bolsa ou Estágio </td>
                 <td>18/04/2024</td>
             </tr>
             <tr onclick="window.location.href='pdfs/Projetos/1.3_formulario_dados_empregado_20_04_2018.doc'" style="cursor: pointer;">
@@ -67,7 +67,7 @@
         </tbody>
     </table>
     <table class="table table-bordered shadow">
-        <thead class="bg-verdeescuro text-white">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">2- FINANCEIRO - PRESTAÇÃO DE CONTAS</th>
             </tr>
@@ -94,7 +94,7 @@
         </tbody>
     </table>
     <table class="table table-bordered shadow">
-        <thead class="bg-verdeescuro text-white">
+        <thead class="table-dark">
             <tr>
                 <th>3- MATERIAS - COMPRAS</th>
             </tr>
@@ -106,7 +106,7 @@
         </tbody>
     </table>
     <table class="table table-bordered shadow">
-        <thead class="bg-verdeescuro text-white">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">4- IMPORTAÇÃO</th>
                 <th scope="col" style="width:150px;">Publicado em</th>
@@ -136,7 +136,7 @@
         </tbody>
     </table>
     <table class="table table-bordered shadow">
-        <thead class="bg-verdeescuro text-white">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">9- RECURSOS ADICIONAIS</th>
                 <th scope="col">Publicado em</th>

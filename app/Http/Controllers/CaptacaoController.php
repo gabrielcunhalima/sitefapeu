@@ -36,7 +36,7 @@ class CaptacaoController extends Controller
         //     'AreaInteresse' => $request->AreaInteresse,
         // ]);
 
-        $setorEmail = 'gabriel.lima@fapeu.org.br';
+        $setorEmail = 'captacao@fapeu.org.br';
 
         Mail::to($setorEmail)->send(new CaptacaoEmail(
             $request->nome,

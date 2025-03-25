@@ -14,14 +14,17 @@ class ContatoEmail extends Mailable
     public $assunto;
     public $mensagem;
     public $email;
+    public $setor;
 
     // Construtor para passar os dados para a view
-    public function __construct($nome, $assunto, $mensagem, $email)
+    public function __construct($nome, $assunto, $mensagem, $email, $setor)
     {
         $this->nome = $nome;
         $this->assunto = $assunto;
         $this->mensagem = $mensagem;
         $this->email = $email;
+        $this->setor = $setor;
+        
     }
 
     // Montando o e-mail
@@ -29,7 +32,10 @@ class ContatoEmail extends Mailable
     {
         return $this->from($this->email, $this->nome)
                     ->subject('Contato Site - ' . $this->assunto)
-                    ->view('emails.contatoemail');  
+                    ->view('emails.contatoemail')
+                    ->with([
+                        'setor' => $this->setor,
+                    ]);
     }
 }
 

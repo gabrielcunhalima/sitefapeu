@@ -5,7 +5,7 @@
 
 <div class="container">
     <table class="table table-bordered">
-        <thead class="bg-verdeescuro text-white">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">Formulário</th>
                 <th scope="col">Última Atualização</th>

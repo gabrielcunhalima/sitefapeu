@@ -1,5 +1,5 @@
 @extends('layout.headeradmin')
-@section('title','FAPEU | Inexibilidade')
+@section('title','FAPEU | Inexigibilidade')
 
 @section('conteudo')
 

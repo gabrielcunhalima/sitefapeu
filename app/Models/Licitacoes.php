@@ -17,16 +17,17 @@ class Licitacoes extends Model
         'dataabertura',
         'objeto',
         'ataabertura',
-        'contratoconvenio' => '',
-        'resultado' => '',
+        'contratoconvenio',
+        'resultado',
         'datapublicacao',
-        'tipo'
+        'tipo_licitacao',
+        '_token',
     ];
 
     public $timestamps = true;
 
     public static function findOrCreate($id)
-{
-    return $id ? self::findOrFail($id) : new self();
-}
+    {
+        return $id ? self::findOrFail($id) : new self();
+    }
 }

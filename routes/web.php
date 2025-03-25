@@ -7,7 +7,7 @@ use App\Http\Controllers\CaptacaoController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NoticiasController;
-use App\Http\Controllers\SelecoesPublicasController;
+use App\Http\Controllers\LicitacaoController;
 use App\Http\Controllers\LoginController;
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
@@ -36,7 +36,7 @@ Route::get('/areaadministrativa',[MenuController::class,'areaadministrativa'])->
 
 Route::get('/dispensa',[MenuController::class,'dispensa'])->name('fornecedor.dispensa');
 Route::get('/espacofornecedor',[MenuController::class,'espacofornecedor'])->name('fornecedor.espacofornecedor');
-Route::get('/inexibilidade',[MenuController::class,'inexibilidade'])->name('fornecedor.inexibilidade');
+Route::get('/inexigibilidade',[MenuController::class,'inexigibilidade'])->name('fornecedor.inexigibilidade');
 Route::get('/menulicitacao',[MenuController::class,'menulicitacao'])->name('fornecedor.menulicitacao');
 Route::match(['get', 'post'], '/adicionarlicitacao', [MenuController::class, 'adicionarlicitacao'])->name('fornecedor.adicionarlicitacao');
 
@@ -125,3 +125,4 @@ Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('ad
 
 
 Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
+

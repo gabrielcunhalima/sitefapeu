@@ -55,7 +55,6 @@
     </form>
 </div>
 
-
 @if(session('success'))
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">

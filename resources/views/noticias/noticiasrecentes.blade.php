@@ -92,11 +92,6 @@
         height: 36px;
     }
 
-    .shadow {
-        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
-    }
-
     .text-muted {
         color: #8492a6 !important;
     }
@@ -117,12 +112,6 @@
     .card-img-container {
         width: 100%;
         aspect-ratio: 16/9;
-        overflow: hidden;
-    }
-
-    .card-img-container img {
-        width: 100%;
-        height: 100%;
     }
 
     .card {
@@ -138,6 +127,7 @@
         text-overflow: ellipsis;
         max-height: 4.5em;
     }
+
 </style>
 <div class="noticiasrecentes">
     <div class="section-title py-3 mb-0">
@@ -149,7 +139,7 @@
             @foreach ($news as $item)
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="blog-post rounded border">
-                    <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm">
+                    <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm" style="position: relative; width: 100%; height: auto;">
                         <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
                             <img src="{{ asset($item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia" style="object-fit: contain;">
                             <div class="overlay rounded-top bg-dark"></div>
@@ -158,8 +148,9 @@
                             </div>
                         </a>
                     </div>
+
                     <div class="content p-3">
-                    <small class="text-muted">{{ $item->created_at->format('d/m/Y') }}</small>
+                        <small class="text-muted">{{ $item->created_at->format('d/m/Y') }}</small>
                         <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-dark title">{{ $item->titulo }}</a></h4>
                         <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($item->corpo, 104) !!}</p> -->
                     </div>

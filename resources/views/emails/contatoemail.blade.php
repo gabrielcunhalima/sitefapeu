@@ -41,7 +41,8 @@
 <body>
     <div class="email-container">
         <h1>Nova Mensagem de Contato - Site FAPEU</h1>
-        <p><strong>Assunto:</strong> {{ $assunto }}</p>
+        <p><b>Contatou o setor:</b> {{ $setor }}</p>
+        <p><strong>Assunto: </strong> {{ $assunto }}</p>
 
         <div class="details">
             <p><strong>Mensagem:</strong></p>

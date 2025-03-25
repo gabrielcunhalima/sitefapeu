@@ -20,13 +20,13 @@
     <div class="comitegestaoriscos">
         <h4><strong>Comitê de Gestão de Riscos - CGR</strong></h4>
         <p>O Comitê de Gestão de Riscos - CGR foi criado em 27 de dezembro de 2018, por meio da Portaria nº. 021/DE/2018 da Diretoria Executiva. O CGR é órgão de caráter consultivo e permanente, tendo como objetivos principais a identificação das situações de risco corporativo, a proposição de diretrizes e medidas para mitigar riscos, e a supervisão e monitoramento de gerenciamento de riscos da Fapeu, visando assegurar a boa gestão de recursos e a proteção do seu patrimônio, por meio de processos de gestão aplicados a toda a Fundação.</p>
-        <p>Atualmente os <b>membros</b> constituintes do CGR são:
+        <p>Atualmente os <b>membros</b> constituintes do CGR são:</p>
         <p><b>Eduarda Silva Farias</b> (Coordenadora de Prestação de Contas) - Coordenadora</p>
         <p><b>Pedro Marques Abdo</b> (Técnico de Projetos) - Membro</p>
         <p><b>Georgia Maia Ventura</b> (Coordenadora do Setor de Projetos) - Membro</p><br>
         <p><b><a href="pdfs/Politicas/Comites/PORTARIA N. 012 2023 DE - Designa membros do Comitê de Gestão de Riscos da FAPEU.pdf" target="_blank"> PORTARIA N. 012/DE/2023, DE 14 de DEZEMBRO de 2023 – Designação dos membros do Comitê de Gestão de Riscos</b></p> </a>
         <p><b><a href="pdfs/Politicas/Comites/PORTARIA N. 006 2019 DE - Aprova o Regimento Interno do Comitê de Gestão de Riscos da FAPEU.pdf" target="_blank">PORTARIA N. 006/DE/2019, DE 28 DE MARÇO DE 2019 – Regimento Interno Comitê de Gestão de Riscos</b></p><br></a>
-        <p><b>E-mail: risco@fapeu.org.br<br>Telefone: (48) 3331-4368</b></p>
+        <p>E-mail: risco@fapeu.org.br<br>Telefone: (48) 3331-4368</p>
     </div>
 </div>
 @endsection

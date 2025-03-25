@@ -11,9 +11,7 @@
           Horário de Funcionamento: Segunda a Sexta-feira das 8h às 12h e das 13h às 17h<br>
         </p><br>
       </div>
-      <!--Grid column-->
 
-      <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-md-0">
         <h5 class="text-uppercase font-weight-bold">Caixa Postal</h5>
         <p class="textofooter">

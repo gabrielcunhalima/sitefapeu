@@ -56,7 +56,7 @@
         </div>
 
         <div class="footer">
-            <p>Esta mensagem foi enviada automaticamente pelo sistema da FAPEU.</p>
+            <p>Esta mensagem foi enviada automaticamente através da área de Captação site da FAPEU.</p>
         </div>
     </div>
 </body>

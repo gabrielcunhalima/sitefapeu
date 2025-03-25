@@ -27,9 +27,6 @@
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         </form>
                     </div>
-                    <div class="card-footer text-center">
-                        <small>© {{ date('Y') }} - Fundação de Amparo à Pesquisa e Extensão Universitária</small>
-                    </div>
                 </div>
             </div>
         </div>
