@@ -553,7 +553,8 @@ class MenuController extends Controller
 
     public function home()
     {
-        $news = Post::latest()->take(5)->get(); // Pegando as 5 últimas notícias
+        $news = Post::where('visivel', 1)->latest()->take(5)->get();
+
         return view('homepage.home', compact('news'));
     }
 
