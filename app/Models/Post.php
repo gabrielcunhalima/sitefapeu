@@ -8,7 +8,7 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    protected $fillable = ['titulo', 'corpo', 'link','imagem', 'visivel', 'created_at'];
+    protected $fillable = ['titulo', 'corpo', 'link','imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5', 'visivel', 'created_at'];
 
     public $timestamps = true;
     public static function findOrCreate($id)

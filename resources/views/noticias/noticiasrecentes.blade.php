@@ -128,6 +128,12 @@
         max-height: 4.5em;
     }
 
+    .carousel-inner img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover;
+    }
+
 </style>
 <div class="noticiasrecentes">
     <div class="section-title py-3 mb-0">
@@ -140,14 +146,32 @@
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="blog-post rounded border">
                     <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm" style="position: relative; width: 100%; height: auto;">
-                        <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
-                            <img src="{{ asset($item->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia" style="object-fit: contain;">
-                            <div class="overlay rounded-top bg-dark"></div>
-                            <div class="post-meta">
-                                <p class="border rounded-pill px-2">Clique para ler tudo</p>
-                            </div>
-                        </a>
-                    </div>
+                     <!-- Carrossel de imagens -->
+                     @if($item->imagem || $item->imagem2 || $item->imagem3 || $item->imagem4 || $item->imagem5)
+                     <div id="carousel{{$item->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                         <div class="carousel-inner">
+                             @php
+                             $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
+                             $firstImage = true;
+                             @endphp
+                             @foreach($images as $image)
+                                 @if($item->$image)
+                                     <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
+                                         <img src="{{ asset($item->$image) }}" class="d-block w-100" alt="Imagem da notícia {{ $loop->index + 1 }}">
+                                     </div>
+                                     @php $firstImage = false; @endphp
+                                 @endif
+                             @endforeach
+                         </div>
+                     </div>
+                     @endif
+                     <a href="{{ route('noticias.noticiasleitura', ['link' => $item->link]) }}" class="text-white">
+                         <div class="overlay rounded-top bg-dark"></div>
+                         <div class="post-meta">
+                             <p class="border rounded-pill px-2">Clique para ler tudo</p>
+                         </div>
+                     </a>
+                 </div>
 
                     <div class="content p-3">
                         <small class="text-muted">{{ $item->created_at->format('d/m/Y') }}</small>

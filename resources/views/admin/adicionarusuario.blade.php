@@ -10,14 +10,14 @@
             {{ session('success') }}
         </div>
     @endif
-
+    
     
     <form action="{{ route('admin.storeusuario') }}" method="POST">
         @csrf
 
    
-        <div class="form-group" id="inputName">
-            <label for="name">Nome</label>
+        <div class="form-grou0p font-weight-bold" id="inputName">
+            <label for="name ">Nome</label>
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
             @error('name')
             <div>{{ $message }}</div>
@@ -25,7 +25,7 @@
         </div>
 
 
-        <div class="form-group" id="inputEmail">
+        <div class="form-group font-weight-bold" id="inputEmail">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}">
             @error('email')
@@ -34,7 +34,7 @@
         </div>
 
 
-        <div class="form-group" id="inputPassword">
+        <div class="form-group font-weight-bold" id="inputPassword">
             <label for="password">Senha</label>
             <input type="password" class="form-control" id="password" name="password">
             @error('password')
@@ -43,7 +43,7 @@
         </div>
 
 
-        <div class="form-group" id="inputPasswordConfirmation">
+        <div class="form-group font-weight-bold" id="inputPasswordConfirmation">
             <label for="password_confirmation">Confirmar Senha</label>
             <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
             @error('password_confirmation')

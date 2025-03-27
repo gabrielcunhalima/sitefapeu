@@ -124,6 +124,11 @@ class MenuController extends Controller
                 'corpo' => 'required|string',
                 'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
                 'visivel' => 'nullable|boolean',
+                'imagem2' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'imagem3' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'imagem4' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'imagem5' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'data_publicacao' => 'nullable|date',
             ]);
 
             $post = Post::findOrCreate($request->id);
@@ -132,16 +137,23 @@ class MenuController extends Controller
             $post->link = Str::slug($request->input('titulo'));
             $post->visivel = 1;
 
-            //se mandar uma nova imagem, substitui
-            if ($request->hasFile('imagem')) {
-                $img = $request->file('imagem');
-                $destPath = public_path('storage/posts');
-
-                $imgName = 'POST_' . time() . '.' . $img->getClientOriginalExtension();
-                $img->move($destPath, $imgName);
-
-                $post->imagem = 'storage/posts/' . $imgName;
+            if ($request->filled('data_publicacao')) {
+                $post->created_at = $request->input('data_publicacao');
             }
+
+            foreach (range(1, 5) as $i) {
+                $fieldName = $i === 1 ? 'imagem' : "imagem{$i}";
+
+
+            //se mandar uma nova imagem, substitui
+        if ($request->hasFile($fieldName)) {
+    
+                $img = $request->file($fieldName);
+                $imgName = 'POST_' . time() . '_' . $i . '.' . $img->getClientOriginalExtension();
+                $imgPath = $img->storeAs('public/posts', $imgName); 
+                $post->$fieldName = str_replace('public/', 'storage/', $imgPath); 
+            }
+        }
 
             $post->save();
 
@@ -191,6 +203,10 @@ class MenuController extends Controller
         $campo = $request->campo;
         $valor = $request->valor;
 
+        if ($campo === 'created_at') {
+            $valor = \Carbon\Carbon::parse($valor);
+        }
+
         $post->$campo = $valor;
         $post->save();
 
@@ -214,6 +230,30 @@ class MenuController extends Controller
         return response()->json(['success' => true]);
     }
 
+
+    public function deleteImage($id, $imageField)
+{
+    // Recuperar o post pelo ID
+    $post = Post::findOrFail($id);
+
+    if (isset($post->$imageField) && !empty($post->$imageField)) {
+
+        $imagePath = public_path($post->$imageField);
+        if (file_exists($imagePath)) {
+            unlink($imagePath); 
+        }
+
+
+        $post->$imageField = null;
+        $post->save(); 
+
+        return redirect()->back()->with('success', 'Imagem excluída com sucesso!');
+    }
+
+    return redirect()->back()->with('error', 'Imagem não encontrada.');
+}
+
+
     public function atualizarImagem(Request $request, $id)
     {
 
@@ -231,10 +271,71 @@ class MenuController extends Controller
         return back()->with('success', 'Imagem atualizada com sucesso!');
     }
 
+    public function atualizarImagem2(Request $request, $id)
+{
+    $request->validate(['imagem2' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+    $post = Post::findOrFail($id);
+
+    if ($request->hasFile('imagem2')) {
+        $imagePath = $request->file('imagem2')->store('public/posts');
+        $post->imagem2 = str_replace('public/', 'storage/', $imagePath);
+        $post->save();
+    }
+
+    return back()->with('success', 'Imagem 2 atualizada com sucesso!');
+}
+
+public function atualizarImagem3(Request $request, $id)
+{
+    $request->validate(['imagem3' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+    $post = Post::findOrFail($id);
+
+    if ($request->hasFile('imagem3')) {
+        $imagePath = $request->file('imagem3')->store('public/posts');
+        $post->imagem3 = str_replace('public/', 'storage/', $imagePath);
+        $post->save();
+    }
+
+    return back()->with('success', 'Imagem 3 atualizada com sucesso!');
+}
+
+public function atualizarImagem4(Request $request, $id)
+{
+    $request->validate(['imagem4' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+    $post = Post::findOrFail($id);
+
+    if ($request->hasFile('imagem4')) {
+        $imagePath = $request->file('imagem4')->store('public/posts');
+        $post->imagem4 = str_replace('public/', 'storage/', $imagePath);
+        $post->save();
+    }
+
+    return back()->with('success', 'Imagem 4 atualizada com sucesso!');
+}
+
+public function atualizarImagem5(Request $request, $id)
+{
+    $request->validate(['imagem5' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
+    $post = Post::findOrFail($id);
+
+    if ($request->hasFile('imagem5')) {
+        $imagePath = $request->file('imagem5')->store('public/posts');
+        $post->imagem5 = str_replace('public/', 'storage/', $imagePath);
+        $post->save();
+    }
+
+    return back()->with('success', 'Imagem 5 atualizada com sucesso!');
+}
+
+
+
+
     public function manualcompras()
     {
         return $this->renderView('projetos.manualcompras', 'manualcompras.png', 'Manual de Compras');
     }
+
+
 
     // MENU Transparência
 
@@ -287,7 +388,7 @@ class MenuController extends Controller
         $selecoes = Licitacoes::query()
             ->orderBy('id', 'desc')
             ->get();
-
+        // dd($selecoes);
         return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
     }
 
@@ -355,20 +456,12 @@ class MenuController extends Controller
     }
     public function dispensa()
     {
-        $dispensa = Licitacoes::query()
-        ->orderBy('id', 'desc')
-        ->get();
-
-    return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa de Licitação', $dispensa);
+        return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa');
     }
 
-    public function inexigibilidade()
+    public function inexibilidade()
     {
-        $inexigibilidades = Licitacoes::query()
-        ->orderBy('id', 'desc')
-        ->get();
-
-        return $this->renderView('fornecedor.inexigibilidade', 'inexigibilidade.png', 'Inexigibilidade', $inexigibilidades);
+        return $this->renderView('fornecedor.inexibilidade', 'inexibilidade.png', 'Inexibilidade');
     }
 
     public function espacofornecedor()
@@ -376,34 +469,44 @@ class MenuController extends Controller
         return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
     }
 
-    public function adicionarlicitacao(Request $request)
+    public function adicionarlicitacao (Request $request)
     {
-
+        
         if (!Auth::check()) {
             return redirect()->route('admin.login');
         }
 
         Session::put('admin_logged_in_time', time());
 
-        if ($request->isMethod('POST')) {
+        if ($request->isMethod('GET')) {
 
+            if ($request->id > 0) {
+
+                $dados = Licitacoes::findOrFail($request->id);
+                $imagem = 'adicionarlicitacao.png';
+                $titulo = 'Editor de Licitação';
+
+                return view('transparencia.selecoespublicas', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', true);
+            }
+        }
+
+        if ($request->isMethod('POST')) {
             $validated = $request->validate([
-                'ordem' => 'required|string|max:255',
+                'ordem' => 'required|integer',
                 'processo' => 'required|string|max:255',
                 'orgao' => 'required|string|max:255',
                 'projeto' => 'required|string|max:20',
-                'licitacao' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+                'licitacao' => 'required|string|max:250',
                 'dataabertura' => 'required|date',
-                'objeto' => 'required|string|max:999',
+                'objeto' => 'required|string|max:555',
                 'resultado' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
                 'datapublicacao' => 'nullable|date',
                 'ataabertura' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
-                'tipo_licitacao' => 'required|string',
+                'tipo' => 'required|string|',
                 'contratoconvenio' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
-                '_token' => 'required|string',
             ]);
 
-            $licitacao = new Licitacoes();
+            $licitacao = Licitacoes::findOrCreate($request->id);
             $licitacao->ordem = $request->input('ordem');
             $licitacao->processo = $request->input('processo');
             $licitacao->orgao = $request->input('orgao');
@@ -411,49 +514,52 @@ class MenuController extends Controller
             $licitacao->dataabertura = $request->input('dataabertura');
             $licitacao->objeto = $request->input('objeto');
             $licitacao->datapublicacao = $request->input('datapublicacao');
-            $licitacao->tipo_licitacao = $request->input('tipo_licitacao');
+            $licitacao->tipo = $request->input('tipo');
 
             if ($request->hasFile('ataabertura')) {
                 $lic = $request->file('ataabertura');
-                $destPath = public_path('storage/selecoes');
-                $licName = 'ATA_ABERTURA_' . time() . '.' . $lic->getClientOriginalExtension();
+                $destPath = public_path('storage/posts');
+
+                $licName = 'ATA_ABERTURA_' . $lic->getClientOriginalExtension();
                 $lic->move($destPath, $licName);
+
                 $licitacao->ataabertura = 'storage/selecoes/' . $licName;
-            }
+            } 
 
             if ($request->hasFile('contratoconvenio')) {
                 $lic = $request->file('contratoconvenio');
-                $destPath = public_path('storage/selecoes');
-                $licName = 'CONTRATO-CONVENIO_' . time() . '.' . $lic->getClientOriginalExtension();
+                $destPath = public_path('storage/posts');
+
+                $licName = 'CONTRATO-CONVENIO_' . $lic->getClientOriginalExtension();
                 $lic->move($destPath, $licName);
+
                 $licitacao->contratoconvenio = 'storage/selecoes/' . $licName;
-            }
+            } 
 
             if ($request->hasFile('resultado')) {
                 $lic = $request->file('resultado');
-                $destPath = public_path('storage/selecoes');
-                $licName = 'RESULTADO_' . time() . '.' . $lic->getClientOriginalExtension();
+                $destPath = public_path('storage/posts');
+
+                $licName = 'RESULTADO_' . $lic->getClientOriginalExtension();
                 $lic->move($destPath, $licName);
+
                 $licitacao->resultado = 'storage/selecoes/' . $licName;
-            }
+            }  
 
             if ($request->hasFile('licitacao')) {
                 $lic = $request->file('licitacao');
-                $destPath = public_path('storage/selecoes');
-                $licName = 'LICITACAO_' . time() . '.' . $lic->getClientOriginalExtension();
+                $destPath = public_path('storage/posts');
+
+                $licName = 'LICITACAO_' . $lic->getClientOriginalExtension();
                 $lic->move($destPath, $licName);
+
                 $licitacao->licitacao = 'storage/selecoes/' . $licName;
-            }
+            }   
 
             $licitacao->save();
+            
 
-            if ($licitacao->tipo_licitacao == 1) {
-                return redirect()->route('transparencia.selecoespublicas')->with('success', 'Licitação salva com sucesso!');
-            } elseif ($licitacao->tipo_licitacao == 2) {
-                return redirect()->route('fornecedor.dispensa')->with('success', 'Licitação salva com sucesso!');
-            } elseif ($licitacao->tipo_licitacao == 3) {
-                return redirect()->route('fornecedor.inexigibilidade')->with('success', 'Licitação salva com sucesso!');
-            }
+            return redirect()->route('transparencia.selecoespublicas')->with('success', 'Licitação salva com sucesso!');
         }
 
         $dados = [
@@ -468,11 +574,11 @@ class MenuController extends Controller
             'resultado' => '',
             'datapublicacao' => '',
             'ataabertura' => '',
-            'tipo_licitacao' => ''
+            'id' => ''
         ];
         $imagem = 'adicionarlicitacao.png';
         $titulo = 'Nova Licitação';
-
+        
         return view('fornecedor.adicionarlicitacao', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', false);
     }
 
@@ -483,11 +589,6 @@ class MenuController extends Controller
         return $this->renderView('colaborador.areaadministrativa', 'areaadministrativa.png', 'Área Administrativa');
     }
 
-    public function mostrarLicitacoes()
-    {
-        $licitacoes = Licitacoes::orderBy('created_at', 'desc')->get();
-        return view('transparencia.selecoespublicas', compact('licitacoes'));
-    }
 
     public function drhFlow()
     {
@@ -553,8 +654,7 @@ class MenuController extends Controller
 
     public function home()
     {
-        $news = Post::where('visivel', 1)->latest()->take(5)->get();
-
+        $news = Post::latest()->take(5)->get(); // Pegando as 5 últimas notícias
         return view('homepage.home', compact('news'));
     }
 
