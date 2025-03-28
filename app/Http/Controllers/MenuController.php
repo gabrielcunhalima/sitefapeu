@@ -144,20 +144,20 @@ class MenuController extends Controller
             foreach (range(1, 5) as $i) {
                 $fieldName = $i === 1 ? 'imagem' : "imagem{$i}";
 
+                
+                //se mandar uma nova imagem, substitui
+                if ($request->hasFile($fieldName)) {
+                    $img = $request->file($fieldName);
+                    $destPath = public_path('storage/posts');
+                    $imgName = 'POST_' . time() . ($i > 1 ? "_$i" : '') . '.' . $img->getClientOriginalExtension();
+                    $img->move($destPath, $imgName);
+                
+                    $post->$fieldName = 'storage/posts/' . $imgName;
+                }
 
-            //se mandar uma nova imagem, substitui
-            if ($request->hasFile('imagem')) {
-                $img = $request->file('imagem');
-                $destPath = public_path('storage/posts');
-            
-                $imgName = 'POST_' . time() . '.' . $img->getClientOriginalExtension();
-                $img->move($destPath, $imgName);
-            
-                $post->imagem = 'storage/posts/' . $imgName;
+                
+                
             }
-            
-            
-        }
 
             $post->save();
 
@@ -260,8 +260,8 @@ class MenuController extends Controller
 
 public function atualizarImagem(Request $request, $id, $numero = null)
 {
-  
-    $fieldName = $numero ? 'imagem' . $numero : 'imagem';
+    $fieldName = ($numero == 1 || $numero === null) ? 'imagem' : 'imagem' . $numero;
+
 
     $request->validate([$fieldName => 'nullable|image|mimes:jpeg,png,jpg,gif,svg']);
 
