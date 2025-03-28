@@ -188,7 +188,7 @@ class MenuController extends Controller
             return redirect()->route('admin.login');
         }
 
-        $news = Post::all();
+        $news = Post::orderBy('id', 'desc')->get();
         $imagem = 'noticiasedit.png';
         $titulo = 'Edição de Notícias';
 

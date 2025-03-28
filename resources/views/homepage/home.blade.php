@@ -327,7 +327,7 @@
             <div class="accordion-body">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
           </div>
         </div>
-        <div class="accordion-item">
+        <!-- <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingSix">
             <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
               <b>LATIC</b>
@@ -336,7 +336,7 @@
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- TELA GRANDE -->
@@ -389,7 +389,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
+        <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
           <div class="card text-dark bg-light mb-3 shadow rounded">
             <div class="card-body">
               <h5 class="card-title font-weight-bold">LATIC</h5>
@@ -397,7 +397,7 @@
               <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
