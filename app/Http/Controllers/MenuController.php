@@ -144,16 +144,20 @@ class MenuController extends Controller
             foreach (range(1, 5) as $i) {
                 $fieldName = $i === 1 ? 'imagem' : "imagem{$i}";
 
+                
+                //se mandar uma nova imagem, substitui
+                if ($request->hasFile($fieldName)) {
+                    $img = $request->file($fieldName);
+                    $destPath = public_path('storage/posts');
+                    $imgName = 'POST_' . time() . ($i > 1 ? "_$i" : '') . '.' . $img->getClientOriginalExtension();
+                    $img->move($destPath, $imgName);
+                
+                    $post->$fieldName = 'storage/posts/' . $imgName;
+                }
 
-            //se mandar uma nova imagem, substitui
-        if ($request->hasFile($fieldName)) {
-    
-                $img = $request->file($fieldName);
-                $imgName = 'POST_' . time() . '_' . $i . '.' . $img->getClientOriginalExtension();
-                $imgPath = $img->storeAs('public/posts', $imgName); 
-                $post->$fieldName = str_replace('public/', 'storage/', $imgPath); 
+                
+                
             }
-        }
 
             $post->save();
 
@@ -188,7 +192,7 @@ class MenuController extends Controller
             return redirect()->route('admin.login');
         }
 
-        $news = Post::orderBy('id', 'desc')->get();
+        $news = Post::all();
         $imagem = 'noticiasedit.png';
         $titulo = 'Edição de Notícias';
 
@@ -254,78 +258,41 @@ class MenuController extends Controller
 }
 
 
-    public function atualizarImagem(Request $request, $id)
-    {
+public function atualizarImagem(Request $request, $id, $numero = null)
+{
+    $fieldName = ($numero == 1 || $numero === null) ? 'imagem' : 'imagem' . $numero;
 
-        $request->validate(['imagem' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
 
-        $post = Post::findOrFail($id);
+    $request->validate([$fieldName => 'nullable|image|mimes:jpeg,png,jpg,gif,svg']);
 
-        if ($request->hasFile('imagem')) {
-            $imagePath = $request->file('imagem')->store('public/posts');
+    $post = Post::findOrFail($id);
 
-            $post->imagem = str_replace('public/', 'storage/', $imagePath);
-            $post->save();
+
+    if ($request->hasFile($fieldName)) {
+   
+        if ($post->$fieldName) {
+            $oldImagePath = public_path($post->$fieldName);
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
         }
 
-        return back()->with('success', 'Imagem atualizada com sucesso!');
-    }
+        $img = $request->file($fieldName);
+        $destPath = public_path('storage/posts');
+        $imgName = 'POST_' . time() . ($numero ? "_$numero" : '') . '.' . $img->getClientOriginalExtension();
+        $img->move($destPath, $imgName);
 
-    public function atualizarImagem2(Request $request, $id)
-{
-    $request->validate(['imagem2' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-    $post = Post::findOrFail($id);
-
-    if ($request->hasFile('imagem2')) {
-        $imagePath = $request->file('imagem2')->store('public/posts');
-        $post->imagem2 = str_replace('public/', 'storage/', $imagePath);
+  
+        $post->$fieldName = 'storage/posts/' . $imgName;
         $post->save();
+
+        return back()->with('success', "Imagem $numero atualizada com sucesso!");
     }
 
-    return back()->with('success', 'Imagem 2 atualizada com sucesso!');
+    return back()->with('error', 'Nenhuma imagem foi enviada.');
 }
 
-public function atualizarImagem3(Request $request, $id)
-{
-    $request->validate(['imagem3' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-    $post = Post::findOrFail($id);
 
-    if ($request->hasFile('imagem3')) {
-        $imagePath = $request->file('imagem3')->store('public/posts');
-        $post->imagem3 = str_replace('public/', 'storage/', $imagePath);
-        $post->save();
-    }
-
-    return back()->with('success', 'Imagem 3 atualizada com sucesso!');
-}
-
-public function atualizarImagem4(Request $request, $id)
-{
-    $request->validate(['imagem4' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-    $post = Post::findOrFail($id);
-
-    if ($request->hasFile('imagem4')) {
-        $imagePath = $request->file('imagem4')->store('public/posts');
-        $post->imagem4 = str_replace('public/', 'storage/', $imagePath);
-        $post->save();
-    }
-
-    return back()->with('success', 'Imagem 4 atualizada com sucesso!');
-}
-
-public function atualizarImagem5(Request $request, $id)
-{
-    $request->validate(['imagem5' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
-    $post = Post::findOrFail($id);
-
-    if ($request->hasFile('imagem5')) {
-        $imagePath = $request->file('imagem5')->store('public/posts');
-        $post->imagem5 = str_replace('public/', 'storage/', $imagePath);
-        $post->save();
-    }
-
-    return back()->with('success', 'Imagem 5 atualizada com sucesso!');
-}
 
 
 

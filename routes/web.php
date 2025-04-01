@@ -114,11 +114,7 @@ Route::get('/editar', [MenuController::class, 'editarNoticias'])->name('noticias
 Route::post('/noticias/editar/{id}', [MenuController::class, 'atualizarNoticia']);
 Route::post('/noticias/visibilidade/{id}', [MenuController::class, 'alterarVisibilidade']);
 Route::post('/noticias/excluir/{id}', [MenuController::class, 'excluirNoticia']);
-Route::post('/noticias/update-imagem/{id}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
-Route::post('/noticias/update-imagem2/{id}', [MenuController::class, 'atualizarImagem2'])->name('noticias.updateImagem2');
-Route::post('/noticias/update-imagem3/{id}', [MenuController::class, 'atualizarImagem3'])->name('noticias.updateImagem3');
-Route::post('/noticias/update-imagem4/{id}', [MenuController::class, 'atualizarImagem4'])->name('noticias.updateImagem4');
-Route::post('/noticias/update-imagem5/{id}', [MenuController::class, 'atualizarImagem5'])->name('noticias.updateImagem5');
+Route::post('/noticias/update-imagem/{id}/{numero?}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
 Route::post('/noticias/excluir-imagem/{id}/{imagem}', [MenuController::class, 'deleteImage'])->name('noticias.deleteImagem');
 Route::get('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
 Route::post('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
