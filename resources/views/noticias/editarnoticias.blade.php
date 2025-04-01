@@ -22,7 +22,7 @@
         <table class="table mt-6 text-center" style="width: 70%; transform: scale(0.95);">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">Título</th>
+                    <th scope="col">Título</th> 
                     <th scope="col">Imagem</th>
                     <th scope="col">Data</th>
                     <th scope="col">Visível</th>

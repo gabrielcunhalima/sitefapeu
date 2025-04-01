@@ -25,7 +25,7 @@
                         @if($post->$image)
                             <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
                                 <img src="{{ asset($post->$image) }}" class="d-block w-100" alt="Imagem {{ $loop->index + 1 }}" 
-                                    style="border-radius: 4px; max-height: 50vh; object-fit: contain;">
+                                    style="border-radius: 4px; max-height: 50vh; object-fit: contain;"> 
                             </div>
                             <?php $firstImage = false; ?>
                         @endif
