@@ -15,17 +15,19 @@
                 </p>
 
                  <!-- Carrossel -->
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="2900">
                 <div class="carousel-inner">
                     <?php
                         $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
                         $firstImage = true;
+                        $totalImages = 0;
                     ?>
                     @foreach($images as $index => $image)
                         @if($post->$image)
+                        <?php $totalImages++; ?>
                             <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
                                 <img src="{{ asset($post->$image) }}" class="d-block w-100" alt="Imagem {{ $loop->index + 1 }}" 
-                                    style="border-radius: 4px; max-height: 50vh; object-fit: contain;"> 
+                                    style="border-radius: 4px; max-height: 50vh; object-fit: contain;">
                             </div>
                             <?php $firstImage = false; ?>
                         @endif
@@ -33,6 +35,8 @@
                 </div>
 
                 <!-- Controles do Carrossel -->
+
+                @if($totalImages > 1)
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <i class="fa-solid fa-arrow-left" style="color: #0b651d; font-size: 2rem;"></i>
                     <span class="visually-hidden">Anterior</span>
@@ -42,6 +46,7 @@
                     <i class="fa-solid fa-arrow-right" style="color: #0b651d; font-size: 2rem;"></i>
                     <span class="visually-hidden">Próximo</span>
                 </button>
+                @endif
             </div>
 
             

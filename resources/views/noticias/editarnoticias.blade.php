@@ -12,17 +12,21 @@
         <span>Retornar ao Painel</span>
     </a>
 </div>
-    <h2 class="text-center">Gerenciar Notícias</h2>
+    <h2 class="text-center">Gerenciar Notícias</h2><br>
    
     @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
+    <div id="alertMessage" class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow" role="alert" style="z-index: 1050; width: 50%;">
+        <strong>Sucesso!</strong> {{ session('success') }}
+        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
   
     <div class="table-responsive d-flex justify-content-center" style="margin-top: -28px;">
         <table class="table mt-6 text-center" style="width: 70%; transform: scale(0.95);">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">Título</th> 
+                    <th scope="col">Título</th>
                     <th scope="col">Imagem</th>
                     <th scope="col">Data</th>
                     <th scope="col">Visível</th>
@@ -106,6 +110,16 @@
 </div>
 
 <script>
+
+setTimeout(() => {
+            let alertBox = document.getElementById('alertMessage');
+            if (alertBox) {
+                alertBox.style.transition = "opacity 0.5s";
+                alertBox.style.opacity = "0";
+                setTimeout(() => alertBox.remove(), 500);
+            }
+        }, 3000);
+
   function updateField(id, campo, valor) {
     fetch("{{ url('/noticias/editar') }}/" + id, {
         method: "POST",
