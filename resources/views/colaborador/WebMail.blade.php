@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Webmail FAPEU')
+@section('title',' Webmail FAPEU')
 
 @section('conteudo')
 

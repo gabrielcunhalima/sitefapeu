@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | DRHFlow')
+@section('title',' DRHFlow')
 @section('conteudo')
 
     <div class="container mt-5">

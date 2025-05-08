@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Compras, Contratos e Aquisições')
+@section('title',' Compras, Contratos e Aquisições')
 
 @section('conteudo')
 

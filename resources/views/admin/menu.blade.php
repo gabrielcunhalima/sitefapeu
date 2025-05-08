@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Painel Administrativo')
+@section('title',' Painel Administrativo')
 
 @section('conteudo')
 

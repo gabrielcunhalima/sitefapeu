@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Identidade Visual')
+@section('title',' Identidade Visual')
 
 @section('conteudo')
 <style>
@@ -130,6 +130,10 @@
         background: rgb(250, 250, 250);
         background: linear-gradient(90deg, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 1) 70%, rgba(250, 250, 250, 0.5) 100%, rgba(250, 250, 250, 0) 100%);
     }
+
+    a {
+        text-decoration: none;
+    }
 </style>
 
 <div id="main-content" class="file_manager">
@@ -137,7 +141,7 @@
         <p>Nesta área estão disponíveis para download a logomarca da FAPEU e seu manual de aplicação, denominado “Manual de identidade visual FAPEU”. A aplicação da logomarca em todo e qualquer material deverá obedecer rigorosamente aos padrões definidos neste manual.</p>
         <p class="mb-5">O uso indevido da logomarca da FAPEU poderá gerar responsabilidades cíveis e criminais. </p>
         <a href="{{ asset('pdfs/QuemSomos/Manual_Marca.pdf') }}" download>
-            <h4 class="mb-5"><i class="bi bi-box-arrow-down"></i> Download do Manual de Identidade Visual FAPEU</h4>
+            <h4 class="mb-5"><i class="bi bi-download me-2"></i>Download do Manual de Identidade Visual FAPEU</h4>
         </a>
         <div class="row clearfix">
             <div class="logo-pdf row mt-4">

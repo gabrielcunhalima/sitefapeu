@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <head>
+<script src='https://painel.facillgpd.com.br/api/plugin/cookies/67cee18ae62bd7f979bf4438?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXByZXNhIjoiNjdhY2VmMGZmZGIxYTM0YmUxN2NkN2I4IiwiaWF0IjoxNzQzNDI1MzkzfQ.TgT5mkwCX5apFLqc575DH0aLuwrdShCK2FXAlO-OcUg'></script>
+<link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
@@ -138,7 +140,7 @@
                   Projetos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação de Recursos e Oportunidade</a>
+                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação e Implantação de Projetos</a>
                   <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
                   <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
                   <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
@@ -359,6 +361,7 @@
     window.addEventListener("load", toggleElements);
     window.addEventListener("resize", toggleElements);
   </script>
+  <script src='https://painel.facillgpd.com.br/api/plugin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXByZXNhIjoiNjdhY2VmMGZmZGIxYTM0YmUxN2NkN2I4IiwiY29uZmlnUmVxdWlzaWNhbyI6IjY3YWNlZjEyZmRiMWEzNGJlMTdjZGQwNCIsImlhdCI6MTc0MzQyNTQyOX0.50fBzDOU3r1_ASg8HotqPnMJ_YDRQpv-iuNoXM4KTfQ'></script>
 </body>
 
 </html>

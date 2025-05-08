@@ -1,12 +1,10 @@
 @extends('layout.header')
-@section('title','FAPEU | Política de Privacidade')
+@section('title',' Política de Privacidade')
 
 @section('conteudo')
-<p class="container mb-4 text-center">
-         <a href="{{ asset('pdfs/Politicas/politica_de_privacidade_fapeu.pdf') }}" download>
-        <button type="button" class="btn text-white bg-verde btn-lg btn-success">
-            <i class="bi bi-download"></i> &nbsp; Baixar o documento
-        </button>
+<p class="container text-center mb-4">
+    <a href="{{ asset('pdfs/Politicas/politica_de_privacidade_fapeu.pdf') }}" download class="fapeu-btn">
+        <i class="bi bi-download me-2"></i>Baixar o documento
     </a>
 </p>
 <div class="container">

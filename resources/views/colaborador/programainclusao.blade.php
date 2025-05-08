@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Programa de Inclusão')
+@section('title',' Programa de Inclusão')
 
 @section('conteudo')
 

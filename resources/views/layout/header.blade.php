@@ -2,247 +2,402 @@
 <html lang="pt-br">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <!-- Título dinâmico baseado na seção atual -->
+  <title>@yield('title') | Fundação de Amparo à Pesquisa e Extensão Universitária</title>
 
-  <!-- jQuery and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Bootstrap and Icons -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-  <!-- Slack -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
-  <!-- Custom CSS -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
-  <!--Acessibilidade -->
-  <script src="https://cdn.userway.org/widget.js" data-account="YinJfS8smr"></script>
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap e ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <title>@yield('title')</title>
+  <!-- jQuery (necessário para alguns componentes Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel (para sliders) -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <!-- CSS personalizado -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+  <script>
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      const userwayScript = document.createElement('script');
+      userwayScript.src = "https://cdn.userway.org/widget.js";
+      userwayScript.setAttribute("data-account", "YinJfS8smr");
+      document.head.appendChild(userwayScript);
+    }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTNDQSLG1B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-KTNDQSLG1B');
+  </script>
 </head>
 
-<style>
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-
-  .navbar-toggler {
-    border: none;
-    background-color: transparent;
-  }
-
-  .jumbotron-custom {
-    background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 33%, rgba(200, 200, 200, 1) 55%, rgba(210, 210, 210, 1) 81%, rgba(211, 211, 211, 0.39) 100%),
-    url('{{ asset("images/Paginas/" . $imagem) }}');
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    font-weight: bold;
-  }
-
-  @media (max-width: 876px) {
-    .jumbotron-custom {
-      background: linear-gradient(45deg, rgba(183, 182, 182, 1) 0%, rgba(190, 190, 190, 1) 17%, rgba(220, 228, 225, 1) 40%, rgba(200, 200, 200, 1) 60%, rgba(211, 211, 211, 0.3897934173669467) 100%),
-      url('{{ asset("images/Paginas/" . $imagem) }}');
-      background-size: contain;
-      background-position: right;
-      background-repeat: no-repeat;
-    }
-  }
-
-  a {
-    text-decoration: none !important;
-  }
-
-  .link-hover {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-
-  .link-hover:hover {
-    transform: translateY(-10px);
-    background-color: #0F4B2F;
-  }
-</style>
-
 <body>
-
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-custom font-montserrat">
+  <header class="main-header shadow-sm">
+    <nav class="navbar navbar-expand-lg py-0">
       <div class="container">
-        <div class="logofapeu">
-          <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="{{ asset('images/logo2branca.png') }}" alt="Logo Fapeu" height="110">
-          </a>
-        </div>
+        <a class="navbar-brand py-2" href="{{ route('homepage.home') }}">
+          <img src="{{ asset('images/logo2branca.png') }}" alt="FAPEU" height="80">
+        </a>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <p>
-              <li class="nav-item dropdown text-white">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Institucional
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.estatuto')}}">Estatuto</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.regimentointerno')}}">Regimento Interno</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a>
-                  <a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Notícias</a>
-                  <a class="dropdown-item" href="{{route('noticias.noticiaspost')}}">Adicionar Notícias (testes)</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Projetos
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação de Recursos e Oportunidade</a>
-                  <a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço Coordenador</a>
-                  <a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras e Contratações</a>
-                  <a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('transparencia.projetostransparencia')}}" id="navbarDropdown" role="button">
-                  Portal da Transparência
-                </a>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Políticas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a>
-                  <a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a>
-                  <a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a>
-                  <a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e Comitê<br> de Gestão de Riscos</a>
-                  <a class="dropdown-item" href="https://www.minhalgpd.com.br/fapeu"><i class="bi bi-box-arrow-up-right"></i> LGPD</a>
-                  <a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a>
-                  <a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a>
-                  <a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Legislação e Normas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a>
-                  <a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas FAPEU e Instituições Apoiadas</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Fornecedor
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade</a>
-                  <a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Colaborador
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <!-- <a class="dropdown-item" href="{{route('colaborador.areaadministrativa')}}">Área Administrativa</a> -->
-                  <a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow" target="_blank"><i class="bi bi-box-arrow-up-right"></i> DRHFlow</a>
-                  <a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right"></i> ADMFlow</a>
-                  <a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right"></i> WebMail</a>
-                  <a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a>
-                  <a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a>
-                  <a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a>
-                  <a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa FAPEU de Inclusão</a>
-                  <a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a>
-                </div>
-              </li>
-            </p>
-            <p>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Fale Conosco
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('faleconosco.contato')}}">Contato</a>
-                  <a class="dropdown-item" href="{{route('faleconosco.canaldenuncia')}}">Canal de Comunicações e Denúncias</a>
-                </div>
-              </li>
-            </p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse top-bar" id="navbarMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="institutionalDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Institucional
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="institutionalDropdown">
+                <li><a class="dropdown-item" href="{{route('quemsomos.sobre')}}">Sobre a FAPEU</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.estatuto')}}">Estatuto</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.regimentointerno')}}">Regimento Interno</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a></li>
+                <li><a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a></li>
+                <li><a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Notícias</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Projetos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="projectsDropdown">
+                <li><a class="dropdown-item" href="{{route('projetos.captacao')}}">Captação e Implantação de Recursos</a></li>
+                <!-- <li><a class="dropdown-item" href="{{route('projetos.manualcompras')}}">Manual de Compras</a></li> -->
+                <!-- <li><a class="dropdown-item" href="{{route('projetos.formulariosprojetos')}}">Formulários</a></li> -->
+                <li><a class="dropdown-item" href="{{route('projetos.menuprojetos')}}">Gestão de Projetos</a></li>
+                <li><a class="dropdown-item" href="{{route('projetos.espacocoordenador')}}">Espaço do Coordenador</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('transparencia.projetostransparencia')}}">
+                Transparência
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="policiesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Políticas
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="policiesDropdown">
+                <li><a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e <br>Comitê de Gestão de Riscos</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.lgpd') }}">LGPD</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.boaspraticas')}}">Boas Práticas</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="legDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Legislação e Normas
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="legDropdown">
+                <li><a class="dropdown-item" href="{{route('legislacao.legislacao')}}">Legislação</a></li>
+                <li><a class="dropdown-item" href="{{route('legislacao.normas')}}">Normas Internas</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="supplierDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Fornecedor
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="supplierDropdown">
+                <li><a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="collaboratorDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Colaborador
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="collaboratorDropdown">
+                <li><a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>DRHFlow</a></li>
+                <li><a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>ADMFlow</a></li>
+                <li><a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>WebMail</a></li>
+                <li><a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a></li>
+                <li><a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a></li>
+                <li><a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a></li>
+                <li><a class="dropdown-item" href="{{route('colaborador.programainclusao')}}">Programa de Inclusão</a></li>
+                <li><a class="dropdown-item" href="{{route('colaborador.vagasdisponiveis')}}">Vagas Disponíveis</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Contato
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="contactDropdown">
+                <li><a class="dropdown-item" href="{{route('faleconosco.contato')}}">Fale Conosco</a></li>
+                <li><a class="dropdown-item" href="{{route('faleconosco.canaldenuncia')}}">Canal de Denúncias</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div style="position:absolute;top:45px;right:45px;">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <!-- <div class="botao-direita">
-            <a href="">
-              <div class="rounded-pill p-3 bg-light font-weight-bold text-center" style="color: #099072;" id="tragaseuprojeto">Traga seu projeto para a FAPEU</div>
-            </a>
-          </div> -->
       </div>
     </nav>
   </header>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  @if (Request::route()->getName() !== 'noticias.noticiasleitura' && Request::route()->getName() !== 'noticias.noticiasrecentes' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'transparencia.projetostransparencia' && Request::route()->getName() !== 'colaborador.programainclusao' && Request::route()->getName() !== 'homepage.home' && Request::route()->getName() !== 'fornecedor.adicionarlicitacao' && Request::route()->getName() !== 'colaborador.informerendimentos')
-  <div class="py-5 jumbotron-custom">
+  @if (Request::route()->getName() !== 'noticias.noticiasleitura' &&
+  Request::route()->getName() !== 'homepage.home' &&
+  Request::route()->getName() !== 'colaborador.programainclusao' &&
+  Request::route()->getName() !== 'projetos.calculoressarcimento' &&
+  Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
+  Request::route()->getName() !== 'projetos.orientacoescontato' &&
+  Request::route()->getName() !== 'fornecedor.adicionarlicitacao')
+  <div class="page-header py-5">
     <div class="container">
-      <h1 class="font-weight-bold">{{$titulo}}</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="fw-bold mb-3">{{ $titulo }}</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ route('homepage.home') }}">Início</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ $titulo }}</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
   @endif
-  <main class="pt-4">
+
+  @if (Request::route()->getName() !== 'noticias.noticiasleitura' &&
+  Request::route()->getName() !== 'homepage.home')
+  <main class="my-4">
     @yield('conteudo')
   </main>
-  <div class="pt-5">
+  @else
+  <main>
+    @yield('conteudo')
+  </main>
+  @endif
+
+  <div>
     @include('layout.footer')
   </div>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- Scripts do Bootstrap e JavaScript personalizado -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script> -->
+  <style>
+    .top-bar {
+      font-size: 1.0rem;
+      font-family: 'Montserrat', sans-serif;
+    }
 
+    /* Estilos do Header Principal */
+    .main-header {
+      background-color: #06551A;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      padding: 2rem 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .show {
+      color:white !important;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-menu {
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+      min-width: 220px;
+      margin-top: 0;
+    }
+
+    .dropdown-item {
+      padding: 0.75rem 1.5rem;
+      font-weight: 400;
+      color: #333;
+      transition: all 0.2s ease;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: rgba(6, 85, 26, 0.1);
+      color: #06551A;
+    }
+
+    .dropdown-item i {
+      margin-right: 0.5rem;
+      color: #06551A;
+    }
+
+    .dropdown-menu.animate {
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateY(1rem);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0rem);
+        opacity: 1;
+      }
+    }
+
+    .slideIn {
+      animation-name: slideIn;
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-nav .nav-link {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .dropdown-menu {
+        background-color: rgba(6, 85, 26, 0.9);
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .dropdown-item {
+        color: #fff;
+        padding: 0.75rem 1rem 0.75rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .dropdown-item i {
+        color: #fff;
+      }
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    /* Estilos para acessibilidade */
+    .high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .high-contrast .navbar-nav .nav-link,
+    .high-contrast a:not(.btn),
+    .high-contrast h1,
+    .high-contrast h2,
+    .high-contrast h3,
+    .high-contrast h4,
+    .high-contrast h5,
+    .high-contrast h6 {
+      color: #fff !important;
+    }
+
+    .high-contrast .dropdown-menu {
+      background-color: #000;
+      border: 1px solid #fff;
+    }
+
+    .high-contrast .dropdown-item {
+      color: #fff !important;
+    }
+
+    .high-contrast .dropdown-item:hover {
+      background-color: #333;
+    }
+
+    .navbar-toggler {
+      border: none;
+      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      background-color: transparent;
+      color: #fff;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb-item a {
+      color: #06551A;
+      text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+      color: #6c757d;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: "›";
+      color: #6c757d;
+    }
+  </style>
 </body>
 
 </html>

@@ -1,483 +1,652 @@
-@extends('layout.headerhome')
+@extends('layout.header')
 @section('title','FAPEU')
 @section('conteudo')
+
 <style>
-  .blog-post {
-    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  .hero-section {
+    padding: 0;
+    position: relative;
+    background-color: #f8f9fa;
+    overflow: hidden;
   }
 
-  .blog-post .blog-img .overlay,
-  .blog-post .blog-img .post-meta {
+  .hero-content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    margin-bottom: 20px;
+  }
+
+  .action-button {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 18px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .action-button:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .action-button p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .news-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+
+  .news-title {
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  .news-title:after {
+    content: '';
     position: absolute;
-    opacity: 0;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #06551A;
   }
 
-  .blog-post .blog-img .overlay {
+  .news-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    background-color: #fff;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .news-img-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .news-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .news-card:hover .news-img-container img {
+    transform: scale(1.05);
+  }
+
+  .news-overlay {
+    position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  .blog-post .blog-img .post-meta {
-    bottom: 5%;
-    right: 5%;
-    z-index: 1;
-  }
-
-  .blog-post .blog-img .post-meta .read-more:hover {
-    color: #6dc77a !important;
-  }
-
-  .blog-post .content h1,
-  .blog-post .content h2,
-  .blog-post .content h3,
-  .blog-post .content h4,
-  .blog-post .content h5,
-  .blog-post .content h6 {
-    line-height: 1.2;
-  }
-
-  .blog-post .content .title {
-    font-size: 18px;
-  }
-
-  .blog-post .content .title:hover {
-    color: #6dc77a !important;
-  }
-
-  .blog-post .content .author .name:hover {
-    color: #6dc77a !important;
-  }
-
-  .blog-post:hover {
-    -webkit-transform: translateY(-7px);
-    transform: translateY(-7px);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  }
-
-  .blog-post:hover .blog-img .overlay {
-    opacity: 0.65;
-  }
-
-  .blog-post:hover .blog-img .post-meta {
+  .news-card:hover .news-overlay {
     opacity: 1;
   }
 
-  .blog-post .post-meta .like i,
-  .profile-post .like i {
-    -webkit-text-stroke: 2px #dd2427;
-    -webkit-text-fill-color: transparent;
+  .news-meta {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    background-color: rgba(6, 85, 26, 0.9);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
   }
 
-  .blog-post .post-meta .like:active i,
-  .blog-post .post-meta .like:focus i,
-  .profile-post .like:active i,
-  .profile-post .like:focus i {
-    -webkit-text-stroke: 0px #dd2427;
-    -webkit-text-fill-color: #dd2427;
+  .news-card:hover .news-meta {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .avatar.avatar-ex-sm {
-    height: 36px;
+  .news-content {
+    padding: 20px;
   }
 
-  .text-muted {
-    color: #8492a6 !important;
+  .news-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
 
-  .para-desc {
-    max-width: 600px;
+  .news-title-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #333;
+    transition: color 0.3s ease;
   }
 
-  .section-title .title {
-    letter-spacing: 0.5px;
-    font-size: 30px;
+  .news-card:hover .news-title-text {
+    color: #06551A;
   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    color: black;
+  .view-more-btn {
+    background-color: #06551A;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(6, 85, 26, 0.2);
+  }
+
+  .view-more-btn:hover {
+    background-color: #054615;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(6, 85, 26, 0.3);
+  }
+
+  .responsive {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .slick-prev,
   .slick-next {
-    width: 10%;
-    height: 25%;
-    z-index: 100;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: #06551A;
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 5;
   }
 
   .slick-prev {
-    left: -100px;
+    left: -50px;
   }
 
   .slick-next {
-    right: -100px;
+    right: -50px;
   }
 
-  .card-img-container {
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: 'bootstrap-icons';
+    font-size: 24px;
+    line-height: 1;
+    color: #06551A;
+    opacity: 0.75;
   }
 
-  .card-img-container {
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
+  .slick-prev:before {
+    content: "\F284";
   }
 
+  .slick-next:before {
+    content: "\F285";
+  }
+ 
   .slick-dots {
-    left: 0;
-    right: 0;
+    position: absolute;
+    bottom: -30px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  /*
+
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #dddddd;
+    border-radius: 50%;
+  }
+
+  .slick-dots li.slick-active button {
+    background: #06551A;
+  } */
+
+  .servicos-section {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+
+  .servico-card {
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    background-color:rgb(244, 244, 244);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-bottom: 4px solid #06551A;
+  }
+
+  .servico-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .servico-icon {
+    font-size: 2.5rem;
+    color: #06551A;
+    margin-bottom: 20px;
+  }
+
+  .servico-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .servico-desc {
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+
+  .servico-link {
+    display: inline-block;
+    color: #06551A;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .servico-link:hover {
+    color: #054615;
+    transform: translateX(5px);
+  }
+
+  .apoiadas {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 992px) {
+    .action-button {
+      margin-bottom: 15px;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .transformando {
+      font-size: 1.75em !important;
+    }
+
+    .news-img-container {
+      height: 180px;
+    }
+
+    .servico-card {
+      margin-bottom: 20px;
+    }
   }
 </style>
+
+<div class="jumbotron jumbotron-fluid bg-homebotoes pt-4 pb-3 mb-0">
+  <h1 class="container transformando text-center font-weight-bold text-uppercase" style="font-size: 2.55em; font-family:'Reddit Sans', sans-serif">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+</div>
+
+<div class="bg-homebotoes">
+  <div class="container">
+    <div class="row pb-4">
+      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+        <a href="{{route('projetos.captacao')}}" class="text-decoration-none">
+          <div class="action-button bg-principal text-white text-center">
+            <i class="bi bi-journal-bookmark-fill mb-2" style="font-size: 2rem;"></i>
+            <p>Captação e Implantação<br>de Projetos</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+        <a href="{{route('projetos.espacocoordenador')}}" class="text-decoration-none">
+          <div class="action-button bg-principal text-white text-center">
+            <i class="bi bi-person-workspace mb-2" style="font-size: 2rem;"></i>
+            <p>Espaço do Coordenador</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+        <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-decoration-none">
+          <div class="action-button bg-principal text-white text-center">
+            <i class="bi bi-briefcase mb-2" style="font-size: 2rem;"></i>
+            <p>Espaço do Fornecedor</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+        <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
+          <div class="action-button bg-principal text-white text-center">
+          <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
+            <p>Transparência</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="news-section">
+  <div class="container">
+    <h2 class="text-center news-title">Notícias Recentes</h2>
+    <p class="text-muted text-center mb-5">Confira o que aconteceu na FAPEU em nosso portal de notícias</p>
+
+    <div class="responsive">
+      @foreach ($news as $post)
+      <div class="px-2">
+        <a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-decoration-none">
+          <div class="news-card">
+            <div class="news-img-container">
+              @if($post->imagem || $post->imagem2 || $post->imagem3 || $post->imagem4 || $post->imagem5)
+              <div id="carousel{{$post->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                  @php
+                  $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
+                  $firstImage = true;
+                  @endphp
+                  @foreach($images as $image)
+                  @if($post->$image)
+                  <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
+                    <img src="{{ asset($post->$image) }}" class="d-block w-100" alt="Imagem da notícia {{ $loop->index + 1 }}">
+                  </div>
+                  @php $firstImage = false; @endphp
+                  @endif
+                  @endforeach
+                </div>
+              </div>
+              @endif
+              <div class="news-overlay"></div>
+              <div class="news-meta">Leia mais</div>
+            </div>
+            <div class="news-content">
+              <div class="news-date">{{ $post->created_at->format('d/m/Y') }}</div>
+              <h3 class="news-title-text">{{ $post->titulo }}</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      @endforeach
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="{{ route('noticias.noticiasrecentes') }}" class="view-more-btn">Ver mais notícias</a>
+    </div>
+  </div>
+</section>
+
+<section class="servicos-section">
+  <div class="container">
+    <h2 class="text-center news-title">Nossos Serviços</h2>
+    <p class="text-muted text-center mb-5">Conheça os serviços oferecidos pela FAPEU</p>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="servico-card">
+          <div class="servico-icon">
+            <i class="bi bi-journal-text"></i>
+          </div>
+          <h3 class="servico-title">Gestão de Projetos</h3>
+          <p class="servico-desc">Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo.</p>
+          <a href="{{ route('projetos.menuprojetos') }}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="servico-card">
+          <div class="servico-icon">
+            <i class="bi bi-calendar-event"></i>
+          </div>
+          <h3 class="servico-title">Reservas de Salas</h3>
+          <p class="servico-desc">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p>
+          <a href="http://150.162.78.4:8080/manager_reservasala/reservasala" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="servico-card">
+          <div class="servico-icon">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+          <h3 class="servico-title">Cursos e Eventos</h3>
+          <p class="servico-desc">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p>
+          <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="servico-card">
+          <div class="servico-icon">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <h3 class="servico-title">Importação de Bens e Insumos</h3>
+          <p class="servico-desc">Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990.</p>
+          <a href="{{route('homepage.importacao')}}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="servico-card">
+          <div class="servico-icon">
+            <i class="bi bi-graph-up"></i>
+          </div>
+          <h3 class="servico-title">NAGEFI</h3>
+          <p class="servico-desc">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.</p>
+          <a href="{{route('homepage.nagefi')}}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- apoiadas -->
+<section class="apoiadas">
+  <div class="container-fluid">
+    <div class="containerapoiadas mx-auto">
+      <div class="section-title mb-4 pb-2">
+      <h2 class="text-center news-title">Instituições Apoiadas</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://ufsc.br/">
+            <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" style="width: 80%; height: auto;">
+          </a>
+        </div>
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://www.uffs.edu.br/">
+            <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://www.udesc.br/">
+            <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://ifc.edu.br/">
+            <img src="images/ifc.png" alt="Apoiada IFC" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://unipampa.edu.br/">
+            <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <!-- <div class="col-sm apoiadas link-hover">
+        <a href="https://www.gov.br/ebserh/pt-br">
+          <img src="images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
+        </a>
+      </div> -->
+        <div class="col-auto apoiadas link-hover">
+          <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
+            <img src="images/huufsc-completo.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <div class="col-sm apoiadas link-hover">
+          <a href="https://confies.org.br/">
+            <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <h2 class="text-center news-title">Instituições Apoiadas</h2>
+    <p class="text-muted text-center mb-5">Conheça as instituições com as quais trabalhamos</p>
+    
+    <div class="row align-items-center justify-content-center">
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://ufsc.br/" target="_blank">
+          <img src="images/ufsc.png" alt="UFSC" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://www.uffs.edu.br/" target="_blank">
+          <img src="images/uffs.png" alt="UFFS" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://www.udesc.br/" target="_blank">
+          <img src="images/udesc.png" alt="UDESC" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://ifc.edu.br/" target="_blank">
+          <img src="images/ifc.png" alt="IFC" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://unipampa.edu.br/" target="_blank">
+          <img src="images/unipampa.png" alt="UNIPAMPA" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://www.gov.br/ebserh/pt-br" target="_blank">
+          <img src="images/ebserh.png" alt="EBSERH" class="img-fluid apoiadas-logo">
+        </a>
+      </div> 
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc" target="_blank">
+          <img src="images/huufsc-completo.png" alt="HU UFSC" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-auto mb-4 text-center">
+        <a href="https://confies.org.br/" target="_blank">
+          <img src="images/confies.png" alt="CONFIES" class="img-fluid apoiadas-logo">
+        </a>
+      </div>
+    </div> -->
 
 <script>
   $(document).ready(function() {
     $('.responsive').slick({
-      prevArrow: '<button type="button" class="slick-prev custom-arrow">Anterior</button>',
-      nextArrow: '<button type="button" class="slick-next custom-arrow">Próximo</button>',
       dots: true,
       infinite: true,
       speed: 700,
       slidesToShow: 3,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="bi bi-chevron-right"></i></button>',
       responsive: [{
           breakpoint: 1024,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: true,
-            speed: 400,
+            dots: true
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            speed: 400
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 400
+            arrows: false
           }
         }
       ]
     });
   });
-</script>
 
-<div class="jumbotron jumbotron-fluid bg-homebotoes py-4 mb-0">
-  <h1 class="container transformando text-center font-weight-bold" style="font-size: 2.75em;">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
-</div>
-<!-- 3 menus principais -->
-<div class="bg-homebotoes pb-4">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('projetos.espacocoordenador')}}">
-            <div class="card-body">
-              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Espaço do Coordenador</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{route('transparencia.projetostransparencia')}}">
-            <div class="card-body">
-              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Transparência</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-principal mb-3 card w-100 text-center grow shadow" style="width: 18rem;">
-          <a href="{{ route('fornecedor.espacofornecedor') }}">
-            <div class="card-body">
-              <p class="card-text text-white font-weight-bold" style="font-size: 1.2em;">Espaço do Fornecedor</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 d-flex justify-content-center">
-        <div class="card mb-3 card w-100 text-center grow shadow bg-danger" style="width: 18rem;">
-          <a href="{{ route('colaborador.informerendimentos') }}">
-            <div class="card-body">
-              <h3 class="card-text font-weight-bold text-white">INFORME DE RENDIMENTOS<br>Clique Aqui</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Noticias -->
-<div class="bg-light">
-  <div class="section-title jumbotron py-2 mb-0 bg-light">
-    <h2 class="container my-2 text-center">Notícias recentes</h2>
-    <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU no nosso portal de notícias.</p>
-  </div>
-
-  <div class="responsive container mt-0">
-    @foreach ($news as $post)
-    <div class="col-lg-4 col-md-6 mt-4 pt-2">
-      <div class="blog-post rounded border">
-        <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm" style="width: 100%; height: auto;">
-          <a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-white">
-            <img src="{{ asset($post->imagem) }}" class="img-fluid rounded-top" alt="Imagem da notícia" style="object-fit: contain;">
-            <div class="overlay rounded-top bg-dark"></div>
-            <div class="post-meta">
-              <p class="border rounded-pill px-2">Clique para ler tudo</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="content p-3">
-          <small class="text-muted">{{ $post->created_at->format('d/m/Y') }}</small>
-          <h4 class="mt-2"><a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-dark title">{{ $post->titulo }}</a></h4>
-          <!-- <p class="text-muted mt-2 card-text">{!! Str::limit($post->corpo, 104) !!}</p> -->
-        </div>
-      </div>
-    </div>
-    @endforeach
-  </div>
-
-  <div class="container col-12 d-flex justify-content-center">
-    <div class="card bg-principal my-3 card text-center shadow grow2">
-      <a href="{{ route('noticias.noticiasrecentes') }}">
-        <div class="card-body" style="min-width:15vw;">
-          <h5 class="card-text text-white">Mais notícias</h5>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<!-- Servicos -->
-<div class="feature">
-  <div class="container">
-    <div class="text-center mx-auto wow fadeInUp">
-      <div class="section-title my-4 py-4" style="margin-right: 23vw;margin-left:23vw">
-        <h2 class="card-text title font-montserratbold text-white">Serviços</h2>
-      </div>
-      <div class="accordion accordion-flush d-none pb-4" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <b>Licitações</b>
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo, além de organização, conformidade e otimização de recursos para o sucesso do projeto.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/transparencia/transparencia/transparenciainstitucional">Saiba mais</a></div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <b>Reservas de Salas</b>
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a></div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <b>Cursos e Eventos</b>
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="https://eventos.fapeu.com.br/eventos/public">Saiba mais</a></div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              <b>Importação de Bens e Insumos</b>
-            </button>
-          </h2>
-          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990. Instituições credenciadas no CNPq podem aproveitar esse benefício para otimizar seus projetos científicos e tecnológicos.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a></div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingFive">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              <b>NAGEFI</b>
-            </button>
-          </h2>
-          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a></div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingSix">
-            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-              <b>LATIC</b>
-            </button>
-          </h2>
-          <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.<br><a class="btn text-white rounded-pill py-2 px-4 my-2 bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- TELA GRANDE -->
-    <div class="collapse d-block" id="servicosCollapse">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">Gestão de Projetos</h5>
-              <p class="card-text">Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo, além de organização, conformidade e otimização de recursos para o sucesso do projeto.</p><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{ route('projetos.menuprojetos') }}">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">Reservas de Salas</h5>
-              <p class="card-text">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p><br><br><br><br><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="http://150.162.78.4:8080/manager_reservasala/reservasala">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">Cursos e Eventos</h5>
-              <p class="card-text">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p><br><br><br><br><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark mx-auto text-decoration-none" href="https://eventos.fapeu.com.br/eventos/public">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mt-2 pb-5 mb-md-5">
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">Importação de Bens e Insumos</h5>
-              <p class="card-text">Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990. Instituições credenciadas no CNPq podem aproveitar esse benefício para otimizar seus projetos científicos e tecnológicos.</p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.importacao')}}">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.0s">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">NAGEFI</h5>
-              <p class="card-text">NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.<br><br><br><br></p> <br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.nagefi')}}">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
-          <div class="card text-dark bg-light mb-3 shadow rounded">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold">LATIC</h5>
-              <p class="card-text">Infraestrutura completa e tecnologias inovadoras para comunicação, ensino e aprendizado à distância.</p><br><br><br><br>
-              <a class="btn text-white rounded-pill py-2 px-4 mt-auto bg-dark" href="{{route('homepage.latic')}}">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Apoiadas -->
-<div class="jumbotron jumbotron-fluid bg-light" style="margin-bottom:0 !important;">
-  <div class="containerapoiadas mx-auto">
-    <div class="section-title mb-4 pb-2">
-      <h4 class="title text-center font-montserratbold">Instituições Apoiadas</h4>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://ufsc.br/">
-          <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" style="width: 80%; height: auto;">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www.uffs.edu.br/">
-          <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www.udesc.br/">
-          <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://ifc.edu.br/">
-          <img src="images/ifc.png" alt="Apoiada IFC" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://unipampa.edu.br/">
-          <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www.gov.br/ebserh/pt-br">
-          <img src="images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hu-ufjf">
-          <img src="images/huufjf.png" alt="hu ufjf" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
-          <img src="images/huufsc.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
-        </a>
-      </div>
-      <div class="col-sm apoiadas link-hover">
-        <a href="https://confies.org.br/">
-          <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
   document.addEventListener('DOMContentLoaded', function() {
-    function toggleContent() {
-      const servicosCollapse = document.getElementById('servicosCollapse');
-      const accordionFlushExample = document.getElementById('accordionFlushExample');
-      const telaPequena = window.innerWidth < 992;
+    function toggleResponsiveElements() {
+      const width = window.innerWidth;
+      const isMobile = width < 992;
 
-      if (telaPequena) {
-        servicosCollapse.classList.add('d-none');
-        accordionFlushExample.classList.remove('d-none');
-      } else {
-        servicosCollapse.classList.remove('d-none');
-        accordionFlushExample.classList.add('d-none');
-      }
     }
 
-    toggleContent();
-
-    window.addEventListener('resize', toggleContent);
+    toggleResponsiveElements();
+    window.addEventListener('resize', toggleResponsiveElements);
   });
 </script>
 @endsection

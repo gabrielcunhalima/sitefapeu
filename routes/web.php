@@ -8,6 +8,7 @@ use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\LicitacaoController;
+use App\Http\Controllers\RessarcimentoController;
 use App\Http\Controllers\LoginController;
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
@@ -54,6 +55,7 @@ Route::get('/comites',[MenuController::class,'comites'])->name('politica.comites
 Route::get('/integridade',[MenuController::class,'integridade'])->name('politica.integridade');
 Route::get('/politicacookies',[MenuController::class,'politicacookies'])->name('politica.politicacookies');
 Route::get('/politicaprivacidade',[MenuController::class,'politicaprivacidade'])->name('politica.politicaprivacidade');
+Route::get('/lgpd',[MenuController::class,'lgpd'])->name('politica.lgpd');
 
 //PROJETOS
 
@@ -64,7 +66,12 @@ Route::get('/captacao',[MenuController::class,'captacao'])->name('projetos.capta
 Route::post('/captacao', [CaptacaoController::class, 'salvarCaptacao'])->name('captacao.salvar');
 Route::get('/manualcompras',[MenuController::class,'manualcompras'])->name('projetos.manualcompras');
 Route::get('/menuprojetos',[MenuController::class,'menuprojetos'])->name('projetos.menuprojetos');
-
+Route::get('/instituicoesapoiadas', [MenuController::class, 'instituicoesapoiadas'])->name('projetos.instituicoesapoiadas');
+Route::get('/calculoressarcimento', [MenuController::class, 'calculoressarcimento'])->name('projetos.calculoressarcimento');
+Route::get('/orientacoescontato', [MenuController::class, 'orientacoescontato'])->name('projetos.orientacoescontato');
+Route::post('/agendar-reuniao', [ContatoController::class, 'agendarReuniao'])->name('contato.agendarReuniao');
+Route::get('/calculoressarcimento', [RessarcimentoController::class, 'index'])->name('projetos.calculoressarcimento');
+Route::post('/calculoressarcimento', [RessarcimentoController::class, 'store'])->name('calcular.ressarcimento');
 
 //QUEM SOMOS
 
@@ -116,8 +123,7 @@ Route::post('/noticias/visibilidade/{id}', [MenuController::class, 'alterarVisib
 Route::post('/noticias/excluir/{id}', [MenuController::class, 'excluirNoticia']);
 Route::post('/noticias/update-imagem/{id}/{numero?}', [MenuController::class, 'atualizarImagem'])->name('noticias.updateImagem');
 Route::post('/noticias/excluir-imagem/{id}/{imagem}', [MenuController::class, 'deleteImage'])->name('noticias.deleteImagem');
-Route::get('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
-Route::post('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
+Route::any('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name('noticias.noticiaspost');
 
 //CRIAR USUARIO
 Route::get('/createusuario', [LoginController::class, 'createUsuario'])->name('admin.createusuario');

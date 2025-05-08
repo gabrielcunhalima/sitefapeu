@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Manual de Compras')
+@section('title',' Manual de Compras')
 
 @section('conteudo')
 <h5 class="container mb-4 text-center"><button type="button" class="btn bg-verde btn-lg text-white"><i class="bi bi-download"></i> &nbsp; Baixar o documento</button></h5>

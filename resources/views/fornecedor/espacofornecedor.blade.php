@@ -1,14 +1,14 @@
 @extends('layout.header')
-@section('title', 'FAPEU | Espaço do Fornecedor')
+@section('title', ' Espaço do Fornecedor')
 
 @section('conteudo')
 
-<div class="container mt-5">
+<div class="container">
     <div class="d-flex justify-content-center">
-        <div class="card mb-3  shadow" style="max-width: 940px;  transition: all 0.3s ease;">
+        <div class="card mb-3 shadow">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="images/fornecer.jpg"alt="Espaço do Fornecedor"class="img-fluid rounded-start"style="height: 260px; object-fit: cover;"/>
+                    <img src="images/fornecer.jpg" alt="Espaço do Fornecedor" class="img-fluid rounded-start" style="height: 270px; object-fit: cover;" />
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -22,25 +22,16 @@
                             <br>Qualquer dúvida, entre em contato pelo telefone: (48) 3331-7472.
                         </p>
 
-                        <div class="d-flex justify-content-center">
-
-                            <a href="http://150.162.78.4/#/login/fornecedor" target="_blank" class="btn btn-success mt-4"
-                                style="border-radius: 50px; padding: 10px 30px; font-size: 16px;">
-                                Acesse o Portal do Fornecedor <i class="fa fa-arrow-right"></i>
+                        <p class="container text-center mt-4 mb-3">
+                            <a href="http://150.162.78.4/#/login/fornecedor" download class="fapeu-btn">
+                                Acesse o Portal do Fornecedor <i class="bi bi-arrow-right"></i>
                             </a>
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-    .card:hover {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        transform: translateY(-5px);
-    }
-</style>
 
 @endsection

@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     font-family: "DM Sans", sans-serif;
+    background-color: #f8f9fa !important;
   }
 
   .carousel-inner .carousel-item {
@@ -21,55 +22,12 @@
     object-fit: cover;
   }
 
-  #sidebarMenu {
-    position: sticky;
-    top: 100px;
-    width: auto;
-    max-width: 300px;
-    padding: 12px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow-y: auto;
-    height: min-content;
-    white-space: normal;
-    font-size: 1rem;
-    /* tamanho da fonte reduzido */
+  .link-hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
 
-  #sidebarMenu .nav-link {
-    padding: 0.5rem 1rem;
-    font-size: 0.87rem;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    display: block;
-    color: #146551;
-    /* Cor padrão dos links */
-    text-decoration: none;
-  }
-
-  #sidebarMenu .nav-link:hover,
-  #sidebarMenu .nav-link:focus {
-    color: #0d3c2f;
-    /* Cor ao passar o mouse ou focar no link */
-    text-decoration: underline;
-  }
-
-  .sidebar-heading {
-    font-size: 5rem;
-    font-family: 'Noticia Text';
-    margin-bottom: 0.5rem;
-    background-color: #146551;
-    /* Cor de fundo desejada */
-    color: #ffffff;
-    /* Cor do texto */
-    padding: 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    white-space: normal;
-    overflow: hidden;
+  .link-hover:hover {
+    transform: translateY(-10px);
   }
 
   footer {
@@ -110,6 +68,67 @@
     transform: scale(1.019);
   }
 
+/* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
+
+  .fapeu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    background-color: #06551A;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 2px solid #06551A;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
+  }
+
+  .fapeu-btn:hover {
+    background-color: #054615;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(6, 85, 26, 0.3);
+    color: #ffffff;
+  }
+
+  .fapeu-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(6, 85, 26, 0.3);
+  }
+
+  .fapeu-btn-lg {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+  }
+
+  .fapeu-btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .fapeu-btn-secondary {
+    background-color: #555555;
+    border-color: #555555;
+    box-shadow: 0 4px 15px rgba(85, 85, 85, 0.2);
+  }
+
+  .fapeu-btn-secondary:hover {
+    background-color: #444444;
+    border-color: #444444;
+    box-shadow: 0 8px 20px rgba(85, 85, 85, 0.3);
+  }
+
+  .fapeu-btn-outline {
+    background-color: transparent;
+    color: #06551A;
+  }
+
+  .fapeu-btn-outline:hover {
+    background-color: #06551A;
+    color: #ffffff;
+  }
 
   /* Estilo da navbar */
   .navbar-custom {
@@ -218,7 +237,7 @@
     /* Ajuste o valor conforme necessário */
   }
 
-  @media (max-width: 876px) {
+  @media (max-width: 796px) {
 
     p {
       font-size: 1.3em;
@@ -250,6 +269,10 @@
 
     .transformando {
       font-size: 2em !important;
+    }
+
+    .lead {
+      font-size: 1rem;
     }
 
   }
@@ -419,7 +442,7 @@
   .custom-table thead {
     background-color: #2C4A44 !important;
     color: white !important;
-}
+  }
 
   .pdf {
     width: 100%;
@@ -572,6 +595,10 @@
     /* Herda a cor do texto do pai */
   }
 
+  .bg-cinzafapeu {
+    background-color: #dddddd;
+    /* Fundo preto */
+  }
 
   .high-contrast a {
     color: rgb(119, 172, 252);
@@ -627,8 +654,6 @@
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
   }
-
-  /*Captação */
 
   .pricing2 {
     color: #080808;

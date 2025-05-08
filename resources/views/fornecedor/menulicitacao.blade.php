@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Manual de Compras')
+@section('title',' Manual de Compras')
 
 @section('conteudo')
 <div class="d-flex justify-content-center">

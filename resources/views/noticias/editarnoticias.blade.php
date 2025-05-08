@@ -15,7 +15,7 @@
     <h2 class="text-center">Gerenciar Notícias</h2><br>
    
     @if(session('success'))
-    <div id="alertMessage" class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow" role="alert" style="z-index: 1050; width: 50%;">
+    <div id="alertMessage" class="alert alert-success alert-dismissible fade position-fixed top-0 start-50 translate-middle-x mt-3 shadow" role="alert" style="z-index: 1050; width: 50%;">
         <strong>Sucesso!</strong> {{ session('success') }}
         <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
     </div>

@@ -1,6 +1,6 @@
 @extends('layout.header')
 @section('css','/css/app.css')
-@section('title','FAPEU | [FAPEU] Inscrição em eventos')
+@section('title',' [FAPEU] Inscrição em eventos')
 
 @section('conteudo')
 <div>

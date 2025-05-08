@@ -75,8 +75,24 @@ class MenuController extends Controller
 
     public function captacao()
     {
-        return $this->renderView('projetos.captacao', 'captacao.png', 'Captação de Recursos e Oportunidades para Novos Projetos');
+        return $this->renderView('projetos.captacao', 'captacao.png', 'Captação e Implantação de Projetos');
     }
+
+    public function instituicoesapoiadas()
+    {
+        return $this->renderView('projetos.instituicoesapoiadas', 'captacao.png', 'Instituições Apoiadas');
+    }
+
+    public function calculoressarcimento()
+    {
+        return $this->renderView('projetos.calculoressarcimento', 'captacao.png', 'Cálculo de Ressarcimento');
+    }
+
+    public function orientacoescontato()
+    {
+        return $this->renderView('projetos.orientacoescontato', 'captacao.png', 'Orientações para Contato');
+    }
+    
 
     public function paineladministrativo()
     {
@@ -144,19 +160,16 @@ class MenuController extends Controller
             foreach (range(1, 5) as $i) {
                 $fieldName = $i === 1 ? 'imagem' : "imagem{$i}";
 
-                
+
                 //se mandar uma nova imagem, substitui
                 if ($request->hasFile($fieldName)) {
                     $img = $request->file($fieldName);
                     $destPath = public_path('storage/posts');
                     $imgName = 'POST_' . time() . ($i > 1 ? "_$i" : '') . '.' . $img->getClientOriginalExtension();
                     $img->move($destPath, $imgName);
-                
+
                     $post->$fieldName = 'storage/posts/' . $imgName;
                 }
-
-                
-                
             }
 
             $post->save();
@@ -236,61 +249,61 @@ class MenuController extends Controller
 
 
     public function deleteImage($id, $imageField)
-{
-    // Recuperar o post pelo ID
-    $post = Post::findOrFail($id);
+    {
+        // Recuperar o post pelo ID
+        $post = Post::findOrFail($id);
 
-    if (isset($post->$imageField) && !empty($post->$imageField)) {
+        if (isset($post->$imageField) && !empty($post->$imageField)) {
 
-        $imagePath = public_path($post->$imageField);
-        if (file_exists($imagePath)) {
-            unlink($imagePath); 
-        }
-
-
-        $post->$imageField = null;
-        $post->save(); 
-
-        return redirect()->back()->with('success', 'Imagem excluída com sucesso!');
-    }
-
-    return redirect()->back()->with('error', 'Imagem não encontrada.');
-}
-
-
-public function atualizarImagem(Request $request, $id, $numero = null)
-{
-    $fieldName = ($numero == 1 || $numero === null) ? 'imagem' : 'imagem' . $numero;
-
-
-    $request->validate([$fieldName => 'nullable|image|mimes:jpeg,png,jpg,gif,svg']);
-
-    $post = Post::findOrFail($id);
-
-
-    if ($request->hasFile($fieldName)) {
-   
-        if ($post->$fieldName) {
-            $oldImagePath = public_path($post->$fieldName);
-            if (file_exists($oldImagePath)) {
-                unlink($oldImagePath);
+            $imagePath = public_path($post->$imageField);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
             }
+
+
+            $post->$imageField = null;
+            $post->save();
+
+            return redirect()->back()->with('success', 'Imagem excluída com sucesso!');
         }
 
-        $img = $request->file($fieldName);
-        $destPath = public_path('storage/posts');
-        $imgName = 'POST_' . time() . ($numero ? "_$numero" : '') . '.' . $img->getClientOriginalExtension();
-        $img->move($destPath, $imgName);
-
-  
-        $post->$fieldName = 'storage/posts/' . $imgName;
-        $post->save();
-
-        return back()->with('success', "Imagem $numero atualizada com sucesso!");
+        return redirect()->back()->with('error', 'Imagem não encontrada.');
     }
 
-    return back()->with('error', 'Nenhuma imagem foi enviada.');
-}
+
+    public function atualizarImagem(Request $request, $id, $numero = null)
+    {
+        $fieldName = ($numero == 1 || $numero === null) ? 'imagem' : 'imagem' . $numero;
+
+
+        $request->validate([$fieldName => 'nullable|image|mimes:jpeg,png,jpg,gif,svg']);
+
+        $post = Post::findOrFail($id);
+
+
+        if ($request->hasFile($fieldName)) {
+
+            if ($post->$fieldName) {
+                $oldImagePath = public_path($post->$fieldName);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+
+            $img = $request->file($fieldName);
+            $destPath = public_path('storage/posts');
+            $imgName = 'POST_' . time() . ($numero ? "_$numero" : '') . '.' . $img->getClientOriginalExtension();
+            $img->move($destPath, $imgName);
+
+
+            $post->$fieldName = 'storage/posts/' . $imgName;
+            $post->save();
+
+            return back()->with('success', "Imagem $numero atualizada com sucesso!");
+        }
+
+        return back()->with('error', 'Nenhuma imagem foi enviada.');
+    }
 
 
 
@@ -390,6 +403,11 @@ public function atualizarImagem(Request $request, $id, $numero = null)
         return $this->renderView('politica.comites', 'comiteetica.png', 'Comitê de Ética e Comitê de Gestão de Riscos');
     }
 
+    public function lgpd()
+    {
+        return $this->renderView('politica.lgpd', 'comiteetica.png', 'Lei Geral de Proteção de Dados');
+    }
+
     public function integridade()
     {
         return $this->renderView('politica.integridade', 'integridade.png', 'Programa de Integridade');
@@ -436,9 +454,9 @@ public function atualizarImagem(Request $request, $id, $numero = null)
         return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
     }
 
-    public function adicionarlicitacao (Request $request)
+    public function adicionarlicitacao(Request $request)
     {
-        
+
         if (!Auth::check()) {
             return redirect()->route('admin.login');
         }
@@ -491,7 +509,7 @@ public function atualizarImagem(Request $request, $id, $numero = null)
                 $lic->move($destPath, $licName);
 
                 $licitacao->ataabertura = 'storage/selecoes/' . $licName;
-            } 
+            }
 
             if ($request->hasFile('contratoconvenio')) {
                 $lic = $request->file('contratoconvenio');
@@ -501,7 +519,7 @@ public function atualizarImagem(Request $request, $id, $numero = null)
                 $lic->move($destPath, $licName);
 
                 $licitacao->contratoconvenio = 'storage/selecoes/' . $licName;
-            } 
+            }
 
             if ($request->hasFile('resultado')) {
                 $lic = $request->file('resultado');
@@ -511,7 +529,7 @@ public function atualizarImagem(Request $request, $id, $numero = null)
                 $lic->move($destPath, $licName);
 
                 $licitacao->resultado = 'storage/selecoes/' . $licName;
-            }  
+            }
 
             if ($request->hasFile('licitacao')) {
                 $lic = $request->file('licitacao');
@@ -521,10 +539,10 @@ public function atualizarImagem(Request $request, $id, $numero = null)
                 $lic->move($destPath, $licName);
 
                 $licitacao->licitacao = 'storage/selecoes/' . $licName;
-            }   
+            }
 
             $licitacao->save();
-            
+
 
             return redirect()->route('transparencia.selecoespublicas')->with('success', 'Licitação salva com sucesso!');
         }
@@ -545,7 +563,7 @@ public function atualizarImagem(Request $request, $id, $numero = null)
         ];
         $imagem = 'adicionarlicitacao.png';
         $titulo = 'Nova Licitação';
-        
+
         return view('fornecedor.adicionarlicitacao', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', false);
     }
 

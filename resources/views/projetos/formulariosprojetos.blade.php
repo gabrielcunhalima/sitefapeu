@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title','FAPEU | Formulários')
+@section('title',' Formulários')
 
 @section('conteudo')
 <div class="container" style="font-size:16px;">
