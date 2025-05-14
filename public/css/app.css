@@ -68,7 +68,7 @@
     transform: scale(1.019);
   }
 
-/* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
+  /* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
 
   .fapeu-btn {
     display: inline-flex;
@@ -239,8 +239,8 @@
 
   @media (max-width: 796px) {
 
-    p {
-      font-size: 1.3em;
+    .fapeu-button {
+      margin-bottom: 10px;
     }
 
     .textofooter {
@@ -318,6 +318,10 @@
 
   }
 
+  .fapeu-card {
+    border-left: 4px solid #30755C;
+    border-radius: 6px;
+  }
 
   .bg-gestaoprojetos {
     background-color: #3D9A78;
@@ -389,6 +393,10 @@
 
   .bg-administracao {
     background-color: #dadada;
+  }
+
+  .bg-cinzaverde {
+    background-color: #f0f0f0;
   }
 
   .bg-cinza {
@@ -552,6 +560,7 @@
     .our-team {
       margin-bottom: 30px;
     }
+
   }
 
   /* Acessibilidade */

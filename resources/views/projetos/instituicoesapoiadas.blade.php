@@ -197,7 +197,7 @@
       <!-- DEPOIS A NICOLY VAI PASSAR ESSES DADOS AQUI -->
       <div class="col-lg-6 mb-4">
         <div class="institution-card">
-          <img src="{{ asset('images/huufsc.png') }}" alt="HU-UFSC" class="institution-logo">
+          <img src="{{ asset('images/huufsc-completo.png') }}" alt="HU-UFSC" class="institution-logo">
           <h3 class="institution-title">Hospital Universitário da UFSC (EHSERH HU - UFSC)</h3>
           <div class="institution-contact">
             <i class="bi bi-envelope-fill"></i>

@@ -225,7 +225,7 @@
   .slick-next:before {
     content: "\F285";
   }
- 
+
   .slick-dots {
     position: absolute;
     bottom: -30px;
@@ -236,6 +236,7 @@
     list-style: none;
     text-align: center;
   }
+
   /*
 
   .slick-dots li {
@@ -276,7 +277,7 @@
     padding: 30px;
     height: 100%;
     transition: all 0.3s ease;
-    background-color:rgb(244, 244, 244);
+    background-color: rgb(244, 244, 244);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     border-bottom: 4px solid #06551A;
   }
@@ -325,6 +326,27 @@
     text-decoration: none;
   }
 
+  .servicos-accordion {
+    display: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(6, 85, 26, 0.1);
+    color: #06551A;
+  }
+
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(6, 85, 26, 0.25);
+  }
+
+  .accordion-item {
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+
+
   @media (max-width: 992px) {
     .action-button {
       margin-bottom: 15px;
@@ -348,17 +370,29 @@
     .servico-card {
       margin-bottom: 20px;
     }
+
+    .servico-desc p{
+      color: rgb(0, 0, 0);
+    }
+
+    .servicos-desktop {
+      display: none;
+    }
+
+    .servicos-accordion {
+      display: block;
+    }
   }
 </style>
 
 <div class="jumbotron jumbotron-fluid bg-homebotoes pt-4 pb-3 mb-0">
-  <h1 class="container transformando text-center font-weight-bold text-uppercase" style="font-size: 2.55em; font-family:'Reddit Sans', sans-serif">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+  <h1 class="container transformando text-md-center text-start font-weight-bold text-uppercase" style="font-size: 2.3em; font-family:'Montserrat', sans-serif">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 </div>
 
 <div class="bg-homebotoes">
   <div class="container">
     <div class="row pb-4">
-      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
         <a href="{{route('projetos.captacao')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-journal-bookmark-fill mb-2" style="font-size: 2rem;"></i>
@@ -366,7 +400,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
         <a href="{{route('projetos.espacocoordenador')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-person-workspace mb-2" style="font-size: 2rem;"></i>
@@ -374,7 +408,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-briefcase mb-2" style="font-size: 2rem;"></i>
@@ -382,10 +416,10 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-12 mb-3">
+      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
         <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
-          <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
+            <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
             <p>Transparência</p>
           </div>
         </a>
@@ -446,8 +480,7 @@
   <div class="container">
     <h2 class="text-center news-title">Nossos Serviços</h2>
     <p class="text-muted text-center mb-5">Conheça os serviços oferecidos pela FAPEU</p>
-
-    <div class="row">
+    <div class="row servicos-desktop">
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="servico-card">
           <div class="servico-icon">
@@ -458,7 +491,6 @@
           <a href="{{ route('projetos.menuprojetos') }}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
-
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="servico-card">
           <div class="servico-icon">
@@ -469,7 +501,6 @@
           <a href="http://150.162.78.4:8080/manager_reservasala/reservasala" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
-
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="servico-card">
           <div class="servico-icon">
@@ -480,7 +511,6 @@
           <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
-
       <div class="col-md-6 mb-4">
         <div class="servico-card">
           <div class="servico-icon">
@@ -491,7 +521,6 @@
           <a href="{{route('homepage.importacao')}}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
-
       <div class="col-md-6 mb-4">
         <div class="servico-card">
           <div class="servico-icon">
@@ -504,6 +533,79 @@
       </div>
     </div>
   </div>
+
+  <!-- acordeao -->
+
+  <div class="servicos-accordion">
+    <div class="accordion" id="servicosAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGestao">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGestao" aria-expanded="false" aria-controls="collapseGestao">
+            <i class="bi bi-journal-text me-2"></i> Gestão de Projetos
+          </button>
+        </h2>
+        <div id="collapseGestao" class="accordion-collapse collapse" aria-labelledby="headingGestao" data-bs-parent="#servicosAccordion">
+          <div class="accordion-body">
+            <p>Gestão administrativa e financeira eficiente para projetos de ensino, pesquisa e extensão. Contamos com uma equipe técnica especializada que proporciona suporte completo.</p>
+            <a href="{{ route('projetos.menuprojetos') }}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingReservas">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReservas" aria-expanded="false" aria-controls="collapseReservas">
+            <i class="bi bi-calendar-event me-2"></i> Reservas de Salas
+          </button>
+        </h2>
+        <div id="collapseReservas" class="accordion-collapse collapse" aria-labelledby="headingReservas" data-bs-parent="#servicosAccordion">
+          <div class="accordion-body">
+            <p>Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p>
+            <a href="http://150.162.78.4:8080/manager_reservasala/reservasala" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCursos">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCursos" aria-expanded="false" aria-controls="collapseCursos">
+            <i class="bi bi-mortarboard me-2"></i> Cursos e Eventos
+          </button>
+        </h2>
+        <div id="collapseCursos" class="accordion-collapse collapse" aria-labelledby="headingCursos" data-bs-parent="#servicosAccordion">
+          <div class="accordion-body">
+            <p>Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p>
+            <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingImportacao">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImportacao" aria-expanded="false" aria-controls="collapseImportacao">
+            <i class="bi bi-box-seam me-2"></i> Importação de Bens e Insumos
+          </button>
+        </h2>
+        <div id="collapseImportacao" class="accordion-collapse collapse" aria-labelledby="headingImportacao" data-bs-parent="#servicosAccordion">
+          <div class="accordion-body">
+            <p>Realizamos a importação de equipamentos e insumos para pesquisa com isenção fiscal, conforme a Lei nº 8.010/1990.</p>
+            <a href="{{route('homepage.importacao')}}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNagefi">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNagefi" aria-expanded="false" aria-controls="collapseNagefi">
+            <i class="bi bi-graph-up me-2"></i> NAGEFI
+          </button>
+        </h2>
+        <div id="collapseNagefi" class="accordion-collapse collapse" aria-labelledby="headingNagefi" data-bs-parent="#servicosAccordion">
+          <div class="accordion-body">
+            <p>NAGEFI auxilia empresas públicas e privadas no aprimoramento de processos, gestão e compliance financeiro, fiscal e tributário.</p>
+            <a href="{{route('homepage.nagefi')}}" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </section>
 
 <!-- apoiadas -->
@@ -511,7 +613,7 @@
   <div class="container-fluid">
     <div class="containerapoiadas mx-auto">
       <div class="section-title mb-4 pb-2">
-      <h2 class="text-center news-title">Instituições Apoiadas</h2>
+        <h2 class="text-center news-title">Instituições Apoiadas</h2>
       </div>
       <div class="row align-items-center">
         <div class="col-sm apoiadas link-hover">

@@ -94,18 +94,6 @@
         background: linear-gradient(135deg, #a98de0 0%, #837ae8 100%);
     }
 
-
-    @media (max-width: 768px) {
-        .about-header {
-            text-align: center;
-        }
-
-        .about-header:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
     .vertical-divider {
         position: relative;
         min-height: 100%;

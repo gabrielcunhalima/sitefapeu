@@ -55,7 +55,7 @@
 </head>
 
 <body>
-  <header class="main-header shadow-sm">
+  <header class="main-header shadow-sm shownav">
     <nav class="navbar navbar-expand-lg py-0">
       <div class="container">
         <a class="navbar-brand py-2" href="{{ route('homepage.home') }}">
@@ -70,7 +70,7 @@
         <div class="collapse navbar-collapse top-bar" id="navbarMain">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="institutionalDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav shownav" href="#" id="institutionalDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Institucional
               </a>
@@ -87,7 +87,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="projectsDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Projetos
               </a>
@@ -107,7 +107,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="policiesDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="policiesDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Políticas
               </a>
@@ -124,7 +124,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="legDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="legDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Legislação e Normas
               </a>
@@ -135,7 +135,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="supplierDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="supplierDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Fornecedor
               </a>
@@ -148,7 +148,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="collaboratorDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="collaboratorDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Colaborador
               </a>
@@ -165,7 +165,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button"
+              <a class="nav-link dropdown-toggle shownav" href="#" id="contactDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Contato
               </a>
@@ -240,7 +240,7 @@
       transition: all 0.3s ease;
     }
 
-    .show {
+    .shownav {
       color:white !important;
     }
 

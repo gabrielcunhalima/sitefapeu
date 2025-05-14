@@ -85,7 +85,7 @@
                             <thead class="table-success">
                                 <tr>
                                     <th scope="col" style="width: 70%">Documento</th>
-                                    <th scope="col" class="text-center">Data</th>
+                                    <th scope="col" class="text-center">Data Atualização</th>
                                     <th scope="col" class="text-center">Ação</th>
                                 </tr>
                             </thead>
@@ -296,7 +296,7 @@
                             <thead class="table-success">
                                 <tr>
                                     <th scope="col" style="width: 70%">Documento</th>
-                                    <th scope="col" class="text-center">Data</th>
+                                    <th scope="col" class="text-center">Data Atualização</th>
                                     <th scope="col" class="text-center">Ação</th>
                                 </tr>
                             </thead>
@@ -414,8 +414,8 @@
     <!-- precisa de ajuda -->
     <div class="row mt-5">
         <div class="col-12">
-            <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body p-4">
+            <div class="card fapeu-card bg-cinzaverde border-0 shadow-sm">
+                <div class="card-body p-4 fapeu-card">
                     <div class="row align-items-center">
                         <div class="col-md-2 text-center mb-3 mb-md-0">
                             <i class="bi bi-headset text-verde3" style="font-size: 4rem;"></i>

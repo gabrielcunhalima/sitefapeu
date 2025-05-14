@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title',' Identidade Visual')
+@section('title', ' Identidade Visual')
 
 @section('conteudo')
 <style>
@@ -138,14 +138,72 @@
 
 <div id="main-content" class="file_manager">
     <div class="container">
-        <p>Nesta área estão disponíveis para download a logomarca da FAPEU e seu manual de aplicação, denominado “Manual de identidade visual FAPEU”. A aplicação da logomarca em todo e qualquer material deverá obedecer rigorosamente aos padrões definidos neste manual.</p>
-        <p class="mb-5">O uso indevido da logomarca da FAPEU poderá gerar responsabilidades cíveis e criminais. </p>
-        <a href="{{ asset('pdfs/QuemSomos/Manual_Marca.pdf') }}" download>
-            <h4 class="mb-5"><i class="bi bi-download me-2"></i>Download do Manual de Identidade Visual FAPEU</h4>
-        </a>
+        <p>Nesta área estão disponíveis para download a logomarca da FAPEU e seu manual de aplicação, denominado “Manual
+            de identidade visual FAPEU”. A aplicação da logomarca em todo e qualquer material deverá obedecer
+            rigorosamente aos padrões definidos neste manual.</p>
+        <p>O uso indevido da logomarca da FAPEU poderá gerar responsabilidades cíveis e criminais. </p>
+
+        <p class="container text-center my-5">
+            <a href="{{ asset('pdfs/QuemSomos/Manual_Marca.pdf') }}" download class="fapeu-btn">
+                <i class="bi bi-download me-2"></i>Download do Manual de Identidade Visual FAPEU
+            </a>
+        </p>
+        <h2>Logos</h2>
+        <p>Clique para iniciar o download</p>
         <div class="row clearfix">
             <div class="logo-pdf row mt-4">
-                <h4>Logo FAPEU PDF</h4>
+                <h4>JPG</h4>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="card logo-colorida">
+                        <div class="file bg-idvisual">
+                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Cor.jpg') }}" download>
+                                <div class="file-name">
+                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <small>Tamanho: 225 KB</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="card logo-monocramatica">
+                        <div class="file bg-idvisual">
+                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Mono.jpg') }}" download>
+                                <div class="file-name">
+                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <small>Tamanho: 192 KB</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="card logo-negativo">
+                        <div class="file bg-idvisual">
+                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Negativo.jpg') }}" download>
+                                <div class="file-name">
+                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <small>Tamanho: 222 KB</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="card logo-pb">
+                        <div class="file bg-idvisual">
+                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_PB.jpg') }}" download>
+                                <div class="file-name">
+                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <small>Tamanho: 197 KB</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-pdf row mt-4">
+                <h4>PDF</h4>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card logo-colorida">
                         <div class="file bg-idvisual">
@@ -196,7 +254,7 @@
                 </div>
             </div>
             <div class="logo-corel row mt-4">
-                <h4>Logo FAPEU Corel</h4>
+                <h4>Corel</h4>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card logo-colorida">
                         <div class="file bg-idvisual">
@@ -247,7 +305,7 @@
                 </div>
             </div>
             <div class="logo-eps row mt-4">
-                <h4>Logo FAPEU EPS</h4>
+                <h4>EPS</h4>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card logo-colorida">
                         <div class="file bg-idvisual">
@@ -298,7 +356,7 @@
                 </div>
             </div>
             <div class="logo-illustrator row mt-4">
-                <h4>Logo FAPEU Illustrator</h4>
+                <h4>Illustrator</h4>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card logo-colorida">
                         <div class="file bg-idvisual">
@@ -349,7 +407,8 @@
                 </div>
             </div>
         </div>
-        <p class="mt-4 font-weight-bold">Em caso de dúvidas, favor entrar em contato conosco: ti_suporte@fapeu.org.br</p>
+        <p class="mt-4 font-weight-bold">Em caso de dúvidas, favor entrar em contato conosco: ti_suporte@fapeu.org.br
+        </p>
     </div>
 </div>
 

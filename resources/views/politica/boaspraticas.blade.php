@@ -307,8 +307,8 @@
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
-      prevArrow: '<button type="button" class="slick-prev btn-success"><i class="bi bi-chevron-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next btn-success"><i class="bi bi-chevron-right"></i></button>',
+      prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="bi bi-chevron-right"></i></button>',
       responsive: [
         {
           breakpoint: 1200,

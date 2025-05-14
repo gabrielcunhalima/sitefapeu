@@ -110,9 +110,13 @@ Route::post('/contato', [ContatoController::class, 'salvarContato'])->name('cont
 
 
 Route::get('/paineladministrativo',[MenuController::class,'paineladministrativo'])->name('admin.menu');
-Route::match(['get', 'post'], '/loginadm', [loginController::class, 'loginPost'])->name('admin.loginadm');
-Route::get('/logoutadm', [LoginController::class, 'logout'])->name('admin.logoutadm');
-Route::get('/login', [LoginController::class, 'login'])->name('admin.login');
+
+
+//AUTENTICAÇÃO
+
+Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/admin/login', [LoginController::class, 'login'])->name('login.post');
+Route::get('/admin/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 //EDITAR NOTICIA:
@@ -129,7 +133,13 @@ Route::any('/noticiaspost/{id?}', [MenuController::class, 'noticiaspost'])->name
 Route::get('/createusuario', [LoginController::class, 'createUsuario'])->name('admin.createusuario');
 Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('admin.storeusuario');
 
-
-
 Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    // Dashboard administrativo
+    Route::get('/', [MenuController::class, 'paineladministrativo'])->name('admin.dashboard');
+    
+    // Gerenciamento de usuários
+    Route::get('/usuarios/criar', [LoginController::class, 'createUsuario'])->name('admin.usuarios.criar');
+    Route::post('/usuarios', [LoginController::class, 'storeUsuario'])->name('admin.usuarios.store');
+});
