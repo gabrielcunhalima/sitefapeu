@@ -19,7 +19,7 @@
   }
 
   .action-button {
-    border-radius: 10px;
+    border-radius: 22px;
     transition: all 0.3s ease;
     padding: 18px 15px;
     height: 100%;
@@ -27,13 +27,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.2);
     border: none;
   }
 
   .action-button:hover {
     transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), inset 0 0 5px rgba(0, 0, 0, 0.2);
   }
 
   .action-button p {
@@ -269,7 +269,7 @@
 
   .servicos-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color:rgb(240, 240, 240);
   }
 
   .servico-card {
@@ -277,9 +277,8 @@
     padding: 30px;
     height: 100%;
     transition: all 0.3s ease;
-    background-color: rgb(244, 244, 244);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border-bottom: 4px solid #06551A;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.08), inset 0 0 2px rgba(0, 0, 0, 0.2);
   }
 
   .servico-card:hover {
@@ -318,7 +317,7 @@
   }
 
   .apoiadas {
-    padding: 30px 0;
+    padding: 60px 0;
     background-color: #f8f9fa;
   }
 
@@ -360,7 +359,7 @@
 
   @media (max-width: 768px) {
     .transformando {
-      font-size: 1.75em !important;
+      font-size: 1.5em !important;
     }
 
     .news-img-container {
@@ -371,7 +370,7 @@
       margin-bottom: 20px;
     }
 
-    .servico-desc p{
+    .servico-desc p {
       color: rgb(0, 0, 0);
     }
 
@@ -386,13 +385,13 @@
 </style>
 
 <div class="jumbotron jumbotron-fluid bg-homebotoes pt-4 pb-3 mb-0">
-  <h1 class="container transformando text-md-center text-start font-weight-bold text-uppercase" style="font-size: 2.3em; font-family:'Montserrat', sans-serif">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
+  <h1 class="container transformando text-center text-uppercase mx-auto" style="font-size: 2.3em; font-family:'Montserrat', sans-serif"><b>Fundação de Amparo à Pesquisa e Extensão Universitária</b></h1>
 </div>
 
 <div class="bg-homebotoes">
   <div class="container">
     <div class="row pb-4">
-      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
+      <div class="col-6 col-lg-3 mb-3">
         <a href="{{route('projetos.captacao')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-journal-bookmark-fill mb-2" style="font-size: 2rem;"></i>
@@ -400,7 +399,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
+      <div class="col-6 col-lg-3 mb-3">
         <a href="{{route('projetos.espacocoordenador')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-person-workspace mb-2" style="font-size: 2rem;"></i>
@@ -408,7 +407,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
+      <div class="col-6 col-lg-3 mb-3">
         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-briefcase mb-2" style="font-size: 2rem;"></i>
@@ -416,7 +415,7 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6 col-lg-3 col-sm-6 mb-3">
+      <div class="col-6 col-lg-3 mb-3">
         <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
@@ -440,7 +439,7 @@
           <div class="news-card">
             <div class="news-img-container">
               @if($post->imagem || $post->imagem2 || $post->imagem3 || $post->imagem4 || $post->imagem5)
-              <div id="carousel{{$post->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div id="carousel{{$post->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
                 <div class="carousel-inner">
                   @php
                   $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
@@ -451,7 +450,9 @@
                   <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
                     <img src="{{ asset($post->$image) }}" class="d-block w-100" alt="Imagem da notícia {{ $loop->index + 1 }}">
                   </div>
-                  @php $firstImage = false; @endphp
+                  @php
+                  $firstImage = false;
+                  @endphp
                   @endif
                   @endforeach
                 </div>
@@ -612,8 +613,9 @@
 <section class="apoiadas">
   <div class="container-fluid">
     <div class="containerapoiadas mx-auto">
-      <div class="section-title mb-4 pb-2">
+      <div>
         <h2 class="text-center news-title">Instituições Apoiadas</h2>
+        <p class="text-muted text-center">Instituições que possuem credenciamento para pesquisa e extensão junto à FAPEU</p>
       </div>
       <div class="row align-items-center">
         <div class="col-sm apoiadas link-hover">
@@ -641,11 +643,6 @@
             <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
           </a>
         </div>
-        <!-- <div class="col-sm apoiadas link-hover">
-        <a href="https://www.gov.br/ebserh/pt-br">
-          <img src="images/ebserh.png" alt="Apoiada ebserh" class="img-fluid img-sublink">
-        </a>
-      </div> -->
         <div class="col-auto apoiadas link-hover">
           <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
             <img src="images/huufsc-completo.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
@@ -660,52 +657,6 @@
     </div>
   </div>
 </section>
-
-<!-- <h2 class="text-center news-title">Instituições Apoiadas</h2>
-    <p class="text-muted text-center mb-5">Conheça as instituições com as quais trabalhamos</p>
-    
-    <div class="row align-items-center justify-content-center">
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://ufsc.br/" target="_blank">
-          <img src="images/ufsc.png" alt="UFSC" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://www.uffs.edu.br/" target="_blank">
-          <img src="images/uffs.png" alt="UFFS" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://www.udesc.br/" target="_blank">
-          <img src="images/udesc.png" alt="UDESC" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://ifc.edu.br/" target="_blank">
-          <img src="images/ifc.png" alt="IFC" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://unipampa.edu.br/" target="_blank">
-          <img src="images/unipampa.png" alt="UNIPAMPA" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://www.gov.br/ebserh/pt-br" target="_blank">
-          <img src="images/ebserh.png" alt="EBSERH" class="img-fluid apoiadas-logo">
-        </a>
-      </div> 
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc" target="_blank">
-          <img src="images/huufsc-completo.png" alt="HU UFSC" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-      <div class="col-sm-5 col-md-auto mb-4 text-center">
-        <a href="https://confies.org.br/" target="_blank">
-          <img src="images/confies.png" alt="CONFIES" class="img-fluid apoiadas-logo">
-        </a>
-      </div>
-    </div> -->
 
 <script>
   $(document).ready(function() {

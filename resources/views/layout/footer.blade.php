@@ -129,8 +129,8 @@
                         <i class="bi bi-youtube fs-4"></i>
                     </a>
                 </div>
-                <div class="d-flex mt-md-5">
-                    <div class="d-flex align-items-center">
+                <div class="text-center text-md-start mt-4">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
                         <p class="mb-0 text-white-50">CNPJ: 83.476.911/0001-17<br>Inscrição Estadual: ISENTO<br>Inscrição Municipal: 61.274-0</p>
                     </div>
                 </div>

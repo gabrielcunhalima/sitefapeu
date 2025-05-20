@@ -150,7 +150,337 @@
         </p>
         <h2>Logos</h2>
         <p>Clique para iniciar o download</p>
-        <div class="row clearfix">
+        <div class="d-block d-md-none">
+            <div class="accordion" id="logoAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingJPG">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseJPG" aria-expanded="true" aria-controls="collapseJPG">
+                            JPG
+                        </button>
+                    </h2>
+                    <div id="collapseJPG" class="accordion-collapse collapse show" aria-labelledby="headingJPG"
+                        data-bs-parent="#logoAccordion">
+                        <div class="accordion-body">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-colorida">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Cor.jpg') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Colorido</p>
+                                                    <small>Tamanho: 225 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Mono.jpg') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 192 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-negativo">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Negativo.jpg') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Negativo</p>
+                                                    <small>Tamanho: 222 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-pb">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_PB.jpg') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Preto e Branco</p>
+                                                    <small>Tamanho: 197 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingPDF">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePDF" aria-expanded="false" aria-controls="collapsePDF"> PDF
+                        </button>
+                    </h2>
+                    <div id="collapsePDF" class="accordion-collapse collapse" aria-labelledby="headingPDF"
+                        data-bs-parent="#logoAccordion">
+                        <div class="accordion-body">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-colorida">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Cor.pdf') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Colorido</p>
+                                                    <small>Tamanho: 81 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Mono.pdf') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 77 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-negativo">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Negativo.pdf') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Negativo</p>
+                                                    <small>Tamanho: 73 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-pb">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_PB.pdf') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Preto e Branco</p>
+                                                    <small>Tamanho: 76 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCorel">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseCorel" aria-expanded="false" aria-controls="collapseCorel">
+                            Corel
+                        </button>
+                    </h2>
+                    <div id="collapseCorel" class="accordion-collapse collapse" aria-labelledby="headingCorel"
+                        data-bs-parent="#logoAccordion">
+                        <div class="accordion-body">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-colorida">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Cor.cdr') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Colorido</p>
+                                                    <small>Tamanho: 15 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Mono.cdr') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 23 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-negativo">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Negativo.cdr') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Negativo</p>
+                                                    <small>Tamanho: 24 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-pb">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Corel/LogoFAPEU_PB.cdr') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Preto e Branco</p>
+                                                    <small>Tamanho: 23 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEPS">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEPS" aria-expanded="false" aria-controls="collapseEPS">
+                            EPS
+                        </button>
+                    </h2>
+                    <div id="collapseEPS" class="accordion-collapse collapse" aria-labelledby="headingEPS"
+                        data-bs-parent="#logoAccordion">
+                        <div class="accordion-body">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-colorida">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Cor.eps') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Colorido</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Mono.eps') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-negativo">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Negativo.eps') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Negativo</p>
+                                                    <small>Tamanho: 503 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-pb">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_PB.eps') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Preto e Branco</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingIllustrator">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseIllustrator" aria-expanded="false"
+                            aria-controls="collapseIllustrator">
+                            Illustrator
+                        </button>
+                    </h2>
+                    <div id="collapseIllustrator" class="accordion-collapse collapse"
+                        aria-labelledby="headingIllustrator" data-bs-parent="#logoAccordion">
+                        <div class="accordion-body">
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-colorida">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Cor.ai') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Colorido</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Mono.ai') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-monocramatica">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Mono.ai') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Monocromático</p>
+                                                    <small>Tamanho: 461 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-negativo">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Negativo.ai') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Negativo</p>
+                                                    <small>Tamanho: 503 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card logo-pb">
+                                        <div class="file bg-idvisual">
+                                            <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_PB.jpg') }}" download>
+                                                <div class="file-name">
+                                                    <p class="text-muted">Preto e Branco</p>
+                                                    <small>Tamanho: 197 KB</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix d-none d-md-block">
             <div class="logo-pdf row mt-4">
                 <h4>JPG</h4>
                 <div class="col-lg-3 col-md-4 col-sm-12">
@@ -158,7 +488,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Cor.jpg') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <p class="text-muted">Colorido</p>
                                     <small>Tamanho: 225 KB</small>
                                 </div>
                             </a>
@@ -170,7 +500,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Mono.jpg') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <p class="text-muted">Monocromático</p>
                                     <small>Tamanho: 192 KB</small>
                                 </div>
                             </a>
@@ -182,7 +512,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_Negativo.jpg') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <p class="text-muted">Negativo</p>
                                     <small>Tamanho: 222 KB</small>
                                 </div>
                             </a>
@@ -194,7 +524,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/JPG/Logo_FAPEU_PB.jpg') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <p class="text-muted">Preto e Branco</p>
                                     <small>Tamanho: 197 KB</small>
                                 </div>
                             </a>
@@ -209,7 +539,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Cor.pdf') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <p class="text-muted">Colorido</p>
                                     <small>Tamanho: 81 KB</small>
                                 </div>
                             </a>
@@ -221,7 +551,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Mono.pdf') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <p class="text-muted">Monocromático</p>
                                     <small>Tamanho: 77 KB</small>
                                 </div>
                             </a>
@@ -233,7 +563,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_Negativo.pdf') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <p class="text-muted">Negativo</p>
                                     <small>Tamanho: 73 KB</small>
                                 </div>
                             </a>
@@ -245,7 +575,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/PDF/Logo_FAPEU_PB.pdf') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <p class="text-muted">Preto e Branco</p>
                                     <small>Tamanho: 76 KB</small>
                                 </div>
                             </a>
@@ -260,7 +590,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Cor.cdr') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <p class="text-muted">Colorido</p>
                                     <small>Tamanho: 15 KB</small>
                                 </div>
                             </a>
@@ -272,7 +602,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Mono.cdr') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <p class="text-muted">Monocromático</p>
                                     <small>Tamanho: 23 KB</small>
                                 </div>
                             </a>
@@ -284,7 +614,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Corel/LogoFAPEU_Negativo.cdr') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <p class="text-muted">Negativo</p>
                                     <small>Tamanho: 24 KB</small>
                                 </div>
                             </a>
@@ -296,7 +626,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Corel/LogoFAPEU_PB.cdr') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <p class="text-muted">Preto e Branco</p>
                                     <small>Tamanho: 23 KB</small>
                                 </div>
                             </a>
@@ -311,7 +641,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Cor.eps') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <p class="text-muted">Colorido</p>
                                     <small>Tamanho: 461 KB</small>
                                 </div>
                             </a>
@@ -323,7 +653,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Mono.eps') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <p class="text-muted">Monocromático</p>
                                     <small>Tamanho: 452 KB</small>
                                 </div>
                             </a>
@@ -335,7 +665,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_Negativo.eps') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <p class="text-muted">Negativo</p>
                                     <small>Tamanho: 503 KB</small>
                                 </div>
                             </a>
@@ -347,7 +677,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/EPS/Logo_FAPEU_PB.eps') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <p class="text-muted">Preto e Branco</p>
                                     <small>Tamanho: 455 KB</small>
                                 </div>
                             </a>
@@ -362,7 +692,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Cor.ai') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Colorido</p>
+                                    <p class="text-muted">Colorido</p>
                                     <small>Tamanho: 90 KB</small>
                                 </div>
                             </a>
@@ -374,7 +704,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Mono.ai') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Monocromático</p>
+                                    <p class="text-muted">Monocromático</p>
                                     <small>Tamanho: 73 KB</small>
                                 </div>
                             </a>
@@ -386,7 +716,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_Negativo.ai') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Negativo</p>
+                                    <p class="text-muted">Negativo</p>
                                     <small>Tamanho: 69 KB</small>
                                 </div>
                             </a>
@@ -398,7 +728,7 @@
                         <div class="file bg-idvisual">
                             <a href="{{ asset('images/Logo/Illustrator/Logo_FAPEU_PB.ai') }}" download>
                                 <div class="file-name">
-                                    <p class="m-b-5 text-muted">Preto e Branco</p>
+                                    <p class="text-muted">Preto e Branco</p>
                                     <small>Tamanho: 72 KB</small>
                                 </div>
                             </a>

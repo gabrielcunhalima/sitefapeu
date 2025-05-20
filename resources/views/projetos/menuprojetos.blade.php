@@ -27,6 +27,7 @@
     background-color: #fff;
     border-radius: 12px;
     padding: 30px;
+    padding-bottom: 0;
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
@@ -111,7 +112,7 @@
         
         <div class="contact-banner">
           <div class="row align-items-center">
-            <div class="col-md-9">
+            <div class="col-md-9 mb-4">
               <h3><i class="bi bi-envelope-fill me-2"></i>Entre em contato</h3>
               <p>Para iniciar as tratativas do seu projeto ou obter mais informações, entre em contato com o Setor de Captação e Implantação de Projetos.</p>
             </div>
@@ -123,10 +124,10 @@
       </div>
     </div>
     
-    <div class="row mt-4">
+    <div class="row">
       <div class="col-lg-12">
         <div class="info-card">
-          <p class="lead">O processo de gestão de projetos pela FAPEU compreende o gerenciamento administrativo e financeiro em todas as etapas, com soluções adequadas às especificidades e permanente diálogo com os coordenadores.</p>
+          <p>O processo de gestão de projetos pela FAPEU compreende o gerenciamento administrativo e financeiro em todas as etapas, com soluções adequadas às especificidades e permanente diálogo com os coordenadores.</p>
           
           <p>Uma equipe técnica capacitada, constantemente incentivada à atualização, comprometida com a missão da Fundação e qualificada em gestão financeira e de pessoal, em compras, licitações, importações, contabilidade e prestação de contas, oferece segurança, transparência e agilidade para execução de projetos.</p>
           
@@ -206,7 +207,7 @@
             <i class="bi bi-file-earmark-plus me-2"></i>Captação de Projetos
           </a>
           <a href="{{ route('projetos.espacocoordenador') }}" class="btn btn-outline-success btn-lg rounded-pill">
-            <i class="bi bi-file-earmark-text me-2"></i>Formulários
+            <i class="bi bi-file-earmark-text me-2"></i>Espaço do Coordenador
           </a>
         </div>
       </div>

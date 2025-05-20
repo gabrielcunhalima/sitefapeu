@@ -186,7 +186,9 @@
   Request::route()->getName() !== 'projetos.calculoressarcimento' &&
   Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
   Request::route()->getName() !== 'projetos.orientacoescontato' &&
-  Request::route()->getName() !== 'fornecedor.adicionarlicitacao')
+  Request::route()->getName() !== 'fornecedor.adicionarlicitacao' &&
+  Request::route()->getName() !== 'admin.login' &&
+  Request::route()->getName() !== 'admin.menu')
   <div class="page-header py-5">
     <div class="container">
       <div class="row">
