@@ -438,12 +438,12 @@ class MenuController extends Controller
     }
     public function dispensa()
     {
-        return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa');
+        return $this->renderView('fornecedor.dispensa', 'dispensa.png', 'Dispensa de Licitação');
     }
 
-    public function inexibilidade()
+    public function inexigibilidade()
     {
-        return $this->renderView('fornecedor.inexibilidade', 'inexibilidade.png', 'Inexibilidade');
+        return $this->renderView('fornecedor.inexigibilidade', 'inexigibilidade.png', 'Inexigibilidade');
     }
 
     public function espacofornecedor()

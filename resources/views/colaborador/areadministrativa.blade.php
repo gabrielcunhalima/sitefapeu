@@ -9,7 +9,6 @@
         Clique abaixo para acessar a área administrativa de nossas ferramentas.</p>
     
     <div class="row justify-content-center">
-        <!-- Card 1 -->
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
@@ -22,8 +21,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Card 2 -->
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
@@ -36,8 +33,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Card 3 -->
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
@@ -50,10 +45,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- Card 4 -->
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card text-center">
                 <div class="bg-verdeescuro text-white p-3 rounded-top d-flex justify-content-center">
