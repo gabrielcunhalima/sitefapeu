@@ -20,7 +20,7 @@
                             <br>Aproveite as oportunidades acessando o link abaixo!
                         </p>
                         <p class="container text-center mt-4">
-                            <a href="http://150.162.78.45:8080/Curriculo/" class="fapeu-btn">
+                            <a href="http://150.162.78.45:8080/Curriculo/" class="fapeu-btn" target="_blank">
                                 <i class="bi bi-box-arrow-up-right me-2"></i>Acesse as vagas
                             </a>
                         </p>

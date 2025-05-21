@@ -9,7 +9,7 @@
 </p>
 
 <div class="d-flex justify-content-center">
-    <object class="pdf container shadow-lg" data="{{ asset('pdfs/Politicas/politica_de_cookies_fapeu.pdf') }}">
+    <object class="pdf container shadow-lg" data="{{ asset('pdfs/Politicas/politica_de_cookies.pdf') }}">
     </object>
 </div>
 

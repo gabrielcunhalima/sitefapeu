@@ -6,11 +6,6 @@
 @section('conteudo')
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<style>
-      table.table-hober tbody tr {
-    border-bottom: 1px solid #b8b2b2;
-  }
-</style>
 
 @if(session('success'))
 <div id="alertMessage"
@@ -37,6 +32,9 @@
          <h4 class="mb-0" style="color: #2e7d32;"><i class="bi bi-newspaper me-2"></i> Gerenciar Notícias</h4>
          <p class="text-muted small mt-2 mb-0">Gerencie todas as notícias do site, edite conteúdos e imagens.</p>
       </div>
+   
+
+  
       <div class="card-body p-0">
           <div class="table-responsive">
               <table class="table table-hover mb-0 border-0">
@@ -56,6 +54,7 @@
                               {{ $item->titulo }}
                           </td>
                           <td class="px-3 py-3">
+                              <!-- Abas das imagens -->
                               <ul class="nav nav-tabs nav-fill" id="imageTabs{{ $item->id }}" role="tablist">
                                   @for ($i = 1; $i <= 5; $i++)
                                       @php
@@ -77,6 +76,8 @@
                                       </li>
                                   @endfor
                               </ul>
+                              
+                              <!-- conteúdo de imagens -->
                               <div class="tab-content p-2 border border-top-0 rounded-bottom">
                                   @for ($i = 1; $i <= 5; $i++)
                                       @php
@@ -85,6 +86,9 @@
                                       <div class="tab-pane fade {{ $i == 1 ? 'show active' : '' }}" 
                                            id="img{{ $i }}-content-{{ $item->id }}" role="tabpanel" 
                                            aria-labelledby="img{{ $i }}-tab-{{ $item->id }}">
+                                          
+
+                                             <!-- visualização da imagem nos cards -->
                                           <div class="d-flex">
                                               <div class="me-3 d-flex align-items-center justify-content-center bg-light rounded" 
                                                    style="width: 110px; height: 110px;">
@@ -98,6 +102,8 @@
                                                       </div>
                                                   @endif
                                               </div>
+                                              
+                                              <!-- alterar Imagem/Excluir -->
                                               <div class="flex-grow-1">
                                                   <form action="{{ route('noticias.updateImagem', ['id' => $item->id, 'numero' => $i]) }}" 
                                                         method="POST" enctype="multipart/form-data" class="mb-2">
@@ -125,10 +131,13 @@
                                   @endfor
                               </div>
                           </td>
+
+                          <!-- Data -->
                           <td class="px-3 py-3">
                               <input type="date" class="form-control form-control-sm" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
                                   onchange="updateField({{ $item->id }}, 'created_at', this.value)">
                           </td>
+                          <!-- Ocultar/Visivel -->
                           <td class="px-3 py-3 text-center">
                               <button class="btn btn-sm {{ $item->visivel ? 'btn-outline-success' : 'btn-outline-danger' }}" 
                                   title="{{ $item->visivel ? 'Visível - Clique para ocultar' : 'Oculto - Clique para tornar visível' }}"
@@ -136,12 +145,14 @@
                                   <i class="bi {{ $item->visivel ? 'bi-eye-fill' : 'bi-eye-slash-fill' }}"></i>
                               </button>
                           </td>
+                          <!--Editar conteudo -->
                           <td class="px-3 py-3 text-center">
                               <div class="btn-group" role="group">
                                   <a href="{{ route('noticias.noticiaspost', ['id' => $item->id]) }}" 
                                      class="btn btn-sm btn-outline-primary" title="Editar conteúdo">
                                       <i class="bi bi-pencil-square"></i>
                                   </a>
+                        <!--Excluir Noticia -->
                                   <button class="btn btn-sm btn-outline-danger" 
                                           title="Excluir notícia"
                                           onclick="deletePost({{ $item->id }})">
@@ -156,6 +167,7 @@
           </div>
       </div>
 
+      <!-- Noticias sendo exibidas -->
       <div class="card-footer bg-white border-top py-3 d-flex justify-content-between align-items-center">
    <span class="text-muted small">
     Exibindo {{ $news->count() }} notícia(s) de {{ $news->total() }} — Página {{ $news->currentPage() }} de {{ $news->lastPage() }}
@@ -163,11 +175,13 @@
 
 
     <div>
+        <!-- Botão Anterior -->
         <a href="{{ $news->previousPageUrl() }}" 
            class="btn btn-sm btn-outline-secondary me-2 {{ $news->onFirstPage() ? 'disabled' : '' }}">
             <i class="bi bi-chevron-left"></i> Anterior
         </a>
 
+        <!-- Botão Próximo -->
         <a href="{{ $news->nextPageUrl() }}" 
            class="btn btn-sm btn-outline-primary {{ $news->hasMorePages() ? '' : 'disabled' }}">
             Próximo <i class="bi bi-chevron-right"></i>

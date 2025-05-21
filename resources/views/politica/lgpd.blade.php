@@ -110,7 +110,7 @@
                                 <a href="{{ asset('pdfs/Politicas/politica_de_cookies.pdf') }}" class="fapeu-button" target="_blank">
                                     <i class="bi bi-cookie"></i>
                                     <p>Política de Cookies</p>
-                                </a>
+                                </a>d
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <a href="{{ asset('pdfs/Politicas/termos_de_uso.pdf') }}" class="fapeu-button" target="_blank">
