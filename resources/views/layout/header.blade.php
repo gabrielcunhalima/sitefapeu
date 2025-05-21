@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  <script src='https://painel.facillgpd.com.br/api/plugin/cookies/67cee18ae62bd7f979bf4438?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXByZXNhIjoiNjdhY2VmMGZmZGIxYTM0YmUxN2NkN2I4IiwiaWF0IjoxNzQzNDI1MzkzfQ.TgT5mkwCX5apFLqc575DH0aLuwrdShCK2FXAlO-OcUg'></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -186,9 +187,7 @@
   Request::route()->getName() !== 'projetos.calculoressarcimento' &&
   Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
   Request::route()->getName() !== 'projetos.orientacoescontato' &&
-  Request::route()->getName() !== 'fornecedor.adicionarlicitacao' &&
-  Request::route()->getName() !== 'admin.login' &&
-  Request::route()->getName() !== 'admin.menu')
+  Request::route()->getName() !== 'fornecedor.adicionarlicitacao')
   <div class="page-header py-5">
     <div class="container">
       <div class="row">
@@ -221,7 +220,6 @@
     @include('layout.footer')
   </div>
 
-  <!-- Scripts do Bootstrap e JavaScript personalizado -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
@@ -230,7 +228,6 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* Estilos do Header Principal */
     .main-header {
       background-color: #06551A;
     }
@@ -334,36 +331,6 @@
       border-bottom: 1px solid #dee2e6;
     }
 
-    /* Estilos para acessibilidade */
-    .high-contrast {
-      background-color: #000;
-      color: #fff;
-    }
-
-    .high-contrast .navbar-nav .nav-link,
-    .high-contrast a:not(.btn),
-    .high-contrast h1,
-    .high-contrast h2,
-    .high-contrast h3,
-    .high-contrast h4,
-    .high-contrast h5,
-    .high-contrast h6 {
-      color: #fff !important;
-    }
-
-    .high-contrast .dropdown-menu {
-      background-color: #000;
-      border: 1px solid #fff;
-    }
-
-    .high-contrast .dropdown-item {
-      color: #fff !important;
-    }
-
-    .high-contrast .dropdown-item:hover {
-      background-color: #333;
-    }
-
     .navbar-toggler {
       border: none;
       padding: 0.25rem 0.75rem;
@@ -400,6 +367,7 @@
       color: #6c757d;
     }
   </style>
+  <script src='https://painel.facillgpd.com.br/api/plugin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXByZXNhIjoiNjdhY2VmMGZmZGIxYTM0YmUxN2NkN2I4IiwiY29uZmlnUmVxdWlzaWNhbyI6IjY3YWNlZjEyZmRiMWEzNGJlMTdjZGQwNCIsImlhdCI6MTc0MzQyNTQyOX0.50fBzDOU3r1_ASg8HotqPnMJ_YDRQpv-iuNoXM4KTfQ'></script>
 </body>
 
 </html>

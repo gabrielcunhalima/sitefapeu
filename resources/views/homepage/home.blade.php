@@ -19,7 +19,7 @@
   }
 
   .action-button {
-    border-radius: 22px;
+    border-radius: 20px;
     transition: all 0.3s ease;
     padding: 18px 15px;
     height: 100%;
@@ -27,13 +27,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(13, 49, 8, 0.6);
     border: none;
   }
 
   .action-button:hover {
     transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), inset 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(13, 49, 8, 0.6);
   }
 
   .action-button p {
@@ -83,12 +83,10 @@
   .news-img-container {
     height: 200px;
     overflow: hidden;
-    position: relative;
+    position: relative;;
   }
 
   .news-img-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
@@ -648,7 +646,7 @@
             <img src="images/huufsc-completo.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
           </a>
         </div>
-        <div class="col-sm apoiadas link-hover">
+        <div class="col-sm apoiadas link-hoverr">
           <a href="https://confies.org.br/">
             <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
           </a>

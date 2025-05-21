@@ -92,7 +92,6 @@
 <section class="acordos-section">
   <div class="container">    
     <div class="accordion" id="acordosCollective">
-      <!-- 2023-2025 -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2023">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2023" aria-expanded="true" aria-controls="collapse2023">
@@ -113,8 +112,6 @@
           </div>
         </div>
       </div>
-      
-      <!-- 2022-2023 -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2022">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2022" aria-expanded="false" aria-controls="collapse2022">
@@ -130,8 +127,6 @@
           </div>
         </div>
       </div>
-      
-      <!-- 2021-2022 -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2021">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2021" aria-expanded="false" aria-controls="collapse2021">
@@ -147,8 +142,6 @@
           </div>
         </div>
       </div>
-      
-      <!-- 2020-2021 -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2020">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2020" aria-expanded="false" aria-controls="collapse2020">
@@ -165,13 +158,6 @@
         </div>
       </div>
     </div>
-    
-    <!-- <div class="text-center mt-5">
-      <p class="text-muted">Para acordos coletivos anteriores ou para mais informações, entre em contato com o setor de Recursos Humanos.</p>
-      <a href="{{ route('faleconosco.contato') }}" class="btn btn-outline-success rounded-pill px-4 py-2">
-        <i class="bi bi-envelope me-2"></i>Contato
-      </a>
-    </div> -->
   </div>
 </section>
 

@@ -1,45 +1,30 @@
 @extends('layout.header')
-@section('title', 'Login Administrativo')
+@section('title',' Login FAPEU')
 
 @section('conteudo')
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-5">
-            <div class="card shadow">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0 text-center">Login Administrativo</h4>
-                </div>
-                <div class="card-body p-4">
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            @foreach ($errors->all() as $error)
-                                <div>{{ $error }}</div>
-                            @endforeach
-                        </div>
-                    @endif
 
-                    <form action="{{ route('admin.login.post') }}" method="POST">
-                        @csrf
-                        
-                        <div class="mb-3">
-                            <label for="usuario" class="form-label">Nome de usuário</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" 
-                                value="{{ old('usuario') }}" required autofocus>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senha" name="senha" required>
-                        </div>
-                        
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Entrar</button>
-                            <a href="{{ route('homepage.home') }}" class="btn btn-outline-secondary">Voltar para o site</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <div class="col-4 offset-4">
+    <form action="{{route('login.login')}}" method="POST">
+    @csrf
+      <!-- Email input -->
+      <div  class="form-outline mb-1">
+        <label class="form-label" for="name">Login</label>
+        <input type="name" name='name' class="form-control" required>
+      </div>
+    
+      <!-- Password input -->
+      <div  class="form-outline mb-4">
+        <label class="form-label" for="password">Senha</label>  
+        <input type="password" name="password" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+    
+      <!-- Register buttons -->
+      
+    </form>
+  </div>
 </div>
+
 @endsection
