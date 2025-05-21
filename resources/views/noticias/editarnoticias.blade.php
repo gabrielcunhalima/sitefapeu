@@ -1,126 +1,209 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 @extends('layout.header')
 @section('title', 'Editar Notícias')
 
 @section('conteudo')
 
-<div class="container-fluid mt-3">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-   <!-- Botão de retorno -->
-   <div class="mb-2">
-    <a href="{{ route('admin.menu') }}" class="d-flex align-items-center text-decoration-none mb-3" style="color: #6c7d77; font-size: 18px; margin-left: 20px;">
-        <i class="fa-solid fa-arrow-left-long" style="font-size: 20px; margin-right: 15px;"></i>
-        <span>Retornar ao Painel</span>
-    </a>
-</div>
-    <h2 class="text-center">Gerenciar Notícias</h2><br>
-   
-    @if(session('success'))
-    <div id="alertMessage" class="alert alert-success alert-dismissible fade position-fixed top-0 start-50 translate-middle-x mt-3 shadow" role="alert" style="z-index: 1050; width: 50%;">
-        <strong>Sucesso!</strong> {{ session('success') }}
-        <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+@if(session('success'))
+<div id="alertMessage"
+     class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow-lg rounded-pill px-4 py-2 d-flex align-items-center"
+     role="alert"
+     style="z-index: 2000; max-width: 600px; width: auto;">
+     
+    <i class="bi bi-check-circle-fill fs-5 me-2 text-success"></i>
+
+    <div class="flex-grow-1 text-dark fw-semibold">
+        Sucesso! {{ session('success') }}
     </div>
+
+    <button type="button" class="btn-close btn-close" data-bs-dismiss="alert" aria-label="Fechar"
+            style="margin-left: 1rem; flex-shrink: 0;"></button>
+</div>
 @endif
 
+
+<div class="container-fluid mt-4">
   
-    <div class="table-responsive d-flex justify-content-center" style="margin-top: -28px;">
-        <table class="table mt-6 text-center" style="width: 70%; transform: scale(0.95);">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">Título</th>
-                    <th scope="col">Imagem</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Visível</th>
-                    <th scope="col">Conteúdo</th>
-                    <th scope="col">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($news as $item)
-                <tr>
-                    <th scope="row">{{ $item->titulo }}</th>
+   <div class="card border-0 shadow-sm mx-auto" style="max-width: 85%;">
+      <div class="card-header bg-white border-bottom py-3">
+         <h4 class="mb-0" style="color: #2e7d32;"><i class="bi bi-newspaper me-2"></i> Gerenciar Notícias</h4>
+         <p class="text-muted small mt-2 mb-0">Gerencie todas as notícias do site, edite conteúdos e imagens.</p>
+      </div>
+   
 
-                    <td>
-                        <div class="d-flex justify-content-center flex-nowrap gap-3">
-                            @for ($i = 1; $i <= 5; $i++)
-                            @php
-                                $imgField = 'imagem' . ($i == 1 ? '' : $i);
-                            @endphp
-                
-                            <div class="border rounded p-2 text-center d-flex flex-column align-items-center justify-content-between"
-                                style="width: 210px; height: 250px;">
-                
-                                <!-- Área da imagem -->
-                                <div style="height: 100px; display: flex; align-items: center; justify-content: center; width: 100%;">
-                                    @if(!empty($item->$imgField))
-                                        <img src="{{ asset($item->$imgField) }}" alt="Imagem {{ $i }}" class="img-fluid" style="max-height: 100px;">
-                                    @else
-                                        <span class="text-muted">Sem imagem</span>
-                                    @endif
-                                </div>
-                
-                                <!-- Botões -->
-                                <div class="w-100 mt-auto">
-                                    <form action="{{ route('noticias.updateImagem', ['id' => $item->id, 'numero' => $i]) }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <input type="file" name="{{ $imgField }}" class="form-control form-control-sm">
-                                        <button type="submit" class="btn btn-sm btn-primary w-100 mt-1">
-                                            <i class="fa fa-upload"></i> Alterar
-                                        </button>
-                                    </form>
-                
-                                    @if(!empty($item->$imgField))
-                                        <form action="{{ route('noticias.deleteImagem', [$item->id, $imgField]) }}" method="POST" onsubmit="return confirm('Você deseja excluir esta imagem?')">
-                                            @csrf
-                                            <button type="submit" class="btn btn-sm btn-secondary w-100 mt-1">
-                                                <i class="fa fa-trash"></i> Excluir
-                                            </button>
-                                        </form>                                        
-                                    @endif
-                                    </div>
-                    
-                                </div>
-                            @endfor
-                        </div>
-                    </td>
+  
+      <div class="card-body p-0">
+          <div class="table-responsive">
+              <table class="table table-hover mb-0 border-0">
+                  <thead style="background-color: #f8f9fa;">
+                      <tr>
+                          <th scope="col" class="px-3 py-3 border-0" style="width: 20%;">Título</th>
+                          <th scope="col" class="px-3 py-3 border-0" style="width: 45%;">Imagens</th>
+                          <th scope="col" class="px-3 py-3 border-0" style="width: 15%;">Data</th>
+                          <th scope="col" class="px-3 py-3 border-0" style="width: 3%;">Status</th>
+                          <th scope="col" class="px-3 py-3 border-0 text-center" style="width: 3%;">Ações</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @foreach($news as $item)
+                      <tr>
+                          <td class="px-3 py-3" style="white-space: normal; word-wrap: break-word" title="{{ $item->titulo }}">
+                              {{ $item->titulo }}
+                          </td>
+                          <td class="px-3 py-3">
+                              <!-- Abas das imagens -->
+                              <ul class="nav nav-tabs nav-fill" id="imageTabs{{ $item->id }}" role="tablist">
+                                  @for ($i = 1; $i <= 5; $i++)
+                                      @php
+                                          $imgField = 'imagem' . ($i == 1 ? '' : $i);
+                                          $hasImage = !empty($item->$imgField);
+                                      @endphp
+                                      <li class="nav-item" role="presentation">
+                                          <button class="nav-link py-1 px-2 {{ $i == 1 ? 'active' : '' }} {{ $hasImage ? 'text-success' : 'text-muted' }}"
+                                              id="img{{ $i }}-tab-{{ $item->id }}" data-bs-toggle="tab" 
+                                              data-bs-target="#img{{ $i }}-content-{{ $item->id }}" type="button" 
+                                              role="tab" aria-controls="img{{ $i }}" aria-selected="{{ $i == 1 ? 'true' : 'false' }}">
+                                              <small>Imagem {{ $i }}</small> 
+                                              @if($hasImage)
+                                                  <i class="bi bi-check-circle-fill text-success ms-1"></i>
+                                              @else
+                                                  <i class="bi bi-dash-circle text-muted ms-1"></i>
+                                              @endif
+                                          </button>
+                                      </li>
+                                  @endfor
+                              </ul>
+                              
+                              <!-- conteúdo de imagens -->
+                              <div class="tab-content p-2 border border-top-0 rounded-bottom">
+                                  @for ($i = 1; $i <= 5; $i++)
+                                      @php
+                                          $imgField = 'imagem' . ($i == 1 ? '' : $i);
+                                      @endphp
+                                      <div class="tab-pane fade {{ $i == 1 ? 'show active' : '' }}" 
+                                           id="img{{ $i }}-content-{{ $item->id }}" role="tabpanel" 
+                                           aria-labelledby="img{{ $i }}-tab-{{ $item->id }}">
+                                          
 
-                    <td>
-                        <input type="date" class="form-control" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
-                            onchange="updateField({{ $item->id }}, 'created_at', this.value)">
-                    </td>
-                    
-                    <td>
-                        <button class="btn btn-sm {{ $item->visivel ? 'btn-success' : 'btn-danger' }}" 
-                            onclick="toggleVisibility({{ $item->id }}, {{ $item->visivel ? 0 : 1 }})">
-                            {{ $item->visivel ? 'Visível' : 'Oculto' }}
-                        </button>
-                    </td>
-                    <td>
-                        <a href="{{ route('noticias.noticiaspost', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">
-                            <i class="fa fa-edit"></i> Editar
-                        </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-sm btn-danger" onclick="deletePost({{ $item->id }})">Excluir Post</button>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+                                             <!-- visualização da imagem nos cards -->
+                                          <div class="d-flex">
+                                              <div class="me-3 d-flex align-items-center justify-content-center bg-light rounded" 
+                                                   style="width: 110px; height: 110px;">
+                                                  @if(!empty($item->$imgField))
+                                                      <img src="{{ asset($item->$imgField) }}" alt="Imagem {{ $i }}" 
+                                                           class="img-fluid" style="max-height: 100px; max-width: 100px;">
+                                                  @else
+                                                      <div class="text-center text-muted">
+                                                          <i class="bi bi-image fs-3 mb-1"></i>
+                                                          <div><small>Sem imagem</small></div>
+                                                      </div>
+                                                  @endif
+                                              </div>
+                                              
+                                              <!-- alterar Imagem/Excluir -->
+                                              <div class="flex-grow-1">
+                                                  <form action="{{ route('noticias.updateImagem', ['id' => $item->id, 'numero' => $i]) }}" 
+                                                        method="POST" enctype="multipart/form-data" class="mb-2">
+                                                      @csrf
+                                                      <div class="input-group">
+                                                          <input type="file" name="{{ $imgField }}" class="form-control form-control-sm">
+                                                          <button type="submit" class="btn btn-sm btn-primary">
+                                                              <i class="bi bi-upload me-2"></i>  Alterar
+                                                          </button>
+                                                      </div>
+                                                  </form>
+                                                  
+                                                  @if(!empty($item->$imgField))
+                                                      <form action="{{ route('noticias.deleteImagem', [$item->id, $imgField]) }}" 
+                                                            method="POST" onsubmit="return confirm('Você deseja excluir esta imagem?')">
+                                                          @csrf
+                                                          <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                              <i class="bi bi-trash"></i> Excluir
+                                                          </button>
+                                                      </form>
+                                                  @endif
+                                              </div>
+                                          </div>
+                                      </div>
+                                  @endfor
+                              </div>
+                          </td>
+
+                          <!-- Data -->
+                          <td class="px-3 py-3">
+                              <input type="date" class="form-control form-control-sm" value="{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}" 
+                                  onchange="updateField({{ $item->id }}, 'created_at', this.value)">
+                          </td>
+                          <!-- Ocultar/Visivel -->
+                          <td class="px-3 py-3 text-center">
+                              <button class="btn btn-sm {{ $item->visivel ? 'btn-outline-success' : 'btn-outline-danger' }}" 
+                                  title="{{ $item->visivel ? 'Visível - Clique para ocultar' : 'Oculto - Clique para tornar visível' }}"
+                                  onclick="toggleVisibility({{ $item->id }}, {{ $item->visivel ? 0 : 1 }})">
+                                  <i class="bi {{ $item->visivel ? 'bi-eye-fill' : 'bi-eye-slash-fill' }}"></i>
+                              </button>
+                          </td>
+                          <!--Editar conteudo -->
+                          <td class="px-3 py-3 text-center">
+                              <div class="btn-group" role="group">
+                                  <a href="{{ route('noticias.noticiaspost', ['id' => $item->id]) }}" 
+                                     class="btn btn-sm btn-outline-primary" title="Editar conteúdo">
+                                      <i class="bi bi-pencil-square"></i>
+                                  </a>
+                        <!--Excluir Noticia -->
+                                  <button class="btn btn-sm btn-outline-danger" 
+                                          title="Excluir notícia"
+                                          onclick="deletePost({{ $item->id }})">
+                                      <i class="bi bi-trash"></i>
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      @endforeach
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+      <!-- Noticias sendo exibidas -->
+      <div class="card-footer bg-white border-top py-3 d-flex justify-content-between align-items-center">
+   <span class="text-muted small">
+    Exibindo {{ $news->count() }} notícia(s) de {{ $news->total() }} — Página {{ $news->currentPage() }} de {{ $news->lastPage() }}
+</span>
+
+
+    <div>
+        <!-- Botão Anterior -->
+        <a href="{{ $news->previousPageUrl() }}" 
+           class="btn btn-sm btn-outline-secondary me-2 {{ $news->onFirstPage() ? 'disabled' : '' }}">
+            <i class="bi bi-chevron-left"></i> Anterior
+        </a>
+
+        <!-- Botão Próximo -->
+        <a href="{{ $news->nextPageUrl() }}" 
+           class="btn btn-sm btn-outline-primary {{ $news->hasMorePages() ? '' : 'disabled' }}">
+            Próximo <i class="bi bi-chevron-right"></i>
+        </a>
     </div>
 </div>
 
+   </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-
 setTimeout(() => {
-            let alertBox = document.getElementById('alertMessage');
-            if (alertBox) {
-                alertBox.style.transition = "opacity 0.5s";
-                alertBox.style.opacity = "0";
-                setTimeout(() => alertBox.remove(), 500);
-            }
-        }, 3000);
+    let alertBox = document.getElementById('alertMessage');
+    if (alertBox) {
+        alertBox.style.transition = "opacity 0.5s";
+        alertBox.style.opacity = "0";
+        setTimeout(() => alertBox.remove(), 500);
+    }
+}, 3000);
 
-  function updateField(id, campo, valor) {
+function updateField(id, campo, valor) {
     fetch("{{ url('/noticias/editar') }}/" + id, {
         method: "POST",
         headers: {
@@ -176,4 +259,4 @@ function deletePost(id) {
 }
 </script>
 
-@endsection
+@endsection 

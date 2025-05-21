@@ -196,6 +196,11 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('homepage.home') }}">Início</a></li>
               <li class="breadcrumb-item active" aria-current="page">{{ $titulo }}</li>
+              @if (Route::currentRouteName() === 'noticias.editarnoticias')
+              <li class="breadcrumb-item">
+                <a href="{{ route('admin.menu') }}">Retornar ao painel administrativo</a>
+              </li>
+            @endif
             </ol>
           </nav>
         </div>

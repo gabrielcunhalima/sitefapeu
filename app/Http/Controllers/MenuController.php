@@ -204,8 +204,7 @@ class MenuController extends Controller
         if (!Auth::check()) {
             return redirect()->route('admin.login');
         }
-
-        $news = Post::all();
+        $news = Post::orderBy('created_at', 'desc')->paginate(5);
         $imagem = 'noticiasedit.png';
         $titulo = 'Edição de Notícias';
 
@@ -304,8 +303,6 @@ class MenuController extends Controller
 
         return back()->with('error', 'Nenhuma imagem foi enviada.');
     }
-
-
 
 
 
