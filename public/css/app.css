@@ -857,6 +857,9 @@
     }
   }
 
+table.table-hover tbody tr {
+    border-bottom: 1px solid #b8b2b2 !important;
+}
 
 
   /* Link sublinhado */
@@ -869,3 +872,9 @@
   .link-underline-primary:hover {
     color: #099072;
   }
+
+  #alertMessage .btn-close {
+    position: relative;
+    top: 0;
+    right: 0;
+}
