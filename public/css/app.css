@@ -68,7 +68,7 @@
     transform: scale(1.019);
   }
 
-  /* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
+/* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
 
   .fapeu-btn {
     display: inline-flex;
@@ -239,8 +239,8 @@
 
   @media (max-width: 796px) {
 
-    .fapeu-button {
-      margin-bottom: 10px;
+    p {
+      font-size: 1.3em;
     }
 
     .textofooter {
@@ -265,6 +265,10 @@
     .carousel-item {
       height: 12rem;
       background-color: #cac5c5;
+    }
+
+    .transformando {
+      font-size: 2em !important;
     }
 
     .lead {
@@ -314,10 +318,6 @@
 
   }
 
-  .fapeu-card {
-    border-left: 4px solid #30755C;
-    border-radius: 6px;
-  }
 
   .bg-gestaoprojetos {
     background-color: #3D9A78;
@@ -352,7 +352,7 @@
   }
 
   .bg-transparente {
-    background-color: #ffffff7a;
+    background-color: #303030ee;
   }
 
   .bg-transparentehome {
@@ -391,10 +391,6 @@
     background-color: #dadada;
   }
 
-  .bg-cinzaverde {
-    background-color: #f0f0f0;
-  }
-
   .bg-cinza {
     background-color: #c4c4c4;
   }
@@ -421,14 +417,6 @@
 
   .bg-roxo {
     background-color: #76027f;
-  }
-
-  .text-homebotoes {
-    color: #017e20 !important;
-  }
-
-  .text-dourado {
-    color: #665700;
   }
 
   .text-principal {
@@ -461,128 +449,11 @@
     aspect-ratio: 4 / 3;
   }
 
-  .admin-dashboard {
-    background-color: #f8f9fa;
-    padding: 30px 0;
-    min-height: 100vh;
-  }
+  /* .blog-img img {
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+  } */
 
-  .dashboard-header {
-    background-color: #06551A;
-    color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
-  }
-
-  .dashboard-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-
-  .dashboard-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-header {
-    background-color: #30755C;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .card-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  .card-body {
-    padding: 25px;
-    text-align: center;
-  }
-
-  .admin-btn {
-    background-color: #06551A;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 25px;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-weight: 600;
-  }
-
-  .admin-btn:hover {
-    background-color: #054615;
-    box-shadow: 0 5px 15px rgba(6, 85, 26, 0.3);
-    color: white;
-  }
-
-  .admin-btn-secondary {
-    background-color: #30755C;
-  }
-
-  .admin-btn-secondary:hover {
-    background-color: #275647;
-  }
-
-  .logout-container {
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .logout-btn {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 40px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .logout-btn:hover {
-    background-color: #bd2130;
-    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
-    color: white;
-  }
-
-  .user-welcome {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .dashboard-stats {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .stat-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 15px 25px;
-    margin: 0 10px;
-    text-align: center;
-    min-width: 150px;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
 
   /* navbar */
 
@@ -681,7 +552,6 @@
     .our-team {
       margin-bottom: 30px;
     }
-
   }
 
   /* Acessibilidade */

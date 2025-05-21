@@ -94,7 +94,7 @@
     <div class="accordion" id="acordosCollective">
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2023">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2023" aria-expanded="true" aria-controls="collapse2023">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2023" aria-expanded="false" aria-controls="collapse2023">
             Acordo Coletivo 2023/2025
           </button>
         </h2>
