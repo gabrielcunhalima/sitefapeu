@@ -23,8 +23,8 @@
                         </p>
 
                         <p class="container text-center mt-4 mb-3">
-                            <a href="http://150.162.78.4/#/login/fornecedor" download class="fapeu-btn">
-                                Acesse o Portal do Fornecedor <i class="bi bi-arrow-right"></i>
+                            <a href="http://150.162.78.4/#/login/fornecedor" download class="fapeu-btn" target="_blank">
+                                Acesse o Portal do Fornecedor <i class="bi bi-box-arrow-up-right ms-2"></i>
                             </a>
                         </p>
                     </div>

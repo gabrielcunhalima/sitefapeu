@@ -89,7 +89,7 @@
   .slick-next {
     width: 40px;
     height: 40px;
-    background-color: #06551A;
+    background-color: #06551A !important;
     border-radius: 50%;
     z-index: 10;
   }
