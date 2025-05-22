@@ -26,7 +26,7 @@ class LicitacaoController extends Controller
         }
 
         $validated = $request->validate([
-            'ordem' => 'nullable|integer',
+            'ordem' => 'nullable|string',
             'processo' => 'nullable|string',
             'orgao' => 'required|string',
             'projeto' => 'nullable|string',

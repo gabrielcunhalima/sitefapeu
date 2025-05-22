@@ -79,7 +79,7 @@
                                             <div class="col-md-3">
                                                 <label for="ordem" class="form-label fw-bold">Seleção Pública (se aplicável)</label>
                                                 <input type="text" class="form-control" id="ordem" name="ordem" 
-                                                       value="{{ old('ordem', $dados->ordem) }}" min="1">
+                                                       value="{{ old('ordem', $dados->ordem) }}">
                                             </div>
                                             <div class="col-md-3">
                                                 <label for="processo" class="form-label fw-bold">Contrato/Convênio</label>
