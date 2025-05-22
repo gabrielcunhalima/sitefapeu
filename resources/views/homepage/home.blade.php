@@ -83,7 +83,8 @@
   .news-img-container {
     height: 200px;
     overflow: hidden;
-    position: relative;;
+    position: relative;
+    ;
   }
 
   .news-img-container img {
@@ -235,39 +236,9 @@
     text-align: center;
   }
 
-  /*
-
-  .slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: #dddddd;
-    border-radius: 50%;
-  }
-
-  .slick-dots li.slick-active button {
-    background: #06551A;
-  } */
-
   .servicos-section {
     padding: 60px 0;
-    background-color:rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
   }
 
   .servico-card {
@@ -341,8 +312,6 @@
     border-radius: 8px;
     overflow: hidden;
   }
-
-
 
   @media (max-width: 992px) {
     .action-button {
@@ -418,6 +387,16 @@
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
             <p>Transparência</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-3">
+        <a href="{{route('colaborador.informerendimentos')}}" class="text-decoration-none">
+          <div class="action-button bg-danger text-white text-center">
+            <i class="bi bi-cash mb-2" style="font-size: 2rem;"></i>
+            <p>Informe de Rendimentos</p>
           </div>
         </a>
       </div>

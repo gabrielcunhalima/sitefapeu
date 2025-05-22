@@ -360,15 +360,6 @@ class MenuController extends Controller
         return $this->renderView('transparencia.relanualgestao', 'relanualgestao.png', 'Relatório Anual de Gestão');
     }
 
-    public function selecoespublicas()
-    {
-        $selecoes = Licitacoes::query()
-            ->orderBy('id', 'desc')
-            ->get();
-        // dd($selecoes);
-        return $this->renderView('transparencia.selecoespublicas', 'selecoespublicas.png', 'Seleções Públicas', $selecoes);
-    }
-
     public function projetostransparencia()
     {
         return $this->renderView('transparencia.projetostransparencia', 'projetostransparencia.png', 'Portal de Transparência');
@@ -449,119 +440,6 @@ class MenuController extends Controller
     public function espacofornecedor()
     {
         return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
-    }
-
-    public function adicionarlicitacao(Request $request)
-    {
-
-        if (!Auth::check()) {
-            return redirect()->route('admin.login');
-        }
-
-        Session::put('admin_logged_in_time', time());
-
-        if ($request->isMethod('GET')) {
-
-            if ($request->id > 0) {
-
-                $dados = Licitacoes::findOrFail($request->id);
-                $imagem = 'adicionarlicitacao.png';
-                $titulo = 'Editor de Licitação';
-
-                return view('transparencia.selecoespublicas', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', true);
-            }
-        }
-
-        if ($request->isMethod('POST')) {
-            $validated = $request->validate([
-                'ordem' => 'required|integer',
-                'processo' => 'required|string|max:255',
-                'orgao' => 'required|string|max:255',
-                'projeto' => 'required|string|max:20',
-                'licitacao' => 'required|string|max:250',
-                'dataabertura' => 'required|date',
-                'objeto' => 'required|string|max:555',
-                'resultado' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
-                'datapublicacao' => 'nullable|date',
-                'ataabertura' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
-                'tipo' => 'required|string|',
-                'contratoconvenio' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
-            ]);
-
-            $licitacao = Licitacoes::findOrCreate($request->id);
-            $licitacao->ordem = $request->input('ordem');
-            $licitacao->processo = $request->input('processo');
-            $licitacao->orgao = $request->input('orgao');
-            $licitacao->projeto = $request->input('projeto');
-            $licitacao->dataabertura = $request->input('dataabertura');
-            $licitacao->objeto = $request->input('objeto');
-            $licitacao->datapublicacao = $request->input('datapublicacao');
-            $licitacao->tipo = $request->input('tipo');
-
-            if ($request->hasFile('ataabertura')) {
-                $lic = $request->file('ataabertura');
-                $destPath = public_path('storage/posts');
-
-                $licName = 'ATA_ABERTURA_' . $lic->getClientOriginalExtension();
-                $lic->move($destPath, $licName);
-
-                $licitacao->ataabertura = 'storage/selecoes/' . $licName;
-            }
-
-            if ($request->hasFile('contratoconvenio')) {
-                $lic = $request->file('contratoconvenio');
-                $destPath = public_path('storage/posts');
-
-                $licName = 'CONTRATO-CONVENIO_' . $lic->getClientOriginalExtension();
-                $lic->move($destPath, $licName);
-
-                $licitacao->contratoconvenio = 'storage/selecoes/' . $licName;
-            }
-
-            if ($request->hasFile('resultado')) {
-                $lic = $request->file('resultado');
-                $destPath = public_path('storage/posts');
-
-                $licName = 'RESULTADO_' . $lic->getClientOriginalExtension();
-                $lic->move($destPath, $licName);
-
-                $licitacao->resultado = 'storage/selecoes/' . $licName;
-            }
-
-            if ($request->hasFile('licitacao')) {
-                $lic = $request->file('licitacao');
-                $destPath = public_path('storage/posts');
-
-                $licName = 'LICITACAO_' . $lic->getClientOriginalExtension();
-                $lic->move($destPath, $licName);
-
-                $licitacao->licitacao = 'storage/selecoes/' . $licName;
-            }
-
-            $licitacao->save();
-
-
-            return redirect()->route('transparencia.selecoespublicas')->with('success', 'Licitação salva com sucesso!');
-        }
-
-        $dados = [
-            'ordem' => '',
-            'processo' => '',
-            'orgao' => '',
-            'projeto' => '',
-            'contratoconvenio' => '',
-            'licitacao' => '',
-            'dataabertura' => '',
-            'objeto' => '',
-            'resultado' => '',
-            'datapublicacao' => '',
-            'ataabertura' => '',
-            'id' => ''
-        ];
-        $imagem = 'adicionarlicitacao.png';
-        $titulo = 'Nova Licitação';
-
-        return view('fornecedor.adicionarlicitacao', compact('dados', 'imagem', 'titulo'))->with('alteratitulo', false);
     }
 
     // MENU Colaborador

@@ -21,7 +21,6 @@ class Licitacoes extends Model
         'resultado',
         'datapublicacao',
         'tipo_licitacao',
-        '_token',
     ];
 
     public $timestamps = true;

@@ -15,7 +15,6 @@
     transition: transform 0.4s ease-in-out;
     background-color: transparent !important;
   }
-
   .carousel-item img {
     width: 100%;
     height: 100%;
@@ -66,6 +65,10 @@
 
   .grow2:hover {
     transform: scale(1.019);
+  }
+
+  select .form-control {
+    padding-bottom: 100px;
   }
 
 /* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
@@ -457,129 +460,6 @@
     aspect-ratio: 4 / 3;
   }
 
-  .admin-dashboard {
-    background-color: #f8f9fa;
-    padding: 30px 0;
-    min-height: 100vh;
-  }
-
-  .dashboard-header {
-    background-color: #06551A;
-    color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
-  }
-
-  .dashboard-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-
-  .dashboard-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-header {
-    background-color: #30755C;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .card-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  .card-body {
-    padding: 25px;
-    text-align: center;
-  }
-
-  .admin-btn {
-    background-color: #06551A;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 25px;
-    transition: all 0.3s ease;
-    width: 100%;
-    font-weight: 600;
-  }
-
-  .admin-btn:hover {
-    background-color: #054615;
-    box-shadow: 0 5px 15px rgba(6, 85, 26, 0.3);
-    color: white;
-  }
-
-  .admin-btn-secondary {
-    background-color: #30755C;
-  }
-
-  .admin-btn-secondary:hover {
-    background-color: #275647;
-  }
-
-  .logout-container {
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .logout-btn {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 40px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .logout-btn:hover {
-    background-color: #bd2130;
-    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
-    color: white;
-  }
-
-  .user-welcome {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .dashboard-stats {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .stat-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 15px 25px;
-    margin: 0 10px;
-    text-align: center;
-    min-width: 150px;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
-
   /* navbar */
 
   .logofapeu {
@@ -668,7 +548,6 @@
     color: #333;
   }
 
-  /* Outros estilos específicos */
   @media only screen and (max-width: 768px) {
     .our-bod {
       margin-bottom: 30px;
@@ -679,97 +558,11 @@
     }
   }
 
-  /* Acessibilidade */
-
-  .grayscale {
-    filter: grayscale(100%);
-  }
-
-  /* Opcional: Estilo para o botão ativo */
-  .bg-acessibilidade2 {
-    background-color: #d3d3d3;
-    /* ou qualquer cor que destaque o botão */
-  }
-
-  /* Ajuste na posição dos botões de acessibilidade */
-  .accessibility-buttons {
-    position: fixed;
-    top: 38.5%;
-    right: 4px;
-    z-index: 1050;
-  }
-
   .navbar-custom {
     z-index: 1040;
     /* Acima dos botões */
   }
 
-  /* Estilo de alto contraste */
-  .high-contrast {
-    background-color: #000 !important;
-    /* Fundo preto */
-    color: #ffffff !important;
-    /* Texto branco */
-  }
-
-  /* Aplicando alto contraste a todos os filhos diretos */
-  .high-contrast * {
-    background-color: inherit !important;
-    /* Herda a cor de fundo do pai */
-    color: inherit !important;
-    /* Herda a cor do texto do pai */
-  }
-
-  .bg-cinzafapeu {
-    background-color: #dddddd;
-    /* Fundo preto */
-  }
-
-  .high-contrast a {
-    color: rgb(119, 172, 252);
-    /* Links azuis */
-  }
-
-  .high-contrast .btn {
-    background-color: #ffffff;
-    /* Botões brancos */
-    color: #000;
-    /* Texto preto nos botões */
-    border: white;
-  }
-
-  .high-contrast h1,
-  .high-contrast h2,
-  .high-contrast h3,
-  .high-contrast h4 {
-    color: #ffffff;
-    /* Cor do texto conforme necessário */
-  }
-
-  .high-contrast h1 a,
-  .high-contrast h2 a,
-  .high-contrast h3 a,
-  .high-contrast h4 a {
-    color: rgb(0, 71, 54);
-    /* Links dentro de cabeçalhos em modo contraste */
-  }
-
-  .high-contrast .card {
-    background-color: #000000;
-    /* Fundo do card */
-    color: #ffffff;
-    /* Texto branco */
-    border: 1px solid #ffffff;
-    /* Borda cinza */
-  }
-
-  /* Botões dentro de cards em modo de contraste */
-  .high-contrast .card .btn {
-    background-color: #00ff88;
-    /* Fundo do botão verde escuro dentro dos cards */
-    color: #000;
-    /* Texto preto nos botões dentro dos cards */
-  }
 
   .font-montserrat {
     font-family: "Montserrat", sans-serif;

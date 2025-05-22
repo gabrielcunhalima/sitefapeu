@@ -42,7 +42,7 @@ class LicitacaoController extends Controller
 
         $licitacao = Licitacoes::findOrCreate($request->id);
 
-        $licitacao->fill($request->except(['licitacao', 'ataabertura', 'contratoconvenio', 'resultado']));
+        $licitacao->fill($request->except(['_token', 'id', 'licitacao', 'ataabertura', 'contratoconvenio', 'resultado']));
 
         foreach (['licitacao', 'ataabertura', 'contratoconvenio', 'resultado'] as $campo) {
             if ($request->hasFile($campo)) {
@@ -75,9 +75,30 @@ class LicitacaoController extends Controller
         return redirect()->route('licitacoes.listar')->with('success', 'Licitação excluída com sucesso!');
     }
 
-    public function listarPublico()
+    public function listarDispensa()
     {
-        $licitacoes = Licitacoes::orderBy('dataabertura', 'desc')->get();
-        return view('licitacoes.publico', compact('licitacoes'));
+        $titulo = 'Dispensa de Licitação';
+        $licitacoes = Licitacoes::where('tipo_licitacao', 2)
+            ->orderBy('dataabertura', 'desc')
+            ->get();
+        return view('fornecedor.dispensa', compact('licitacoes', 'titulo'));
+    }
+
+    public function listarInexigibilidade()
+    {
+        $titulo = 'Inexigibilidade de Licitação';
+        $licitacoes = Licitacoes::where('tipo_licitacao', 3)
+            ->orderBy('dataabertura', 'desc')
+            ->get();
+        return view('fornecedor.inexigibilidade', compact('licitacoes', 'titulo'));
+    }
+
+    public function listarSelecaoPublica()
+    {
+        $titulo = 'Seleção Pública';
+        $licitacoes = Licitacoes::where('tipo_licitacao', 1)
+            ->orderBy('dataabertura', 'desc')
+            ->get();
+        return view('fornecedor.selecoespublicas', compact('licitacoes', 'titulo'));
     }
 }

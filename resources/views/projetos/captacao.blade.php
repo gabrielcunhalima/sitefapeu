@@ -127,14 +127,14 @@
     text-align: center;
   }
 
-  .form-control {
+  .personalizado {
     border-radius: 8px;
     padding: 12px 15px;
     border: 1px solid #ddd;
     transition: all 0.3s ease;
   }
 
-  .form-control:focus {
+  .personalizado:focus {
     border-color: #06551A;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }

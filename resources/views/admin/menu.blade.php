@@ -35,15 +35,15 @@
     <div class="col-md-4 col-sm-12">
         <div class="col-12">
             <div class="text-center mt-4">
-                <a href='{{url('adicionarlicitacao')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
+                <a href='{{route('licitacoes.form')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
                     <i class="bi bi-bag-plus"></i> &nbsp;&nbsp; Adicionar Licitação
                 </a>
             </div>
         </div>
         <div class="col-12">
             <div class="text-center mt-4">
-                <a href='{{url('adicionarlicitacao')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-brush"></i> &nbsp;&nbsp; Editar Licitação
+                <a href='{{route('licitacoes.listar')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
+                    <i class="bi bi-brush"></i> &nbsp;&nbsp; Gerenciar Licitações
                 </a>
             </div>
         </div>

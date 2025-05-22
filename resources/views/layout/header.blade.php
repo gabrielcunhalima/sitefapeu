@@ -141,9 +141,9 @@
                 Fornecedor
               </a>
               <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="supplierDropdown">
-                <li><a class="dropdown-item" href="{{route('transparencia.selecoespublicas')}}">Seleções Públicas</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.selecoespublicas')}}">Seleções Públicas</a></li>
                 <li><a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a></li>
-                <li><a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade de Licitação</a></li>
                 <li><a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a></li>
               </ul>
             </li>
@@ -187,7 +187,8 @@
   Request::route()->getName() !== 'projetos.calculoressarcimento' &&
   Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
   Request::route()->getName() !== 'projetos.orientacoescontato' &&
-  Request::route()->getName() !== 'fornecedor.adicionarlicitacao')
+  Request::route()->getName() !== 'licitacoes.form' &&
+  Request::route()->getName() !== 'licitacoes.listar')
   <div class="page-header py-5">
     <div class="container">
       <div class="row">
