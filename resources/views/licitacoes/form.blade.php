@@ -77,12 +77,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <label for="ordem" class="form-label fw-bold">Ordem</label>
-                                                <input type="number" class="form-control" id="ordem" name="ordem" 
+                                                <label for="ordem" class="form-label fw-bold">Seleção Pública (se aplicável)</label>
+                                                <input type="text" class="form-control" id="ordem" name="ordem" 
                                                        value="{{ old('ordem', $dados->ordem) }}" min="1">
                                             </div>
                                             <div class="col-md-3">
-                                                <label for="processo" class="form-label fw-bold">Processo</label>
+                                                <label for="processo" class="form-label fw-bold">Contrato/Convênio</label>
                                                 <input type="text" class="form-control" id="processo" name="processo" 
                                                        value="{{ old('processo', $dados->processo) }}">
                                             </div>
@@ -122,7 +122,7 @@
                                                        value="{{ old('datapublicacao', $dados->datapublicacao) }}">
                                             </div>
                                             <div class="col-md-6">
-                                                <label for="dataabertura" class="form-label fw-bold">Data de Abertura</label>
+                                                <label for="dataabertura" class="form-label fw-bold">Data de Abertura e Julgamento</label>
                                                 <input type="date" class="form-control" id="dataabertura" name="dataabertura" 
                                                        value="{{ old('dataabertura', $dados->dataabertura) }}">
                                             </div>
@@ -155,7 +155,7 @@
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="ataabertura" class="form-label fw-bold">
-                                                    <i class="bi bi-file-earmark-text"></i> Ata de Abertura
+                                                    <i class="bi bi-file-earmark-text"></i> Ata de Abertura e Julgamento
                                                 </label>
                                                 <input type="file" class="form-control" id="ataabertura" name="ataabertura" 
                                                        accept=".pdf,.doc,.docx">

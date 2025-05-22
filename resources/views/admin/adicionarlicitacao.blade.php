@@ -61,7 +61,7 @@
                 <input type="date" class="form-control" id="datapublicacao" name="datapublicacao" value='{{$dados['datapublicacao']}}' required>
             </div>
             <div class="mb-3 col-6">
-                <label for="dataabertura" class="form-label font-weight-bold">Data de Abertura</label>
+                <label for="dataabertura" class="form-label font-weight-bold">Data de Abertura e Julgamento</label>
                 <input type="date" class="form-control" id="dataabertura" name="dataabertura" value='{{$dados['dataabertura']}}' required>
             </div>
         </div>

@@ -80,10 +80,10 @@
                                 <thead class="bg-light">
                                     <tr>
                                         <th class="px-4 py-3 text-center" style="width: 80px;">
-                                            <i class="bi bi-hash text-muted"></i> Ordem
+                                            <i class="bi bi-hash text-muted"></i> Dispensa
                                         </th>
                                         <th class="px-4 py-3">
-                                            <i class="bi bi-file-text text-muted"></i> Processo
+                                            <i class="bi bi-file-text text-muted"></i> Contrato/Convênio
                                         </th>
                                         <th class="px-4 py-3">
                                             <i class="bi bi-building text-muted"></i> Órgão
@@ -157,7 +157,7 @@
                                                     @endif
                                                     @if($licitacao->ataabertura)
                                                         <a href="{{ asset($licitacao->ataabertura) }}" target="_blank" 
-                                                           class="btn btn-outline-success btn-sm" title="Ata de Abertura">
+                                                           class="btn btn-outline-success btn-sm" title="Ata de Abertura e Julgamento">
                                                             <i class="bi bi-file-earmark-text"></i>
                                                         </a>
                                                     @endif
@@ -204,7 +204,7 @@
                         </div>
                         <div class="col-md-3 mb-2">
                             <span class="btn btn-outline-success btn-sm me-2"><i class="bi bi-file-earmark-text"></i></span>
-                            <small>Ata de Abertura</small>
+                            <small>Ata de Abertura e Julgamento</small>
                         </div>
                         <div class="col-md-3 mb-2">
                             <span class="btn btn-outline-warning btn-sm me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
@@ -268,7 +268,6 @@ function limparFiltros() {
     document.getElementById('totalRegistros').textContent = {{ $licitacoes->where('tipo_licitacao', 2)->count() }};
 }
 
-// Aplicar filtros em tempo real
 document.getElementById('filtroProcesso').addEventListener('keyup', aplicarFiltros);
 document.getElementById('filtroOrgao').addEventListener('keyup', aplicarFiltros);
 document.getElementById('filtroAno').addEventListener('change', aplicarFiltros);

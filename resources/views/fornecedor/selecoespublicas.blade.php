@@ -81,10 +81,10 @@
                             <thead class="bg-light">
                                 <tr>
                                     <th class="px-4 py-3 text-center" style="width: 80px;">
-                                        Ordem
+                                        Seleção pública
                                     </th>
                                     <th class="px-4 py-3">
-                                        Processo
+                                        Contrato/Convênio
                                     </th>
                                     <th class="px-4 py-3">
                                         Órgão
@@ -150,7 +150,7 @@
                                             @endif
                                             @if($licitacao->ataabertura)
                                             <a href="{{ asset($licitacao->ataabertura) }}" target="_blank"
-                                                class="btn btn-outline-success btn-sm" title="Ata de Abertura">
+                                                class="btn btn-outline-success btn-sm" title="Ata de Abertura e Julgamento">
                                                 <i class="bi bi-file-earmark-text"></i>
                                             </a>
                                             @endif
@@ -197,7 +197,7 @@
                         </div>
                         <div class="col-md-3 mb-2">
                             <span class="btn btn-outline-success btn-sm me-2"><i class="bi bi-file-earmark-text"></i></span>
-                            <small>Ata de Abertura</small>
+                            <small>Ata de Abertura e Julgamento</small>
                         </div>
                         <div class="col-md-3 mb-2">
                             <span class="btn btn-outline-warning btn-sm me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
