@@ -7,31 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Título dinâmico baseado na seção atual -->
   <title>@yield('title') | Fundação de Amparo à Pesquisa e Extensão Universitária</title>
-
-  <!-- Favicon -->
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
-  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap e ícones -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- jQuery (necessário para alguns componentes Bootstrap) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Slick Carousel (para sliders) -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-  <!-- CSS personalizado -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWYDQ8SY8W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HWYDQ8SY8W');
+  </script>
 
   <script>
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -42,17 +47,8 @@
     }
   </script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTNDQSLG1B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  @turnstileScripts()
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-KTNDQSLG1B');
-  </script>
 </head>
 
 <body>
@@ -202,7 +198,7 @@
               <li class="breadcrumb-item">
                 <a href="{{ route('admin.menu') }}">Retornar ao painel administrativo</a>
               </li>
-            @endif
+              @endif
             </ol>
           </nav>
         </div>
@@ -246,7 +242,7 @@
     }
 
     .shownav {
-      color:white !important;
+      color: white !important;
     }
 
     .navbar-nav .nav-link:hover,

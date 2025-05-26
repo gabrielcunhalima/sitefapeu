@@ -40,7 +40,7 @@ class RessarcimentoController extends Controller
         $solicitacao = SolicitacaoRessarcimento::create($validated);
 
         try {
-            $email = 'gabriel.lima@fapeu.org.br';
+            $email = 'captacao@fapeu.org.br';
             Mail::to($email)->send(new SolicitacaoRessarcimentoEmail($solicitacao));
         } catch (\Exception $e) {
             \Log::error('Erro ao enviar e-mail: ' . $e->getMessage());

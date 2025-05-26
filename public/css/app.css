@@ -67,9 +67,11 @@
     transform: scale(1.019);
   }
 
-  select .form-control {
-    padding-bottom: 100px;
-  }
+select.form-control{
+    width: 100% !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+}
 
 /* padronização do botão, tem varias variações, é só procurar a melhor ou criar outra se precisar */
 
@@ -89,15 +91,19 @@
     box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
   }
 
+  .btn:active { 
+    transition: all 0.3s ease;
+    transform: translateY(2px);
+  }
+
   .fapeu-btn:hover {
     background-color: #054615;
-    transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(6, 85, 26, 0.3);
     color: #ffffff;
   }
 
   .fapeu-btn:active {
-    transform: translateY(-1px);
+    transform: translateY(4px);
     box-shadow: 0 4px 8px rgba(6, 85, 26, 0.3);
   }
 

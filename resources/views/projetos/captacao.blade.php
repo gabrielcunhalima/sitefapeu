@@ -158,8 +158,7 @@
   }
 
   .action-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.1);
   }
 
   .action-card .card-title {
@@ -284,89 +283,6 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="container">
-  <h2 class="section-header mt-5">Etapas do Projeto na FAPEU</h2>
-  <div class="text-center mt-4">
-    <img src="images/etapascaptacao.png" class="img-fluid process-img" alt="Etapas do Projeto na FAPEU">
-  </div>
-</section> -->
-
-<!-- <section class="container" id="form-contact">
-  <div class="form-container mt-5">
-    <h3 class="form-title">Formulário de Contato</h3>
-
-    @if(session('success'))
-    <div class="alert alert-success">
-      {{ session('success') }}
-    </div>
-    @endif
-
-    <form action="{{ route('captacao.salvar') }}" method="POST">
-      @csrf
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label for="inputNome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="inputNome" name="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputEmail" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="inputEmail" name="Email" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputTelefone" class="form-label">Telefone para contato com DDD</label>
-          <input type="text" class="form-control" id="inputTelefone" name="Telefone" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label for="inputCPF" class="form-label">CPF (Não obrigatório)</label>
-          <input type="text" class="form-control" id="inputCPF" name="CPF">
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputOrgaoDeOrigem" class="form-label">Órgão de Origem</label>
-          <input type="text" class="form-control" id="inputOrgaoDeOrigem" name="OrgaoDeOrigem" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputFuncaoQueOcupa" class="form-label">Função que Ocupa</label>
-          <input type="text" class="form-control" id="inputFuncaoQueOcupa" name="FuncaoQueOcupa" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label for="inputCentroAcademico" class="form-label">Centro Acadêmico</label>
-          <input type="text" class="form-control" id="inputCentroAcademico" name="CentroAcademico" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputDepartamentoLaboratorio" class="form-label">Departamento/Laboratório</label>
-          <input type="text" class="form-control" id="inputDepartamentoLaboratorio" name="DepartamentoLaboratorio" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="inputAreaInteresse" class="form-label">Áreas de Interesse</label>
-          <input type="text" class="form-control" id="inputAreaInteresse" name="AreaInteresse" required>
-        </div>
-      </div>
-
-      <div class="text-end mt-4">
-        <button type="submit" class="fapeu-btn">
-          <i class="bi bi-send me-2"></i>Enviar
-        </button>
-      </div>
-    </form>
-
-    @if($errors->any())
-    <div class="alert alert-danger mt-4">
-      <ul class="mb-0">
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif
-  </div>
-</section> -->
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

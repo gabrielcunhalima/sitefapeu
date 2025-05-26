@@ -117,7 +117,6 @@
   input[type="number"] {
     -moz-appearance: textfield;
   }
-  
 </style>
 
 <section class="resource-section">
@@ -198,6 +197,10 @@
             <option value="5">Universidade Federal do Pampa (UNIPAMPA)</option>
             <option value="6">Hospital Universitário da UFSC (EBSERH HU-UFSC)</option>
           </select>
+        </div>
+
+        <div class="my-3 text-center">
+          <x-turnstile data-theme="light"/>
         </div>
 
         <div class="text-center mt-4">

@@ -5,35 +5,44 @@
 <div class="container pb-5">
     <div class="row g-4 mb-5">
         <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
-
+            <div class="card shadow-sm text-center border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
                 <div class="card-body p-4">
-                    <div class="text-center mb-4">
-                        <i class="bi bi-laptop text-verde3" style="font-size: 3rem;"></i>
+                    <div class="">
+                        <i class="bi bi-laptop text-verde3" style="font-size: 2.5rem;"></i>
                     </div>
-                    <h3 class="card-title text-center mb-3">Portal do Coordenador</h3>
-                    <p class="card-text text-center">Realize pedidos e liberações, consulte relatórios financeiros e tenha uma visão completa do seu projeto.</p>
-                    <div class="text-center mt-4">
-                        <a href="http://150.162.78.4:8080/manager/login/coordenador/" target="_blank" class="btn btn-success btn-lg px-4 rounded-pill">
+                    <h3 class="card-title mb-3">Portal do Coordenador</h3>
+                    <p class="card-text">Realize pedidos e liberações, consulte relatórios financeiros e tenha uma visão completa do seu projeto.</p>
+                        <a href="http://150.162.78.4:8080/manager/login/coordenador/" target="_blank" class="btn btn-success">
                             <i class="bi bi-box-arrow-up-right me-2"></i>Acessar Portal
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <i class="bi bi-people text-verde3" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <h3 class="card-title text-center mb-3">Sistema DRHFlow</h3>
+                    <p class="card-text text-center">Gerencie sua equipe, bolsistas e colaboradores com acesso direto ao sistema de Recursos Humanos.</p>
+                    <div class="text-center">
+                        <a href="http://150.162.78.45:8080/DRHFlow/" target="_blank" class="btn btn-success">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Acessar DRHFlow
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
-                <div class="card-body p-4">
-                    <div class="text-center mb-4">
-                        <i class="bi bi-people text-verde3" style="font-size: 3rem;"></i>
-                    </div>
-                    <h3 class="card-title text-center mb-3">Sistema DRHFlow</h3>
-                    <p class="card-text text-center">Gerencie sua equipe, bolsistas e colaboradores com acesso direto ao sistema de Recursos Humanos.</p>
-                    <div class="text-center mt-4">
-                        <a href="http://150.162.78.45:8080/DRHFlow/" target="_blank" class="btn btn-success btn-lg px-4 rounded-pill">
-                            <i class="bi bi-box-arrow-up-right me-2"></i>Acessar DRHFlow
-                        </a>
-                    </div>
+        <div class="col-12">
+            <div class="card shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
+                <div class="card-body text-center">
+                    <i class="bi bi-calculator-fill text-verde3 mb-3" style="font-size: 2.5rem;"></i>
+                    <h4 class="card-title">Cálculo de Encargos de Prestação de Serviços</h4>
+                    <p class="card-text">Ferramenta para simular encargos, impostos e valores líquidos sobre pagamentos de autônomos.</p>
+                    <a href="https://eventos.fapeu.com.br/calculo/public" target="_blank" class="btn btn-success mt-2">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>Acessar Ferramenta
+                    </a>
                 </div>
             </div>
         </div>
@@ -345,19 +354,7 @@
                 <!-- simuladores -->
                 <div class="tab-pane fade" id="simuladores" role="tabpanel" aria-labelledby="simuladores-tab">
                     <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="card h-100 shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
-                                <div class="card-body p-4 text-center">
-                                    <i class="bi bi-calculator-fill text-verde3 mb-3" style="font-size: 2.5rem;"></i>
-                                    <h4 class="card-title">Cálculo de Encargos de Prestação de Serviços</h4>
-                                    <p class="card-text">Ferramenta para simular encargos, impostos e valores líquidos sobre pagamentos de autônomos.</p>
-                                    <a href="https://eventos.fapeu.com.br/calculo/public" target="_blank" class="btn btn-success mt-3">
-                                        <i class="bi bi-box-arrow-up-right me-2"></i>Acessar Ferramenta
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="card h-100 shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
                                 <div class="card-body p-4 text-center">
                                     <i class="bi bi-people-fill text-verde3 mb-3" style="font-size: 2.5rem;"></i>
@@ -369,7 +366,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="card h-100 shadow-sm border-0 hover-card position-relative overflow-hidden verdeclarofapeu">
                                 <div class="card-body p-4 text-center">
                                     <i class="bi bi-journal-text text-verde3 mb-3" style="font-size: 2.5rem;"></i>

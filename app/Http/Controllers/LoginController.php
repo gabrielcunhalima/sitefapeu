@@ -5,16 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class LoginController extends Controller
-
-
-
-
-
-
 {
-
     private function renderView($view, $imagem, $titulo, $dados = [])
     {
         return view($view, compact('imagem', 'titulo', 'dados',));
@@ -25,14 +19,22 @@ class LoginController extends Controller
     }
 
     public function loginPost(Request $request) {
+        
+        $request->validate([
+            'usuario' => 'required|string',
+            'senha' => 'required|string',
+            'cf-turnstile-response' => ['required', Rule::turnstile()],
+        ], [
+            'cf-turnstile-response.required' => 'Por favor, complete a verificação de segurança.',
+            'cf-turnstile-response.turnstile' => 'Falha na verificação de segurança. Tente novamente.',
+        ]);
      
-        $credetials = [
+        $credentials = [
             'name' => $request->usuario,
             'password' => $request->senha,
-            ];
-
+        ];
         
-        if (Auth::attempt($credetials)) {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('admin.menu');
         }
@@ -55,17 +57,18 @@ class LoginController extends Controller
 
     public function storeUsuario(Request $request)
     {
-        // validação dos dados
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-        ],
-        [
+            'cf-turnstile-response' => ['required', Rule::turnstile()],
+        ], [
             'email.unique' => 'Esse email já está cadastrado!',
             'name.required' => 'Preencha o nome!',
-            'password.min' =>'digite uma senha de 8 caracteres',
-         ]);
+            'password.min' => 'Digite uma senha de 8 caracteres',
+            'cf-turnstile-response.required' => 'Por favor, complete a verificação de segurança.',
+            'cf-turnstile-response.turnstile' => 'Falha na verificação de segurança. Tente novamente.',
+        ]);
 
         $user = new User();
         $user->name = $request->name;

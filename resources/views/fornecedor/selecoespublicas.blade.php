@@ -21,6 +21,35 @@
         </div>
     </div>
 
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card border-0 bg-light">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-3">Legenda dos Documentos:</h6>
+                    <div class="row">
+                        <div class="col-md-3 mb-2">
+                            <span class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-file-earmark-pdf"></i></span>
+                            <small>Edital/Seleção</small>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <span class="btn btn-outline-success btn-sm me-2"><i class="bi bi-file-earmark-text"></i></span>
+                            <small>Ata de Abertura e Julgamento</small>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <span class="btn btn-outline-warning btn-sm me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
+                            <small>Contrato/Convênio</small>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <span class="btn btn-outline-danger btn-sm me-2"><i class="bi bi-file-earmark-check"></i></span>
+                            <small>Resultado</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--<div class="row mb-4">
         <div class="col-12">
             <div class="card border-0 shadow-sm">
@@ -92,11 +121,11 @@
                                     <th class="px-4 py-3 text-center" style="width: 100px;">
                                         Projeto
                                     </th>
-                                    <th class="px-4 py-3 text-center" style="width: 130px;">
-                                        Data Abertura
-                                    </th>
                                     <th class="px-4 py-3">
                                         Objeto
+                                    </th>
+                                    <th class="px-4 py-3 text-center" style="width: 130px;">
+                                        Data Abertura
                                     </th>
                                     <th class="px-4 py-3 text-center" style="width: 130px;">
                                         Data Publicação
@@ -121,51 +150,41 @@
                                     <td class="px-4 py-3 text-center">
                                         {{ $licitacao->projeto ?? '-' }}
                                     </td>
+                                    <td class="px-4 py-3">
+                                        {{ $licitacao->objeto ?? '-' }}
+                                    </td>
                                     <td class="px-4 py-3 text-center">
                                         @if($licitacao->dataabertura)
-                                            {{ \Carbon\Carbon::parse($licitacao->dataabertura)->format('d/m/Y') }}
+                                        {{ \Carbon\Carbon::parse($licitacao->dataabertura)->format('d/m/Y') }}
                                         @else
                                         <span class="text-muted">-</span>
                                         @endif
                                     </td>
-                                    <td class="px-4 py-3">
-                                        <div class="text-truncate" style="max-width: 250px;" title="{{ $licitacao->objeto }}">
-                                            {{ $licitacao->objeto ?? '-' }}
-                                        </div>
-                                    </td>
                                     <td class="px-4 py-3 text-center">
                                         @if($licitacao->datapublicacao)
-                                            {{ \Carbon\Carbon::parse($licitacao->datapublicacao)->format('d/m/Y') }}
+                                        {{ \Carbon\Carbon::parse($licitacao->datapublicacao)->format('d/m/Y') }}
                                         @else
                                         <span class="text-muted">-</span>
                                         @endif
                                     </td>
                                     <td class="px-4 py-3">
                                         <div class="d-flex gap-1 justify-content-center flex-wrap">
-                                            @if($licitacao->licitacao)
                                             <a href="{{ asset($licitacao->licitacao) }}" target="_blank"
-                                                class="btn btn-outline-primary btn-sm" title="Seleção Pública">
+                                                class="btn btn-outline-primary btn-sm" title="Edital/Seleção">
                                                 <i class="bi bi-file-earmark-pdf"></i>
                                             </a>
-                                            @endif
-                                            @if($licitacao->ataabertura)
                                             <a href="{{ asset($licitacao->ataabertura) }}" target="_blank"
                                                 class="btn btn-outline-success btn-sm" title="Ata de Abertura e Julgamento">
                                                 <i class="bi bi-file-earmark-text"></i>
                                             </a>
-                                            @endif
-                                            @if($licitacao->contratoconvenio)
                                             <a href="{{ asset($licitacao->contratoconvenio) }}" target="_blank"
                                                 class="btn btn-outline-warning btn-sm" title="Contrato/Convênio">
                                                 <i class="bi bi-file-earmark-bar-graph"></i>
                                             </a>
-                                            @endif
-                                            @if($licitacao->resultado)
                                             <a href="{{ asset($licitacao->resultado) }}" target="_blank"
                                                 class="btn btn-outline-danger btn-sm" title="Resultado">
                                                 <i class="bi bi-file-earmark-check"></i>
                                             </a>
-                                            @endif
                                         </div>
                                     </td>
                                 </tr>
@@ -180,34 +199,6 @@
                         <p class="text-muted mb-0">Não há registros disponíveis no momento.</p>
                     </div>
                     @endif
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12">
-            <div class="card border-0 bg-light">
-                <div class="card-body">
-                    <h6 class="fw-bold mb-3">Legenda dos Documentos:</h6>
-                    <div class="row">
-                        <div class="col-md-3 mb-2">
-                            <span class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-file-earmark-pdf"></i></span>
-                            <small>Edital/Seleção</small>
-                        </div>
-                        <div class="col-md-3 mb-2">
-                            <span class="btn btn-outline-success btn-sm me-2"><i class="bi bi-file-earmark-text"></i></span>
-                            <small>Ata de Abertura e Julgamento</small>
-                        </div>
-                        <div class="col-md-3 mb-2">
-                            <span class="btn btn-outline-warning btn-sm me-2"><i class="bi bi-file-earmark-bar-graph"></i></span>
-                            <small>Contrato/Convênio</small>
-                        </div>
-                        <div class="col-md-3 mb-2">
-                            <span class="btn btn-outline-danger btn-sm me-2"><i class="bi bi-file-earmark-check"></i></span>
-                            <small>Resultado</small>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

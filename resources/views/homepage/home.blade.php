@@ -27,13 +27,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(13, 49, 8, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.22);
     border: none;
   }
 
   .action-button:hover {
     transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(13, 49, 8, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.32);
   }
 
   .action-button p {
@@ -251,8 +251,7 @@
   }
 
   .servico-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   }
 
   .servico-icon {
@@ -281,11 +280,11 @@
   }
 
   .servico-link:hover {
-    color: #054615;
-    transform: translateX(5px);
+    color:rgb(5, 59, 18);
   }
 
   .apoiadas {
+    margin-left:12px;
     padding: 60px 0;
     background-color: #f8f9fa;
   }
@@ -602,7 +601,7 @@
         </div>
         <div class="col-sm apoiadas link-hover">
           <a href="https://www.uffs.edu.br/">
-            <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink">
+            <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink"">
           </a>
         </div>
         <div class="col-sm apoiadas link-hover">
@@ -623,11 +622,6 @@
         <div class="col-auto apoiadas link-hover">
           <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
             <img src="images/huufsc-completo.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
-          </a>
-        </div>
-        <div class="col-sm apoiadas link-hoverr">
-          <a href="https://confies.org.br/">
-            <img src="images/confies.png" alt="Apoiada confies" class="img-fluid img-sublink">
           </a>
         </div>
       </div>

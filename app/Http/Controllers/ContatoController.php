@@ -64,7 +64,7 @@ class ContatoController extends Controller
             'status' => 'pendente',
         ]);
 
-        Mail::to('gabriel.lima@fapeu.org.br')->send(new ReuniaoEmail($reuniao));
+        Mail::to('captacao@fapeu.org.br')->send(new ReuniaoEmail($reuniao));
         
         Mail::to($reuniao->email)->send(new ReuniaoEmail($reuniao, true));
         

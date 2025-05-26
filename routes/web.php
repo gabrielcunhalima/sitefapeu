@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\CaptacaoController;
@@ -136,3 +137,21 @@ Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('ad
 
 
 Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
+
+Route::post('/enviar', function() {
+    $token = request('g-recaptcha-response');
+    
+    // Verifica o token
+    $response = Http::post('https://www.google.com/recaptcha/api/siteverify', [
+        'secret' => env('RECAPTCHA_SECRET_KEY'),
+        'response' => $token
+    ]);
+    
+    $result = $response->json();
+    
+    if ($result['success'] && $result['score'] >= 0.5) {
+        return 'Formulário enviado com sucesso!';
+    } else {
+        return 'Erro no reCAPTCHA';
+    }
+});

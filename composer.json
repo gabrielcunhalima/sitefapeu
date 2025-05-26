@@ -10,6 +10,7 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
+        "ryangjchandler/laravel-cloudflare-turnstile": "^2.0",
         "spatie/laravel-webhook-server": "^3.8"
     },
     "require-dev": {

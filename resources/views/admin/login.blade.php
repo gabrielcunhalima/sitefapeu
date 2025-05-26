@@ -11,27 +11,29 @@
                 </div>
                 <div class="card-body p-4">
                     @if ($errors->any())
-                        <div class="alert alert-danger">
-                            @foreach ($errors->all() as $error)
-                                <div>{{ $error }}</div>
-                            @endforeach
-                        </div>
+                    <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                        @endforeach
+                    </div>
                     @endif
 
                     <form action="{{ route('login.post') }}" method="POST">
                         @csrf
-                        
+
                         <div class="mb-3">
                             <label for="name" class="form-label">Nome de usuário</label>
-                            <input type="text" class="form-control" id="name" name="name" 
+                            <input type="text" class="form-control" id="name" name="name"
                                 value="{{ old('name') }}" required autofocus>
                         </div>
-                        
+
                         <div class="mb-3">
                             <label for="password" class="form-label">Senha</label>
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
-                        
+                        <div class="mb-3">
+                            <x-turnstile data-theme="light"/>
+                        </div>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary">Entrar</button>
                             <a href="{{ route('homepage.home') }}" class="btn btn-outline-secondary">Voltar para o site</a>

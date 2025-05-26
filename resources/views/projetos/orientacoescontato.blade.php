@@ -34,19 +34,18 @@
   }
 
   .contact-method {
-    background-color: #fff;
+    background-color: rgb(245, 245, 245);
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
   }
 
   .contact-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   }
 
   .contact-method-number {
@@ -171,12 +170,12 @@
     <a href="{{ route('projetos.captacao') }}" class="back-link">
       <i class="bi bi-arrow-left"></i> Voltar para a página de Captação
     </a>
-    
+
     <h2 class="section-header">Orientações para Contato e Solicitação de Reunião</h2>
-    
+
     <div class="contact-card">
       <p class="lead mb-4">Para entrar em contato com nossa equipe ou agendar uma reunião, escolha um dos métodos abaixo:</p>
-      
+
       <div class="row">
         <div class="col-lg-4">
           <div class="contact-method">
@@ -187,7 +186,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-lg-4">
           <div class="contact-method">
             <div class="contact-method-number">2</div>
@@ -197,7 +196,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col-lg-4">
           <div class="contact-method">
             <div class="contact-method-number">3</div>
@@ -209,16 +208,16 @@
         </div>
       </div>
     </div>
-    
+
     <div class="form-container" id="formulario-reuniao">
       <h3 class="form-title">Formulário de Solicitação de Reunião</h3>
-      
+
       @if(session('success'))
       <div class="alert alert-success">
         {{ session('success') }}
       </div>
       @endif
-      
+
       <form action="{{ route('contato.agendarReuniao') }}" method="POST">
         @csrf
         <div class="form-section">
@@ -233,7 +232,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="form-section">
           <div class="row">
             <div class="col-md-6 mb-3">
@@ -246,19 +245,19 @@
             </div>
           </div>
         </div>
-        
+
         <div class="form-section">
           <div class="mb-3">
             <label for="assunto" class="form-label">5. Assunto da Reunião</label>
             <input type="text" class="form-control" id="assunto" name="assunto" required>
           </div>
-          
+
           <div class="mb-3">
             <label for="descricao" class="form-label">6. Descrição</label>
             <textarea class="form-control" id="descricao" name="descricao" rows="4" required></textarea>
           </div>
         </div>
-        
+
         <div class="form-section">
           <div class="row">
             <div class="col-md-6 mb-3">
@@ -282,7 +281,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="form-section">
           <label for="preferencia_contato" class="form-label">8. Como prefere ser contatado?</label>
           <div class="form-check">
@@ -298,12 +297,16 @@
             </label>
           </div>
         </div>
-        
-        <div class="text-end mt-4">
+
+        <div class="my-3 text-center">
+          <x-turnstile data-theme="light" />
+        </div>
+
+        <div class="text-center mt-4">
           <button type="submit" class="btn btn-success">Solicitar reunião</button>
         </div>
       </form>
-      
+
       @if($errors->any())
       <div class="alert alert-danger mt-4">
         <ul class="mb-0">

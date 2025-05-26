@@ -49,10 +49,6 @@
         margin: 0 auto;
     }
 
-    .revista-img:hover {
-        transform: scale(1.032);
-    }
-
     .revista-content {
         padding: 15px 20px;
         text-align: center;
@@ -84,26 +80,6 @@
         margin-top: 10px;
         border: none;
         cursor: pointer;
-    }
-
-    .section-title {
-        position: relative;
-        font-weight: 700;
-        font-size: 1.8rem;
-        margin-bottom: 40px;
-        text-align: center;
-        color: #333;
-    }
-
-    .section-title:after {
-        content: '';
-        position: absolute;
-        bottom: -12px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: #06551A;
     }
 
     .revista-filter {
