@@ -20,6 +20,10 @@ class MenuController extends Controller
         return view($view, compact('imagem', 'titulo', 'dados',));
     }
 
+    public function calculo()
+    {
+        return $this->renderView('calculo.menu', 'calculo.png', 'Cálculo de Encargos');
+    }
 
     // MENU Quem somos
     public function sobre()
@@ -160,8 +164,6 @@ class MenuController extends Controller
             foreach (range(1, 5) as $i) {
                 $fieldName = $i === 1 ? 'imagem' : "imagem{$i}";
 
-
-                //se mandar uma nova imagem, substitui
                 if ($request->hasFile($fieldName)) {
                     $img = $request->file($fieldName);
                     $destPath = public_path('storage/posts');
@@ -174,7 +176,7 @@ class MenuController extends Controller
 
             $post->save();
 
-            return redirect()->route('noticias.noticiasrecentes')->with('success', 'Post atualizado com sucesso!');
+            return redirect()->route('admin.menu')->with('success', 'Post atualizado com sucesso!');
         }
 
         $dados = ['titulo' => '', 'corpo' => '', 'imagem' => '', 'id' => '', 'visivel' => '',];

@@ -84,11 +84,10 @@
     height: 200px;
     overflow: hidden;
     position: relative;
-    ;
   }
 
   .news-img-container img {
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
   }
 
@@ -236,6 +235,8 @@
     text-align: center;
   }
 
+
+
   .servicos-section {
     padding: 60px 0;
     background-color: rgb(240, 240, 240);
@@ -280,12 +281,11 @@
   }
 
   .servico-link:hover {
-    color:rgb(5, 59, 18);
+    color: rgb(5, 59, 18);
   }
 
   .apoiadas {
-    margin-left:12px;
-    padding: 60px 0;
+    padding: 30px 0;
     background-color: #f8f9fa;
   }
 
@@ -350,14 +350,11 @@
   }
 </style>
 
-<div class="jumbotron jumbotron-fluid bg-homebotoes pt-4 pb-3 mb-0">
-  <h1 class="container transformando text-center text-uppercase mx-auto" style="font-size: 2.3em; font-family:'Montserrat', sans-serif"><b>Fundação de Amparo à Pesquisa e Extensão Universitária</b></h1>
-</div>
-
-<div class="bg-homebotoes">
+<div class="jumbotron jumbotron-fluid bg-homebotoes pt-3 pb-3">
+  <h1 class="container transformando text-center mx-auto mb-3" style="font-size: 2.5em; font-family:'Montserrat', sans-serif">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
   <div class="container">
     <div class="row pb-4">
-      <div class="col-6 col-lg-3 mb-3">
+      <div class="col-6 col-lg-3 mb-2">
         <a href="{{route('projetos.captacao')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-journal-bookmark-fill mb-2" style="font-size: 2rem;"></i>
@@ -365,7 +362,15 @@
           </div>
         </a>
       </div>
-      <div class="col-6 col-lg-3 mb-3">
+      <div class="col-6 col-lg-3 mb-2">
+        <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
+          <div class="action-button bg-principal text-white text-center">
+            <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
+            <p>Transparência</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-lg-3 mb-2">
         <a href="{{route('projetos.espacocoordenador')}}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-person-workspace mb-2" style="font-size: 2rem;"></i>
@@ -373,19 +378,11 @@
           </div>
         </a>
       </div>
-      <div class="col-6 col-lg-3 mb-3">
+      <div class="col-6 col-lg-3 mb-2">
         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-decoration-none">
           <div class="action-button bg-principal text-white text-center">
             <i class="bi bi-briefcase mb-2" style="font-size: 2rem;"></i>
             <p>Espaço do Fornecedor</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-lg-3 mb-3">
-        <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
-          <div class="action-button bg-principal text-white text-center">
-            <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
-            <p>Transparência</p>
           </div>
         </a>
       </div>
@@ -401,38 +398,20 @@
       </div>
     </div>
   </div>
-</div>
 
+</div>
 <section class="news-section">
   <div class="container">
     <h2 class="text-center news-title">Notícias Recentes</h2>
     <p class="text-muted text-center mb-5">Confira o que aconteceu na FAPEU em nosso portal de notícias</p>
-
     <div class="responsive">
       @foreach ($news as $post)
       <div class="px-2">
         <a href="{{ route('noticias.noticiasleitura', ['link' => $post->link]) }}" class="text-decoration-none">
           <div class="news-card">
             <div class="news-img-container">
-              @if($post->imagem || $post->imagem2 || $post->imagem3 || $post->imagem4 || $post->imagem5)
-              <div id="carousel{{$post->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
-                <div class="carousel-inner">
-                  @php
-                  $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
-                  $firstImage = true;
-                  @endphp
-                  @foreach($images as $image)
-                  @if($post->$image)
-                  <div class="carousel-item {{ $firstImage ? 'active' : '' }}">
-                    <img src="{{ asset($post->$image) }}" class="d-block w-100" alt="Imagem da notícia {{ $loop->index + 1 }}">
-                  </div>
-                  @php
-                  $firstImage = false;
-                  @endphp
-                  @endif
-                  @endforeach
-                </div>
-              </div>
+              @if($post->imagem)
+              <img src="{{ asset($post->imagem) }}" class="d-block w-100" alt="Imagem da notícia">
               @endif
               <div class="news-overlay"></div>
               <div class="news-meta">Leia mais</div>
@@ -446,7 +425,6 @@
       </div>
       @endforeach
     </div>
-
     <div class="text-center mt-4">
       <a href="{{ route('noticias.noticiasrecentes') }}" class="view-more-btn">Ver mais notícias</a>
     </div>
@@ -510,8 +488,6 @@
       </div>
     </div>
   </div>
-
-  <!-- acordeao -->
 
   <div class="servicos-accordion">
     <div class="accordion" id="servicosAccordion">
@@ -585,7 +561,6 @@
   </div>
 </section>
 
-<!-- apoiadas -->
 <section class="apoiadas">
   <div class="container-fluid">
     <div class="containerapoiadas mx-auto">
@@ -594,34 +569,48 @@
         <p class="text-muted text-center">Instituições que possuem credenciamento para pesquisa e extensão junto à FAPEU</p>
       </div>
       <div class="row align-items-center">
-        <div class="col-sm apoiadas link-hover">
+        <div class="col-auto col-md-1 apoiadas link-hover mx-auto">
           <a href="https://ufsc.br/">
-            <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink" style="width: 80%; height: auto;">
+            <img src="images/ufsc.png" alt="Apoiada UFSC" class="img-fluid img-sublink">
           </a>
         </div>
-        <div class="col-sm apoiadas link-hover">
+        <div class="col-auto col-md-1 apoiadas link-hover mx-auto">
           <a href="https://www.uffs.edu.br/">
-            <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink"">
+            <img src="images/uffs.png" alt="Apoiada UFFS" class="img-fluid img-sublink">
           </a>
         </div>
-        <div class="col-sm apoiadas link-hover">
-          <a href="https://www.udesc.br/">
-            <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
-          </a>
-        </div>
-        <div class="col-sm apoiadas link-hover">
+        <div class="col-auto col-md-1 apoiadas link-hover mx-auto">
           <a href="https://ifc.edu.br/">
             <img src="images/ifc.png" alt="Apoiada IFC" class="img-fluid img-sublink">
           </a>
         </div>
-        <div class="col-sm apoiadas link-hover">
+        <div class="col-auto col-md-1 apoiadas link-hover mx-auto">
           <a href="https://unipampa.edu.br/">
             <img src="images/unipampa.png" alt="Apoiada Unipampa" class="img-fluid img-sublink">
           </a>
         </div>
-        <div class="col-auto apoiadas link-hover">
+        <div class="col-auto apoiadas link-hover mx-auto">
           <a href="https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sul/hu-ufsc">
             <img src="images/huufsc-completo.png" alt="Apoiada HUUFSC" class="img-fluid img-sublink">
+          </a>
+        </div>
+        <div class="col-auto col-md-1 apoiadas link-hover mx-auto">
+          <a href="https://www.udesc.br/">
+            <img src="images/udesc.png" alt="Apoiada Udesc" class="img-fluid img-sublink">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid afiliacao">
+    <div class="container">
+      <h2 class="text-center news-title">Afiliação</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 p-3 mb-4 link-hover">
+          <a href="https://www.confies.org.br/" target="_blank" class="text-decoration-none">
+            <img src="{{ asset('images/confies.png') }}" alt="Logo do CONFIES" class="img-fluid mx-auto d-block" style="max-width: 40%; height: auto;">
           </a>
         </div>
       </div>

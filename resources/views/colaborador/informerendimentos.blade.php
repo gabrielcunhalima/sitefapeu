@@ -4,7 +4,6 @@
 @section('conteudo')
 <style>
   .informe-section {
-    padding: 60px 0;
     background-color: #f8f9fa;
   }
 
@@ -132,15 +131,12 @@
 
 <section class="informe-section">
   <div class="container">
-    <h2 class="section-header">Informe de Rendimentos</h2>
-    
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
-        <h3 class="mb-4 text-success">Acesso aos Informes de Rendimentos</h3>
+        <h3 class="my-3 text-success">Acesso aos Informes de Rendimentos</h3>
         <p class="lead">Selecione o sistema de acordo com sua categoria para visualizar e gerar seus informes de rendimentos para fins de Declaração de Imposto de Renda.</p>
       </div>
     </div>
-    
     <div class="row align-items-stretch">
       <div class="col-lg-5">
         <div class="informe-card h-100 d-flex flex-column">

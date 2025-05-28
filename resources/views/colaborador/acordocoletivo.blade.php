@@ -56,18 +56,18 @@
     background-color: #f8f9fa;
     margin-bottom: 10px;
   }
-  
+
   .doc-link:hover {
     background-color: #e9ecef;
     color: #06551A;
   }
-  
+
   .doc-icon {
     color: #06551A;
     font-size: 1.5rem;
     margin-right: 15px;
   }
-  
+
   .aditivo-badge {
     font-size: 0.8rem;
     padding: 4px 8px;
@@ -90,8 +90,23 @@
 </style>
 
 <section class="acordos-section">
-  <div class="container">    
+  <div class="container">
     <div class="accordion" id="acordosCollective">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2025">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2025" aria-expanded="false" aria-controls="collapse2025">
+            Acordo Coletivo 2025/2027
+          </button>
+        </h2>
+        <div id="collapse2025" class="accordion-collapse collapse" aria-labelledby="heading2025" data-bs-parent="#acordosCollective">
+          <div class="accordion-body">
+            <a href="pdfs/Colaborador/AcordoColetivo/ACT FAPEU 2025 - 2027 homologado anexos.pdf" target="_blank" class="doc-link">
+              <i class="bi bi-file-earmark-pdf doc-icon"></i>
+              <span>Acordo Coletivo FAPEU 2025/2027</span>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="heading2023">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2023" aria-expanded="false" aria-controls="collapse2023">

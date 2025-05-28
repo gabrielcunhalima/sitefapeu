@@ -40,7 +40,7 @@
                     <i class="bi bi-calculator-fill text-verde3 mb-3" style="font-size: 2.5rem;"></i>
                     <h4 class="card-title">Cálculo de Encargos de Prestação de Serviços</h4>
                     <p class="card-text">Ferramenta para simular encargos, impostos e valores líquidos sobre pagamentos de autônomos.</p>
-                    <a href="https://eventos.fapeu.com.br/calculo/public" target="_blank" class="btn btn-success mt-2">
+                    <a href=" {{ route('calculo.menu') }}" target="_blank" class="btn btn-success mt-2">
                         <i class="bi bi-box-arrow-up-right me-2"></i>Acessar Ferramenta
                     </a>
                 </div>

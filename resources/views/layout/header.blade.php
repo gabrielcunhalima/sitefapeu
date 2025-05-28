@@ -38,14 +38,14 @@
     gtag('config', 'G-HWYDQ8SY8W');
   </script>
 
-  <script>
+  <!-- <script>
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       const userwayScript = document.createElement('script');
       userwayScript.src = "https://cdn.userway.org/widget.js";
       userwayScript.setAttribute("data-account", "YinJfS8smr");
       document.head.appendChild(userwayScript);
     }
-  </script>
+  </script> -->
 
   @turnstileScripts()
 
@@ -184,7 +184,10 @@
   Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
   Request::route()->getName() !== 'projetos.orientacoescontato' &&
   Request::route()->getName() !== 'licitacoes.form' &&
-  Request::route()->getName() !== 'licitacoes.listar')
+  Request::route()->getName() !== 'licitacoes.listar' &&
+  Request::route()->getName() !== 'calculo.menu' &&
+  Request::route()->getName() !== 'calculo.calculobruto' &&
+  Request::route()->getName() !== 'calculo.calculoliquido')
   <div class="page-header py-5">
     <div class="container">
       <div class="row">
@@ -194,11 +197,6 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('homepage.home') }}">Início</a></li>
               <li class="breadcrumb-item active" aria-current="page">{{ $titulo }}</li>
-              @if (Route::currentRouteName() === 'noticias.editarnoticias')
-              <li class="breadcrumb-item">
-                <a href="{{ route('admin.menu') }}">Retornar ao painel administrativo</a>
-              </li>
-              @endif
             </ol>
           </nav>
         </div>
@@ -208,7 +206,10 @@
   @endif
 
   @if (Request::route()->getName() !== 'noticias.noticiasleitura' &&
-  Request::route()->getName() !== 'homepage.home')
+  Request::route()->getName() !== 'homepage.home' &&
+  Request::route()->getName() !== 'calculo.calculoliquido' &&
+  Request::route()->getName() !== 'calculo.calculobruto' &&
+  Request::route()->getName() !== 'calculo.calculo')
   <main class="my-4">
     @yield('conteudo')
   </main>

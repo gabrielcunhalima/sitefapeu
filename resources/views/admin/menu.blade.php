@@ -15,45 +15,47 @@
 </div>
 @endif
 
-<div class="row">
-    <div class="col-md-4 col-sm-12">
-        <div class="col-12">
-            <div class="text-center mt-4">
-                <a href='{{url('noticiaspost')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-newspaper"></i> &nbsp;&nbsp; Adicionar Notícia
-                </a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{url('noticiaspost')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-newspaper"></i> &nbsp;&nbsp; Adicionar Notícia
+                    </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{url('editar')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-brush"></i> &nbsp;&nbsp; Editar Notícia
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="col-12">
-            <div class="text-center mt-4">
-                <a href='{{url('editar')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-brush"></i> &nbsp;&nbsp; Editar Notícia
-                </a>
+        <div class="col-md-4 col-sm-12">
+            <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{route('licitacoes.form')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-bag-plus"></i> &nbsp;&nbsp; Adicionar Licitação
+                    </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{route('licitacoes.listar')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-brush"></i> &nbsp;&nbsp; Gerenciar Licitações
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-4 col-sm-12">
-        <div class="col-12">
-            <div class="text-center mt-4">
-                <a href='{{route('licitacoes.form')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-bag-plus"></i> &nbsp;&nbsp; Adicionar Licitação
-                </a>
-            </div>
-        </div>
-        <div class="col-12">
-            <div class="text-center mt-4">
-                <a href='{{route('licitacoes.listar')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-brush"></i> &nbsp;&nbsp; Gerenciar Licitações
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-12">
-        <div class="col-12">
-            <div class="text-center mt-4">
-                <a href='{{url('createusuario')}}' class="botaoadmin btn btn-primary btn-lg px-4 py-2">
-                    <i class="bi bi-person-plus-fill"></i> &nbsp;&nbsp; Adicionar Usuário
-                </a>
+        <div class="col-md-4 col-sm-12">
+            <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{url('createusuario')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-person-plus-fill"></i> &nbsp;&nbsp; Adicionar Usuário
+                    </a>
+                </div>
             </div>
         </div>
     </div>

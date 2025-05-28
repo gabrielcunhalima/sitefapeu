@@ -5,8 +5,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\CaptacaoController;
-use App\Http\Controllers\MigrationController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CalculoController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\LicitacaoController;
 use App\Http\Controllers\RessarcimentoController;
@@ -136,22 +135,11 @@ Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('ad
 
 
 
-Route::get('/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
+Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
-Route::post('/enviar', function() {
-    $token = request('g-recaptcha-response');
-    
-    // Verifica o token
-    $response = Http::post('https://www.google.com/recaptcha/api/siteverify', [
-        'secret' => env('RECAPTCHA_SECRET_KEY'),
-        'response' => $token
-    ]);
-    
-    $result = $response->json();
-    
-    if ($result['success'] && $result['score'] >= 0.5) {
-        return 'Formulário enviado com sucesso!';
-    } else {
-        return 'Erro no reCAPTCHA';
-    }
-});
+
+Route::get('/calculorpabruto', [CalculoController::class, 'formbruto'])->name('calculorpabruto.form');
+Route::post('/calculorpabruto', [CalculoController::class, 'calcularBruto'])->name('calculorpabruto.processar');
+Route::get('/calculorpaliquido', [CalculoController::class, 'formliquido'])->name('calculorpaliquido.form');
+Route::post('/calculorpaliquido', [CalculoController::class, 'calcularliquido'])->name('calculorpaliquido.processar');
+Route::get('/calculo', [MenuController::class, 'calculo'])->name('calculo.menu');

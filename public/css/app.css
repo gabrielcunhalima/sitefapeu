@@ -248,10 +248,6 @@ select.form-control{
 
   @media (max-width: 796px) {
 
-    p {
-      font-size: 1.3em;
-    }
-
     .textofooter {
       font-size: 1.2em;
     }
