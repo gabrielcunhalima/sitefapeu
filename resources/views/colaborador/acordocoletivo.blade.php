@@ -104,6 +104,11 @@
               <i class="bi bi-file-earmark-pdf doc-icon"></i>
               <span>Acordo Coletivo FAPEU 2025/2027</span>
             </a>
+            <a href="pdfs/Colaborador/AcordoColetivo/TERMO ADITIVO COLETIVO DE TRABALHO 2025_2027.pdf" target="_blank" class="doc-link">
+              <i class="bi bi-file-earmark-pdf doc-icon"></i>
+              <span>Termo Aditivo ao Acordo Coletivo 2025/2027</span>
+              <span class="aditivo-badge">ADITIVO</span>
+            </a>
           </div>
         </div>
       </div>

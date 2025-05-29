@@ -14,19 +14,19 @@
                 </div>
                 <div class="card-body">
                     @if($errors->any())
-                        <div class="alert alert-danger">
-                            <ul class="mb-0">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                     @endif
 
                     <form action="{{ route('licitacoes.save') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="id" value="{{ $dados->id }}">
-                        
+
                         <div class="row mb-4">
                             <div class="col-md-12">
                                 <div class="card border-success">
@@ -37,8 +37,8 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="selecao" value="1" 
-                                                           {{ old('tipo_licitacao', $dados->tipo_licitacao) == 1 ? 'checked' : '' }} required>
+                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="selecao" value="1"
+                                                        {{ old('tipo_licitacao', $dados->tipo_licitacao) == 1 ? 'checked' : '' }} required>
                                                     <label class="form-check-label fw-bold" for="selecao">
                                                         Seleção Pública
                                                     </label>
@@ -46,8 +46,8 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="dispensa" value="2" 
-                                                           {{ old('tipo_licitacao', $dados->tipo_licitacao) == 2 ? 'checked' : '' }} required>
+                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="dispensa" value="2"
+                                                        {{ old('tipo_licitacao', $dados->tipo_licitacao) == 2 ? 'checked' : '' }} required>
                                                     <label class="form-check-label fw-bold" for="dispensa">
                                                         Dispensa de Licitação
                                                     </label>
@@ -55,8 +55,8 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="inexigibilidade" value="3" 
-                                                           {{ old('tipo_licitacao', $dados->tipo_licitacao) == 3 ? 'checked' : '' }} required>
+                                                    <input class="form-check-input" type="radio" name="tipo_licitacao" id="inexigibilidade" value="3"
+                                                        {{ old('tipo_licitacao', $dados->tipo_licitacao) == 3 ? 'checked' : '' }} required>
                                                     <label class="form-check-label fw-bold" for="inexigibilidade">
                                                         Inexigibilidade
                                                     </label>
@@ -78,23 +78,23 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <label for="ordem" class="form-label fw-bold">Seleção Pública (se aplicável)</label>
-                                                <input type="text" class="form-control" id="ordem" name="ordem" 
-                                                       value="{{ old('ordem', $dados->ordem) }}">
+                                                <input type="text" class="form-control" id="ordem" name="ordem"
+                                                    value="{{ old('ordem', $dados->ordem) }}">
                                             </div>
                                             <div class="col-md-3">
                                                 <label for="processo" class="form-label fw-bold">Contrato/Convênio</label>
-                                                <input type="text" class="form-control" id="processo" name="processo" 
-                                                       value="{{ old('processo', $dados->processo) }}">
+                                                <input type="text" class="form-control" id="processo" name="processo"
+                                                    value="{{ old('processo', $dados->processo) }}">
                                             </div>
                                             <div class="col-md-3">
                                                 <label for="projeto" class="form-label fw-bold">Projeto</label>
-                                                <input type="text" class="form-control" id="projeto" name="projeto" 
-                                                       value="{{ old('projeto', $dados->projeto) }}">
+                                                <input type="text" class="form-control" id="projeto" name="projeto"
+                                                    value="{{ old('projeto', $dados->projeto) }}">
                                             </div>
                                             <div class="col-md-3">
                                                 <label for="orgao" class="form-label fw-bold">Órgão <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="orgao" name="orgao" 
-                                                       value="{{ old('orgao', $dados->orgao) }}" required>
+                                                <input type="text" class="form-control" id="orgao" name="orgao"
+                                                    value="{{ old('orgao', $dados->orgao) }}" required>
                                             </div>
                                         </div>
                                         <div class="row mt-3">
@@ -118,13 +118,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label for="datapublicacao" class="form-label fw-bold">Data de Publicação</label>
-                                                <input type="date" class="form-control" id="datapublicacao" name="datapublicacao" 
-                                                       value="{{ old('datapublicacao', $dados->datapublicacao) }}">
+                                                <input type="date" class="form-control" id="datapublicacao" name="datapublicacao"
+                                                    value="{{ old('datapublicacao', $dados->datapublicacao) }}">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="dataabertura" class="form-label fw-bold">Data de Abertura e Julgamento</label>
-                                                <input type="date" class="form-control" id="dataabertura" name="dataabertura" 
-                                                       value="{{ old('dataabertura', $dados->dataabertura) }}">
+                                                <input type="date" class="form-control" id="dataabertura" name="dataabertura"
+                                                    value="{{ old('dataabertura', $dados->dataabertura) }}">
                                             </div>
                                         </div>
                                     </div>
@@ -142,54 +142,54 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label for="licitacao" class="form-label fw-bold">
-                                                    <i class="bi bi-file-earmark-pdf"></i> Licitação
+                                                    <i class="bi bi-file-earmark-pdf"></i> Seleção/Edital
                                                 </label>
-                                                <input type="file" class="form-control" id="licitacao" name="licitacao" 
-                                                       accept=".pdf,.doc,.docx">
+                                                <input type="file" class="form-control" id="licitacao" name="licitacao"
+                                                    accept=".pdf,.doc,.docx">
                                                 @if($dados->licitacao)
-                                                    <small class="text-success">
-                                                        <i class="bi bi-check-circle"></i> Arquivo atual: 
-                                                        <a href="{{ asset($dados->licitacao) }}" target="_blank">Visualizar</a>
-                                                    </small>
+                                                <small class="text-success">
+                                                    <i class="bi bi-check-circle"></i> Arquivo atual:
+                                                    <a href="{{ asset($dados->licitacao) }}" target="_blank">Visualizar</a>
+                                                </small>
                                                 @endif
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="ataabertura" class="form-label fw-bold">
                                                     <i class="bi bi-file-earmark-text"></i> Ata de Abertura e Julgamento
                                                 </label>
-                                                <input type="file" class="form-control" id="ataabertura" name="ataabertura" 
-                                                       accept=".pdf,.doc,.docx">
+                                                <input type="file" class="form-control" id="ataabertura" name="ataabertura"
+                                                    accept=".pdf,.doc,.docx">
                                                 @if($dados->ataabertura)
-                                                    <small class="text-success">
-                                                        <i class="bi bi-check-circle"></i> Arquivo atual: 
-                                                        <a href="{{ asset($dados->ataabertura) }}" target="_blank">Visualizar</a>
-                                                    </small>
+                                                <small class="text-success">
+                                                    <i class="bi bi-check-circle"></i> Arquivo atual:
+                                                    <a href="{{ asset($dados->ataabertura) }}" target="_blank">Visualizar</a>
+                                                </small>
                                                 @endif
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="contratoconvenio" class="form-label fw-bold">
                                                     <i class="bi bi-file-earmark-bar-graph"></i> Contrato/Convênio
                                                 </label>
-                                                <input type="file" class="form-control" id="contratoconvenio" name="contratoconvenio" 
-                                                       accept=".pdf,.doc,.docx">
+                                                <input type="file" class="form-control" id="contratoconvenio" name="contratoconvenio"
+                                                    accept=".pdf,.doc,.docx">
                                                 @if($dados->contratoconvenio)
-                                                    <small class="text-success">
-                                                        <i class="bi bi-check-circle"></i> Arquivo atual: 
-                                                        <a href="{{ asset($dados->contratoconvenio) }}" target="_blank">Visualizar</a>
-                                                    </small>
+                                                <small class="text-success">
+                                                    <i class="bi bi-check-circle"></i> Arquivo atual:
+                                                    <a href="{{ asset($dados->contratoconvenio) }}" target="_blank">Visualizar</a>
+                                                </small>
                                                 @endif
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label for="resultado" class="form-label fw-bold">
                                                     <i class="bi bi-file-earmark-check"></i> Resultado
                                                 </label>
-                                                <input type="file" class="form-control" id="resultado" name="resultado" 
-                                                       accept=".pdf,.doc,.docx">
+                                                <input type="file" class="form-control" id="resultado" name="resultado"
+                                                    accept=".pdf,.doc,.docx">
                                                 @if($dados->resultado)
-                                                    <small class="text-success">
-                                                        <i class="bi bi-check-circle"></i> Arquivo atual: 
-                                                        <a href="{{ asset($dados->resultado) }}" target="_blank">Visualizar</a>
-                                                    </small>
+                                                <small class="text-success">
+                                                    <i class="bi bi-check-circle"></i> Arquivo atual:
+                                                    <a href="{{ asset($dados->resultado) }}" target="_blank">Visualizar</a>
+                                                </small>
                                                 @endif
                                             </div>
                                         </div>
