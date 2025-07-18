@@ -22,18 +22,18 @@
     font-size: 1.1rem;
     color: #333;
     background-color: #fff;
-    border-left: 4px solid #06551A;
+    border-left: 4px solid #06551a;
   }
 
   .accordion-button:not(.collapsed) {
-    color: #06551A;
+    color: #06551a;
     background-color: #f8f9fa;
     box-shadow: none;
   }
 
   .accordion-button:focus {
     box-shadow: none;
-    border-color: #06551A;
+    border-color: #06551a;
   }
 
   .accordion-button::after {
@@ -59,11 +59,11 @@
 
   .doc-link:hover {
     background-color: #e9ecef;
-    color: #06551A;
+    color: #06551a;
   }
 
   .doc-icon {
-    color: #06551A;
+    color: #06551a;
     font-size: 1.5rem;
     margin-right: 15px;
   }
@@ -71,7 +71,7 @@
   .aditivo-badge {
     font-size: 0.8rem;
     padding: 4px 8px;
-    background-color: #06551A;
+    background-color: #06551a;
     color: white;
     border-radius: 4px;
     margin-left: 10px;

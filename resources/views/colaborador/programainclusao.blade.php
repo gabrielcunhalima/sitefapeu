@@ -1,59 +1,45 @@
 @extends('layout.header')
 @section('title',' Programa de Inclusão')
-
 @section('conteudo')
-
-<div class="background">
-
-  <div class="container my-2">
+<div class="bg-light pb-5">
+  <div class="container">
     <div class="row justify-content-center">
-
-      <div class="col-md-10 text-center">
-
-        <div class="d-flex justify-content-center align-items-center">
-          <img src="images/logo3.png" alt="Logo" style="height: 120px;">
+      <div class="col-lg-8 text-justify">
+        <div class="mb-4 text-center">
+          <img src="images/logo3.png" alt="Logo FAPEU" class="img-fluid" style="max-height: 150px;">
         </div>
-
-        <h1 class="display-5 mt-4 " style="font-weight: bold; color: #146551;">Programa FAPEU de Inclusão</h1>
-
-        <div class="text-justify">
-          <p class="lead mt-4" style="font-size: 1.1rem; color: #333;">
-            <br>O mercado de trabalho está cada dia mais competitivo, exigindo experiências e qualificação de seus profissionais. A FAPEU, por meio do programa de inclusão, quer proporcionar essas experiências e qualificar essas pessoas para desenvolverem seu trabalho.
-
-            A FAPEU acredita que a inclusão social é um dever de todos, e é por isso que está disponibilizando vagas para Pessoas com Deficiência. O acesso ao trabalho deverá estar acessível a todos.
-          </p>
-          <p class="lead" style="font-size: 1.1rem; color: #333;">
-            Valorizamos as diferenças e acreditamos sempre no desenvolvimento humano. Por meio deste programa, conheceremos e aprenderemos mais, teremos contato com novas experiências de vida.
-
-            <br> <br>Venha juntar-se a família FAPEU e fazer a diferença na vida de nossos parceiros.
-          <p class="" style="font-weight: bold ; color: #099072;">Acesse o nosso Portal de Oportunidades:</p>
-          </p>
-
+        <h1 class="display-4 fw-bold text-success mb-3">Programa FAPEU de Inclusão</h1>
+        <p class="lead text-secondary mb-4">
+          Acreditamos que um mercado de trabalho inclusivo é fundamental. Na FAPEU, estamos comprometidos em oferecer oportunidades e qualificação para todos, incluindo Pessoas com Deficiência.
+        </p>
+        <p class="fs-5 text-secondary">
+          O mercado busca profissionais qualificados e com vivência. Nosso programa de inclusão visa proporcionar essa experiência e capacitação para o seu desenvolvimento profissional.
+          Entendemos que a inclusão social é uma responsabilidade coletiva e estamos abrindo portas para talentos diversos.
+        </p>
+        <p class="fs-5 text-secondary">
+          Valorizamos a singularidade de cada indivíduo e cremos no potencial do crescimento humano através da troca de experiências.
+          <br><br>
+          Venha fazer parte da família FAPEU e contribua para um ambiente mais rico e igualitário!
+        </p>
+        <p class="fw-bold text-success fs-5">Acesse nosso Portal de Oportunidades:</p>
+        <div class="mt-4 text-center">
+          <a href="http://150.162.78.45:8080/Curriculo/" target="_blank" class="btn btn-success btn-lg rounded-pill px-4 py-2">
+            <i class="bi bi-link-45deg me-2"></i> Cadastre-se Aqui
+          </a>
         </div>
-        <div class="d-flex justify-content-center">
-          <a class="btn-primary btn-outline-primary btn-lg mt-4" href="http://150.162.78.45:8080/Curriculo/" target="_blank" role="button" style="border: 2px solid #099072; color: #099072; border-radius: 50px; padding: 10px 30px ;">ACESSE O CADASTRO AQUI</a>
-        </div>
-        <br>
-        <p class="display-8 mt-4 " style="font-weight: bold; color: #146551;"> Outra forma de obter oportunidades às pessoas com Deficiência</p>
-        <a href="http://www.deficienteonline.com.br" target="_blank" style="color: #099072;"> http://www.deficienteonline.com.br <br><br></a>
-
       </div>
     </div>
   </div>
+</div>
+<style>
+  .btn-success {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+  }
 
-
-  <style>
-    .btn-primary {
-      background-color: #ffff !important;
-      border-color: #146551 !important;
-
-    }
-
-    .background {
-      background-image: url('/images/bgt3 (1).png');
-      padding: 20px 0;
-      background-size: cover;
-      background-position: 40% 30%;
-    }
-  </style>
-  @endsection
+  .btn-success:hover {
+    background-color: #135e3d !important;
+    border-color: #135e3d !important;
+  }
+</style>
+@endsection

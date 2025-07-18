@@ -25,15 +25,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #06551A;
-  }
-
-  .calculator-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
+    background-color: #06551a;
   }
 
   .calculator-card {
@@ -54,7 +46,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: linear-gradient(135deg, #06551A, #30755c);
+    background: linear-gradient(135deg, #06551a, #30755c);
   }
 
   .calculator-card:hover {
@@ -64,7 +56,7 @@
   .calculator-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #06551A, #30755c);
+    background: linear-gradient(135deg, #06551a, #30755c);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -95,12 +87,12 @@
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    background-color: #06551A;
+    background-color: #06551a;
     color: #ffffff;
     font-weight: 600;
     font-size: 1rem;
     border-radius: 50px;
-    border: 2px solid #06551A;
+    border: 2px solid #06551a;
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
@@ -109,7 +101,7 @@
   }
 
   .calculator-link:hover {
-    background-color: #054615;
+    background-color: #06551a;
     box-shadow: 0 8px 25px rgba(6, 85, 26, 0.3);
     color: #ffffff;
     text-decoration: none;
@@ -185,38 +177,57 @@
 <section class="calculator-section">
   <div class="container">
     <h1 class="section-header">Cálculo de Encargos</h1>
-    
+
     <p class="intro-text">
       Escolha o tipo de cálculo que deseja realizar para obter os valores de encargos de forma precisa e automatizada.
     </p>
-
-    <div class="calculator-grid">
-      <div class="calculator-card">
-        <div class="calculator-icon">
-          <i class="bi bi-calculator"></i>
+    <div class="row">
+      <div class="col-md-4 col-12 mb-4">
+        <div class="calculator-card">
+          <div class="calculator-icon">
+            <i class="bi bi-calculator"></i>
+          </div>
+          <h2 class="calculator-title">Cálculo pelo Valor Bruto</h2>
+          <p class="calculator-description">
+            Calcule os encargos a partir do valor bruto do projeto, obtendo uma visão completa dos custos envolvidos.
+          </p>
+          <a href="{{ route('calculorpabruto.form') }}" class="calculator-link">
+            Calcular Bruto
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
-        <h2 class="calculator-title">Cálculo pelo Valor Bruto</h2>
-        <p class="calculator-description">
-          Calcule os encargos a partir do valor bruto do projeto, obtendo uma visão completa dos custos envolvidos.
-        </p>
-        <a href="{{ route('calculorpabruto.form') }}" class="calculator-link">
-          Calcular Bruto
-          <i class="bi bi-arrow-right"></i>
-        </a>
       </div>
 
-      <div class="calculator-card">
-        <div class="calculator-icon">
-          <i class="bi bi-currency-dollar"></i>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="calculator-card">
+          <div class="calculator-icon">
+            <i class="bi bi-currency-dollar"></i>
+          </div>
+          <h2 class="calculator-title">Cálculo pelo Valor Líquido</h2>
+          <p class="calculator-description">
+            Calcule os encargos a partir do valor líquido desejado, determinando o valor bruto necessário.
+          </p>
+          <a href="{{ route('calculorpaliquido.form') }}" class="calculator-link">
+            Calcular Líquido
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
-        <h2 class="calculator-title">Cálculo pelo Valor Líquido</h2>
-        <p class="calculator-description">
-          Calcule os encargos a partir do valor líquido desejado, determinando o valor bruto necessário.
-        </p><br>
-        <a href="{{ route('calculorpaliquido.form') }}" class="calculator-link">
-          Calcular Líquido
-          <i class="bi bi-arrow-right"></i>
-        </a>
+      </div>
+
+      <div class="col-md-4 col-12 mb-4">
+        <div class="calculator-card">
+          <div class="calculator-icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <h2 class="calculator-title">Simulador de Custos CLT</h2>
+          <p class="calculator-description">
+            Calcule todos os encargos e custos relacionados à contratação de colaboradores, incluindo benefícios e provisões.
+          </p>
+          <a href="{{ route('calculoclt.form') }}" class="calculator-link">
+            Calcular CLT
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>

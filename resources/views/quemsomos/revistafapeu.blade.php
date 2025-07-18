@@ -23,8 +23,8 @@
         padding: 25px 30px;
         margin-bottom: 40px;
         box-shadow: -5px 10px 30px rgba(105, 105, 105, 0.19), 0 6px 6px rgba(100, 100, 100, 0.23);
-        border-left: 3px solid #06551A;
-        border-bottom: 3px solid #06551A;
+        border-left: 3px solid #06551a;
+        border-bottom: 3px solid #06551a;
     }
 
     .revista-card {
@@ -100,7 +100,7 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-        background-color: #06551A;
+        background-color: #06551a;
         color: white;
     }
 
@@ -138,7 +138,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
                 <div class="revista-card" style="border-left: 4px solid #627F91;">
                     <div class="alturaimagem" style="background-color: #ECF0F3;">
-                        <a href="https://heyzine.com/flip-book/4ab4922edb.html">
+                        <a href="https://heyzine.com/flip-book/4ab4922edb.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-15.png')}}" alt="Revista FAPEU Volume 15" class="revista-img">
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 15</h3>
                             <p class="revista-meta">N° 15. Ano XV. Volume 15. 2024.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/4ab4922edb.html"><span class="view-btn" style="background-color: #627F91;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/4ab4922edb.html" target="_blank"><span class="view-btn" style="background-color: #627F91;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
                 <div class="revista-card" style="border-left: 4px solid #202C3C;">
                     <div class="alturaimagem" style="background-color: #E7E9EC;">
-                        <a href="https://heyzine.com/flip-book/58bb689faa.html">
+                        <a href="https://heyzine.com/flip-book/58bb689faa.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-14.png')}}" alt="Revista FAPEU Volume 14" class="revista-img">
                         </a>
                     </div>
@@ -164,7 +164,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 14</h3>
                             <p class="revista-meta">N° 14. Ano XIV. Volume 14. 2023.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/58bb689faa.html"><span class="view-btn" style="background-color: #202C3C;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/58bb689faa.html" target="_blank"><span class="view-btn" style="background-color: #202C3C;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
                 <div class="revista-card" style="border-left: 4px solid #5384CA;">
                     <div class="alturaimagem" style="background-color: #ECF3FA;">
-                        <a href="https://heyzine.com/flip-book/9264a3d9c3.html">
+                        <a href="https://heyzine.com/flip-book/9264a3d9c3.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-13.png')}}" alt="Revista FAPEU Volume 13" class="revista-img">
                         </a>
                     </div>
@@ -181,7 +181,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 13</h3>
                             <p class="revista-meta">N° 13. Ano XIII. Volume 13. 2022.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/9264a3d9c3.html"><span class="view-btn" style="background-color: #5384CA;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/9264a3d9c3.html" target="_blank"><span class="view-btn" style="background-color: #5384CA;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
                 <div class="revista-card" style="border-left: 4px solid #691E0A;">
                     <div class="alturaimagem" style="background-color: #F1E7E4;">
-                        <a href="https://heyzine.com/flip-book/a49d45b959.html">
+                        <a href="https://heyzine.com/flip-book/a49d45b959.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-12.jpg')}}" alt="Revista FAPEU Volume 12" class="revista-img">
                         </a>
                     </div>
@@ -198,7 +198,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 12</h3>
                             <p class="revista-meta">N° 12. Ano XII. Volume 12. 2020.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/a49d45b959.html"><span class="view-btn" style="background-color: #691E0A;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/a49d45b959.html" target="_blank"><span class="view-btn" style="background-color: #691E0A;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2015">
                 <div class="revista-card" style="border-left: 4px solid #776873">
                     <div class="alturaimagem" style="background-color: #F1EEF0;">
-                        <a href="https://heyzine.com/flip-book/b56bc101ba.html">
+                        <a href="https://heyzine.com/flip-book/b56bc101ba.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-11.jpg')}}" alt="Revista FAPEU Volume 11" class="revista-img">
                         </a>
                     </div>
@@ -215,7 +215,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 11</h3>
                             <p class="revista-meta">N° 11. Ano XI. Volume 11. 2019.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/b56bc101ba.html"><span class="view-btn" style="background-color: #776873;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/b56bc101ba.html" target="_blank"><span class="view-btn" style="background-color: #776873;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2015">
                 <div class="revista-card" style="border-left: 4px solid #8B3B0C;">
                     <div class="alturaimagem" style="background-color: #F5EAE4;">
-                        <a href="https://heyzine.com/flip-book/9415656b1a.html">
+                        <a href="https://heyzine.com/flip-book/9415656b1a.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-10.jpg')}}" alt="Revista FAPEU Volume 10" class="revista-img">
                         </a>
                     </div>
@@ -232,7 +232,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 10</h3>
                             <p class="revista-meta">N° 10. Ano X. Volume 10. 2017.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/9415656b1a.html"><span class="view-btn" style="background-color: #8B3B0C;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/9415656b1a.html" target="_blank"><span class="view-btn" style="background-color: #8B3B0C;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -240,7 +240,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2015">
                 <div class="revista-card" style="border-left: 4px solid #284703;">
                     <div class="alturaimagem" style="background-color: #E8EEE3;">
-                        <a href="https://heyzine.com/flip-book/0574a87c09.html">
+                        <a href="https://heyzine.com/flip-book/0574a87c09.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-9.jpeg')}}" alt="Revista FAPEU Volume 9" class="revista-img">
                         </a>
                     </div>
@@ -249,7 +249,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 9</h3>
                             <p class="revista-meta">N° 9. Ano IX. Volume 9. 2016.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/0574a87c09.html"><span class="view-btn" style="background-color: #284703;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/0574a87c09.html" target="_blank"><span class="view-btn" style="background-color: #284703;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -257,7 +257,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2015">
                 <div class="revista-card" style="border-left: 4px solid #6A8420;">
                     <div class="alturaimagem" style="background-color: #EEF3E5;">
-                        <a href="https://heyzine.com/flip-book/4758bd61b4.html">
+                        <a href="https://heyzine.com/flip-book/4758bd61b4.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-8.jpg')}}" alt="Revista FAPEU Volume 8" class="revista-img">
                         </a>
                     </div>
@@ -266,7 +266,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 8</h3>
                             <p class="revista-meta">N° 8. Ano VIII. Volume 8. 2015.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/4758bd61b4.html"><span class="view-btn" style="background-color: #6A8420;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/4758bd61b4.html" target="_blank"><span class="view-btn" style="background-color: #6A8420;">Ler revista</span></a>
                     </div>
                     </a>
                 </div>
@@ -275,7 +275,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2010">
                 <div class="revista-card" style="border-left: 4px solid #160D06;">
                     <div class="alturaimagem" style="background-color: #E6E4E3; ">
-                        <a href="https://heyzine.com/flip-book/65cb8a15a5.html">
+                        <a href="https://heyzine.com/flip-book/65cb8a15a5.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-7.jpg')}}" alt="Revista FAPEU Volume 7" class="revista-img">
                         </a>
                     </div>
@@ -284,7 +284,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 7</h3>
                             <p class="revista-meta">N° 7. Ano VII. Volume 7. 2014.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/65cb8a15a5.html"><span class="view-btn" style="background-color: #160D06;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/65cb8a15a5.html" target="_blank"><span class="view-btn" style="background-color: #160D06;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2010">
                 <div class="revista-card" style="border-left: 4px solid #6784AB;">
                     <div class="alturaimagem" style="background-color: #EAEFF5;">
-                        <a href="https://heyzine.com/flip-book/94915e4e65.html">
+                        <a href="https://heyzine.com/flip-book/94915e4e65.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-6.jpg')}}" alt="Revista FAPEU Volume 6" class="revista-img">
                         </a>
                     </div>
@@ -301,7 +301,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 6</h3>
                             <p class="revista-meta">N° 6. Ano VI. Volume 6. 2013.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/94915e4e65.html"><span class="view-btn" style="background-color: #6784AB;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/94915e4e65.html" target="_blank"><span class="view-btn" style="background-color: #6784AB;">Ler revista</span></a>
                     </div>
                     </a>
                 </div>
@@ -310,7 +310,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2010">
                 <div class="revista-card" style="border-left: 4px solid #E5D4C4;">
                     <div class="alturaimagem" style="background-color:rgb(255, 246, 236);">
-                        <a href="https://heyzine.com/flip-book/f19992c6c2.html">
+                        <a href="https://heyzine.com/flip-book/f19992c6c2.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-5.jpg')}}" alt="Revista FAPEU Volume 5" class="revista-img">
                         </a>
                     </div>
@@ -319,7 +319,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 5</h3>
                             <p class="revista-meta">N° 5. Ano V. Volume 5. 2012.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/f19992c6c2.html"><span class="view-btn text-dark" style="background-color: #E5D4C4;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/f19992c6c2.html" target="_blank"><span class="view-btn text-dark" style="background-color: #E5D4C4;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2010">
                 <div class="revista-card" style="border-left: 4px solid #E8510D;">
                     <div class="alturaimagem" style="background-color:rgb(255, 230, 219);">
-                        <a href="https://heyzine.com/flip-book/d6acb68ceb.html">
+                        <a href="https://heyzine.com/flip-book/d6acb68ceb.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-4.jpg')}}" alt="Revista FAPEU Volume 4" class="revista-img">
                         </a>
                     </div>
@@ -336,7 +336,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 4</h3>
                             <p class="revista-meta">N° 4. Ano IV. Volume 4. 2011.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/d6acb68ceb.html"><span class="view-btn" style="background-color: #E8510D;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/d6acb68ceb.html" target="_blank"><span class="view-btn" style="background-color: #E8510D;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2010">
                 <div class="revista-card" style="border-left: 4px solid #023C69;">
                     <div class="alturaimagem" style="background-color: #E6F1F7;">
-                        <a href="https://heyzine.com/flip-book/31b58ea1d5.html">
+                        <a href="https://heyzine.com/flip-book/31b58ea1d5.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-3.jpg')}}" alt="Revista FAPEU Volume 3" class="revista-img">
                         </a>
                     </div>
@@ -353,7 +353,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 3</h3>
                             <p class="revista-meta">N° 3. Ano III. Volume 3. 2010.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/31b58ea1d5.html"><span class="view-btn" style="background-color: #023C69;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/31b58ea1d5.html" target="_blank"><span class="view-btn" style="background-color: #023C69;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -361,7 +361,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2000">
                 <div class="revista-card" style="border-left: 4px solid #771A32">
                     <div class="alturaimagem" style="background-color: #F7E8EC;">
-                        <a href="https://heyzine.com/flip-book/6158d1de99.html">
+                        <a href="https://heyzine.com/flip-book/6158d1de99.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-2.jpg')}}" alt="Revista FAPEU Volume 2" class="revista-img">
                         </a>
                     </div>
@@ -370,7 +370,7 @@
                             <h3 class="revista-title">Revista FAPEU - Volume 2</h3>
                             <p class="revista-meta">N° 2. Ano II. Volume 2. 2005.<br>ISSN 1806-0110</p>
                         </div>
-                        <a href="https://heyzine.com/flip-book/6158d1de99.html"><span class="view-btn" style="background-color: #771A32;">Ler revista</span></a>
+                        <a href="https://heyzine.com/flip-book/6158d1de99.html" target="_blank"><span class="view-btn" style="background-color: #771A32;">Ler revista</span></a>
                     </div>
                 </div>
             </div>
@@ -378,7 +378,7 @@
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2000">
                 <div class="revista-card" style="border-left: 4px solid #28542E;">
                     <div class="alturaimagem" style="background-color: #E0F0E2;">
-                        <a href="https://heyzine.com/flip-book/607bb67147.html">
+                        <a href="https://heyzine.com/flip-book/607bb67147.html" target="_blank">
                             <img src="{{asset('images/Revistas/revista-1.jpg')}}" alt="Revista FAPEU Volume 1" class="revista-img">
                         </a>
                     </div>

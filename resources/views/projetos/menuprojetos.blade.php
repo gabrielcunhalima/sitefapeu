@@ -20,7 +20,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: rgb(25, 135, 84);
   }
 
   .info-card {
@@ -35,7 +35,7 @@
 
   .info-icon {
     font-size: 2.5rem;
-    color: #06551A;
+    color: rgb(25, 135, 84);
     margin-bottom: 20px;
   }
 
@@ -49,7 +49,7 @@
   }
 
   .contact-banner {
-    background: linear-gradient(135deg, #33874f 0%, #06551A 100%);
+    background: linear-gradient(125deg,rgb(43, 158, 83) 0%, #06551a 100%);
     padding: 30px;
     border-radius: 12px;
     margin: 40px 0;
@@ -83,7 +83,7 @@
   .feature-list li:before {
     content: "\F26A";
     font-family: "bootstrap-icons";
-    color: #06551A;
+    color: rgb(25, 135, 84);
     position: absolute;
     left: 0;
     top: 2px;

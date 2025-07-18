@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Licitacoes;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class LicitacaoController extends Controller
 {
@@ -41,17 +42,18 @@ class LicitacaoController extends Controller
         ]);
 
         $licitacao = Licitacoes::findOrCreate($request->id);
-
         $licitacao->fill($request->except(['_token', 'id', 'licitacao', 'ataabertura', 'contratoconvenio', 'resultado']));
 
         foreach (['licitacao', 'ataabertura', 'contratoconvenio', 'resultado'] as $campo) {
             if ($request->hasFile($campo)) {
                 $arquivo = $request->file($campo);
-                $caminho = $arquivo->store('public/licitacoes');
-                $licitacao->$campo = str_replace('public/', 'storage/', $caminho);
+                $nomeFinal = $arquivo->hashName();
+
+                $caminho = $arquivo->storeAs('licitacoes', $nomeFinal, 'public');
+
+                $licitacao->$campo = $caminho;
             }
         }
-
         $licitacao->save();
 
         return redirect()->route('licitacoes.listar')->with('success', 'Licitação salva com sucesso!');

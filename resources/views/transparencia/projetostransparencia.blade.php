@@ -21,7 +21,7 @@
         left: 0;
         width: 60px;
         height: 4px;
-        background-color: #06551A;
+        background-color: #06551a;
     }
 
     .info-card {
@@ -56,7 +56,7 @@
 
     .link-list a:hover {
         background-color: #e9ecef;
-        color: #06551A;
+        color: #06551a;
         transform: translateX(5px);
     }
 
@@ -70,7 +70,7 @@
 
 
     .portal-card-header {
-        background-color: #06551A;
+        background-color: #06551a;
         color: #fff;
         padding: 20px;
         text-align: center;
@@ -83,7 +83,7 @@
 
     .portal-icon {
         font-size: 3rem;
-        color: #06551A;
+        color: #06551a;
         margin-bottom: 20px;
     }
 

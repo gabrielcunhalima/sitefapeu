@@ -11,7 +11,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .legislation-card {
@@ -23,7 +23,7 @@
   }
 
   .legislation-title {
-    color: #06551A;
+    color: #06551a;
     font-weight: 600;
     margin-bottom: 5px;
   }
@@ -41,14 +41,14 @@
   }
 
   .legislation-link {
-    color: #06551A;
+    color: #06551a;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
   }
 
   .legislation-link:hover {
-    color: #054615;
+    color: #06551a;
     text-decoration: underline;
   }
 

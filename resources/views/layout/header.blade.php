@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>@yield('title') | Fundação de Amparo à Pesquisa e Extensão Universitária</title>
+  <title>@yield('title') - Fundação de Amparo à Pesquisa e Extensão Universitária</title>
   <link rel="shortcut icon" href="{{ asset('images/fapeu_ico.ico') }}">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,14 +38,14 @@
     gtag('config', 'G-HWYDQ8SY8W');
   </script>
 
-  <!-- <script>
+  <script>
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       const userwayScript = document.createElement('script');
       userwayScript.src = "https://cdn.userway.org/widget.js";
       userwayScript.setAttribute("data-account", "YinJfS8smr");
       document.head.appendChild(userwayScript);
     }
-  </script> -->
+  </script>
 
   @turnstileScripts()
 
@@ -153,6 +153,7 @@
                 <li><a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>DRHFlow</a></li>
                 <li><a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>ADMFlow</a></li>
                 <li><a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>WebMail</a></li>
+                <li><a class="dropdown-item" href="https://eventos.fapeu.com.br/integridade/public/"><i class="bi bi-box-arrow-up-right me-1"></i>Programa de Integridade</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a></li>
@@ -232,7 +233,7 @@
     }
 
     .main-header {
-      background-color: #06551A;
+      background-color: #06551a;
     }
 
     .navbar-nav .nav-link {
@@ -271,12 +272,12 @@
     .dropdown-item:hover,
     .dropdown-item:focus {
       background-color: rgba(6, 85, 26, 0.1);
-      color: #06551A;
+      color: #06551a;
     }
 
     .dropdown-item i {
       margin-right: 0.5rem;
-      color: #06551A;
+      color: #06551a;
     }
 
     .dropdown-menu.animate {
@@ -357,7 +358,7 @@
     }
 
     .breadcrumb-item a {
-      color: #06551A;
+      color: #06551a;
       text-decoration: none;
     }
 

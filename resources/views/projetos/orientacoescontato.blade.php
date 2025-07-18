@@ -22,7 +22,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .contact-card {
@@ -54,7 +54,7 @@
     left: 15px;
     width: 36px;
     height: 36px;
-    background-color: #06551A;
+    background-color: #06551a;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -70,7 +70,7 @@
 
   .contact-method h3 {
     margin-bottom: 15px;
-    color: #06551A;
+    color: #06551a;
     font-weight: 600;
   }
 
@@ -103,7 +103,7 @@
   }
 
   .personalizado:focus {
-    border-color: #06551A;
+    border-color: #06551a;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }
 
@@ -135,14 +135,14 @@
   .back-link {
     display: inline-flex;
     align-items: center;
-    color: #06551A;
+    color: #06551a;
     font-weight: 600;
     margin-bottom: 30px;
   }
 
   .back-link:hover {
     text-decoration: underline;
-    color: #054615;
+    color: #06551a;
   }
 
   .back-link i {

@@ -22,7 +22,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .content-container {
@@ -59,12 +59,12 @@
     left: 0;
     width: 40px;
     height: 3px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .service-card {
     background: linear-gradient(to left, rgb(241, 241, 241), transparent);
-    border-left: 4px solid #06551A;
+    border-left: 4px solid #06551a;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 8px;
@@ -79,7 +79,7 @@
   .service-title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #06551A;
+    color: #06551a;
     margin-bottom: 15px;
   }
 
@@ -96,7 +96,7 @@
   }
 
   .contact-section {
-    background: linear-gradient(to right, #06551A, rgb(55, 133, 60));
+    background: linear-gradient(to right, #06551a, rgb(55, 133, 60));
     color: #fff;
     padding: 40px;
     border-radius: 12px;
@@ -129,7 +129,7 @@
 
   .divider {
     height: 2px;
-    background: linear-gradient(to right, #06551A, transparent);
+    background: linear-gradient(to right, #06551a, transparent);
     margin: 40px 0;
     border: none;
   }

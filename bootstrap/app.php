@@ -5,7 +5,6 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Dotenv\Dotenv;
 
-// Carregar o arquivo .env explicitamente
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 

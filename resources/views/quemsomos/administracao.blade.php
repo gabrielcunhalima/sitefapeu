@@ -221,6 +221,7 @@
             <p class="text-muted">Mandato: 10/05/1996 a 09/03/2009</p>
             </div>
             <div class="col-md-8 col-sm-12"><img src="images/AntigosConselheiros/Cópia de Galeria Diretoria Executiva - Cleo, Gilberto, Elizbete, Momm, Abelardo.jpg" class="img-fluid" alt="Diretoria Executiva - Cleo, Gilberto, Elizbete, Momm, Abelardo"></div>
+            <div class="col-12 mt-2"><img src="images/AntigosConselheiros/Galeria Diretoria Executiva - Gestão 2017 2021.jpg" class="img-fluid" alt="Diretoria Executiva - Gestão 2017 2021"></div>
         </div>
     </div>
 </div>

@@ -137,9 +137,13 @@ Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('ad
 
 Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
 
-
+//CALCULOS
 Route::get('/calculorpabruto', [CalculoController::class, 'formbruto'])->name('calculorpabruto.form');
 Route::post('/calculorpabruto', [CalculoController::class, 'calcularBruto'])->name('calculorpabruto.processar');
 Route::get('/calculorpaliquido', [CalculoController::class, 'formliquido'])->name('calculorpaliquido.form');
 Route::post('/calculorpaliquido', [CalculoController::class, 'calcularliquido'])->name('calculorpaliquido.processar');
 Route::get('/calculo', [MenuController::class, 'calculo'])->name('calculo.menu');
+Route::get('/calculosalario', [CalculoController::class, 'formSalario'])->name('calculosalario.form');
+Route::post('/calculosalario', [CalculoController::class, 'calcularSalario'])->name('calculosalario.processar');
+Route::get('/calculoclt', [CalculoController::class, 'formClt'])->name('calculoclt.form');
+Route::post('/calculoclt', [CalculoController::class, 'calcularClt'])->name('calculoclt.processar');

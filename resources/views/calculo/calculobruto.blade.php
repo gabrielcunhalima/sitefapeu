@@ -2,7 +2,28 @@
 @section('title', 'Cálculo para Prestação de Serviços Autônomos')
 
 @section('conteudo')
-<div class="container mt-5 pb-5">
+
+<style>
+    .calculator-header {
+        background: linear-gradient(135deg, #06551a, #30755c);
+        color: white;
+        padding: 3px;
+        text-align: center;
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+<div class="container mt-5 pb-5 col-4 mx-auto">
+    <div class="calculator-header rounded-top-2">
+    </div>
     <form action="{{ route('calculorpabruto.processar') }}" method="POST" class="bg-green-light p-4 rounded shadow">
         @csrf
         <div class="mb-3">
@@ -29,7 +50,6 @@
         <button type="submit" class="btn btn-primary">Calcular</button>
     </form>
 
-    <!-- Resultados -->
     @if (session('resultado'))
     <div class="mt-5">
         <ul class="list-group">

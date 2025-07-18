@@ -17,7 +17,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .channel-card {
@@ -42,7 +42,7 @@
   }
 
   .channel-primary {
-    background-color: #06551A;
+    background-color: #06551a;
     color: white;
   }
 
@@ -75,15 +75,14 @@
   }
 
   .btn-primary-channel {
-    background-color: #06551A;
+    background-color: #06551a;
     color: white;
     border: none;
   }
 
   .btn-primary-channel:hover {
-    background-color: #054615;
+    background-color:rgb(9, 107, 81);
     color: white;
-    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(5, 70, 21, 0.2);
   }
 
@@ -96,7 +95,6 @@
   .btn-secondary-channel:hover {
     background-color: #5a6268;
     color: white;
-    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(108, 117, 125, 0.2);
   }
 
@@ -125,7 +123,7 @@
   <div class="container">    
     <div class="row mb-4">
       <div class="col-12">
-        <p class="lead">O Canal de Denúncias da FAPEU é um instrumento essencial para assegurar a transparência e integridade de nossas operações. Através dele, colaboradores, fornecedores, parceiros e o público em geral podem reportar condutas suspeitas, irregulares ou antiéticas. Todas as denúncias são recebidas e tratadas com total confidencialidade, sendo encaminhadas para análise independente a fim de garantir uma investigação imparcial.</p>
+        <p>O Canal de Denúncias da FAPEU é um instrumento essencial para assegurar a transparência e integridade de nossas operações. Através dele, colaboradores, fornecedores, parceiros e o público em geral podem reportar condutas suspeitas, irregulares ou antiéticas. Todas as denúncias são recebidas e tratadas com total confidencialidade, sendo encaminhadas para análise independente a fim de garantir uma investigação imparcial.</p>
       </div>
     </div>
     

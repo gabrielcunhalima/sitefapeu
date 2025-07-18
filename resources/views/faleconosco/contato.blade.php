@@ -23,7 +23,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   /* Contact Form Styles */
@@ -44,7 +44,7 @@
   }
 
   .personalizado:focus {
-    border-color: #06551A;
+    border-color: #06551a;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }
 
@@ -99,7 +99,7 @@
   }
 
   .contact-info-icon {
-    color: #06551A;
+    color: #06551a;
     font-size: 1.2rem;
     margin-right: 15px;
     flex-shrink: 0;
@@ -132,14 +132,13 @@
   .directory-item {
     padding: 15px;
     border-radius: 8px;
-    border-left: 4px solid #06551A;
+    border-left: 4px solid #06551a;
     background-color: #f8f9fa;
     transition: all 0.3s ease;
   }
 
   .directory-item:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transform: translateY(-3px);
   }
 
   .directory-title {
@@ -156,7 +155,7 @@
   }
 
   .directory-icon {
-    color: #06551A;
+    color: #06551a;
     margin-right: 10px;
     font-size: 0.9rem;
   }
@@ -397,7 +396,7 @@
         </div>
 
         <div class="directory-item">
-          <div class="directory-title">Gerência de Informática</div>
+          <div class="directory-title">Gerência de Tecnologia da Informação</div>
           <div class="directory-contact">
             <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
             (48) 3331-7436
@@ -432,7 +431,7 @@
           <div class="directory-title">Assessoria Jurídica</div>
           <div class="directory-contact">
             <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
-            (48) 3331-7414&nbsp; (48) 3331-7499
+            (48) 3331-7414&nbsp; (48) 3331-7415
           </div>
         </div>
 

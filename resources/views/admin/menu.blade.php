@@ -6,6 +6,7 @@
 <style>
     .botaoadmin {
         min-width: 20vw;
+        border-radius: 20px;
     }
 </style>
 

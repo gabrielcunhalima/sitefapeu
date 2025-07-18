@@ -4,7 +4,7 @@
 <style>
     .fapeu-button {
         background-color: rgb(243, 243, 243);
-        border-left: 4px solid #06551A;
+        border-left: 4px solid #06551a;
         padding: 16px 20px;
         border-radius: 8px;
         transition: all 0.3s ease;
@@ -39,7 +39,7 @@
     }
 
     .fapeu-button i {
-        color: #06551A;
+        color: #06551a;
         margin-right: 12px;
         font-size: 18px;
     }

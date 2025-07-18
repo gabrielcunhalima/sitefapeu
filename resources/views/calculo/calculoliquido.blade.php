@@ -2,8 +2,27 @@
 @section('title', 'Cálculo de Encargos - Valor Líquido')
 
 @section('conteudo')
+<style>
+    .calculator-header {
+        background: linear-gradient(135deg,rgb(30, 71, 39), #30755c);
+        color: white;
+        padding: 3px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+    }
 
-<div class="container mt-5 pb-5">
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+<div class="container mt-5 pb-5 col-4 mx-auto">
+    <div class="calculator-header"></div>
     <form action="{{ route('calculorpaliquido.processar') }}" method="POST" class="bg-green-light p-4 rounded shadow">
         @csrf
         <div class="mb-3">

@@ -6,7 +6,7 @@
     <title>Nova Mensagem de Contato</title>
     <style>
         :root {
-            --primary-color: #06551A;
+            --primary-color: #06551a;
             --secondary-color: #30755C;
             --background-color: #f5f7fa;
             --text-color: #333333;

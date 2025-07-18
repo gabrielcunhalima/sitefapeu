@@ -27,13 +27,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: none;
   }
 
   .action-button:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.2);
   }
 
   .action-button p {
@@ -53,6 +52,12 @@
     font-weight: 700;
   }
 
+    .apoiadas-title {
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
   .news-title:after {
     content: '';
     position: absolute;
@@ -61,7 +66,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background-color: #06551A;
+    background-color: #06551a;
   }
 
   .news-card {
@@ -151,24 +156,11 @@
   }
 
   .news-card:hover .news-title-text {
-    color: #06551A;
-  }
-
-  .view-more-btn {
-    background-color: #06551A;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-    box-shadow: 0 4px 12px rgba(6, 85, 26, 0.2);
+    color: #06551a;
   }
 
   .view-more-btn:hover {
-    background-color: #054615;
+    background-color:#06551a;
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(6, 85, 26, 0.3);
   }
@@ -190,7 +182,7 @@
     padding: 0;
     transform: translate(0, -50%);
     cursor: pointer;
-    color: #06551A;
+    color: #06551a;
     border: none;
     outline: none;
     background: white;
@@ -212,7 +204,7 @@
     font-family: 'bootstrap-icons';
     font-size: 24px;
     line-height: 1;
-    color: #06551A;
+    color: #06551a;
     opacity: 0.75;
   }
 
@@ -257,7 +249,7 @@
 
   .servico-icon {
     font-size: 2.5rem;
-    color: #06551A;
+    color: #06551a;
     margin-bottom: 20px;
   }
 
@@ -275,7 +267,7 @@
 
   .servico-link {
     display: inline-block;
-    color: #06551A;
+    color: #06551a;
     font-weight: 600;
     transition: all 0.3s ease;
   }
@@ -299,7 +291,7 @@
 
   .accordion-button:not(.collapsed) {
     background-color: rgba(6, 85, 26, 0.1);
-    color: #06551A;
+    color: #06551a;
   }
 
   .accordion-button:focus {
@@ -387,16 +379,6 @@
         </a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 mb-3">
-        <a href="{{route('colaborador.informerendimentos')}}" class="text-decoration-none">
-          <div class="action-button bg-danger text-white text-center">
-            <i class="bi bi-cash mb-2" style="font-size: 2rem;"></i>
-            <p>Informe de Rendimentos</p>
-          </div>
-        </a>
-      </div>
-    </div>
   </div>
 
 </div>
@@ -426,7 +408,7 @@
       @endforeach
     </div>
     <div class="text-center mt-4">
-      <a href="{{ route('noticias.noticiasrecentes') }}" class="view-more-btn">Ver mais notícias</a>
+      <a href="{{ route('noticias.noticiasrecentes') }}" class="fapeu-btn mt-3">Ver mais notícias</a>
     </div>
   </div>
 </section>
@@ -565,7 +547,7 @@
   <div class="container-fluid">
     <div class="containerapoiadas mx-auto">
       <div>
-        <h2 class="text-center news-title">Instituições Apoiadas</h2>
+        <h2 class="text-center apoiadas-title">Instituições Apoiadas</h2>
         <p class="text-muted text-center">Instituições que possuem credenciamento para pesquisa e extensão junto à FAPEU</p>
       </div>
       <div class="row align-items-center">
@@ -606,7 +588,7 @@
 <section>
   <div class="container-fluid afiliacao">
     <div class="container">
-      <h2 class="text-center news-title">Afiliação</h2>
+      <h2 class="text-center apoiadas-title">Afiliação</h2>
       <div class="row justify-content-center">
         <div class="col-md-6 col-lg-4 p-3 mb-4 link-hover">
           <a href="https://www.confies.org.br/" target="_blank" class="text-decoration-none">
@@ -624,14 +606,14 @@
       dots: true,
       infinite: true,
       speed: 700,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
       prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
       nextArrow: '<button type="button" class="slick-next"><i class="bi bi-chevron-right"></i></button>',
       responsive: [{
-          breakpoint: 1024,
+          breakpoint: 864,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,

@@ -196,8 +196,6 @@ class MenuController extends Controller
         return view('noticias.noticiasleitura', compact('post', 'imagem', 'titulo', 'link'));
     }
 
-
-
     //EDITAR NOTICIAS
 
     public function editarNoticias()
