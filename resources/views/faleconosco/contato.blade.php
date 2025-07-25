@@ -212,7 +212,7 @@
        
        //DEFINIÇÕES DE REQUISIÇÃO
        curl_setopt_array($curl, [
-        CURLOPT_URL=>'https://www.google.com/recaptcha/api/siteverify',
+         CURLOPT_URL=>'https://www.google.com/recaptcha/api/siteverify',
          CURLOPT_RETURNTRANSFER => true,
          CURLOPT_CUSTOMREQUEST =>'POST',
          CURLOPT_POSTFIELDS => [ 
@@ -238,7 +238,6 @@
 
         }
         
-
         ?>
 
         @if (session('success'))
@@ -246,7 +245,6 @@
         {{ session('success') }}
     </div>
 @endif
-
 
         <div class="contact-form-container">
           <form action="{{ route('contato.salvar') }}" method="POST" id="demo-form" onsubmit="return validarpost()">
