@@ -212,13 +212,47 @@
     <div class="form-container" id="formulario-reuniao">
       <h3 class="form-title">Formulário de Solicitação de Reunião</h3>
 
-      @if(session('success'))
+      <?php
+
+      if ($_POST) {
+        $curl = curl_init();
+
+        //DEFINIÇÕES DE REQUISIÇÃO
+        curl_setopt_array($curl, [
+          CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_CUSTOMREQUEST => 'POST',
+          CURLOPT_POSTFIELDS => [
+            'secret' => '6LdBzI4rAAAAAGVQyqlgZxZhBxiZFKXjAU4qQP-r',
+            'response' => $_POST['g-recaptcha-response'] ?? ''
+          ]
+
+        ]);
+
+        // EXECUTA REQUISIÇÃO
+        $response = curl_exec($curl);
+
+        //FECHA CONEXÃO CURL
+        curl_close($curl);
+
+        // RESPONSE EM ARRAY
+        $responseArray = json_decode($response, true);
+
+        // SUCESSO DO RECAPTCHA
+        $sucesso = $responseArray['sucess'] ?? false;
+
+        echo $sucesso ? "Mensagem enviada com Sucesso!" : "reCAPTCHA Inválido";
+      }
+
+      ?>
+
+      @if (session('success'))
       <div class="alert alert-success">
         {{ session('success') }}
       </div>
       @endif
 
-      <form action="{{ route('contato.agendarReuniao') }}" method="POST">
+      <form action="{{ route('contato.agendarReuniao') }}" method="POST" onsubmit="return validarpost()">
         @csrf
         <div class="form-section">
           <div class="row">
@@ -298,8 +332,8 @@
           </div>
         </div>
 
-        <div class="my-3 text-center">
-          <x-turnstile data-theme="light" />
+        <div class="my-3 justify-content-center d-flex">
+          <div class="g-recaptcha" data-sitekey="6LdBzI4rAAAAAFJVLLsdpXNpIfUS_MLrw5b30LtJ"></div>
         </div>
 
         <div class="text-center mt-4">
@@ -319,4 +353,16 @@
     </div>
   </div>
 </section>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  function validarpost() {
+    if (grecaptcha.getResponse() != "")
+      return true;
+
+    alert('Selecione a caixa de "Não sou um Robô" ');
+    return false;
+
+  }
+</script>
 @endsection

@@ -46,7 +46,7 @@
                         <p class="card-text">Ferramenta para simular encargos, impostos e valores líquidos sobre pagamentos
                             de autônomos e contratações de celetistas.</p>
                         <a href=" {{ route('calculo.menu') }}" class="btn btn-success mt-2">
-                            <i class="bi bi-box-arrow-up-right me-2"></i>Acessar Ferramenta
+                            Acessar Ferramenta
                         </a>
                     </div>
                 </div>

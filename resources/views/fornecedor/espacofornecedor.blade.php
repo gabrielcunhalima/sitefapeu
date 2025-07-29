@@ -185,7 +185,7 @@
             </p>
         </div>
         <div class="action-section">
-            <a href="http://150.162.78.4/#/login/fornecedor" class="portal-btn" target="_blank">
+            <a href="http://eventos.fapeu.com.br/portalfornecedor/public" class="portal-btn" target="_blank">
                 Acesse o Portal do Fornecedor
                 <i class="bi bi-box-arrow-up-right"></i>
             </a>

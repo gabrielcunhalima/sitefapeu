@@ -185,19 +185,18 @@
   }
 </style>
 
- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
- <script>
-  
-      function validarpost(){
-        if (grecaptcha.getResponse() != "" )
-        return true;
+<script>
+  function validarpost() {
+    if (grecaptcha.getResponse() != "")
+      return true;
 
-        alert('Selecione a caixa de "Não sou um Robô" ');
-        return false;
-       
-      }
-    </script>
+    alert('Selecione a caixa de "Não sou um Robô" ');
+    return false;
+
+  }
+</script>
 
 <section class="contact-section">
   <div class="container">
@@ -205,46 +204,45 @@
       <div class="col-lg-7">
         <h2 class="section-header">Entre em Contato</h2>
 
-        <?php 
+        <?php
 
         if ($_POST) {
-       $curl = curl_init();
-       
-       //DEFINIÇÕES DE REQUISIÇÃO
-       curl_setopt_array($curl, [
-         CURLOPT_URL=>'https://www.google.com/recaptcha/api/siteverify',
-         CURLOPT_RETURNTRANSFER => true,
-         CURLOPT_CUSTOMREQUEST =>'POST',
-         CURLOPT_POSTFIELDS => [ 
-          'secret' => '6LdBzI4rAAAAAGVQyqlgZxZhBxiZFKXjAU4qQP-r',
-          'response' => $_POST['g-recaptcha-response'] ?? ''
-         ] 
-          
-        ]);
+          $curl = curl_init();
 
-         // EXECUTA REQUISIÇÃO
-         $response= curl_exec ($curl);
+          //DEFINIÇÕES DE REQUISIÇÃO
+          curl_setopt_array($curl, [
+            CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => [
+              'secret' => '6LdBzI4rAAAAAGVQyqlgZxZhBxiZFKXjAU4qQP-r',
+              'response' => $_POST['g-recaptcha-response'] ?? ''
+            ]
+
+          ]);
+
+          // EXECUTA REQUISIÇÃO
+          $response = curl_exec($curl);
 
           //FECHA CONEXÃO CURL
           curl_close($curl);
 
-        // RESPONSE EM ARRAY
-          $responseArray= json_decode($response, true);
-          
+          // RESPONSE EM ARRAY
+          $responseArray = json_decode($response, true);
+
           // SUCESSO DO RECAPTCHA
-          $sucesso = $responseArray ['sucess'] ?? false;
+          $sucesso = $responseArray['sucess'] ?? false;
 
           echo $sucesso ? "Mensagem enviada com Sucesso!" : "reCAPTCHA Inválido";
-
         }
-        
+
         ?>
 
         @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div>
+        @endif
 
         <div class="contact-form-container">
           <form action="{{ route('contato.salvar') }}" method="POST" id="demo-form" onsubmit="return validarpost()">
@@ -305,17 +303,16 @@
               <textarea class="form-control" id="exampleFormControlTextarea1" name="mensagem" rows="5" required></textarea>
             </div>
 
-           <div class="my-3 text-center">
-                <div class="g-recaptcha" data-sitekey="6LdBzI4rAAAAAFJVLLsdpXNpIfUS_MLrw5b30LtJ"></div>
-           </div>
-
+            <div class="my-3 justify-content-center d-flex">
+              <div class="g-recaptcha" data-sitekey="6LdBzI4rAAAAAFJVLLsdpXNpIfUS_MLrw5b30LtJ"></div>
+            </div>
 
             <div class="text-center mt-4">
               <button type="submit" class="fapeu-btn">
                 <i class="bi bi-send me-2"></i>Enviar Mensagem
               </button>
             </div>
-            
+
           </form>
 
           @if($errors->any())
@@ -503,6 +500,4 @@
     </div>
   </div>
 </section>
-
-
 @endsection
