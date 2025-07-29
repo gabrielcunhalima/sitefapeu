@@ -182,7 +182,7 @@
                             </li>
 
                             <li>
-                                <a href="pdfs/Legislacao/FAPEU/portaria_normativa_n._002_2022_de_-_comit_de_implementac_o_lgpd_revoga_a_portaria_normativa_n._018_2021_de.pdf"
+                                <a href="pdfs/Legislacao/FAPEU/portaria_n._004_2022_de_-_encarregado_dados_pessoais_fapeu.pdf"
                                     target="_blank" class="normas-link">
                                     PORTARIA N. 004/2022/DE, de 02 de Abril de 2022
                                 </a>
@@ -328,7 +328,7 @@
                             </li>
 
                             <li>
-                                <a href="pdfs/Legislacao/FAPEU/portaria_008_de_2011.pdf" target="_blank"
+                                <a href="pdfs/Legislacao/FAPEU/portaria_normativa_n._11_de_2018_-_estabelece_os_crit_rios_e_procedimetnos_para_a_concess_o_de_bolsas._revoga_a_portaria_n._017_de_2011.pdf" target="_blank"
                                     class="normas-link">
                                     Portaria Normativa n. 11/DE/2018, de 26 de julho de 2018
                                 </a>
@@ -538,7 +538,7 @@
                             </li>
 
                             <li>
-                                <a href="pdfs/Legislacao/UFFS/resolucao_15_2017_-_aprova_o_regulamento_de_pesquisa_da_uffs.pdf"
+                                <a href="pdfs/Legislacao/UFFS/resolucao_15_2017___aprova_o_regulamento_de_pesquisa_da_uffs.pdf"
                                     target="_blank" class="normas-link">
                                     RESOLUÇÃO Nº 15/CONSUNI CPPGEC/UFFS/2017
                                 </a>
