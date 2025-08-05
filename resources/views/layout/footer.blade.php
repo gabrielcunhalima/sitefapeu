@@ -47,14 +47,6 @@
                 </div>
                 <div class="d-flex mb-3">
                     <div class="flex-shrink-0 me-3 text-white-70">
-                        <i class="bi bi-envelope-fill fs-5"></i>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p class="mb-0 text-white-70">contato@fapeu.org.br</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-3">
-                    <div class="flex-shrink-0 me-3 text-white-70">
                         <i class="bi bi-mailbox fs-5"></i>
                     </div>
                     <div>

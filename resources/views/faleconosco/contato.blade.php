@@ -285,7 +285,7 @@
                     <option value="9">Financeiro</option>
                     <option value="10">Gerência Administrativa e Financeira</option>
                     <option value="11">Gerência de Contabilidade</option>
-                    <option value="12">Gerência de Informatica</option>
+                    <option value="12">Gerência de Tecnologia da Informação</option>
                     <option value="13">Gerência de Projetos</option>
                     <option value="14">Importação</option>
                     <option value="15">Jurídico</option>

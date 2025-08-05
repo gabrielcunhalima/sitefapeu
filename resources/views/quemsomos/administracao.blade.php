@@ -82,7 +82,7 @@
     <div class="card shadow-sm mb-5 border-0 overflow-hidden">
         <div class="card-header bg-verde4 text-white py-3">
             <h3 class="mb-0 fw-bold">Conselho Fiscal</h3>
-            <p class="mb-0 mt-1 text-white-50">Mandato 4 anos | Gestão 02/08/2021 – 01/8/2025</p>
+            <p class="mb-0 mt-1 text-white-50">Mandato 4 anos | Gestão 02/08/2025 – 01/08/2029</p>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -95,7 +95,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-4">Sinesio Stefano Dubiela Ostroski</td>
+                            <td class="px-4">Vladimir Arthur Fey</td>
                             <td class="px-4">Presidente</span></td>
                         </tr>
                         <tr>
@@ -103,15 +103,15 @@
                             <td class="px-4">Titular</td>
                         </tr>
                         <tr>
-                            <td class="px-4">Silvana de Gaspari</td>
+                            <td class="px-4">Paulo Roberto Medeiros dos Santos</td>
                             <td class="px-4">Titular</td>
                         </tr>
                         <tr>
-                            <td class="px-4">Celso Spada</td>
+                            <td class="px-4">Erico Porto Filho</td>
                             <td class="px-4">Suplente</td>
                         </tr>
                         <tr>
-                            <td class="px-4">Paulo Roberto Medeiros dos Santos</td>
+                            <td class="px-4">Francisco José dos Santos Neto</td>
                             <td class="px-4">Suplente</td>
                         </tr>
                     </tbody>
