@@ -19,7 +19,7 @@
     content: '';
     position: absolute;
     bottom: -12px;
-    left: 0;
+    left: 10px;
     width: 60px;
     height: 4px;
     background-color: #06551a;

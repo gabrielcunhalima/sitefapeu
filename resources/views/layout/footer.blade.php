@@ -9,9 +9,9 @@
     }
 
     .text-white-70 {
-        color:rgba(233, 233, 233, 0.7)
+        color: rgba(233, 233, 233, 0.7)
     }
-    
+
     .social-icon {
         display: inline-flex;
         align-items: center;
@@ -52,6 +52,14 @@
                     <div>
                         <p class="mb-0 text-white-70">Caixa Postal 5078<br>Bairro Trindade - Florianópolis/SC<br>CEP
                             88035-972</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="flex-shrink-0 me-3 text-white-70">
+                        <i class="bi bi-envelope fs-5"></i>
+                    </div>
+                    <div>
+                        <img src="{{ asset('images/contato.png') }}" height="16">
                     </div>
                 </div>
             </div>

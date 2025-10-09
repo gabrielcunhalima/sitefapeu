@@ -6,6 +6,13 @@
     .blog-post {
         -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        border-radius: 12px; 
+        overflow: hidden;
+    }
+
+    .blog-post .blog-img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
     .blog-post .blog-img .overlay,
@@ -21,6 +28,8 @@
         right: 0;
         bottom: 0;
         left: 0;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
     .blog-post .blog-img .post-meta {
@@ -31,6 +40,11 @@
 
     .blog-post .blog-img .post-meta .read-more:hover {
         color: #6dc77a !important;
+    }
+
+    .blog-post .content {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
     }
 
     .blog-post .content h1,
@@ -128,30 +142,56 @@
         max-height: 4.5em;
     }
 
+    .carousel-inner {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
+    }
+
     .carousel-inner img {
         width: 100%;
         height: auto;
         object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .carousel-item img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
     a {
         text-decoration: none;
     }
+
+    main {
+        background-color: #eeeeeeff;
+    }
+
+    body {
+        background-color: #eeeeeeff !important;
+    }
+
+    .content {
+        background-color: #ffffffff;
+    }
+
+    /* Garantir que a classe rounded-top funcione corretamente */
+    .rounded-top {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+    }
 </style>
 <div class="noticiasrecentes">
-    <!-- <div class="section-title py-3 mb-0">
-        <h2 class="container my-2 text-center">Notícias recentes</h2>
-        <p class="text-muted text-center mb-0">Confira o que aconteceu na FAPEU em nosso portal de notícias.</p>
-    </div> -->
     <div class="container">
         <div class="row">
             @foreach ($news as $item)
             <div class="col-lg-4 col-md-6 mt-4 pt-2">
                 <div class="blog-post rounded border">
                     <div class="blog-img d-block overflow-hidden position-relative card-img-container bg-claro shadow-sm" style="position: relative; width: 100%; height: auto;">
-                        <!-- Carrossel de imagens -->
                         @if($item->imagem || $item->imagem2 || $item->imagem3 || $item->imagem4 || $item->imagem5)
-                        <div id="carousel{{$item->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div id="carousel{{$item->id}}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="000">
                             <div class="carousel-inner">
                                 @php
                                 $images = ['imagem', 'imagem2', 'imagem3', 'imagem4', 'imagem5'];
@@ -190,22 +230,22 @@
 
 
 @if(session('success'))
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="successModalLabel"><i class="bi bi-check-circle-fill me-2"></i>Sucesso</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body text-dark">
-                    {{ session('success') }}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">OK</button>
-                </div>
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="successModalLabel"><i class="bi bi-check-circle-fill me-2"></i>Sucesso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body text-dark">
+                {{ session('success') }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">OK</button>
             </div>
         </div>
     </div>
+</div>
 
 <script>
     window.onload = function() {

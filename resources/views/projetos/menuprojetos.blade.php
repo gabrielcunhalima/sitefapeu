@@ -183,7 +183,7 @@
             
             <div class="col-md-6 mb-4">
               <h5 class="fw-bold text-success"><i class="bi bi-calendar-event me-2"></i>Eventos</h5>
-              <p>Gerenciamento de inscrições, assessoria jurídica para contratos de patrocínio e emissão de certificados e contratações de serviços para eventos.</p>
+              <p>Gerenciamento de inscrições, assessoria jurídica para contratos de patrocínio, emissão de certificados e contratações de serviços para eventos.</p>
             </div>
             
             <div class="col-md-6 mb-4">

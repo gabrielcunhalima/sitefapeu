@@ -52,7 +52,7 @@
     font-weight: 700;
   }
 
-    .apoiadas-title {
+  .apoiadas-title {
     position: relative;
     margin-bottom: 40px;
     font-weight: 700;
@@ -160,7 +160,7 @@
   }
 
   .view-more-btn:hover {
-    background-color:#06551a;
+    background-color: #06551a;
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(6, 85, 26, 0.3);
   }
@@ -415,8 +415,7 @@
 
 <section class="servicos-section">
   <div class="container">
-    <h2 class="text-center news-title">Nossos Serviços</h2>
-    <p class="text-muted text-center mb-5">Conheça os serviços oferecidos pela FAPEU</p>
+    <h2 class="text-center news-title mb-5">Nossos Serviços</h2>
     <div class="row servicos-desktop">
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="servico-card">
@@ -435,7 +434,7 @@
           </div>
           <h3 class="servico-title">Reservas de Salas</h3>
           <p class="servico-desc">Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p>
-          <a href="http://150.162.78.4:8080/manager_reservasala/reservasala" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          <a href="https://reservas.fapeu.org.br" class="servico-link" target="_blank">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 mb-4">
@@ -445,7 +444,7 @@
           </div>
           <h3 class="servico-title">Cursos e Eventos</h3>
           <p class="servico-desc">Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p>
-          <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+          <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link" target="_blank">Saiba mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
       <div class="col-md-6 mb-4">
@@ -495,7 +494,7 @@
         <div id="collapseReservas" class="accordion-collapse collapse" aria-labelledby="headingReservas" data-bs-parent="#servicosAccordion">
           <div class="accordion-body">
             <p>Agendamento de espaços físicos para reuniões e eventos com capacidade para até 80 pessoas.</p>
-            <a href="http://150.162.78.4:8080/manager_reservasala/reservasala" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+            <a href="https://reservas.fapeu.org.br" class="servico-link" target="_blank">Saiba mais <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -508,7 +507,7 @@
         <div id="collapseCursos" class="accordion-collapse collapse" aria-labelledby="headingCursos" data-bs-parent="#servicosAccordion">
           <div class="accordion-body">
             <p>Crie e gerencie seu evento através da nossa plataforma completa, prática e intuitiva.</p>
-            <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+            <a href="https://eventos.fapeu.com.br/eventos/public" class="servico-link" target="_blank">Saiba mais <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -543,7 +542,7 @@
   </div>
 </section>
 
-<section class="apoiadas">
+<section class="apoiadas pb-0">
   <div class="container-fluid">
     <div class="containerapoiadas mx-auto">
       <div>
@@ -585,6 +584,9 @@
     </div>
   </div>
 </section>
+
+<hr class="mb-4 mx-5">
+
 <section>
   <div class="container-fluid afiliacao">
     <div class="container">

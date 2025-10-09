@@ -105,11 +105,19 @@
                     <ul class="normas-list">
 
                         <li>
+                            <a href="pdfs/Legislacao/FAPEU/PORTARIA_N._003_2025_SP-Constituição_da_Comissão_Eleitoral_da_CIPA_assinado.pdf"
+                                target="_blank" class="normas-link">
+                                PORTARIA N. 003/2025/SP, de 11 de agosto de 2025
+                            </a>
+                            <p class="norm-description">Constituição da Comissão Eleitoral da CIPA</p>
+                        </li>
+
+                        <li>
                             <a href="pdfs/Legislacao/FAPEU/PORTARIA NORMATIVA N. 004 DE 2025 - Disciplina os procedimentos de diligência prévia de terceiros_Revoga PN 005 2019.pdf"
                                 target="_blank" class="normas-link">
                                 PORTARIA NORMATIVA N. 004 DE 2025, de 28 de julho de 2025
                             </a>
-                            <p class="norm-description">Disciplina os procedimentos de diligência prévia de terceiros. Revoga a Portaria Normativa N. 005 DE 2019.<br><a href="pdfs/Legislacao/FAPEU/ANEXO PORTARIA NORMATIVA N. 004 DE 2025 - FORMULÁRIO DE DILIGÊNCIA PRÉVIA DE TERCEIROS.docx">Formulário de Diligência Prévia de Terceiros.</a></p>
+                            <p class="norm-description">Disciplina os procedimentos de diligência prévia de terceiros. Revoga a Portaria Normativa N. 005 DE 2019.<br><a class="text-principal" href="pdfs/Legislacao/FAPEU/ANEXO PORTARIA NORMATIVA N. 004 DE 2025 - FORMULÁRIO DE DILIGÊNCIA PRÉVIA DE TERCEIROS.docx">Formulário de Diligência Prévia de Terceiros.</a></p>
                         </li>
 
                         <li>

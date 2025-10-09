@@ -132,7 +132,7 @@
     </div>
 
     <div class="form-container">
-      <h3 class="form-title">Formulário de Solicitação de Cálculo</h3>
+      <h3 class="form-title">Formulário indisponível no momento.</h3>
 
       <?php
 
@@ -161,7 +161,7 @@
         $responseArray = json_decode($response, true);
 
         // SUCESSO DO RECAPTCHA
-        $sucesso = $responseArray['sucess'] ?? false;
+        $sucesso = $responseArray['success'] ?? false;
 
         echo $sucesso ? "Mensagem enviada com Sucesso!" : "reCAPTCHA Inválido";
       }
@@ -174,75 +174,6 @@
       </div>
       @endif
 
-      <form action="{{ route('calcular.ressarcimento') }}" method="POST" enctype="multipart/form-data" onsubmit="return validarpost()">
-        @csrf
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="nome_projeto" class="form-label">Nome do projeto</label>
-            <input type="text" class="form-control" id="nome_projeto" name="nome_projeto" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="nome_coordenador" class="form-label">Nome completo do coordenador</label>
-            <input type="text" class="form-control" id="nome_coordenador" name="nome_coordenador" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="vigencia_meses" class="form-label">Vigência do projeto (em meses)</label>
-            <input type="number" class="form-control" id="vigencia_meses" name="vigencia_meses" min="1" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="nome_financiador" class="form-label">Nome do financiador</label>
-            <input type="text" class="form-control" id="nome_financiador" name="nome_financiador" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="num_parcelas" class="form-label">Número de parcelas previstas</label>
-            <input type="number" class="form-control" id="num_parcelas" name="num_parcelas" min="1" required style="text-decoration:none;">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="planilha_orcamentaria" class="form-label">Planilha orçamentária do projeto com quantitativos</label>
-            <input type="file" class="form-control" id="planilha_orcamentaria" name="planilha_orcamentaria" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="nome_solicitante" class="form-label">Nome do solicitante</label>
-            <input type="text" class="form-control" id="nome_solicitante" name="nome_solicitante" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="contato" class="form-label">Informações para contato (e-mail e/ou telefone)</label>
-            <input type="text" class="form-control" id="contato" name="contato" required>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="instituicao_id" class="form-label">Instituição credenciada à qual o coordenador está vinculado</label>
-          <select class="form-control" id="instituicao_id" name="instituicao_id" required>
-            <option value="" selected disabled>Selecione uma instituição</option>
-            <option value="1">Universidade Federal de Santa Catarina (UFSC)</option>
-            <option value="2">Universidade Federal da Fronteira Sul (UFFS)</option>
-            <option value="3">Instituto Federal Catarinense (IFC)</option>
-            <option value="4">Universidade do Estado de Santa Catarina (UDESC)</option>
-            <option value="5">Universidade Federal do Pampa (UNIPAMPA)</option>
-            <option value="6">Hospital Universitário da UFSC (EBSERH HU-UFSC)</option>
-          </select>
-        </div>
-
-        <div class="my-3 justify-content-center d-flex">
-          <div class="g-recaptcha" data-sitekey="6LdBzI4rAAAAAFJVLLsdpXNpIfUS_MLrw5b30LtJ"></div>
-        </div>
-
-        <div class="text-center mt-4">
-          <button type="submit" class="btn btn-success btn-lg">
-            <i class="bi bi-calculator me-2"></i>Solicitar cálculo de ressarcimento
-          </button>
-        </div>
-      </form>
 
       @if($errors->any())
       <div class="alert alert-danger mt-4">

@@ -3,12 +3,11 @@
 
 @section('conteudo')
 <style>
-.marble-bg {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E"),
-    linear-gradient(135deg,rgb(241, 234, 195) 0%,rgb(241, 234, 195) 100%);
-    
-}
+    .marble-bg {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E"),
+            linear-gradient(135deg, rgb(241, 234, 195) 0%, rgb(241, 234, 195) 100%);
 
+    }
 </style>
 
 <div class="container">
@@ -137,11 +136,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-4">Felício Wessling Margotti</td>
+                            <td class="px-4">Wilson Erbs</td>
                             <td class="px-4">Diretor Presidente</td>
                         </tr>
                         <tr>
-                            <td class="px-4">Wilson Erbs</td>
+                            <td class="px-4">Silvana de Gaspari</td>
                             <td class="px-4">Diretor de Projetos</td>
                         </tr>
                         <tr>
@@ -185,40 +184,40 @@
         <h3 class="font-weight-bold mb-5 text-dourado"><b class="rounded-pill bg-white p-2 px-5">Galeria dos antigos Diretores Executivos</b></h3>
         <div class="row justify-content-center">
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente bg-transparente"><img src="images/AntigosConselheiros/Cópia de Colombo Machado Salles_gestão 21091977 a 07121977.jpg" class="img-fluid" alt="Colombo Machado Salles">
-            <h5 class="mt-3">Colombo Machado Salles</h5>
-            <p class="text-muted">Mandato: 21/09/1977 a 07/12/1977</p>
+                <h5 class="mt-3">Colombo Machado Salles</h5>
+                <p class="text-muted">Mandato: 21/09/1977 a 07/12/1977</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Paulino Vandresen_gestão 07121977 a 31031978.jpg" class="img-fluid" alt="Paulino Vandresen">
-            <h5 class="mt-3">Paulino Vandresen</h5>
-            <p class="text-muted">Mandato: 07/12/1977 a 31/03/1978</p>
+                <h5 class="mt-3">Paulino Vandresen</h5>
+                <p class="text-muted">Mandato: 07/12/1977 a 31/03/1978</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Ignácio Ricken_gestão 31031978 a 07061983.jpg" class="img-fluid" alt="Ignácio Ricken">
-            <h5 class="mt-3">Ignácio Ricken</h5>
-            <p class="text-muted">Mandato: 31/03/1978 a 07/06/1983</p>
+                <h5 class="mt-3">Ignácio Ricken</h5>
+                <p class="text-muted">Mandato: 31/03/1978 a 07/06/1983</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Nelson Moritz Laporta_gestão 07061983 a 05121983.jpg" class="img-fluid" alt="Nelson Moritz Laporta">
-            <h5 class="mt-3">Nelson Moritz Laporta</h5>
-            <p class="text-muted">Mandato: 07/06/1983 a 05/12/1983</p>
+                <h5 class="mt-3">Nelson Moritz Laporta</h5>
+                <p class="text-muted">Mandato: 07/06/1983 a 05/12/1983</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Antônio Diomário de Queiroz_gestão 05121983 a 17031986.jpg" class="img-fluid" alt="Antônio Diomário de Queiroz">
-            <h5 class="mt-3">Antônio Diomário de Queiroz</h5>
-            <p class="text-muted">Mandato: 05/12/1983 a 17/03/1986</p>
+                <h5 class="mt-3">Antônio Diomário de Queiroz</h5>
+                <p class="text-muted">Mandato: 05/12/1983 a 17/03/1986</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de José Carlos Zanini_Gestão 17031986 a 04061991.jpg" class="img-fluid" alt="José Carlos Zanini">
-            <h5 class="mt-3">José Carlos Zanini</h5>
-            <p class="text-muted">Mandato: 17/03/1986 a 04/06/1991</p>
+                <h5 class="mt-3">José Carlos Zanini</h5>
+                <p class="text-muted">Mandato: 17/03/1986 a 04/06/1991</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Rodolfo Joaquim Pinto da Luz_gestão 04061991 a 13051992.jpg" class="img-fluid" alt="Joaquim Pinto da Luz">
-            <h5 class="mt-3">Rodolfo Joaquim Pinto da Luz</h5>
-            <p class="text-muted">Mandato: 04/06/1991 a 13/05/1992</p>
+                <h5 class="mt-3">Rodolfo Joaquim Pinto da Luz</h5>
+                <p class="text-muted">Mandato: 04/06/1991 a 13/05/1992</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Edemar Roberto Andreatta_gestão 13051992 a 10051996.jpg" class="img-fluid" alt="Edemar Roberto Andreatta">
-            <h5 class="mt-3">Edemar Roberto Andreatta</h5>
-            <p class="text-muted">Mandato: 13/05/1992 a 10/05/1996</p>
+                <h5 class="mt-3">Edemar Roberto Andreatta</h5>
+                <p class="text-muted">Mandato: 13/05/1992 a 10/05/1996</p>
             </div>
             <div class="col-md-3 col-sm-12 card m-2 bg-transparente"><img src="images/AntigosConselheiros/Cópia de Carlos Fernando Miguez_gestão 10051996 a 09032009.jpg" class="img-fluid" alt="Carlos Fernando Miguez">
-            <h5 class="mt-3">Carlos Fernando Miguez</h5>
-            <p class="text-muted">Mandato: 10/05/1996 a 09/03/2009</p>
+                <h5 class="mt-3">Carlos Fernando Miguez</h5>
+                <p class="text-muted">Mandato: 10/05/1996 a 09/03/2009</p>
             </div>
             <div class="col-md-8 col-sm-12"><img src="images/AntigosConselheiros/Cópia de Galeria Diretoria Executiva - Cleo, Gilberto, Elizbete, Momm, Abelardo.jpg" class="img-fluid" alt="Diretoria Executiva - Cleo, Gilberto, Elizbete, Momm, Abelardo"></div>
             <div class="col-12 mt-2"><img src="images/AntigosConselheiros/Galeria Diretoria Executiva - Gestão 2017 2021.jpg" class="img-fluid" alt="Diretoria Executiva - Gestão 2017 2021"></div>

@@ -210,14 +210,13 @@
     </div>
 
     <div class="form-container" id="formulario-reuniao">
-      <h3 class="form-title">Formulário de Solicitação de Reunião</h3>
+      <h3 class="form-title">Formulário indisponível no momento.</h3>
 
       <?php
 
       if ($_POST) {
         $curl = curl_init();
 
-        //DEFINIÇÕES DE REQUISIÇÃO
         curl_setopt_array($curl, [
           CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
           CURLOPT_RETURNTRANSFER => true,
@@ -229,17 +228,13 @@
 
         ]);
 
-        // EXECUTA REQUISIÇÃO
         $response = curl_exec($curl);
 
-        //FECHA CONEXÃO CURL
         curl_close($curl);
 
-        // RESPONSE EM ARRAY
         $responseArray = json_decode($response, true);
 
-        // SUCESSO DO RECAPTCHA
-        $sucesso = $responseArray['sucess'] ?? false;
+        $sucesso = $responseArray['success'] ?? false;
 
         echo $sucesso ? "Mensagem enviada com Sucesso!" : "reCAPTCHA Inválido";
       }
@@ -252,94 +247,6 @@
       </div>
       @endif
 
-      <form action="{{ route('contato.agendarReuniao') }}" method="POST" onsubmit="return validarpost()">
-        @csrf
-        <div class="form-section">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="nome" class="form-label">1. Nome Completo</label>
-              <input type="text" class="form-control" id="nome" name="nome" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="email" class="form-label">2. E-mail</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="telefone" class="form-label">3. Telefone para Contato</label>
-              <input type="text" class="form-control" id="telefone" name="telefone">
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="cargo_instituicao" class="form-label">4. Cargo/Instituição</label>
-              <input type="text" class="form-control" id="cargo_instituicao" name="cargo_instituicao" required>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <div class="mb-3">
-            <label for="assunto" class="form-label">5. Assunto da Reunião</label>
-            <input type="text" class="form-control" id="assunto" name="assunto" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="descricao" class="form-label">6. Descrição</label>
-            <textarea class="form-control" id="descricao" name="descricao" rows="4" required></textarea>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="data_reuniao" class="form-label">7. Data preferencial</label>
-              <input type="date" class="form-control" id="data_reuniao" name="data_reuniao" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="horario_reuniao" class="form-label">Horário preferencial</label>
-              <select class="form-control" id="horario_reuniao" name="horario_reuniao" required>
-                <option value="">Selecione um horário</option>
-                <option value="09:00">08:00</option>
-                <option value="09:00">09:00</option>
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="09:00">13:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-              </select>
-              <div class="form-info">Selecione a data e horário mais conveniente para você (se houver flexibilidade, indique sua disponibilidade no campo de descrição).</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <label for="preferencia_contato" class="form-label">8. Como prefere ser contatado?</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="preferencia_contato" id="contato_email" value="email" required>
-            <label class="form-check-label" for="contato_email">
-              Por e-mail
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="preferencia_contato" id="contato_telefone" value="telefone">
-            <label class="form-check-label" for="contato_telefone">
-              Por telefone
-            </label>
-          </div>
-        </div>
-
-        <div class="my-3 justify-content-center d-flex">
-          <div class="g-recaptcha" data-sitekey="6LdBzI4rAAAAAFJVLLsdpXNpIfUS_MLrw5b30LtJ"></div>
-        </div>
-
-        <div class="text-center mt-4">
-          <button type="submit" class="btn btn-success">Solicitar reunião</button>
-        </div>
-      </form>
 
       @if($errors->any())
       <div class="alert alert-danger mt-4">
