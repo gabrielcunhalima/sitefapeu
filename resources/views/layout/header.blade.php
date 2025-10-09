@@ -63,6 +63,7 @@
           aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+       
 
         <div class="collapse navbar-collapse top-bar" id="navbarMain">
           <ul class="navbar-nav ms-auto">
@@ -174,6 +175,13 @@
             </li>
           </ul>
         </div>
+
+        <div class="ms-auto" style="margin-left: auto; padding-left: 20px;">
+          <a class="navbar-brand" href="{{ route('homepage.home') }}">
+            <img src="{{ asset('images/Outubro-rosa.png') }}" alt="Logo Fapeu" height="100">
+          </a>
+        </div>
+        
       </div>
     </nav>
   </header>
@@ -233,7 +241,7 @@
     }
 
     .main-header {
-      background-color: #06551a;
+      background-color: #88004f;
     }
 
     .navbar-nav .nav-link {

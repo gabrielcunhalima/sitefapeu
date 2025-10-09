@@ -44,6 +44,16 @@
   <title>FAPEU</title>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWYDQ8SY8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HWYDQ8SY8W');
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <style>
   .navbar-toggler-icon {
@@ -114,6 +124,12 @@
             <img src="images\logo2branca.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
+          <div class="ml-auto logofapeu">
+          <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
+            <img src="images\Outubro-rosa.png" alt="Logo Fapeu" height="110">
+          </a>
+        </div>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <p>

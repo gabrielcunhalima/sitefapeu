@@ -31,8 +31,18 @@
     .border-cinza {
         border-top: 2px solid rgba(109, 109, 109, 0.31)
     }
+
+      .action-button.bg-outubrorosa2 {
+    background-color: #88004f !important;
+    }
+
+
+.bg-outubrorosa2 { 
+    background-color: #88004f !important; 
+    }
+
 </style>
-<footer class="footer pt-5 pb-3">
+<footer class="footer pt-5 pb-3 bg-outubrorosa2">
     <div class="container">
         <div class="row g-4 mb-4">
             <div class="col-lg-3 col-md-6">

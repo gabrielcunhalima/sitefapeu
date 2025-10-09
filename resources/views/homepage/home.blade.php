@@ -41,6 +41,15 @@
     margin: 0;
   }
 
+  .action-button.bg-outubrorosa {
+    background-color: #88004f !important;
+}
+
+
+.bg-outubrorosa { 
+    background-color: #88004f !important; 
+}
+
   .news-section {
     padding: 60px 0;
     background-color: #f8f9fa;
@@ -339,6 +348,8 @@
     .servicos-accordion {
       display: block;
     }
+
+    
   }
 </style>
 
@@ -348,7 +359,7 @@
     <div class="row pb-4">
       <div class="col-6 col-lg-3 mb-2">
         <a href="{{route('projetos.captacao')}}" class="text-decoration-none">
-          <div class="action-button bg-principal text-white text-center">
+          <div class="action-button bg-outubrorosa text-white text-center">
             <i class="bi bi-journal-bookmark-fill mb-2" style="font-size: 2rem;"></i>
             <p>Captação e Implantação<br>de Projetos</p>
           </div>
@@ -356,7 +367,7 @@
       </div>
       <div class="col-6 col-lg-3 mb-2">
         <a href="{{route('transparencia.projetostransparencia')}}" class="text-decoration-none">
-          <div class="action-button bg-principal text-white text-center">
+          <div class="action-button bg-outubrorosa text-white text-center">
             <i class="bi bi-file-earmark-check mb-2" style="font-size: 2rem;"></i>
             <p>Transparência</p>
           </div>
@@ -364,7 +375,7 @@
       </div>
       <div class="col-6 col-lg-3 mb-2">
         <a href="{{route('projetos.espacocoordenador')}}" class="text-decoration-none">
-          <div class="action-button bg-principal text-white text-center">
+          <div class="action-button bg-outubrorosa text-white text-center">
             <i class="bi bi-person-workspace mb-2" style="font-size: 2rem;"></i>
             <p>Espaço do Coordenador</p>
           </div>
@@ -372,7 +383,7 @@
       </div>
       <div class="col-6 col-lg-3 mb-2">
         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-decoration-none">
-          <div class="action-button bg-principal text-white text-center">
+          <div class="action-button bg-outubrorosa text-white text-center">
             <i class="bi bi-briefcase mb-2" style="font-size: 2rem;"></i>
             <p>Espaço do Fornecedor</p>
           </div>

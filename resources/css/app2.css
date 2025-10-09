@@ -50,6 +50,7 @@ main {
 
 /* 2. Esquema de cores
    --------------------------------------------------- */
+.bg-outubrorosa { background-color: #9c0c60; }
 .bg-principal { background-color: #06551a; }
 .bg-verdeescuro { background-color: #2C4A44 !important; }
 .bg-verde { background-color: #0d8f2d; }
@@ -110,12 +111,12 @@ main {
   align-items: center;
   justify-content: center;
   padding: 12px 28px;
-  background-color: #06551a;
+  background-color: #88004f;
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 50px;
-  border: 2px solid #06551a;
+  border: 2px solid #88004f;
   transition: all 0.3s ease;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
