@@ -178,7 +178,7 @@
 
         <div class="ms-auto" style="margin-left: auto; padding-left: 20px;">
           <a class="navbar-brand" href="{{ route('homepage.home') }}">
-            <img src="{{ asset('images/Outubro-rosa.png') }}" alt="Logo Fapeu" height="100">
+            <img src="{{ asset('images/logo-novembro.png') }}" alt="Logo Fapeu" height="100">
           </a>
         </div>
         
@@ -241,7 +241,7 @@
     }
 
     .main-header {
-      background-color: #88004f;
+      background-color: #000e88;
     }
 
     .navbar-nav .nav-link {

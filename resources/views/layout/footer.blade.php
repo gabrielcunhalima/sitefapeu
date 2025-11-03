@@ -33,12 +33,12 @@
     }
 
       .action-button.bg-outubrorosa2 {
-    background-color: #88004f !important;
+    background-color: #000e88 !important;
     }
 
 
 .bg-outubrorosa2 { 
-    background-color: #88004f !important; 
+    background-color: #000e88 !important; 
     }
 
 </style>

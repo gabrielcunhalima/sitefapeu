@@ -126,7 +126,7 @@
         </div>
           <div class="ml-auto logofapeu">
           <a class="navbar-brand logofapeu" href="{{ route('homepage.home') }}">
-            <img src="images\Outubro-rosa.png" alt="Logo Fapeu" height="110">
+            <img src="images\logo-novembro.png" alt="Logo Fapeu" height="110">
           </a>
         </div>
 
