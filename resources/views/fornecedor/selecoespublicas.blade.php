@@ -21,7 +21,7 @@
                             <p class="mb-1">As seleções públicas são processos competitivos realizados pela FAPEU em
                                 conformidade com a legislação vigente.</p>
                             <p class="mb-0">Todos os documentos estão disponíveis para consulta pública. Para dúvidas, entre
-                                em contato através do telefone <strong>(48) 3331-7472</strong>.</p>
+                                em contato através do telefone <strong>(48) 3331-7460</strong>.</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 @extends('layout.header')
-@section('title', 'Espaço do Fornecedor')
+@section('title', 'Portal do Fornecedor')
 @section('conteudo')
 
 <style>
@@ -440,7 +440,7 @@
                 <div class="contact-icon">
                     <i class="bi bi-telephone"></i>
                 </div>
-                <span>Qualquer dúvida, entre em contato pelo telefone: <strong>(48) 3331-7472</strong></span>
+                <span>Qualquer dúvida, entre em contato pelo telefone: <strong>(48) 3331-7444</strong></span>
             </div>
         </div>
 

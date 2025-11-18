@@ -141,7 +141,7 @@
                 <li><a class="dropdown-item" href="{{route('fornecedor.selecoespublicas')}}">Seleções Públicas</a></li>
                 <li><a class="dropdown-item" href="{{route('fornecedor.dispensa')}}">Dispensa de Licitação</a></li>
                 <li><a class="dropdown-item" href="{{route('fornecedor.inexigibilidade')}}">Inexigibilidade de Licitação</a></li>
-                <li><a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Espaço do Fornecedor</a></li>
+                <li><a class="dropdown-item" href="{{route('fornecedor.espacofornecedor')}}">Portal do Fornecedor</a></li>
               </ul>
             </li>
 
@@ -241,7 +241,7 @@
     }
 
     .main-header {
-      background-color: #000e88;
+      background-color: #0075afff;
     }
 
     .navbar-nav .nav-link {
