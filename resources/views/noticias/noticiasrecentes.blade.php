@@ -228,6 +228,10 @@
     </div>
 </div>
 
+<div class="container mt-5 mb-5 d-flex justify-content-end">
+    {{ $news->links('pagination::bootstrap-4') }}
+</div>
+
 
 @if(session('success'))
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">

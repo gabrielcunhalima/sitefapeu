@@ -110,7 +110,7 @@ class MenuController extends Controller
     {
         $news =   $news = Post::where('visivel', true)
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(9);
 
         $imagem = 'noticiasrecentes.png';
         $titulo = 'Notícias Recentes';
@@ -204,7 +204,7 @@ class MenuController extends Controller
         if (!Auth::check()) {
             return redirect()->route('admin.login');
         }
-        $news = Post::orderBy('created_at', 'desc')->paginate(5);
+        $news = Post::orderBy('created_at', 'desc')->paginate(9);
         $imagem = 'noticiasedit.png';
         $titulo = 'Edição de Notícias';
 
