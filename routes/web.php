@@ -38,7 +38,7 @@ Route::get('/selecoespublicas', [LicitacaoController::class, 'listarSelecaoPubli
 Route::get('/dispensa', [LicitacaoController::class, 'listarDispensa'])->name('fornecedor.dispensa');
 Route::get('/inexigibilidade', [LicitacaoController::class, 'listarInexigibilidade'])->name('fornecedor.inexigibilidade');
 Route::get('/menulicitacao', [MenuController::class, 'menulicitacao'])->name('fornecedor.menulicitacao');
-Route::get('/espacofornecedor', [MenuController::class, 'espacofornecedor'])->name('fornecedor.espacofornecedor');
+Route::get('/fornecedor', [MenuController::class, 'fornecedor'])->name('fornecedor.espacofornecedor');
 
 //LEGISLACAO
 
