@@ -32,16 +32,12 @@
         border-top: 2px solid rgba(255, 255, 255, 0.42)
     }
 
-    .action-button.bg-novembroazul {
-        background-color: #005783ff !important;
+    .bg-footer {
+        background-color: #056b1fff;
     }
-
-
-    .bg-novembroazul {
-        background-color: #005c8aff !important;
-    }
+    
 </style>
-<footer class="footer pt-5 pb-3 bg-novembroazul">
+<footer class="footer pt-5 pb-3 bg-footer">
     <div class="container">
         <div class="row g-4 mb-4">
             <div class="col-lg-3 col-md-6">
