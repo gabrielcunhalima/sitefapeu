@@ -104,7 +104,7 @@
                     </li>
                     <li class="mb-2">
                         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-white-70 text-decoration-none">
-                            <i class="bi bi-chevron-right small me-2"></i>Espaço do Fornecedor
+                            <i class="bi bi-chevron-right small me-2"></i>Portal do Fornecedor
                         </a>
                     </li>
                     <li class="mb-2">
