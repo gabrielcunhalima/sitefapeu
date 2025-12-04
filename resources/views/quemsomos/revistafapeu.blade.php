@@ -136,6 +136,23 @@
 
         <div class="row revista-container">
             <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
+                <div class="revista-card" style="border-left: 4px solid #6ea583ff;">
+                    <div class="alturaimagem" style="background-color: #d1ddd49d;">
+                        <a href="https://heyzine.com/flip-book/991844acb2.html" target="_blank">
+                            <img src="{{asset('images/Revistas/revista-16.png')}}" alt="Revista FAPEU Volume 16" class="revista-img">
+                        </a>
+                    </div>
+                    <div class="revista-content">
+                        <div>
+                            <h3 class="revista-title">Revista FAPEU - Volume 16</h3>
+                            <p class="revista-meta">N° 16. Ano XVI. Volume 16. 2025.<br>ISSN 1806-0110</p>
+                        </div>
+                        <a href="https://heyzine.com/flip-book/991844acb2.html" target="_blank"><span class="view-btn" style="background-color: #6ea583ff;">Ler revista</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 revista-item" data-category="2020">
                 <div class="revista-card" style="border-left: 4px solid #627F91;">
                     <div class="alturaimagem" style="background-color: #ECF0F3;">
                         <a href="https://heyzine.com/flip-book/4ab4922edb.html" target="_blank">
