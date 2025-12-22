@@ -74,6 +74,7 @@
     .action-section {
         padding-top: 30px;
         text-align: center;
+        margin-left:-55px;
     }
 
     .portal-btn {
@@ -328,8 +329,8 @@
                 <strong>Pronto para começar sua parceria com a FAPEU?</strong><br>
                 Junte-se aos fornecedores que já trabalham conosco!
             </p>
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="http://eventos.fapeu.com.br/portalfornecedor/public" class="portal-btn" target="_blank">
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <a href="http://eventos.fapeu.com.br/portalfornecedor/public" class="portal-btn" target="_blank" >
                     Acesse o Portal do Fornecedor
                     <i class="bi bi-box-arrow-up-right"></i>
                 </a>

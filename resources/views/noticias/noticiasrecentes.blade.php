@@ -177,7 +177,6 @@
         background-color: #ffffffff;
     }
 
-    /* Garantir que a classe rounded-top funcione corretamente */
     .rounded-top {
         border-top-left-radius: 12px !important;
         border-top-right-radius: 12px !important;
@@ -228,7 +227,7 @@
     </div>
 </div>
 
-<div class="container mt-5 mb-5 d-flex justify-content-end">
+<div class="mt-5 mb-5 d-flex justify-content-center">
     {{ $news->links('pagination::bootstrap-4') }}
 </div>
 

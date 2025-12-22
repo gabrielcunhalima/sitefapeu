@@ -437,9 +437,9 @@ class MenuController extends Controller
         return $this->renderView('fornecedor.inexigibilidade', 'inexigibilidade.png', 'Inexigibilidade');
     }
 
-    public function espacofornecedor()
+    public function fornecedor()
     {
-        return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Espaço do Fornecedor');
+        return $this->renderView('fornecedor.espacofornecedor', 'espacofornecedor.png', 'Portal do Fornecedor');
     }
 
     // MENU Colaborador

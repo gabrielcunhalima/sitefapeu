@@ -32,16 +32,12 @@
         border-top: 2px solid rgba(255, 255, 255, 0.42)
     }
 
-    .action-button.bg-novembroazul {
-        background-color: #005783ff !important;
+    .bg-footer {
+        background-color: #056b1fff;
     }
-
-
-    .bg-novembroazul {
-        background-color: #005c8aff !important;
-    }
+    
 </style>
-<footer class="footer pt-5 pb-3 bg-novembroazul">
+<footer class="footer pt-5 pb-3 bg-footer">
     <div class="container">
         <div class="row g-4 mb-4">
             <div class="col-lg-3 col-md-6">
@@ -108,7 +104,7 @@
                     </li>
                     <li class="mb-2">
                         <a href="{{ route('fornecedor.espacofornecedor') }}" class="text-white-70 text-decoration-none">
-                            <i class="bi bi-chevron-right small me-2"></i>Espaço do Fornecedor
+                            <i class="bi bi-chevron-right small me-2"></i>Portal do Fornecedor
                         </a>
                     </li>
                     <li class="mb-2">

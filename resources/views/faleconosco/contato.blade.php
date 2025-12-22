@@ -258,7 +258,7 @@
                             <div class="directory-contact">
                                 <span class="directory-icon">
                                     <i class="bi bi-envelope fs-5"></i></span>
-                                <img src="https://fapeu.org.br/images/Emails/financeiro.png">
+                                <img src=" {{ asset('images/Emails/financeiro.png') }}" height="49">
                             </div>
                         </div>
 
@@ -271,7 +271,7 @@
                             <div class="directory-contact">
                                 <span class="directory-icon">
                                     <i class="bi bi-envelope fs-5"></i></span>
-                                <img src="https://fapeu.org.br/images/Emails/financeiro.png">
+                                <img src=" {{ asset('images/Emails/financeiro.png') }}" height="49">
                             </div>
                         </div>
 
@@ -414,7 +414,7 @@
                                     <i class="bi bi-telephone-fill"></i>
                                 </div>
                                 <div class="contact-info-text">
-                                    Telefone/WhatsApp: (48) 33317400
+                                    Telefone/WhatsApp: (48) 3331-7400
                                 </div>
                             </div>
 

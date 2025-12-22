@@ -11,6 +11,11 @@
     background-color: #f8f9fa !important;
   }
 
+  #facillgpd_div {
+    width: 0;
+    height: 0;
+  }
+
   .carousel-inner .carousel-item {
     transition: transform 0.4s ease-in-out;
     background-color: transparent !important;
