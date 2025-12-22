@@ -12,4 +12,4 @@
         </a>
     </p>
 </div>
-@endsection
+@endsection 
