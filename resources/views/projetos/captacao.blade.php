@@ -22,13 +22,13 @@
     left: 10px;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .welcome-text {
     font-size: 2.2rem;
     font-weight: 300;
-    color: #06551a;
+    color: #06551A;
     margin-bottom: 30px;
     text-align: center;
   }
@@ -52,7 +52,7 @@
   }
 
   .feature-icon {
-    color: #06551a;
+    color: #06551A;
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
@@ -80,7 +80,7 @@
   .feature-list li:before {
     content: "\F26A";
     font-family: "bootstrap-icons";
-    color: #06551a;
+    color: #06551A;
     position: absolute;
     left: 0;
     top: 2px;
@@ -94,7 +94,7 @@
   }
 
   .contact-banner {
-    background: linear-gradient(135deg, #33874f 0%, #06551a 100%);
+    background: linear-gradient(135deg, #33874f 0%, #06551A 100%);
     padding: 40px;
     border-radius: 12px;
     margin: 40px 0;
@@ -135,7 +135,7 @@
   }
 
   .personalizado:focus {
-    border-color: #06551a;
+    border-color: #06551A;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }
 

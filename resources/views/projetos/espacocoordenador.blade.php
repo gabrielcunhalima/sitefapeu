@@ -109,7 +109,7 @@
                                         <td>1.2 Cancelamento Alteração Declaração Bolsa ou Estágio</td>
                                         <td class="text-center">18/04/2024</td>
                                         <td class="text-center">
-                                            <a href="pdfs/Projetos/1.2 Cancelamento Alteração de Bolsa ou Estágio.docx"
+                                            <a href="pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.docx"
                                                 class="btn btn-sm btn-outline-success rounded-pill">
                                                 <i class="bi bi-download"></i> Download
                                             </a>

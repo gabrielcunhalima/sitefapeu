@@ -23,8 +23,8 @@
         padding: 25px 30px;
         margin-bottom: 40px;
         box-shadow: -5px 10px 30px rgba(105, 105, 105, 0.19), 0 6px 6px rgba(100, 100, 100, 0.23);
-        border-left: 3px solid #06551a;
-        border-bottom: 3px solid #06551a;
+        border-left: 3px solid #06551A;
+        border-bottom: 3px solid #06551A;
     }
 
     .revista-card {
@@ -100,7 +100,7 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-        background-color: #06551a;
+        background-color: #06551A;
         color: white;
     }
 

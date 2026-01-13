@@ -9,7 +9,7 @@
     transition: all 0.3s ease;
     margin-bottom: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #06551a;
+    border-left: 4px solid #06551A;
   }
 
   .form-card:hover {
@@ -27,7 +27,7 @@
   }
 
   .form-card a:hover {
-    color: #06551a;
+    color: #06551A;
   }
 
   .form-info {
@@ -47,7 +47,7 @@
   }
 
   .download-icon {
-    color: #06551a;
+    color: #06551A;
     font-size: 1.5rem;
     transition: all 0.3s ease;
   }

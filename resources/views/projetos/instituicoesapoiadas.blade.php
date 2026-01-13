@@ -22,7 +22,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .institution-card {
@@ -56,7 +56,7 @@
   }
 
   .institution-contact i {
-    color: #06551a;
+    color: #06551A;
     font-size: 1.2rem;
     margin-right: 10px;
   }
@@ -64,14 +64,14 @@
   .document-link {
     display: inline-flex;
     align-items: center;
-    color: #06551a;
+    color: #06551A;
     font-weight: 600;
     transition: all 0.2s ease;
     margin-top: 15px;
   }
 
   .document-link:hover {
-    color: #06551a;
+    color: #06551A;
     text-decoration: underline;
   }
 
@@ -82,14 +82,14 @@
   .back-link {
     display: inline-flex;
     align-items: center;
-    color: #06551a;
+    color: #06551A;
     font-weight: 600;
     margin-bottom: 30px;
   }
 
   .back-link:hover {
     text-decoration: underline;
-    color: #06551a;
+    color: #06551A;
   }
 
   .back-link i {

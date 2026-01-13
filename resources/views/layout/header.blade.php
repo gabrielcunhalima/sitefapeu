@@ -234,7 +234,7 @@
     }
 
     .main-header {
-      background-color: #007000ff;
+      background-color: #06551A;
     }
 
     .navbar-nav .nav-link {
@@ -273,12 +273,12 @@
     .dropdown-item:hover,
     .dropdown-item:focus {
       background-color: rgba(6, 85, 26, 0.1);
-      color: #06551a;
+      color: #06551A;
     }
 
     .dropdown-item i {
       margin-right: 0.5rem;
-      color: #06551a;
+      color: #06551A;
     }
 
     .dropdown-menu.animate {
@@ -359,7 +359,7 @@
     }
 
     .breadcrumb-item a {
-      color: #06551a;
+      color: #06551A;
       text-decoration: none;
     }
 

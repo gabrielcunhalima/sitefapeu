@@ -17,7 +17,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .channel-card {
@@ -42,7 +42,7 @@
   }
 
   .channel-primary {
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
   }
 
@@ -75,7 +75,7 @@
   }
 
   .btn-primary-channel {
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
     border: none;
   }

@@ -13,7 +13,7 @@
 
 
     .institution-title {
-        color: #06551a;
+        color: #06551A;
         font-size: 1.6rem;
         font-weight: 600;
         margin-bottom: 20px;
@@ -45,7 +45,7 @@
         position: absolute;
         left: 0;
         top: 2px;
-        color: #06551a;
+        color: #06551A;
     }
 
     .normas-link {
@@ -56,7 +56,7 @@
     }
 
     .normas-link:hover {
-        color: #06551a;
+        color: #06551A;
         text-decoration: underline;
     }
 

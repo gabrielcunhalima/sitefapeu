@@ -22,7 +22,7 @@
         left: 0;
         width: 60px;
         height: 4px;
-        background-color: #06551a;
+        background-color: #06551A;
     }
 
     /* Contact Form Styles */
@@ -43,7 +43,7 @@
     }
 
     .personalizado:focus {
-        border-color: #06551a;
+        border-color: #06551A;
         box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
     }
 
@@ -98,7 +98,7 @@
     }
 
     .contact-info-icon {
-        color: #06551a;
+        color: #06551A;
         font-size: 1.2rem;
         margin-right: 15px;
         flex-shrink: 0;
@@ -131,7 +131,7 @@
     .directory-item {
         padding: 15px;
         border-radius: 8px;
-        border-left: 4px solid #06551a;
+        border-left: 4px solid #06551A;
         background-color: #f8f9fa;
         transition: all 0.3s ease;
     }
@@ -154,7 +154,7 @@
     }
 
     .directory-icon {
-        color: #06551a;
+        color: #06551A;
         margin-right: 10px;
         font-size: 0.9rem;
     }
@@ -424,7 +424,7 @@
                                 </div>
                                 <div class="contact-info-text">
                                     <strong>Horário de Funcionamento:</strong><br>
-                                    Segunda a Sexta-feira das 8h às 12h e das 13h às 17h
+                                    Segunda a Sexta-feira <br> 7h às 13h | Horário de verão
                                 </div>
                             </div>
                         </div>

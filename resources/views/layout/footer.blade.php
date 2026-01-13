@@ -33,9 +33,8 @@
     }
 
     .bg-footer {
-        background-color: #056b1fff;
+        background-color: #06551A;
     }
-    
 </style>
 <footer class="footer pt-5 pb-3 bg-footer">
     <div class="container">
@@ -84,7 +83,7 @@
                         <i class="bi bi-clock-fill fs-5"></i>
                     </div>
                     <div>
-                        <p class="mb-0 text-white-70">Segunda a Sexta-feira<br>8h às 12h | 13h às 17h</p>
+                        <p class="mb-0 text-white-70">Segunda a Sexta-feira<br>7h às 13h | Horário de verão</p>
                     </div>
                 </div>
             </div>

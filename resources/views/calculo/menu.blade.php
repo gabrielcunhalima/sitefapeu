@@ -25,7 +25,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .calculator-card {
@@ -46,7 +46,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: linear-gradient(135deg, #06551a, #30755c);
+    background: linear-gradient(135deg, #06551A, #30755c);
   }
 
   .calculator-card:hover {
@@ -56,7 +56,7 @@
   .calculator-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #06551a, #30755c);
+    background: linear-gradient(135deg, #06551A, #30755c);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -87,12 +87,12 @@
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    background-color: #06551a;
+    background-color: #06551A;
     color: #ffffff;
     font-weight: 600;
     font-size: 1rem;
     border-radius: 50px;
-    border: 2px solid #06551a;
+    border: 2px solid #06551A;
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(6, 85, 26, 0.2);
@@ -101,7 +101,7 @@
   }
 
   .calculator-link:hover {
-    background-color: #06551a;
+    background-color: #06551A;
     box-shadow: 0 8px 25px rgba(6, 85, 26, 0.3);
     color: #ffffff;
     text-decoration: none;

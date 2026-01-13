@@ -17,11 +17,11 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .sustainability-banner {
-    background: linear-gradient(135deg, #33874f 0%, #06551a 100%);
+    background: linear-gradient(135deg, #33874f 0%, #06551A 100%);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -48,7 +48,7 @@
     width: 100%;
     height: 330px;
     object-fit: contain;
-    border-bottom: 3px solid #06551a;
+    border-bottom: 3px solid #06551A;
     padding: 20px;
     background-color: #f9f9f9;
   }
@@ -73,7 +73,7 @@
   }
 
   .initiative-link {
-    color: #06551a;
+    color: #06551A;
     font-weight: 600;
     transition: all 0.3s ease;
     display: inline-block;
@@ -81,7 +81,7 @@
   }
 
   .initiative-link:hover {
-    color: #06551a;
+    color: #06551A;
     transform: translateX(5px);
   }
 
@@ -89,7 +89,7 @@
   .slick-next {
     width: 40px;
     height: 40px;
-    background-color: #06551a !important;
+    background-color: #06551A !important;
     border-radius: 50%;
     z-index: 10;
   }
@@ -123,7 +123,7 @@
     text-align: center;
     margin-top: 15px;
     padding: 8px 15px;
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
     border-radius: 30px;
     text-decoration: none;
@@ -132,7 +132,7 @@
   }
 
   .read-more-btn:hover {
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
   }
 

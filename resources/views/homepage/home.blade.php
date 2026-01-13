@@ -42,12 +42,12 @@
   }
 
   .action-button.bg-verdehome {
-    background-color: #007000ff !important;
+    background-color: #06551A !important;
   }
 
 
   .bg-verdehome {
-    background-color: #007000ff !important;
+    background-color: #06551A !important;
   }
 
   .news-section {
@@ -75,7 +75,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .news-card {
@@ -165,11 +165,11 @@
   }
 
   .news-card:hover .news-title-text {
-    color: #06551a;
+    color: #06551A;
   }
 
   .view-more-btn:hover {
-    background-color: #06551a;
+    background-color: #06551A;
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(6, 85, 26, 0.3);
   }
@@ -191,7 +191,7 @@
     padding: 0;
     transform: translate(0, -50%);
     cursor: pointer;
-    color: #06551a;
+    color: #06551A;
     border: none;
     outline: none;
     background: white;
@@ -213,7 +213,7 @@
     font-family: 'bootstrap-icons';
     font-size: 24px;
     line-height: 1;
-    color: #06551a;
+    color: #06551A;
     opacity: 0.75;
   }
 
@@ -258,7 +258,7 @@
 
   .servico-icon {
     font-size: 2.5rem;
-    color: #06551a;
+    color: #06551A;
     margin-bottom: 20px;
   }
 
@@ -276,7 +276,7 @@
 
   .servico-link {
     display: inline-block;
-    color: #06551a;
+    color: #06551A;
     font-weight: 600;
     transition: all 0.3s ease;
   }
@@ -300,7 +300,7 @@
 
   .accordion-button:not(.collapsed) {
     background-color: rgba(6, 85, 26, 0.1);
-    color: #06551a;
+    color: #06551A;
   }
 
   .accordion-button:focus {

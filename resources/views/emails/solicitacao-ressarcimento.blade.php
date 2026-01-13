@@ -11,7 +11,7 @@
             margin: 0 auto;
         }
         .header {
-            background-color: #06551a;
+            background-color: #06551A;
             color: white;
             padding: 15px;
             text-align: center;

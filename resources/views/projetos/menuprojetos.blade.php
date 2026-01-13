@@ -49,7 +49,7 @@
   }
 
   .contact-banner {
-    background: linear-gradient(125deg,rgb(43, 158, 83) 0%, #06551a 100%);
+    background: linear-gradient(125deg,rgb(43, 158, 83) 0%, #06551A 100%);
     padding: 30px;
     border-radius: 12px;
     margin: 40px 0;

@@ -22,7 +22,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .contact-form-container {
@@ -42,7 +42,7 @@
   }
 
   .personalizado:focus {
-    border-color: #06551a;
+    border-color: #06551A;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }
 
@@ -97,7 +97,7 @@
   }
 
   .contact-info-icon {
-    color: #06551a;
+    color: #06551A;
     font-size: 1.2rem;
     margin-right: 15px;
     flex-shrink: 0;
@@ -130,7 +130,7 @@
   .directory-item {
     padding: 15px;
     border-radius: 8px;
-    border-left: 4px solid #06551a;
+    border-left: 4px solid #06551A;
     background-color: #f8f9fa;
     transition: all 0.3s ease;
   }
@@ -153,7 +153,7 @@
   }
 
   .directory-icon {
-    color: #06551a;
+    color: #06551A;
     margin-right: 10px;
     font-size: 0.9rem;
   }

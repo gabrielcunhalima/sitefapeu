@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr onclick="window.location.href='pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.doc'" style="cursor: pointer;">
+            <tr onclick="window.location.href='pdfs/Projetos/1.2_Cancelamento_de_bolsa_ junho 2024.docx'" style="cursor: pointer;">
                 <td>1.2 Cancelamento de Bolsa ou Estágio </td>
                 <td>18/04/2024</td>
             </tr>

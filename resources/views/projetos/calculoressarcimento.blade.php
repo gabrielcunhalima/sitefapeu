@@ -22,7 +22,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .form-container {
@@ -49,7 +49,7 @@
   }
 
   .personalizado:focus {
-    border-color: #06551a;
+    border-color: #06551A;
     box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
   }
 
@@ -66,14 +66,14 @@
   .back-link {
     display: inline-flex;
     align-items: center;
-    color: #06551a;
+    color: #06551A;
     font-weight: 600;
     margin-bottom: 30px;
   }
 
   .back-link:hover {
     text-decoration: underline;
-    color: #06551a;
+    color: #06551A;
   }
 
   .back-link i {
@@ -82,7 +82,7 @@
 
   .info-card {
     background-color: #e8f5e9;
-    border-left: 4px solid #06551a;
+    border-left: 4px solid #06551A;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;

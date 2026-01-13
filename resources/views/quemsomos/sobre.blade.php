@@ -26,7 +26,7 @@
         left: 0;
         width: 60px;
         height: 4px;
-        background-color: #06551a;
+        background-color: #06551A;
     }
 
     .about-content {
@@ -104,7 +104,7 @@
         bottom: 0;
         left: 50%;
         width: 2px;
-        background-color: #06551a;
+        background-color: #06551A;
         transform: translateX(-50%);
     }
 </style>

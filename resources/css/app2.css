@@ -51,7 +51,7 @@ main {
 /* 2. Esquema de cores
    --------------------------------------------------- */
 .bg-outubrorosa { background-color: #9c0c60; }
-.bg-principal { background-color: #06551a; }
+.bg-principal { background-color: #06551A; }
 .bg-verdeescuro { background-color: #2C4A44 !important; }
 .bg-verde { background-color: #0d8f2d; }
 .bg-verde2 { background-color: #1E8975; }
@@ -83,7 +83,7 @@ main {
 .text-verde2 { color: #099072; }
 .text-verde3 { color: #30755C; }
 .text-verde4 { color: #155c27; }
-.text-principal { color: #06551a; }
+.text-principal { color: #06551A; }
 .text-cinza { color: #BCBDC0; }
 .text-preto { color: #3E3E3F; }
 
@@ -123,7 +123,7 @@ main {
 }
 
 .fapeu-btn:hover {
-  background-color: #06551a;
+  background-color: #06551A;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(6, 85, 26, 0.3);
   color: #ffffff;
@@ -158,11 +158,11 @@ main {
 
 .fapeu-btn-outline {
   background-color: transparent;
-  color: #06551a;
+  color: #06551A;
 }
 
 .fapeu-btn-outline:hover {
-  background-color: #06551a;
+  background-color: #06551A;
   color: #ffffff;
 }
 
@@ -176,7 +176,7 @@ main {
   text-align: center;
   margin-top: 15px;
   padding: 8px 15px;
-  background-color: #06551a;
+  background-color: #06551A;
   color: white;
   border-radius: 30px;
   text-decoration: none;
@@ -185,7 +185,7 @@ main {
 }
 
 .read-more-btn:hover {
-  background-color: #06551a;
+  background-color: #06551A;
   color: white;
 }
 
@@ -244,14 +244,14 @@ main {
 .back-link {
   display: inline-flex;
   align-items: center;
-  color: #06551a;
+  color: #06551A;
   font-weight: 600;
   margin-bottom: 30px;
 }
 
 .back-link:hover {
   text-decoration: underline;
-  color: #06551a;
+  color: #06551A;
 }
 
 .back-link i {
@@ -279,7 +279,7 @@ main {
 .slick-next {
   width: 40px;
   height: 40px;
-  background-color: #06551a;
+  background-color: #06551A;
   border-radius: 50%;
   z-index: 10;
 }
@@ -376,7 +376,7 @@ main {
 }
 
 .contact-banner {
-  background: linear-gradient(135deg, #33874f 0%, #06551a 100%);
+  background: linear-gradient(135deg, #33874f 0%, #06551A 100%);
   padding: 30px;
   border-radius: 12px;
   margin: 40px 0;
@@ -444,7 +444,7 @@ main {
 }
 
 .feature-icon {
-  color: #06551a;
+  color: #06551A;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -472,7 +472,7 @@ main {
 .feature-list li:before {
   content: "\F26A";
   font-family: "bootstrap-icons";
-  color: #06551a;
+  color: #06551A;
   position: absolute;
   left: 0;
   top: 2px;
@@ -584,7 +584,7 @@ main {
 }
 
 .news-card:hover .news-title-text {
-  color: #06551a;
+  color: #06551A;
 }
 
 .blog-post {
@@ -668,7 +668,7 @@ main {
 }
 
 .view-more-btn {
-  background-color: #06551a;
+  background-color: #06551A;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -681,7 +681,7 @@ main {
 }
 
 .view-more-btn:hover {
-  background-color: #06551a;
+  background-color: #06551A;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(6, 85, 26, 0.3);
 }
@@ -700,7 +700,7 @@ main {
 /* 7. Navegação
    --------------------------------------------------- */
 .navbar-custom {
-  background-color: #06551a;
+  background-color: #06551A;
   padding: 10px 15px;
   z-index: 1040;
   display: flex;
@@ -809,12 +809,12 @@ main {
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: rgba(6, 85, 26, 0.1);
-  color: #06551a;
+  color: #06551A;
 }
 
 .dropdown-item i {
   margin-right: 0.5rem;
-  color: #06551a;
+  color: #06551A;
 }
 
 .dropdown-menu.animate {
@@ -862,7 +862,7 @@ main {
 }
 
 .breadcrumb-item a {
-  color: #06551a;
+  color: #06551A;
   text-decoration: none;
 }
 
@@ -901,7 +901,7 @@ main {
 }
 
 .form-control:focus {
-  border-color: #06551a;
+  border-color: #06551A;
   box-shadow: 0 0 0 0.2rem rgba(6, 85, 26, 0.25);
 }
 
@@ -949,7 +949,7 @@ input[type="number"] {
   left: 10px;
   width: 60px;
   height: 4px;
-  background-color: #06551a;
+  background-color: #06551A;
 }
 
 .about-header {
@@ -966,7 +966,7 @@ input[type="number"] {
   left: 0;
   width: 60px;
   height: 4px;
-  background-color: #06551a;
+  background-color: #06551A;
 }
 
 .about-content {

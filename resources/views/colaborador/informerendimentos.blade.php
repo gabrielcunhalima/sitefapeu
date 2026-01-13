@@ -21,7 +21,7 @@
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #06551a;
+    background-color: #06551A;
   }
 
   .informe-card {
@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    color: #06551a;
+    color: #06551A;
   }
 
   .informe-title {
@@ -69,7 +69,7 @@
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
     border: none;
     display: flex;
@@ -79,7 +79,7 @@
   }
 
   .btn-informe:hover {
-    background-color: #06551a;
+    background-color: #06551A;
     color: white;
     box-shadow: 0 10px 20px rgba(5, 70, 21, 0.2);
   }
