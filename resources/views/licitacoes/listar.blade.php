@@ -549,6 +549,7 @@
         transform: rotate(-8deg) scale(1.15);
         box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
     }
+    
 </style>
 
             <div class="list-page-wrapper">
