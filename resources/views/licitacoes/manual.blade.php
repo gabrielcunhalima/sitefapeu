@@ -513,7 +513,7 @@
                     </div>
                     <div class="tip-box">
                         <i class="bi bi-lightbulb-fill"></i>
-                        <div>Preencha os campos de um item e clique em <strong>"Adicionar Item"</strong>. O item aparecerá na tabela abaixo. Repita para cada item. Os dados ficam salvos temporariamente no navegador (<code>localStorage</code>) enquanto você preenche, sem risco de perda ao trocar de aba.</div>
+                        <div>Preencha os campos de um item e clique em <strong>"Adicionar Item"</strong>. O item aparecerá na tabela abaixo. Repita para cada item. Os dados ficam salvos temporariamente no navegador enquanto você preenche, sem risco de perda ao trocar de aba.</div>
                     </div>
 
                     <div class="manual-h3"><i class="bi bi-list-check"></i> Campos dos Itens</div>
@@ -964,7 +964,7 @@
                             <tr>
                                 <td class="campo">400 — BadRequest</td>
                                 <td>Campo obrigatório ausente ou em branco; CNPJ com formatação (pontos/barras); data fora do formato <code>AAAA-MM-DDTHH:MM:SS</code>; ou <strong>violação de conformidade</strong> entre Instrumento Convocatório, Modalidade e Amparo Legal.</td>
-                                <td>Revise os campos obrigatórios. Confirme que a combinação Instrumento × Modalidade × Amparo Legal é válida. Consulte <code>storage/logs/laravel.log</code> para ver o detalhe exato rejeitado.</td>
+                                <td>Revise os campos obrigatórios. Confirme que a combinação Instrumento × Modalidade × Amparo Legal é válida. Consulte <code> setor do Ti</code> para ver o detalhe exato rejeitado.</td>
                             </tr>
                             <tr>
                                 <td class="campo">422 — Unprocessable Entity</td>
@@ -1005,7 +1005,7 @@
                     </table>
                     <div class="tip-box mt-3">
                         <i class="bi bi-lightbulb-fill"></i>
-                        <div>Em caso de erros persistentes, os logs detalhados estão em <code>storage/logs/laravel.log</code>. Cada falha de API é registrada com status HTTP, corpo da resposta e ID da licitação para facilitar a depuração.</div>
+                        <div>Em caso de erros persistentes, procurar<code>o setor de TI </code>. Cada falha de envio é registrada com uma mensagem de status.</div>
                     </div>
                 </div>
             </div>
