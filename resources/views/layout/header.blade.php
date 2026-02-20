@@ -49,6 +49,8 @@
 
   @turnstileScripts()
 
+  @stack('styles')
+
 </head>
 
 <body>
@@ -185,7 +187,6 @@
   Request::route()->getName() !== 'projetos.calculoressarcimento' &&
   Request::route()->getName() !== 'projetos.instituicoesapoiadas' &&
   Request::route()->getName() !== 'projetos.orientacoescontato' &&
-  Request::route()->getName() !== 'licitacoes.form' &&
   Request::route()->getName() !== 'licitacoes.listar' &&
   Request::route()->getName() !== 'calculo.menu' &&
   Request::route()->getName() !== 'calculo.calculobruto' &&

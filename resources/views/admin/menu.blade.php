@@ -58,6 +58,14 @@
                     </a>
                 </div>
             </div>
+
+              <div class="col-12">
+                <div class="text-center mt-4">
+                    <a href='{{route('licitacoes.listar')}}' class="btn botaoadmin fapeu-btn btn-lg px-4 py-2">
+                        <i class="bi bi-person-plus-fill"></i> &nbsp;&nbsp; Adicionar Resultado
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

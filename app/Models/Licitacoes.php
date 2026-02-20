@@ -12,15 +12,32 @@ class Licitacoes extends Model
         'ordem',
         'processo',
         'orgao',
+        'orgao_site',
         'projeto',
         'licitacao',
         'dataabertura',
-        'objeto',
+        'objetoCompra',
         'ataabertura',
         'contratoconvenio',
         'resultado',
         'datapublicacao',
         'tipo_licitacao',
+        //'cnpj',
+        'titulo_documento',
+        'tipo_documento_id',
+        'codigoUnidadeCompradora',
+        'modalidadeId',
+        'modoDisputaId',
+        'numeroCompra',
+        'AnoCompra',
+        'srp',
+        'dataAberturaProposta',
+        'dataEncerramentoProposta',
+        'amparoLegalId',
+        'tipoInstrumentoConvocatorioId',
+        'numeroProcesso',
+        'sequencial',
+
     ];
 
     public $timestamps = true;
@@ -28,5 +45,10 @@ class Licitacoes extends Model
     public static function findOrCreate($id)
     {
         return $id ? self::findOrFail($id) : new self();
+    }
+
+     public function itensCompra()
+    {
+        return $this->hasMany(ItensCompra::class, 'id_licitacao', 'id');
     }
 }
