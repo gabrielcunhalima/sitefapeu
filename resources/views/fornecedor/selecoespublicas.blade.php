@@ -21,13 +21,12 @@
                             <p class="mb-1">As seleções públicas são processos competitivos realizados pela FAPEU em
                                 conformidade com a legislação vigente.</p>
                             <p class="mb-0">Todos os documentos estão disponíveis para consulta pública. Para dúvidas, entre
-                                em contato através do telefone <strong>(48) 3331-7460</strong>.</p>
+                                em contato através do telefone <strong>(48) 3331-7472</strong>.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="row mt-4">
             <div class="col-12">
@@ -105,20 +104,20 @@
                                         @foreach($licitacoes->where('tipo_licitacao', 1) as $licitacao)
                                             <tr class="border-white">
                                                 <td class="px-4">
-                                                    {{ $licitacao->ordem ?? '-' }}
+                                                    {{ $licitacao->numeroProcesso ?? '-' }}
                                                 </td>
                                                 <td class="px-4">
-                                                    {{ $licitacao->processo ?? '-' }}
+                                                    {{ $licitacao->numeroCompra ?? '-' }}
                                                 </td>
                                                 <td class="px-4">
-                                                    <span class="text-dark">{{ $licitacao->orgao }}</span>
+                                                    <span class="text-dark">{{ $licitacao->orgao_site}}</span>
                                                 </td>
                                                 <td class="px-4 text-center">
                                                     {{ $licitacao->projeto ?? '-' }}
                                                 </td>
                                                 <td class="px-4 text-center">
-                                                    @if($licitacao->dataabertura)
-                                                        {{ \Carbon\Carbon::parse($licitacao->dataabertura)->format('d/m/Y') }}
+                                                    @if($licitacao->dataAberturaProposta)
+                                                        {{ \Carbon\Carbon::parse($licitacao->dataAberturaProposta)->format('d/m/Y') }}
                                                     @else
                                                         <span class="text-muted">-</span>
                                                     @endif
@@ -133,7 +132,7 @@
                                                 <td class="px-4">
                                                     <div class="d-flex gap-1 justify-content-center flex-wrap">
                                                         @if($licitacao->licitacao)
-                                                            <a href="{{ Storage::url($licitacao->licitacao) }}" target="_blank"
+                                                            <a href="{{ Storage::url($licitacao->numeroProcesso) }}" target="_blank"
                                                                 class="btn btn-outline-primary btn-sm" title="Edital/Seleção">
                                                                 <i class="bi bi-file-earmark-pdf"></i>
                                                             </a>
@@ -145,8 +144,8 @@
                                                                 <i class="bi bi-file-earmark-text"></i>
                                                             </a>
                                                         @endif
-                                                        @if($licitacao->contratoconvenio)
-                                                            <a href="{{ Storage::url($licitacao->contratoconvenio) }}" target="_blank"
+                                                        @if($licitacao->numeroProcesso)
+                                                            <a href="{{ Storage::url($licitacao->numeroProcesso) }}" target="_blank"
                                                                 class="btn btn-outline-warning btn-sm" title="Contrato/Convênio">
                                                                 <i class="bi bi-file-earmark-bar-graph"></i>
                                                             </a>
@@ -163,7 +162,7 @@
                                             <tr>
                                                 <td colspan="6" class="px-4 pt-1" style="padding-bottom:40px;">
                                                     <strong><i class="bi bi-arrow-return-right"></i></strong>
-                                                    {{ $licitacao->objeto }}
+                                                    {{ $licitacao->objetoCompra }}
                                                 </td>
                                                 <td colspan="1">
                                                 </td>

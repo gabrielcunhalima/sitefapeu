@@ -10,6 +10,9 @@ use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\LicitacaoController;
 use App\Http\Controllers\RessarcimentoController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LicitacaoResultadoAtaController;
+
+
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
 Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
@@ -129,10 +132,22 @@ Route::post('/licitacoes/save', [LicitacaoController::class, 'save'])->name('lic
 Route::get('/licitacoes/listar', [LicitacaoController::class, 'listar'])->name('licitacoes.listar');
 Route::delete('/licitacoes/excluir/{id}', [LicitacaoController::class, 'excluir'])->name('licitacoes.excluir');
 
+
+Route::get('/licitacoes/resultado-ata/{id}', [LicitacaoResultadoAtaController::class, 'form'])->name('licitacoes.resultado-ata.form');
+Route::post('/licitacoes/resultado/salvar', [LicitacaoResultadoAtaController::class, 'salvarResultado'])->name('licitacoes.resultado.salvar');
+Route::post('/licitacoes/ata/salvar', [LicitacaoResultadoAtaController::class, 'salvarAta'])->name('licitacoes.ata.salvar');
+Route::post('/licitacoes/resultado-ata/enviar-documento', [LicitacaoResultadoAtaController::class, 'enviarDocumento'])->name('licitacoes.resultado-ata.enviar-documento');
+Route::delete('/licitacoes/ata/{id}/excluir', [LicitacaoResultadoAtaController::class, 'excluirAta'])->name('licitacoes.ata.excluir');
+Route::delete('/licitacoes/documento/{id}/excluir', [LicitacaoResultadoAtaController::class, 'excluirDocumento'])->name('licitacoes.documento.excluir');
+Route::get('/licitacoes/editar-site/{id}', [LicitacaoController::class, 'formEditarSite'])->name('licitacoes.editar-site');
+Route::post('/licitacoes/salvar-site', [LicitacaoController::class, 'salvarSite'])->name('licitacoes.salvar-site');
+Route::get('/licitacoes/manual', [LicitacaoController::class, 'manual'])->name('licitacoes.manual');
+Route::get('licitacoes/manual-tecnico', [LicitacaoController::class, 'manualTecnico'])->name('licitacoes.manual-tecnico');
+
+
 //CRIAR USUARIO
 Route::get('/createusuario', [LoginController::class, 'createUsuario'])->name('admin.createusuario');
 Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('admin.storeusuario');
-
 
 
 Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');

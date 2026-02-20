@@ -60,7 +60,7 @@
                                                 </span>
                                             </td>
                                             <td class="px-4 align-middle">
-                                                <span class="text-dark">{{ $licitacao->processo ?? '-' }}</span>
+                                                <span class="text-dark">{{ $licitacao->numeroCompra ?? '-' }}</span>
                                             </td>
                                             <td class="px-4 align-middle">
                                                 <span class="text-dark">{{ $licitacao->orgao }}</span>
@@ -69,9 +69,9 @@
                                                 {{ $licitacao->projeto ?? '-' }}
                                             </td>
                                             <td class="px-4 text-center align-middle">
-                                                @if($licitacao->dataabertura)
+                                                @if($licitacao->dataAberturaProposta)
                                                     <span class="text-dark">
-                                                        {{ \Carbon\Carbon::parse($licitacao->dataabertura)->format('d/m/Y') }}
+                                                        {{ \Carbon\Carbon::parse($licitacao->dataAberturaProposta)->format('d/m/Y') }}
                                                     </span>
                                                 @else
                                                     <span class="text-muted">-</span>
@@ -114,7 +114,7 @@
                                         <tr>
                                             <td colspan="6" class="px-4 pt-1" style="padding-bottom:40px;">
                                                 <strong><i class="bi bi-arrow-return-right me-2"></i></strong>
-                                                {{ $licitacao->objeto }}
+                                                {{ $licitacao->objetoCompra}}
                                             </td>
                                             <td colspan="1"></td>
                                         </tr>
