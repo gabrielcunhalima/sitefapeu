@@ -1005,7 +1005,7 @@
                     </table>
                     <div class="tip-box mt-3">
                         <i class="bi bi-lightbulb-fill"></i>
-                        <div>Em caso de erros persistentes, procurar<code>o setor de TI </code>. Cada falha de envio é registrada com uma mensagem de status.</div>
+                        <div>Em caso de erros persistentes, procurar<code> o setor de TI </code>. Cada falha de envio é registrada com uma mensagem de status.</div>
                     </div>
                 </div>
             </div>

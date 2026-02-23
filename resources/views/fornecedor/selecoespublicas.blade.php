@@ -104,20 +104,20 @@
                                         @foreach($licitacoes->where('tipo_licitacao', 1) as $licitacao)
                                             <tr class="border-white">
                                                 <td class="px-4">
-                                                    {{ $licitacao->numeroProcesso ?? '-' }}
+                                                    {{ $licitacao->ordem ? $licitacao->ordem : $licitacao->numeroProcesso }}
                                                 </td>
                                                 <td class="px-4">
-                                                    {{ $licitacao->numeroCompra ?? '-' }}
+                                                    {{ $licitacao->processo ?? $licitacao->numeroCompra ?? '-' }}
                                                 </td>
                                                 <td class="px-4">
-                                                    <span class="text-dark">{{ $licitacao->orgao_site}}</span>
+                                                    <span class="text-dark">{{ $licitacao->orgao_site ?? $licitacao->orgao ?? '-' }}</span>
                                                 </td>
                                                 <td class="px-4 text-center">
                                                     {{ $licitacao->projeto ?? '-' }}
                                                 </td>
                                                 <td class="px-4 text-center">
-                                                    @if($licitacao->dataAberturaProposta)
-                                                        {{ \Carbon\Carbon::parse($licitacao->dataAberturaProposta)->format('d/m/Y') }}
+                                                    @if($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)
+                                                        {{ \Carbon\Carbon::parse($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)->format('d/m/Y') }}
                                                     @else
                                                         <span class="text-muted">-</span>
                                                     @endif
@@ -132,7 +132,7 @@
                                                 <td class="px-4">
                                                     <div class="d-flex gap-1 justify-content-center flex-wrap">
                                                         @if($licitacao->licitacao)
-                                                            <a href="{{ Storage::url($licitacao->numeroProcesso) }}" target="_blank"
+                                                            <a href="{{ Storage::url($licitacao->licitacao) }}" target="_blank"
                                                                 class="btn btn-outline-primary btn-sm" title="Edital/Seleção">
                                                                 <i class="bi bi-file-earmark-pdf"></i>
                                                             </a>
@@ -144,8 +144,8 @@
                                                                 <i class="bi bi-file-earmark-text"></i>
                                                             </a>
                                                         @endif
-                                                        @if($licitacao->numeroProcesso)
-                                                            <a href="{{ Storage::url($licitacao->numeroProcesso) }}" target="_blank"
+                                                        @if($licitacao->contratoconvenio)
+                                                            <a href="{{ Storage::url($licitacao->contratoconvenio) }}" target="_blank"
                                                                 class="btn btn-outline-warning btn-sm" title="Contrato/Convênio">
                                                                 <i class="bi bi-file-earmark-bar-graph"></i>
                                                             </a>
@@ -162,7 +162,7 @@
                                             <tr>
                                                 <td colspan="6" class="px-4 pt-1" style="padding-bottom:40px;">
                                                     <strong><i class="bi bi-arrow-return-right"></i></strong>
-                                                    {{ $licitacao->objetoCompra }}
+                                                    {{ $licitacao->objetoCompra ?? $licitacao->objeto ?? '-' }}
                                                 </td>
                                                 <td colspan="1">
                                                 </td>
