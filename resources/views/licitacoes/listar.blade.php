@@ -683,9 +683,9 @@
                                 @break
                                 @endswitch
                             </td>
-                            <td>{{ $licitacao->numeroProcesso ?? '-' }}</td>
-                            <td>{{ $licitacao->numeroCompra ?? '-' }}</td>
-                            <td>{{ $licitacao->orgao }}</td>
+                            <td>{{ $licitacao->numeroProcesso ?? $licitacao->ordem ?? '-' }}</td>
+                            <td>{{ $licitacao->numeroCompra ?? $licitacao->processo ?? '-' }}</td>
+                            <td>{{ $licitacao->orgao_site ?? $licitacao->orgao ?? '-' }}</td>
                             <td>{{ $licitacao->projeto ?? '-' }}</td>
                             <td>
                                 @if($licitacao->datapublicacao)
@@ -695,15 +695,15 @@
                                 @endif
                             </td>
                             <td>
-                                @if($licitacao->dataAberturaProposta)
-                                {{ \Carbon\Carbon::parse($licitacao->dataAberturaProposta)->format('d/m/Y') }}
+                                 @if($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)
+                                {{ \Carbon\Carbon::parse($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)->format('d/m/Y') }}
                                 @else
                                 -
                                 @endif
                             </td>
                             <td>
-                                <div class="objeto-cell" title="{{ $licitacao->objetoCompra }}">
-                                    {{ $licitacao->objetoCompra ?? '-' }}
+                                <div class="objeto-cell" title="{{ $licitacao->objetoCompra ?? $licitacao->objeto }}">
+                                    {{ $licitacao->objetoCompra ?? $licitacao->objeto ?? '-' }}
                                 </div>
                             </td>
                             <td style="text-align: center;">

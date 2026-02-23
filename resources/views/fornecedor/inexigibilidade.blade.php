@@ -59,22 +59,22 @@
                                             <tr class="border-white">
                                                 <td class="px-4 align-middle">
                                                     <span class="text-dark">
-                                                        {{ $licitacao->ordem ?? '-' }}
+                                                        {{ $licitacao->ordem ? $licitacao->ordem : $licitacao->numeroProcesso }}
                                                     </span>
                                                 </td>
                                                 <td class="px-4 align-middle">
-                                                    <span class="text-dark">{{ $licitacao->numeroCompra ?? '-' }}</span>
+                                                    <span class="text-dark">{{ $licitacao->processo ?? $licitacao->numeroCompra ?? '-' }}</span>
                                                 </td>
                                                 <td class="px-4 align-middle">
-                                                    <span class="text-dark">{{ $licitacao->orgao_site }}</span>
+                                                    <span class="text-dark">{{ $licitacao->orgao_site ?? $licitacao->orgao ?? '-' }}</span>
                                                 </td>
                                                 <td class="px-4 text-center align-middle">
                                                     {{ $licitacao->projeto ?? '-' }}
                                                 </td>
                                                 <td class="px-4 text-center align-middle">
-                                                    @if($licitacao->dataAberturaProposta)
+                                                    @if($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)
                                                         <span class="text-dark">
-                                                            {{ \Carbon\Carbon::parse($licitacao->dataAberturaProposta)->format('d/m/Y') }}
+                                                            {{ \Carbon\Carbon::parse($licitacao->dataabertura ?? $licitacao->dataAberturaProposta)->format('d/m/Y') }}
                                                         </span>
                                                     @else
                                                         <span class="text-muted">-</span>
@@ -122,7 +122,7 @@
                                             <tr>
                                                 <td colspan="6" class="px-4 pt-1" style="padding-bottom:40px;">
                                                     <strong><i class="bi bi-arrow-return-right me-2"></i></strong>
-                                                    {{ $licitacao->objetoCompra }}
+                                                    {{ $licitacao->objeto ?? $licitacao->objetoCompra ?? '-' }}
                                                 </td>
                                                 <td colspan="1"></td>
                                             </tr>
