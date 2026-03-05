@@ -86,6 +86,15 @@
                             <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
                         </div>
                         @enderror
+                        <div id="campo-somente-site" style="display:none;" class="mt-3 ms-1">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="somenteSite" name="somente_site" value="1"
+                                {{ old('somente_site', $dados->somente_site) ? 'checked' : '' }}>
+                            <label class="form-check-label fw-semibold text-secondary" for="somenteSite">
+                                <i class="bi bi-globe me-1"></i> Postar somente no site?
+                            </label>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
@@ -848,7 +857,8 @@
 
 function ehDispensaOuInexigibilidade(tipo) {
     tipo = tipo || obterTipoLicitacao();
-    return tipo === '2' || tipo === '3';
+    const somenteSite = document.getElementById('somenteSite')?.checked && tipo === '1';
+    return tipo === '2' || tipo === '3' || somenteSite;
 }
 
 function toggleCampoRequired(id, ocultar) {
@@ -1044,20 +1054,24 @@ function toggleCamposPorTipo() {
     const tipoLicitacao = obterTipoLicitacao();
     const isDispensa = tipoLicitacao === '2';
     const isInexigibilidade = tipoLicitacao === '3';
-    const isDispInex = isDispensa || isInexigibilidade;
+    const isSomenteSite = document.getElementById('somenteSite')?.checked && tipoLicitacao === '1';
+    document.getElementById('campo-somente-site').style.display = tipoLicitacao === '1' ? 'block' : 'none';
+    const isDispInex = isDispensa || isInexigibilidade || isSomenteSite;
 
-    document.getElementById('campoOrdem').style.display = isDispInex ? 'block' : 'none';
+    //ocultar quando somente_site
+    ['tipoInstrumentoConvocatorioId','amparoLegalId','modoDisputaId','srp',
+    'codigoUnidadeCompradora','modalidadeId','dataEncerramentoProposta']
+        .forEach(id => toggleCampoRequired(id, isDispInex));
+
+    ['AnoCompra','numeroCompra']
+        .forEach(id => toggleCampoRequired(id, isInexigibilidade));
+
+    document.getElementById('campoOrdem').style.display = (isDispensa || isInexigibilidade) ? 'block' : 'none';
 
     const labelOrdem = document.getElementById('labelOrdem');
     if (labelOrdem) {
         labelOrdem.textContent = isInexigibilidade ? 'Inexigibilidade' : 'Ordem';
     }
-
-    ['tipoInstrumentoConvocatorioId','amparoLegalId','modoDisputaId','srp','codigoUnidadeCompradora','modalidadeId']
-        .forEach(id => toggleCampoRequired(id, isDispInex));
-
-    ['AnoCompra','numeroCompra']
-        .forEach(id => toggleCampoRequired(id, isInexigibilidade));
 
     document.querySelectorAll('#dados-basicos .row').forEach(row => {
         row.classList.toggle('campos-dispensa', isDispInex);
@@ -1077,13 +1091,18 @@ function toggleCamposPorTipo() {
 
             const docPrincipalTitulo = document.getElementById('doc-principal-titulo');
             const docPrincipalSubtitulo = document.getElementById('doc-principal-subtitulo');
-            if (docPrincipalTitulo && docPrincipalSubtitulo) {
-                const tipo = isInexigibilidade ? 'Inexigibilidade' : 'Dispensa';
-                docPrincipalTitulo.textContent = `Documento da ${tipo}`;
-                docPrincipalSubtitulo.textContent = isInexigibilidade
-                    ? 'Arquivo principal da inexigibilidade'
-                    : 'Arquivo principal da dispensa de licitação';
-            }
+                if (docPrincipalTitulo && docPrincipalSubtitulo) {
+                    if (isSomenteSite) {
+                        docPrincipalTitulo.textContent = 'Edital / Documento Principal';
+                        docPrincipalSubtitulo.textContent = 'Arquivo principal da seleção pública';
+                    } else {
+                        const tipo = isInexigibilidade ? 'Inexigibilidade' : 'Dispensa';
+                        docPrincipalTitulo.textContent = `Documento da ${tipo}`;
+                        docPrincipalSubtitulo.textContent = isInexigibilidade
+                            ? 'Arquivo principal da inexigibilidade'
+                            : 'Arquivo principal da dispensa de licitação';
+                    }
+                }
         } else {
             docSelecaoPublica.style.display = 'block';
             docDispensaInexigibilidade.style.display = 'none';
@@ -1121,6 +1140,9 @@ function toggleCamposPorTipo() {
         radio.addEventListener('change', toggleCamposPorTipo);
     });
 });
+
+    document.getElementById('somenteSite')?.addEventListener('change', toggleCamposPorTipo);
+
 </script>
 
 @endsection
