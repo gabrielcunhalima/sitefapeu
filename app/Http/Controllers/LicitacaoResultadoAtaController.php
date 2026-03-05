@@ -173,7 +173,7 @@ class LicitacaoResultadoAtaController extends Controller
 
         // ENVIAR P/ PNCP
         $mensagemSucesso = 'Resultado salvo com sucesso!';
-        if ($licitacao->sequencial && $licitacao->ano) {
+        if ($licitacao->sequencial && $licitacao->ano && !$licitacao->somente_site) {
             try {
                 $cnpj = str_replace(['-', '/', '.'], '', $licitacao->orgao);
                 $token = $this->loginPncp();
@@ -315,7 +315,7 @@ class LicitacaoResultadoAtaController extends Controller
         $mensagemSucesso = 'Ata criada com sucesso!';
         $sequencialAta = null;
 
-        if ($licitacao->sequencial && $licitacao->ano) {
+        if ($licitacao->sequencial && $licitacao->ano && !$licitacao->somente_site) {
             try {
                 $cnpj = str_replace(['-', '/', '.'], '', $licitacao->orgao);
                 $token = $this->loginPncp();

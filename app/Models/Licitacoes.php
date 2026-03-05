@@ -37,6 +37,7 @@ class Licitacoes extends Model
         'tipoInstrumentoConvocatorioId',
         'numeroProcesso',
         'sequencial',
+        'somente_site',
 
     ];
 

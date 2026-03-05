@@ -118,6 +118,8 @@ class LicitacaoController extends Controller
             'justificativaPresencial' => 'nullable|string',
         ]);
 
+        $somenteSite = $request->boolean('somente_site');
+
         if ($validated['tipo_licitacao'] == 2) {
         
             $request->merge([
@@ -132,7 +134,7 @@ class LicitacaoController extends Controller
             ]);
         }
 
-        if ($validated['tipo_licitacao'] == 3) {
+        if ($validated['tipo_licitacao'] == 1 && $somenteSite) {
 
             $request->merge([
                 'modoDisputaId' => '5',
@@ -145,12 +147,13 @@ class LicitacaoController extends Controller
                 'tipo_documento_id' => '20',
                 'AnoCompra' => date('Y'),
                 'numeroCompra' => $validated['ordem'] ?? '',
+                'dataEncerramentoProposta' => $request->input('dataAberturaProposta'),
             ]);
         }
-
+        $somenteSite = $request->boolean('somente_site');
         $itensCompraJson = json_decode($request->input('itensCompra'), true);
 
-        if ($validated['tipo_licitacao'] == 1) {
+        if ($validated['tipo_licitacao'] == 1 && !$somenteSite) {
         if (empty($itensCompraJson) || !is_array($itensCompraJson)) {
             return redirect()
                 ->back()
@@ -163,7 +166,7 @@ class LicitacaoController extends Controller
         $sequencialcodigo = $explode[0];
 
         $arrayItens = [];
-        foreach ($itensCompraJson as $item) {
+        foreach ($itensCompraJson ?? [] as $item) {
             $arrayItens[] = [
                 'numeroItem' => $item['numeroItem'],
                 'materialOuServico' => $item['materialOuServico'],
@@ -214,7 +217,7 @@ class LicitacaoController extends Controller
         $mensagemPncp = '';
 
 
-            if ($validated['tipo_licitacao'] == 1 && $request->hasFile('licitacao')) {
+            if ($validated['tipo_licitacao'] == 1 && !$somenteSite && $request->hasFile('licitacao')) {
             $arquivo = $request->file('licitacao');
             
             $response = Http::withToken($token)
@@ -318,9 +321,9 @@ class LicitacaoController extends Controller
         $licitacao->save();
 
 
-        if($validated['tipo_licitacao'] == 1) {
+        if ($validated['tipo_licitacao'] == 1 && !$somenteSite) {
         if ($request->id) {
-            ItensCompra::where('id_licitacao', $licitacao->id)->delete();
+        ItensCompra::where('id_licitacao', $licitacao->id)->delete();
         }
 
         foreach ($itensCompraJson as $item) {
