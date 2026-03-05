@@ -131,6 +131,21 @@ class LicitacaoController extends Controller
                 'codigoUnidadeCompradora' => '42',
                 'titulo_documento' => 'Documento de Dispensa',
                 'tipo_documento_id' => '20',
+                'dataEncerramentoProposta' => $request->input('dataAberturaProposta'),
+            ]);
+        }
+
+        if ($validated['tipo_licitacao'] == 3) {
+                $request->merge([
+                'modoDisputaId' => '5',
+                'modalidadeId' => '9',
+                'srp' => '0',
+                'tipoInstrumentoConvocatorioId' => '3',
+                'amparoLegalId' => '18',
+                'codigoUnidadeCompradora' => '42',
+                'titulo_documento' => 'Documento de Inexigibilidade',
+                'tipo_documento_id' => '20',
+                'dataEncerramentoProposta' => $request->input('dataAberturaProposta'),
             ]);
         }
 
@@ -314,7 +329,7 @@ class LicitacaoController extends Controller
             }
         }
 
-        $licitacao->ano = $validated['AnoCompra'];
+        $licitacao->ano = $request->input('AnoCompra');
         $licitacao->numeroProcesso = $validated['numeroProcesso'];
         $licitacao->sequencial = $sequencial;
         
