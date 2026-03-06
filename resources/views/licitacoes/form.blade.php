@@ -1018,6 +1018,8 @@ function removerItem(index) {
             dataTransfer.items.add(arquivoAccordion.files[0]);
             arquivoOriginal.files = dataTransfer.files;
         }
+        const contratoSelecao = document.querySelector('#documentos-selecao-publica input[name="contratoconvenio"]');
+        if (contratoSelecao) contratoSelecao.disabled = true;
     }
 });
 

@@ -161,7 +161,7 @@ class LicitacaoController extends Controller
                 'titulo_documento' => 'Documento de Inexigibilidade',
                 'tipo_documento_id' => '20',
                 'AnoCompra' => date('Y'),
-                'numeroCompra' => $validated['ordem'] ?? '',
+               // 'numeroCompra' => $validated['ordem'] ?? '',
                 'dataEncerramentoProposta' => $request->input('dataAberturaProposta'),
             ]);
         }
@@ -329,7 +329,7 @@ class LicitacaoController extends Controller
             }
         }
 
-        $licitacao->ano = $request->input('AnoCompra');
+        $licitacao->ano = $validated['AnoCompra'];
         $licitacao->numeroProcesso = $validated['numeroProcesso'];
         $licitacao->sequencial = $sequencial;
         
