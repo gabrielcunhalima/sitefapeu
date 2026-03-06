@@ -181,6 +181,19 @@
         .directory-grid {
             grid-template-columns: 1fr;
         }
+
+        .directory-item {
+            max-width: 90vw;
+        }
+
+        .contact-directory {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 6px;
+            padding-top: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-top: 50px;
+        }
     }
 </style>
 
@@ -237,7 +250,7 @@
                         </div>
 
                         <div class="directory-item">
-                            <div class="directory-title">Gerência de Recursos Humanos</div>
+                            <div class="directory-title">Gerência de <br>Recursos Humanos</div>
                             <div class="directory-contact">
                                 <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
                                 (48) 3331-7442
@@ -250,7 +263,7 @@
                         </div>
 
                         <div class="directory-item">
-                            <div class="directory-title">Gerência Administrativa e Financeira</div>
+                            <div class="directory-title">Gerência<br> Administrativa e Financeira</div>
                             <div class="directory-contact">
                                 <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
                                 (48) 3331-7417
@@ -289,7 +302,7 @@
                         </div>
 
                         <div class="directory-item">
-                            <div class="directory-title">Gerência de Contabilidade e Patrimônio</div>
+                            <div class="directory-title">Gerência de <br>Contabilidade e Patrimônio</div>
                             <div class="directory-contact">
                                 <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
                                 (48) 3331-7423
@@ -302,7 +315,7 @@
                         </div>
 
                         <div class="directory-item">
-                            <div class="directory-title">Gerência de Tecnologia da Informação</div>
+                            <div class="directory-title">Gerência de <br>Tecnologia da Informação</div>
                             <div class="directory-contact">
                                 <span class="directory-icon"><i class="bi bi-telephone"></i>&nbsp; <i class="bi bi-whatsapp"></i></span>
                                 (48) 3331-7436
@@ -424,7 +437,7 @@
                                 </div>
                                 <div class="contact-info-text">
                                     <strong>Horário de Funcionamento:</strong><br>
-                                    Segunda a Sexta-feira <br> 7h às 13h | Horário de verão
+                                    Segunda a Sexta-feira <br> 8h às 12h e 13h às 17h
                                 </div>
                             </div>
                         </div>

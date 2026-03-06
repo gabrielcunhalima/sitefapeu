@@ -54,7 +54,7 @@
 </head>
 
 <body>
-  <header class="main-header shadow-sm shownav">
+  <header class="main-header shownav">
     <nav class="navbar navbar-expand-lg py-0">
       <div class="container">
         <a class="navbar-brand py-2" href="{{ route('homepage.home') }}">
@@ -115,7 +115,7 @@
                 <li><a class="dropdown-item" href="{{route('politica.anticorrupcao')}}">Política Anticorrupção</a></li>
                 <li><a class="dropdown-item" href="{{route('politica.integridade')}}">Programa de Integridade</a></li>
                 <li><a class="dropdown-item" href="{{route('politica.codigoconduta')}}">Código de Conduta</a></li>
-                <li><a class="dropdown-item" href="{{route('politica.comites')}}">Comitê de Ética e <br>Comitê de Gestão de Riscos</a></li>
+                <li><a class="dropdown-item" href="{{route('politica.comites')}}">Comissões e Comitês Institucionais</a></li>
                 <li><a class="dropdown-item" href="{{route('politica.lgpd') }}">LGPD</a></li>
                 <li><a class="dropdown-item" href="{{route('politica.politicaprivacidade')}}">Política de Privacidade</a></li>
                 <li><a class="dropdown-item" href="{{route('politica.politicacookies')}}">Política de Cookies</a></li>
@@ -191,19 +191,15 @@
   Request::route()->getName() !== 'calculo.menu' &&
   Request::route()->getName() !== 'calculo.calculobruto' &&
   Request::route()->getName() !== 'calculo.calculoliquido')
-  <div class="page-header py-5">
+  <div class="page-header">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="fw-bold mb-3">{{ $titulo }}</h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{{ route('homepage.home') }}">Início</a></li>
-              <li class="breadcrumb-item active" aria-current="page">{{ $titulo }}</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
+      <h1>{{ $titulo }}</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ route('homepage.home') }}">Início</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ $titulo }}</li>
+        </ol>
+      </nav>
     </div>
   </div>
   @endif
@@ -229,120 +225,148 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
+    /* ================================================
+       NAVBAR – FAPEU (Redesign Moderno)
+    ================================================ */
+    .main-header {
+      background: linear-gradient(135deg, #044313 0%, #06551A 58%, #0d7a2a 100%);
+      position: sticky;
+      top: 0;
+      z-index: 1040;
+      transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .main-header.scrolled {
+      background: linear-gradient(135deg, #033810 0%, #055018 58%, #0a6a24 100%);
+      box-shadow: 0 4px 28px rgba(0, 0, 0, 0.30);
+    }
+
     .top-bar {
-      font-size: 1.0rem;
+      font-size: 0.93rem;
       font-family: 'Montserrat', sans-serif;
     }
 
-    .main-header {
-      background-color: #06551A;
+    /* ---- Logo ---- */
+    .navbar-brand {
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .navbar-brand:hover {
+      opacity: 0.88;
+    }
+
+    /* ---- Nav Links ---- */
+    .shownav {
+      color: rgba(255, 255, 255, 0.93) !important;
     }
 
     .navbar-nav .nav-link {
-      color: #fff;
-      padding: 2rem 1rem;
+      color: rgba(255, 255, 255, 0.93) !important;
+      padding: 28px 14px;
       font-weight: 500;
-      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+      position: relative;
+      transition: color 0.25s ease;
     }
 
-    .shownav {
-      color: white !important;
+    /* Underline animado */
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 16px;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.26s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      transform: scaleX(1);
     }
 
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff !important;
     }
 
+    /* ---- Dropdown ---- */
     .dropdown-menu {
       border: none;
-      border-radius: 0.5rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 1rem 0;
-      min-width: 220px;
-      margin-top: 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13), 0 2px 8px rgba(0, 0, 0, 0.07);
+      padding: 8px;
+      min-width: 230px;
+      margin-top: 4px;
+      background: #ffffff;
+      border-top: 3px solid #06551A;
     }
 
     .dropdown-item {
-      padding: 0.75rem 1.5rem;
+      padding: 10px 16px;
+      font-size: 0.88rem;
       font-weight: 400;
-      color: #333;
-      transition: all 0.2s ease;
+      color: #2d2d2d;
+      border-radius: 8px;
+      transition: background 0.22s ease, color 0.22s ease, padding-left 0.22s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .dropdown-item:hover,
     .dropdown-item:focus {
-      background-color: rgba(6, 85, 26, 0.1);
+      background: linear-gradient(135deg, rgba(6, 85, 26, 0.09) 0%, rgba(13, 122, 42, 0.06) 100%);
       color: #06551A;
+      padding-left: 15px;
     }
 
     .dropdown-item i {
-      margin-right: 0.5rem;
       color: #06551A;
+      font-size: 0.85rem;
+      width: 16px;
+      text-align: center;
     }
 
     .dropdown-menu.animate {
-      animation-duration: 0.3s;
-      animation-fill-mode: both;
+      animation: navDropIn 0.22s cubic-bezier(0.4, 0, 0.2, 1) both;
     }
 
-    @keyframes slideIn {
-      0% {
-        transform: translateY(1rem);
+    @keyframes navDropIn {
+      from {
         opacity: 0;
+        transform: translateY(10px) scale(0.97);
       }
 
-      100% {
-        transform: translateY(0rem);
+      to {
         opacity: 1;
+        transform: translateY(0) scale(1);
       }
     }
 
     .slideIn {
-      animation-name: slideIn;
+      animation-name: navDropIn;
     }
 
-    @media (max-width: 991.98px) {
-      .navbar-nav .nav-link {
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .dropdown-menu {
-        background-color: rgba(6, 85, 26, 0.9);
-        border: none;
-        box-shadow: none;
-        padding: 0;
-      }
-
-      .dropdown-item {
-        color: #fff;
-        padding: 0.75rem 1rem 0.75rem 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .dropdown-item:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-      }
-
-      .dropdown-item i {
-        color: #fff;
-      }
-    }
-
-    .page-header {
-      background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
-      border-bottom: 1px solid #dee2e6;
-    }
-
+    /* ---- Toggler Mobile ---- */
     .navbar-toggler {
       border: none;
-      padding: 0.25rem 0.75rem;
-      font-size: 1.25rem;
-      background-color: transparent;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
       color: #fff;
+      transition: background 0.25s ease;
+    }
+
+    .navbar-toggler:hover {
+      background: rgba(255, 255, 255, 0.22);
     }
 
     .navbar-toggler:focus {
@@ -350,29 +374,120 @@
     }
 
     .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ---- Mobile Menu ---- */
+    @media (max-width: 991.98px) {
+      .navbar-nav .nav-link {
+        padding: 13px 4px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .navbar-nav .nav-link::after {
+        display: none;
+      }
+
+      .dropdown-menu {
+        background: rgba(3, 58, 16, 0.97);
+        border-radius: 10px;
+        border-top: none;
+        border-left: 3px solid rgba(255, 255, 255, 0.22);
+        box-shadow: none;
+        padding: 4px 0;
+        margin: 0 0 6px 2px;
+      }
+
+      .dropdown-item {
+        color: rgba(255, 255, 255, 0.88);
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+      }
+
+      .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.10);
+        color: #fff;
+      }
+
+      .dropdown-item i {
+        color: rgba(255, 255, 255, 0.65);
+      }
+    }
+
+    /* ---- Page Header ---- */
+    .page-header {
+      background: linear-gradient(135deg, #f1f5f2 0%, #e5ede7 50%, #ddeae0 100%);
+      border-bottom: 1px solid rgba(6, 85, 26, 0.13);
+      padding: 28px 0 22px;
+    }
+
+    .page-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a2e1d;
+      margin-bottom: 4px;
     }
 
     .breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       background: transparent;
       padding: 0;
-      margin: 0;
+      margin: 8px 0 0;
+      list-style: none;
+      gap: 0;
+    }
+
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.88rem;
+      line-height: 1;
     }
 
     .breadcrumb-item a {
       color: #06551A;
       text-decoration: none;
+      font-weight: 500;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+      line-height: 1;
+    }
+
+    .breadcrumb-item a:hover {
+      color: #044313;
     }
 
     .breadcrumb-item.active {
-      color: #6c757d;
+      color: #5a7060;
+      font-size: 0.88rem;
+      line-height: 1;
     }
 
     .breadcrumb-item+.breadcrumb-item::before {
       content: "›";
-      color: #6c757d;
+      color: #8aab8e;
+      font-size: 1rem;
+      padding: 0 6px;
+      display: inline-flex;
+      align-items: center;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.main-header');
+      if (!header) return;
+      window.addEventListener('scroll', function() {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+      }, {
+        passive: true
+      });
+    });
+  </script>
   <script src='https://painel.facillgpd.com.br/api/plugin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXByZXNhIjoiNjdhY2VmMGZmZGIxYTM0YmUxN2NkN2I4IiwiY29uZmlnUmVxdWlzaWNhbyI6IjY3YWNlZjEyZmRiMWEzNGJlMTdjZGQwNCIsImlhdCI6MTc0MzQyNTQyOX0.50fBzDOU3r1_ASg8HotqPnMJ_YDRQpv-iuNoXM4KTfQ'></script>
 </body>
 
