@@ -460,12 +460,26 @@ class LicitacaoController extends Controller
         return view('fornecedor.inexigibilidade', compact('licitacoes', 'titulo'));
     }
 
-    public function listarSelecaoPublica()
+    public function listarSelecaoPublica( Request $request)
     {
         $titulo = 'Seleção Pública';
-        $licitacoes = Licitacoes::where('tipo_licitacao', 1)
-            ->orderBy('dataabertura', 'desc')
-            ->get();
+        $query =  Licitacoes::where('tipo_licitacao', 1);
+        
+        if ($request->filled('busca')) {
+            $busca = $request->busca;
+            $query->where(function ($q) use ($busca) {
+                $q->where('numeroProcesso', 'like', "%{$busca}%")
+                ->orWhere('numeroCompra', 'like', "%{$busca}%")
+                ->orWhere('objetoCompra', 'like', "%{$busca}%")
+                ->orWhere('projeto', 'like', "%{$busca}%")
+                ->orWhere('orgao_site', 'like', "%{$busca}%");
+            });
+        }
+
+        if($request->filled('ano')) {
+            $query->where('datapublicacao', '>=', $request->ano);
+        }
+        $licitacoes = $query->orderBy('datapublicacao', 'desc')->get();
         return view('fornecedor.selecoespublicas', compact('licitacoes', 'titulo'));
     }
 
