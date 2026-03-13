@@ -60,6 +60,42 @@
             </div>
         </div>
 
+        <div class="row mb-3 mt-3">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body py-3">
+                        <form id="formFiltro" action="{{ route('fornecedor.selecoespublicas') }}" method="GET">
+                            <div class="row g-2 align-items-center">
+                                <div class="col-md-6">
+                                    <input type="text" name="busca" class="form-control form-control-sm"
+                                        placeholder="Buscar por ano, processo, objeto, órgão, projeto..."
+                                        value="{{ request('busca') }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <select name="ano" class="form-select form-select-sm" onchange="this.form.submit()">
+                                        <option value="">Todos os anos</option>
+                                        @for($a = date('Y'); $a >= 2020; $a--)
+                                            <option value="{{ $a }}" {{ request('ano') == $a ? 'selected' : '' }}>{{ $a }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+                                <div class="col-md-3 d-flex gap-2">
+                                    <button type="submit" class="btn btn-sm flex-fill" style="background-color: var(--bg-principal, #034201); color: #fff;">
+                                        <i class="bi bi-search"></i> Filtrar
+                                    </button>
+                                    @if(request()->hasAny(['busca', 'ano']))
+                                    <a href="{{ route('fornecedor.selecoespublicas') }}" class="btn btn-outline-secondary btn-sm flex-fill">
+                                        <i class="bi bi-x-lg"></i> Limpar
+                                    </a>
+                                    @endif
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12">
                 <div class="card border-0 shadow">
