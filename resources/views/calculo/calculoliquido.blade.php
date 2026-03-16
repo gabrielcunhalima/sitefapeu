@@ -4,7 +4,7 @@
 @section('conteudo')
 <style>
     .calculator-header {
-        background: linear-gradient(135deg,rgb(30, 71, 39), #30755c);
+        background: linear-gradient(135deg, rgb(30, 71, 39), #30755c);
         color: white;
         padding: 3px;
         text-align: center;
@@ -41,7 +41,7 @@
         </div>
         <div class="mb-3">
             <label for="teto_inss" class="form-label">Teto INSS:</label>
-            <input type="text" name="teto_inss" id="teto_inss" class="form-control" value='897,32' readonly required>
+            <input type="text" name="teto_inss" id="teto_inss" class="form-control" value='932,31' readonly required>
         </div>
         <button type="submit" class="btn btn-primary">Calcular</button>
     </form>

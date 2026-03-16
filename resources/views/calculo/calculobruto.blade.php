@@ -44,7 +44,7 @@
 
         <div class="mb-3">
             <label for="teto_inss" class="form-label">Teto INSS:</label>
-            <input type="text" name="teto_inss" id="teto_inss" class="form-control" value='897,32' readonly required>
+            <input type="text" name="teto_inss" id="teto_inss" class="form-control" value='932,31' readonly required>
         </div>
 
         <button type="submit" class="btn btn-primary">Calcular</button>
