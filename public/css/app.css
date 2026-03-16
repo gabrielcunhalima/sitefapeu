@@ -297,7 +297,6 @@
     }
   }
 
-  /* Ajuste o tamanho do carousel */
   .carousel-item {
     height: 32rem;
     background-color: #cac5c5;
@@ -312,16 +311,11 @@
   }
 
 
-  /* Transparência - Seções de Resolução, classe Active */
 
   .list-group-item.active,
   .list-group-item:hover {
     background-color: #e8f4ff !important;
-    /* Ajuste para a cor de fundo desejada */
     color: #08775f !important;
-    /* Cor do texto */
-    border: none !important;
-    /* Remove as bordas pretas */
 
   }
 
