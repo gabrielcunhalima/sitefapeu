@@ -80,6 +80,7 @@
                 <li><a class="dropdown-item" href="{{route('quemsomos.regimentointerno')}}">Regimento Interno</a></li>
                 <li><a class="dropdown-item" href="{{route('quemsomos.organograma')}}">Organograma</a></li>
                 <li><a class="dropdown-item" href="{{route('quemsomos.administracao')}}">Administração</a></li>
+                <li><a class="dropdown-item" href="http://dashboard.fapeu.org.br" target="_blank">Relatório Gerencial<i class="bi bi-box-arrow-up-right me-1"></i></a></li>
                 <li><a class="dropdown-item" href="{{route('quemsomos.identidadevisual')}}">Identidade Visual</a></li>
                 <li><a class="dropdown-item" href="{{route('quemsomos.revistafapeu')}}">Revista FAPEU</a></li>
                 <li><a class="dropdown-item" href="{{route('noticias.noticiasrecentes')}}">Notícias</a></li>
@@ -157,7 +158,6 @@
                 <li><a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>ADMFlow</a></li>
                 <li><a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>WebMail</a></li>
                 <li><a class="dropdown-item" href="https://eventos.fapeu.com.br/integridade/public/"><i class="bi bi-box-arrow-up-right me-1"></i>Programa de Integridade</a></li>
-                <li><a class="dropdown-item" href="http://dashboard.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>Relatório Gerencial</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.informerendimentos')}}">Informe de Rendimentos</a></li>
