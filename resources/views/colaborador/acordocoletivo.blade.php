@@ -100,7 +100,7 @@
         </h2>
         <div id="collapse2026" class="accordion-collapse collapse" aria-labelledby="heading2026" data-bs-parent="#acordosCollective">
           <div class="accordion-body">
-          <a href="pdfs/Colaborador/AcordoColetivo/1773921961_TERMO ADITIVO A ACORDO COLETIVO DE TRABALHO 2026 2027.pdf" target="_blank" class="doc-link">
+          <a href="pdfs/Colaborador/AcordoColetivo/Aditivo ACT FAPEU 2026-2027 (1).pdf" target="_blank" class="doc-link">
             <i class="bi bi-file-earmark-pdf doc-icon"></i>
             <span>Acordo Coletivo FAPEU 2026/2027</span>
           </a>
