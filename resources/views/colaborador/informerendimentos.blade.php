@@ -129,6 +129,21 @@
 
 <section class="informe-section">
   <div class="container">
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        <div class="alert alert-warning d-flex align-items-start" role="alert" style="border-left: 5px solid #856404;">
+          <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem; color: #856404;"></i>
+          <div>
+            <h5 class="alert-heading mb-1"><strong>Aviso Importante.</strong></h5>
+            <p class="mb-1">Informamos que os informes de rendimento estão temporariamente indisponíveis em razão de ajustes técnicos.</p>
+            <p class="mb-1">A previsão de normalização é até sexta-feira, dia 27/03/2026.</p>
+            <p class="mb-0">Agradecemos a compreensão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
         <h3 class="my-3 text-success">Acesso aos Informes de Rendimentos</h3>
@@ -145,10 +160,10 @@
           <p class="informe-description flex-grow-1">
             Acesse este módulo para obter informes de rendimentos referentes a serviços prestados sem vínculo empregatício (autônomos) e pagamentos para Pessoas Jurídicas.
           </p>
-          <a href="http://150.162.78.4:8080/manager_rendimento/relatoriorendimentos/" target="_blank" class="btn btn-informe mt-auto">
+          <button class="btn btn-informe mt-auto" disabled style="opacity: 0.55; cursor: not-allowed;">
             <i class="bi bi-box-arrow-up-right btn-icon"></i>
             Acessar Sistema
-          </a>
+          </button>
         </div>
       </div>
       
@@ -165,10 +180,10 @@
           <p class="informe-description flex-grow-1">
             Acesse este módulo para obter informes de rendimentos para colaboradores contratados em regime CLT e extratos de utilização do plano de saúde Unimed.
           </p>
-          <a href="http://drhflow.fapeu.com.br:8080/InformesUnimed/" target="_blank" class="btn btn-informe mt-auto">
+          <button class="btn btn-informe mt-auto" disabled style="opacity: 0.55; cursor: not-allowed;">
             <i class="bi bi-box-arrow-up-right btn-icon"></i>
             Acessar Sistema
-          </a>
+          </button>
         </div>
       </div>
     </div>

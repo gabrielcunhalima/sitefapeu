@@ -156,7 +156,8 @@
               <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="collaboratorDropdown">
                 <li><a class="dropdown-item" href="http://drhflow.fapeu.com.br:8080/DRHFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>DRHFlow</a></li>
                 <li><a class="dropdown-item" href="http://admflow.fapeu.com.br:8080/ADMFlow" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>ADMFlow</a></li>
-                <li><a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>WebMail</a></li>
+                <li><a class="dropdown-item" href="https://webmail.fapeu.org.br" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>Zimbra</a></li>
+                <li><a class="dropdown-item" href="https://mail.google.com" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>Gmail</a></li>
                 <li><a class="dropdown-item" href="https://eventos.fapeu.com.br/integridade/public/"><i class="bi bi-box-arrow-up-right me-1"></i>Programa de Integridade</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.formularioscolaborador')}}">Formulários</a></li>
                 <li><a class="dropdown-item" href="{{route('colaborador.acordocoletivo')}}">Acordo Coletivo</a></li>

@@ -143,7 +143,8 @@ class CalculoController extends Controller
         $inssPatronal = $salarioBruto * 0.20;
 
         // INSS e IRRF calculados sobre o salário mensal (competência mensal)
-        $inss = $imp->calcularINSS($salarioBruto);
+        $tetoInss = (float) str_replace(',', '.', '932,31');
+        $inss = $imp->calcularINSS($salarioBruto, $tetoInss);
         $irrf = $imp->calcularIRRF($salarioBruto, $inss);
 
         $salarioLiquido  = $salarioBruto - $inss - $irrf;
@@ -210,14 +211,21 @@ class CalculoController extends Controller
         $seguro                 = (float) $request->input('seguro', 0);
         $pcmso                  = (float) $request->input('pcmso', 0);
 
+        $imp = new ImpostoController();
+
         $totalProventos = $salarioBase + $adicionalNoturno + $adicionalInsalubridade + $trienio;
+
+        // Descontos do colaborador
+        $tetoInss       = 932.31;
+        $inssColaborador = $imp->calcularINSS($totalProventos, $tetoInss);
+        $irrf            = $imp->calcularIRRF($totalProventos, $inssColaborador);
+        $salarioLiquido  = $totalProventos - $inssColaborador - $irrf;
 
         // Férias = (proventos/12) * (4/3)  →  salário + 1/3 constitucional
         $ferias         = ($totalProventos / 12) * (1 + 1 / 3);
         $decimoTerceiro = $totalProventos / 12;
-        $avisoPrevio    = $decimoTerceiro;
 
-        $baseEncargos = $totalProventos + $decimoTerceiro + $ferias + $avisoPrevio;
+        $baseEncargos = $totalProventos + $decimoTerceiro + $ferias;
 
         // FGTS: 8% * 1,5 (multa rescisória média já embutida)
         $fgts = ($baseEncargos * 0.08) * 1.5;
@@ -228,7 +236,7 @@ class CalculoController extends Controller
         // PIS: 1%
         $pis = $baseEncargos * 0.01;
 
-        $totalEncargos   = $fgts + $inss + $pis + $ferias + $decimoTerceiro + $avisoPrevio;
+        $totalEncargos   = $fgts + $inss + $pis + $ferias + $decimoTerceiro;
         $custoTotalMensal = $totalProventos + $totalEncargos + $valeTransporte + $valeAlimentacao + $seguro + $pcmso;
 
         return back()->with('resultado', [
@@ -236,10 +244,12 @@ class CalculoController extends Controller
             'adicional_noturno'       => $adicionalNoturno,
             'adicional_insalubridade' => $adicionalInsalubridade,
             'trienio'                 => $trienio,
-            'total_proventos'         => round($totalProventos,    2),
+            'total_proventos'         => round($totalProventos,     2),
+            'inss_colaborador'        => round($inssColaborador,   2),
+            'irrf'                    => round($irrf,              2),
+            'salario_liquido'         => round($salarioLiquido,    2),
             'ferias'                  => round($ferias,            2),
             'decimo_terceiro'         => round($decimoTerceiro,    2),
-            'aviso_previo'            => round($avisoPrevio,       2),
             'fgts'                    => round($fgts,              2),
             'inss'                    => round($inss,              2),
             'pis'                     => round($pis,               2),

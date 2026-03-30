@@ -707,41 +707,36 @@
   }
 </style>
 
-{{-- =============================================
-     HERO – CABEÇALHO + BOTÕES DE ACESSO RÁPIDO
-============================================== --}}
 <section class="hero-section">
   <div class="container position-relative" style="z-index:1;">
 
     <div class="informe-wrapper">
-      {{-- ATENÇÃO: Substitua 'nome.da.rota.informe' pelo nome da sua rota no web.php --}}
-      <a href="{{ route('colaborador.informerendimentos') }}" class="btn-informe">
+      <!-- <a href="{{ route('colaborador.informerendimentos') }}" class="btn-informe">
         <i class="bi bi-file-earmark-person-fill"></i>
         <span>Informe de Rendimentos 2025 Disponível</span>
       </a>
-    </div>
-    <h1 class="hero-title">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
-    <!-- <p class="hero-subtitle">Transformando ideias em ações há mais de 48 anos</p> -->
+    </div>-->
+      <h1 class="hero-title">Fundação de Amparo à Pesquisa e Extensão Universitária</h1>
 
-    <div class="quick-access-grid">
-      <a href="{{ route('projetos.captacao') }}" class="quick-btn">
-        <i class="bi bi-journal-bookmark-fill btn-icon"></i>
-        <span class="btn-label">Captação e Implantação de Projetos</span>
-      </a>
-      <a href="{{ route('transparencia.projetostransparencia') }}" class="quick-btn">
-        <i class="bi bi-file-earmark-check btn-icon"></i>
-        <span class="btn-label">Transparência</span>
-      </a>
-      <a href="{{ route('projetos.espacocoordenador') }}" class="quick-btn">
-        <i class="bi bi-person-workspace btn-icon"></i>
-        <span class="btn-label">Espaço do Coordenador</span>
-      </a>
-      <a href="{{ route('fornecedor.espacofornecedor') }}" class="quick-btn">
-        <i class="bi bi-check-circle btn-icon"></i>
-        <span class="btn-label">Portal do Fornecedor</span>
-      </a>
+      <div class="quick-access-grid">
+        <a href="{{ route('projetos.captacao') }}" class="quick-btn">
+          <i class="bi bi-journal-bookmark-fill btn-icon"></i>
+          <span class="btn-label">Captação e Implantação de Projetos</span>
+        </a>
+        <a href="{{ route('transparencia.projetostransparencia') }}" class="quick-btn">
+          <i class="bi bi-file-earmark-check btn-icon"></i>
+          <span class="btn-label">Transparência</span>
+        </a>
+        <a href="{{ route('projetos.espacocoordenador') }}" class="quick-btn">
+          <i class="bi bi-person-workspace btn-icon"></i>
+          <span class="btn-label">Espaço do Coordenador</span>
+        </a>
+        <a href="{{ route('fornecedor.espacofornecedor') }}" class="quick-btn">
+          <i class="bi bi-check-circle btn-icon"></i>
+          <span class="btn-label">Portal do Fornecedor</span>
+        </a>
+      </div>
     </div>
-  </div>
 </section>
 
 {{-- =============================================
