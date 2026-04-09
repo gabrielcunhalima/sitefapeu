@@ -136,14 +136,15 @@
           <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem; color: #856404;"></i>
           <div>
             <h5 class="alert-heading mb-1"><strong>Prezados(as),</strong></h5>
-            <p class="mb-1">Para a elaboração da sua Declaração de Imposto de Renda, orientamos que sejam utilizados como referência os Informes de Rendimentos disponibilizados pela Fundação. É fundamental que os valores constantes nesses informes sejam integralmente considerados e informados na sua declaração, a fim de garantir a consistência das informações prestadas à Receita Federal.</p>
-            <p class="mb-1"><br>Informamos que eventuais divergências entre os dados apresentados em outras fontes (como a declaração pré-preenchida) podem ocorrer em razão de inconsistências na base do eSocial, não sendo decorrentes das informações fornecidas pela Fundação.</p>
-            <p class='mb-1'><br>Ficamos à disposição para contribuir por meio de esclarecimentos adicionais ou suporte necessário.</p>
-            <p class="mb-0"><br>Agradecemos a compreensão.</p>
+              <p class="mb-1">Informamos que o exercício de 2025/2026 marca a transição da DIRF para o ambiente do eSocial. Em razão dessa mudança estrutural, foram identificadas inconsistências no processamento de algumas rubricas pela Receita Federal, ocasionando divergências de valores. A Fundação vem adotando as providências necessárias à retificação das informações, com o objetivo de assegurar a correta regularização dos dados.</p>
+              <p class="mb-1"><br><i class="bi bi-calendar-event me-1" style="color: #856404;"></i> A previsão para conclusão das correções é até <strong>17/04/2026 (sexta-feira)</strong>.</p>
+              <p class="mb-1"><br>Reforçamos nosso compromisso com a transparência e a confiabilidade das informações prestadas e manteremos todos(as) informados sobre a finalização do processo.</p>
+              <p class="mb-1">Permaneceremos à disposição para contribuir por meio de esclarecimentos adicionais ou suporte necessário.</p>
+              <p class="mb-0">Agradecemos a compreensão!</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
