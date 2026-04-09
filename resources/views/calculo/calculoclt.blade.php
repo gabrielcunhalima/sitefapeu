@@ -101,7 +101,6 @@
     }
 
     .btn-calculate:hover {
-        transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(6, 85, 26, 0.4);
     }
 

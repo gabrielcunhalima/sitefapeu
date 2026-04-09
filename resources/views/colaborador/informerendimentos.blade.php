@@ -88,12 +88,12 @@
     margin-right: 10px;
     font-size: 1.2rem;
   }
-  
+
   .divider {
     position: relative;
     height: 100%;
   }
-  
+
   .divider:after {
     content: '';
     position: absolute;
@@ -109,7 +109,7 @@
     .divider:after {
       display: none;
     }
-    
+
     .informe-card {
       margin-bottom: 30px;
     }
@@ -135,10 +135,11 @@
         <div class="alert alert-warning d-flex align-items-start" role="alert" style="border-left: 5px solid #856404;">
           <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem; color: #856404;"></i>
           <div>
-            <h5 class="alert-heading mb-1"><strong>Aviso Importante.</strong></h5>
-            <p class="mb-1">Informamos que os informes de rendimento estão temporariamente indisponíveis em razão de ajustes técnicos.</p>
-            <p class="mb-1">A previsão de normalização é até sexta-feira, dia 27/03/2026.</p>
-            <p class="mb-0">Agradecemos a compreensão.</p>
+            <h5 class="alert-heading mb-1"><strong>Prezados(as),</strong></h5>
+            <p class="mb-1">Para a elaboração da sua Declaração de Imposto de Renda, orientamos que sejam utilizados como referência os Informes de Rendimentos disponibilizados pela Fundação. É fundamental que os valores constantes nesses informes sejam integralmente considerados e informados na sua declaração, a fim de garantir a consistência das informações prestadas à Receita Federal.</p>
+            <p class="mb-1"><br>Informamos que eventuais divergências entre os dados apresentados em outras fontes (como a declaração pré-preenchida) podem ocorrer em razão de inconsistências na base do eSocial, não sendo decorrentes das informações fornecidas pela Fundação.</p>
+            <p class='mb-1'><br>Ficamos à disposição para contribuir por meio de esclarecimentos adicionais ou suporte necessário.</p>
+            <p class="mb-0"><br>Agradecemos a compreensão.</p>
           </div>
         </div>
       </div>
@@ -160,17 +161,17 @@
           <p class="informe-description flex-grow-1">
             Acesse este módulo para obter informes de rendimentos referentes a serviços prestados sem vínculo empregatício (autônomos) e pagamentos para Pessoas Jurídicas.
           </p>
-          <button class="btn btn-informe mt-auto" disabled style="opacity: 0.55; cursor: not-allowed;">
+          <a href="http://150.162.78.4:8080/manager_rendimento/relatoriorendimentos/" target="_blank" class="btn btn-informe mt-auto">
             <i class="bi bi-box-arrow-up-right btn-icon"></i>
             Acessar Sistema
-          </button>
+          </a>
         </div>
       </div>
-      
+
       <div class="col-lg-2 d-none d-lg-block">
         <div class="divider"></div>
       </div>
-      
+
       <div class="col-lg-5">
         <div class="informe-card h-100 d-flex flex-column">
           <div class="informe-icon">
@@ -180,14 +181,14 @@
           <p class="informe-description flex-grow-1">
             Acesse este módulo para obter informes de rendimentos para colaboradores contratados em regime CLT e extratos de utilização do plano de saúde Unimed.
           </p>
-          <button class="btn btn-informe mt-auto" disabled style="opacity: 0.55; cursor: not-allowed;">
+          <a href="http://drhflow.fapeu.com.br:8080/InformesUnimed/" target="_blank" class="btn btn-informe mt-auto">
             <i class="bi bi-box-arrow-up-right btn-icon"></i>
             Acessar Sistema
-          </button>
+          </a>
         </div>
       </div>
     </div>
-    
+
     <!-- <div class="row mt-5">
       <div class="col-lg-8 mx-auto">
         <div class="alert alert-info d-flex align-items-center">

@@ -6,30 +6,46 @@ use Illuminate\Http\Request;
 
 class ImpostoController extends Controller
 {
-    public function calcularIRRF($valorBruto,$inss) {
-          $faixas = [
+    public function calcularIRRF($valorBruto, $inss)
+    {
+        $faixas = [
             [2428.81, 7.5, 182.16],
             [2826.66, 15, 394.16],
             [3751.06, 22.5, 675.49],
             [4664.69, 27.5, 908.73]
         ];
-    
+
         $aliquota = 0;
         $deducao = 0;
-        $inss = $inss < 607.20 ? 607.20 : $inss;
 
-        $valorBruto = $valorBruto-$inss;    
+        $brutoOriginal = $valorBruto;
+
+        $inss = $inss < 607.20 ? 607.20 : $inss;
+        $baseCalculo = $valorBruto - $inss;
 
         foreach ($faixas as $faixa) {
-            if ($valorBruto >= $faixa[0]) {
+            if ($baseCalculo >= $faixa[0]) {
                 $aliquota = $faixa[1];
                 $deducao = $faixa[2];
             } else {
                 break;
             }
         }
-    
-        $imposto = (($valorBruto) * ($aliquota / 100)) - $deducao;
+
+        $imposto = ($baseCalculo * ($aliquota / 100)) - $deducao;
+
+        if ($baseCalculo <= 5000.00) {
+            $redutor = $imposto;
+        } elseif ($baseCalculo <= 7350.00) {
+            $redutor = 978.62 - (0.133145 * $baseCalculo);
+            $redutor = max($redutor, 0);
+        } else {
+            $redutor = 0;
+        }
+
+        $imposto = $imposto - $redutor;
+        $imposto = max($imposto, 0);
+
         return $imposto;
     }
 
