@@ -136,9 +136,9 @@
           <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem; color: #856404;"></i>
           <div>
             <h5 class="alert-heading mb-1"><strong>Prezados(as),</strong></h5>
-              <p class="mb-1">Informamos que o exercício de 2025/2026 marca a transição da DIRF para o ambiente do eSocial. Em razão dessa mudança estrutural, foram identificadas inconsistências no processamento de algumas rubricas pela Receita Federal, ocasionando divergências de valores. A Fundação vem adotando as providências necessárias à retificação das informações, com o objetivo de assegurar a correta regularização dos dados.</p>
-              <p class="mb-1"><br><i class="bi bi-calendar-event me-1" style="color: #856404;"></i> A previsão para conclusão das correções é até <strong>17/04/2026 (sexta-feira)</strong>.</p>
-              <p class="mb-1"><br>Reforçamos nosso compromisso com a transparência e a confiabilidade das informações prestadas e manteremos todos(as) informados sobre a finalização do processo.</p>
+              <p class="mb-3">Informamos que o exercício de 2025/2026 marca a transição da DIRF para o ambiente do eSocial. Em razão dessa mudança estrutural, foram identificadas inconsistências no processamento de algumas rubricas pela Receita Federal, ocasionando divergências de valores. A Fundação vem adotando as providências necessárias à retificação das informações, com o objetivo de assegurar a correta regularização dos dados.</p>
+              <p class="mb-3"><i class="bi bi-calendar-event me-1" style="color: #856404;"></i> A previsão para conclusão das correções é até <strong>17/04/2026 (sexta-feira)</strong>.</p>
+              <p class="mb-1">Reforçamos nosso compromisso com a transparência e a confiabilidade das informações prestadas e manteremos todos(as) informados sobre a finalização do processo.</p>
               <p class="mb-1">Permaneceremos à disposição para contribuir por meio de esclarecimentos adicionais ou suporte necessário.</p>
               <p class="mb-0">Agradecemos a compreensão!</p>
             </div>
