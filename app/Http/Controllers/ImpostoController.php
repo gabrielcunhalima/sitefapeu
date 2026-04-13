@@ -49,30 +49,38 @@ class ImpostoController extends Controller
         return $imposto;
     }
 
-    function calcularINSS($salarioBruto,$teto) {
+    function calcularINSS($salarioBruto, $teto) {
+        // Faixas: [limite_superior, alíquota%]
+        // Cada faixa cobre a diferença entre seu limite e o limite da faixa anterior.
         $faixas = [
             [1212.00, 7.5],
             [2427.35, 9.0],
             [3641.03, 12.0],
-            [7087.22, 14.0]
+            [7087.22, 14.0],
         ];
-    
-        $inss = 0;
-        $salarioRestante = $salarioBruto;
-    
+
+        $inss           = 0;
+        $limiteAnterior = 0;
+
         foreach ($faixas as $faixa) {
-            if ($salarioRestante > $faixa[0]) {
-                $baseCalculo = min($faixa[0], $salarioRestante);
-                $inss += $baseCalculo * ($faixa[1] / 100);
-                $salarioRestante -= $baseCalculo;
-            } else {
-                $inss += $salarioRestante * ($faixa[1] / 100);
+            [$limite, $aliquota] = $faixa;
+
+            if ($salarioBruto <= $limiteAnterior) {
                 break;
             }
+
+            $baseNaFaixa = min($salarioBruto, $limite) - $limiteAnterior;
+            $inss       += $baseNaFaixa * ($aliquota / 100);
+            $limiteAnterior = $limite;
+        }
+
+        // Salário acima da última faixa (R$ 7.087,22) ainda incide 14%
+        if ($salarioBruto > $limiteAnterior) {
+            $inss += ($salarioBruto - $limiteAnterior) * 0.14;
         }
 
         $inss = $inss > $teto ? $teto : $inss;
-        
+
         return $inss;
     }
 }
