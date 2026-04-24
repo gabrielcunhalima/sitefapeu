@@ -136,11 +136,11 @@
           <i class="bi bi-exclamation-triangle-fill me-3 mt-1" style="font-size: 1.5rem; color: #856404;"></i>
           <div>
             <h5 class="alert-heading mb-1"><strong>Prezados(as),</strong></h5>
-              <p class="mb-3">Informamos que o exercício de 2025/2026 marca a transição da DIRF para o ambiente do eSocial. Em razão dessa mudança estrutural, foram identificadas inconsistências no processamento de algumas rubricas pela Receita Federal, ocasionando divergências de valores. A Fundação vem adotando as providências necessárias à retificação das informações, com o objetivo de assegurar a correta regularização dos dados.</p>
-              <p class="mb-3"><i class="bi bi-calendar-event me-1" style="color: #856404;"></i> A previsão para conclusão das correções é até <strong>17/04/2026 (sexta-feira)</strong>.</p>
-              <p class="mb-1">Reforçamos nosso compromisso com a transparência e a confiabilidade das informações prestadas e manteremos todos(as) informados sobre a finalização do processo.</p>
-              <p class="mb-1">Permaneceremos à disposição para contribuir por meio de esclarecimentos adicionais ou suporte necessário.</p>
-              <p class="mb-0">Agradecemos a compreensão!</p>
+              <p class="mb-3">Informamos que, em razão da transição da DIRF para o ambiente do eSocial/EFD-Reinf no exercício 2025, foram identificadas inconsistências nas declarações enviadas.</p>
+              <p class="mb-3">A FAPEU já realizou o envio dos dados e adotou as providências cabíveis para a regularização das informações. Neste momento, a atualização depende do processamento/reprocessamento no ambiente da Receita Federal.</p>
+              <p class="mb-3">Caso o(a) empregado(a) opte por transmitir a declaração antes da conclusão desse processamento, poderá fazê-lo normalmente, utilizando as informações de que dispõe. No entanto, se houver divergência na declaração pré-preenchida ou nos dados disponibilizados pela Receita Federal, será necessário aguardar a atualização/retificação automática das informações no ambiente da Receita.</p>
+              <p class="mb-1">Reforçamos nosso compromisso com a transparência e manteremos todos(as) informados(as) sobre a finalização do processo.</p>
+              <p class="mb-0">Agradecemos a compreensão.</p>
             </div>
           </div>
         </div>
