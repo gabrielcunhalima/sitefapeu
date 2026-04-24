@@ -21,9 +21,6 @@
                                 <label for="senha">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha" required placeholder="Digite sua senha">
                             </div>
-                            <div class="my-3 text-center">
-                                <x-turnstile data-theme="light"/>
-                            </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         </form>
                     </div>

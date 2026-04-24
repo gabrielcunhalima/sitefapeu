@@ -13,6 +13,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LicitacaoResultadoAtaController;
 
 
+Route::get('/.well-known/jwks.json', function () {
+    return response()->file(public_path('.well-known/jwks.json'), ['Content-Type' => 'application/json']);
+});
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
 Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
@@ -151,6 +154,14 @@ Route::post('/storeusuario', [LoginController::class, 'storeUsuario'])->name('ad
 
 
 Route::get('/noticias/{link}', [MenuController::class, 'noticiasleitura'])->name('noticias.noticiasleitura');
+
+//CARTEIRINHA
+Route::get('/carteirinha/Xk9mR2pLqZ', function () {
+    if (!auth()->check()) {
+        return redirect()->route('admin.login');
+    }
+    return view('carteirinha.carteirinha');
+})->name('carteirinha.show');
 
 //CALCULOS
 Route::get('/calculorpabruto', [CalculoController::class, 'formbruto'])->name('calculorpabruto.form');

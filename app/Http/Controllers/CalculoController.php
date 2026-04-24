@@ -6,14 +6,6 @@ use Illuminate\Http\Request;
 
 class CalculoController extends Controller
 {
-    // -------------------------------------------------------------------------
-    // OBSERVAÇÃO: todos os cálculos de INSS e IRRF foram centralizados em
-    // ImpostoController para evitar duplicação e divergência de tabelas.
-    // -------------------------------------------------------------------------
-
-    // =========================================================================
-    // CÁLCULO PELO SALÁRIO BRUTO
-    // =========================================================================
 
     public function formbruto()
     {
@@ -30,7 +22,7 @@ class CalculoController extends Controller
         $tetoInss      = (float) str_replace(',', '.', $request->input('teto_inss', '908.86'));
 
         $iss  = $valorBruto * ($percentualISS / 100);
-        $inss = $imp->calcularINSS($valorBruto, $tetoInss);
+        $inss = $imp->calcularINSS($valorBruto, 'rpa');
         $irpf = $imp->calcularIRRF($valorBruto, $inss);
 
         $inssPatronal   = $valorBruto * 0.20;
@@ -48,9 +40,6 @@ class CalculoController extends Controller
         ]);
     }
 
-    // =========================================================================
-    // CÁLCULO PELO SALÁRIO LÍQUIDO
-    // =========================================================================
 
     public function formliquido()
     {
@@ -66,13 +55,12 @@ class CalculoController extends Controller
         $percentualISS = (float) $request->input('percentual_iss');
         $tetoInss      = (float) str_replace(',', '.', $request->input('teto_inss', '908.86'));
 
-        // Busca o bruto por aproximações sucessivas (bissecção simples)
         $margemErro = 0.01;
-        $valorBruto = $valorLiquido; // estimativa inicial
+        $valorBruto = $valorLiquido;
 
         for ($i = 0; $i < 100; $i++) {
             $iss  = $valorBruto * ($percentualISS / 100);
-            $inss = $imp->calcularINSS($valorBruto, $tetoInss);
+            $inss = $imp->calcularINSS($valorBruto, 'rpa');
             $irpf = $imp->calcularIRRF($valorBruto, $inss);
 
             $liquidoCalculado = $valorBruto - $iss - $inss - $irpf;
@@ -82,7 +70,6 @@ class CalculoController extends Controller
                 break;
             }
 
-            // Ajuste proporcional para convergência mais rápida
             $valorBruto += $diferenca / 2;
         }
 
@@ -142,15 +129,12 @@ class CalculoController extends Controller
 
         $inssPatronal = $salarioBruto * 0.20;
 
-        // INSS e IRRF calculados sobre o salário mensal (competência mensal)
-        $tetoInss = (float) str_replace(',', '.', '932,31');
-        $inss = $imp->calcularINSS($salarioBruto, $tetoInss);
+        $inss = $imp->calcularINSS($salarioBruto, 'clt');
         $irrf = $imp->calcularIRRF($salarioBruto, $inss);
 
         $salarioLiquido  = $salarioBruto - $inss - $irrf;
         $totalBeneficios = $valeTransporte + $valeAlimentacao + $seguro + $pcmso;
 
-        // FGTS: 8% sobre salário + 13º + férias
         $fgts = ($salarioBruto + $decimoTerceiro + $ferias) * 0.08;
 
         $custoTotal = $salarioBruto + $inssPatronal + $fgts + $decimoTerceiro + $ferias + $totalBeneficios;
@@ -178,10 +162,6 @@ class CalculoController extends Controller
             'tipo_contrato'           => $tipoContrato,
         ]);
     }
-
-    // =========================================================================
-    // SIMULADOR CLT — CUSTO TOTAL (formulário novo)
-    // =========================================================================
 
     public function formClt()
     {
@@ -216,8 +196,7 @@ class CalculoController extends Controller
         $totalProventos = $salarioBase + $adicionalNoturno + $adicionalInsalubridade + $trienio;
 
         // Descontos do colaborador
-        $tetoInss       = 932.31;
-        $inssColaborador = $imp->calcularINSS($totalProventos, $tetoInss);
+        $inssColaborador = $imp->calcularINSS($totalProventos, 'clt');
         $irrf            = $imp->calcularIRRF($totalProventos, $inssColaborador);
         $salarioLiquido  = $totalProventos - $inssColaborador - $irrf;
 
@@ -290,43 +269,5 @@ class CalculoController extends Controller
         return $imposto;
     }
 
-    function calcularINSS($salarioBruto, $teto)
-    {
-        // Faixas: [limite_superior, alíquota%]
-        $faixas = [
-            [1212.00, 7.5],
-            [2427.35, 9.0],
-            [3641.03, 12.0],
-            [7087.22, 14.0],
-        ];
-
-        $inss           = 0;
-        $limiteAnterior = 0;
-
-        foreach ($faixas as $faixa) {
-            [$limite, $aliquota] = $faixa;
-
-            if ($salarioBruto <= $limiteAnterior) {
-                break;
-            }
-
-            $baseNaFaixa = min($salarioBruto, $limite) - $limiteAnterior;
-            $inss       += $baseNaFaixa * ($aliquota / 100);
-            $limiteAnterior = $limite;
-        }
-
-        // Salário acima da última faixa (R$ 7.087,22) ainda incide 14%
-        if ($salarioBruto > $limiteAnterior) {
-            $inss += ($salarioBruto - $limiteAnterior) * 0.14;
-        }
-
-        $inss = $inss > $teto ? $teto : $inss;
-
-        return $inss;
-    }
-
-    // -------------------------------------------------------------------------
-    // calcularINSS e calcularIRRF privados REMOVIDOS intencionalmente.
-    // Use sempre ImpostoController para garantir tabelas únicas e atualizadas.
-    // -------------------------------------------------------------------------
+    // calcularINSS e calcularIRRF centralizados em ImpostoController.
 }
