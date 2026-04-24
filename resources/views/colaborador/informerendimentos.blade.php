@@ -140,7 +140,7 @@
               <p class="mb-3">A FAPEU já realizou o envio dos dados e adotou as providências cabíveis para a regularização das informações. Neste momento, a atualização depende do processamento/reprocessamento no ambiente da Receita Federal.</p>
               <p class="mb-3">Caso o(a) empregado(a) opte por transmitir a declaração antes da conclusão desse processamento, poderá fazê-lo normalmente, utilizando as informações de que dispõe. No entanto, se houver divergência na declaração pré-preenchida ou nos dados disponibilizados pela Receita Federal, será necessário aguardar a atualização/retificação automática das informações no ambiente da Receita.</p>
               <p class="mb-1">Reforçamos nosso compromisso com a transparência e manteremos todos(as) informados(as) sobre a finalização do processo.</p>
-              <p class="mb-0">Agradecemos a compreensão.</p>
+              <p class="mb-0">Agradecemos a compreensão.</p> 
             </div>
           </div>
         </div>
