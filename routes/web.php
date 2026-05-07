@@ -11,11 +11,18 @@ use App\Http\Controllers\LicitacaoController;
 use App\Http\Controllers\RessarcimentoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LicitacaoResultadoAtaController;
-
+use App\Http\Controllers\ChatController;
 
 Route::get('/.well-known/jwks.json', function () {
     return response()->file(public_path('.well-known/jwks.json'), ['Content-Type' => 'application/json']);
 });
+
+Route::get('/.well-known/jwks', function () {
+    return response()->file(public_path('.well-known/jwks.json'), ['Content-Type' => 'application/json']);
+});
+
+Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+Route::post('/chat/perguntar', [ChatController::class, 'perguntar'])->name('chat.perguntar');
 
 Route::get('/', [MenuController::class, 'home'])->name('homepage.home');
 Route::get('/servicos', [MenuController::class, 'servicos'])->name('homepage.servicos');
