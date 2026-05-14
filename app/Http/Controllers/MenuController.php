@@ -532,7 +532,6 @@ class MenuController extends Controller
         // return view('homepage.home', compact('news'));
     }
 
-
     public function servicos()
     {
         return $this->renderView('homepage.servicos', 'servicos.png', 'Serviços');
