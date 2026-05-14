@@ -514,8 +514,22 @@ class MenuController extends Controller
 
     public function home()
     {
-        $news = Post::latest()->where('visivel', 1)->take(5)->get();
+        $idFixo= 252;   // quando quiser desfixar só coloca o idFixo como null ou 0
+
+        $noticiaFixa = Post::where('id', $idFixo) 
+        ->where('visivel', 1) 
+        ->first();
+
+        $outrasNoticias = Post::where('visivel', 1) 
+        ->where('id', '!=', $idFixo) 
+        ->latest() 
+        ->take($noticiaFixa ? 4:5)
+        ->get();
+        $news = $noticiaFixa ? $outrasNoticias->prepend($noticiaFixa) : $outrasNoticias;
         return view('homepage.home', compact('news'));
+
+        // $news = Post::latest()->where('visivel', 1)->take(5)->get();     -- se der ruim, volta pra isso e tira o idFixo e a noticia fixa
+        // return view('homepage.home', compact('news'));
     }
 
 
